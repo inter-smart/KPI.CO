@@ -40,9 +40,7 @@ pipeline {
                 dir('.') {
                         sh "docker build -t ${IMAGE_NAME}:${GIT_BRANCH} --build-arg BUILD_ENV=development ."
                         sh '''mkdir /var/jenkins/kpi.co-website || \\true'''
-                    }
-                    
-                }
+                }   
             }
         }
 
@@ -75,8 +73,8 @@ pipeline {
         // Clean after build
         always {
           cleanWs()
+          sh '''rm -rf /var/jenkins/kpi.co-website'''
         }
-        
     }
 }
 
