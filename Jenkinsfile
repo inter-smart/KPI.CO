@@ -82,5 +82,7 @@ pipeline {
 def getAgentLabel() {
     if (env.BRANCH_NAME == 'development') {
         return 'kpi.co-website-development'
-    }
+    } else if (env.BRANCH_NAME == 'master') {
+        return 'kpi.co-website-production'
+    } 
 }
