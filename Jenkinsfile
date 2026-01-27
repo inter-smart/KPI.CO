@@ -3,7 +3,7 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID = "016222040435"
         AWS_DEFAULT_REGION = "ap-south-1"
-        IMAGE_NAME = "kpi-website"
+        IMAGE_NAME = "kpi.co-website"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_NAME}"
         DEPLOY_TAG = "${GIT_BRANCH}_${GIT_COMMIT}"
         PREV_DEPLOY_IMAGE="${REPOSITORY_URI}:${GIT_BRANCH}_${GIT_PREVIOUS_COMMIT}"
