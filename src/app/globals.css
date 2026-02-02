@@ -8,6 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
   --color-base1: #1C5396;
+  --color-base2: #FFC916;
 
   /* Enhanced Breakpoints */
   --breakpoint-4xs: 20rem;
@@ -23,11 +24,11 @@
 
   /* Container Sizes */
   --container-sm: 40rem;
-  --container-md: 48rem;
+  --container-md: 50rem;
   --container-lg: 1024px;
   --container-xl: 1180px;
   --container-2xl: 1420px;
-  --container-3xl: 1700px;
+  --container-3xl: 1650px;
 
   /* Header Sizes */
   --header-y-sm: 60px;

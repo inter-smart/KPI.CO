@@ -33,7 +33,7 @@ const navItems = [
 ]
 
 const site_settings = {
-  header_logo_value: "/images/logo.svg",
+  header_logo_value: "/images/KPI-logo.svg",
   header_logo_alt_text_value: "KPI Logo"
 };
 
