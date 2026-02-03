@@ -7,8 +7,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
-  --color-base1: #1C5396;
-  --color-base2: #FFC916;
+  --color-base1: #1c5396;
+  --color-base2: #ffc916;
 
   /* Enhanced Breakpoints */
   --breakpoint-4xs: 20rem;
@@ -164,9 +164,9 @@
     @apply max-w-sm! sm:max-w-sm! md:max-w-md! lg:max-w-lg! xl:max-w-xl! 2xl:max-w-2xl! 3xl:max-w-3xl!;
   }
 
-  p {
+  /* p {
     @apply text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed;
-  }
+  } */
 
   .typography {
     --text-color: black;
@@ -178,7 +178,7 @@
     p,
     &,
     li {
-      @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-light text-(--text-color);
+      @apply text-[12px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {
@@ -204,11 +204,8 @@
     h6 {
       @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-tight font-normal text-(--text-color);
     }
-
   }
 }
-
-
 
 :root {
   --radius: 0.625rem;

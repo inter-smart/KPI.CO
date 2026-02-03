@@ -1,9 +1,14 @@
 import CounterInfo from "@/components/features/home/MainSlider/CounterInfo";
 import MainSlider from "@/components/features/home/MainSlider/MainSlider";
 import SecurityInfo from "@/components/features/home/MainSlider/SecurityInfo";
-import ServicesInfo from "@/components/features/home/MainSlider/ServicesInfo";
+// import ServicesInfo from "@/components/features/home/MainSlider/ServicesInfo";
 import PartnerSection from "@/components/features/home/PartnerSection";
 import ServiceSection from "@/components/features/home/ServiceSection";
+import OurInsights from "@/components/features/home/HomeOurInsights";
+import ProfessionalAffiliations from "@/components/features/home/HomeProfessionalAffiliations";
+import HomeAbout from "@/components/features/home/HomeAbout";
+import HomeApart from "@/components/features/home/HomeApart";
+
 
 const local_data = {
   counter_list: [
@@ -140,7 +145,7 @@ const local_data = {
   }
 }
 
-export default function Page() {
+export default function HomePage() {
   return (
     <>
       <MainSlider />
@@ -149,6 +154,10 @@ export default function Page() {
       <SecurityInfo data={local_data?.security_info_data} />
       <PartnerSection />
       <ServiceSection />
+      <HomeApart />
+      <HomeAbout />
+      <ProfessionalAffiliations />
+      <OurInsights />
     </>
   );
 }
