@@ -99,6 +99,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --header-y: var(--header-y-sm);
+
+    font-family:
+      var(--font-poppins),
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   @media (min-width: 64rem) {
