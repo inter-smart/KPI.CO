@@ -28,6 +28,7 @@ export default function ServicesInfo({ data }: ServicesInfoProps) {
         <section className="w-full h-auto py-[50px_100px] block">
             <div className="container">
                 <div className="w-full h-auto mb-17.5">
+                    
                     <h2 className="text-[50px] leading-normal font-semibold text-[#1C5396] mb-10">{data?.title}</h2>
                     <div className="text-[24px] leading-normal font-normal text-[#4E4E4E]">{data?.description}</div>
                 </div>

@@ -2,8 +2,8 @@ import CounterInfo from "@/components/features/home/MainSlider/CounterInfo";
 import MainSlider from "@/components/features/home/MainSlider/MainSlider";
 import SecurityInfo from "@/components/features/home/MainSlider/SecurityInfo";
 import ServicesInfo from "@/components/features/home/MainSlider/ServicesInfo";
-import { id } from "zod/v4/locales";
-
+import PartnerSection from "@/components/features/home/PartnerSection";
+import ServiceSection from "@/components/features/home/ServiceSection";
 
 const local_data = {
   counter_list: [
@@ -144,9 +144,11 @@ export default function Page() {
   return (
     <>
       <MainSlider />
-      <ServicesInfo data={local_data?.service_info_data} />
+      {/* <ServicesInfo data={local_data?.service_info_data} /> */}
       <CounterInfo data={local_data} />
       <SecurityInfo data={local_data?.security_info_data} />
+      <PartnerSection />
+      <ServiceSection />
     </>
   );
 }
