@@ -150,11 +150,11 @@ export default function HomePage() {
     <>
       <MainSlider />
       {/* <ServicesInfo data={local_data?.service_info_data} /> */}
-      <CounterInfo data={local_data} />
-      <SecurityInfo data={local_data?.security_info_data} />
       <PartnerSection />
       <ServiceSection />
       <HomeApart />
+      <CounterInfo data={local_data} />
+      <SecurityInfo data={local_data?.security_info_data} />
       <HomeAbout />
       <ProfessionalAffiliations />
       <OurInsights />

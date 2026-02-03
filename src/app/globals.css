@@ -164,9 +164,6 @@
     @apply max-w-sm! sm:max-w-sm! md:max-w-md! lg:max-w-lg! xl:max-w-xl! 2xl:max-w-2xl! 3xl:max-w-3xl!;
   }
 
-  /* p {
-    @apply text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed;
-  } */
 
   .typography {
     --text-color: black;
