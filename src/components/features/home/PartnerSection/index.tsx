@@ -16,7 +16,7 @@ const partners = [
 
 export default function PartnerSection() {
     return (
-        <section className="bg-white py-[40px] lg:py-[60px] relative overflow-hidden">
+        <section className="bg-white py-[40px] lg:py-[60px] 2xl:py-[60px_90px] relative overflow-hidden">
             <div className="container">
                 <Swiper
                     modules={[Autoplay]}

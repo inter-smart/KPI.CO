@@ -2,15 +2,13 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { FileText, Shield, Banknote, Briefcase, Landmark, UserCog } from 'lucide-react'
-
-// Define the service type
+import Image from 'next/image'
 interface Service {
     id: number
     title: string
     description: string
     link: string
-    icon: React.ElementType
+    icon: string
 }
 
 // Services data based on the image
@@ -20,55 +18,55 @@ const services: Service[] = [
         title: "Audit & Assurance",
         description: "Independent, high-quality audits that strengthen stakeholder confidence and meet UAE statutory and regulatory requirements.",
         link: "/audit-assurance",
-        icon: FileText
+        icon: "/images/service_icon1.svg",
     },
     {
         id: 2,
         title: "Risk Advisory",
         description: "Governance-led risk advisory that helps organisations identify, manage, and control risk across operations and compliance.",
         link: "/risk-advisory",
-        icon: Shield
+        icon: "/images/service_icon2.svg"
     },
     {
         id: 3,
         title: "Tax Advisory",
         description: "Practical advice on UAE corporate tax and VAT, focused on clarity, supporting compliance and effective financial planning.",
         link: "/tax-advisory",
-        icon: Banknote
+        icon: "/images/service_icon3.svg"
     },
     {
         id: 4,
         title: "Corporate Services",
         description: "End-to-end corporate services to start a business in the UAE, including licensing, banking, PRO, and ongoing support.",
         link: "/corporate-services",
-        icon: Briefcase
+        icon: "/images/service_icon4.svg"
     },
     {
         id: 5,
         title: "DIFC & ADGM",
         description: "Advisory and audit support for DIFC and ADGM entities, including regulatory, audit, and compliance needs.",
         link: "/difc-adgm",
-        icon: Landmark
+        icon: "/images/service_icon5.svg"
     },
     {
         id: 6,
         title: "Digital Transformation",
         description: "Oracle NetSuite consulting, supported by proprietary digital solutions developed across the KPI Group.",
         link: "/digital-transformation",
-        icon: UserCog
+        icon: "/images/service_icon6.svg"
     }
 ]
 
 export default function ServiceSection() {
     return (
-        <section className="bg-white py-[60px] lg:py-[80px]">
+        <section className="bg-white py-[20px] lg:py-[40px]">
             <div className="container">
                 {/* Section Header */}
                 <div className="mb-[40px] md:mb-[50px]">
-                    <h2 className="text-[28px] md:text-[36px] font-bold text-[#1C5396] mb-4">
+                    <h2 className="text-[32px] xl:text-[35px] 2xl:text-[40px] 3xl:text-[50px] font-bold text-[#1C5396] mb-4">
                         Our Services
                     </h2>
-                    <p className="text-[16px] text-gray-600 max-w-4xl leading-relaxed">
+                    <p>
                         Navigating the UAE business landscape can be challenging. KPI brings practical experience, clear insight, and trusted guidance to help you move forward. Explore how we can support your business, from compliance through to growth.
                     </p>
                 </div>
@@ -78,15 +76,15 @@ export default function ServiceSection() {
                     {services.map((service) => (
                         <div
                             key={service.id}
-                            className="bg-white rounded-[12px] p-[30px] border border-gray-100 shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
+                            className="bg-white rounded-[10px]  xl:rounded-[12px] p-[30px] border border-gray-100 shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
                         >
                             {/* Icon Container */}
-                            <div className="w-[48px] h-[48px] bg-[#1C5396] rounded-[8px] flex items-center justify-center mb-[20px] transition-transform group-hover:scale-105">
-                                <service.icon className="w-[24px] h-[24px] text-white" strokeWidth={1.5} />
+                            <div className="w-[70px] h-[70px] bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-[8px] flex items-center justify-center mb-[20px] transition-transform group-hover:scale-105">
+                                <Image src={service.icon} width="32" height="32" alt="serviceicons" />
                             </div>
 
                             {/* Content */}
-                            <h3 className="text-[20px] font-bold text-gray-900 mb-[15px]">
+                            <h3 className="text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-bold text-gray-900 mb-[15px]">
                                 {service.title}
                             </h3>
                             <p className="text-[15px] text-gray-600 leading-relaxed mb-[25px] flex-grow">
@@ -96,7 +94,7 @@ export default function ServiceSection() {
                             {/* Link */}
                             <Link
                                 href={service.link}
-                                className="inline-flex items-center text-[15px] font-semibold text-[#1C5396] hover:text-[#14427b] transition-colors mt-auto group-hover:translate-x-1 duration-300"
+                                className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] inline-flex items-center font-semibold  group-hover:text-base2 transition-all transition-colors mt-auto   duration-500"
                             >
                                 Learn more <span className="ml-1">→</span>
                             </Link>
