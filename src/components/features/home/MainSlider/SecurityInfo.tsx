@@ -2,61 +2,65 @@ import Image from "next/image";
 import parse from "html-react-parser";
 
 type Media = {
-    url?: string;
-    alt?: string;
+  url?: string;
+  alt?: string;
 };
 
 type IsoInfo = {
-    label?: string;
-    description?: string;
-    media?: Media;
+  label?: string;
+  description?: string;
+  media?: Media;
 };
 
 type SecurityInfoData = {
-    title?: string;
-    description?: string;
-    iso_info?: IsoInfo;
+  title?: string;
+  description?: string;
+  iso_info?: IsoInfo;
 };
 
 type SecurityInfoProps = {
-    data?: SecurityInfoData;
+  data?: SecurityInfoData;
 };
 
 export default function SecurityInfo({ data }: SecurityInfoProps) {
-    return (
-        <section className="w-full h-auto lg:py-17 2xl:py-20 3xl:py-25">
-            <div className="container">
-                <div className="lg:[--width:320px] 2xl:[--width:390px] 3xl:[--width:480px] flex flex-wrap">
-                    <div className="w-[calc(100%-var(--width))] lg:pr-25 2xl:pr-30 3xl:pr-38">
-                        <div className="typography">
-                            <div className="text-[28px] lg:text-[34px] 2xl:text-[40px] 3xl:text-[50px] leading-normal font-semibold text-[#1C5396] lg:mb-6.25 2xl:mb-7.5">
-                                {data?.title}
-                            </div>
-                            <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[20px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal text-[#4E4E4E] max-w-[80%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
-                                {parse(data?.description || "")}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-[var(--width)]">
-                        <div className="text-center w-full h-auto lg:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[60px_50px] rounded-[10px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-                            <div className="lg:w-17.5 2xl:w-22 3xl:w-25 h-auto aspect-square mx-auto lg:mb-5 3xl:mb-6.25 overflow-hidden block">
-                                <Image
-                                    src={data?.iso_info?.media?.url || "/images/placeholder.png"}
-                                    alt={data?.iso_info?.media?.alt || "ISO certification"}
-                                    width={70}
-                                    height={70}
-                                    className="w-full h-full object-contain"
-                                />
-                            </div>
-                            <div className="lg:text-[22px] 2xl:text-[26px] 3xl:text-[34px] leading-normal font-bold text-[#1C5396] mb-2.5">
-                                {data?.iso_info?.label}
-                            </div>
-                            <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-2.5 2xl:mb-3.75 relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">Certified</div>
-                            <div className="text-[12px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] lg:p-[15px_25px] 2xl:p-[20px_30px] 3xl:p-[25px_35px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">{data?.iso_info?.description}</div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section className="w-full h-auto lg:py-17 2xl:py-20 3xl:py-25">
+      <div className="container">
+        <div className="lg:[--width:320px] 2xl:[--width:390px] 3xl:[--width:480px] flex flex-wrap">
+          <div className="w-[calc(100%-var(--width))] lg:pr-25 2xl:pr-30 3xl:pr-38">
+            <div className="typography">
+              <div className="text-[28px] lg:text-[34px] 2xl:text-[40px] 3xl:text-[50px] leading-normal font-semibold text-[#1C5396] lg:mb-6.25 2xl:mb-7.5">
+                {data?.title}
+              </div>
+              <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal text-[#4E4E4E] max-w-[80%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
+                {parse(data?.description || "")}
+              </div>
             </div>
-        </section>
-    )
+          </div>
+          <div className="w-[var(--width)]">
+            <div className="text-center w-full h-auto lg:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[60px_50px] rounded-[10px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
+              <div className="lg:w-17.5 2xl:w-22 3xl:w-25 h-auto aspect-square mx-auto lg:mb-5 3xl:mb-6.25 overflow-hidden block">
+                <Image
+                  src={data?.iso_info?.media?.url || "/images/placeholder.png"}
+                  alt={data?.iso_info?.media?.alt || "ISO certification"}
+                  width={70}
+                  height={70}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="lg:text-[22px] 2xl:text-[26px] 3xl:text-[34px] leading-normal font-bold text-[#1C5396] mb-2.5">
+                {data?.iso_info?.label}
+              </div>
+              <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-2.5 2xl:mb-3.75 relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
+                Certified
+              </div>
+              <div className="text-[12px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] lg:p-[15px_25px] 2xl:p-[20px_30px] 3xl:p-[25px_35px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">
+                {data?.iso_info?.description}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

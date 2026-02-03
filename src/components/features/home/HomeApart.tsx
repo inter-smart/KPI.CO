@@ -20,7 +20,7 @@ interface HomeApart {
 }
 
 const local_data: localData = {
-  title: "What Sets As Apart?",
+  title: "What Sets Us Apart?",
   items: [
     {
       id: 1,
