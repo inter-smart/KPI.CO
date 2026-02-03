@@ -9,8 +9,60 @@ import ProfessionalAffiliations from "@/components/features/home/HomeProfessiona
 import HomeAbout from "@/components/features/home/HomeAbout";
 import HomeApart from "@/components/features/home/HomeApart";
 
-
 const local_data = {
+  partners: {
+    title: "",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/home-professionalAffiliations-1.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-professionalAffiliations-2.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-professionalAffiliations-3.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/home-professionalAffiliations-4.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/home-professionalAffiliations-5.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/home-professionalAffiliations-6.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+    ],
+  },
   counter_list: [
     {
       id: 1,
@@ -51,11 +103,12 @@ const local_data = {
       },
       label: "ISO 27001",
       description: "Information Security Management System",
-    }
+    },
   },
   service_info_data: {
     title: "Our Services",
-    description: "Navigating the UAE business landscape can be challenging. KPI brings practical experience, clear insight, and trusted guidance to help you move forward. Explore how we can support your business, from compliance through to growth.",
+    description:
+      "Navigating the UAE business landscape can be challenging. KPI brings practical experience, clear insight, and trusted guidance to help you move forward. Explore how we can support your business, from compliance through to growth.",
     service_list: [
       {
         id: 1,
@@ -65,11 +118,12 @@ const local_data = {
           alt: "Audit & Assurance",
         },
         title: "Audit & Assurance",
-        description: "Independent, high-quality audits that strengthen stakeholder confidence and meet UAE statutory and regulatory requirements. ",
+        description:
+          "Independent, high-quality audits that strengthen stakeholder confidence and meet UAE statutory and regulatory requirements. ",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
       {
         id: 2,
@@ -79,11 +133,12 @@ const local_data = {
           alt: "Risk Advisory",
         },
         title: "Risk Advisory",
-        description: "Governance-led risk advisory that helps organisations identify, manage, and control risk across operations and compliance.",
+        description:
+          "Governance-led risk advisory that helps organisations identify, manage, and control risk across operations and compliance.",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
       {
         id: 3,
@@ -93,11 +148,12 @@ const local_data = {
           alt: "Tax Advisory",
         },
         title: "Tax Advisory",
-        description: "Practical advice on UAE corporate tax and VAT, focused on clarity, supporting compliance and effective financial planning.",
+        description:
+          "Practical advice on UAE corporate tax and VAT, focused on clarity, supporting compliance and effective financial planning.",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
       {
         id: 4,
@@ -107,11 +163,12 @@ const local_data = {
           alt: "Corporate Services",
         },
         title: "Corporate Services",
-        description: "End-to-end corporate services to start a business in the UAE, including licensing, banking, PRO, and ongoing support. ",
+        description:
+          "End-to-end corporate services to start a business in the UAE, including licensing, banking, PRO, and ongoing support. ",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
       {
         id: 5,
@@ -121,11 +178,12 @@ const local_data = {
           alt: "DIFC & ADGM",
         },
         title: "DIFC & ADGM",
-        description: "Advisory and audit support for DIFC and ADGM entities, including regulatory, audit, and compliance needs.",
+        description:
+          "Advisory and audit support for DIFC and ADGM entities, including regulatory, audit, and compliance needs.",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
       {
         id: 6,
@@ -135,15 +193,69 @@ const local_data = {
           alt: "Digital Transformation",
         },
         title: "Digital Transformation",
-        description: "Oracle NetSuite consulting, supported by proprietary digital solutions developed across the KPI Group.",
+        description:
+          "Oracle NetSuite consulting, supported by proprietary digital solutions developed across the KPI Group.",
         button: {
           link: "/",
           target: false,
-        }
+        },
       },
-    ]
-  }
-}
+    ],
+  },
+  Professional_affiliations: {
+    title: "Professional Affiliations ",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/home-professionalAffiliations-1.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-professionalAffiliations-2.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-professionalAffiliations-3.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/home-professionalAffiliations-4.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/home-professionalAffiliations-5.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/home-professionalAffiliations-6.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+    ],
+  },
+};
 
 export default function HomePage() {
   return (
@@ -151,12 +263,14 @@ export default function HomePage() {
       <MainSlider />
       {/* <ServicesInfo data={local_data?.service_info_data} /> */}
       <PartnerSection />
+      {/* <ProfessionalAffiliations data={local_data?.Professional_affiliations} /> */}
+
       <ServiceSection />
       <HomeApart />
       <CounterInfo data={local_data} />
       <SecurityInfo data={local_data?.security_info_data} />
       <HomeAbout />
-      <ProfessionalAffiliations />
+      <ProfessionalAffiliations data={local_data?.Professional_affiliations} />
       <OurInsights />
     </>
   );

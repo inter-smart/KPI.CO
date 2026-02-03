@@ -65,7 +65,7 @@ export default function Header() {
                 <div key={index} className="relative group">
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1.5 text-[15px] xl:text-[16px] font-medium text-gray-800 hover:text-[#0067B1] transition-colors py-4"
+                    className="flex items-center gap-1.5 text-[15px] xl:text-[16px] font-medium text-[#0067B1] hover:text-[#0067B1] transition-colors py-4"
                   >
                     {item.label}
                     {item.subItems.length > 0 && (
