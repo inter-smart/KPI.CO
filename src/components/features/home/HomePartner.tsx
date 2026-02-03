@@ -1,20 +1,17 @@
-"use client";
+'use client'
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import Image from "next/image";
-import "swiper/css";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import Image from 'next/image'
+import type { PartnerItem } from '@/app/page'
 
-const partners = [
-  { id: 1, name: "Bharathre", logo: "/images/Bharathre.png" },
-  { id: 2, name: "Hiranandani", logo: "/images/hiranandani.png" },
-  { id: 3, name: "Edelweiss", logo: "/images/Edleweiss.png" },
-  { id: 4, name: "Sharaf Group", logo: "/images/Sharaf.png" },
-  { id: 5, name: "Gorica Group", logo: "/images/Gorica.png" },
-  { id: 6, name: "logwin", logo: "/images/logwin.png" },
-];
+import 'swiper/css'
 
-export default function PartnerSection() {
+type HomePartnerProps = {
+  data: PartnerItem[]
+}
+
+export default function HomePartner({ data }: HomePartnerProps) {
   return (
     <section className="bg-white py-[40px] lg:py-[60px] 2xl:py-[50px_90px] relative overflow-hidden">
       <div className="container">
@@ -51,10 +48,10 @@ export default function PartnerSection() {
           }}
           className="w-full !p-[10px] !overflow-visible"
         >
-          {partners.map((partner) => (
+          {data.map((partner) => (
             <SwiperSlide key={partner.id} className="!h-auto">
               <div
-                className="h-[100px] xl:h-[130px] 2xl:h-[160px] bg-white rounded-[10px] 2xl:rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] flex items-center justify-center p-4 h-[60px] sm:h-[100px] xl:h-[120px] 2xl:min-h-[150px] 3xl:min-h-[200px] 
+                className="h-[100px] xl:h-[130px] 2xl:h-[160px] bg-white rounded-[10px] 2xl:rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] flex items-center justify-center p-4 h-[60px] sm:h-[100px] xl:h-[120px] 2xl:min-h-[150px] 3xl:min-h-[200px]
                             transition-all hover:-translate-y-1 hover:shadow-lg duration-300 border border-gray-50"
               >
                 <div className="relative w-[90%] xl:w-[80%] h-full ">
@@ -71,5 +68,5 @@ export default function PartnerSection() {
         </Swiper>
       </div>
     </section>
-  );
+  )
 }
