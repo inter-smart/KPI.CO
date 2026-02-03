@@ -113,11 +113,11 @@
     * {
       @apply my-2.5 lg:my-4;
     }
-
+    
     p,
     &,
     li {
-      @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-light text-(--text-color);
+      @apply text-[12px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {
