@@ -59,7 +59,7 @@ const services: Service[] = [
 
 export default function ServiceSection() {
     return (
-        <section className="bg-white py-[20px] lg:py-[40px]">
+        <section className="bg-white py-[20px_70px] lg:py-[40px_70px] 3xl:py-[40px_100px]">
             <div className="container">
                 {/* Section Header */}
                 <div className="mb-[40px] md:mb-[50px]">
