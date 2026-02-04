@@ -21,7 +21,7 @@ type HomeHeroProps = {
 
 export default function HomeHero({ data }: HomeHeroProps) {
   return (
-    <section className="relative w-full h-[600px] lg:h-[800px] overflow-hidden">
+    <section className="relative w-full h-[600px] md:h-[450px] xl:h-[530px] 2xl:h-[600px] 3xl:h-[800px] overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"
@@ -85,7 +85,8 @@ export default function HomeHero({ data }: HomeHeroProps) {
                   {slide.description}
                 </p>
                 <Button
-                  className="text-[15px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 h-[35px] sm:h-[45px] 2xl:h-[48px] 3xl:h-[60px] bg-base2 hover:bg-[#FFD54F] rounded-[8px] transition-all transform hover:scale-105 active:scale-95 shadow-lg animate-in fade-in slide-in-from-left-10 duration-1000 delay-400"
+                  className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 
+                  h-[35px] sm:h-[45px] 2xl:h-[48px] 3xl:h-[60px] bg-base2 hover:bg-[#FFD54F] rounded-[8px] transition-all transform hover:scale-105 active:scale-95 duration-100 "
                   asChild
                 >
                   <Link href={slide.buttonLink}>{slide.buttonText}</Link>
@@ -103,11 +104,11 @@ export default function HomeHero({ data }: HomeHeroProps) {
           text-align: left !important;
           padding-left: 20px;
         }
-        @media (min-width: 1024px) {
-          .swiper-pagination {
-            padding-left: calc((100vw - 1280px) / 2 + 1rem);
+          @media (min-width: 1024px) {
+            .swiper-pagination {
+              padding-left: calc((100vw - 1280px) / 2 + 1rem);
+            }
           }
-        }
       `}</style>
     </section>
   );

@@ -73,7 +73,7 @@ export default function HomeOurInsights({ data }: HomeOurInsightsProps) {
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  'flex-[0_0_220px] sm:flex-[0_0_268px] lg:flex-[0_0_300px] 2xl:flex-[0_0_360px] 3xl:flex-[0_0_440px] min-w-0 select-none',
+                  'flex-[0_0_75%] sm:flex-[0_0_45%] lg:flex-[0_0_28.57%] min-w-0 select-none',
                 )}
               >
                 <InsightCard data={item} />
@@ -106,7 +106,7 @@ export default function HomeOurInsights({ data }: HomeOurInsightsProps) {
 function InsightCard({ data }: InsightCardProps) {
   return (
     <div className="group w-full h-full flex flex-col bg-white rounded-[10px] overflow-hidden shadow-lg hover:shadow-xl transition">
-      <div className="w-full aspect-440/268 overflow-hidden rounded-t-[8px]">
+      <div className="w-full aspect-440/268 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
         <Image
           src={data.media.path || '/images/placeholder-image.png'}
           alt={data.media.alt || 'Insight Image'}
@@ -117,21 +117,21 @@ function InsightCard({ data }: InsightCardProps) {
       </div>
 
       <div className="w-full p-3 xl:p-5 2xl:p-6 flex-1 flex flex-col">
-        <Text size="p1" className="leading-none font-medium text-[#5280ca] mb-2 xl:mb-3 2xl:mb-4">
+        <Text size="p1" className="leading-none font-medium text-[#5280ca] mb-3 xl:mb-3 2xl:mb-4">
           {data.date} • {data.readTime}
         </Text>
 
-        <div className="text-[14px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-1.5 xl:mb-2.5 2xl:mb-3.5">
+        <div className="text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-1.5 xl:mb-2.5 2xl:mb-3.5">
           {parse(data.title ?? 'title')}
         </div>
 
-        <Text as="div" size="p1" className="leading-tight line-clamp-5 text-[#4e4e4e] mb-2 xl:mb-3 2xl:mb-4">
+        <Text as="div" size="p1" className="leading-relaxed line-clamp-5 text-[#4e4e4e] mb-3 xl:mb-3 2xl:mb-4">
           {parse(data.description ?? '<p>no content</p>')}
         </Text>
 
         <Link
           href={data.slug ?? '#'}
-          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-tight font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1 hover:text-[#ffc916] transition-colors duration-300"
+          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1 hover:text-[#ffc916] transition-colors duration-300"
         >
           Read More
           <Image

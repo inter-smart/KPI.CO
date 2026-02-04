@@ -43,9 +43,9 @@ export default function Header() {
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center h-[70px] lg:h-[80px]">
+        <div className="flex items-center h-[70px] 2xl:h-[70px] 3xl:h-[88px]">
           {/* Logo Section */}
-          <div className="w-[120px] lg:w-[130px] 3xl:w-[140px]">
+          <div className="w-[120px] lg:w-[100px] xl:w-[130px] 2xl:w-[160px] 3xl:w-[180px]">
             <Link href="/" className="flex items-center w-full">
               <Image
                 src={site_settings.header_logo_value}
@@ -59,13 +59,13 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-1 flex items-center justify-end lg:justify-between w-[calc(100%-120px)] lg:w-[calc(100%-130px)] 3xl:w-[calc(100%-140px)] lg:pl-[110px]">
+          <div className="flex-1 flex items-center justify-end lg:justify-between w-[calc(100%-120px)] xl::w-[calc(100%-130px)] 3xl:w-[calc(100%-140px)] lg:pl-[70px] xl:pl-[80px] 2xl:pl-[110px] 3xl:pl-[130px]">
             <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
               {navItems.map((item, index) => (
                 <div key={index} className="relative group">
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1.5 text-[15px] xl:text-[16px] font-medium text-[#0067B1] hover:text-[#0067B1] transition-colors py-4"
+                    className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] font-medium flex items-center gap-1.5 text-[#0067B1]  py-4"
                   >
                     {item.label}
                     {item.subItems.length > 0 && (
@@ -100,9 +100,8 @@ export default function Header() {
               <div className="hidden lg:block">
                 <Link
                   href="/contact"
-                  className="bg-[#FFC916] text-[#1E1E1E] font-semibold px-6 py-3 rounded-[8px] text-[16px] hover:bg-[#efb61b] hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
-                  aria-label="contact_link"
-                >
+                  className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#1E1E1E] bg-[#FFC916] flex items-center justify-center font-semibold px-6 py-3 rounded-[8px] transition-all hover:scale-105 duration-100 "
+                  aria-label="contact_link">
                   Get in Touch
                 </Link>
               </div>

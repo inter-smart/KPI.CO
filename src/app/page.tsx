@@ -223,28 +223,28 @@ const localData = {
       },
       {
         id: 2,
-        media: { path: "/images/home-apart-item-1.svg", alt: "home-apart" },
+        media: { path: "/images/home-apart-item-2.svg", alt: "home-apart" },
         title: "Judgement over Templates",
         description:
           "<p>We don't rely on generic checklists. Our approach is shaped by decades of hands-on engagement and focused on solutions that work in practice.</p>",
       },
       {
         id: 3,
-        media: { path: "/images/home-apart-item-1.svg", alt: "home-apart" },
+        media: { path: "/images/home-apart-item-3.svg", alt: "home-apart" },
         title: "Independence without Compromise",
         description:
           "<p>We are selective about the work we accept. Where independence, audit quality, or stakeholder interest cannot be protected, we do not proceed. </p>",
       },
       {
         id: 4,
-        media: { path: "/images/home-apart-item-1.svg", alt: "home-apart" },
+        media: { path: "/images/home-apart-item-4.svg", alt: "home-apart" },
         title: "Long-term Focus",
         description:
           "<p>We prioritise sustainable relationships over short-term growth. Accuracy, transparency, and sound judgement are our priorities - not volume or size.</p>",
       },
       {
         id: 5,
-        media: { path: "/images/home-apart-item-1.svg", alt: "home-apart" },
+        media: { path: "/images/home-apart-item-5.svg", alt: "home-apart" },
         title: "Strong Regulatory Alignment ",
         description:
           "<p>We are registered and active across UAE mainland, DIFC, and ADGM, supporting regulated entities with clarity and discipline.</p>",
@@ -426,8 +426,9 @@ export default function HomePage() {
       <HomeService data={localData.services} />
       <HomeApart data={localData.apart} />
       <HomeCounter data={localData.counterList} />
+      <HomeAbout data={localData.about} className="min-sm:hidden" />
       <HomeSecurityInfo data={localData.securityInfo} />
-      <HomeAbout data={localData.about} />
+      <HomeAbout data={localData.about} className="max-sm:hidden" />
       <HomeProfessionalAffiliations data={localData.professionalAffiliations} />
       <HomeOurInsights data={localData.insights} />
     </>

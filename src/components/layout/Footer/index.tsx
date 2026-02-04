@@ -27,9 +27,9 @@ const formSchema = z.object({
     message: "Please enter a valid email address.",
   }),
 })
-const FOOTER_MAINLINKS = "text-[20px] xl:text-[22px] 3xl:text-[26px] text-white font-semibold mb-[20px] 3xl:mb-[25px]"
-const FOOTER_LINK_STYLES = "text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white/80 font-normal hover:text-white transition-colors"
-const SOCIAL_LINKS = "w-[32px] xl:w-[28px] h-[32px] xl:h-[28px] 2xl:w-[36px] 2xl:h-[36px] 3xl:w-[42px] 3xl:h-[42px] flex items-center hover:scale-110 transition-transform"
+const FOOTER_MAINLINKS = "text-[20px] xl:text-[22px] 3xl:text-[26px] text-white font-semibold mb-[20px] 3xl:mb-[25px] max-md:border-b max-md:border-[rgba(255,255,255,0.2)]"
+const FOOTER_LINK_STYLES = "text-[16px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white/80 font-normal hover:text-white transition-colors"
+const SOCIAL_LINKS = "w-[32px] md:w-[24px] xl:w-[28px] h-[32px] md:h-[24px] xl:h-[28px] 2xl:w-[36px] 2xl:h-[36px] 3xl:w-[42px] 3xl:h-[42px] flex items-center hover:scale-110 transition-transform"
 
 export default function Footer() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -50,7 +50,7 @@ export default function Footer() {
         <div className='pt-[40px] pb-[40px] xl:pb-[50px] 2xl:pb-[70px] 3xl:pb-[100px]'>
           <div className='flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] 2xl:pb-[40px] 3xl:pb-[65px] -m-[10px] mb-[30px] 3xl:mb-[40px]'>
             <div className='w-full lg:w-3/12 mb-8 lg:mb-0 p-[10px]'>
-              <Link href="/" className='flex items-center w-full h-[70px] max-w-[180px] 2xl:max-w-[200px] 3xl:max-w-[240px]' aria-label="kpi_logo">
+              <Link href="/" className='flex items-center w-full h-[70px] max-w-[180px] 2xl:max-w-[190px] 3xl:max-w-[240px]' aria-label="kpi_logo">
                 <Image src="/images/KPI-logo-white.png" width="240" height="70" className="w-full h-full object-contain" alt="kpi_logo" />
               </Link>
             </div>
@@ -78,7 +78,7 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className='w-[42px] h-full min-w-[42px] roun 3xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] flex items-center justify-center p-0 cursor-pointer hover:opacity-90 transition-all active:scale-95'
+                      className='!w-[34px] 2xl:!w-[34px] 3xl:!w-[42px] h-full  3xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95'
                     >
                       <svg width="23" height="19" viewBox="0 0 23 19" fill="none"  >
                         <path d="M1.11119 9.43131L19.9983 9.17188" stroke="white" strokeWidth="2.22222" strokeLinecap="round" />
@@ -99,8 +99,8 @@ export default function Footer() {
               </Form>
             </div>
             <div className="w-full lg:w-4/12  lg:p-[10px]">
-              <ul className='flex items-center justify-baseline  sm:justify-center lg:justify-end w-full lg:w-fit -m-[10px] md:-m-[20px] !ml-auto '>
-                <li className='p-[15px] md:p-[20px]'>
+              <ul className='flex items-center justify-baseline lg:justify-end w-full lg:w-fit -m-[10px] 2xl:-m-[15px] 3xl:-m-[20px] !ml-auto '>
+                <li className='p-[10px] 2xl:p-[15px] 3xl:p-[20px]'>
                   <Link href="/" className={SOCIAL_LINKS} aria-label="linked_in">
                     <div className='w-full h-full flex'>
                       <svg width="43" height="43" viewBox="0 0 43 43" fill="none" className='w-full h-full object-contain' >
@@ -116,7 +116,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className='p-[15px] md:p-[20px]'>
+                <li className='p-[10px] 2xl:p-[15px] 3xl:p-[20px]'>
                   <Link href="/" className={SOCIAL_LINKS} aria-label="twitter">
                     <div className='w-full h-full flex'>
                       <svg viewBox="0 0 40 36" fill="none" className='w-full h-full object-contain' >
@@ -126,7 +126,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className='p-[15px] md:p-[20px]'>
+                <li className='p-[10px] 2xl:p-[15px] 3xl:p-[20px]'>
                   <Link href="/" className={SOCIAL_LINKS} aria-label="instagram">
                     <div className='w-full h-full flex'>
                       <svg viewBox="0 0 43 43" fill="none" className='w-full h-full object-contain' >
@@ -144,7 +144,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className='p-[15px] md:p-[20px]'>
+                <li className='p-[10px] 2xl:p-[15px] 3xl:p-[20px]'>
                   <Link href="/" className={SOCIAL_LINKS} aria-label="facebook">
                     <div className='w-full h-full flex'>
                       <svg viewBox="0 0 43 43" fill="none" className='w-full h-full object-contain' >
@@ -160,12 +160,13 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className='p-[15px] md:p-[20px]'>
-                  <Link href="/" className={SOCIAL_LINKS} aria-label="youtube">
+                <li className='p-[10px] 2xl:p-[15px] 3xl:p-[20px]'>
+                  <Link href="/" className={`${SOCIAL_LINKS} !w-[42px] md:!w-[28px] xl:!w-[38px] 2xl:!w-[45px] 3xl:!h-[45px] 3xl:!w-[60px]`} aria-label="youtube">
                     <div className='w-full h-full'>
-                      <svg viewBox="0 0 24 24" fill="white" className='w-full h-full object-contain' >
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                      <svg viewBox="0 0 40 29" fill="none" className='w-full h-full object-cover' >
+                        <path d="M38.2946 4.38726C37.83 2.6708 36.5439 1.3246 34.8873 0.848728C31.8369 4.05915e-05 19.5742 4.07798e-05 19.5742 4.07798e-05C19.5742 4.07798e-05 7.33481 -0.0203178 4.25264 0.848728C2.60458 1.32588 1.3123 2.6708 0.852601 4.38726C0.274313 7.64078 -0.0129974 10.9337 0.000451128 14.242C-0.00566186 17.5286 0.280426 20.8164 0.852601 24.0496C1.3123 25.7661 2.60458 27.1122 4.25264 27.5958C7.30302 28.4444 19.5742 28.4444 19.5742 28.4444C19.5742 28.4444 31.8063 28.4444 34.8873 27.5958C36.5439 27.1122 37.83 25.7673 38.2946 24.0496C38.8558 20.8164 39.1297 17.5286 39.1101 14.242C39.1297 10.9337 38.8619 7.64078 38.2946 4.38726ZM15.657 20.3329V8.12429L25.8645 14.242L15.657 20.3329Z" fill="white" />
                       </svg>
+
                     </div>
                   </Link>
                 </li>
@@ -178,7 +179,7 @@ export default function Footer() {
             {/* Audit & Assurance */}
             <div className='w-4/12 p-[10px] lg:p-[20px] '>
               <div className={FOOTER_MAINLINKS}>Audit & Assurance</div>
-              <ul className="space-y-[15px]">
+              <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>ADGM Regulated Audit</Link></li>
@@ -189,7 +190,7 @@ export default function Footer() {
             {/* Advisory Services */}
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] '>
               <div className={FOOTER_MAINLINKS}>Advisory Services</div>
-              <ul className="space-y-[15px]">
+                <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Corporate Services</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Tax Advisory</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>e-Invoicing</Link></li>
@@ -200,7 +201,7 @@ export default function Footer() {
             {/* Risk & Compliance */}
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[70px] 2xl:pl-[90px] 3xl:pl-[115px]'>
               <div className={FOOTER_MAINLINKS}>Risk & Compliance</div>
-              <ul className="space-y-[15px]">
+              <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Standard Operating Procedures</Link></li>
@@ -211,7 +212,7 @@ export default function Footer() {
             {/* Resources */}
             <div className='w-4/12 p-[10px] lg:p-[20px] '>
               <div className={FOOTER_MAINLINKS}>Resources</div>
-              <ul className="space-y-[15px]">
+               <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Blogs</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Newsroom</Link></li>
@@ -221,7 +222,7 @@ export default function Footer() {
             {/* Company */}
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] '>
               <div className={FOOTER_MAINLINKS}>Company</div>
-              <ul className="space-y-[15px]">
+                <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>About Us</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
                 <li><Link href="/" className={FOOTER_LINK_STYLES}>Contact Us</Link></li>
@@ -230,10 +231,10 @@ export default function Footer() {
             {/* Contact Us */}
             <div className='lg:w-4/12 p-[10px] lg:p-[20px]  lg:pl-[70px] 2xl:pl-[90px] 3xl:pl-[115px]'>
               <div className={FOOTER_MAINLINKS}>Contact Us</div>
-              <ul className="space-y-[15px]">
+              <ul className="space-y-[10px] 3xl:space-y-[15px]">
                 <li className="flex items-center gap-3">
-                  <div className="w-[35px] h-[35px] rounded-lg bg-white/10 flex items-center justify-center">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <div className="w-[19px] 2xl:w-[23px] 3xl:w-[35px] h-[19px] 2xl:h-[23px] 3xl:h-[35px] rounded-[5px] bg-white/10 flex items-center justify-center p-[5px]">
+                    <svg  viewBox="0 0 13 13" fill="none">
                       <path d="M10.6689 6.69797C10.5344 6.69797 10.3939 6.65519 10.2594 6.62464C9.98718 6.56464 9.71962 6.48499 9.45888 6.38631C9.17538 6.28317 8.86375 6.28852 8.58396 6.40134C8.30417 6.51416 8.07599 6.72647 7.94332 6.99742L7.80888 7.27242C7.21366 6.9413 6.6667 6.53006 6.18332 6.05019C5.70346 5.56682 5.29222 5.01986 4.9611 4.42464L5.21777 4.25353C5.48871 4.12087 5.70102 3.89268 5.81384 3.61289C5.92666 3.3331 5.93202 3.02147 5.82888 2.73797C5.73185 2.47667 5.65223 2.20924 5.59055 1.93742C5.55999 1.80297 5.53555 1.66242 5.51721 1.52186C5.443 1.09141 5.21754 0.701592 4.88143 0.422618C4.54531 0.143644 4.12064 -0.00615624 3.68388 0.000193907H1.85055C1.58718 -0.00227898 1.32637 0.0520243 1.08587 0.159407C0.845372 0.26679 0.630836 0.42473 0.456865 0.622477C0.282894 0.820224 0.153573 1.05313 0.077706 1.30535C0.00183865 1.55757 -0.0187938 1.82317 0.0172133 2.08408C0.342776 4.64426 1.51201 7.02301 3.34022 8.84458C5.16844 10.6662 7.55142 11.8267 10.1128 12.143H10.345C10.7956 12.1436 11.2307 11.9783 11.5672 11.6785C11.7605 11.5056 11.915 11.2936 12.0203 11.0566C12.1257 10.8196 12.1795 10.5629 12.1783 10.3035V8.47019C12.1708 8.04571 12.0163 7.63698 11.741 7.31377C11.4657 6.99056 11.0868 6.77291 10.6689 6.69797ZM10.9744 10.3646C10.9743 10.4514 10.9557 10.5372 10.9199 10.6162C10.8841 10.6952 10.8318 10.7657 10.7667 10.823C10.6986 10.8823 10.6188 10.9265 10.5324 10.9528C10.4461 10.9792 10.3551 10.987 10.2655 10.9758C7.97687 10.6823 5.85102 9.63527 4.22332 7.99982C2.59561 6.36436 1.55869 4.23357 1.2761 1.94353C1.26638 1.85401 1.2749 1.76345 1.30116 1.67732C1.32742 1.59119 1.37087 1.51128 1.42888 1.44242C1.48615 1.37723 1.55664 1.32499 1.63567 1.28916C1.71469 1.25333 1.80044 1.23475 1.88721 1.23464H3.72055C3.86266 1.23148 4.00143 1.27795 4.11297 1.36607C4.22451 1.45419 4.30184 1.57843 4.33166 1.71742C4.3561 1.88445 4.38666 2.04945 4.42332 2.21242C4.49392 2.53456 4.58787 2.85114 4.70444 3.15964L3.84888 3.55686C3.77573 3.59042 3.70993 3.63811 3.65525 3.69717C3.60058 3.75623 3.55811 3.82551 3.53029 3.90104C3.50247 3.97656 3.48983 4.05683 3.49312 4.13725C3.49641 4.21766 3.51554 4.29664 3.54944 4.36964C4.42895 6.25354 5.94331 7.76791 7.82721 8.64742C7.976 8.70854 8.14288 8.70854 8.29166 8.64742C8.36787 8.62016 8.43791 8.57803 8.49771 8.52348C8.5575 8.46892 8.60587 8.40304 8.63999 8.32964L9.01888 7.47408C9.3348 7.58706 9.65724 7.68094 9.98444 7.75519C10.1474 7.79186 10.3124 7.82242 10.4794 7.84686C10.6184 7.87668 10.7427 7.95401 10.8308 8.06555C10.9189 8.17709 10.9654 8.31586 10.9622 8.45797L10.9744 10.3646Z" fill="white" />
                     </svg>
 
@@ -241,8 +242,8 @@ export default function Footer() {
                   <a href="tel:+97144551010" className={FOOTER_LINK_STYLES}>+971 4 455 10 10</a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-[35px] h-[35px] rounded-lg bg-white/10 flex items-center justify-center">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" >
+                  <div className="w-[19px] 2xl:w-[23px] 3xl:w-[35px] h-[19px] 2xl:h-[23px] 3xl:h-[35px] rounded-[5px] bg-white/10 flex items-center justify-center p-[5px]">
+                    <svg  viewBox="0 0 13 13" fill="none">
                       <path d="M11.6111 2.44434H3.0555C2.56927 2.44434 2.10296 2.63749 1.75914 2.98131C1.41532 3.32512 1.22217 3.79144 1.22217 4.27767V10.3888C1.22217 10.875 1.41532 11.3413 1.75914 11.6851C2.10296 12.029 2.56927 12.2221 3.0555 12.2221H11.6111C12.0973 12.2221 12.5636 12.029 12.9074 11.6851C13.2512 11.3413 13.4444 10.875 13.4444 10.3888V4.27767C13.4444 3.79144 13.2512 3.32512 12.9074 2.98131C12.5636 2.63749 12.0973 2.44434 11.6111 2.44434ZM3.0555 3.66656H11.6111C11.7731 3.66656 11.9286 3.73094 12.0432 3.84555C12.1578 3.96015 12.2222 4.11559 12.2222 4.27767L7.33328 7.25989L2.44439 4.27767C2.44439 4.11559 2.50878 3.96015 2.62338 3.84555C2.73799 3.73094 2.89342 3.66656 3.0555 3.66656ZM12.2222 10.3888C12.2222 10.5509 12.1578 10.7063 12.0432 10.8209C11.9286 10.9355 11.7731 10.9999 11.6111 10.9999H3.0555C2.89342 10.9999 2.73799 10.9355 2.62338 10.8209C2.50878 10.7063 2.44439 10.5509 2.44439 10.3888V5.671L7.0155 8.46378C7.1084 8.51742 7.21378 8.54565 7.32106 8.54565C7.42833 8.54565 7.53371 8.51742 7.62661 8.46378L12.2222 5.671V10.3888Z" fill="white" />
                     </svg>
 
@@ -250,8 +251,8 @@ export default function Footer() {
                   <a href="mailto:hello@kpi.co" className={FOOTER_LINK_STYLES}>hello@kpi.co</a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-[35px] h-[35px] rounded-lg bg-white/10 flex items-center justify-center">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" >
+                  <div className="w-[19px] 2xl:w-[23px] 3xl:w-[35px] h-[19px] 2xl:h-[23px] 3xl:h-[35px] rounded-[5px] bg-white/10 flex items-center justify-center p-[5px]">
+                    <svg  viewBox="0 0 13 13" fill="none">
                       <path d="M7.33323 1.22217C6.03661 1.22217 4.7931 1.73725 3.87626 2.65409C2.95941 3.57094 2.44434 4.81444 2.44434 6.11106C2.44434 9.41106 6.75267 13.1388 6.936 13.2977C7.0467 13.3924 7.18757 13.4444 7.33323 13.4444C7.47889 13.4444 7.61976 13.3924 7.73045 13.2977C7.94434 13.1388 12.2221 9.41106 12.2221 6.11106C12.2221 4.81444 11.707 3.57094 10.7902 2.65409C9.87335 1.73725 8.62984 1.22217 7.33323 1.22217ZM7.33323 12.0083C6.03156 10.7861 3.66656 8.15217 3.66656 6.11106C3.66656 5.1386 4.05287 4.20597 4.7405 3.51833C5.42813 2.8307 6.36076 2.44439 7.33323 2.44439C8.30569 2.44439 9.23832 2.8307 9.92595 3.51833C10.6136 4.20597 10.9999 5.1386 10.9999 6.11106C10.9999 8.15217 8.63489 10.7922 7.33323 12.0083ZM7.33323 3.66661C6.84976 3.66661 6.37715 3.80998 5.97516 4.07858C5.57318 4.34717 5.25987 4.72894 5.07485 5.17561C4.88984 5.62227 4.84143 6.11377 4.93575 6.58794C5.03007 7.06212 5.26288 7.49768 5.60474 7.83954C5.9466 8.1814 6.38216 8.41421 6.85634 8.50853C7.33051 8.60285 7.82201 8.55444 8.26867 8.36943C8.71534 8.18442 9.09711 7.8711 9.36571 7.46912C9.63431 7.06713 9.77767 6.59452 9.77767 6.11106C9.77767 5.46275 9.52013 4.841 9.06171 4.38257C8.60329 3.92415 7.98153 3.66661 7.33323 3.66661ZM7.33323 7.33328C7.09149 7.33328 6.85519 7.2616 6.65419 7.1273C6.4532 6.993 6.29655 6.80211 6.20404 6.57878C6.11153 6.35545 6.08733 6.1097 6.13449 5.87261C6.18165 5.63553 6.29805 5.41775 6.46898 5.24682C6.63991 5.07589 6.85769 4.95948 7.09478 4.91232C7.33187 4.86516 7.57762 4.88936 7.80095 4.98187C8.02428 5.07438 8.21517 5.23103 8.34947 5.43203C8.48377 5.63302 8.55545 5.86932 8.55545 6.11106C8.55545 6.43521 8.42668 6.74609 8.19747 6.9753C7.96826 7.20451 7.65738 7.33328 7.33323 7.33328Z" fill="white" />
                     </svg>
                   </div>
@@ -263,10 +264,10 @@ export default function Footer() {
 
           {/* Mobile Accordion View */}
           <div className="lg:hidden mb-10">
-            <Accordion type="multiple" defaultValue={["audit", "advisory", "risk", "resources", "company"]} className="w-full border-t border-white/20">
-              <AccordionItem value="audit" className="border-white/20">
-                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline`}>Audit & Assurance</AccordionTrigger>
-                <AccordionContent>
+            <Accordion type="multiple" defaultValue={["audit", "advisory", "risk", "resources", "company"]} className="w-full ">
+              <AccordionItem value="audit" className="border-none">
+                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline border-b rounded-none border-white/20`}>Audit & Assurance</AccordionTrigger>
+                <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 pb-6">
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
@@ -276,9 +277,9 @@ export default function Footer() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="advisory" className="border-white/20">
-                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline`}>Advisory Services</AccordionTrigger>
-                <AccordionContent>
+              <AccordionItem value="advisory" className="border-none">
+                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline border-b rounded-none border-white/20`}>Advisory Services</AccordionTrigger>
+                <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 pb-6">
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Corporate Services</Link></li>
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Tax Advisory</Link></li>
@@ -288,9 +289,9 @@ export default function Footer() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="risk" className="border-white/20">
-                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline`}>Risk & Compliance</AccordionTrigger>
-                <AccordionContent>
+              <AccordionItem value="risk" className="border-none">
+             <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline border-b rounded-none border-white/20`}>Risk & Compliance</AccordionTrigger>
+                <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 pb-6">
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
@@ -300,9 +301,9 @@ export default function Footer() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="resources" className="border-white/20">
-                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline`}>Resources</AccordionTrigger>
-                <AccordionContent>
+              <AccordionItem value="resources" className="border-none">
+               <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline border-b rounded-none border-white/20`}>Resources</AccordionTrigger>
+                <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 pb-6">
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Blogs</Link></li>
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
@@ -311,9 +312,9 @@ export default function Footer() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="company" className="border-white/20">
-                <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline`}>Company</AccordionTrigger>
-                <AccordionContent>
+              <AccordionItem value="company" className="border-none">
+               <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-6 hover:no-underline border-b rounded-none border-white/20`}>Company</AccordionTrigger>
+                <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 pb-6">
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>About Us</Link></li>
                     <li><Link href="/" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
@@ -324,7 +325,7 @@ export default function Footer() {
             </Accordion>
             {/* Contact Us */}
             <div className='w-full'>
-              <div className={FOOTER_MAINLINKS}>Contact Us</div>
+              <div className={`${FOOTER_MAINLINKS} pb-[15px] border-b rounded-none border-white/20`}>Contact Us</div>
               <ul className="space-y-[15px]">
                 <li className="flex items-center gap-3">
                   <div className="w-[35px] h-[35px] rounded-lg bg-white/10 flex items-center justify-center">

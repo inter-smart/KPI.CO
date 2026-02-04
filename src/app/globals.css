@@ -25,10 +25,10 @@
   /* Container Sizes */
   --container-sm: 40rem;
   --container-md: 50rem;
-  --container-lg: 1024px;
-  --container-xl: 1180px;
-  --container-2xl: 1420px;
-  --container-3xl: 1650px;
+  --container-lg: 855px;
+  --container-xl: 1070px;
+  --container-2xl: 1280px;
+  --container-3xl: 1600px;
 
   /* Header Sizes */
   --header-y-sm: 60px;
@@ -181,7 +181,7 @@
     p,
     &,
     li {
-      @apply text-[12px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
+      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {
@@ -277,4 +277,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+section{
+  overflow: hidden;
 }
