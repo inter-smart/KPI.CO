@@ -125,7 +125,7 @@ function InsightCard({ data }: InsightCardProps) {
           {parse(data.title ?? 'title')}
         </div>
 
-        <Text size="p1" className="leading-tight line-clamp-5 text-[#4e4e4e] mb-2 xl:mb-3 2xl:mb-4">
+        <Text as="div" size="p1" className="leading-tight line-clamp-5 text-[#4e4e4e] mb-2 xl:mb-3 2xl:mb-4">
           {parse(data.description ?? '<p>no content</p>')}
         </Text>
 
