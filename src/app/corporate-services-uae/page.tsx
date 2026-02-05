@@ -63,7 +63,6 @@ export type ServiceItem = {
 
 export type WhyChooseItem = {
     id: number;
-    media: MediaItem;
     title: string;
     description: string;
 };
@@ -79,8 +78,8 @@ export type CtaData = {
 
 export type FaqItem = {
     id: number;
-    question: string;
-    answer: string;
+    title: string;
+    description: string;
 };
 
 
@@ -345,93 +344,83 @@ const localData = {
     },
 
     whyChoose: {
-        title: "Why Choose KPI?",
+        title: "Why choose KPI?",
+        description: "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
         items: [
             {
                 id: 1,
-                media: {
-                    path: "/images/why-choose-icon-1.svg",
-                    alt: "30+ Years Experience",
-                },
-                title: "30+ Years Experience",
+                title: "Experienced Guidance",
                 description:
-                    "<p>Decades of experience helping businesses establish and grow in the UAE market.</p>",
+                    "<p>Decades of hands-on experience supporting businesses across multiple industries, structures, and UAE jurisdictions. </p>",
             },
             {
                 id: 2,
-                media: {
-                    path: "/images/why-choose-icon-2.svg",
-                    alt: "End-to-End Support",
-                },
-                title: "End-to-End Support",
+                title: "Founder-led Approach ",
                 description:
-                    "<p>Complete support from initial consultation through to ongoing compliance and growth.</p>",
+                    "<p>We take the time to understand your goals and recommend solutions that fit how you want to operate and grow. </p>",
             },
             {
                 id: 3,
-                media: {
-                    path: "/images/why-choose-icon-3.svg",
-                    alt: "Transparent Pricing",
-                },
-                title: "Transparent Pricing",
+                title: "Transparent Processes",
                 description:
-                    "<p>Clear, upfront pricing with no hidden fees or unexpected costs.</p>",
+                    "<p>No hidden costs or surprises. You know what to expect at every stage, from setup through ongoing compliance. </p>",
             },
             {
                 id: 4,
-                media: {
-                    path: "/images/why-choose-icon-4.svg",
-                    alt: "Expert Guidance",
-                },
-                title: "Expert Guidance",
+                title: "End-to-End Support",
                 description:
-                    "<p>Professional advisors who understand UAE regulations and business requirements.</p>",
+                    "<p>From UAE company formation to banking, visas, and compliance, we stay involved as your business evolves. </p>",
             },
         ] satisfies WhyChooseItem[],
     },
 
     cta: {
-        title: "Build Your Business in the UAE",
+        title: "Build Your Business in the UAE with Confidence",
         description:
-            "<p>Ready to start your UAE business journey? Get in touch with our corporate services team for a free consultation.</p>",
+            "<p>From the first conversation to full setup and beyond, KPI supports you at every stage of your business journey.</p>",
         button: {
             label: "Get Started Today",
             link: "/contact",
         },
     } satisfies CtaData,
 
-    faqs: {
+    corporate_faq_data: {
         title: "FAQs",
-        items: [
+        faq_list: [
             {
                 id: 1,
-                question: "How long does it take to set up a company in the UAE?",
-                answer:
-                    "The timeline varies by jurisdiction. Freezone companies can be set up in 3-5 business days, while mainland companies typically take 7-14 business days depending on the license type and approvals required.",
+                title: "How do I start a business in the UAE?",
+                description: `
+                <p>You can start by choosing the right business structure - mainland, free zone, or offshore - then completing licensing, visas, and banking. KPI guides you through each step for a smooth setup.</p>
+                `,
             },
             {
                 id: 2,
-                question: "What is the difference between mainland and freezone?",
-                answer:
-                    "Mainland companies can trade anywhere in the UAE and with government entities, but may require a local service agent. Freezone companies offer 100% foreign ownership and tax benefits but have restrictions on trading in the local UAE market.",
+                title: "What does it cost to set up a business in the UAE?",
+                description: `
+                <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
+                `,
             },
             {
                 id: 3,
-                question: "Do I need a physical office to start a business?",
-                answer:
-                    "Requirements vary by jurisdiction. Freezone companies often accept flexi-desk or virtual office solutions. Mainland companies typically require a physical office address, though the size requirements depend on the license type.",
+                title: "How long does it take to set up a company in the UAE",
+                description: `
+                <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
+                `,
             },
             {
                 id: 4,
-                question: "How many visas can I get with my company license?",
-                answer:
-                    "The number of visas depends on your license type, office space size, and jurisdiction. Freezone licenses typically allow 1-6 visas initially, while mainland licenses vary based on office space and business activities.",
+                title: "What are the requirements for obtaining a UAE business visa?",
+                description: `
+                <p>Business visas are available for founders, partners, employees, and dependents. Requirements typically include a valid passport, trade license, and relevant approvals. KPI manages the process end-to-end to save time and ensure compliance.</p>
+                `,
             },
             {
                 id: 5,
-                question: "What are the ongoing costs of maintaining a UAE company?",
-                answer:
-                    "Ongoing costs include annual license renewal, office rent, visa renewals, and compliance requirements. We provide transparent pricing and help you budget for all recurring expenses.",
+                title: "Do I need to have a physical office in the UAE?",
+                description: `
+                <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
+                `,
             },
         ] satisfies FaqItem[],
     },
@@ -455,7 +444,7 @@ export default function CorporateServicesUaePage() {
             <CorporateServicesUaeServices data={localData.services} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
             <CorporateServicesUaeCta data={localData.cta} />
-            <CorporateServicesUaeFaq data={localData.faqs} />
+            <CorporateServicesUaeFaq data={localData?.corporate_faq_data} />
         </>
     );
 }
