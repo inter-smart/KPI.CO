@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import parse from 'html-react-parser'
 import { Heading } from "@/components/utils/typography"
 
 export default function CorporateServicesUaeFaq({ data }) {
@@ -14,42 +15,35 @@ export default function CorporateServicesUaeFaq({ data }) {
                     <Heading
                         as="h2"
                         size="h2"
-                        className="text-[#1C5396] xl:mb-6.25 2xl:mb-7.5 max-sm:hidden"
+                        className="text-[#1C5396] xl:mb-6.25 2xl:mb-10"
                     >
-                        {data.title}
+                        {data?.title}
                     </Heading>
-                    <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal text-[#4E4E4E] xl:max-w-[80%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
-                        {parse(data.description || '')}
-                    </div>
                 </div>
-                <Accordion
-                    type="single"
-                    collapsible
-                    defaultValue="shipping"
-                    className="max-w-lg"
-                >
-                    <AccordionItem value="shipping">
-                        <AccordionTrigger>What are your shipping options?</AccordionTrigger>
-                        <AccordionContent>
-                            We offer standard (5-7 days), express (2-3 days), and overnight
-                            shipping. Free shipping on international orders.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="returns">
-                        <AccordionTrigger>What is your return policy?</AccordionTrigger>
-                        <AccordionContent>
-                            Returns accepted within 30 days. Items must be unused and in original
-                            packaging. Refunds processed within 5-7 business days.
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="support">
-                        <AccordionTrigger>How can I contact customer support?</AccordionTrigger>
-                        <AccordionContent>
-                            Reach us via email, live chat, or phone. We respond within 24 hours
-                            during business days.
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
+                <div className="w-full max-w-[790px] h-auto mx-auto">
+                    <Accordion
+                        type="single"
+                        collapsible
+                        defaultValue={`item-${data?.faq_list?.[1]?.id}`}
+                    >
+                        {data?.faq_list?.map((item) => (
+                            <AccordionItem
+                                value={`item-${item.id}`}
+                                key={item.id}
+                                className="w-full h-auto p-[5px_15px] sm:p-[7px_15px] lg:p-[10px_15px] 2xl:p-[15px_20px] 3xl:p-[20px_25px] mb-[5px] sm:mb-[10px] 2xl:mb-[15px] rounded-[5px] 2xl:rounded-[8px] border border-[#383838]/10 bg-transparent overflow-hidden relative z-0 data-[state=open]:border-transparent data-[state=open]:before:content-[''] data-[state=open]:before:absolute data-[state=open]:before:inset-0 data-[state=open]:before:bg-gradient-to-r data-[state=open]:before:from-[#0B436A] data-[state=open]:before:to-[#299B8A] data-[state=open]:before:rounded-[5px] 2xl:data-[state=open]:before:rounded-[8px] data-[state=open]:after:content-[''] data-[state=open]:after:absolute data-[state=open]:after:inset-[1px] data-[state=open]:after:bg-white data-[state=open]:after:rounded-[4px] 2xl:data-[state=open]:after:rounded-[7px] data-[state=open]:before:z-[-2] data-[state=open]:after:z-[-1]">
+                                <AccordionTrigger className="[&>svg]:text-[#132C26] 2xl:[&>svg]:w-[17px] 2xl:[&>svg]:h-[17px]">
+                                    <div className="text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.4] font-normal text-black max-w-[90%]">{item?.title}</div>
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <div
+                                        className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[16px] 3xl:[&_p]:text-[20px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:last:my-0 mb-0 max-w-[90%] [&>*]:mb-[20px] 2xl:[&>*]:mb-[30px]"
+                                        {parse(data.description || '')}
+                                    />
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
             </div>
         </section>
     )
