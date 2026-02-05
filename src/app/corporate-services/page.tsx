@@ -1,7 +1,9 @@
-import React from 'react'
+import CorporateServicesFaq from '@/components/features/services/CorporateServicesFaq'
 
 export default function CorporateServicesPage() {
     return (
-        <div>Abish do the full page and impress everyone</div>
+        <>
+            <CorporateServicesFaq />
+        </>
     )
 }
