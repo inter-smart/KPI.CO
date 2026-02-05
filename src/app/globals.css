@@ -181,7 +181,7 @@
     p,
     &,
     li {
-      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
+      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {
@@ -193,7 +193,7 @@
     }
 
     h3 {
-      @apply text-[13px] sm:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-tight font-normal text-(--text-color);
+      @apply text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-tight font-medium text-(--text-color);
     }
 
     h4 {
@@ -207,7 +207,44 @@
     h6 {
       @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-tight font-normal text-(--text-color);
     }
+
+    ul>li,
+    ol>li {
+      @apply my-1 lg:my-1.5 font-normal;
+    }
+
+    ul {
+      @apply ml-5;
+    }
+    ul>li {
+      @apply list-disc;
+    }
   }
+  .image-overlay {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 30px 0; 
+  }
+
+  .image-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(28, 83, 150, 0.4);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .image-overlay img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-block: 0;
+  }
+
+  
 }
 
 :root {
@@ -279,6 +316,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-section{
+section {
   overflow: hidden;
 }
