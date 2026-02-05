@@ -12,7 +12,7 @@ type HomeApartProps = {
 
 export default function HomeApart({ data }: HomeApartProps) {
   return (
-    <section className="w-full py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px]  3xl:py-[140px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0">
+    <section className="w-full py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0">
       <Image
         src="/images/home-apart-delmt.png"
         alt="home-apart-delmt"
