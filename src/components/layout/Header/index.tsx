@@ -64,8 +64,8 @@ const navItems = [
     isMega: true,
     megaCategories: [
       {
-        id: 'insights',
-        label: 'Latest Insights',
+        id: 'blog',
+        label: 'Blogs',
         icon: "/images/service-icon-4.svg",
         subItems: [
           { name: 'Blog', href: '/resources/blog' },
@@ -73,13 +73,16 @@ const navItems = [
         ]
       },
       {
-        id: 'materials',
-        label: 'Knowledge Hub',
+        id: 'glossary',
+        label: 'Glossary',
         icon: "/images/service-icon-5.svg",
-        subItems: [
-          { name: 'Case Studies', href: '/resources/case-studies' },
-          { name: 'Whitepapers', href: '/resources/whitepapers' },
-        ]
+        subItems: []
+      },
+      {
+        id: 'newsroom',
+        label: 'Newsroom',
+        icon: "/images/service-icon-5.svg",
+        subItems: []
       }
     ] as MegaCategory[]
   },
@@ -89,8 +92,8 @@ const navItems = [
     isMega: true,
     megaCategories: [
       {
-        id: 'company',
-        label: 'Company',
+        id: 'about-us',
+        label: 'About us',
         icon: "/images/service-icon-1.svg",
         subItems: [
           { name: 'Our Story', href: '/about/story' },
@@ -98,9 +101,15 @@ const navItems = [
         ]
       },
       {
-        id: 'people',
-        label: 'Our People',
+        id: 'clients',
+        label: 'Our Clients',
         icon: "/images/service-icon-2.svg",
+        subItems: []
+      },
+      {
+        id: 'contact',
+        label: 'CONTACT US',
+        icon: "/images/service-icon-3.svg",
         subItems: [
           { name: 'Team', href: '/about/team' },
           { name: 'Careers', href: '/about/careers' },
@@ -202,7 +211,7 @@ export default function Header() {
                     </div>
                   </SheetTrigger>
                   <SheetContent side="right" className="w-full sm:w-[350px] p-0 overflow-y-auto">
-                    <SheetHeader className="p-4 border-b">
+                    <SheetHeader className="p-4">
                       <div className="flex items-center justify-between">
                         <SheetTitle className="text-left">
                           <Image
@@ -217,12 +226,12 @@ export default function Header() {
                     </SheetHeader>
 
                     <div className="flex flex-col h-full bg-white">
-                      <nav className="flex-1 px-4 py-6 overflow-y-auto pb-24">
+                      <nav className="flex-1 px-4 py-0 overflow-y-auto pb-24">
                         <div className="flex flex-col space-y-2">
                           {/* Home Link */}
                           <Link
                             href={navItems[0].href}
-                            className="text-[16px] font-bold text-[#1C5396] px-2 py-3"
+                            className="text-[16px] font-semibold text-[#1C5396] px-0 py-3 border-b border-[#DDDCDE]"
                             onClick={() => setMenuSheetOpen(false)}
                           >
                             {navItems[0].label}
@@ -231,8 +240,8 @@ export default function Header() {
                           {/* Nested Accordions */}
                           <Accordion type="single" collapsible className="w-full">
                             {navItems.slice(1).map((item, idx) => (
-                              <AccordionItem key={idx} value={`item-${idx}`} className="border-none">
-                                <AccordionTrigger className="text-[16px] font-bold text-[#1C5396] hover:no-underline px-2 py-4">
+                              <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-[#DDDCDE]">
+                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
                                   {item.label}
                                 </AccordionTrigger>
                                 <AccordionContent className="pb-4 pl-2">
@@ -265,7 +274,7 @@ export default function Header() {
                                                 <Link
                                                   key={sIdx}
                                                   href={sub.href}
-                                                  className="text-[14px] font-medium text-gray-500 hover:text-[#1C5396] py-2 px-2 rounded-md hover:bg-blue-50/50"
+                                                  className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
                                                   onClick={() => setMenuSheetOpen(false)}
                                                 >
                                                   {sub.name}
@@ -283,10 +292,10 @@ export default function Header() {
                           </Accordion>
 
                           {/* Mobile Action Button - Now Under About */}
-                          <div className="pt-8 px-2">
+                          <div className="pt-8">
                             <Link
                               href="/contact"
-                              className="w-full h-12 bg-[#FFC916] text-[#1C5396] font-bold flex items-center justify-center rounded-xl shadow-lg border border-[#e5ae1d]"
+                              className="text-[16px] w-full h-12 bg-[#FFC916] text-black font-semibold flex items-center justify-center rounded-[8px]"
                               onClick={() => setMenuSheetOpen(false)}
                             >
                               Get in Touch
