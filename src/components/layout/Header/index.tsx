@@ -51,9 +51,6 @@ const navItems = [
         label: 'Digital Transformation',
         icon: "/images/digital_icon.svg",
         subItems: [
-          { name: 'IT Strategy', href: '/services/digital/strategy' },
-          { name: 'Cybersecurity', href: '/services/digital/cyber' },
-          { name: 'Data & Analytics', href: '/services/digital/data' },
         ]
       }
     ] as MegaCategory[]
@@ -80,7 +77,7 @@ const navItems = [
         id: 'newsroom',
         label: 'Newsroom',
         icon: "/images/service-icon-5.svg",
-        subItems: [
+        subItems: [ 
         ]
       }
     ] as MegaCategory[]
@@ -94,8 +91,7 @@ const navItems = [
         id: 'about-us',
         label: 'About us',
         icon: "/images/service-icon-1.svg",
-        subItems: [ 
-        ]
+        subItems: []
       },
       {
         id: 'clients',
@@ -107,8 +103,7 @@ const navItems = [
         id: 'contact',
         label: 'Contact Us',
         icon: "/images/service-icon-3.svg",
-        subItems: [ 
-        ]
+        subItems: []
       }
     ] as MegaCategory[]
   },
@@ -239,28 +234,33 @@ export default function Header() {
                                 <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
                                   {item.label}
                                 </AccordionTrigger>
-                                <AccordionContent className="pb-4 pl-2">
+                                <AccordionContent className="pb-4 pl-0">
                                   {item.isMega && item.megaCategories ? (
                                     <Accordion type="single" collapsible className="w-full space-y-2">
                                       {item.megaCategories.map((mega, mIdx) => (
                                         <AccordionItem key={mIdx} value={`mega-${idx}-${mIdx}`} className="border-none">
-                                          <AccordionTrigger className="hover:no-underline py-2">
+                                          <AccordionTrigger
+                                            className="hover:no-underline py-2"
+                                            hideIcon={mega.subItems.length === 0}
+                                          >
                                             <div className="flex items-center gap-3">
-                                              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
-                                                {typeof mega.icon === 'string' ? (
-                                                  <div className="relative w-5 h-5">
-                                                    <Image
-                                                      src={mega.icon.endsWith('.svg') || mega.icon.includes('.') ? mega.icon : `${mega.icon}.svg`}
-                                                      alt={mega.label}
-                                                      fill
-                                                      className="object-contain brightness-0 invert"
-                                                    />
-                                                  </div>
-                                                ) : (
-                                                  mega.icon
-                                                )}
-                                              </div>
-                                              <span className="text-[15px] font-semibold text-[#1C5396]">{mega.label}</span>
+                                              {item.label === 'Services' && (
+                                                <div className="w-8 h-8 rounded-[6px] flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
+                                                  {typeof mega.icon === 'string' ? (
+                                                    <div className="relative w-5 h-5">
+                                                      <Image
+                                                        src={mega.icon.endsWith('.svg') || mega.icon.includes('.') ? mega.icon : `${mega.icon}.svg`}
+                                                        alt={mega.label}
+                                                        fill
+                                                        className="object-contain brightness-0 invert"
+                                                      />
+                                                    </div>
+                                                  ) : (
+                                                    mega.icon
+                                                  )}
+                                                </div>
+                                              )}
+                                              <span className="text-[15px] font-normal text-[#1C5396]">{mega.label}</span>
                                             </div>
                                           </AccordionTrigger>
                                           <AccordionContent className="pl-11 pt-1">
