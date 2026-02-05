@@ -64,12 +64,10 @@ const navItems = [
     isMega: true,
     megaCategories: [
       {
-        id: 'blog',
+        id: 'blogs',
         label: 'Blogs',
         icon: "/images/service-icon-4.svg",
-        subItems: [
-          { name: 'Blog', href: '/resources/blog' },
-          { name: 'News & Updates', href: '/resources/news' },
+        subItems: [ 
         ]
       },
       {
@@ -82,7 +80,8 @@ const navItems = [
         id: 'newsroom',
         label: 'Newsroom',
         icon: "/images/service-icon-5.svg",
-        subItems: []
+        subItems: [
+        ]
       }
     ] as MegaCategory[]
   },
@@ -95,9 +94,7 @@ const navItems = [
         id: 'about-us',
         label: 'About us',
         icon: "/images/service-icon-1.svg",
-        subItems: [
-          { name: 'Our Story', href: '/about/story' },
-          { name: 'Mission & Values', href: '/about/mission' },
+        subItems: [ 
         ]
       },
       {
@@ -108,11 +105,9 @@ const navItems = [
       },
       {
         id: 'contact',
-        label: 'CONTACT US',
+        label: 'Contact Us',
         icon: "/images/service-icon-3.svg",
-        subItems: [
-          { name: 'Team', href: '/about/team' },
-          { name: 'Careers', href: '/about/careers' },
+        subItems: [ 
         ]
       }
     ] as MegaCategory[]

@@ -28,7 +28,9 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     const activeCategory = categories.find((cat) => cat.id === activeCategoryId) || categories[0]
 
     // Determine if we should show a CTA card based on the category
-    const showCTACard = activeCategoryId === 'digital' || activeCategoryId === 'glossary' || activeCategoryId === 'clients';
+    const isResource = activeCategoryId === 'blogs' || activeCategoryId === 'glossary' || activeCategoryId === 'newsroom';
+    const isAbout = activeCategoryId === 'about-us' || activeCategoryId === 'clients' || activeCategoryId === 'contact';
+    const showCTACard = activeCategoryId === 'digital' || isResource || isAbout;
 
     return (
         <div
@@ -111,7 +113,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                             <div className={cn(
                                 "relative w-full h-[80%] rounded-2xl overflow-hidden p-[15px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
                                 activeCategoryId === 'digital' ? "bg-[linear-gradient(360deg,#3EB0EA_0%,#389FDB_18%,#1C5396_100%)]" :
-                                    activeCategoryId === 'glossary' ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
+                                    isResource ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
                                         "bg-[linear-gradient(360deg,#4A7DBF_0%,#2D5B94_40%,#1C5396_100%)]"
                             )}>
                                 {activeCategoryId === 'digital' && (
@@ -119,7 +121,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                         <Image src="/images/dropBg.png" fill className='object-cover' alt="backgroundd_img" />
                                     </div>
                                 )}
-                                {activeCategoryId === 'glossary' && (
+                                {isResource && (
                                     <div className="absolute top-0 left-0 w-full h-full ">
                                         <Image src="/images/glsaaryBg.png" fill className='object-cover' alt="backgroundd_img" />
                                     </div>
@@ -128,7 +130,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                 <div className="relative z-10 flex flex-col h-full justify-center">
                                     <h4 className="text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px]  font-semibold text-white mb-[20px] 2xl:mb-[25px] leading-relaxed line-clamp-3 ">
                                         {activeCategoryId === 'digital' ? 'Empowering Businesses with Innovative Technology Solutions' :
-                                            activeCategoryId === 'glossary' ? 'Practical Insights for Your Business Success' :
+                                            isResource ? 'Practical Insights for Your Business Success' :
                                                 '30+ Years of Expertise That Drives Real Results'}
                                     </h4>
                                     <Link href="/" className="flex items-center text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px] font-semibold" aria-label="learn_more">
@@ -138,6 +140,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                             </div>
                         </div>
                     )}
+
                 </div>
             </div>
         </div>
