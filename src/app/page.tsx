@@ -426,7 +426,7 @@ export default function HomePage() {
       <HomeService data={localData.services} />
       <HomeApart data={localData.apart} />
       <HomeCounter data={localData.counterList} />
-      <HomeAbout data={localData.about} className="min-sm:hidden" />
+      <HomeAbout data={localData.about} className="sm:hidden" />
       <HomeSecurityInfo data={localData.securityInfo} />
       <HomeAbout data={localData.about} className="max-sm:hidden" />
       <HomeProfessionalAffiliations data={localData.professionalAffiliations} />

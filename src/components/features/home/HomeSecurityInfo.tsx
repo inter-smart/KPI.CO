@@ -27,13 +27,13 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
             </div>
           </div>
           <div className="w-full max-sm:max-w-full max-xl:max-w-[50%] max-xl:m-auto xl:w-[var(--width)]">
-               <Heading
-                as="h2"
-                size="h2"
-                className="text-[#1C5396] mb-6.25 2xl:mb-7.5 min-sm:hidden"
-              >
-                {data.title}
-              </Heading>
+            <Heading
+              as="h2"
+              size="h2"
+              className="text-[#1C5396] mb-6.25 2xl:mb-7.5 sm:hidden"
+            >
+              {data.title}
+            </Heading>
             <div className="text-center w-full h-auto p-[40px] lg:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[60px_50px] rounded-[10px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
               <div className="w-[70px] h-[70px] lg:w-17.5 2xl:w-22 3xl:w-25 h-auto aspect-square mx-auto lg:mb-5 3xl:mb-6.25 overflow-hidden block">
                 <Image

@@ -81,7 +81,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
                 >
                   {slide.title}
                 </Heading>
-                <p className="text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px] text-white/90 sm:max-w-[95%] xl:max-w-[79%] 3xl:max-w-[83%] font-normalmb-10 animate-in fade-in slide-in-from-left-10 duration-1000 delay-200 mb-[30px]">
+                <p className="text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px] text-white/90 sm:max-w-[95%] xl:max-w-[79%] 3xl:max-w-[83%] font-normal animate-in fade-in slide-in-from-left-10 duration-1000 delay-200 mb-[30px]">
                   {slide.description}
                 </p>
                 <Button

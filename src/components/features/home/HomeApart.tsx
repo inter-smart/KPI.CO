@@ -46,7 +46,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                   />
                   {parse(item.title ?? "title")}
                 </div>
-                <div className="text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:2xl:text-[21px] leading-normal font-normal text-[#d3dde8]">
+                <div className="text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px] leading-normal font-normal text-[#d3dde8]">
                   {parse(item.description ?? "description")}
                 </div>
               </div>
