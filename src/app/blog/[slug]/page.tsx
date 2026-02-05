@@ -1,6 +1,6 @@
-import BlogDetail from "@/components/features/blog/BlogDetail";
+import BlogDetail from "@/components/features/blogs/BlogDetail";
 // import BlogDetailSection from "@/components/features/blog/BlogDetailSection";
-import BlogInternalAudit from "@/components/features/blog/BlogInternalAudit";
+import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
 
 export const dynamic = "force-dynamic";
 
