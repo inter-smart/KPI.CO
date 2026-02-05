@@ -11,6 +11,9 @@ export const headingVariants = cva("leading-tight font-semibold", {
     size: {
       h1: "text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[45px] 2xl:text-[52px] 3xl:text-[65px]",
       h2: "text-[24px] sm:text-[28px] lg:text-[34px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+      h3: "text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[30px]",
+      h4: "text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[32px]",
+      h5: "text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[30px]",
     },
   },
   defaultVariants: {
@@ -28,6 +31,7 @@ export const textVariants = cva("leading-normal font-normal", {
       p1: "text-[14px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px]",
       p2: "text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px]",
       p3: "text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px]",
+      p4: "text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px]",
     },
   },
   defaultVariants: {
