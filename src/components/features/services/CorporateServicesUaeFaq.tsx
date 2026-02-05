@@ -6,8 +6,16 @@ import {
 } from "@/components/ui/accordion"
 import parse from 'html-react-parser'
 import { Heading } from "@/components/utils/typography"
+import type { FaqItem } from "@/app/corporate-services-uae/page";
 
-export default function CorporateServicesUaeFaq({ data }) {
+type CorporateServicesUaeFaqProps = {
+    data: {
+        title: string;
+        faq_list: FaqItem[];
+    };
+};
+
+export default function CorporateServicesUaeFaq({ data }: CorporateServicesUaeFaqProps) {
     return (
         <section className="w-full h-auto py-[25px_70px] block">
             <div className="container">
@@ -48,3 +56,4 @@ export default function CorporateServicesUaeFaq({ data }) {
         </section>
     )
 }
+
