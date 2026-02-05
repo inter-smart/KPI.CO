@@ -8,11 +8,12 @@ import type { AboutData } from '@/app/page'
 
 type HomeAboutProps = {
   data: AboutData
+  className?: string
 }
 
-export default function HomeAbout({ data }: HomeAboutProps) {
+export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
-    <section className="w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0">
+    <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0", className)}>
       <Image
         src="/images/home-about-delmt.png"
         alt="about-delemt"

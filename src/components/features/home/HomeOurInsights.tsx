@@ -67,7 +67,7 @@ export default function HomeOurInsights({ data }: HomeOurInsightsProps) {
           {data.title}
         </Heading>
 
-        <div ref={emblaRef} className="w-full max-w-full ">
+        <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-3.5 2xl:-mx-5 [&>*]:p-2 lg:[&>*]:p-3.5 2xl:[&>*]:p-5">
             {data.items.map((item) => (
               <div
@@ -81,20 +81,20 @@ export default function HomeOurInsights({ data }: HomeOurInsightsProps) {
             ))}
           </div>
         </div>
-
-        <div className="flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6">
-          {scrollSnaps.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={cn(
-                'w-2 xl:w-3 aspect-square rounded-full transition',
-                index === selectedIndex ? 'bg-[#ffc916]' : 'bg-[#dedede]',
-              )}
-            />
-          ))}
-        </div>
-      </div>
+     
+          <div className="flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={cn(
+                  'w-2 xl:w-3 aspect-square rounded-full transition',
+                  index === selectedIndex ? 'bg-[#ffc916]' : 'bg-[#dedede]',
+                )}
+              />
+            ))}
+          </div>
+        </div> 
     </section>
   )
 }
@@ -131,7 +131,7 @@ function InsightCard({ data }: InsightCardProps) {
 
         <Link
           href={data.slug ?? '#'}
-          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1 hover:text-[#ffc916] transition-colors duration-300"
+          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
         >
           Read More
           <Image
