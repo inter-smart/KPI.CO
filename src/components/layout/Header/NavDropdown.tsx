@@ -21,7 +21,7 @@ type NavDropdownProps = {
     categories: MegaCategory[]
     isVisible: boolean
 }
-
+const LINK_STYLES = "text-[16px] md:text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px] text-[#1C5396] font-medium hover:text-[#1C5396] transition-colors"
 export default function NavDropdown({ categories, isVisible }: NavDropdownProps) {
     const [activeCategoryId, setActiveCategoryId] = useState<string>(categories[0]?.id || '')
 
@@ -33,26 +33,26 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     return (
         <div
             className={cn(
-                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[610px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] rounded-b-3xl border border-gray-100 overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
+                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[610px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px-0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl border border-gray-100 overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
                 isVisible ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-3 scale-[0.98] pointer-events-none"
             )}
         >
-            <div className="flex min-h-[360px]">
+            <div className="flex">
                 {/* Left Column: Categories */}
-                <div className="w-[280px] border-r border-gray-50 p-6 bg-white">
-                    <div className="flex flex-col gap-1.5">
+                <div className="w-[280px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[410px] border-r border-black-10   bg-white">
+                    <div className="flex flex-col xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px] ">
                         {categories.map((category) => (
                             <div
                                 key={category.id}
                                 onMouseEnter={() => setActiveCategoryId(category.id)}
                                 className={cn(
-                                    "group flex items-center justify-between px-4 py-3 rounded-xl transition-all cursor-pointer",
+                                    "group flex items-center justify-between px-4 py-3 rounded-xl transition-all cursor-pointer mb-[15px]",
                                     activeCategoryId === category.id
-                                        ? "bg-[#F3F9FF] text-[#1C5396]"
+                                        ? "bg-[rgba(143,216,254,0.15)] text-[#1C5396]"
                                         : "hover:bg-gray-50 text-[#4E4E4E]"
                                 )}
                             >
-                                <div className="flex items-center gap-3.5">
+                                <div className="flex items-center gap-4">
                                     <div className={cn(
                                         "w-[34px] 3xl:w-[42px] h-[34px] 3xl:h-[42px] rounded-lg flex items-center justify-center transition-all bg-gradient-to-b from-[#6A9FE0] to-[#053269]",
                                         activeCategoryId === category.id
@@ -72,10 +72,15 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                             category.icon
                                         )}
                                     </div>
-                                    <span className="font-semibold text-[14.5px] whitespace-nowrap">{category.label}</span>
+                                    <span className={`${LINK_STYLES} whitespace-nowrap `}>{category.label}</span>
                                 </div>
                                 {activeCategoryId === category.id && (
-                                    <ChevronRight className="w-4 h-4 text-[#1C5396]/60" />
+                                    <div className="w-[7px] h-[12px]">
+                                        <svg  viewBox="0 0 7 12" fill="none" className='w-full h-full object-contain'>
+                                            <path d="M6.34751 4.83818L1.82485 0.315518C1.72569 0.215541 1.60771 0.136187 1.47773 0.0820338C1.34774 0.0278805 1.20832 0 1.06751 0C0.926699 0 0.78728 0.0278805 0.657297 0.0820338C0.527314 0.136187 0.409339 0.215541 0.310179 0.315518C0.111511 0.515372 0 0.78572 0 1.06752C0 1.34932 0.111511 1.61966 0.310179 1.81952L4.08618 5.59552L0.310179 9.37152C0.111511 9.57137 0 9.84172 0 10.1235C0 10.4053 0.111511 10.6757 0.310179 10.8755C0.409848 10.9744 0.528052 11.0526 0.658012 11.1057C0.787972 11.1588 0.927132 11.1857 1.06751 11.1849C1.20789 11.1857 1.34705 11.1588 1.47701 11.1057C1.60697 11.0526 1.72518 10.9744 1.82485 10.8755L6.34751 6.35285C6.44749 6.25369 6.52684 6.13572 6.581 6.00573C6.63515 5.87575 6.66303 5.73633 6.66303 5.59552C6.66303 5.45471 6.63515 5.31529 6.581 5.1853C6.52684 5.05532 6.44749 4.93735 6.34751 4.83818Z" fill="#1C5396" />
+                                        </svg>
+
+                                    </div>
                                 )}
                             </div>
                         ))}
@@ -83,18 +88,18 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                 </div>
 
                 {/* Right Column: Sub-items or CTA Card */}
-                <div className="flex-1 p-8 bg-white relative">
+                <div className="flex-1 w-[calc(100%-280px)] xl:w-[cal(100%-310px)] 2xl:w-[calc(100%-350px)] 3xl:w-[calc(100%-410px)]  bg-white relative p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
                     {!showCTACard ? (
                         <div className="grid grid-cols-1 gap-2">
                             {activeCategory?.subItems.map((item, index) => (
                                 <Link
                                     key={`${activeCategory.id}-${index}`}
                                     href={item.href}
-                                    className="group flex items-center px-4 py-3 rounded-xl hover:bg-[#F3F9FF] transition-all"
+                                    className="group flex items-center w-full px-4 py-4 rounded-xl hover:bg-[rgba(143,216,254,0.15)] transition-all"
                                 >
                                     <span className={cn(
-                                        "text-[15px] font-medium transition-colors",
-                                        "text-[#4E4E4E] group-hover:text-[#1C5396]"
+                                        "text-[13px] 2xl:text-[14px] 3xl:text-[18px] font-medium transition-colors",
+                                        "text-[#1C5396] group-hover:text-[#1C5396]"
                                     )}>
                                         {item.name}
                                     </span>
@@ -102,7 +107,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                             ))}
                         </div>
                     ) : (
-                        <div className="h-full flex flex-col justify-center">
+                        <div className="h-full flex flex-col justify-start">
                             <div className="relative w-full h-[200px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1C5396] to-[#3EB0EA] p-8 text-white group cursor-pointer shadow-lg">
                                 <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-20 bg-[url('/images/dropdown-cta-bg.png')] bg-cover bg-no-repeat transition-transform group-hover:scale-110 duration-700"></div>
 
