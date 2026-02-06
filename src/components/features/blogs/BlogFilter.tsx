@@ -68,9 +68,9 @@ export default function BlogFilter({
                     Filters
                 </button>
             </DialogTrigger>
-            <DialogContent className="max-w-[900px] lg:p-[20px] xl:p-[30px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
+            <DialogContent className="max-w-[95%] lg:max-w-[900px] p-[25px] xl:p-[30px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
                 {/* Custom Close Button matching image */}
-                <DialogClose className="absolute right-6 top-6  w-[24px] 2xl:w-[32px] h-[24px] 2xl:h-[32px] flex items-center justify-center bg-[#FFC107] rounded-full text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
+                <DialogClose className="absolute right-6 top-6  w-[24px] 2xl:w-[32px] h-[24px] 2xl:h-[32px] flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.500091 0.499999L8.3811 8.38101" stroke="#212121" stroke-linecap="round" />
                         <path d="M8.38248 0.506927L0.501465 8.38794" stroke="#212121" stroke-linecap="round" />
@@ -83,7 +83,7 @@ export default function BlogFilter({
                         <button
                             onClick={() => setIsSortOpen(!isSortOpen)}
                             className={cn(
-                                "text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-5 py-2.5 bg-white border border-black/10 rounded-[10px] h-[40px] font-medium transition-all min-w-[200px] justify-between",
+                                "text-[14px] md:text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-5 py-2.5 bg-white border border-black/10 rounded-[10px] h-[40px] font-medium transition-all min-w-[200px] justify-between",
                                 isSortOpen ? "border-gray-300 ring-2 ring-gray-100 " : "border-gray-200"
                             )}
                         >
@@ -119,8 +119,8 @@ export default function BlogFilter({
                     </div>
 
                     {/* Categories Section */}
-                    <div className="space-y-5">
-                        <h3 className="text-[24px] font-semibold text-[#1C5396] tracking-tight">Categories</h3>
+                    <div className="mb-[30px]">
+                        <h3 className="text-[14px] sm:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-semibold text-[#1C5396] tracking-tight mb-[20px]">Categories</h3>
 
                         <div className="flex flex-wrap gap-4">
                             {categories.map((category) => {
@@ -130,10 +130,10 @@ export default function BlogFilter({
                                         key={category}
                                         onClick={() => toggleFilter(category)}
                                         className={cn(
-                                            "px-6 py-2.5 rounded-xl text-[16px] font-medium transition-all duration-200 border",
+                                            "px-6 py-2.5 rounded-[10px] text-[16px] text-[#4E4E4E] font-medium transition-all duration-200 border",
                                             isActive
-                                                ? "bg-[#f0f7ff] border-[#d6e5f5] text-[#1c5396] flex items-center gap-3"
-                                                : "bg-white border-black-20 text-[#4E4E4E] hover:border-gray-300"
+                                                ? "bg-[#f0f7ff] border-none flex items-center gap-3"
+                                                : "bg-white border-black-40 hover:border-gray-300"
                                         )}
                                     >
                                         {category}
@@ -145,19 +145,23 @@ export default function BlogFilter({
                     </div>
 
                     {/* Bottom Actions */}
-                    <div className="flex items-center gap-5 pt-4">
-                        <button
-                            onClick={handleApply}
-                            className="px-12 py-3.5 bg-[#FFC107] hover:bg-[#FFB300] text-black font-extrabold rounded-xl transition-all shadow-md shadow-yellow-100 active:scale-[0.98] text-[16px]"
-                        >
-                            Apply Filters
-                        </button>
-                        <button
-                            onClick={handleClear}
-                            className="px-12 py-3.5 bg-white border border-[#FFC107] text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-all active:scale-[0.98] text-[16px]"
-                        >
-                            Clear All Filters
-                        </button>
+                    <div className="flex items-center gap-3 sm:gap-4 w-full max-w-[400px] h-[48px]">
+                        <div className="w-1/2 h-full">
+                            <button
+                                onClick={handleApply}
+                                className="flex items-center w-full h-full justify-center bg-[#FFC916] hover:scale-105 text-black font-medium rounded-[10px] transition-all shadow-md shadow-yellow-100 active:scale-[0.98] text-[14px] xl:text-[18px] 2xl:text-[20px]"
+                            >
+                                Apply Filters
+                            </button>
+                        </div>
+                        <div className="w-1/2 h-full">
+                            <button
+                                onClick={handleClear}
+                                className="flex items-center w-full h-full justify-center bg-white border border-[#FFC916] hover:scale-105 text-gray-700 font-medium rounded-[10px] hover:bg-gray-50 transition-all active:scale-[0.98] text-[14px] xl:text-[18px] 2xl:text-[20px]"
+                            >
+                                Clear All Filters
+                            </button>
+                        </div>
                     </div>
                 </div>
             </DialogContent>
