@@ -20,6 +20,7 @@
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-class-names": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.31.2",
     "html-react-parser": "^5.2.16",
     "lucide-react": "^0.563.0",
     "next": "16.1.6",
@@ -28,6 +29,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.71.1",
+    "react-responsive": "^10.0.1",
     "swiper": "^12.1.0",
     "tailwind-merge": "^3.4.0",
     "zod": "^4.3.6"
