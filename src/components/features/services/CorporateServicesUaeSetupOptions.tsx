@@ -31,7 +31,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="group w-full aspect-53/56 relative z-0 overflow-hidden"
+        className="group w-full aspect-square sm:aspect-53/56 relative z-0 overflow-hidden"
         initial={false}
       >
         <motion.div
@@ -47,17 +47,15 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
         >
           <Heading
             as="div"
-            className="text-[18px] sm:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white"
+            className="text-[24px] sm:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white"
           >
             {item.title}
-            <span className="xl:w-10 2xl:w-12 h-[2px] bg-base2 block mx-auto mt-2" />
+            <span className="w-12 xl:w-10 2xl:w-12 h-[2px] bg-base2 block mx-auto mt-2" />
           </Heading>
         </motion.div>
 
-        {/* Dark overlay */}
         <div className="bg-linear-to-t from-black to-transparent opacity-30 absolute -z-1 inset-0" />
 
-        {/* Background Image */}
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -66,12 +64,13 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
           className="-z-2 object-cover"
         />
 
-        {/* Hover Content Overlay - Slides up from bottom */}
         <motion.div
           className="w-full h-full bg-linear-to-t from-[#6a9fe0] to-[#053269] p-6 xl:p-9 2xl:p-11 flex items-center justify-center absolute z-20 inset-0"
-          initial={{ y: "100%" }}
+          initial={{ y: "0%", opacity: 0, visibility: "hidden" }}
           animate={{
-            y: isHovered ? "0%" : "100%",
+            y: isHovered ? "0%" : "0%",
+            opacity: isHovered ? 1 : 0,
+            visibility: isHovered ? "visible" : "hidden",
           }}
           transition={{
             duration: 0.5,
@@ -79,12 +78,12 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
           }}
         >
           <div className="w-full">
-            {/* Heading - Staggered animation */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 60, scale: 1.2 }}
               animate={{
                 opacity: isHovered ? 1 : 0,
-                y: isHovered ? 0 : 20,
+                y: isHovered ? 0 : 60,
+                scale: isHovered ? 1 : 1.2,
               }}
               transition={{
                 duration: 0.4,
@@ -95,13 +94,12 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Heading
                 as="div"
                 size="h4"
-                className="text-center font-semibold text-white mb-2 2xl:mb-2.5"
+                className="max-sm:text-[22px] text-center font-semibold text-white mb-2 2xl:mb-2.5"
               >
                 {item.title}
               </Heading>
             </motion.div>
 
-            {/* Description - Staggered animation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{
@@ -117,13 +115,11 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Text
                 as="div"
                 size="p1"
-                className="line-clamp-8 text-center text-white mb-5 2xl:mb-12"
+                className="max-sm:text-[14px] line-clamp-8 font-light text-center text-white mb-5 2xl:mb-6"
               >
                 {parse(item?.description)}
               </Text>
             </motion.div>
-
-            {/* Button - Staggered animation */}
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, y: 20 }}
@@ -140,7 +136,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Button
                 variant="yellow"
                 size="lg"
-                className="text-[12px] xl:text-[14px] 2xl:text-[17px] min-w-[100px] xl:min-w-[120px] 2xl:min-w-[145px] h-8.5! 2xl:h-10.5!"
+                className="text-[12px] xl:text-[14px] 2xl:text-[17px] min-w-[120px] xl:min-w-[120px] 2xl:min-w-[145px] h-8.5! 2xl:h-10.5!"
                 asChild
               >
                 <Link href={item?.slug}>Learn More</Link>
@@ -163,15 +159,19 @@ export default function CorporateServicesUaeSetupOptions({
     containScroll: "trimSnaps",
   });
   return (
-    <section className="w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]">
+    <section className="w-full block py-11.5 sm:py-10 xl:py-[50px_70px] 2xl:py-[65px_80px]">
       <div className="container">
-        <div className="text-center w-full max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1080px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
-          <Heading as="h2" size="h2" className="text-[#1C5396] mb-4">
+        <div className="sm:text-center w-full sm:max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1000px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
+          <Heading
+            as="h2"
+            size="h2"
+            className="text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7"
+          >
             {data.title}
           </Heading>
           <Text
-            as="p"
-            size="p1"
+            as="div"
+            size="p5"
             className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8"
           >
             {parse(data?.description)}
@@ -182,7 +182,7 @@ export default function CorporateServicesUaeSetupOptions({
           ref={emblaRef}
           className="w-full max-w-full overflow-hidden rounded-[16px]"
         >
-          <div className="flex touch-pan-y touch-pinch-zoom">
+          <div className="flex touch-pan-y touch-pinch-zoom max-sm:flex-col">
             {data.items.map((item) => (
               <SetupOptionCard key={`setup-option-${item.id}`} item={item} />
             ))}

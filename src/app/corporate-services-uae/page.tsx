@@ -81,7 +81,7 @@ export type FaqItem = {
 const localData = {
   hero: {
     id: 1,
-    title: "Business Setup Experts - Start Your Business in the UAE",
+    title: "Business Setup Experts - Start Your Business In The UAE",
     description:
       "<p>The United Arab Emirates is built for founders with ambition. Whether you are launching your first company or expanding internationally, KPI helps you set up in the UAE with the right structure, clear guidance, and full support beyond incorporation. From choosing the best jurisdiction to managing banking, tax, and visas, we make the process simple, transparent, and stress-free.</p>",
     additionalContent: [
@@ -92,9 +92,9 @@ const localData = {
   } satisfies HeroData,
 
   whyBuild: {
-    title: "Why Build Your Business in The UAE?",
+    title: "Why Build Your Business In The UAE?",
     description:
-      "<p>The UAE’s appeal goes beyond world-class infrastructure and a vibrant lifestyle. Here’s why it’s the perfect place to start and scale your company: </p>",
+      "<p>The UAE’s appeal goes beyond world-class infrastructure and a vibrant lifestyle. Here’s why it’s the perfect place to start and scale your company: </p>",
     items: [
       {
         id: 1,
@@ -120,19 +120,19 @@ const localData = {
         id: 3,
         media: {
           path: "/images/corporate-services-uae-service-3.svg",
-          alt: "100% Ownership",
+          alt: "Political Stability",
         },
-        title: "100% Ownership",
+        title: "Political Stability",
         description:
-          "<p>Operate in a secure, pro-business environment backed by government policies that support growth.</p>",
+          "<p>Operate in a secure, pro-business environment backed by government policies that support growth. </p>",
       },
       {
         id: 4,
         media: {
           path: "/images/corporate-services-uae-service-4.svg",
-          alt: "Business-Friendly",
+          alt: "Banking & Finance",
         },
-        title: "Business-Friendly",
+        title: "Banking & Finance",
         description:
           "<p>Access trusted banks, investor networks, and financial infrastructure to run your operations smoothly.</p>",
       },
@@ -140,9 +140,9 @@ const localData = {
         id: 5,
         media: {
           path: "/images/corporate-services-uae-service-5.svg",
-          alt: "Visa Support",
+          alt: "Speed & Efficiency",
         },
-        title: "Visa Support",
+        title: "Speed & Efficiency",
         description:
           "<p>Get your company operational fast with streamlined licensing, visas, and government approvals. </p>",
       },
@@ -150,9 +150,9 @@ const localData = {
         id: 6,
         media: {
           path: "/images/corporate-services-uae-service-6.svg",
-          alt: "World-Class Infrastructure",
+          alt: "Innovation Hub",
         },
-        title: "World-Class Infrastructure",
+        title: "Innovation Hub",
         description:
           "<p>Access a dynamic ecosystem of startups, accelerators, and tech hubs to scale your business ideas faster.</p>",
       },
@@ -160,7 +160,7 @@ const localData = {
   },
 
   setupOptions: {
-    title: "Business Setup Options in The UAE",
+    title: "Business Setup Options In The UAE",
     description:
       "<p>The UAE offers several ways to establish a company; each suited to different business goals and operating models. We help you select the right structure from day one, ensuring it aligns with your business activity, growth plans, and long-term objectives.</p>",
     items: [
@@ -209,7 +209,7 @@ const localData = {
       {
         id: 1,
         step: "Step One",
-        title: "Speak to a Consultant",
+        title: "Speak To A Consultant",
         sub_title: "Define Scope & Objectives",
         description:
           "<p>It begins with a conversation. We take the time to understand your business idea, goals, and where you want to operate. Based on this, we recommend the most suitable setup option across the UAE.</p>",
@@ -217,7 +217,7 @@ const localData = {
       {
         id: 2,
         step: "Step Two",
-        title: "Choose the Right Jurisdiction",
+        title: "Choose The Right Jurisdiction",
         sub_title: "Choose the Right Jurisdiction",
         description:
           "<p>Mainland, free zone, or offshore - each serve a different purpose. We help you choose the structure that fits your business activity, budget, and future goals.</p>",
