@@ -12,7 +12,7 @@ export type DocumentRequiredItem = {
 export type DocumentRequiredData = {
   title?: string;
   description?: string;
-  items?: DocumentRequiredItem[];
+   items?: DocumentRequiredItem[];
   ftr_description?: string;
   media?: {
     path?: string;
