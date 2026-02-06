@@ -22,7 +22,7 @@
   --breakpoint-2xl: 96rem;
   --breakpoint-3xl: 120rem;
 
-  /* Container Sizes */
+  /* Container Sizes */ 
   --container-sm: 40rem;
   --container-md: 50rem;
   --container-lg: 855px;
@@ -33,8 +33,8 @@
   /* Header Sizes */
   --header-y-sm: 60px;
   --header-y-lg: 60px;
-  --header-y-2xl: 70px;
-  --header-y-3xl: 88px;
+  --header-y-2xl: 80px;
+  --header-y-3xl: 90px;
 
   --animate-scroll: scroll 40s forwards linear infinite;
 
@@ -93,12 +93,12 @@
   }
 
   body {
-    --header-y: var(--header-y-sm);
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --header-y: var(--header-y-sm);
 
     font-family:
       var(--font-poppins),
@@ -170,6 +170,7 @@
     @apply max-w-sm! sm:max-w-sm! md:max-w-md! lg:max-w-lg! xl:max-w-xl! 2xl:max-w-2xl! 3xl:max-w-3xl!;
   }
 
+
   .typography {
     --text-color: black;
 
@@ -192,7 +193,7 @@
     }
 
     h3 {
-      @apply text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-tight font-medium text-(--text-color);
+      @apply text-[13px] sm:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-tight font-normal text-(--text-color);
     }
 
     h4 {
@@ -206,44 +207,7 @@
     h6 {
       @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-tight font-normal text-(--text-color);
     }
-
-    ul>li,
-    ol>li {
-      @apply my-1 lg:my-1.5 font-normal;
-    }
-
-    ul {
-      @apply ml-5;
-    }
-    ul>li {
-      @apply list-disc;
-    }
   }
-  .image-overlay {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 30px 0; 
-  }
-
-  .image-overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(28, 83, 150, 0.4);
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .image-overlay img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin-block: 0;
-  }
-
-  
 }
 
 :root {
@@ -315,6 +279,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-section {
+section{
   overflow: hidden;
 }

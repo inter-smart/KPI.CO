@@ -177,8 +177,8 @@ export default function Header() {
               <div className="hidden lg:block">
                 <Link
                   href="/contact"
-                  className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916] hover:bg-[#FFC916]/90 flex items-center
-                   justify-center font-semibold px-7 py-2.5 rounded-[8px] transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 "
+                  className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916]  flex items-center
+                   justify-center font-semibold px-7 py-2.5 rounded-[8px] transition-all duration-300 shadow-none  hover:scale-105 active:scale-95 "
                 >
                   Get in Touch
                 </Link>
@@ -188,10 +188,13 @@ export default function Header() {
               <div className="lg:hidden">
                 <Sheet open={menuSheetOpen} onOpenChange={setMenuSheetOpen}>
                   <SheetTrigger className="p-2">
-                    <div className="w-6 h-6 flex flex-col justify-around">
-                      <span className="w-full h-0.5 bg-black"></span>
-                      <span className="w-full h-0.5 bg-black"></span>
-                      <span className="w-full h-0.5 bg-black"></span>
+                    <div className="w-[26px] h-[17px] flex flex-col justify-around">
+                      <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4957 1.88666L1.31954 1.88666C1.14043 1.89834 0.960653 1.89445 0.782225 1.87502C0.567692 1.85601 0.368353 1.75635 0.224424 1.59613C0.0804939 1.43591 0.00268745 1.22707 0.00670242 1.01174C-0.0214348 0.784451 0.0402031 0.555155 0.178511 0.372614C0.316818 0.190072 0.52088 0.0686867 0.747299 0.034273C0.946793 0.00222254 1.14925 -0.00738966 1.35088 0.00561619C8.80193 0.00681031 16.2528 0.00890005 23.7036 0.011885C24.6434 0.011885 25.0433 0.28681 25.0545 0.932482C25.0657 1.60412 24.6595 1.8889 23.6722 1.88935C19.9469 1.89144 16.2213 1.89159 12.4957 1.8898V1.88666Z" fill="black" />
+                        <path d="M12.5228 14.8731L23.6963 14.8731C23.8979 14.8614 24.1002 14.8654 24.3012 14.8852C24.5163 14.9051 24.7152 15.0084 24.8552 15.173C24.9953 15.3376 25.0654 15.5504 25.0507 15.7659C25.0765 15.9811 25.0173 16.1978 24.8858 16.3699C24.7543 16.5421 24.5607 16.6562 24.3464 16.6879C24.1688 16.7148 23.989 16.724 23.8095 16.7152C16.3385 16.7131 8.8673 16.7104 1.39596 16.7071C0.382227 16.7071 -0.00463867 16.4483 0.00297356 15.7794C0.0105839 15.1194 0.38715 14.874 1.417 14.8731C5.11909 14.8716 8.82103 14.8716 12.5228 14.8731Z" fill="black" />
+                        <path d="M17.674 7.46294C19.7386 7.46294 21.8032 7.45801 23.8683 7.46294C24.6586 7.46697 25.0446 7.76921 25.0526 8.35756C25.0607 8.94592 24.6635 9.27682 23.8943 9.27727C19.691 9.28085 15.4878 9.28085 11.2849 9.27727C10.5944 9.27727 10.1686 8.92712 10.1587 8.38622C10.1489 7.84533 10.5819 7.46921 11.2584 7.46607C13.3969 7.45801 15.5354 7.46339 17.674 7.46294Z" fill="black" />
+                      </svg>
+
                     </div>
                   </SheetTrigger>
                   <SheetContent side="right" className="w-full sm:w-[350px] p-0 overflow-y-auto">
