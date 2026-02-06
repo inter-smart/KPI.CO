@@ -15,6 +15,12 @@ export type InsightItem = {
   slug: string;
 };
 
+export type AffiliationItem = {
+  id: number;
+  media: MediaItem;
+  slug: string;
+};
+
 export const dynamic = "force-dynamic";
 
 const local_data = {
