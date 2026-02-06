@@ -180,7 +180,7 @@
     p,
     &,
     li {
-      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
+      @apply text-[16px] sm:text-[14px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {

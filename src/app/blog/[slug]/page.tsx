@@ -1,7 +1,13 @@
+"use client";
+
+// import { motion, useSpring, useScroll } from "framer-motion";
+import { motion, useSpring, useScroll } from "motion/react";
+
 import BlogDetail from "@/components/features/blogs/BlogDetail";
+import BlogGetInTouch from "@/components/features/blogs/BlogGetInTouch";
 import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
-import HomeProfessionalAffiliations from "@/components/features/home/HomeProfessionalAffiliations";
+import BlogTrustedLeader from "@/components/features/blogs/BlogTrustedLeader";
 
 export type MediaItem = {
   path: string;
@@ -17,10 +23,21 @@ export type InsightItem = {
   slug: string;
 };
 
-export type AffiliationItem = {
+export type TrustedLeader = {
   id: number;
-  media: MediaItem;
-  slug: string;
+  media: {
+    path: string;
+    alt: string;
+  };
+};
+
+export type GetInTouchItem = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
 };
 
 export const dynamic = "force-dynamic";
@@ -157,75 +174,108 @@ const local_data = {
         readTime: "2 MIN READ",
         slug: "#",
       },
-      
     ] satisfies InsightItem[],
   },
-  professionalAffiliations: {
-    title: "Trusted by Industry Leaders ",
-    items: [
+  BlogTrustedLeaders: {
+    title: "Trusted by Industry Leaders",
+    description:
+      "",
+    partners: [
       {
         id: 1,
         media: {
-          path: "/images/home-professionalAffiliations-1.png",
-          alt: "professionalAffiliations",
+          path: "/images/trusted-leader-1.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
       {
         id: 2,
         media: {
-          path: "/images/home-professionalAffiliations-2.png",
-          alt: "professionalAffiliations",
+          path: "/images/trusted-leader-2.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
       {
         id: 3,
         media: {
-          path: "/images/home-professionalAffiliations-3.png",
-          alt: "professionalAffiliations",
+          path: "/images/trusted-leader-3.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
       {
         id: 4,
         media: {
-          path: "/images/home-professionalAffiliations-4.png",
-          alt: "professionalAffiliations",
+          path: "/images/trusted-leader-4.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
       {
         id: 5,
         media: {
-          path: "/images/home-professionalAffiliations-5.png",
-          alt: "professionalAffiliations",
+          path: "/images/trusted-leader-2.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
       {
         id: 6,
         media: {
-          path: "/images/home-professionalAffiliations-6.png",
-          alt: "professionalAffiliations",
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
         },
-        slug: "#",
       },
-    ] satisfies AffiliationItem[],
+    ] satisfies TrustedLeader[],
   },
+  GetInTouch: {
+    title: "Stay Ahead of the Curve",
+    description:
+      "<p>Subscribe for Expert Audit and Financial Insights Directly to Your Inbox.</p>",
+    button: {
+      label: "Get In Touch",
+      link: "/contact",
+    },
+  } satisfies GetInTouchItem,
 };
+
+// import { motion, useSpring, useScroll } from "framer-motion";
+
+export function ScrollLinked() {
+  const { scrollYProgress } = useScroll();
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  return (
+    <motion.div
+      id="scroll-indicator"
+      style={{
+        scaleX,
+        position: "fixed",
+        top: "var(--header-y)",
+        left: 0,
+        right: 0,
+        height: 6,
+        transformOrigin: "0% 50%",
+        backgroundColor: "#FFC916",
+        zIndex: 9999,
+      }}
+    />
+  );
+}
 
 export default function BlogDetailPage() {
   return (
     <>
-      <BlogInternalAudit data={local_data?.audit_data} />
-      <BlogDetail data={local_data?.blog_detail} />
-      {/* <BlogDetailSection data={local_data?.blog_detail} /> */}
-      {/* <HomeOurInsights data={local_data?.insights} /> */}
-      <BlogRelated data={local_data?.related_blog} />
-      <HomeProfessionalAffiliations
-        data={local_data?.professionalAffiliations}
-      />
+      <ScrollLinked />
+      <article style={{ width: "100%" }}>
+        <BlogInternalAudit data={local_data?.audit_data} />
+        <BlogDetail data={local_data?.blog_detail} />
+        <BlogRelated data={local_data?.related_blog} />
+        <BlogTrustedLeader data={local_data?.BlogTrustedLeaders} />
+        <BlogGetInTouch data={local_data?.GetInTouch} />
+      </article>
     </>
   );
 }

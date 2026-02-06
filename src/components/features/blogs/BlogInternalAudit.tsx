@@ -46,7 +46,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
             {data?.description}
           </div>
         </div>
-        <div className="w-full overflow-hidden rounded-[10px] mb-8 relative">
+        <div className="w-full overflow-hidden rounded-[10px] relative">
           <div className="absolute inset-0 bg-[rgba(28,83,150,40%)] z-10"></div>
           <Image
             src={data?.media?.desktop_path || "/images/icon-placeholder.svg"}

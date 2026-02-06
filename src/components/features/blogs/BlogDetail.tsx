@@ -123,11 +123,15 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       }));
 
   return (
-    <section ref={sectionRef} className="w-full pt-[30px] pb-[50px] bg-white !overflow-visible">
+    <section
+      ref={sectionRef}
+      className="w-full pt-[25px] md:pt-[30px] pb-[30px] lg:pb-[50px] bg-white !overflow-visible">
       <div className="container">
-        <div className="flex gap-[40px] items-start">
+        <div className="flex md:gap-[30px] xl:gap-[40px] items-start">
           {/* Sidebar */}
-          <div className="w-[27%] shrink-0 sticky h-full top-[100px]" ref={sidebarColumnRef}>
+          <div className="md:w-[30%] lg:w-[25%] 2xl:w-[24%] shrink-0 sticky h-full top-[100px] hidden md:block"
+            ref={sidebarColumnRef}
+          >
             <div
               ref={sidebarRef}
               style={sidebarStyle}
@@ -135,9 +139,9 @@ export default function BlogDetail({ data }: BlogDetailProps) {
             >
               {data?.sidebar_title && (
                 <Heading
-                  as="h5"
-                  size="h5"
-                  className="font-semibold text-[#1C5396] mb-[25px]"
+                  as="h4"
+                  size="h4"
+                  className="font-semibold text-[#1C5396] mb-[15px] lg:mb-[20px] xl:mb-[25px]"
                 >
                   {data.sidebar_title}
                 </Heading>
@@ -149,18 +153,18 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                     ? activeId === item.id
                     : index === 0;
                   return (
-                    <li key={item.id} className="relative pl-[28px] pb-8 mb-0">
+                    <li key={item.id} className="relative pl-[35px] pb-6 xl:pb-8 mb-0">
                       {/* Bullet */}
-                      <div className="absolute left-[2px] top-[3px] h-[14px] w-[14px] p-[1px] rounded-full border border-[#9fb4d4] bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
+                      <div className="absolute left-[0px] top-[3px] h-[15px] w-[15px] p-[1px] rounded-full border border-[#9fb4d4] bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
                         <div className="h-full w-full rounded-full border bg-white" />
                       </div>
 
                       {isActive && (
-                        <div className="absolute left-[2px] top-[3px] h-[14px] w-[14px] rounded-full bg-gradient-to-b from-[#053269] to-[#6A9FE0]" />
+                        <div className="absolute left-[0px] top-[4px] h-[14px] w-[14px] rounded-full bg-gradient-to-b from-[#053269] to-[#6A9FE0]" />
                       )}
 
                       {index < tocItems.length - 1 && (
-                        <div className="absolute left-[8px] top-[18px] h-full w-[1px] overflow-hidden">
+                        <div className="absolute left-[6px] top-[18px] h-full w-[1px] overflow-hidden">
                           {/* Base line */}
                           <div className="absolute inset-0 bg-[#4E4E4E50]" />
 
@@ -177,15 +181,14 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                         href={`#${item.id}`}
                         onClick={(e) => {
                           e.preventDefault();
-                          document
-                            .getElementById(item.id)
-                            ?.scrollIntoView({
-                              behavior: "smooth",
-                              block: "start",
-                            });
+                          document.getElementById(item.id)?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
                         }}
+                       
                         aria-current={isActive ? "true" : undefined}
-                        className={`block text-[14px] font-medium leading-[1.4] transition-colors ${
+                        className={`text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px] font-medium leading-[1.4] block transition-colors ${
                           isActive
                             ? "text-[#1C5396] font-semibold"
                             : "text-[#4E4E4E50] hover:text-[#1C5396]"
@@ -208,13 +211,13 @@ export default function BlogDetail({ data }: BlogDetailProps) {
           </div>
 
           {/* Main Content */}
-          <div className="w-[73%]">
-            <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_img]:w-full [&_img]:h-auto">
+          <div className="md:w-[70%] lg:w-[75%] 2xl:w-[76%]">
+            <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto">
               {htmlWithIds &&
                 parse(htmlWithIds, {
                   replace: (node: any) =>
                     node.name === "img" ? (
-                      <span className="image-overlay my-[38px]">
+                      <span className="image-overlay my-[25px] md:my-[30px] xl:my-[38px]">
                         <img {...node.attribs} />
                       </span>
                     ) : undefined,

@@ -7,15 +7,15 @@ import type { BankingPartner } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-type CorporateServicesUaeBankingProps = {
+type BlogTrustedLeaderProps = {
     data: {
         title: string;
         description: string;
-        partners: BankingPartner[];
+        partners: TrustedLeader[];
     };
 };
 
-export default function CorporateServicesUaeBanking({ data }: CorporateServicesUaeBankingProps) {
+export default function BlogTrustedLeader({ data }: BlogTrustedLeaderProps) {
     const [emblaRef] = useEmblaCarousel(
         {
             loop: true,
@@ -28,20 +28,18 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
     return (
         <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
             <div className="container">
-                <div className="sm:text-center w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
+                <div className="w-full h-auto mb-[35px] sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
                     <Heading
                         as="h2"
                         size="h2"
-                        className="text-[#1C5396] mb-7.5 sm:mb-4 2xl:mb-5 3xl:mb-6.25"
+                        className="text-[#1C5396]"
                     >
                         {data?.title}
                     </Heading>
-                    <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] lg:max-w-195 2xl:max-w-295 mx-auto">
-                        {parse(data?.description)}
-                    </div>
+                   
                 </div>
                 <div ref={emblaRef} className="w-full max-w-full">
-                    <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75">
+                    <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:px-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75">
                         {data.partners.map((item) => (
                             <div
                                 key={`affiliation-${item?.id}`}
@@ -68,3 +66,4 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
         </section>
     );
 }
+

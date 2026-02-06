@@ -10,7 +10,7 @@ import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
 import type { InsightItem } from "@/app/page";
 
-type HomeOurInsightsProps = {
+type BlogrelatedProps = {
   data: {
     title: string;
     items: InsightItem[];
@@ -21,7 +21,7 @@ type InsightCardProps = {
   data: InsightItem;
 };
 
-export default function BlogRelated({ data }: HomeOurInsightsProps) {
+export default function BlogRelated({ data }: BlogrelatedProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -71,7 +71,7 @@ export default function BlogRelated({ data }: HomeOurInsightsProps) {
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"
           >
-            <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-3.5 2xl:-mx-5 [&>*]:p-2 lg:[&>*]:p-3.5 2xl:[&>*]:p-5">
+            <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-3.5 2xl:-mx-5 [&>*]:p-2 lg:[&>*]:p-4 2xl:[&>*]:p-5">
               {data.items.map((item) => (
                 <div
                   key={`insight-${item.id}`}
@@ -85,19 +85,20 @@ export default function BlogRelated({ data }: HomeOurInsightsProps) {
             </div>
           </div>
         </div>
-
-        <div className="flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ">
-          {scrollSnaps.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={cn(
-                "w-2 xl:w-3 aspect-square rounded-full transition",
-                index === selectedIndex ? "bg-[#ffc916]" : "bg-[#dedede]",
-              )}
-            />
-          ))}
-        </div>
+        {data.items.length > 3 && (
+          <div className="flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={cn(
+                  "w-2 xl:w-3 aspect-square rounded-full transition",
+                  index === selectedIndex ? "bg-[#ffc916]" : "bg-[#dedede]",
+                )}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

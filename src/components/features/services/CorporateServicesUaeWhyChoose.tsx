@@ -28,13 +28,13 @@ export default function CorporateServicesUaeWhyChoose({
                         {parse(data?.description)}
                     </div>
                 </div>
-                <div className="md:-mx-3 2xl:-mx-3.75 3xl:-mx-5 flex flex-wrap">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]">
                     {data?.items.map((item) => (
                         <div
                             key={item?.id}
-                            className="w-full md:w-1/2 h-auto p-[15px_0] md:p-[20px_12px] 2xl:p-[25px_15px] 3xl:p-[30px_20px]"
+                            className="w-full h-auto"
                         >
-                            <div className="w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 bg-[#6A9FE0]/8 rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[3px] 2xl:before:w-[4px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:z-1 before:inset-[0_auto_0_0] hover:scale-102 duration-300">
+                            <div className="w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:bg-[#f3f7fd] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] hover:scale-102 duration-300">
                                 <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-black mb-2 lg:mb-1.25 2xl:mb-2.5">
                                     {item?.title}
                                 </div>
