@@ -31,7 +31,7 @@ export const textVariants = cva("leading-normal font-normal", {
     size: {
       p1: "text-[14px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px]",
       p2: "text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px]",
-      p3: "text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px]",
+      p3: "text-[16px] lg:text-[17px] 2xl:text-[21px] 3xl:text-[26px]",
       p4: "text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px]",
     },
   },

@@ -30,7 +30,11 @@ export default function InnerHero({ data, children }: InnerHeroProps) {
             {parse(data?.title)}
           </Heading>
           {data?.description && (
-            <Text as="p" size="p1" className="text-white mb-4 xl:mb-6 2xl:mb-8">
+            <Text
+              as="div"
+              size="p1"
+              className="text-white mb-4 xl:mb-6 2xl:mb-8"
+            >
               {parse(data?.description)}
             </Text>
           )}

@@ -140,7 +140,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Button
                 variant="yellow"
                 size="lg"
-                className="text-[12px] xl:text-[14px] 2xl:text-[17px] min-w-[100px] xl:min-w-[120px] 2xl:min-w-[145px] h-8.5 2xl:h-10"
+                className="text-[12px] xl:text-[14px] 2xl:text-[17px] min-w-[100px] xl:min-w-[120px] 2xl:min-w-[145px] h-8.5! 2xl:h-10.5!"
                 asChild
               >
                 <Link href={item?.slug}>Learn More</Link>
