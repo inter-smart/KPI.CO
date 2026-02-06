@@ -1,6 +1,16 @@
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+
+
+export type BankingPartner = {
+    id: number;
+    media: {
+        path: string;
+        alt: string;
+    }
+};
 
 export type WhyChooseItem = {
     id: number;
@@ -24,33 +34,94 @@ export type FaqItem = {
 };
 
 const localData = {
-    whyChoose: {
-        title: "Why choose KPI?",
-        description: "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
-        items: [
+    banking: {
+        title: "Corporate Banking Support  ",
+        description:
+            "<p>We work with trusted UAE and international banks to help our clients open compliant business bank accounts efficiently and with confidence. </p>",
+        partners: [
             {
                 id: 1,
-                title: "Experienced Guidance",
-                description:
-                    "<p>Decades of hands-on experience supporting businesses across multiple industries, structures, and UAE jurisdictions. </p>",
+                media: {
+                    path: "/images/banking-partner-1.svg",
+                    alt: "Emirates NBD",
+                },
             },
             {
                 id: 2,
-                title: "Founder-led Approach ",
-                description:
-                    "<p>We take the time to understand your goals and recommend solutions that fit how you want to operate and grow. </p>",
+                media: {
+                    path: "/images/banking-partner-2.svg",
+                    alt: "Emirates NBD",
+                },
             },
             {
                 id: 3,
-                title: "Transparent Processes",
-                description:
-                    "<p>No hidden costs or surprises. You know what to expect at every stage, from setup through ongoing compliance. </p>",
+                media: {
+                    path: "/images/banking-partner-3.svg",
+                    alt: "Emirates NBD",
+                },
             },
             {
                 id: 4,
-                title: "End-to-End Support",
+                media: {
+                    path: "/images/banking-partner-4.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 5,
+                media: {
+                    path: "/images/banking-partner-2.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 6,
+                media: {
+                    path: "/images/banking-partner-3.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+        ] satisfies BankingPartner[],
+    },
+    whyChoose: {
+        title: "Why choose KPI?",
+        description: "KPI is more than a company setup service. We guide businesses through every step of mainland formation and beyond, helping you build a compliant, growth-ready company in the UAE. Our team supports you with: ",
+        items: [
+            {
+                id: 1,
+                title: "Business Structuring ",
                 description:
-                    "<p>From UAE company formation to banking, visas, and compliance, we stay involved as your business evolves. </p>",
+                    "<p>We help you choose the right activity, license, and legal structure to align with your goals and long-term growth. </p>",
+            },
+            {
+                id: 2,
+                title: "Regulatory Guidance",
+                description:
+                    "<p>Stay fully compliant with UAE laws and regulations. We ensure approvals, documentation, and licenses are handled correctly. </p>",
+            },
+            {
+                id: 3,
+                title: "Office & Visa Support",
+                description:
+                    "<p>We handle your UAE office setup and visa processing for owners, employees, and dependents during the formation process.</p>",
+            },
+            {
+                id: 4,
+                title: "Banking & Operations",
+                description:
+                    "<p>We assist with corporate bank accounts, operational setup, and admin tasks to give your mainland company a solid foundation.</p>",
+            },
+            {
+                id: 5,
+                title: "Ongoing Advisory",
+                description:
+                    "<p>After formation, we provide continuous guidance and support, helping your business scale, adapt, and operate across the UAE.</p>",
+            },
+            {
+                id: 6,
+                title: "Accounting Services",
+                description:
+                    "<p>We manage bookkeeping, accounting, and reporting, helping your business maintain clarity for informed decision-making.</p>",
             },
         ] satisfies WhyChooseItem[],
     },
@@ -115,6 +186,7 @@ const localData = {
 export default function MainlandCompanyFormationUaePage() {
     return (
         <>
+            <CorporateServicesUaeBanking data={localData.banking} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} variant="mainland" />
             <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
