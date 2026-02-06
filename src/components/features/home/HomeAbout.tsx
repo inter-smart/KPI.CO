@@ -14,8 +14,6 @@ type HomeAboutProps = {
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
     <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0", className)}>
-
-    
       <Image
         src="/images/aboutLine.png"
         alt="about-delemt"
@@ -23,6 +21,7 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         height={868}
         className="h-full absolute -z-1 inset-y-0 left-0 right-auto pointer-events-none max-w-full sm:max-w-[35%] w-full"
       />
+      
       <div className="container">
         <Heading
           as="h2"

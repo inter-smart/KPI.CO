@@ -24,7 +24,7 @@
 
   /* Container Sizes */ 
   --container-sm: 40rem;
-  --container-md: 50rem;
+  --container-md: 50rem; 
   --container-lg: 855px;
   --container-xl: 1070px;
   --container-2xl: 1280px;
@@ -181,7 +181,7 @@
     p,
     &,
     li {
-      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-(--text-color);
+      @apply text-[16px] sm:text-[14px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {

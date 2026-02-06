@@ -1,6 +1,44 @@
+"use client";
+
+// import { motion, useSpring, useScroll } from "framer-motion";
+import { motion, useSpring, useScroll } from "motion/react";
+
 import BlogDetail from "@/components/features/blogs/BlogDetail";
-// import BlogDetailSection from "@/components/features/blog/BlogDetailSection";
+import BlogGetInTouch from "@/components/features/blogs/BlogGetInTouch";
 import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
+import BlogRelated from "@/components/features/blogs/BlogRelated";
+import BlogTrustedLeader from "@/components/features/blogs/BlogTrustedLeader";
+
+export type MediaItem = {
+  path: string;
+  alt: string;
+};
+export type InsightItem = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  media: MediaItem;
+  slug: string;
+};
+
+export type TrustedLeader = {
+  id: number;
+  media: {
+    path: string;
+    alt: string;
+  };
+};
+
+export type GetInTouchItem = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+};
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +72,19 @@ const local_data = {
       { id: 3, text: "Assess Credentials and Reputation" },
       { id: 4, text: "Evaluate Technological Expertise" },
     ],
+    sponsored: {
+      label: "Sponsored",
+      title: "Master Web Development in 30 Days",
+      description:
+        "Learn the skills you need to become a professional web developer with our comprehensive course.",
+      ctaText: "Learn More",
+      ctaHref: "/course",
+      duration: "2:34",
+      media: {
+        desktop_path: "/images/sponsor01.jpg",
+        media_alt: "Course preview",
+      },
+    },
 
     description: `
       <h3>Introduction</h3>
@@ -83,14 +134,148 @@ const local_data = {
       
       `,
   },
+
+  related_blog: {
+    title: " Related Blogs ",
+    items: [
+      {
+        id: 1,
+        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+        date: "14 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-insights-2.jpg",
+          alt: "Top Audit Firms UAE",
+        },
+        title: "Top 10 Audit firms in UAE",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "13 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-insights-3.jpg",
+          alt: "Audit Firm Selection",
+        },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+    ] satisfies InsightItem[],
+  },
+  BlogTrustedLeaders: {
+    title: "Trusted by Industry Leaders",
+    description:
+      "",
+    partners: [
+      {
+        id: 1,
+        media: {
+          path: "/images/trusted-leader-1.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/trusted-leader-2.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/trusted-leader-3.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/trusted-leader-4.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/trusted-leader-2.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
+        },
+      },
+    ] satisfies TrustedLeader[],
+  },
+  GetInTouch: {
+    title: "Stay Ahead of the Curve",
+    description:
+      "<p>Subscribe for Expert Audit and Financial Insights Directly to Your Inbox.</p>",
+    button: {
+      label: "Get In Touch",
+      link: "/contact",
+    },
+  } satisfies GetInTouchItem,
 };
+
+// import { motion, useSpring, useScroll } from "framer-motion";
+
+export function ScrollLinked() {
+  const { scrollYProgress } = useScroll();
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  return (
+    <motion.div
+      id="scroll-indicator"
+      style={{
+        scaleX,
+        position: "fixed",
+        top: "var(--header-y)",
+        left: 0,
+        right: 0,
+        height: 6,
+        transformOrigin: "0% 50%",
+        backgroundColor: "#FFC916",
+        zIndex: 9999,
+      }}
+    />
+  );
+}
 
 export default function BlogDetailPage() {
   return (
     <>
-      <BlogInternalAudit data={local_data?.audit_data} />
-      {/* <BlogDetail data={local_data?.blog_detail} /> */}
-      {/* <BlogDetailSection data={local_data?.blog_detail} /> */}
+      <ScrollLinked />
+      <article style={{ width: "100%" }}>
+        <BlogInternalAudit data={local_data?.audit_data} />
+        <BlogDetail data={local_data?.blog_detail} />
+        <BlogRelated data={local_data?.related_blog} />
+        <BlogTrustedLeader data={local_data?.BlogTrustedLeaders} />
+        <BlogGetInTouch data={local_data?.GetInTouch} />
+      </article>
     </>
   );
 }

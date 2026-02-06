@@ -8,7 +8,6 @@ import CorporateServicesUaeSetupOptions from "@/components/features/services/Cor
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { Metadata } from "next";
-import path from "path";
 
 export type MediaItem = {
     path: string;
@@ -16,10 +15,11 @@ export type MediaItem = {
 };
 
 export type HeroData = {
-    id: number;
-    title: string;
-    description: string;
-    additionalContent: string[];
+  id: number;
+  title: string;
+  description: string;
+  additionalContent: string[];
+  media: MediaItem;
 };
 
 export type WhyBuildItem = {
