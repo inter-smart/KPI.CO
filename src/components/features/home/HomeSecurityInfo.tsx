@@ -35,7 +35,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               {data.title}
             </Heading>
             <div className="text-center w-full h-auto p-[40px] lg:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[60px_50px] rounded-[10px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-              <div className="w-[70px] h-[70px] lg:w-17.5 2xl:w-22 3xl:w-25 h-auto aspect-square mx-auto lg:mb-5 3xl:mb-6.25 overflow-hidden block">
+              <div className="w-[70px] h-[70px] lg:w-17.5 2xl:w-22 3xl:w-25 h-auto aspect-square mx-auto mb-[20px] lg:mb-5 3xl:mb-6.25 overflow-hidden block">
                 <Image
                   src={data.isoInfo.media.url || '/images/placeholder.png'}
                   alt={data.isoInfo.media.alt || 'ISO certification'}
@@ -47,10 +47,10 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               <div className="lg:text-[22px] 2xl:text-[26px] 3xl:text-[34px] leading-normal font-bold text-[#1C5396] mb-2.5">
                 {data.isoInfo.label}
               </div>
-              <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-2.5 2xl:mb-3.75 relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
+              <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-0 2xl:mb-3.75 relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
                 Certified
               </div>
-              <div className="text-[11px] lg:text-[12px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] p-[20px_15px] lg:p-[15px_25px] 2xl:p-[20px_30px] 3xl:p-[25px_35px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">
+              <div className="text-[11px] lg:text-[12px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] max-sm:max-w-[87%] max-sm:m-auto p-[20px_15px] lg:p-[15px_25px] 2xl:p-[20px_30px] 3xl:p-[25px_35px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">
                 {data.isoInfo.description}
               </div>
             </div>

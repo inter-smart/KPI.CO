@@ -13,13 +13,15 @@ type HomeAboutProps = {
 
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
-    <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0", className)}>
+    <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0", className)}>
+
+    
       <Image
-        src="/images/home-about-delmt.png"
+        src="/images/aboutLine.png"
         alt="about-delemt"
         width={368}
         height={868}
-        className="h-full absolute -z-1 inset-y-0 left-0 right-auto pointer-events-none"
+        className="h-full absolute -z-1 inset-y-0 left-0 right-auto pointer-events-none max-w-full sm:max-w-[35%] w-full"
       />
       <div className="container">
         <Heading
@@ -35,7 +37,7 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         </div>
 
         <Button
-          className="text-[14px] xl:text-[17px] 2xl:text-[20px] leading-none font-medium text-black min-w-[190px] xl:min-w-[160px] 2xl:min-w-[190px] h-[42px] 2xl:h-[50px] bg-[#ffc916]"
+          className="text-[14px] xl:text-[17px] 2xl:text-[20px] leading-none font-medium text-black min-w-[120px] xl:min-w-[160px] 2xl:min-w-[190px] h-[32px] md:h-[42px] 2xl:h-[50px] bg-[#ffc916]"
           asChild
         >
           <Link href={data.button.link}>{data.button.label}</Link>
