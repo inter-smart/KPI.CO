@@ -13,7 +13,7 @@ export type SubItem = {
 export type MegaCategory = {
     id: string
     label: string
-    icon: React.ReactNode | string
+    icon?: React.ReactNode | string
     subItems: SubItem[]
 }
 
@@ -55,25 +55,27 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                 )}
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className={cn(
-                                        "w-[34px] 3xl:w-[42px] h-[34px] 3xl:h-[42px] rounded-lg flex items-center justify-center transition-all bg-gradient-to-b from-[#6A9FE0] to-[#053269]",
-                                        activeCategoryId === category.id
-                                            ? "text-white shadow-md shadow-blue-200"
-                                            : "group-hover:bg-[#E9ECEF] text-[#1C5396]"
-                                    )}>
-                                        {typeof category.icon === 'string' ? (
-                                            <div className="relative w-[18px] h-[18px] 3xl:w-[22px] 3xl:h-[22px]">
-                                                <Image
-                                                    src={category.icon.endsWith('.svg') || category.icon.includes('.') ? category.icon : `${category.icon}.svg`}
-                                                    alt={category.label}
-                                                    fill
-                                                    className="object-contain brightness-0 invert"
-                                                />
-                                            </div>
-                                        ) : (
-                                            category.icon
-                                        )}
-                                    </div>
+                                    {category.icon && (
+                                        <div className={cn(
+                                            "w-[34px] 3xl:w-[42px] h-[34px] 3xl:h-[42px] rounded-lg flex items-center justify-center transition-all bg-gradient-to-b from-[#6A9FE0] to-[#053269]",
+                                            activeCategoryId === category.id
+                                                ? "text-white shadow-md shadow-blue-200"
+                                                : "group-hover:bg-[#E9ECEF] text-[#1C5396]"
+                                        )}>
+                                            {typeof category.icon === 'string' ? (
+                                                <div className="relative w-[18px] h-[18px] 3xl:w-[22px] 3xl:h-[22px]">
+                                                    <Image
+                                                        src={category.icon.endsWith('.svg') || category.icon.includes('.') ? category.icon : `${category.icon}.svg`}
+                                                        alt={category.label}
+                                                        fill
+                                                        className="object-contain brightness-0 invert"
+                                                    />
+                                                </div>
+                                            ) : (
+                                                category.icon
+                                            )}
+                                        </div>
+                                    )}
                                     <span className={`${LINK_STYLES} whitespace-nowrap `}>{category.label}</span>
                                 </div>
                                 {activeCategoryId === category.id && (

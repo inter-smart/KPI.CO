@@ -40,9 +40,9 @@ const navItems = [
         label: 'Risk & Compliance',
         icon: "/images/risk_icon.svg",
         subItems: [
-          { name: 'Enterprise Risk Management', href: '/services/compliance/internal-audit' },
-          { name: 'Internal Audit Services', href: '/services/compliance/risk' },
-          { name: 'Standard Operating Procedures', href: '/services/compliance/regulatory' },
+          { name: 'Enterprise Risk Management', href: '/services/compliance/risk-management' },
+          { name: 'Internal Audit Services', href: '/services/compliance/internal-audit' },
+          { name: 'Standard Operating Procedures', href: '/services/compliance/sop' },
           { name: 'Regulatory & Compliance Advisory', href: '/services/compliance/regulatory' },
         ]
       },
@@ -63,21 +63,18 @@ const navItems = [
       {
         id: 'blogs',
         label: 'Blogs',
-        icon: "/images/service-icon-4.svg",
-        subItems: [ 
+        subItems: [
         ]
       },
       {
         id: 'glossary',
         label: 'Glossary',
-        icon: "/images/service-icon-5.svg",
         subItems: []
       },
       {
         id: 'newsroom',
         label: 'Newsroom',
-        icon: "/images/service-icon-5.svg",
-        subItems: [ 
+        subItems: [
         ]
       }
     ] as MegaCategory[]
@@ -90,19 +87,16 @@ const navItems = [
       {
         id: 'about-us',
         label: 'About us',
-        icon: "/images/service-icon-1.svg",
         subItems: []
       },
       {
         id: 'clients',
         label: 'Our Clients',
-        icon: "/images/service-icon-2.svg",
         subItems: []
       },
       {
         id: 'contact',
         label: 'Contact Us',
-        icon: "/images/service-icon-3.svg",
         subItems: []
       }
     ] as MegaCategory[]
@@ -244,7 +238,7 @@ export default function Header() {
                                             hideIcon={mega.subItems.length === 0}
                                           >
                                             <div className="flex items-center gap-3">
-                                              {item.label === 'Services' && (
+                                              {mega.icon && (
                                                 <div className="w-8 h-8 rounded-[6px] flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
                                                   {typeof mega.icon === 'string' ? (
                                                     <div className="relative w-5 h-5">

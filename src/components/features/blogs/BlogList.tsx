@@ -9,7 +9,19 @@ import { cn } from "@/lib/utils";
 import type { InsightItem } from "@/app/page";
 import parse from "html-react-parser";
 import BlogFilter from "./BlogFilter";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
 
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 type BlogListProps = {
     data: {
         title: string;
@@ -20,6 +32,11 @@ type BlogListProps = {
 type BlogCardProps = {
     data: InsightItem;
 };
+const formSchema = z.object({
+    email: z.string().email({
+        message: "Please enter a valid email address.",
+    }),
+})
 
 export default function BlogList({ data }: BlogListProps) {
     const [activeFilters, setActiveFilters] = useState(["Audit", "Advisory", "Tax"]);
@@ -32,7 +49,17 @@ export default function BlogList({ data }: BlogListProps) {
     const clearAll = () => {
         setActiveFilters([]);
     };
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            email: "",
+        },
+    })
 
+    function onSubmit(values: z.infer<typeof formSchema>) {
+        // Handle form submission
+        console.log("Form submitted:", values)
+    }
     return (
         <section className="w-full py-[30px] md:py-[40px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[85px] bg-white">
             <div className="container">
@@ -42,21 +69,24 @@ export default function BlogList({ data }: BlogListProps) {
                 </Heading>
 
                 {/* Filter and Search Bar */}
-                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6 max-w-[940px]">
+                <div className="flex flex-row  gap-2 2xl:gap-3 3xl:gap-4 mb-6 max-w-[500px] xl:max-w-[620px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[42px] 2xl:h-[50px] 3xl:h-[65px]">
                     <BlogFilter
                         activeFilters={activeFilters}
                         onFilterChange={setActiveFilters}
                         onApply={() => { }}
                         onClear={() => setActiveFilters([])}
+
                     />
 
-                    <div className="relative flex-1">
+                    <div className="relative flex-1 h-full rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px]  shadow-[0_0_26px_rgba(0,0,0,0.05)] ">
                         <input
                             type="text"
                             placeholder="Search Blogs"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full px-5 py-2.5 bg-gray-50 border border-gray-100 rounded-[13px]  shadow-[0_0_26px_rgba(0,0,0,0.05)]  focus:outline-none focus:ring-2 focus:ring-[#C7C5CE]/20 transition-all placeholder:text-[#C7C5CE]"
+                            className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px]  w-full h-full px-[20px] 2xl:px-[25px] 3xl:px-[35px] rounded-[8px] xl:rounded-[10px]
+                             3xl:rounded-[13px] focus:outline-none focus:ring-2 focus:ring-[#C7C5CE]/20 transition-all placeholder:text-[#C7C5CE]
+                             placeholder:text-[14px] md:placeholder:text-[12px] xl:placeholder:text-[16px] 2xl:placeholder:text-[17px] 3xl:placeholder:text-[21px] "
                         />
                         <div className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,14 +98,14 @@ export default function BlogList({ data }: BlogListProps) {
                 </div>
 
                 {/* Active Filters */}
-                <div className="flex flex-wrap items-center gap-3 mb-8 md:mb-12">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 md:mb-12">
                     {activeFilters.map((filter) => (
                         <div
                             key={filter}
-                            className="flex items-center gap-2 px-3 py-1.5 bg-[#f0f5fa] border border-[#d6e5f5] rounded-md text-[#1c5396] text-sm font-medium"
+                            className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] flex items-center gap-1 sm:gap-2 px-3 py-1.5 bg-[rgba(143,216,254,0.15)] border border-[#d6e5f5] rounded-md text-[#4E4E4E] text-sm font-medium"
                         >
                             {filter}
-                            <button onClick={() => removeFilter(filter)} className="hover:text-red-500 transition-colors">
+                            <button onClick={() => removeFilter(filter)} className="transition-colors cursor-pointer hover:scale-115">
                                 <X size={14} />
                             </button>
                         </div>
@@ -83,7 +113,7 @@ export default function BlogList({ data }: BlogListProps) {
                     {activeFilters.length > 0 && (
                         <button
                             onClick={clearAll}
-                            className="text-gray-500 text-sm font-medium hover:text-[#1c5396] transition-colors ml-2"
+                            className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#212121] text-sm font-medium rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px] border border-[#DDDCDE] px-3 py-1.5 cursor-pointer hover:scale-105 transition-colors "
                         >
                             Clear All
                         </button>
@@ -91,37 +121,68 @@ export default function BlogList({ data }: BlogListProps) {
                 </div>
 
                 {/* Blog Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 2xl:gap-6 3xl:gap-8">
                     {data.items.slice(0, 5).map((item, index) => (
                         <BlogCard key={item.id} data={item} />
                     ))}
 
                     {/* Special CTA Card (Position 6) */}
-                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] p-8 flex flex-col justify-center min-h-[400px] text-white shadow-lg">
-                        {/* Geometric Shapes same as Hero */}
-                        <div className="absolute top-0 right-0 h-full w-full pointer-events-none select-none overflow-hidden opacity-20">
-                            <svg viewBox="0 0 500 400" className="h-full w-full" preserveAspectRatio="none">
-                                <path d="M500 0L150 200L500 400V0Z" fill="white" />
-                            </svg>
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] p-4 2xl:p-4 3xl:p-8 flex flex-col justify-center  text-white shadow-lg">
+                        <div className="position absolute top-0 left-0 w-full h-full">
+                            <Image src="/images/blogBg.jpg" className="w-full h-full object-cover" width="375" height="235" alt="bannerBg" />
                         </div>
 
                         <div className="relative z-10">
-                            <h3 className="text-2xl 2xl:text-3xl font-bold mb-4 leading-tight">
+                            <h3 className="text-[14px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-bold mb-4 leading-tight">
                                 Strong Decisions Start with Clear Insight
                             </h3>
-                            <p className="text-white/80 mb-8 leading-relaxed">
+                            <p className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 leading-relaxed">
                                 Our audit and business advisory services help you identify risks, improve performance, and plan for sustainable growth at every stage of your business.
                             </p>
 
                             <div className="relative">
-                                <input
-                                    type="email"
-                                    placeholder="Subscribe Today"
-                                    className="w-full px-5 py-3 rounded-lg bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none"
-                                />
-                                <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1c5396] p-2 rounded-md hover:bg-[#0d315d] transition-colors">
-                                    <Image src="/images/icon-arrow-right.svg" alt="Arrow" width={16} height={16} className="invert rotate-0" />
-                                </button>
+                                <Form {...form}>
+                                    <form onSubmit={form.handleSubmit(onSubmit)} className="relative group ">
+                                        <div className="bg-white rounded-[10px] 3xl:rounded-[13px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[42px] xl:h-[50px] 3xl:h-[55px] shadow-sm focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                                            <div className="flex-1 overflow-hidden">
+                                                <FormField
+                                                    control={form.control}
+                                                    name="email"
+                                                    render={({ field }) => (
+                                                        <FormItem className="space-y-0">
+                                                            <FormControl>
+                                                                <Input
+                                                                    placeholder='Subscribe Today'
+                                                                    className='text-[17px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(0,0,0)] font-medium px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none placeholder:text-black'
+                                                                    {...field}
+                                                                />
+                                                            </FormControl>
+                                                        </FormItem>
+                                                    )}
+                                                />
+                                            </div>
+                                            <Button
+                                                type="submit"
+                                                variant="ghost"
+                                                className='!w-[34px] xl:!w-[42px] h-full  3xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95'
+                                            >
+                                                <svg width="23" height="19" viewBox="0 0 23 19" fill="none"  >
+                                                    <path d="M1.11119 9.43131L19.9983 9.17188" stroke="white" strokeWidth="2.22222" strokeLinecap="round" />
+                                                    <path d="M12.8395 1.11109L21.1099 9.15732L13.0959 17.3945" stroke="white" strokeWidth="2.22222" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            </Button>
+                                        </div>
+                                        <div className="absolute left-0 -bottom-6">
+                                            <FormField
+                                                control={form.control}
+                                                name="email"
+                                                render={() => (
+                                                    <FormMessage className="text-red-500 text-xs font-medium" />
+                                                )}
+                                            />
+                                        </div>
+                                    </form>
+                                </Form>
                             </div>
                         </div>
                     </div>
@@ -133,17 +194,25 @@ export default function BlogList({ data }: BlogListProps) {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex justify-center items-center gap-2 mt-16">
-                    <button className="p-2 border rounded-md hover:bg-gray-50 transition whitespace-nowrap disabled:opacity-50" disabled>
-                        <Image src="/images/icon-arrow-right.svg" alt="Prev" width={10} height={10} className="rotate-180 opacity-50" />
+                <div className="flex justify-center items-center gap-2 mt-16 h-[42px] [&>button]:h-full [&>button]:w-[42px] [&>button]:flex [&>button]:items-center [&>button]:justify-center ">
+                    <button className="p-2 border rounded-md hover:bg-gray-50 transition whitespace-nowrap disabled:opacity-50 disabled:bg-[#E5E5E5]" disabled>
+                        <div className="w-[10px] h-[16px]">
+                            <svg viewBox="0 0 10 16" fill="none" className="w-full h-full object-cover">
+                                <path d="M9.87988 1.88L3.77322 8L9.87988 14.12L7.99988 16L-0.000117278 8L7.99988 0L9.87988 1.88Z" fill="#C4CDD5" />
+                            </svg>
+                        </div>
                     </button>
                     <button className="w-10 h-10 border border-[#1c5396] text-[#1c5396] rounded-md font-semibold bg-[#f0f5fa]">1</button>
                     <button className="w-10 h-10 border border-transparent hover:border-gray-200 rounded-md font-medium text-gray-500 hover:bg-gray-50 transition">2</button>
                     <span className="px-2 text-gray-400">...</span>
                     <button className="w-10 h-10 border border-transparent hover:border-gray-200 rounded-md font-medium text-gray-500 hover:bg-gray-50 transition">9</button>
                     <button className="w-10 h-10 border border-transparent hover:border-gray-200 rounded-md font-medium text-gray-500 hover:bg-gray-50 transition">10</button>
-                    <button className="p-2 border rounded-md hover:bg-gray-50 transition">
-                        <Image src="/images/icon-arrow-right.svg" alt="Next" width={10} height={10} />
+                     <button className="p-2 border rounded-md hover:bg-gray-50 transition whitespace-nowrap disabled:opacity-50 disabled:bg-[#E5E5E5]" disabled>
+                        <div className="w-[10px] h-[16px]">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 1.88L6.10667 8L0 14.12L1.88 16L9.88 8L1.88 0L0 1.88Z" fill="#C4CDD5" />
+                            </svg>
+                        </div>
                     </button>
                 </div>
             </div>

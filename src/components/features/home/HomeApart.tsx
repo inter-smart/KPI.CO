@@ -18,7 +18,7 @@ export default function HomeApart({ data }: HomeApartProps) {
         alt="home-apart-delmt"
         width={368}
         height={868}
-        className="h-full absolute -z-1 inset-y-0 right-0 left-auto pointer-events-none"
+        className="h-full absolute -z-1 inset-y-0 right-0 left-auto pointer-events-none max-md:hidden"
       />
       <div className="container">
         <Heading

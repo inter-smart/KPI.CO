@@ -20,7 +20,7 @@ export default function BlogHero({ data }: BlogHeroProps) {
             />  
 
             <div className="container relative z-20 px-4 md:px-6">
-                <div className="max-w-[770px] max-sm:text-center">
+                <div className="max-w-[630px] xl:max-w-[770px] max-sm:text-center">
                     <Heading
                         as="h1"
                         size="h1"
