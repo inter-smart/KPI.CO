@@ -26,6 +26,7 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         height={868}
         className="h-full absolute -z-1 inset-y-0 left-0 right-auto pointer-events-none max-w-full sm:max-w-[35%] w-full"
       />
+      
       <div className="container">
         <Heading
           as="h2"

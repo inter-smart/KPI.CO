@@ -6,6 +6,17 @@ import CorporateServicesUaeBanking from "@/components/features/services/Corporat
 import InnerHero from "@/components/common/InnerHero";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
+
+export type DocumentRequiredData = {
+    id: number;
+    title?: string;
+    description?: string;
+    media?: {
+        path?: string;
+        alt?: string;
+    };
+};
 
 
 export type BankingPartner = {
@@ -662,6 +673,27 @@ const localData = {
             },
         ] satisfies FaqItem[],
     },
+    document_required_data: {
+        title: "Documents Required",
+        description: "<p>To complete your Mainland company registration, you will typically need: </p>",
+        items: [
+            { id: 1, text: "Passport copies of all shareholders " },
+            { id: 2, text: "UAE entry stamp or residence visa copy " },
+            { id: 3, text: "Emirates ID (if applicable) " },
+            { id: 4, text: "Trade name reservation " },
+            { id: 5, text: "Initial approval from the Department of Economic Development (DED)" },
+            { id: 6, text: "Tenancy contract (Ejari)" },
+            { id: 7, text: "Memorandum of Association (MOA) or Local Service Agent agreement " },
+        ],
+
+        media: {
+            path: "/images/document-required-img.jpg", // <-- your image path
+            alt: "Required documents",
+        },
+
+        ftr_description:
+            "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
+    } satisfies DocumentRequiredData,
 };
 
 export default function MainlandCompanyFormationUaePage() {
@@ -672,11 +704,11 @@ export default function MainlandCompanyFormationUaePage() {
                 variant="mainland"
                 data={localData.whyBuild}
             />
-
             <CorporateServicesUaeFormationProcess
                 variant="mainland"
                 data={localData.formationProcess}
             />
+            <DocumentRequired data={localData.document_required_data} />
             <CorporateServicesUaeBanking data={localData.banking} variant="mainland" />
             <BusinessSetup data={localData.business} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} variant="mainland" />
