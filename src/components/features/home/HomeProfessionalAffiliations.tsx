@@ -20,7 +20,7 @@ export default function HomeProfessionalAffiliations({ data }: HomeProfessionalA
       loop: true,
       align: 'start',
       slidesToScroll: 1,
-      containScroll: 'trimSnaps', 
+      containScroll: 'trimSnaps',  
     },
     [Autoplay({ delay: 6000, stopOnInteraction: true })],
   )

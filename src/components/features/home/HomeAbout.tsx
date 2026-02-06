@@ -1,15 +1,15 @@
-import { cn } from '@/lib/utils'
-import { Heading } from '@/components/utils/typography'
-import { Button } from '@/components/ui/button'
-import parse from 'html-react-parser'
-import Image from 'next/image'
-import Link from 'next/link'
-import type { AboutData } from '@/app/page'
+import { cn } from "@/lib/utils";
+import { Heading } from "@/components/utils/typography";
+import { Button } from "@/components/ui/button";
+import parse from "html-react-parser";
+import Image from "next/image";
+import Link from "next/link";
+import type { AboutData } from "@/app/page";
 
 type HomeAboutProps = {
-  data: AboutData
-  className?: string
-}
+  data: AboutData;
+  className?: string;
+};
 
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
@@ -32,8 +32,12 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
           {data.title}
         </Heading>
 
-        <div className={cn('typography [--text-color:#d2dbe7]! mb-6 xl:mb-8 2xl:mb-10')}>
-          {parse(data.description ?? '<p>no content</p>')}
+        <div
+          className={cn(
+            "typography [--text-color:#d2dbe7]! mb-6 xl:mb-8 2xl:mb-10",
+          )}
+        >
+          {parse(data.description ?? "<p>no content</p>")}
         </div>
 
         <Button
@@ -44,5 +48,5 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         </Button>
       </div>
     </section>
-  )
+  );
 }
