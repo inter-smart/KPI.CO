@@ -45,8 +45,13 @@ export type HeroData = {
     id: number;
     title: string;
     description: string;
-    media: MediaItem;
+    media?: {
+        path: string;
+        alt: string;
+    };
+    additionalContent?: string[];
 };
+
 
 export type WhyBuildItem = {
     id: number;
@@ -690,7 +695,6 @@ const localData = {
             path: "/images/document-required-img.jpg", // <-- your image path
             alt: "Required documents",
         },
-
         ftr_description:
             "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
     } satisfies DocumentRequiredData,
