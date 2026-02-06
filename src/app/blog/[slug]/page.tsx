@@ -1,10 +1,12 @@
-import BlogDetail from "@/components/features/blog/BlogDetail";
-// import BlogDetailSection from "@/components/features/blog/BlogDetailSection";
-import BlogInternalAudit from "@/components/features/blog/BlogInternalAudit";
-import BlogRelated from "@/components/features/blog/BlogRelated";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import BlogDetail from "@/components/features/blogs/BlogDetail";
+import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
+import BlogRelated from "@/components/features/blogs/BlogRelated";
 import HomeProfessionalAffiliations from "@/components/features/home/HomeProfessionalAffiliations";
 
+export type MediaItem = {
+  path: string;
+  alt: string;
+};
 export type InsightItem = {
   id: number;
   title: string;

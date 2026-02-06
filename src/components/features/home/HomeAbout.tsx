@@ -1,19 +1,24 @@
-import { cn } from '@/lib/utils'
-import { Heading } from '@/components/utils/typography'
-import { Button } from '@/components/ui/button'
-import parse from 'html-react-parser'
-import Image from 'next/image'
-import Link from 'next/link'
-import type { AboutData } from '@/app/page'
+import { cn } from "@/lib/utils";
+import { Heading } from "@/components/utils/typography";
+import { Button } from "@/components/ui/button";
+import parse from "html-react-parser";
+import Image from "next/image";
+import Link from "next/link";
+import type { AboutData } from "@/app/page";
 
 type HomeAboutProps = {
-  data: AboutData
-  className?: string
-}
+  data: AboutData;
+  className?: string;
+};
 
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
-    <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0", className)}>
+    <section
+      className={cn(
+        "w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0",
+        className,
+      )}
+    >
       <Image
         src="/images/home-about-delmt.png"
         alt="about-delemt"
@@ -31,17 +36,18 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
           {data.title}
         </Heading>
 
-        <div className={cn('typography [--text-color:#d2dbe7]! mb-6 xl:mb-8 2xl:mb-10')}>
-          {parse(data.description ?? '<p>no content</p>')}
+        <div
+          className={cn(
+            "typography [--text-color:#d2dbe7]! mb-6 xl:mb-8 2xl:mb-10",
+          )}
+        >
+          {parse(data.description ?? "<p>no content</p>")}
         </div>
 
-        <Button
-          className="text-[14px] xl:text-[17px] 2xl:text-[20px] leading-none font-medium text-black min-w-[190px] xl:min-w-[160px] 2xl:min-w-[190px] h-[42px] 2xl:h-[50px] bg-[#ffc916] hover:text-white"
-          asChild
-        >
+        <Button variant="yellow" size="lg" asChild>
           <Link href={data.button.link}>{data.button.label}</Link>
         </Button>
       </div>
     </section>
-  )
+  );
 }

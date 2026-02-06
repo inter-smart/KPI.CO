@@ -21,7 +21,7 @@ type InsightCardProps = {
   data: InsightItem;
 };
 
-export default function HomeOurInsights({ data }: HomeOurInsightsProps) {
+export default function BlogRelated({ data }: HomeOurInsightsProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",

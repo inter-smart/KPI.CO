@@ -40,9 +40,9 @@ const navItems = [
         label: 'Risk & Compliance',
         icon: "/images/risk_icon.svg",
         subItems: [
-          { name: 'Enterprise Risk Management', href: '/services/compliance/internal-audit' },
-          { name: 'Internal Audit Services', href: '/services/compliance/risk' },
-          { name: 'Standard Operating Procedures', href: '/services/compliance/regulatory' },
+          { name: 'Enterprise Risk Management', href: '/services/compliance/risk-management' },
+          { name: 'Internal Audit Services', href: '/services/compliance/internal-audit' },
+          { name: 'Standard Operating Procedures', href: '/services/compliance/sop' },
           { name: 'Regulatory & Compliance Advisory', href: '/services/compliance/regulatory' },
         ]
       },
@@ -51,9 +51,6 @@ const navItems = [
         label: 'Digital Transformation',
         icon: "/images/digital_icon.svg",
         subItems: [
-          { name: 'IT Strategy', href: '/services/digital/strategy' },
-          { name: 'Cybersecurity', href: '/services/digital/cyber' },
-          { name: 'Data & Analytics', href: '/services/digital/data' },
         ]
       }
     ] as MegaCategory[]
@@ -64,21 +61,20 @@ const navItems = [
     isMega: true,
     megaCategories: [
       {
-        id: 'insights',
-        label: 'Latest Insights',
-        icon: "/images/service-icon-4.svg",
+        id: 'blogs',
+        label: 'Blogs',
         subItems: [
-          { name: 'Blog', href: '/resources/blog' },
-          { name: 'News & Updates', href: '/resources/news' },
         ]
       },
       {
-        id: 'materials',
-        label: 'Knowledge Hub',
-        icon: "/images/service-icon-5.svg",
+        id: 'glossary',
+        label: 'Glossary',
+        subItems: []
+      },
+      {
+        id: 'newsroom',
+        label: 'Newsroom',
         subItems: [
-          { name: 'Case Studies', href: '/resources/case-studies' },
-          { name: 'Whitepapers', href: '/resources/whitepapers' },
         ]
       }
     ] as MegaCategory[]
@@ -89,29 +85,26 @@ const navItems = [
     isMega: true,
     megaCategories: [
       {
-        id: 'company',
-        label: 'Company',
-        icon: "/images/service-icon-1.svg",
-        subItems: [
-          { name: 'Our Story', href: '/about/story' },
-          { name: 'Mission & Values', href: '/about/mission' },
-        ]
+        id: 'about-us',
+        label: 'About us',
+        subItems: []
       },
       {
-        id: 'people',
-        label: 'Our People',
-        icon: "/images/service-icon-2.svg",
-        subItems: [
-          { name: 'Team', href: '/about/team' },
-          { name: 'Careers', href: '/about/careers' },
-        ]
+        id: 'clients',
+        label: 'Our Clients',
+        subItems: []
+      },
+      {
+        id: 'contact',
+        label: 'Contact Us',
+        subItems: []
       }
     ] as MegaCategory[]
   },
 ]
 
 const site_settings = {
-  header_logo_value: "/images/KPI-logo.svg",
+  header_logo_value: "/images/logo-2.svg",
   header_logo_alt_text_value: "KPI Logo"
 };
 
@@ -120,9 +113,9 @@ export default function Header() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
+    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-50 shadow-sm flex items-center">
       <div className="container mx-auto px-4">
-        <div className="flex items-center h-[70px] xl:h-[80px] 3xl:h-[88px]">
+        <div className="flex items-center">
           {/* Logo Section */}
           <div className="w-[120px] lg:w-[100px] xl:w-[130px] 2xl:w-[150px] 3xl:w-[180px]">
             <Link href="/" className="flex items-center w-full">
@@ -202,7 +195,7 @@ export default function Header() {
                     </div>
                   </SheetTrigger>
                   <SheetContent side="right" className="w-full sm:w-[350px] p-0 overflow-y-auto">
-                    <SheetHeader className="p-4 border-b">
+                    <SheetHeader className="p-4">
                       <div className="flex items-center justify-between">
                         <SheetTitle className="text-left">
                           <Image
@@ -217,12 +210,12 @@ export default function Header() {
                     </SheetHeader>
 
                     <div className="flex flex-col h-full bg-white">
-                      <nav className="flex-1 px-4 py-6 overflow-y-auto pb-24">
+                      <nav className="flex-1 px-4 py-0 overflow-y-auto pb-24">
                         <div className="flex flex-col space-y-2">
                           {/* Home Link */}
                           <Link
                             href={navItems[0].href}
-                            className="text-[16px] font-bold text-[#1C5396] px-2 py-3"
+                            className="text-[16px] font-semibold text-[#1C5396] px-0 py-3 border-b border-[#DDDCDE]"
                             onClick={() => setMenuSheetOpen(false)}
                           >
                             {navItems[0].label}
@@ -231,32 +224,37 @@ export default function Header() {
                           {/* Nested Accordions */}
                           <Accordion type="single" collapsible className="w-full">
                             {navItems.slice(1).map((item, idx) => (
-                              <AccordionItem key={idx} value={`item-${idx}`} className="border-none">
-                                <AccordionTrigger className="text-[16px] font-bold text-[#1C5396] hover:no-underline px-2 py-4">
+                              <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-[#DDDCDE]">
+                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
                                   {item.label}
                                 </AccordionTrigger>
-                                <AccordionContent className="pb-4 pl-2">
+                                <AccordionContent className="pb-4 pl-0">
                                   {item.isMega && item.megaCategories ? (
                                     <Accordion type="single" collapsible className="w-full space-y-2">
                                       {item.megaCategories.map((mega, mIdx) => (
                                         <AccordionItem key={mIdx} value={`mega-${idx}-${mIdx}`} className="border-none">
-                                          <AccordionTrigger className="hover:no-underline py-2">
+                                          <AccordionTrigger
+                                            className="hover:no-underline py-2"
+                                            hideIcon={mega.subItems.length === 0}
+                                          >
                                             <div className="flex items-center gap-3">
-                                              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
-                                                {typeof mega.icon === 'string' ? (
-                                                  <div className="relative w-5 h-5">
-                                                    <Image
-                                                      src={mega.icon.endsWith('.svg') || mega.icon.includes('.') ? mega.icon : `${mega.icon}.svg`}
-                                                      alt={mega.label}
-                                                      fill
-                                                      className="object-contain brightness-0 invert"
-                                                    />
-                                                  </div>
-                                                ) : (
-                                                  mega.icon
-                                                )}
-                                              </div>
-                                              <span className="text-[15px] font-semibold text-[#1C5396]">{mega.label}</span>
+                                              {mega.icon && (
+                                                <div className="w-8 h-8 rounded-[6px] flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
+                                                  {typeof mega.icon === 'string' ? (
+                                                    <div className="relative w-5 h-5">
+                                                      <Image
+                                                        src={mega.icon.endsWith('.svg') || mega.icon.includes('.') ? mega.icon : `${mega.icon}.svg`}
+                                                        alt={mega.label}
+                                                        fill
+                                                        className="object-contain brightness-0 invert"
+                                                      />
+                                                    </div>
+                                                  ) : (
+                                                    mega.icon
+                                                  )}
+                                                </div>
+                                              )}
+                                              <span className="text-[15px] font-normal text-[#1C5396]">{mega.label}</span>
                                             </div>
                                           </AccordionTrigger>
                                           <AccordionContent className="pl-11 pt-1">
@@ -265,7 +263,7 @@ export default function Header() {
                                                 <Link
                                                   key={sIdx}
                                                   href={sub.href}
-                                                  className="text-[14px] font-medium text-gray-500 hover:text-[#1C5396] py-2 px-2 rounded-md hover:bg-blue-50/50"
+                                                  className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
                                                   onClick={() => setMenuSheetOpen(false)}
                                                 >
                                                   {sub.name}
@@ -283,10 +281,10 @@ export default function Header() {
                           </Accordion>
 
                           {/* Mobile Action Button - Now Under About */}
-                          <div className="pt-8 px-2">
+                          <div className="pt-8">
                             <Link
                               href="/contact"
-                              className="w-full h-12 bg-[#FFC916] text-[#1C5396] font-bold flex items-center justify-center rounded-xl shadow-lg border border-[#e5ae1d]"
+                              className="text-[16px] w-full h-12 bg-[#FFC916] text-black font-semibold flex items-center justify-center rounded-[8px]"
                               onClick={() => setMenuSheetOpen(false)}
                             >
                               Get in Touch

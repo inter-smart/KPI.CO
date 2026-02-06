@@ -33,8 +33,8 @@
   /* Header Sizes */
   --header-y-sm: 60px;
   --header-y-lg: 60px;
-  --header-y-2xl: 80px;
-  --header-y-3xl: 90px;
+  --header-y-2xl: 70px;
+  --header-y-3xl: 88px;
 
   --animate-scroll: scroll 40s forwards linear infinite;
 
@@ -93,12 +93,12 @@
   }
 
   body {
+    --header-y: var(--header-y-sm);
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    --header-y: var(--header-y-sm);
 
     font-family:
       var(--font-poppins),
@@ -169,7 +169,6 @@
     padding-right: 1rem;
     @apply max-w-sm! sm:max-w-sm! md:max-w-md! lg:max-w-lg! xl:max-w-xl! 2xl:max-w-2xl! 3xl:max-w-3xl!;
   }
-
 
   .typography {
     --text-color: black;
