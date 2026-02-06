@@ -44,6 +44,7 @@ export type ProcessStep = {
   id: number;
   step: string;
   title: string;
+  sub_title: string;
   description: string;
 };
 
@@ -210,43 +211,49 @@ const localData = {
 
   formationProcess: {
     title: "Company Formation Process",
+    sub_title: "Steps to Start Your Business in the UAE",
     description:
-      "<p>Our streamlined process ensures your business is set up correctly from day one.</p>",
+      "<p>Starting a business in the UAE does not need to feel complicated. Our role is to guide you through each step clearly, handle the paperwork, and make sure your setup is right from the start.</p>",
     steps: [
       {
         id: 1,
         step: "01",
-        title: "Consultation",
+        title: "Speak to a Consultant",
+        sub_title: "Define Scope & Objectives",
         description:
-          "We discuss your business goals, activities, and recommend the best jurisdiction and license type.",
+          "<p>It begins with a conversation. We take the time to understand your business idea, goals, and where you want to operate. Based on this, we recommend the most suitable setup option across the UAE.</p>",
       },
       {
         id: 2,
         step: "02",
-        title: "Documentation",
+        title: "Choose the Right Jurisdiction",
+        sub_title: "Choose the Right Jurisdiction",
         description:
-          "We prepare all required documents, applications, and handle the submission process.",
+          "<p>Mainland, free zone, or offshore - each serve a different purpose. We help you choose the structure that fits your business activity, budget, and future goals.</p>",
       },
       {
         id: 3,
         step: "03",
-        title: "Approval",
+        title: "Secure Your Trade License",
+        sub_title: "Secure Your Trade License",
         description:
-          "We liaise with authorities to obtain approvals and ensure compliance with all requirements.",
+          "<p>Once the structure is confirmed, we manage the license application from end to end. Our team prepares the documents, submits them to the relevant authorities, and keeps you informed until approval is complete.</p>",
       },
       {
         id: 4,
         step: "04",
-        title: "License Issuance",
+        title: "Apply For UAE Residency",
+        sub_title: "Apply For UAE Residency",
         description:
-          "Your trade license is issued and your company is officially registered.",
+          "<p>If your setup requires visas, we handle the full process for business owners, partners, employees, and family members. This includes applications, medicals, Emirates ID, and final approvals.</p>",
       },
       {
         id: 5,
         step: "05",
-        title: "Post-Setup Support",
+        title: "Open Your Business Bank Account",
+        sub_title: "Open Your Business Bank Account",
         description:
-          "We assist with banking, visas, office setup, and ongoing compliance requirements.",
+          "<p>To complete your setup, we support you with opening a corporate bank account. From bank selection to compliance preparation, we help streamline a process that can otherwise be time-consuming.</p>",
       },
     ] satisfies ProcessStep[],
   },

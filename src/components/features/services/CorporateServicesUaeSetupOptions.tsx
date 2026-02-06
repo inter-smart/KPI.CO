@@ -19,7 +19,6 @@ type CorporateServicesUaeSetupOptionsProps = {
   };
 };
 
-// Separate component for each card to properly manage hover state
 function SetupOptionCard({ item }: { item: SetupOptionItem }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -164,7 +163,7 @@ export default function CorporateServicesUaeSetupOptions({
     containScroll: "trimSnaps",
   });
   return (
-    <section className="w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px] bg-linear-to-t from-[#f1fafe] via-white to-white">
+    <section className="w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]">
       <div className="container">
         <div className="text-center w-full max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1080px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
           <Heading as="h2" size="h2" className="text-[#1C5396] mb-4">
