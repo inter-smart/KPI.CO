@@ -1,9 +1,7 @@
-export default function page() {
+export default function MainlandCompanyFormationUaePage() {
     return (
-        <div>
+        <>
 
-
-            
-        </div>
+        </>
     )
 }
