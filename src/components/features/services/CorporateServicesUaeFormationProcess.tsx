@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type CorporateServicesUaeFormationProcessProps = {
+  variant?: "mainland" | "default";
   data: {
     title: string;
     description: string;
@@ -18,13 +19,21 @@ type CorporateServicesUaeFormationProcessProps = {
 
 export default function CorporateServicesUaeFormationProcess({
   data,
+  variant,
 }: CorporateServicesUaeFormationProcessProps) {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
     <section className="w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white overflow-hidden">
       <div className="container">
-        <div className="sm:text-center w-full sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
+        <div
+          className={cn(
+            "w-full mb-6 xl:mb-10 2xl:mb-12",
+            variant === "mainland"
+              ? "text-start "
+              : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
+          )}
+        >
           <Heading
             as="h2"
             size="h2"
@@ -32,18 +41,22 @@ export default function CorporateServicesUaeFormationProcess({
           >
             {data.title}
           </Heading>
-          <Text as="div" size="p5" className="text-[#4e4e4e]">
-            {parse(data?.description)}
-          </Text>
+          {data?.description && (
+            <Text as="div" size="p5" className="text-[#4e4e4e]">
+              {parse(data?.description)}
+            </Text>
+          )}
         </div>
 
-        <Heading
-          as="h3"
-          size="h4"
-          className="font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
-        >
-          {data.sub_title}
-        </Heading>
+        {data.sub_title && (
+          <Heading
+            as="h3"
+            size="h4"
+            className="font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
+          >
+            {data.sub_title}
+          </Heading>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14">
           <div className="">

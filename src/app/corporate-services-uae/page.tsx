@@ -19,6 +19,7 @@ export type HeroData = {
   title: string;
   description: string;
   additionalContent: string[];
+  media: MediaItem;
 };
 
 export type WhyBuildItem = {
@@ -91,6 +92,10 @@ const localData = {
       "No hidden costs",
       "Free banking consultation",
     ],
+    media: {
+      path: "/images/corporate-services-uae-hero-bg.svg",
+      alt: "Mainland Company Formation & Licensing in the UAE",
+    },
   } satisfies HeroData,
 
   whyBuild: {

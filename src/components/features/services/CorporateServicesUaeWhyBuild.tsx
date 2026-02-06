@@ -4,8 +4,10 @@ import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
+import { cn } from "@/lib/utils";
 
 type CorporateServicesUaeWhyBuildProps = {
+  variant?: "mainland" | "default";
   data: {
     title: string;
     description: string;
@@ -13,7 +15,13 @@ type CorporateServicesUaeWhyBuildProps = {
   };
 };
 
-function WhyBuildCard({ item }: { item: WhyBuildItem }) {
+function WhyBuildCard({
+  item,
+  variant,
+}: {
+  item: WhyBuildItem;
+  variant?: "mainland" | "default";
+}) {
   return (
     <div className="group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300">
       <div className="w-[46px] 2xl:w-[55px] aspect-square mb-2.5 2xl:mb-3 transition-transform group-hover:scale-105">
@@ -35,7 +43,12 @@ function WhyBuildCard({ item }: { item: WhyBuildItem }) {
       <Text
         as="div"
         size="p1"
-        className="font-normal text-[#4e4e4e] sm:text-black"
+        className={cn(
+          "font-normal text-[#4e4e4e] sm:text-black",
+          variant === "mainland"
+            ? "lg:text-[12px] 2xl:text-[14px] 3xl:text-[18px]"
+            : "",
+        )}
       >
         {parse(item?.description)}
       </Text>
@@ -45,6 +58,7 @@ function WhyBuildCard({ item }: { item: WhyBuildItem }) {
 
 export default function CorporateServicesUaeWhyBuild({
   data,
+  variant,
 }: CorporateServicesUaeWhyBuildProps) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
@@ -54,9 +68,23 @@ export default function CorporateServicesUaeWhyBuild({
   });
 
   return (
-    <section className="w-full block py-12.5 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px] bg-linear-to-t from-[#f1fafe] via-white to-white">
+    <section
+      className={cn(
+        "w-full block py-12.5 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]",
+        variant === "mainland"
+          ? "bg-[#f9fafb] "
+          : "bg-linear-to-t from-[#f1fafe] via-white to-white",
+      )}
+    >
       <div className="container">
-        <div className="sm:text-center w-full sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
+        <div
+          className={cn(
+            "w-full mb-6 xl:mb-10 2xl:mb-12",
+            variant === "mainland"
+              ? "text-start "
+              : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
+          )}
+        >
           <Heading
             as="h2"
             size="h2"
@@ -73,7 +101,14 @@ export default function CorporateServicesUaeWhyBuild({
           </Text>
         </div>
 
-        <div className="hidden sm:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10">
+        <div
+          className={cn(
+            "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
+            variant === "mainland"
+              ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
+              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+          )}
+        >
           {data.items.map((item) => (
             <div key={item.id}>
               <WhyBuildCard item={item} />
@@ -88,7 +123,7 @@ export default function CorporateServicesUaeWhyBuild({
                 key={`why-build-${item.id}`}
                 className="flex-[0_0_340px] min-w-0 select-none px-2.5"
               >
-                <WhyBuildCard item={item} />
+                <WhyBuildCard item={item} variant={variant} />
               </div>
             ))}
           </div>
