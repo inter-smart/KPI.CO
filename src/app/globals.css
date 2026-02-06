@@ -19,16 +19,16 @@
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
-  --breakpoint-2xl: 96rem;
-  --breakpoint-3xl: 120rem;
+  --breakpoint-2xl: 80rem;
+  --breakpoint-3xl: 80rem;
 
   /* Container Sizes */
   --container-sm: 40rem;
   --container-md: 50rem;
   --container-lg: 855px;
   --container-xl: 1070px;
-  --container-2xl: 1280px;
-  --container-3xl: 1600px;
+  --container-2xl: 1200px;
+  --container-3xl: 1200px;
 
   /* Header Sizes */
   --header-y-sm: 60px;

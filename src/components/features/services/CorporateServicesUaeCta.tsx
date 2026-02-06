@@ -11,9 +11,9 @@ type CorporateServicesUaeCtaProps = {
 
 export default function CorporateServicesUaeCta({ data }: CorporateServicesUaeCtaProps) {
     return (
-        <section className="w-full h-auto py-10 lg:py-13 2xl:py-17 3xl:py-22 block">
+        <section className="w-full h-auto py-10 lg:py-13 xl:py-13 2xl:py-17 3xl:py-22 block">
             <div className="container">
-                <div className="w-full lg:max-w-237.5 2xl:max-w-285 3xl:max-w-356.25 h-auto p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] mx-auto bg-linear-to-t from-[#6A9FE0] to-[#053269] rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] relative z-0 flex flex-wrap items-center">
+                <div className="w-full lg:max-w-237.5 xl:max-w-237.5 2xl:max-w-285 3xl:max-w-356.25 h-auto p-[50px_30px] lg:p-[60px_45px] xl:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] mx-auto bg-linear-to-t from-[#6A9FE0] to-[#053269] rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] relative z-0 flex flex-wrap items-center">
                     <div className="w-[160px] md:w-[82%] h-[120px] md:h-auto aspect-square max-md:mt-auto pointer-events-none absolute -z-1 inset-[0_0_0_auto]">
                         <Image
                             src="/images/corporate-cta-overlay.svg"
@@ -38,13 +38,13 @@ export default function CorporateServicesUaeCta({ data }: CorporateServicesUaeCt
                         >
                             {data?.title}
                         </Heading>
-                        <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal font-medium text-white">
+                        <div className="text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal font-medium text-white">
                             {parse(data?.description)}
                         </div>
                     </div>
                     <div className="w-full lg:w-[33%] flex lg:justify-end">
                         <Button
-                            className="text-[13px] sm:text-[14px] lg:text-[17px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]"
+                            className="text-[13px] sm:text-[14px] lg:text-[17px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]"
                             asChild
                         >
                             <Link href={data.button.link}>{data.button.label}</Link>

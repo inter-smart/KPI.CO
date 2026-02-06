@@ -26,9 +26,9 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
         [Autoplay({ delay: 2500, stopOnInteraction: true })],
     )
     return (
-        <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
+        <section className="w-full h-auto py-[40px] lg:py-[40px_60px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
             <div className="container">
-                <div className="sm:text-center w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
+                <div className="sm:text-center w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 xl:mb-8.75 2xl:mb-10 3xl:mb-12.5">
                     <Heading
                         as="h2"
                         size="h2"
@@ -36,12 +36,12 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
                     >
                         {data?.title}
                     </Heading>
-                    <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] lg:max-w-195 2xl:max-w-295 mx-auto">
+                    <div className="text-[16px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] lg:max-w-195 xl:max-w-195 2xl:max-w-295 mx-auto">
                         {parse(data?.description)}
                     </div>
                 </div>
                 <div ref={emblaRef} className="w-full max-w-full">
-                    <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75">
+                    <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 xl:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 xl:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75">
                         {data.partners.map((item) => (
                             <div
                                 key={`affiliation-${item?.id}`}
