@@ -89,7 +89,7 @@ export default function BlogDetailPage() {
   return (
     <>
       <BlogInternalAudit data={local_data?.audit_data} />
-      <BlogDetail data={local_data?.blog_detail} />
+      {/* <BlogDetail data={local_data?.blog_detail} /> */}
       {/* <BlogDetailSection data={local_data?.blog_detail} /> */}
     </>
   );
