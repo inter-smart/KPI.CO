@@ -32,7 +32,7 @@ export default function InnerHero({ data }: InnerHeroProps) {
             <Text
               as="div"
               size="p1"
-              className="text-white mb-4 xl:mb-6 2xl:mb-8"
+              className="text-white xl:max-w-[88%] mb-4 xl:mb-6 2xl:mb-8"
             >
               {parse(data?.description)}
             </Text>
@@ -62,7 +62,7 @@ export default function InnerHero({ data }: InnerHeroProps) {
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[16px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] h-11! xl:h-10! 2xl:h-12! max-sm:mt-3"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>

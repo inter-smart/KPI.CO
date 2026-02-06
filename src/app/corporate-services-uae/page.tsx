@@ -46,8 +46,10 @@ export type ProcessStep = {
 
 export type BankingPartner = {
   id: number;
-  name: string;
-  logo: string;
+  media: {
+    path: string;
+    alt: string;
+  };
 };
 
 export type ServiceItem = {
@@ -250,82 +252,119 @@ const localData = {
   },
 
   banking: {
-    title: "Corporate Banking Support",
+    title: "Corporate Banking Support  ",
     description:
-      "<p>We help you open corporate bank accounts with leading UAE banks and navigate the banking requirements.</p>",
+      "<p>We work with trusted UAE and international banks to help our clients open compliant business bank accounts efficiently and with confidence. </p>",
     partners: [
-      { id: 1, name: "Emirates NBD", logo: "/images/bank-logo-1.png" },
-      { id: 2, name: "ADCB", logo: "/images/bank-logo-2.png" },
-      { id: 3, name: "Mashreq", logo: "/images/bank-logo-3.png" },
-      { id: 4, name: "FAB", logo: "/images/bank-logo-4.png" },
-      { id: 5, name: "RAKBANK", logo: "/images/bank-logo-5.png" },
-      { id: 6, name: "HSBC", logo: "/images/bank-logo-6.png" },
-    ] satisfies BankingPartner[],
-  },
-
-  services: {
-    title: "Our Best Corporate Services",
-    description:
-      "<p>Comprehensive corporate services to support your business at every stage.</p>",
-    items: [
       {
         id: 1,
         media: {
-          path: "/images/corporate-service-icon-1.svg",
-          alt: "Company Formation",
+          path: "/images/banking-partner-1.svg",
+          alt: "Emirates NBD",
         },
-        title: "Company Formation",
-        description:
-          "Complete setup services including license, registration, and legal documentation.",
       },
       {
         id: 2,
         media: {
-          path: "/images/corporate-service-icon-2.svg",
-          alt: "PRO Services",
+          path: "/images/banking-partner-2.svg",
+          alt: "Emirates NBD",
         },
-        title: "PRO Services",
-        description:
-          "Government liaison services for visas, permits, and regulatory compliance.",
       },
       {
         id: 3,
         media: {
-          path: "/images/corporate-service-icon-3.svg",
-          alt: "Visa Processing",
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
         },
-        title: "Visa Processing",
-        description:
-          "Employee and investor visa processing with family sponsorship support.",
       },
       {
         id: 4,
         media: {
-          path: "/images/corporate-service-icon-4.svg",
-          alt: "Office Solutions",
+          path: "/images/banking-partner-4.svg",
+          alt: "Emirates NBD",
         },
-        title: "Office Solutions",
-        description:
-          "Flexible office space solutions from virtual offices to dedicated premises.",
       },
       {
         id: 5,
         media: {
-          path: "/images/corporate-service-icon-5.svg",
-          alt: "Banking Assistance",
+          path: "/images/banking-partner-2.svg",
+          alt: "Emirates NBD",
         },
-        title: "Banking Assistance",
-        description: "Corporate account opening support with major UAE banks.",
       },
       {
         id: 6,
         media: {
-          path: "/images/corporate-service-icon-6.svg",
-          alt: "Compliance Support",
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
         },
-        title: "Compliance Support",
+      },
+    ] satisfies BankingPartner[],
+  },
+
+  services: {
+    title: "Related Corporate Services",
+    description:
+      "<p>Setting up a company is only the starting point. What follows is often time-consuming, process-heavy, and spread across multiple authorities. Without the right support, these requirements can slow founders down and distract from building the business. KPI acts as your single point of contact, managing essential corporate services so you can stay focused on growth.  </p>",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/corporate-servive-1.svg",
+          alt: "Company Formation",
+        },
+        title: "PRO Services",
         description:
-          "Ongoing compliance, license renewals, and regulatory updates.",
+          "Government approvals, renewals, and official documentation managed end to end.",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/corporate-servive-2.svg",
+          alt: "Company Formation",
+        },
+        title: "Banking Assistance",
+        description:
+          "Support with corporate bank account opening and compliance preparation. ",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/corporate-servive-3.svg",
+          alt: "Company Formation",
+        },
+        title: "UAE Corporate Tax",
+        description:
+          "Clear guidance from registration to filings to stay compliant as your business grows.  ",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/corporate-servive-4.svg",
+          alt: "Company Formation",
+        },
+        title: "Bookkeeping Services",
+        description:
+          "Ongoing support to keep your records organized and ready for tax and regulatory requirements. ",
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/corporate-servive-5.svg",
+          alt: "Company Formation",
+        },
+        title: "UAE Visas",
+        description:
+          "Assistance WITH Residence visas for founders, employees, and family members. ",
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/corporate-servive-6.svg",
+          alt: "Company Formation",
+        },
+        title: "Office Solutions",
+        description:
+          "Assistance with compliant offices, co-working, or flexi-desks for licensing and visas.",
       },
     ] satisfies ServiceItem[],
   },
@@ -361,7 +400,6 @@ const localData = {
       },
     ] satisfies WhyChooseItem[],
   },
-
   cta: {
     title: "Build Your Business in the UAE with Confidence",
     description:
