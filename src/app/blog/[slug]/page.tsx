@@ -1,6 +1,19 @@
 import BlogDetail from "@/components/features/blog/BlogDetail";
 // import BlogDetailSection from "@/components/features/blog/BlogDetailSection";
 import BlogInternalAudit from "@/components/features/blog/BlogInternalAudit";
+import BlogRelated from "@/components/features/blog/BlogRelated";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import HomeProfessionalAffiliations from "@/components/features/home/HomeProfessionalAffiliations";
+
+export type InsightItem = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  media: MediaItem;
+  slug: string;
+};
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +47,19 @@ const local_data = {
       { id: 3, text: "Assess Credentials and Reputation" },
       { id: 4, text: "Evaluate Technological Expertise" },
     ],
+    sponsored: {
+      label: "Sponsored",
+      title: "Master Web Development in 30 Days",
+      description:
+        "Learn the skills you need to become a professional web developer with our comprehensive course.",
+      ctaText: "Learn More",
+      ctaHref: "/course",
+      duration: "2:34",
+      media: {
+        desktop_path: "/images/sponsor01.jpg",
+        media_alt: "Course preview",
+      },
+    },
 
     description: `
       <h3>Introduction</h3>
@@ -83,6 +109,102 @@ const local_data = {
       
       `,
   },
+
+  related_blog: {
+    title: " Related Blogs ",
+    items: [
+      {
+        id: 1,
+        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+        date: "14 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-insights-2.jpg",
+          alt: "Top Audit Firms UAE",
+        },
+        title: "Top 10 Audit firms in UAE",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "13 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-insights-3.jpg",
+          alt: "Audit Firm Selection",
+        },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      
+    ] satisfies InsightItem[],
+  },
+  professionalAffiliations: {
+    title: "Trusted by Industry Leaders ",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/home-professionalAffiliations-1.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-professionalAffiliations-2.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-professionalAffiliations-3.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/home-professionalAffiliations-4.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/home-professionalAffiliations-5.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/home-professionalAffiliations-6.png",
+          alt: "professionalAffiliations",
+        },
+        slug: "#",
+      },
+    ] satisfies AffiliationItem[],
+  },
 };
 
 export default function BlogDetailPage() {
@@ -91,6 +213,11 @@ export default function BlogDetailPage() {
       <BlogInternalAudit data={local_data?.audit_data} />
       <BlogDetail data={local_data?.blog_detail} />
       {/* <BlogDetailSection data={local_data?.blog_detail} /> */}
+      {/* <HomeOurInsights data={local_data?.insights} /> */}
+      <BlogRelated data={local_data?.related_blog} />
+      <HomeProfessionalAffiliations
+        data={local_data?.professionalAffiliations}
+      />
     </>
   );
 }

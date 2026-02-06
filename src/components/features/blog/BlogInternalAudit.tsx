@@ -18,13 +18,13 @@ type BlogInternalAuditProps = {
 };
 export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
   return (
-    <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[120px] bg-white relative z-0">
+    <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[60px] bg-white relative z-0">
       <div className="container">
         <div className="w-full md:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
           <Text
             as="p"
             size="p4"
-            className="font-normal md:text-center text-[#4E4E4E] flex w-fit px-5 xl:px-6 2xl:px-8 py-1 xl:py-1.5 2xl:py-2  mb-2 xl:mb-3 2xl:mb-4 md:mx-auto bg-[#FFE595] rounded-[40px]"
+            className="text-[12px] lg:text-[12px] 2xl:text-[16px] 3xl:text-[18px] font-medium md:text-center text-[#4E4E4E] flex w-fit px-5 xl:px-5 2xl:px-7 py-1 xl:py-1.5 2xl:py-2  mb-2 xl:mb-3 2xl:mb-4 md:mx-auto bg-[#FFE595] rounded-[40px]"
           >
             {data?.sub_title}
           </Text>

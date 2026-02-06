@@ -14,6 +14,7 @@ export const headingVariants = cva("leading-tight font-semibold", {
       h3: "text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[30px]",
       h4: "text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[32px]",
       h5: "text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[30px]",
+      h6: "text-[16px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px]",
     },
   },
   defaultVariants: {
