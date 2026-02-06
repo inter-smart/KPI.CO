@@ -52,7 +52,6 @@ export type HeroData = {
     additionalContent?: string[];
 };
 
-
 export type WhyBuildItem = {
     id: number;
     media: MediaItem;
