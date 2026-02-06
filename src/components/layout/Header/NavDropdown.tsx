@@ -35,7 +35,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     return (
         <div
             className={cn(
-                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[610px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl border border-gray-100 overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
+                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[610px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
                 isVisible ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-3 scale-[0.98] pointer-events-none"
             )}
         >
@@ -57,7 +57,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                 <div className="flex items-center gap-4">
                                     {category.icon && (
                                         <div className={cn(
-                                            "w-[34px] 3xl:w-[42px] h-[34px] 3xl:h-[42px] rounded-lg flex items-center justify-center transition-all bg-gradient-to-b from-[#6A9FE0] to-[#053269]",
+                                            "w-[34px] 3xl:w-[42px] h-[34px] 3xl:h-[42px] rounded-lg flex items-center justify-center transition-all bg-gradient-to-b from-[#053269] to-[#6A9FE0] ",
                                             activeCategoryId === category.id
                                                 ? "text-white shadow-md shadow-blue-200"
                                                 : "group-hover:bg-[#E9ECEF] text-[#1C5396]"
