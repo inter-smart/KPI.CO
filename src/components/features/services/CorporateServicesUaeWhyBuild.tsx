@@ -5,10 +5,6 @@ import parse from "html-react-parser";
 import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
 
-import dynamic from "next/dynamic";
-
-const MediaQuery = dynamic(() => import("react-responsive"), {});
-
 type CorporateServicesUaeWhyBuildProps = {
   data: {
     title: string;
@@ -56,6 +52,7 @@ export default function CorporateServicesUaeWhyBuild({
     slidesToScroll: 1,
     containScroll: "trimSnaps",
   });
+
   return (
     <section className="w-full block py-12.5 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px] bg-linear-to-t from-[#f1fafe] via-white to-white">
       <div className="container">
@@ -76,30 +73,26 @@ export default function CorporateServicesUaeWhyBuild({
           </Text>
         </div>
 
-        <MediaQuery minWidth={640}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10">
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10">
+          {data.items.map((item) => (
+            <div key={item.id}>
+              <WhyBuildCard item={item} />
+            </div>
+          ))}
+        </div>
+
+        <div ref={emblaRef} className="w-full max-w-full sm:hidden">
+          <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5">
             {data.items.map((item) => (
-              <div key={item.id}>
-                <WhyBuildCard key={`setup-option-${item.id}`} item={item} />
+              <div
+                key={`why-build-${item.id}`}
+                className="flex-[0_0_340px] min-w-0 select-none px-2.5"
+              >
+                <WhyBuildCard item={item} />
               </div>
             ))}
           </div>
-        </MediaQuery>
-
-        <MediaQuery maxWidth={639}>
-          <div ref={emblaRef} className="w-full max-w-full">
-            <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5">
-              {data.items.map((item) => (
-                <div
-                  key={`why-build-${item.id}`}
-                  className="flex-[0_0_340px] min-w-0 select-none px-2.5"
-                >
-                  <WhyBuildCard item={item} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </MediaQuery>
+        </div>
       </div>
     </section>
   );
