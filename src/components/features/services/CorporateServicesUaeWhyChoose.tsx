@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
+import { Heading } from "@/components/utils/typography";
 import type { WhyChooseItem } from "@/app/corporate-services-uae/page";
 
 type CorporateServicesUaeWhyChooseProps = {
     data: {
         title: string;
+        description: string;
         items: WhyChooseItem[];
     };
 };
@@ -14,42 +14,32 @@ export default function CorporateServicesUaeWhyChoose({
     data,
 }: CorporateServicesUaeWhyChooseProps) {
     return (
-        <section className="w-full py-[40px] lg:py-[60px] xl:py-[75px] 2xl:py-[90px] 3xl:py-[120px] bg-gradient-to-t from-[#6a9fe0] to-[#053269] overflow-hidden relative z-0">
-            <Image
-                src="/images/home-apart-delmt.png"
-                alt="background decoration"
-                width={368}
-                height={868}
-                className="h-full absolute -z-1 inset-y-0 right-0 left-auto pointer-events-none"
-            />
+        <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
             <div className="container">
-                <Heading
-                    as="h2"
-                    size="h2"
-                    className="text-white mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000"
-                >
-                    {data.title}
-                </Heading>
-                <div className="flex flex-wrap justify-between -mx-2 xl:-mx-4 2xl:-mx-5 relative z-0">
-                    <div className="w-[1px] h-full bg-white/30 absolute inset-y-0 left-1/2 max-lg:hidden" />
-                    {data.items.map((item) => (
+                <div className="sm:text-center w-full h-auto mb-6 sm:mb-8 lg:mb-10 2xl:mb-12.5 3xl:mb-16">
+                    <Heading
+                        as="h2"
+                        size="h2"
+                        className="text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10"
+                    >
+                        {data?.title}
+                    </Heading>
+                    <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+                        {parse(data?.description)}
+                    </div>
+                </div>
+                <div className="md:-mx-3 2xl:-mx-3.75 3xl:-mx-5 flex flex-wrap">
+                    {data?.items.map((item) => (
                         <div
-                            key={item.id}
-                            className="w-full md:w-1/2 lg:w-[350px] xl:w-[468px] 2xl:w-[520px] 3xl:w-[660px] p-2 sm:p-3 xl:p-4 2xl:p-5 max-sm:border-b max-sm:border-white/20"
+                            key={item?.id}
+                            className="w-full md:w-1/2 h-auto p-[15px_0] md:p-[20px_12px] 2xl:p-[25px_15px] 3xl:p-[30px_20px]"
                         >
-                            <div className="w-full h-auto block max-sm:py-[20px]">
-                                <div className="text-[14px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold text-white mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
-                                    <Image
-                                        src={item.media.path}
-                                        alt={item.media.alt}
-                                        width={34}
-                                        height={34}
-                                        className="w-6 xl:w-7 2xl:w-8 hover:scale-120 transition"
-                                    />
-                                    {item.title}
+                            <div className="w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 bg-[#6A9FE0]/8 rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[3px] 2xl:before:w-[4px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:z-1 before:inset-[0_auto_0_0] hover:scale-102 duration-300">
+                                <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-black mb-2 lg:mb-1.25 2xl:mb-2.5">
+                                    {item?.title}
                                 </div>
-                                <div className="text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px] leading-normal font-normal text-[#d3dde8]">
-                                    {parse(item.description)}
+                                <div className="text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-normal text-[#4E4E4E]">
+                                    {parse(item?.description)}
                                 </div>
                             </div>
                         </div>
