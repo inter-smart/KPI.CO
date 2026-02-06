@@ -12,7 +12,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
     <section className="w-full h-auto py-[40px] lg:py-17 2xl:py-20 3xl:py-25">
       <div className="container">
         <div className="md:[--width:260px] xl:[--width:320px] 2xl:[--width:390px] 3xl:[--width:480px] flex flex-wrap max-lg:gap-4 max-sm:flex-col-reverse">
-          <div className="w-full xl:w-[calc(100%-var(--width))] xl:pr-25 2xl:pr-30 3xl:pr-38">
+          <div className="w-full xl:w-[calc(100%-var(--width))] xl:pr-25 2xl:pr-30 3xl:pr-30">
             <div className="typography">
               <Heading
                 as="h2"
@@ -21,7 +21,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               >
                 {data.title}
               </Heading>
-              <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal text-[#4E4E4E] xl:max-w-[80%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
+              <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal text-[#4E4E4E] 3xl:max-w-[85%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
                 {parse(data.description || '')}
               </div>
             </div>

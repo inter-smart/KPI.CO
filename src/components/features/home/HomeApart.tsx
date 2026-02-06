@@ -18,7 +18,7 @@ export default function HomeApart({ data }: HomeApartProps) {
         alt="home-apart-delmt"
         width={368}
         height={868}
-        className="h-full absolute -z-1 inset-y-0 right-0 left-auto pointer-events-none max-md:hidden"
+        className="h-full w-full max-w-[40%] absolute -z-1 inset-y-0 right-0 left-auto pointer-events-none max-md:hidden"
       />
       <div className="container">
         <Heading
@@ -33,7 +33,7 @@ export default function HomeApart({ data }: HomeApartProps) {
           {data.items.map((item) => (
             <div
               key={`apart-item-${item.id}`}
-              className="w-full md:w-1/2 lg:w-[350px] xl:w-[468px] 2xl:w-[520px] 3xl:w-[660px] p-2 sm:p-3 xl:p-4 2xl:p-5 max-sm:border-b max-sm:border-white/20"
+              className="w-full md:w-1/2 lg:w-[390px] xl:w-[468px] 2xl:w-[520px] 3xl:w-[680px] p-2 sm:p-3 xl:p-4 2xl:p-5 max-sm:border-b max-sm:border-white/20"
             >
               <div className="w-full h-auto block max-sm:py-[20px]">
                 <div className="text-[14px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
@@ -42,7 +42,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                     alt={item.media.alt || "Home Apart"}
                     width={34}
                     height={34}
-                    className="w-6 xl:w-7 2xl:w-8 hover:scale-120 transition"
+                    className="w-[22px] xl:w-[28px] 2xl:w-[34px] 3xl:w-[42px] transition"
                   />
                   {parse(item.title ?? "title")}
                 </div>

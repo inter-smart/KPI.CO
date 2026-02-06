@@ -31,12 +31,13 @@ export default function HomeService({ data }: HomeServiceProps) {
               className="bg-white rounded-[10px]  xl:rounded-[12px] p-[30px] border border-gray-100 shadow-[0px_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
             >
               {/* Icon Container */}
-              <div className="w-[70px] h-[70px] bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-[8px] flex items-center justify-center mb-[20px] transition-transform group-hover:scale-105">
+              <div className="w-[35px] xl:w-[45px] 2xl:w-[55px] 3xl:w-[70px] h-[35px] xl:h-[45px] 2xl:h-[55px] 3xl:h-[70px] bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-[8px] flex items-center justify-center mb-[20px] transition-transform ">
                 <Image
                   src={service.media.path}
                   width={32}
                   height={32}
                   alt={service.media.alt}
+                  className="max-w-[17px] xl:max-w-[21px] 2xl:max-w-[25px] 3xl:max-w-[32px]"
                 />
               </div>
 
@@ -49,7 +50,7 @@ export default function HomeService({ data }: HomeServiceProps) {
               </p>
               <div>
                 <Button
-                  className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto bg-transparent hover:bg-transparent"
+                  className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto bg-transparent "
                   asChild
                 >
                   <Link href={service.button.link}>
