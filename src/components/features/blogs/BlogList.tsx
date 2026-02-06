@@ -127,13 +127,13 @@ export default function BlogList({ data }: BlogListProps) {
                     ))}
 
                     {/* Special CTA Card (Position 6) */}
-                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] p-4 2xl:p-4 3xl:p-8 flex flex-col justify-center  text-white shadow-lg">
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[410px] p-6 2xl:p-4 3xl:p-8 flex flex-col justify-center  text-white shadow-lg">
                         <div className="position absolute top-0 left-0 w-full h-full">
                             <Image src="/images/blogBg.jpg" className="w-full h-full object-cover" width="375" height="235" alt="bannerBg" />
                         </div>
 
                         <div className="relative z-10">
-                            <h3 className="text-[14px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-bold mb-4 leading-tight">
+                            <h3 className="text-[16px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-semibold mb-4 leading-relaxed">
                                 Strong Decisions Start with Clear Insight
                             </h3>
                             <p className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 leading-relaxed">
