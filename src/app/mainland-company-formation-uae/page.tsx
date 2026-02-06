@@ -2,6 +2,13 @@ import React from 'react'
 
 export default function page() {
     return (
-        <div>..............page</div>
-    )
-}
+        <div>.
+            
+            <section>
+                <div>
+                    
+                </div>
+            </section>
+            .............page</div>
+    )       
+}   
