@@ -13,9 +13,10 @@ type CorporateServicesUaeBankingProps = {
         description: string;
         partners: BankingPartner[];
     };
+    variant?: "default" | "mainland";
 };
 
-export default function CorporateServicesUaeBanking({ data }: CorporateServicesUaeBankingProps) {
+export default function CorporateServicesUaeBanking({ data, variant = "default" }: CorporateServicesUaeBankingProps) {
     const [emblaRef] = useEmblaCarousel(
         {
             loop: true,
@@ -28,7 +29,7 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
     return (
         <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
             <div className="container">
-                <div className="sm:text-center w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
+                <div className={cn("w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5", variant === "mainland" ? "text-left" : "sm:text-center")}>
                     <Heading
                         as="h2"
                         size="h2"
@@ -36,7 +37,7 @@ export default function CorporateServicesUaeBanking({ data }: CorporateServicesU
                     >
                         {data?.title}
                     </Heading>
-                    <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] lg:max-w-195 2xl:max-w-295 mx-auto">
+                    <div className={cn("text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",variant === "mainland" ? "" : "lg:max-w-195 2xl:max-w-295 mx-auto")}>
                         {parse(data?.description)}
                     </div>
                 </div>

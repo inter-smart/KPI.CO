@@ -13,6 +13,7 @@ type CorporateServicesUaeWhyChooseProps = {
 };
 
 export default function CorporateServicesUaeWhyChoose({ data, variant = "default" }: CorporateServicesUaeWhyChooseProps) {
+    
     return (
         <section className={cn("w-full h-auto block", variant === "mainland" ? "py-[40px] lg:py-[35px_50px] xl:py-[45px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]" : "py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px]")}>
             <div className="container">

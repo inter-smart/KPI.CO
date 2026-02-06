@@ -2,6 +2,7 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import BusinessSetup from "@/components/features/services/BusinessSetup";
 
 
 export type BankingPartner = {
@@ -10,6 +11,15 @@ export type BankingPartner = {
         path: string;
         alt: string;
     }
+};
+export type BusinessItem = {
+    id: number;
+    name: string;
+    description: string;
+    media: {
+        path: string;
+        alt: string;
+    };
 };
 
 export type WhyChooseItem = {
@@ -34,10 +44,57 @@ export type FaqItem = {
 };
 
 const localData = {
-    banking: {
-        title: "Corporate Banking Support  ",
+    business: {
+        title: "Other Business Setup Options",
         description:
-            "<p>We work with trusted UAE and international banks to help our clients open compliant business bank accounts efficiently and with confidence. </p>",
+            "If a mainland company isn’t the right fit for your business, KPI can help you explore other UAE company structures.",
+        items: [
+            {
+                id: 1,
+                name: "Freezone",
+                description:
+                    "Best suited for businesses focused on international trade, digital services, or startups seeking tax efficiency and simplified setup. Freezone companies often enjoy 100% foreign ownership and flexible visa options.",
+                media: {
+                    path: "",
+                    alt: "Business Structuring",
+                },
+            },
+            {
+                id: 2,
+                name: "Offshore",
+                description:
+                "Ideal for holding companies, asset protection, or businesses that operate internationally without a local UAE presence. Offshore companies cannot trade directly within the UAE and do not require an office or UAE visas. ",
+                media: {
+                    path: "",
+                    alt: "Business Structuring",
+                },
+            },
+            {
+                id: 3,
+                name: "ADGM",
+                description:
+                "A globally recognized financial centre in Abu Dhabi with a strong legal framework and common law structure. Ideal for financial services, investment firms and profesional advisory businesses",
+                media: {
+                    path: "",
+                    alt: "Business Structuring",
+                },
+            },
+            {
+                id: 4,
+                name: "DIFC",
+                description:
+                "A premium Dubai- based jurisdiction for finance, investment, and professional services. Operates under an independent legal and regulatory framework with international standards",
+                media: {
+                    path: "",
+                    alt: "Business Structuring",
+                },
+            },
+        ] satisfies BusinessItem[],
+    },
+    banking: {
+        title: "Banking Support for Mainland Companies  ",
+        description:
+            "<p>We assist clients with corporate bank account opening through trusted UAE and international banking partners, helping you choose the right bank based on your business activity and structure. </p>",
         partners: [
             {
                 id: 1,
@@ -186,7 +243,8 @@ const localData = {
 export default function MainlandCompanyFormationUaePage() {
     return (
         <>
-            <CorporateServicesUaeBanking data={localData.banking} />
+            <CorporateServicesUaeBanking data={localData.banking} variant="mainland" />
+            <BusinessSetup data={localData.business} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} variant="mainland" />
             <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
