@@ -12,13 +12,15 @@ type InnerHeroProps = {
 export default function InnerHero({ data }: InnerHeroProps) {
   return (
     <section className="w-full h-[690px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] bg-linear-to-t from-[#4578b5] to-[#053269] overflow-hidden flex items-center relative z-0">
-      <Image
-        src={data?.media?.path}
-        alt={data?.media?.alt}
-        width={1920}
-        height={800}
-        className="w-full absolute -z-1 inset-0 pointer-events-none"
-      />
+      {data?.media?.path && (
+        <Image
+          src={data.media.path}
+          alt={data.media.alt || "Hero background"}
+          width={1920}
+          height={800}
+          className="w-full absolute -z-1 inset-0 pointer-events-none"
+        />
+      )}
       <div className="container">
         <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1080px]">
           <Heading

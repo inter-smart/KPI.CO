@@ -39,13 +39,15 @@ export type BusinessLocationData = {
 };
 
 export type DocumentRequiredData = {
-    id: number;
+    id?: number;
     title?: string;
     description?: string;
+    items?: { id: number; text: string }[];
     media?: {
         path?: string;
         alt?: string;
     };
+    ftr_description?: string;
 };
 
 export type BankingPartner = {
@@ -62,6 +64,10 @@ export type BusinessItem = {
     media: {
         path: string;
         alt: string;
+    };
+    button?: {
+        link: string;
+        target: boolean;
     };
 };
 

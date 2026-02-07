@@ -11,8 +11,8 @@ type CorporateServicesUaeFormationProcessProps = {
   variant?: "mainland" | "default";
   data: {
     title: string;
-    description: string;
-    sub_title: string;
+    description?: string | null;
+    sub_title?: string | null;
     steps: ProcessStep[];
   };
 };

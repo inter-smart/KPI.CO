@@ -15,11 +15,11 @@ export type MediaItem = {
 };
 
 export type HeroData = {
-  id: number;
-  title: string;
-  description: string;
-  additionalContent: string[];
-  media: MediaItem;
+    id: number;
+    title: string;
+    description: string;
+    additionalContent?: string[];
+    media?: MediaItem;
 };
 
 export type WhyBuildItem = {
