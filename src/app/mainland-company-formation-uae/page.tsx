@@ -134,6 +134,7 @@ const localData = {
         description:
             "<p>Set up your mainland company in the UAE and operate freely across all Emirates. Ideal for businesses that need local market access, onshore operations, and long term flexibility.</p>",
     } satisfies HeroData,
+    
     mainlandBusiness: {
         title: "Start A Mainland Business In The UAE",
         description: "<p>A mainland company lets you do business anywhere in the UAE, without being limited to a specific free zone. It is licensed by the Department of Economic Development (DED) in the Emirate where your company is registered and is commonly used by businesses that want direct access to the local market.</p>",
