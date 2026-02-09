@@ -13,12 +13,7 @@ type HomeAboutProps = {
 
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
-    <section
-      className={cn(
-        "w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0",
-        className,
-      )}
-    >
+    <section className={cn("w-full py-8 xl:py-[90px] 2xl:py-[100px] bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0", className)}>
       <Image
         src="/images/aboutLine.png"
         alt="about-delemt"

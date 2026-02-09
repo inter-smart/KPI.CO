@@ -17,6 +17,7 @@ export type MediaItem = {
 export type HeroData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: number;
     title: string;
     description: string;
@@ -33,6 +34,13 @@ export type HeroData = {
 >>>>>>> 4941594ead78a9a0bb17eb413c2c1493f342871a
 =======
 >>>>>>> 243debe3d332fa073e00c758269a9b979e8fbcc6
+=======
+    id: number;
+    title: string;
+    description: string;
+    additionalContent?: string[];
+    media?: MediaItem;
+>>>>>>> ddb63b735063a0a86c857c8639527c4c8b498814
 };
 
 export type WhyBuildItem = {

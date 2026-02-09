@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
 import type { BankingPartner } from "@/app/corporate-services-uae/page";
+import type { TrustedLeader } from "@/app/blog/[slug]/page";
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
@@ -36,7 +37,7 @@ export default function BlogTrustedLeader({ data }: BlogTrustedLeaderProps) {
                     >
                         {data?.title}
                     </Heading>
-                   
+
                 </div>
                 <div ref={emblaRef} className="w-full max-w-full">
                     <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:px-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75">

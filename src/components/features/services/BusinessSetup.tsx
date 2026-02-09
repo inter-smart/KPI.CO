@@ -6,6 +6,7 @@ import { Heading } from '@/components/utils/typography'
 import parse from "html-react-parser";
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import type { BusinessItem } from "@/app/mainland-company-formation-uae/page";
 
 type BusinessSetupProps = {
     data: {
