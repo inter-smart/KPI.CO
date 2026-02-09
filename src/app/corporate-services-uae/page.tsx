@@ -15,10 +15,18 @@ export type MediaItem = {
 };
 
 export type HeroData = {
+<<<<<<< HEAD
     id: number;
     title: string;
     description: string;
     additionalContent: string[];
+=======
+  id: number;
+  title: string;
+  description: string;
+  additionalContent: string[];
+  media: MediaItem;
+>>>>>>> 4941594ead78a9a0bb17eb413c2c1493f342871a
 };
 
 export type WhyBuildItem = {
@@ -102,6 +110,10 @@ const localData = {
       "No hidden costs",
       "Free banking consultation",
     ],
+    media: {
+      path: "/images/corporate-services-uae-hero-bg.svg",
+      alt: "Mainland Company Formation & Licensing in the UAE",
+    },
   } satisfies HeroData,
 
   whyBuild: {

@@ -124,15 +124,22 @@ const localData = {
   },
   document_required_data: {
     title: "Documents Required",
-description:"<p>To complete your Mainland company registration, you will typically need: </p>",
+    description:
+      "<p>To complete your Mainland company registration, you will typically need: </p>",
     items: [
       { id: 1, text: "Passport copies of all shareholders " },
       { id: 2, text: "UAE entry stamp or residence visa copy " },
       { id: 3, text: "Emirates ID (if applicable) " },
       { id: 4, text: "Trade name reservation " },
-      { id: 5, text: "Initial approval from the Department of Economic Development (DED)" },
+      {
+        id: 5,
+        text: "Initial approval from the Department of Economic Development (DED)",
+      },
       { id: 6, text: "Tenancy contract (Ejari)" },
-      { id: 7, text: "Memorandum of Association (MOA) or Local Service Agent agreement " },
+      {
+        id: 7,
+        text: "Memorandum of Association (MOA) or Local Service Agent agreement ",
+      },
     ],
 
     media: {
@@ -142,7 +149,7 @@ description:"<p>To complete your Mainland company registration, you will typ
 
     ftr_description:
       "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
-  } satisfies DocumentRequiredData,
+  },
 };
 
 export default function MainlandCompanyFormationUaePage() {
