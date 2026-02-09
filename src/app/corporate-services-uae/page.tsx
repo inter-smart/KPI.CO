@@ -8,40 +8,9 @@ import CorporateServicesUaeSetupOptions from "@/components/features/services/Cor
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { Metadata } from "next";
+import type { HeroData, MediaItem } from "@/types/hero";
+export type { HeroData, MediaItem } from "@/types/hero";
 
-export type MediaItem = {
-    path: string;
-    alt: string;
-};
-
-export type HeroData = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: number;
-    title: string;
-    description: string;
-    additionalContent: string[];
-=======
-=======
->>>>>>> 243debe3d332fa073e00c758269a9b979e8fbcc6
-  id: number;
-  title: string;
-  description: string;
-  additionalContent: string[];
-  media: MediaItem;
-<<<<<<< HEAD
->>>>>>> 4941594ead78a9a0bb17eb413c2c1493f342871a
-=======
->>>>>>> 243debe3d332fa073e00c758269a9b979e8fbcc6
-=======
-    id: number;
-    title: string;
-    description: string;
-    additionalContent?: string[];
-    media?: MediaItem;
->>>>>>> ddb63b735063a0a86c857c8639527c4c8b498814
-};
 
 export type WhyBuildItem = {
     id: number;

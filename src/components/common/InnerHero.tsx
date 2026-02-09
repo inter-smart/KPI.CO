@@ -18,7 +18,7 @@ export default function InnerHero({ data }: InnerHeroProps) {
           alt={data.media.alt || "Hero background"}
           width={1920}
           height={800}
-          className="w-full absolute -z-1 inset-0 pointer-events-none"
+          className="w-full h-full absolute -z-1 inset-0 pointer-events-none"
         />
       )}
       <div className="container">

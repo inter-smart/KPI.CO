@@ -28,7 +28,10 @@ export default function BlogSponsoredCard({ data }: SponsoredCardProps) {
       </div>
 
       <div className="p-[15px] lg:p-[15px] 2xl:p-[25px] 3xl:p-[30px]">
-        <div className="relative w-full aspect-[16/9] rounded-[12px] overflow-hidden bg-[#0b1220]">
+        <Link
+          href={data?.ctaHref || "#"}
+          className="relative w-full aspect-[16/9] rounded-[12px] overflow-hidden bg-[#0b1220] block"
+        >
           <Image
             src={data?.media?.desktop_path || "/images/icon-placeholder.svg"}
             alt={data?.media?.media_alt || "Sponsored media"}
@@ -54,7 +57,7 @@ export default function BlogSponsoredCard({ data }: SponsoredCardProps) {
               {data.duration}
             </span>
           )}
-        </div>
+        </Link>
         <div className="pt-[10px] lg:pt-[15px]">
           <Heading
             as="h6"
