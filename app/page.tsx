@@ -16,7 +16,7 @@ export default function Home() {
         {/* Animated Hello World text */}
         <div className="mb-8 animate-fadeIn">
           <h1 className="text-7xl font-bold text-white drop-shadow-2xl animate-scaleIn sm:text-8xl md:text-9xl">
-            Hello
+            Hi
           </h1>
           <h1 className="text-7xl font-bold text-white drop-shadow-2xl animate-scaleIn sm:text-8xl md:text-9xl" style={{ animationDelay: '0.3s' }}>
             World
