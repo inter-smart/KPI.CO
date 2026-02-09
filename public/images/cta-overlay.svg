@@ -1,6 +1,19 @@
-<svg width="591" height="289" viewBox="0 0 591 289" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="18.4887" height="699.148" transform="matrix(0.813409 0.581692 -0.570386 0.821377 487.084 -77.6533)" fill="white" fill-opacity="0.1"/>
-<rect width="18.4887" height="234.424" transform="matrix(0.813409 0.581692 -0.570386 0.821377 588.713 -93.3418)" fill="white" fill-opacity="0.1"/>
-<rect width="18.4891" height="360.35" transform="matrix(0.555341 -0.831623 0.823863 0.566789 354.495 145.75)" fill="white" fill-opacity="0.1"/>
-<rect width="18.4891" height="432.155" transform="matrix(0.555341 -0.831623 0.823863 0.566789 398.25 82.9385)" fill="white" fill-opacity="0.1"/>
+<svg width="1072" height="290" viewBox="0 0 1072 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="0.0317383" width="1069" height="289" rx="20" fill="url(#paint0_linear_2617_5978)"/>
+<g clip-path="url(#clip0_2617_5978)">
+<rect width="18.4887" height="699.148" transform="matrix(0.813409 0.581692 -0.570386 0.821377 969.584 -79.6533)" fill="white" fill-opacity="0.1"/>
+<rect width="18.4887" height="234.424" transform="matrix(0.813409 0.581692 -0.570386 0.821377 1071.21 -95.3418)" fill="white" fill-opacity="0.1"/>
+<rect width="18.4891" height="360.35" transform="matrix(0.555341 -0.831623 0.823863 0.566789 836.995 143.75)" fill="white" fill-opacity="0.1"/>
+<rect width="18.4891" height="432.155" transform="matrix(0.555341 -0.831623 0.823863 0.566789 880.75 80.9385)" fill="white" fill-opacity="0.1"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2617_5978" x1="534.5" y1="-41.9199" x2="537.886" y2="418.88" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C5396"/>
+<stop offset="0.5" stop-color="#2D82C0"/>
+<stop offset="0.669039" stop-color="#3EB0EA"/>
+</linearGradient>
+<clipPath id="clip0_2617_5978">
+<rect width="501" height="289" fill="white" transform="translate(570.5)"/>
+</clipPath>
+</defs>
 </svg>

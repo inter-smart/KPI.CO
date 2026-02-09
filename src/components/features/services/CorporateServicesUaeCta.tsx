@@ -27,7 +27,7 @@ export default function CorporateServicesUaeCta({
       <div className="container">
         <div
           className={cn(
-            "w-full lg:max-w-237.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] relative z-0 flex flex-wrap items-center",
+            "w-full lg:max-w-237.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
             variant === "mainland"
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
@@ -37,10 +37,7 @@ export default function CorporateServicesUaeCta({
         >
           <div
             className={cn(
-              "aspect-square max-md:mt-auto pointer-events-none absolute -z-1 inset-[0_0_0_auto]",
-              variant === "mainland"
-                ? "w-full md:w-[46%] h-full md:h-auto"
-                : "w-[160px] md:w-[82%] h-[120px] md:h-auto",
+              "w-full h-full aspect-square pointer-events-none absolute -z-1 inset-0",
             )}
           >
             <Image
@@ -55,10 +52,7 @@ export default function CorporateServicesUaeCta({
               alt="overlay"
               width={500}
               height={500}
-              className={cn(
-                "w-full h-full object-cover scale-[1.2] max-md:block hidden",
-                variant === "mainland" && "translate-x-[-25px]",
-              )}
+              className={cn("w-full h-full object-cover max-md:block hidden")}
             />
           </div>
           <div
