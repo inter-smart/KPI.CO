@@ -10,7 +10,7 @@ else
 fi
 count=`docker ps | wc -l`
 if [ "$count" -eq "1" ] ; then
-	cd /var/jenkins/kpi.co-website/ && docker-compose up -d
+	cd /var/jenkins/kpi.co-website/ && docker compose up -d
 else
-    cd /var/jenkins/kpi.co-website/ && docker-compose up -d --build $1
+    cd /var/jenkins/kpi.co-website/ && docker compose up -d --build $1
 fi
