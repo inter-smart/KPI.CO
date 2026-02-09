@@ -127,26 +127,28 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            path: "/images/mainland-company-formation-uae-hero-bg.png",
+            path: "/images/saifz-hero-bg.png",
             alt: "Mainland Company Formation & Licensing in the UAE",
         },
-        title: "Mainland Company Formation & Licensing in the UAE ",
+        title: "Company Formation in SAIF Free Zone",
         description:
-            "<p>Set up your mainland company in the UAE and operate freely across all Emirates. Ideal for businesses that need local market access, onshore operations, and long term flexibility.</p>",
+            "<p>Set up your company in Sharjah Airport International Free Zone - a strategically located, investor-friendly free zone offering 100% foreign ownership, tax efficiency, and rapid setup within 1 hour for global businesses.</p>",
     } satisfies HeroData,
     mainlandBusiness: {
-        title: "Start A Mainland Business In The UAE",
-        description: "<p>A mainland company lets you do business anywhere in the UAE, without being limited to a specific free zone. It is licensed by the Department of Economic Development (DED) in the Emirate where your company is registered and is commonly used by businesses that want direct access to the local market.</p>",
-        highlightsTitle: "Mainland company formation is suitable for businesses such as:",
+        title: "Start a Business in Sharjah Airport International Free Zone",
+        description: "<p>Sharjah Airport International Free Zone (SAIF Zone) is a dynamic and well-connected business hub located next to Sharjah International Airport. Known for its modern infrastructure, strategic location near Dubai, and founder-friendly regulations, SAIF Zone is ideal for entrepreneurs and international companies seeking a UAE base.</p>",
+        highlightsTitle: "Why founders start a SAIF Free Zone Company:",
         highlights: [
-            "Trading companies",
-            "Service-based businesses",
-            "Consultants and professionals",
-            "Companies working with UAE clients",
+            "100% foreign ownership with no local sponsor required",
+            "Zero corporate and personal income tax for qualifying businesses",
+            "Fast setup timelines, often within 1 hour",
+            "Flexible facility options: offices, warehouses, land plots, jewellery park",
+            "Strategic access to UAE and regional markets",
+            "Confidentiality and asset protection for holding and investment companies"
         ],
-        footerDescription: "<p>For most business activities, 100% foreign ownership is allowed, making mainland setup a flexible option for both local and international investors.</p>",
+        footerDescription: "<p>SAIF Free Zone enables founders and investors to build tax-efficient structures, operate international trading or manufacturing, and manage assets with minimal bureaucracy.</p>",
         image: {
-            path: "/images/corporate-services-uae-setup-1.jpg",
+            path: "/images/saifz-mainland-business.jpg",
             alt: "Mainland Business Setup UAE",
         },
     } satisfies MainlandBusinessData,
@@ -214,89 +216,87 @@ const localData = {
         ]
     } satisfies BusinessLocationData,
     whyBuild: {
-        title: "Why Choose a Mainland Company Setup?",
-        description:
-            "<p>The UAE offers several ways to establish a company; each suited to different business goals and operating models. We help you select the right structure from day one, ensuring it aligns with your business activity, growth plans, and long-term objectives.</p>",
+        title: "Key Benefits of SAIF Business Setup",
         items: [
             {
                 id: 1,
                 media: {
-                    path: "/images/mainland-company-formation-service-1.svg",
-                    alt: "Market Access",
+                    path: "/images/saifz-key-1.svg",
+                    alt: "Fast Setup",
                 },
-                title: "Market Access",
+                title: "Fast Setup",
                 description:
-                    "<p>Operate anywhere in the UAE without geographic limits. Trade directly with local and international clients without needing agents or distributors.</p>",
+                    "<p>Rapid registration with single-window processing; some licenses issued same-day or within 1 hour.</p>",
             },
             {
                 id: 2,
                 media: {
-                    path: "/images/mainland-company-formation-service-2.svg",
+                    path: "/images/saifz-key-2.svg",
                     alt: "Full Ownership",
                 },
                 title: "Full Ownership",
                 description:
-                    "<p>Most business activities under a Mainland license allow 100% foreign ownership. Retain complete control without a local sponsor or partner. </p>",
+                    "<p>100% foreign ownership with complete control over your business and profits.</p>",
             },
             {
                 id: 3,
                 media: {
-                    path: "/images/mainland-company-formation-service-3.svg",
+                    path: "/images/saifz-key-3.svg",
                     alt: "Visa Options",
                 },
-                title: "Visa Options",
+                title: "Flexible Licenses",
                 description:
-                    "<p>Benefit from flexible visas for employees and dependents. Visa eligibility scales with office size and business growth. </p>",
+                    "<p>Commercial, Service, and Industrial licenses available, with options to combine activities.</p>",
             },
             {
                 id: 4,
                 media: {
-                    path: "/images/mainland-company-formation-service-4.svg",
-                    alt: "Flexible Offices",
+                    path: "/images/saifz-key-4.svg",
+                    alt: "Visa Options",
                 },
-                title: "Flexible Offices",
+                title: "Tax Efficiency",
                 description:
-                    "<p>Choose an office location anywhere in the UAE. Office size can grow as your business expands and visa needs increase.</p>",
+                    "<p>100% corporate and personal tax exemption, full repatriation of profits, and no currency restrictions.</p>",
             },
             {
                 id: 5,
                 media: {
-                    path: "/images/mainland-company-formation-service-5.svg",
-                    alt: "Government Contracts ",
+                    path: "/images/saifz-key-5.svg",
+                    alt: "Visa Options",
                 },
-                title: "Government Contracts ",
+                title: "Strategic Location",
                 description:
-                    "<p>Mainland companies can bid for government and semi-government projects, giving access to opportunities not available to free zone entities.</p>",
+                    "<p>Next to Sharjah Airport with access to major global trade routes,Dubai, and UAE ports.</p>",
             },
             {
                 id: 6,
                 media: {
-                    path: "/images/mainland-company-formation-service-6.svg",
-                    alt: "Banking Credibility",
+                    path: "/images/saifz-key-6.svg",
+                    alt: "Visa Options",
                 },
-                title: "Banking Credibility",
+                title: "Modern Facilities",
                 description:
-                    "<p>Mainland companies are seen as more established by banks and local partners, simplifying banking, leasing, and commercial relationships.</p>",
+                    "<p>Executive offices, shared workspaces, warehouses, land plots, and jewelry park options.</p>",
             },
             {
                 id: 7,
                 media: {
-                    path: "/images/mainland-company-formation-service-7.svg",
-                    alt: "Easy Expansion",
+                    path: "/images/saifz-key-7.svg",
+                    alt: "Visa Options",
                 },
-                title: "Easy Expansion",
+                title: "PRO Assistance",
                 description:
-                    "<p>Open multiple branches or expand operations across multiple Emirates without changing your core company license or structure.</p>",
+                    "<p>Visa quotas (up to 8 with SAIF Suite), online company status management, and professional support.</p>",
             },
             {
                 id: 8,
                 media: {
-                    path: "/images/mainland-company-formation-service-8.svg",
-                    alt: "Regulatory Stability",
+                    path: "/images/saifz-key-8.svg",
+                    alt: "Visa Options",
                 },
-                title: "Regulatory Stability",
+                title: "Operational Support",
                 description:
-                    "<p>Operate within a clear and stable legal framework. Mainland companies benefit from consistent regulations that support long-term growth and compliance.</p>",
+                    "<p>On-site customs, 24/7 power, and integrated logistics for smooth goods clearance.</p>",
             },
         ] satisfies WhyBuildItem[],
     },
@@ -805,7 +805,7 @@ const localData = {
         ],
 
         media: {
-            path: "/images/document-required-img.jpg", // <-- your image path
+            path: "/images/document-required-img.jpg",
             alt: "Required documents",
         },
         ftr_description:

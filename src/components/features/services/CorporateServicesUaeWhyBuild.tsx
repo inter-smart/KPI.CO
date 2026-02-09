@@ -10,7 +10,7 @@ type CorporateServicesUaeWhyBuildProps = {
   variant?: "mainland" | "default";
   data: {
     title: string;
-    description: string;
+    description?: string;
     items: WhyBuildItem[];
   };
 };
@@ -92,15 +92,16 @@ export default function CorporateServicesUaeWhyBuild({
           >
             {data.title}
           </Heading>
-          <Text
-            as="div"
-            size="p5"
-            className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8"
-          >
-            {parse(data?.description)}
-          </Text>
+          {data?.description && (
+            <Text
+              as="div"
+              size="p5"
+              className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8"
+            >
+              {parse(data?.description)}
+            </Text>
+          )}
         </div>
-
         <div
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
