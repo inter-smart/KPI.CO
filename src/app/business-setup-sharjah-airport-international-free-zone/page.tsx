@@ -736,7 +736,7 @@ const localData = {
     },
     images: {
       overlay: "/images/cta-overlay.svg",
-      overlayMobile: "/images/corporate-cta-overlay-mobile.svg",
+      overlayMobile: "/images/cta-overlay-mobile.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {

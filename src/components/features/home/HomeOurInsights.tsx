@@ -67,7 +67,7 @@ export default function HomeOurInsights({
         variant === "saifz" && "bg-[#F9F9F9]",
       )}
     >
-      <div className="container">
+      <div className="container overflow-hidden">
         <Heading
           as="h2"
           size="h2"
@@ -76,13 +76,13 @@ export default function HomeOurInsights({
           {data.title}
         </Heading>
 
-        <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
+        <div ref={emblaRef} className="w-full max-w-full">
           <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] 2xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] 2xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]">
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",variant === "saifz" && "lg:flex-[0_0_33%]",
+                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",variant === "saifz" && "lg:flex-[0_0_33.5%]",
                 )}
               >
                 <InsightCard data={item} />
