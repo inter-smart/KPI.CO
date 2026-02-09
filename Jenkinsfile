@@ -62,7 +62,7 @@ pipeline {
                 }
             steps {
                     dir("${env.WORKSPACE}/devops") {
-                    sh '''/bin/bash deploy.sh kpi.co-website ${GIT_BRANCH}'''
+                    sh '''/bin/bash deploy.sh kpi_website ${GIT_BRANCH}'''
                     }
                     sh '''docker rmi ${PREV_DEPLOY_IMAGE} || true'''
             }
