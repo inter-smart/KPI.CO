@@ -115,6 +115,10 @@ export type CtaData = {
         label: string;
         link: string;
     };
+    images: {
+        overlay: string;
+        overlayMobile: string;
+    };
 };
 
 export type FaqItem = {
@@ -687,6 +691,10 @@ const localData = {
                 label: "Get in Touch",
                 link: "/contact",
             },
+            images: {
+                overlay: "/images/mainland-cta-overlay.png",
+                overlayMobile: "/images/mainland-cta-overlay-mobile.svg",
+            },
         } satisfies CtaData,
         corporate_faq_data: {
             title: "FAQs",
@@ -743,6 +751,10 @@ const localData = {
         button: {
             label: "Get in Touch",
             link: "/contact",
+        },
+        images: {
+            overlay: "/images/mainland-cta-overlay.png",
+            overlayMobile: "/images/mainland-cta-overlay-mobile.svg",
         },
     } satisfies CtaData,
     corporate_faq_data: {
