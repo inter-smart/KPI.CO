@@ -30,9 +30,11 @@ const navItems = [
         label: 'Advisory Services',
         icon: "/images/advisory_icon.svg",
         subItems: [
-          { name: 'Corporate Services', href: '/services/advisory/strategy' },
-          { name: 'Tax Advisory', href: '/services/advisory/financial' },
-          { name: 'e-invoicing Services', href: '/services/advisory/deals' },
+          { name: 'Corporate Services', href: '/corporate-services-uae' },
+          { name: 'Advisory Services', href: '/advisory-services-uae' },
+          { name: 'Mainland Company Formation', href: '/mainland-company-formation-uae' },
+          { name: 'Dubai Silicon Oasis', href: '/company-formation-dubai-silicon-oasis' },
+          { name: 'Sharjah Airport Free Zone', href: '/business-setup-sharjah-airport-international-free-zone' },
         ]
       },
       {
@@ -64,6 +66,7 @@ const navItems = [
         id: 'blogs',
         label: 'Blogs',
         subItems: [
+          { name: 'Latest Insights', href: '/blog' },
         ]
       },
       {
