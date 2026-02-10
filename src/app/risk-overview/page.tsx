@@ -9,6 +9,8 @@ import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisati
 import RiskApproach from "@/components/features/risk-overview/RiskAooroach";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
+import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 
 export type HeroData = {
   id: number;
@@ -85,6 +87,18 @@ export type DiscussYourRiskData = {
   };
 };
 
+export type ServiceItem = {
+  id: number;
+  title: string;
+  media: MediaItem;
+  slug: string;
+};
+
+export type WhyChooseItem = {
+  id: number;
+  title: string;
+  description: string;
+};
 const localData = {
   hero: {
     id: 1,
@@ -299,6 +313,68 @@ const localData = {
       link: "/contact",
     },
   } satisfies DiscussYourRiskData,
+
+  explore_service: {
+    title: " Explore Risk Services  ",
+    items: [
+      {
+        id: 1,
+        media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+        title: "Standard Operating Procedures",
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+        title: "Regulatory & Compliance Advisory",
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+        title: "Internal Audit Services",
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+        title: "Enterprise Risk Management",
+        slug: "#",
+      },
+    ] satisfies ServiceItem[],
+  },
+
+  whyChoose: {
+    title: "Why Organisations Trust KPI for Risk Services ",
+    description:
+      "",
+    items: [
+      {
+        id: 1,
+        title: "Experienced Guidance",
+        description:
+          "<p>Decades of hands-on experience supporting businesses across multiple industries, structures, and UAE jurisdictions. </p>",
+      },
+      {
+        id: 2,
+        title: "Founder-led Approach ",
+        description:
+          "<p>We take the time to understand your goals and recommend solutions that fit how you want to operate and grow. </p>",
+      },
+      {
+        id: 3,
+        title: "Transparent Processes",
+        description:
+          "<p>No hidden costs or surprises. You know what to expect at every stage, from setup through ongoing compliance. </p>",
+      },
+      {
+        id: 4,
+        title: "End-to-End Support",
+        description:
+          "<p>From UAE company formation to banking, visas, and compliance, we stay involved as your business evolves. </p>",
+      },
+    ] satisfies WhyChooseItem[],
+  },
 };
 
 export default function RiskOverviewPage() {
@@ -311,6 +387,8 @@ export default function RiskOverviewPage() {
       <RiskOrganisation data={localData.riskOrganisation} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
       <HomeCounter data={localData.counterList} />
+      <RiskExploreService data={localData.explore_service} />
+      <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
       <DiscussYourRisk data={localData.discussYourRisk} />
     </>
   );
