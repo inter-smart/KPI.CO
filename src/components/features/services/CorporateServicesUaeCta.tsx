@@ -58,7 +58,7 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full max-lg:mb-3.75",
-              variant === "mainland" ? "lg:w-[60%]" : "lg:w-[67%]",
+              variant === "mainland" ? "lg:w-[60%]" : "lg:w-[65%]",
             )}
           >
             <Heading
@@ -75,7 +75,7 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full lg:w-[33%] flex lg:justify-end",
-              variant === "mainland" ? "lg:w-[40%]" : "lg:w-[33%]",
+              variant === "mainland" ? "lg:w-[40%]" : "lg:w-[35%]",
             )}
           >
             <Button
