@@ -1,5 +1,5 @@
 "use client";
-
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
@@ -12,7 +12,7 @@ export type DocumentRequiredItem = {
 export type DocumentRequiredData = {
   title?: string;
   description?: string;
-   items?: DocumentRequiredItem[];
+  items?: DocumentRequiredItem[];
   ftr_description?: string;
   media?: {
     path?: string;
@@ -22,13 +22,23 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
+  variant?: "default" | "saifz";
 };
 
-export default function DocumentRequired({ data }: DocumentRequiredProps) {
+export default function DocumentRequired({
+  data,
+  variant = "default",
+}: DocumentRequiredProps) {
   const items = data?.items ?? [];
 
   return (
-    <section className="w-full py-[40px] lg:py-[60px] xl:py-[80px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible">
+    <section
+      className={cn(
+        "w-full py-[40px] lg:py-[60px] xl:py-[80px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible",
+        variant === "saifz" &&
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+      )}
+    >
       <div className="container">
         <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
           {/* Main Content */}
@@ -45,7 +55,7 @@ export default function DocumentRequired({ data }: DocumentRequiredProps) {
                   </Heading>
                 )}
                 {data?.description && (
-                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
+                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
                     {parse(data.description)}
                   </div>
                 )}
