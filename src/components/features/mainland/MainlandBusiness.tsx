@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
@@ -13,7 +12,7 @@ type MainlandBusinessProps = {
 
 export default function MainlandBusiness({ data }: MainlandBusinessProps) {
   return (
-    <section className="w-full py-16 lg:py-24 bg-white overflow-hidden">
+    <section className="w-full py-[45px] lg:py-24 bg-white overflow-hidden">
       <div className="container">
         <Heading
           as="h2"
@@ -34,13 +33,15 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
                 {data.title}
               </Heading>
 
-              <div className="text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
+              <div className="text-[16px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0">
                 {parse(data.description)}
               </div>
 
-
               <div className="w-full mb-[30px]">
-                <Text size="p2" className="lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]">
+                <Text
+                  size="p2"
+                  className="lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
+                >
                   {data.highlightsTitle}
                 </Text>
 

@@ -5,7 +5,10 @@ import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import { Metadata } from "next";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 
 export type MainlandBusinessData = {
   title: string;
@@ -23,11 +26,13 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
 };
+
 export type MediaItem = {
   path: string;
   alt: string;
@@ -71,7 +76,12 @@ export type BankingPartner = {
   };
 };
 
-
+export type ServiceItem = {
+  id: number;
+  media: MediaItem;
+  title: string;
+  description: string;
+};
 export type CtaData = {
   title: string;
   description: string;
@@ -84,15 +94,33 @@ export type CtaData = {
     overlayMobile: string;
   };
 };
+export type FaqItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type InsightItem = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  media: MediaItem;
+  slug: string;
+};
 
 const localData = {
+
+
   hero: {
     id: 1,
     media: {
-      path: "/images/mainland-company-formation-uae-hero-bg.png",
+      desktopPath: "/images/dsoa-desktop.png",
+      mobilePath: "/images/dsoa-mobile.png",
       alt: "Company Formation in Dubai Silicon oasis",
     },
-    title: "Company Formation in Dubai Silicon oasis",
+    title: "Company Formation in Dubai Silicon oasis ",
     description:
       "<p>Set up your business in Dubai Silicon Oasis Authority - a tech-focused free zone designed for innovation and growth. Benefit from fast registration, flexible licenses, and access to cutting-edge infrastructure in Dubai’s integrated technology park.</p>",
   } satisfies HeroData,
@@ -203,7 +231,51 @@ const localData = {
       },
     ] satisfies WhyBuildItem[],
   },
-
+  services: {
+    title: "Types of Licenses in DSOA",
+    description:"Dubai Silicon Oasis supports multiple company structures to suit different business needs. We help you choose the right structure to match your growth plans.",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/saifz-servive-1.svg",
+          alt: "Company Formation",
+        },
+        title: "Service License",
+        description: "For professional services, IT solutions, and consultancy businesses operating in DSOA.",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/saifz-servive-2.svg",
+          alt: "Company Formation",
+        },
+        title: "Trade License",
+        description:
+          "Allows companies to import, export, distribute, and trade goods locally and internationally.",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/saifz-servive-3.svg",
+          alt: "Company Formation",
+        },
+        title: "Industrial License",
+        description:
+          "Grants permission for manufacturing, processing, assembly, and production of goods.",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/saifz-servive-4.svg",
+          alt: "Company Formation",
+        },
+        title: "Special Licenses",
+        description:
+          "For companies registered with Dubai Economy that want to operate in DSOA’s administrative zones",
+      },
+    ] satisfies ServiceItem[],
+  },
   businessLocation: {
     title: "Types of Companies in DSOA",
     description:
@@ -318,21 +390,117 @@ const localData = {
       },
     ] satisfies BankingPartner[],
   },
-   cta: {
-      title: "Not sure if DSOA Free Zone is right for your business? ",
-      description:
-        "<p>Our team helps you compare free zones, understand licence options, and select the setup that aligns with your goals.</p>",
-      button: {
-        label: "Get in Touch",
-        link: "/contact",
-      },
-      images: {
-        overlay: "/images/cta-bg-desk.jpg",
-        overlayMobile: "/images/cta-bg-mob.jpg",
-      },
-    } satisfies CtaData,
+  cta: {
+    title: "Not sure if DSOA Free Zone is right for your business? ",
+    description:
+      "<p>Our team helps you compare free zones, understand licence options, and select the setup that aligns with your goals.</p>",
+    button: {
+      label: "Get in Touch",
+      link: "/contact",
+    },
+    images: {
+      overlay: "/images/cta-bg-desk.jpg",
+      overlayMobile: "/images/cta-bg-mob.jpg",
+    },
+  } satisfies CtaData,
 
+  corporate_faq_data: {
+    title: "FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: "What types of businesses can I set up in DSOA?",
+        description: `
+                      <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                      `,
+      },
+      {
+        id: 2,
+        title: "Do I need a local sponsor to start a DSOA company?",
+        description: `
+                      <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                      `,
+      },
+      {
+        id: 3,
+        title: "How long does it take to set up a company in DSOA?",
+        description: `
+                      <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                      `,
+      },
+      {
+        id: 4,
+        title: "Do I need a physical office to register in DSOA?",
+        description: `
+                      <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                      `,
+      },
+      {
+        id: 5,
+        title: "Can my DSOA company sponsor UAE residence visas? ",
+        description: `
+                      <p>Yes, depending on your licence and office package, your company can sponsor visas for owners, employees, and family members.</p>
+                      `,
+      },
+
+    ] satisfies FaqItem[],
+  },
+
+  insights: {
+    title: "Related Blogs",
+    items: [
+      {
+        id: 1,
+        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+        date: "14 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-insights-2.jpg",
+          alt: "Top Audit Firms UAE",
+        },
+        title: "Top 10 Audit firms in UAE",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "13 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-insights-3.jpg",
+          alt: "Audit Firm Selection",
+        },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+        title:
+          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+    ] satisfies InsightItem[],
+  },
 };
+
+
 
 export const metadata: Metadata = {
   title: "Dubai Silicon Oasis Business Setup | Fast Company Formation  ",
@@ -350,7 +518,7 @@ export default function page() {
         variant="mainland"
         data={localData.whyBuild}
       />
-
+      <CorporateServicesUaeServices data={localData.services} variant="saifz" />
       <BusinessLocation data={localData.businessLocation} />
       <DocumentRequired data={localData.document_required_data} />
       <CorporateServicesUaeBanking
@@ -358,6 +526,8 @@ export default function page() {
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <HomeOurInsights data={localData.insights} variant="saifz" />
     </>
   )
 }

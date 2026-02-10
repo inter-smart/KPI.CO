@@ -81,7 +81,8 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -131,7 +132,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/mainland-company-formation-uae-hero-bg.png",
+      desktopPath: "/images/mainland-company-formation-uae-hero-bg.svg",
+      mobilePath: "/images/mainland-company-formation-uae-hero-bg-mobile.svg",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
     title: "Mainland Company Formation & Licensing in the UAE ",
@@ -512,7 +514,8 @@ const localData = {
     hero: {
       id: 1,
       media: {
-        path: "/images/mainland-company-formation-uae-hero-bg.png",
+        desktopPath: "/images/mainland-company-formation-uae-hero-bg.png",
+        mobilePath: "/images/mainland-company-formation-uae-hero-bg.png",
         alt: "Mainland Company Formation & Licensing in the UAE",
       },
       title: "Mainland Company Formation & Licensing in the UAE ",
