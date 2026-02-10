@@ -127,7 +127,7 @@ export default function BlogList({ data }: BlogListProps) {
                     ))}
 
                     {/* Special CTA Card (Position 6) */}
-                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[410px] p-6 2xl:p-4 3xl:p-8 flex flex-col justify-center  text-white shadow-lg">
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[410px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
                         <div className="position absolute top-0 left-0 w-full h-full">
                             <Image src="/images/blogBg.jpg" className="w-full h-full object-cover" width="375" height="235" alt="bannerBg" />
                         </div>
