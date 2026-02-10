@@ -50,7 +50,7 @@ export default function HomeService({ data }: HomeServiceProps) {
               </p>
               <div>
                 <Button
-                  className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto bg-transparent "
+                  className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto !bg-transparent !scale-none "
                   asChild
                 >
                   <Link href={service.button.link}>

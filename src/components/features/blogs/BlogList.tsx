@@ -207,7 +207,7 @@ export default function BlogList({ data }: BlogListProps) {
                     <span className="px-2 text-gray-400">...</span>
                     <button className="w-10 h-10 border border-transparent hover:border-gray-200 rounded-md font-medium text-gray-500 hover:bg-gray-50 transition">9</button>
                     <button className="w-10 h-10 border border-transparent hover:border-gray-200 rounded-md font-medium text-gray-500 hover:bg-gray-50 transition">10</button>
-                     <button className="p-2 border rounded-md hover:bg-gray-50 transition whitespace-nowrap disabled:opacity-50 disabled:bg-[#E5E5E5]" disabled>
+                    <button className="p-2 border rounded-md hover:bg-gray-50 transition whitespace-nowrap disabled:opacity-50 disabled:bg-[#E5E5E5]" disabled>
                         <div className="w-[10px] h-[16px]">
                             <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 1.88L6.10667 8L0 14.12L1.88 16L9.88 8L1.88 0L0 1.88Z" fill="#C4CDD5" />
@@ -222,28 +222,28 @@ export default function BlogList({ data }: BlogListProps) {
 
 function BlogCard({ data }: BlogCardProps) {
     return (
-        <div className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border border-gray-50">
+        <div className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border hover:border-[#3EB0EA] border-gray-50">
             <div className="relative aspect-[440/268] overflow-hidden">
                 <Image
                     src={data.media.path || "/images/placeholder-image.png"}
                     alt={data.media.alt || data.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
                 />
             </div>
-            <div className="p-6 md:p-7 flex flex-col flex-1">
+            <div className="p-6 md:p-7 2xl:p-[25px_45px] 3xl:p-[34px_64px] flex flex-col flex-1">
                 <div className="text-[13px] font-medium text-[#5280ca] mb-3 uppercase tracking-wide">
                     {data.date} • {data.readTime}
                 </div>
-                <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] font-bold text-black mb-3 line-clamp-2 leading-tight group-hover:text-[#1c5396] transition-colors">
+                <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black group-hover:text-[#1C5396] mb-3 line-clamp-2 leading-tight transition-colors">
                     {parse(data.title)}
                 </h3>
-                <div className="text-[14px] md:text-[15px] 2xl:text-[16px] text-[#4e4e4e] leading-relaxed mb-6 line-clamp-3">
+                <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-6">
                     {parse(data.description)}
                 </div>
                 <Link
                     href={data.slug}
-                    className="inline-flex items-center gap-2 text-[14px] md:text-[15px] font-bold text-[#1c5396] mt-auto hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] font-bold text-[#1c5396] mt-auto font-semibold transition-all duration-300"
                 >
                     Read More
                     <Image
@@ -251,7 +251,7 @@ function BlogCard({ data }: BlogCardProps) {
                         alt="Arrow Right"
                         width={12}
                         height={6}
-                        className="transition-transform duration-300"
+                        className="transition-transform duration-300 group-hover:translate-x-1"
                     />
                 </Link>
             </div>

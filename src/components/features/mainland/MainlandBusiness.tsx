@@ -15,14 +15,21 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
   return (
     <section className="w-full py-16 lg:py-24 bg-white overflow-hidden">
       <div className="container">
-        <div className="flex flex-col lg:flex-row  ">
+        <Heading
+          as="h2"
+          size="h2"
+          className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
+        >
+          {data.title}
+        </Heading>
+        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5">
           {/* Left Content */}
           <div className="w-full lg:w-[calc(100%-365px)] xl:w-[calc(100%-420px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]">
             <div className="w-full lg:max-w-[425px] xl:max-w-[565px] 2xl:max-w-[670px] 3xl:max-w-[850px]">
               <Heading
                 as="h2"
                 size="h2"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px]"
+                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
               >
                 {data.title}
               </Heading>
@@ -61,7 +68,7 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
 
           {/* Right Image */}
           <div className="w-full lg:w-[365px] xl:w-[420px] 2xl:w-[520px] 3xl:w-[660px]">
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[300px] rounded-[10px] overflow-hidden">
+            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}
