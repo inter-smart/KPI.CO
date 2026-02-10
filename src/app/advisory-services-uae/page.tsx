@@ -6,6 +6,7 @@ import CorporateServicesUaeWhyChoose from "@/components/features/services/Corpor
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import { Metadata } from "next";
 
 
@@ -74,6 +75,17 @@ export type InsightItem = {
     readTime: string;
     media: MediaItem;
     slug: string;
+};
+
+export type RiskAdvisoryDta = {
+    title: string;
+    description: string;
+    highlightsText: string;
+    advisoryItems: {
+        id: number;
+        slNo: number;
+        description: string;
+    }[];
 };
 
 const localData = {
@@ -177,6 +189,39 @@ const localData = {
             }
         ]
     } satisfies AdvisoryData,
+
+    riskAdvisory: {
+        title: "Relocation & Set-Up Support ",
+        description:
+            " <p>For founders, executives, and international teams relocating to the UAE, KPI provides practical relocation support to simplify the transition. This includes assistance with → </p>",
+        highlightsText: "Relocation support is delivered as part of a wider advisory engagement, ensuring personal and business requirements are addressed cohesively. ",
+        advisoryItems: [
+            {
+                id: 1,
+                slNo: 1,
+                description:
+                    "Residence and dependent visas ",
+            },
+            {
+                id: 2,
+                slNo: 2,
+                description:
+                    "Education and school-related guidance ",
+            },
+            {
+                id: 3,
+                slNo: 3,
+                description:
+                    "Banking introductions and account support ",
+            },
+            {
+                id: 4,
+                slNo: 4,
+                description:
+                    "Coordination of essential documentation  ",
+            },
+        ],
+    } satisfies RiskAdvisoryDta,
 
     Proservice: {
         title: "PRO Services & Ongoing Administrative Support ",
@@ -372,6 +417,7 @@ export default function page() {
             <DocumentRequired data={localData.document_required_data} />
             <AdvisorySerice data={localData.advisory_data} />
             <AdvisoryProservice data={localData.Proservice} />
+            <RiskAdvisory data={localData.riskAdvisory} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} titleClassName="text-[#1C5396]" variant="advisory" />
             <CorporateServicesUaeCta data={localData.cta} />
             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
