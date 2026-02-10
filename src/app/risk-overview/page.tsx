@@ -5,6 +5,7 @@ import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
 import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManagement";
 import { MediaItem } from "../page";
+import type { FaqItem } from "@/app/corporate-services-uae/page";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import RiskApproach from "@/components/features/risk-overview/RiskAooroach";
 import HomeCounter from "@/components/features/home/HomeCounter";

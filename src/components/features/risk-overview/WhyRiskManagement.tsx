@@ -11,7 +11,7 @@ type WhyRiskProps = {
 
 export default function WhyRiskManagement({ data }: WhyRiskProps) {
   return (
-    <section className="w-full py-[35px_85px] 3xl:py-[125px_50px] bg-white overflow-hidden">
+    <section className="w-full py-[35px_55px] xl:py-[35px_85px] 3xl:py-[125px_50px] bg-white overflow-hidden">
       <div className="container">
         <div className="flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[25px] 3xl:mb-[35px]">
           {/* Left Content */}
