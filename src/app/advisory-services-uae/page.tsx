@@ -1,6 +1,13 @@
 import InnerHero from '@/components/common/InnerHero'
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import AdvisorySerice, { AdvisoryData } from "@/components/features/advisory/AdvisorySerice";
+import AdvisoryProservice from '@/components/features/advisory/AdvisoryProservice';
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import { Metadata } from "next";
+
 
 export type HeroData = {
     id: number;
@@ -13,7 +20,6 @@ export type HeroData = {
     additionalContent?: string[];
 
 };
-
 export type DocumentRequiredData = {
     id?: number;
     title?: string;
@@ -24,6 +30,50 @@ export type DocumentRequiredData = {
         alt?: string;
     };
     ftr_description?: string;
+};
+
+export type MediaItem = {
+    path: string;
+    alt: string;
+};
+
+export type Proservice = {
+    id: number;
+    media: MediaItem;
+    title: string;
+};
+export type WhyChooseItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+export type CtaData = {
+    title: string;
+    description: string;
+    button: {
+        label: string;
+        link: string;
+    };
+    images: {
+        overlay: string;
+        overlayMobile: string;
+    };
+};
+
+export type FaqItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type InsightItem = {
+    id: number;
+    title: string;
+    description: string;
+    date: string;
+    readTime: string;
+    media: MediaItem;
+    slug: string;
 };
 
 const localData = {
@@ -39,14 +89,14 @@ const localData = {
     } satisfies HeroData,
 
     document_required_data: {
-        title: "Advisory Support Built Around Business Reality",
-        description: "<p>Advisory is not a one-time decision. It evolves as organisations grow, restructure, expand into new jurisdictions, or face changing regulatory requirements. Our advisory services are designed to support organisations at different stages, including: </p>",
+        title: "Advisory Support Built Around Business Reality ",
+        description: "<p>Advisory is not a one-time decision. It evolves as organisations grow, restructure, expand into new jurisdictions, or face changing regulatory requirements. Our advisory services are designed to support organisations at different stages, including:  </p>",
         items: [
-            { id: 1, text: "Market entry and entity setup" },
-            { id: 2, text: "Ownership and group structuring" },
-            { id: 3, text: "Regulatory and compliance readiness " },
-            { id: 4, text: "Tax registration, compliance, and reporting " },
-            { id: 5, text: "Ongoing governance and operational support" },
+            { id: 1, text: "Market entry and entity setup " },
+            { id: 2, text: "Ownership and group structuring " },
+            { id: 3, text: "Regulatory and compliance readiness  " },
+            { id: 4, text: "Tax registration, compliance, and reporting  " },
+            { id: 5, text: "Ongoing governance and operational support " },
         ],
 
         media: {
@@ -54,7 +104,7 @@ const localData = {
             alt: "Required documents",
         },
         ftr_description:
-            "<p>We focus on practical outcomes, structures and processes that work in practice, not just on paper.</p>",
+            "<p>We focus on practical outcomes, structures and processes that work in practice, not just on paper. </p>",
     } satisfies DocumentRequiredData,
 
     advisory_data: {
@@ -92,7 +142,8 @@ const localData = {
                     bg: "bg-[#F4F9FF]",
                     iconBg: "bg-[#1C5396]",
                     buttonBg: "bg-[#1C5396]",
-                    titleColor: "text-[#1C5396]"
+                    titleColor: "text-[#1C5396]",
+                    svgColor: "#5280CA"
                 }
             },
             {
@@ -120,12 +171,199 @@ const localData = {
                     bg: "bg-[#FFFDF2]",
                     iconBg: "bg-[#FFC916]",
                     buttonBg: "bg-[#FFC916]",
-                    titleColor: "text-[#1C5396]"
+                    titleColor: "text-[#1C5396]",
+                    svgColor: "#FFCB18"
                 }
             }
         ]
-    } satisfies AdvisoryData
-}
+    } satisfies AdvisoryData,
+
+    Proservice: {
+        title: "PRO Services & Ongoing Administrative Support ",
+        description:
+            "<p>Efficient business operations rely on timely approvals, documentation, and government processes. KPI provides PRO services to support day-to-day regulatory and administrative requirements, including:  </p>",
+        items: [
+            {
+                id: 1,
+                media: {
+                    path: "/images/corporate-servive-1.svg",
+                    alt: "Trade license renewals and amendments",
+                },
+                title: "Trade License Renewals <br className='hidden sm:block' /> And Amendments",
+            },
+            {
+                id: 2,
+                media: {
+                    path: "/images/corporate-servive-2.svg",
+                    alt: "Immigration and visa processing",
+                },
+                title: "Immigration And Visa <br className='hidden sm:block' /> Processing",
+            },
+            {
+                id: 3,
+                media: {
+                    path: "/images/corporate-servive-3.svg",
+                    alt: "Company Formation",
+                },
+                title: "Labour And Establishment <br className='hidden sm:block' /> Card Services",
+            },
+            {
+                id: 4,
+                media: {
+                    path: "/images/corporate-servive-4.svg",
+                    alt: "Government approvals and submissions",
+                },
+                title: "Government Approvals And <br className='hidden sm:block' /> Submissions",
+            },
+
+        ] satisfies Proservice[],
+    },
+
+    whyChoose: {
+        title: "Why Organisations Choose KPI ",
+        description: "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
+        items: [
+            {
+                id: 1,
+                title: "Integrated advisory approach",
+                description:
+                    "<p>Corporate structuring, tax, compliance, and operational support under one advisory framework. </p>",
+            },
+            {
+                id: 2,
+                title: "Regulatory awareness",
+                description:
+                    "<p>We take the time to understand your goals and recommend solutions that fit how you want to operate and grow. </p>",
+            },
+            {
+                id: 3,
+                title: "Clear, disciplined execution",
+                description:
+                    "<p>Advice that is practical, proportionate, and aligned with real regulatory expectations. </p>",
+            },
+            {
+                id: 4,
+                title: "Long-term partnership mindset",
+                description:
+                    "<p>Support that evolves as your business grows, restructures, or expands.  </p>",
+            },
+        ] satisfies WhyChooseItem[],
+    },
+    cta: {
+        title: "Discuss Your Advisory Requirements ",
+        description:
+            "<p>Whether you are setting up a new entity, restructuring an existing group, managing tax obligations, or relocating operations to the UAE, KPI can support you with clarity and confidence. .</p>",
+        button: {
+            label: "Get in Touch",
+            link: "/contact",
+        },
+        images: {
+            overlay: "/images/corporate-cta-overlay.svg",
+            overlayMobile: "/images/corporate-cta-overlay-mobile.svg",
+        },
+    } satisfies CtaData,
+
+    corporate_faq_data: {
+        title: "FAQs",
+        faq_list: [
+            {
+                id: 1,
+                title: "How do I start a business in the UAE?",
+                description: `
+                        <p>You can start by choosing the right business structure - mainland, free zone, or offshore - then completing licensing, visas, and banking. KPI guides you through each step for a smooth setup.</p>
+                        `,
+            },
+            {
+                id: 2,
+                title: "What does it cost to set up a business in the UAE?",
+                description: `
+                        <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
+                        `,
+            },
+            {
+                id: 3,
+                title: "How long does it take to set up a company in the UAE",
+                description: `
+                        <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
+                        `,
+            },
+            {
+                id: 4,
+                title: "What are the requirements for obtaining a UAE business visa?",
+                description: `
+                        <p>Business visas are available for founders, partners, employees, and dependents. Requirements typically include a valid passport, trade license, and relevant approvals. KPI manages the process end-to-end to save time and ensure compliance.</p>
+                        `,
+            },
+            {
+                id: 5,
+                title: "Do I need to have a physical office in the UAE?",
+                description: `
+                        <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
+                        `,
+            },
+        ] satisfies FaqItem[],
+    },
+
+    insights: {
+        title: "Our Insights",
+        items: [
+            {
+                id: 1,
+                media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+                title: "A Guide to Choosing the Best Audit Firm in 2025",
+                description:
+                    "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+                date: "14 NOV 2024",
+                readTime: "2 MIN READ",
+                slug: "#",
+            },
+            {
+                id: 2,
+                media: {
+                    path: "/images/home-insights-2.jpg",
+                    alt: "Top Audit Firms UAE",
+                },
+                title: "Top 10 Audit firms in UAE",
+                description:
+                    "State helps you see how many more days you need to work to reach.",
+                date: "13 NOV 2024",
+                readTime: "2 MIN READ",
+                slug: "#",
+            },
+            {
+                id: 3,
+                media: {
+                    path: "/images/home-insights-3.jpg",
+                    alt: "Audit Firm Selection",
+                },
+                title: "A Guide to Choosing the Best Audit Firm in 2025",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+                date: "12 NOV 2024",
+                readTime: "2 MIN READ",
+                slug: "#",
+            },
+            {
+                id: 4,
+                media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+                title:
+                    "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+                description:
+                    "State helps you see how many more days you need to work to reach.",
+                date: "12 NOV 2024",
+                readTime: "2 MIN READ",
+                slug: "#",
+            },
+        ] satisfies InsightItem[],
+    },
+};
+
+export const metadata: Metadata = {
+    title: "Advisory Services in the UAE | Corporate, Tax & Regulatory Support | KPI Group",
+    description:
+        "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus. ",
+};
+
 
 export default function page() {
     return (
@@ -133,6 +371,12 @@ export default function page() {
             <InnerHero data={localData.hero} />
             <DocumentRequired data={localData.document_required_data} />
             <AdvisorySerice data={localData.advisory_data} />
+            <AdvisoryProservice data={localData.Proservice} />
+            <CorporateServicesUaeWhyChoose data={localData.whyChoose} titleClassName="text-[#1C5396]" variant="advisory" />
+            <CorporateServicesUaeCta data={localData.cta} />
+            <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+            <HomeOurInsights data={localData.insights} />
+
         </>
-    )
+    );
 }

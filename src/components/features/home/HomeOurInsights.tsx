@@ -82,7 +82,8 @@ export default function HomeOurInsights({
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",variant === "saifz" && "lg:flex-[0_0_33.5%]",
+                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",
+                  variant === "saifz" && "lg:flex-[0_0_33.5%]"
                 )}
               >
                 <InsightCard data={item} />
@@ -90,7 +91,7 @@ export default function HomeOurInsights({
             ))}
           </div>
         </div>
-        <div className={cn("flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ",variant === "saifz" && "hidden")}>
+        <div className={cn("flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ", variant === "saifz" && "hidden")}>
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
@@ -146,7 +147,7 @@ function InsightCard({ data }: InsightCardProps) {
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
+          className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_span]:translate-x-1  transition-colors duration-300"
         >
           Read More<span>→</span>
         </Link>
