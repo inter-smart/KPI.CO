@@ -382,7 +382,7 @@ const localData = {
         description:
           "Best suited for businesses focused on international trade, digital services, or startups seeking tax efficiency and simplified setup. Freezone companies often enjoy 100% foreign ownership and flexible visa options.",
         media: {
-          path: "",
+          path: "/images/mainland-business-1.jpg",
           alt: "Business Structuring",
         },
       },
@@ -392,7 +392,7 @@ const localData = {
         description:
           "Ideal for holding companies, asset protection, or businesses that operate internationally without a local UAE presence. Offshore companies cannot trade directly within the UAE and do not require an office or UAE visas. ",
         media: {
-          path: "",
+          path: "/images/mainland-business-2.jpg",
           alt: "Business Structuring",
         },
       },
@@ -402,7 +402,7 @@ const localData = {
         description:
           "A globally recognized financial centre in Abu Dhabi with a strong legal framework and common law structure. Ideal for financial services, investment firms and profesional advisory businesses",
         media: {
-          path: "",
+          path: "/images/mainland-business-3.jpg",
           alt: "Business Structuring",
         },
       },
@@ -412,7 +412,7 @@ const localData = {
         description:
           "A premium Dubai- based jurisdiction for finance, investment, and professional services. Operates under an independent legal and regulatory framework with international standards",
         media: {
-          path: "",
+          path: "/images/mainland-business-2.jpg",
           alt: "Business Structuring",
         },
       },
