@@ -2,6 +2,7 @@ import BlogHero, { BlogHeroData } from "@/components/features/blogs/BlogHero";
 import BlogList from "@/components/features/blogs/BlogList";
 import React from "react";
 import type { InsightItem } from "@/app/page";
+import { Metadata } from "next";
 
 type BlogPageData = {
   hero: BlogHeroData;
@@ -13,8 +14,8 @@ type BlogPageData = {
 
 const localData: BlogPageData = {
   hero: {
-    title: "Our Blogs",
-    description: "Stay informed with expert insights and the latest trends in audit, accounting and compliance in the UAE.",
+    title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
+    description: "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE.",
   },
   blogs: {
     title: "Latest Reads",
@@ -94,6 +95,14 @@ const localData: BlogPageData = {
     ],
   },
 };
+
+
+export const metadata: Metadata = {
+    title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
+    description:
+        "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
+};
+
 
 export default function BlogPage() {
   return (

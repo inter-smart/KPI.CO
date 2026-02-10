@@ -4,7 +4,8 @@ import { Heading } from "@/components/utils/typography";
 import type { WhyChooseItem } from "@/app/corporate-services-uae/page";
 
 type CorporateServicesUaeWhyChooseProps = {
-  variant?: "default" | "mainland";
+  variant?: "default" | "mainland" | "advisory";
+  titleClassName?: string;
   data: {
     title: string;
     description: string;
@@ -15,6 +16,7 @@ type CorporateServicesUaeWhyChooseProps = {
 export default function CorporateServicesUaeWhyChoose({
   data,
   variant = "default",
+  titleClassName,
 }: CorporateServicesUaeWhyChooseProps) {
   return (
     <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
@@ -22,13 +24,13 @@ export default function CorporateServicesUaeWhyChoose({
         <div
           className={cn(
             "w-full h-auto mb-6 sm:mb-8 lg:mb-10 2xl:mb-12.5 3xl:mb-16",
-            variant === "mainland" ? "text-left" : "sm:text-center",
+            variant === "mainland" || variant === "advisory" ? "text-left" : "sm:text-center",
           )}
         >
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10"
+            className={cn("text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10")}
           >
             {data?.title}
           </Heading>
@@ -51,6 +53,7 @@ export default function CorporateServicesUaeWhyChoose({
                   className={cn(
                     "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
                     variant === "mainland" ? "text-[#1C5396]" : "text-black",
+                    titleClassName
                   )}
                 >
                   {item?.title}
