@@ -17,6 +17,7 @@ type CorporateServicesUaeSetupOptionsProps = {
     description: string;
     items: SetupOptionItem[];
   };
+  variant?: "hamriyah" | "default";
 };
 
 function SetupOptionCard({ item }: { item: SetupOptionItem }) {
@@ -151,6 +152,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
 
 export default function CorporateServicesUaeSetupOptions({
   data,
+  variant = "default",
 }: CorporateServicesUaeSetupOptionsProps) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
@@ -161,7 +163,12 @@ export default function CorporateServicesUaeSetupOptions({
   return (
     <section className="w-full block py-11.5 sm:py-10 xl:py-[50px_70px] 2xl:py-[65px_80px]">
       <div className="container">
-        <div className="sm:text-center w-full sm:max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1000px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12">
+        <div
+          className={cn(
+            "sm:text-center w-full sm:max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1000px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12",
+            variant === "hamriyah" && "sm:text-left !max-w-full",
+          )}
+        >
           <Heading
             as="h2"
             size="h2"

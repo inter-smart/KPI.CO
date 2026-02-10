@@ -6,7 +6,7 @@ import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 
-type Variant = "saifz" | "mainland" | "default";
+type Variant = "dafz" | "saifz" | "mainland" | "default";
 
 type CorporateServicesUaeWhyBuildProps = {
   variant?: Variant | Variant[];
@@ -51,6 +51,7 @@ function WhyBuildCard({
         className={cn(
           "font-semibold text-black mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
+          hasVariant(variant, "dafz") && "text-[#1C5396]",
         )}
       >
         {item.title}
@@ -100,6 +101,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
+            hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
           )}
         >
           <Heading
@@ -125,6 +127,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            hasVariant(variant, "dafz") && "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]"   
           )}
         >
           {data.items.map((item) => (
