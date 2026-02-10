@@ -63,6 +63,10 @@ export type CtaData = {
         label: string;
         link: string;
     };
+    images: {
+        overlay: string;
+        overlayMobile: string;
+    };
 };
 
 export type FaqItem = {
@@ -397,6 +401,10 @@ const localData = {
         button: {
             label: "Get Started Today",
             link: "/contact",
+        },
+        images: {
+            overlay: "/images/corporate-cta-overlay.svg",
+            overlayMobile: "/images/corporate-cta-overlay-mobile.svg",
         },
     } satisfies CtaData,
 

@@ -11,6 +11,8 @@ import HomeCounter from "@/components/features/home/HomeCounter";
 import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -99,6 +101,17 @@ export type WhyChooseItem = {
   title: string;
   description: string;
 };
+
+export type InsightItem = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  media: MediaItem;
+  slug: string;
+};
+
 const localData = {
   hero: {
     id: 1,
@@ -175,7 +188,7 @@ const localData = {
         },
         title: "Enterprise Risk Management (ERM)",
         description:
-          "Government approvals, renewals, and official documentation managed end to end.",
+          "Design and implementation of ERM frameworks aligned with business objectives, risk appetite, and governance expectations.",
       },
       {
         id: 2,
@@ -185,7 +198,7 @@ const localData = {
         },
         title: "Internal Audit Services",
         description:
-          "Support with corporate bank account opening and compliance preparation. ",
+          "Independent evaluation of internal controls, governance, and risk management processes.",
       },
       {
         id: 3,
@@ -195,7 +208,7 @@ const localData = {
         },
         title: "Regulatory & Compliance Advisory",
         description:
-          "Clear guidance from registration to filings to stay compliant as your business grows.  ",
+          "Support with regulatory obligations, authority requirements, and compliance frameworks across UAE jurisdictions.",
       },
       {
         id: 4,
@@ -205,7 +218,7 @@ const localData = {
         },
         title: "Standard Operating Procedures (SOPs)",
         description:
-          "Ongoing support to keep your records organized and ready for tax and regulatory requirements. ",
+          "Design and documentation of clear, scalable processes to reduce operational risk and improve consistency. Each engagement is delivered independently, proportionately, and aligned with regulatory expectations.",
       },
     ] satisfies RiskAssuranceData[],
   },
@@ -346,35 +359,166 @@ const localData = {
 
   whyChoose: {
     title: "Why Organisations Trust KPI for Risk Services ",
-    description:
-      "",
+    description: "",
     items: [
       {
         id: 1,
-        title: "Experienced Guidance",
+        title: "Regulatory awareness",
         description:
-          "<p>Decades of hands-on experience supporting businesses across multiple industries, structures, and UAE jurisdictions. </p>",
+          "<p>Deep experience operating within UAE regulatory environment, including federal authorities and free zone frameworks. </p>",
       },
       {
         id: 2,
-        title: "Founder-led Approach ",
+        title: "Balanced judgement",
         description:
-          "<p>We take the time to understand your goals and recommend solutions that fit how you want to operate and grow. </p>",
+          "<p>Independent and objective where required, pragmatic where possible. </p>",
       },
       {
         id: 3,
-        title: "Transparent Processes",
+        title: "Clear communication",
         description:
-          "<p>No hidden costs or surprises. You know what to expect at every stage, from setup through ongoing compliance. </p>",
+          "<p>Findings presented clearly and directly, without jargon, ambiguity, or overstatement. </p>",
       },
       {
         id: 4,
-        title: "End-to-End Support",
+        title: "Professional discipline",
         description:
-          "<p>From UAE company formation to banking, visas, and compliance, we stay involved as your business evolves. </p>",
+          "<p>Confidentiality, structure, and adherence to professional standards.</p>",
       },
     ] satisfies WhyChooseItem[],
   },
+  corporate_faq_data: {
+    title: "FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: "How do I start a business in the UAE?",
+        description: `
+        <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                      `,
+      },
+      {
+        id: 2,
+        title: "What does it cost to set up a business in the UAE?",
+        description: `
+        <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                      `,
+      },
+      {
+        id: 3,
+        title: "How long does it take to set up a company in the UAE",
+        description: `
+        <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                      `,
+      },
+      {
+        id: 4,
+        title: "What does it cost to set up a business in the UAE?",
+        description: `
+        <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                      `,
+      },
+      {
+        id: 5,
+        title: "What are the requirements for obtaining a UAE business visa? ",
+        description: `
+        <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+                      `,
+      },
+      {
+        id: 6,
+        title: "Do I need to have a physical office in the UAE?",
+        description: `
+        <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
+                      `,
+      },
+    ] satisfies FaqItem[],
+  },
+  insights: {
+      title: "Our Insights",
+      items: [
+        {
+          id: 1,
+          media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+          title: "A Guide to Choosing the Best Audit Firm in 2025",
+          description:
+            "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+          date: "14 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 2,
+          media: {
+            path: "/images/home-insights-2.jpg",
+            alt: "Top Audit Firms UAE",
+          },
+          title: "Top 10 Audit firms in UAE",
+          description:
+            "State helps you see how many more days you need to work to reach.",
+          date: "13 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 3,
+          media: {
+            path: "/images/home-insights-3.jpg",
+            alt: "Audit Firm Selection",
+          },
+          title: "A Guide to Choosing the Best Audit Firm in 2025",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+          date: "12 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 4,
+          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+          title:
+            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+          description:
+            "State helps you see how many more days you need to work to reach.",
+          date: "12 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 5,
+          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+          title:
+            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+          description:
+            "State helps you see how many more days you need to work to reach.",
+          date: "12 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 6,
+          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+          title:
+            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+          description:
+            "State helps you see how many more days you need to work to reach.",
+          date: "12 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+        {
+          id: 7,
+          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+          title:
+            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+          description:
+            "State helps you see how many more days you need to work to reach.",
+          date: "12 NOV 2024",
+          readTime: "2 MIN READ",
+          slug: "#",
+        },
+      ] satisfies InsightItem[],
+    },
 };
 
 export default function RiskOverviewPage() {
@@ -386,10 +530,15 @@ export default function RiskOverviewPage() {
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter data={localData.counterList} variant="risk" />
       <RiskExploreService data={localData.explore_service} />
-      <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
+      <CorporateServicesUaeWhyChoose
+        data={localData.whyChoose}
+        variant="risk"
+      />
       <DiscussYourRisk data={localData.discussYourRisk} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

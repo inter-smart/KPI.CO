@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import type { HeroData } from "@/app/corporate-services-uae/page";
@@ -7,22 +8,45 @@ import Link from "next/link";
 
 type InnerHeroProps = {
   data: HeroData;
+  variant?: "default" | "saifz";
 };
 
-export default function InnerHero({ data }: InnerHeroProps) {
+export default function InnerHero({
+  data,
+  variant = "default",
+}: InnerHeroProps) {
   return (
-    <section className="w-full h-[690px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] bg-linear-to-t from-[#4578b5] to-[#053269] overflow-hidden flex items-center relative z-0">
+    <section
+      className={cn(
+        "w-full h-[690px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
+        variant === "saifz"
+          ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
+          : "bg-linear-to-t from-[#4578b5] to-[#053269]",
+      )}
+    >
       {data?.media?.path && (
         <Image
           src={data.media.path}
           alt={data.media.alt || "Hero background"}
           width={1920}
           height={800}
-          className="w-full h-full absolute -z-1 inset-0 pointer-events-none"
+          className="w-full h-full object-cover absolute -z-1 inset-0 pointer-events-none"
         />
       )}
+      {/* <picture className="w-full h-fullabsolute -z-2 inset-0">
+        <source media="(max-width: 640px)" srcSet={data?.media?.mobilePath} />
+        <Image
+          src={data?.media?.desktopPath}
+          alt={data?.media?.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 80vw"
+          className="-z-2 object-cover"
+          placeholder="blur"
+          blurDataURL="/images/placeholder.jpg"
+        />
+      </picture> */}
       <div className="container">
-        <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1080px]">
+        <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]">
           <Heading
             as="h1"
             size="h1"
@@ -60,7 +84,6 @@ export default function InnerHero({ data }: InnerHeroProps) {
               ))}
             </div>
           )}
-
           <Button
             variant="yellow"
             size="lg"
