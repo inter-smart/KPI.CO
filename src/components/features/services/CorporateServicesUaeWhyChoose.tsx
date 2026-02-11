@@ -47,11 +47,11 @@ export default function CorporateServicesUaeWhyChoose({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] hover:scale-102 duration-300",
+                  "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  duration-300",
                   variant === "mainland" &&
                   "before:bg-[#FFC916] after:bg-[#f9fafb]",
 
-                  variant === "default" &&
+                  (variant === "default" || variant === "advisory") &&
                   "before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
 
                   titleClassName === "risk" &&

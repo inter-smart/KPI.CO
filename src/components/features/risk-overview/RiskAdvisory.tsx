@@ -36,7 +36,7 @@ export default function RiskAdvisory({ data }: RiskAdvisoryProps) {
               <div className="flex flex-row gap-3">
                 <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                   {data.highlightsText}
-                  <span className="text-[#5280CA]">→</span>
+                  <span className="text-[#5280CA] hidden first-of-type:visible">→</span>
                 </div>
               </div>
             </div>
