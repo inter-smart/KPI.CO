@@ -156,7 +156,7 @@ const localData = {
     footerDescription:
       "<p>For most business activities, 100% foreign ownership is allowed, making mainland setup a flexible option for both local and international investors.</p>",
     image: {
-      path: "/images/mainlandBusineesuae.jpg",
+      path: "/images/mainland-busnes.jpg",
       alt: "Mainland Business Setup UAE",
     },
   } satisfies MainlandBusinessData,

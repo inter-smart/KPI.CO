@@ -13,7 +13,7 @@ type CorporateServicesUaeBankingProps = {
         description: string;
         partners: BankingPartner[];
     };
-    variant?: "default" | "mainland";
+    variant?: "default" | "mainland" | "freezone";
 };
 
 export default function CorporateServicesUaeBanking({ data, variant = "default" }: CorporateServicesUaeBankingProps) {
@@ -29,7 +29,7 @@ export default function CorporateServicesUaeBanking({ data, variant = "default" 
     return (
         <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
             <div className="container">
-                <div className={cn("w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5", variant === "mainland" ? "text-left" : "sm:text-center")}>
+                <div className={cn("w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5", variant === "mainland" || variant === "freezone" ? "text-left" : "sm:text-center")}>
                     <Heading
                         as="h2"
                         size="h2"
@@ -37,7 +37,7 @@ export default function CorporateServicesUaeBanking({ data, variant = "default" 
                     >
                         {data?.title}
                     </Heading>
-                    <div className={cn("text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",variant === "mainland" ? "" : "lg:max-w-195 2xl:max-w-295 mx-auto")}>
+                    <div className={cn("text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",variant === "mainland" ? "" : variant === "freezone" ? "text-left" : "lg:max-w-195 2xl:max-w-295 mx-auto")}>
                         {parse(data?.description)}
                     </div>
                 </div>

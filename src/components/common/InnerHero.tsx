@@ -2,12 +2,26 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
-import type { HeroData } from "@/app/corporate-services-uae/page";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
+type InnerHeroMedia = {
+  path?: string;
+  desktopPath?: string;
+  mobilePath?: string;
+  alt?: string;
+};
+
+type InnerHeroData = {
+  id: number;
+  title: string;
+  description?: string;
+  additionalContent?: string[];
+  media?: InnerHeroMedia;
+};
+
 type InnerHeroProps = {
-  data: HeroData;
+  data: InnerHeroData;
   variant?: "default" | "saifz";
 };
 
@@ -15,6 +29,10 @@ export default function InnerHero({
   data,
   variant = "default",
 }: InnerHeroProps) {
+  const mediaSrc =
+    data?.media?.path ?? data?.media?.desktopPath ?? data?.media?.mobilePath;
+  const mediaAlt = data?.media?.alt || "Hero background";
+
   return (
     <section
       className={cn(

@@ -76,8 +76,7 @@ export default function RiskExploreService({ data }: RiskExploreServiceProps) {
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%] min-w-0 select-none",
-                  )}
+                    "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%] min-w-0 select-none",)}
                 >
                   <Service data={item} />
                 </div>
@@ -124,7 +123,7 @@ function Service({ data }: ServiceProps) {
         />
       </div>
 
-      <div className="w-full p-[30px_25px_20px]  xl:p-[35px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between">
+      <div className="w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[35px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between">
         <div className="w-[28px] 3xl:w-[32px] h-[28px] 3xl:h-[32px] ml-auto">
           <Image
             src="/images/linkIcon.svg"
