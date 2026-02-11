@@ -14,6 +14,7 @@ export type MegaCategory = {
     id: string
     label: string
     icon?: React.ReactNode | string
+    href?: string
     subItems: SubItem[]
 }
 
@@ -28,24 +29,25 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     const activeCategory = categories.find((cat) => cat.id === activeCategoryId) || categories[0]
 
     // Determine if we should show a CTA card based on the category
-    const isResource = activeCategoryId === 'blogs' || activeCategoryId === 'glossary' || activeCategoryId === 'newsroom';
-    const isAbout = activeCategoryId === 'about-us' || activeCategoryId === 'clients' || activeCategoryId === 'contact';
+    const isResource = activeCategoryId === 'glossary'  ;
+    const isAbout = activeCategoryId === 'clients'  ;
     const showCTACard = activeCategoryId === 'digital' || isResource || isAbout;
 
     return (
         <div
             className={cn(
-                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[610px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
+                "absolute top-[calc(100%-1px)] left-0 w-[550px] xl:w-[730px] 2xl:w-[750px] 3xl:w-[1000px] bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden transition-all duration-350 ease-out z-50 origin-top",
                 isVisible ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-3 scale-[0.98] pointer-events-none"
             )}
         >
             <div className="flex">
                 {/* Left Column: Categories */}
-                <div className="w-[280px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[410px] border-r border-black/10   bg-white">
-                    <div className="flex flex-col xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px] ">
+                <div className="w-[280px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px] border-r border-black/10  bg-white">
+                    <div className="flex flex-col  xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px] ">
                         {categories.map((category) => (
-                            <div
+                            <Link
                                 key={category.id}
+                                href={category.href || '#'}
                                 onMouseEnter={() => setActiveCategoryId(category.id)}
                                 className={cn(
                                     "group flex items-center justify-between px-4 py-1.5 2xl:py-2 3xl:py-3 rounded-xl transition-all cursor-pointer mb-[10px] 2xl:mb-[15px]",
@@ -86,13 +88,13 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
 
                                     </div>
                                 )}
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
 
                 {/* Right Column: Sub-items or CTA Card */}
-                <div className="flex-1 w-[calc(100%-280px)] xl:w-[calc(100%-310px)] 2xl:w-[calc(100%-350px)] 3xl:w-[calc(100%-410px)]  bg-white relative p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
+                <div className="flex-1 w-[calc(100%-280px)] xl:w-[calc(100%-330px)] 2xl:w-[calc(100%-350px)] 3xl:w-[calc(100%-410px)]  bg-white relative p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
                     {!showCTACard ? (
                         <div className="grid grid-cols-1 gap-2">
                             {activeCategory?.subItems.map((item, index) => (
@@ -135,7 +137,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                             isResource ? 'Practical Insights for Your Business Success' :
                                                 '30+ Years of Expertise That Drives Real Results'}
                                     </h4>
-                                    <Link href="/" className="flex items-center text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px] font-semibold" aria-label="learn_more">
+                                    <Link href={activeCategory?.href || '/'} className="flex items-center text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px] font-semibold" aria-label="learn_more">
                                         Learn more <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                     </Link>
                                 </div>

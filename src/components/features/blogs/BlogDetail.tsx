@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
 import BlogSponsoredCard from "./BlogSponsoredCard";
@@ -32,11 +32,6 @@ type BlogDetailProps = {
 };
 
 export default function BlogDetail({ data }: BlogDetailProps) {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const sidebarRef = useRef<HTMLDivElement | null>(null);
-  const sidebarColumnRef = useRef<HTMLDivElement | null>(null);
-
-  const [sidebarStyle, setSidebarStyle] = useState<React.CSSProperties>({});
   const [toc, setToc] = useState<TocItem[]>([]);
   const [htmlWithIds, setHtmlWithIds] = useState<string>("");
   const [activeId, setActiveId] = useState<string>("");
@@ -80,61 +75,24 @@ export default function BlogDetail({ data }: BlogDetailProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [toc]);
 
-  // Sidebar sticky behavior
-  useEffect(() => {
-    const section = sectionRef.current;
-    const sidebar = sidebarRef.current;
-    const column = sidebarColumnRef.current;
-    if (!section || !sidebar || !column) return;
 
-    let rafId = 0;
-    const headerOffset = () =>
-      parseFloat(
-        getComputedStyle(document.body).getPropertyValue("--header-y") || "0",
-      );
-
-    const updateSidebar = () => {
-      const fixedTop = headerOffset() + 24;
-      const sectionRect = section.getBoundingClientRect();
-      if (sectionRect.top - fixedTop > 0) setSidebarStyle({});
-    };
-
-    const onScroll = () => {
-      cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(updateSidebar);
-    };
-
-    updateSidebar();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
 
   const tocItems = toc.length
     ? toc
     : (data?.item || []).map((item) => ({
-        id: String(item.id),
-        text: item.text,
-      }));
+      id: String(item.id),
+      text: item.text,
+    }));
 
   return (
     <section
-      ref={sectionRef}
       className="w-full pt-[25px] md:pt-[30px] pb-[30px] lg:pb-[50px] bg-white !overflow-visible">
       <div className="container">
         <div className="flex md:gap-[30px] xl:gap-[40px] items-start">
           {/* Sidebar */}
           <div className="md:w-[30%] lg:w-[25%] 2xl:w-[24%] shrink-0 sticky h-full top-[100px] hidden md:block"
-            ref={sidebarColumnRef}
           >
             <div
-              ref={sidebarRef}
-              style={sidebarStyle}
               className="overflow-visible"
             >
               {data?.sidebar_title && (
@@ -170,9 +128,8 @@ export default function BlogDetail({ data }: BlogDetailProps) {
 
                           {/* Animated fill */}
                           <div
-                            className={`absolute top-0 left-0 w-full bg-[#5285c4] transition-all duration-[3000ms] ease-out ${
-                              isActive ? "h-full" : "h-0"
-                            }`}
+                            className={`absolute top-0 left-0 w-full bg-[#5285c4] transition-all duration-[3000ms] ease-out ${isActive ? "h-full" : "h-0"
+                              }`}
                           />
                         </div>
                       )}
@@ -186,13 +143,12 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                             block: "start",
                           });
                         }}
-                       
+
                         aria-current={isActive ? "true" : undefined}
-                        className={`text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px] font-medium leading-[1.4] block transition-colors ${
-                          isActive
-                            ? "text-[#1C5396] font-semibold"
-                            : "text-[#4E4E4E50] hover:text-[#1C5396]"
-                        }`}
+                        className={`text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px] font-medium leading-[1.4] block transition-colors ${isActive
+                          ? "text-[#1C5396] font-semibold"
+                          : "text-[#4E4E4E50] hover:text-[#1C5396]"
+                          }`}
                       >
                         {item.text}
                       </a>
@@ -215,12 +171,15 @@ export default function BlogDetail({ data }: BlogDetailProps) {
             <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto">
               {htmlWithIds &&
                 parse(htmlWithIds, {
-                  replace: (node: any) =>
-                    node.name === "img" ? (
-                      <span className="image-overlay my-[25px] md:my-[30px] xl:my-[38px]">
-                        <img {...node.attribs} />
-                      </span>
-                    ) : undefined,
+                  replace: (domNode: any) => {
+                    if (domNode.name === 'img') {
+                      return (
+                        <span className="image-overlay my-[25px] md:my-[30px] xl:my-[38px] block w-full relative">
+                          <img {...domNode.attribs} className="w-full h-auto object-cover rounded-lg" />
+                        </span>
+                      );
+                    }
+                  }
                 })}
             </div>
           </div>
