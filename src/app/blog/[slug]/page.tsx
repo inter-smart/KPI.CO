@@ -260,6 +260,7 @@ export function ScrollLinked() {
         transformOrigin: "0% 50%",
         backgroundColor: "#FFC916",
         zIndex: 9999,
+        pointerEvents: "none",
       }}
     />
   );

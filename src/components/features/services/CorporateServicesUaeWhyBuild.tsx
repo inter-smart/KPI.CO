@@ -6,7 +6,7 @@ import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 
-type Variant = "saifz" | "mainland" | "default";
+type Variant = "saifz" | "mainland" | "freezone" | "default";
 
 type CorporateServicesUaeWhyBuildProps = {
   variant?: Variant | Variant[];
@@ -50,7 +50,8 @@ function WhyBuildCard({
         size="h5"
         className={cn(
           "font-semibold text-black mb-2 2xl:mb-2.5",
-          hasVariant(variant, "saifz") && "text-[#1C5396]",
+          (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
+            "text-[#1C5396]",
         )}
       >
         {item.title}
@@ -60,7 +61,7 @@ function WhyBuildCard({
         size="p1"
         className={cn(
           "font-normal text-[#4e4e4e] sm:text-black",
-          hasVariant(variant, "mainland")
+          hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
             ? "lg:text-[12px] 2xl:text-[14px] 3xl:text-[18px]"
             : "",
         )}
@@ -97,7 +98,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            hasVariant(variant, "mainland")
+            hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
           )}
@@ -122,7 +123,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
-            hasVariant(variant, "mainland")
+            hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
           )}
