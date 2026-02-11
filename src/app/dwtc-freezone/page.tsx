@@ -11,6 +11,7 @@ import CorporateServicesUaeBanking from "@/components/features/services/Corporat
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
   id: number;
@@ -85,6 +86,8 @@ export type InsightItem = {
   media: MediaItem;
   slug: string;
 };
+
+
 
 const localData = {
   hero: {
@@ -267,7 +270,7 @@ const localData = {
     ftr_description:
       "<p>Additional documents may be required depending on the business structure.</p>",
   } satisfies RiskOrganisationData,
-
+  
   banking: {
     title: "Banking Support for DWTC Companies",
     description:
@@ -443,7 +446,11 @@ export default function DwtcFreezone() {
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
       <RiskOrganisation variant="freezone" data={localData.riskOrganisation} />
-      <CorporateServicesUaeBanking variant="freezone" data={localData.banking} />
+      
+      <CorporateServicesUaeBanking
+        variant="freezone"
+        data={localData.banking}
+      />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />

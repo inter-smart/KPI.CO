@@ -11,6 +11,7 @@ import CorporateServicesUaeBanking from "@/components/features/services/Corporat
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
   id: number;
@@ -84,6 +85,26 @@ export type InsightItem = {
   readTime: string;
   media: MediaItem;
   slug: string;
+};
+
+export type MeydanFreeZoneItem = {
+  id: number;
+  title: string;
+  zone_list: string[];
+};
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type MeydanFreeZoneData = {
+  title: string;
+  main_description?: string;
+  description?: string;
+  free_zone_list: MeydanFreeZoneItem[];
+  structure_list: MeydanStructureItem[];
 };
 
 const localData = {
@@ -222,6 +243,40 @@ const localData = {
       
     ] satisfies ServiceItem[],
   },
+  meydanFreeZone: {
+    title: "Documents Required for IFZA Business Setup",
+    main_description: "We assist you with all documents and approvals, ensuring a smooth setup and full compliance with IFZA regulations.",
+    free_zone_list: [
+      {
+        id: 1,
+        title: "Individual Shareholder(s)",
+        zone_list: [
+          "Passport copy",
+          "Passport-sized photograph",
+          "Emirates ID (if UAE resident)",
+          "UAE visa copy (if applicable)",
+        ],
+      },
+      {
+        id: 2,
+        title: "Corporate Shareholder(s",
+        zone_list: [
+          "Notarized board resolution",
+          "Notarized memorandum and articles of association",
+          "Plan business operations outside free zone permissions",
+          "Notarized certificate of incorporation",
+        ],
+      },
+    ],
+    structure_list: [
+      {
+        id: 1,
+        title: "Choosing the Right Structure",
+        description:
+          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+      },
+    ],
+  } satisfies MeydanFreeZoneData,
   banking: {
     title: "Banking Support for IFZA Companies  ",
     description:
@@ -396,7 +451,7 @@ export default function DwtcFreezone() {
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-      
+      <MeydanFreeZone  data={localData.meydanFreeZone} />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking variant="freezone" data={localData.banking} />
       <CorporateServicesUaeCta data={localData.contactUs} />
