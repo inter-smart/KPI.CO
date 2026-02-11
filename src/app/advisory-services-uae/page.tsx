@@ -233,7 +233,7 @@ const localData = {
             {
                 id: 1,
                 media: {
-                    path: "/images/corporate-servive-1.svg",
+                    path: "/images/pro-1.svg",
                     alt: "Trade license renewals and amendments",
                 },
                 title: "Trade License Renewals <br className='hidden sm:block' /> And Amendments",
@@ -241,7 +241,7 @@ const localData = {
             {
                 id: 2,
                 media: {
-                    path: "/images/corporate-servive-2.svg",
+                    path: "/images/pro-2.svg",
                     alt: "Immigration and visa processing",
                 },
                 title: "Immigration And Visa <br className='hidden sm:block' /> Processing",
@@ -249,7 +249,7 @@ const localData = {
             {
                 id: 3,
                 media: {
-                    path: "/images/corporate-servive-3.svg",
+                    path: "/images/pro-3.svg",
                     alt: "Company Formation",
                 },
                 title: "Labour And Establishment <br className='hidden sm:block' /> Card Services",
@@ -257,7 +257,7 @@ const localData = {
             {
                 id: 4,
                 media: {
-                    path: "/images/corporate-servive-4.svg",
+                    path: "/images/pro-4.svg",
                     alt: "Government approvals and submissions",
                 },
                 title: "Government Approvals And <br className='hidden sm:block' /> Submissions",
