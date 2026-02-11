@@ -93,8 +93,8 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            desktopPath: "/images/mainland-company-formation-uae-hero-bg.png",
-            mobilePath: "/images/mainland-company-formation-uae-hero-bg.png",
+            desktopPath: "/images/audit-banner.png",
+            mobilePath: "/images/audit-mobile.png",
             alt: "VAT Advisory & Compliance That Works for Your Business",
         },
         title: "VAT Advisory & Compliance That Works for Your Business",

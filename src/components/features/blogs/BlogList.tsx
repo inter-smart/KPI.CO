@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, SlidersHorizontal, X } from "lucide-react";
@@ -43,6 +43,7 @@ export default function BlogList({ data }: BlogListProps) {
     const [searchQuery, setSearchQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8; // 5 items + CTA + 3 items = 9 slots (3x3 grid)
+    const topRef = useRef<HTMLElement>(null);
 
     const removeFilter = (filter: string) => {
         setActiveFilters(activeFilters.filter((f) => f !== filter));
@@ -91,11 +92,12 @@ export default function BlogList({ data }: BlogListProps) {
     const handlePageChange = (page: number) => {
         if (page >= 1 && page <= totalPages) {
             setCurrentPage(page);
+            topRef.current?.scrollIntoView({ behavior: "smooth" });
         }
     };
 
     return (
-        <section className="w-full py-[30px] md:py-[40px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[85px] bg-white">
+        <section ref={topRef} className="w-full py-[30px] md:py-[40px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[85px] bg-white">
             <div className="container">
                 {/* Section Header */}
                 <Heading as="h1" size="h1" className="text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold">
