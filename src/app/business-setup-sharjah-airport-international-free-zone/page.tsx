@@ -97,7 +97,8 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -147,7 +148,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/saifz-hero-bg.jpg",
+      desktopPath: "/images/saifz-hero-bg.jpg",
+      mobilePath: "/images/saifz-hero-bg-mobile.svg",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
     title: "Company Formation in SAIF Free Zone",
@@ -485,7 +487,8 @@ const localData = {
     hero: {
       id: 1,
       media: {
-        path: "/images/mainland-company-formation-uae-hero-bg.png",
+        desktopPath: "/images/mainland-company-formation-uae-hero-bg.png",
+        mobilePath: "/images/mainland-company-formation-uae-hero-bg.png",
         alt: "Mainland Company Formation & Licensing in the UAE",
       },
       title: "Mainland Company Formation & Licensing in the UAE ",

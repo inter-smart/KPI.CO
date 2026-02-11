@@ -5,7 +5,7 @@ import type { WhyChooseItem } from "@/app/corporate-services-uae/page";
 
 type CorporateServicesUaeWhyChooseProps = {
   variant?: "default" | "mainland" | "advisory";
-  titleClassName?: string;
+  titleClassName?: string | "risk";
   data: {
     title: string;
     description: string;
@@ -30,7 +30,11 @@ export default function CorporateServicesUaeWhyChoose({
           <Heading
             as="h2"
             size="h2"
-            className={cn("text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10")}
+            className={cn(
+              "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
+              variant === "default" && "text-center",
+              titleClassName === "risk" && "text-left",
+            )}
           >
             {data?.title}
           </Heading>
@@ -43,16 +47,23 @@ export default function CorporateServicesUaeWhyChoose({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] hover:scale-102 duration-300",
-                  variant === "mainland"
-                    ? "before:bg-[#FFC916] after:bg-[#f9fafb]"
-                    : "before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
+                  "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  duration-300",
+                  variant === "mainland" &&
+                  "before:bg-[#FFC916] after:bg-[#f9fafb]",
+
+                  (variant === "default" || variant === "advisory") &&
+                  "before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
+
+                  titleClassName === "risk" &&
+                  "before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#F9FAFB]",
                 )}
               >
                 <div
                   className={cn(
                     "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
-                    variant === "mainland" ? "text-[#1C5396]" : "text-black",
+                    variant === "mainland" && "text-[#1C5396]",
+                    titleClassName === "risk" && "text-[#1C5396]",
+                    variant === "default" && "text-black",
                     titleClassName
                   )}
                 >

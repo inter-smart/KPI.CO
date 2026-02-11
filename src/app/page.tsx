@@ -73,6 +73,7 @@ export type InsightItem = {
   readTime: string;
   media: MediaItem;
   slug: string;
+  category?: string;
 };
 
 export type AffiliationItem = {

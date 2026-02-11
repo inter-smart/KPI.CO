@@ -6,6 +6,7 @@ import CorporateServicesUaeWhyChoose from "@/components/features/services/Corpor
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import { Metadata } from "next";
 
 
@@ -14,7 +15,8 @@ export type HeroData = {
     title: string;
     description: string;
     media?: {
-        path: string;
+        desktopPath: string;
+        mobilePath: string;
         alt: string;
     };
     additionalContent?: string[];
@@ -76,11 +78,23 @@ export type InsightItem = {
     slug: string;
 };
 
+export type RiskAdvisoryDta = {
+    title: string;
+    description: string;
+    highlightsText: string;
+    advisoryItems: {
+        id: number;
+        slNo: number;
+        description: string;
+    }[];
+};
+
 const localData = {
     hero: {
         id: 1,
         media: {
-            path: "/images/mainland-company-formation-uae-hero-bg.png",
+            desktopPath: "/images/audit-banner.png",
+            mobilePath: "/images/audit-mobile.png",
             alt: "VAT Advisory & Compliance That Works for Your Business",
         },
         title: "VAT Advisory & Compliance That Works for Your Business",
@@ -178,6 +192,39 @@ const localData = {
         ]
     } satisfies AdvisoryData,
 
+    riskAdvisory: {
+        title: "Relocation & Set-Up Support ",
+        description:
+            " <p>For founders, executives, and international teams relocating to the UAE, KPI provides practical relocation support to simplify the transition. This includes assistance with → </p>",
+        highlightsText: "Relocation support is delivered as part of a wider advisory engagement, ensuring personal and business requirements are addressed cohesively. ",
+        advisoryItems: [
+            {
+                id: 1,
+                slNo: 1,
+                description:
+                    "Residence and dependent visas ",
+            },
+            {
+                id: 2,
+                slNo: 2,
+                description:
+                    "Education and school-related guidance ",
+            },
+            {
+                id: 3,
+                slNo: 3,
+                description:
+                    "Banking introductions and account support ",
+            },
+            {
+                id: 4,
+                slNo: 4,
+                description:
+                    "Coordination of essential documentation  ",
+            },
+        ],
+    } satisfies RiskAdvisoryDta,
+
     Proservice: {
         title: "PRO Services & Ongoing Administrative Support ",
         description:
@@ -186,7 +233,7 @@ const localData = {
             {
                 id: 1,
                 media: {
-                    path: "/images/corporate-servive-1.svg",
+                    path: "/images/pro-1.svg",
                     alt: "Trade license renewals and amendments",
                 },
                 title: "Trade License Renewals <br className='hidden sm:block' /> And Amendments",
@@ -194,7 +241,7 @@ const localData = {
             {
                 id: 2,
                 media: {
-                    path: "/images/corporate-servive-2.svg",
+                    path: "/images/pro-2.svg",
                     alt: "Immigration and visa processing",
                 },
                 title: "Immigration And Visa <br className='hidden sm:block' /> Processing",
@@ -202,7 +249,7 @@ const localData = {
             {
                 id: 3,
                 media: {
-                    path: "/images/corporate-servive-3.svg",
+                    path: "/images/pro-3.svg",
                     alt: "Company Formation",
                 },
                 title: "Labour And Establishment <br className='hidden sm:block' /> Card Services",
@@ -210,7 +257,7 @@ const localData = {
             {
                 id: 4,
                 media: {
-                    path: "/images/corporate-servive-4.svg",
+                    path: "/images/pro-4.svg",
                     alt: "Government approvals and submissions",
                 },
                 title: "Government Approvals And <br className='hidden sm:block' /> Submissions",
@@ -372,6 +419,7 @@ export default function page() {
             <DocumentRequired data={localData.document_required_data} />
             <AdvisorySerice data={localData.advisory_data} />
             <AdvisoryProservice data={localData.Proservice} />
+            <RiskAdvisory data={localData.riskAdvisory} />
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} titleClassName="text-[#1C5396]" variant="advisory" />
             <CorporateServicesUaeCta data={localData.cta} />
             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />

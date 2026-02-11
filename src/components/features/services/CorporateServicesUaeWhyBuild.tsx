@@ -6,7 +6,7 @@ import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 
-type Variant = "saifz" | "mainland" | "default";
+type Variant = "dafz" | "saifz" | "mainland" | "default";
 
 type CorporateServicesUaeWhyBuildProps = {
   variant?: Variant | Variant[];
@@ -36,7 +36,7 @@ function WhyBuildCard({
 }) {
   return (
     <div className="group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300">
-      <div className="w-[46px] 2xl:w-[55px] aspect-square mb-2.5 2xl:mb-3 transition-transform group-hover:scale-105">
+      <div className="w-[46px] 2xl:w-[55px] aspect-square mb-[20px] 2xl:mb-[25px] transition-transform  ">
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -49,8 +49,9 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "font-semibold text-black mb-2 2xl:mb-2.5",
+          "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
+          hasVariant(variant, "dafz") && "text-[#1C5396]",
         )}
       >
         {item.title}
@@ -100,6 +101,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
+            hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
           )}
         >
           <Heading
@@ -125,6 +127,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            hasVariant(variant, "dafz") && "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]"   
           )}
         >
           {data.items.map((item) => (

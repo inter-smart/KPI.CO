@@ -9,13 +9,14 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
+import { Metadata } from "next";
 
 export type MainlandBusinessData = {
   title: string;
   description: string;
   highlightsTitle: string;
   highlights: string[];
-  footerDescription: string;
+  footerDescription?: string;
   image: {
     path: string;
     alt: string;
@@ -80,7 +81,8 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -130,7 +132,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/mainland-company-formation-uae-hero-bg.png",
+      desktopPath: "/images/mainland-company-formation-uae-hero-bg.svg",
+      mobilePath: "/images/mainland-company-formation-uae-hero-bg-mobile.svg",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
     title: "Mainland Company Formation & Licensing in the UAE ",
@@ -380,7 +383,7 @@ const localData = {
         description:
           "Best suited for businesses focused on international trade, digital services, or startups seeking tax efficiency and simplified setup. Freezone companies often enjoy 100% foreign ownership and flexible visa options.",
         media: {
-          path: "",
+          path: "/images/mainland-business-1.jpg",
           alt: "Business Structuring",
         },
       },
@@ -390,7 +393,7 @@ const localData = {
         description:
           "Ideal for holding companies, asset protection, or businesses that operate internationally without a local UAE presence. Offshore companies cannot trade directly within the UAE and do not require an office or UAE visas. ",
         media: {
-          path: "",
+          path: "/images/mainland-business-2.jpg",
           alt: "Business Structuring",
         },
       },
@@ -400,7 +403,7 @@ const localData = {
         description:
           "A globally recognized financial centre in Abu Dhabi with a strong legal framework and common law structure. Ideal for financial services, investment firms and profesional advisory businesses",
         media: {
-          path: "",
+          path: "/images/mainland-business-3.jpg",
           alt: "Business Structuring",
         },
       },
@@ -410,7 +413,7 @@ const localData = {
         description:
           "A premium Dubai- based jurisdiction for finance, investment, and professional services. Operates under an independent legal and regulatory framework with international standards",
         media: {
-          path: "",
+          path: "/images/mainland-business-2.jpg",
           alt: "Business Structuring",
         },
       },
@@ -510,7 +513,8 @@ const localData = {
     hero: {
       id: 1,
       media: {
-        path: "/images/mainland-company-formation-uae-hero-bg.png",
+        desktopPath: "/images/mainland-company-formation-uae-hero-bg.png",
+        mobilePath: "/images/mainland-company-formation-uae-hero-bg.png",
         alt: "Mainland Company Formation & Licensing in the UAE",
       },
       title: "Mainland Company Formation & Licensing in the UAE ",
@@ -823,13 +827,20 @@ const localData = {
     ],
 
     media: {
-      path: "/images/document-required-img.jpg", 
+      path: "/images/document-required-img.jpg",
       alt: "Required documents",
     },
     ftr_description:
       "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
   } satisfies DocumentRequiredData,
 };
+
+export const metadata: Metadata = {
+    title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
+    description:
+        "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees. ",
+};
+
 
 export default function MainlandCompanyFormationUaePage() {
   return (

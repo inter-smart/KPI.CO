@@ -38,8 +38,10 @@ export default function HomePartner({ data }: HomePartnerProps) {
       swiper.el.addEventListener('mouseleave', startAutoplay);
 
       return () => {
-        swiper.el.removeEventListener('mouseenter', stopAutoplay);
-        swiper.el.removeEventListener('mouseleave', startAutoplay);
+        if (swiper.el) {
+          swiper.el.removeEventListener('mouseenter', stopAutoplay);
+          swiper.el.removeEventListener('mouseleave', startAutoplay);
+        }
       };
     }
   }, [swiper]);
