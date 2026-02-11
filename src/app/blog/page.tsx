@@ -28,6 +28,7 @@ const localData: BlogPageData = {
         date: "14 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Audit",
       },
       {
         id: 2,
@@ -37,6 +38,7 @@ const localData: BlogPageData = {
         date: "13 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Advisory",
       },
       {
         id: 3,
@@ -46,6 +48,7 @@ const localData: BlogPageData = {
         date: "12 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Audit",
       },
       {
         id: 4,
@@ -55,6 +58,7 @@ const localData: BlogPageData = {
         date: "14 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Corporate Services",
       },
       {
         id: 5,
@@ -64,6 +68,7 @@ const localData: BlogPageData = {
         date: "13 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Risk",
       },
       {
         id: 6,
@@ -73,6 +78,7 @@ const localData: BlogPageData = {
         date: "14 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Corporate Services",
       },
       {
         id: 7,
@@ -82,6 +88,7 @@ const localData: BlogPageData = {
         date: "13 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Advisory",
       },
       {
         id: 8,
@@ -91,6 +98,7 @@ const localData: BlogPageData = {
         date: "12 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
+        category: "Tax",
       },
     ],
   },
@@ -98,9 +106,9 @@ const localData: BlogPageData = {
 
 
 export const metadata: Metadata = {
-    title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
-    description:
-        "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
+  title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
+  description:
+    "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
 };
 
 

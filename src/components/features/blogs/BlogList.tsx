@@ -63,13 +63,17 @@ export default function BlogList({ data }: BlogListProps) {
         console.log("Form submitted:", values)
     }
 
-    // Filter items based on search query
+    // Filter items based on search query and active filters
     const filteredItems = data.items.filter((item) => {
         const query = searchQuery.toLowerCase();
-        return (
+        const matchesSearch = (
             item.title.toLowerCase().includes(query) ||
             item.description.toLowerCase().includes(query)
         );
+
+        const matchesFilter = activeFilters.length === 0 || (item.category && activeFilters.includes(item.category));
+
+        return matchesSearch && matchesFilter;
     });
 
     // Calculate pagination
@@ -248,12 +252,6 @@ export default function BlogList({ data }: BlogListProps) {
                         </button>
 
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                            // Simple pagination logic, showing all pages if few, or simpler for now as typically requested
-                            // For better UX with many pages, would need ellipsis logic similar to original, but let's implement basic full list first or keep it simple.
-                            // The original design showed 1, 2 ... 9, 10.
-                            // Given we likely have few pages with data=8 items and limit=8, we will have 1 page.
-                            // If we limit to 5, we have 2 pages.
-                            // Let's implement a simple map for now unless totalPages is huge.
                             <button
                                 key={page}
                                 onClick={() => handlePageChange(page)}
