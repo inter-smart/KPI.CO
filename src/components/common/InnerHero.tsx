@@ -42,27 +42,18 @@ export default function InnerHero({
           : "bg-linear-to-t from-[#4578b5] to-[#053269]",
       )}
     >
-      {mediaSrc && (
-        <Image
-          src={mediaSrc}
-          alt={mediaAlt}
-          width={1920}
-          height={800}
-          className="w-full h-full object-cover absolute -z-1 inset-0 pointer-events-none"
-        />
+      {data?.media?.desktopPath && data?.media?.mobilePath && (
+        <picture className="w-full h-full absolute -z-2 inset-0">
+          <source media="(max-width: 640px)" srcSet={data?.media?.mobilePath} />
+          <Image
+            src={data?.media?.desktopPath}
+            alt={data?.media?.alt || "Hero background"}
+            width={1920}
+            height={800}
+            className="w-full h-full object-cover absolute -z-1 inset-0 pointer-events-none"
+          />
+        </picture>
       )}
-      {/* <picture className="w-full h-fullabsolute -z-2 inset-0">
-        <source media="(max-width: 640px)" srcSet={data?.media?.mobilePath} />
-        <Image
-          src={data?.media?.desktopPath}
-          alt={data?.media?.alt}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 80vw"
-          className="-z-2 object-cover"
-          placeholder="blur"
-          blurDataURL="/images/placeholder.jpg"
-        />
-      </picture> */}
       <div className="container">
         <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]">
           <Heading
@@ -75,7 +66,7 @@ export default function InnerHero({
           {data?.description && (
             <Text
               as="div"
-              size="p1"
+              size="p3"
               className="text-white xl:max-w-[88%] mb-4 xl:mb-6 2xl:mb-8"
             >
               {parse(data?.description)}

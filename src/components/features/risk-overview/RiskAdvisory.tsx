@@ -36,7 +36,7 @@ export default function RiskAdvisory({ data }: RiskAdvisoryProps) {
               <div className="flex flex-row gap-3">
                 <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                   {data.highlightsText}
-                  <span className="text-[#5280CA]">→</span>
+                  <span className="text-[#5280CA] hidden first-of-type:visible">→</span>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function RiskAdvisory({ data }: RiskAdvisoryProps) {
                   {advisoryItems.map((item, index) => (
                     <div
                       key={`item-${item.id ?? index}`}
-                      className="w-1/2 border-b border-r border-[#DEDEDE] p-[10px_10px_10px_20px] md:p-[10px_10px_10px_30px] xl:p-[10px_10px_20px_40px] 3xl:p-[10px_10px_30px_40px]"
+                      className="w-1/2 border-b border-r border-[#DEDEDE] p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[10px_20px_20px_40px] 3xl:p-[10px_20px_30px_40px]"
                     >
                       <div className="w-full text-[16px] md:text-[18px] xl:text-[23px] 2xl:text-[28px] 3xl:text-[34px] font-bold text-[#5280CA] mb-[10px]">
                         {`${formatNo(item.slNo ?? index + 1)}.`}

@@ -1,13 +1,14 @@
 "use client";
 
-// import { motion, useSpring, useScroll } from "framer-motion";
 import { motion, useSpring, useScroll } from "motion/react";
+import { useRef } from "react";
 
 import BlogDetail from "@/components/features/blogs/BlogDetail";
 import BlogGetInTouch from "@/components/features/blogs/BlogGetInTouch";
 import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
 import BlogTrustedLeader from "@/components/features/blogs/BlogTrustedLeader";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 
 export type MediaItem = {
   path: string;
@@ -37,6 +38,19 @@ export type GetInTouchItem = {
   button: {
     label: string;
     link: string;
+  };
+};
+
+export type GetInTouch = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
   };
 };
 
@@ -178,8 +192,7 @@ const local_data = {
   },
   BlogTrustedLeaders: {
     title: "Trusted by Industry Leaders",
-    description:
-      "",
+    description: "",
     partners: [
       {
         id: 1,
@@ -225,21 +238,31 @@ const local_data = {
       },
     ] satisfies TrustedLeader[],
   },
+ 
   GetInTouch: {
     title: "Stay Ahead of the Curve",
     description:
       "<p>Subscribe for Expert Audit and Financial Insights Directly to Your Inbox.</p>",
     button: {
-      label: "Get In Touch",
+      label: "Get in Touch",
       link: "/contact",
     },
-  } satisfies GetInTouchItem,
+    images: {
+      overlay: "/images/get-touch-overlay.svg",
+      overlayMobile: "/images/get-touch-overlay-mobile.svg",
+    },
+  } satisfies GetInTouch,
 };
 
-// import { motion, useSpring, useScroll } from "framer-motion";
-
-export function ScrollLinked() {
-  const { scrollYProgress } = useScroll();
+function ScrollLinked({
+  target,
+}: {
+  target: React.RefObject<HTMLElement | null>;
+}) {
+  const { scrollYProgress } = useScroll({
+    target,
+    offset: ["start start", "end end"],
+  });
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -267,16 +290,20 @@ export function ScrollLinked() {
 }
 
 export default function BlogDetailPage() {
+  const blogSectionRef = useRef<HTMLElement | null>(null);
+
   return (
     <>
-      <ScrollLinked />
-      <article style={{ width: "100%" }}>
+      <ScrollLinked target={blogSectionRef} />
+      <div>
         <BlogInternalAudit data={local_data?.audit_data} />
-        <BlogDetail data={local_data?.blog_detail} />
+        <article ref={blogSectionRef} style={{ width: "100%" }}>
+          <BlogDetail data={local_data?.blog_detail} />
+        </article>
         <BlogRelated data={local_data?.related_blog} />
         <BlogTrustedLeader data={local_data?.BlogTrustedLeaders} />
         <BlogGetInTouch data={local_data?.GetInTouch} />
-      </article>
+      </div>
     </>
   );
 }

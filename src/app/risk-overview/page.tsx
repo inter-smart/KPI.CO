@@ -20,7 +20,8 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -117,7 +118,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/risk-overview-bg.png",
+      desktopPath: "/images/risk-overview-bg.png",
+      mobilePath: "/images/risk-overview-bg.png",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
     title: "Stay Ahead of Regulatory Risk  ",
@@ -436,90 +438,90 @@ const localData = {
     ] satisfies FaqItem[],
   },
   insights: {
-      title: "Our Insights",
-      items: [
-        {
-          id: 1,
-          media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
-          title: "A Guide to Choosing the Best Audit Firm in 2025",
-          description:
-            "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
-          date: "14 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
+    title: "Our Insights",
+    items: [
+      {
+        id: 1,
+        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
+        date: "14 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/home-insights-2.jpg",
+          alt: "Top Audit Firms UAE",
         },
-        {
-          id: 2,
-          media: {
-            path: "/images/home-insights-2.jpg",
-            alt: "Top Audit Firms UAE",
-          },
-          title: "Top 10 Audit firms in UAE",
-          description:
-            "State helps you see how many more days you need to work to reach.",
-          date: "13 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
+        title: "Top 10 Audit firms in UAE",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "13 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/home-insights-3.jpg",
+          alt: "Audit Firm Selection",
         },
-        {
-          id: 3,
-          media: {
-            path: "/images/home-insights-3.jpg",
-            alt: "Audit Firm Selection",
-          },
-          title: "A Guide to Choosing the Best Audit Firm in 2025",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
-          date: "12 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
-        },
-        {
-          id: 4,
-          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-          title:
-            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-          description:
-            "State helps you see how many more days you need to work to reach.",
-          date: "12 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
-        },
-        {
-          id: 5,
-          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-          title:
-            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-          description:
-            "State helps you see how many more days you need to work to reach.",
-          date: "12 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
-        },
-        {
-          id: 6,
-          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-          title:
-            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-          description:
-            "State helps you see how many more days you need to work to reach.",
-          date: "12 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
-        },
-        {
-          id: 7,
-          media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-          title:
-            "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-          description:
-            "State helps you see how many more days you need to work to reach.",
-          date: "12 NOV 2024",
-          readTime: "2 MIN READ",
-          slug: "#",
-        },
-      ] satisfies InsightItem[],
-    },
+        title: "A Guide to Choosing the Best Audit Firm in 2025",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 4,
+        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+        title:
+          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 5,
+        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+        title:
+          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 6,
+        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+        title:
+          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+      {
+        id: 7,
+        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
+        title:
+          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
+        description:
+          "State helps you see how many more days you need to work to reach.",
+        date: "12 NOV 2024",
+        readTime: "2 MIN READ",
+        slug: "#",
+      },
+    ] satisfies InsightItem[],
+  },
 };
 
 export default function RiskOverviewPage() {
@@ -535,7 +537,7 @@ export default function RiskOverviewPage() {
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="risk"
+        titleClassName="risk"
       />
       <DiscussYourRisk data={localData.discussYourRisk} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
