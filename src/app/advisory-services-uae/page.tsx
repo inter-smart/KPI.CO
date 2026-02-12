@@ -1,7 +1,7 @@
 import InnerHero from '@/components/common/InnerHero'
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import AdvisorySerice, { AdvisoryData } from "@/components/features/advisory/AdvisorySerice";
-import AdvisoryProservice from '@/components/features/advisory/AdvisoryProservice';
+import AdvisoryProservice, { ProserviceItem } from '@/components/features/advisory/AdvisoryProservice';
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
@@ -40,11 +40,7 @@ export type MediaItem = {
     alt: string;
 };
 
-export type Proservice = {
-    id: number;
-    media: MediaItem;
-    title: string;
-};
+
 export type WhyChooseItem = {
     id: number;
     title: string;
@@ -224,12 +220,15 @@ const localData = {
                     "Coordination of essential documentation  ",
             },
         ],
+
     } satisfies RiskAdvisoryDta,
 
     Proservice: {
         title: "PRO Services & Ongoing Administrative Support ",
         description:
-            "<p>Efficient business operations rely on timely approvals, documentation, and government processes. KPI provides PRO services to support day-to-day regulatory and administrative requirements, including:  </p>",
+            "<p>Efficient business operations rely on timely approvals, documentation, and government processes. KPI provides PRO services to support day-to-day regulatory and administrative requirements, including: </p>",
+
+        footer_description: "<p> Our PRO support is integrated with our advisory services, ensuring operational requirements remain aligned with regulatory and structural considerations.</p> ",
         items: [
             {
                 id: 1,
@@ -264,7 +263,8 @@ const localData = {
                 title: "Government Approvals And <br className='hidden sm:block' /> Submissions",
             },
 
-        ] satisfies Proservice[],
+
+        ] satisfies ProserviceItem[],
     },
 
     whyChoose: {

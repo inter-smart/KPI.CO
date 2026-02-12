@@ -19,6 +19,7 @@ type AdvisoryProserviceProps = {
   data: {
     title: string;
     description?: string;
+    footer_description?: string;
     items: ProserviceItem[];
   };
 
@@ -49,7 +50,7 @@ export default function AdvisoryProservice({
             </div>
           )}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 2xl:gap-7.5 3xl:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 2xl:gap-7.5 3xl:gap-10 mb-[25px]">
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
               <div className="group [--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[15px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex hover:shadow-lg transition-all duration-300">
@@ -72,6 +73,11 @@ export default function AdvisoryProservice({
             </div>
           ))}
         </div>
+        {data?.footer_description && (
+          <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+            {parse(data?.footer_description)}
+          </div>
+        )}
       </div>
     </section>
   );
