@@ -192,7 +192,7 @@ const localData = {
     riskAdvisory: {
         title: "Relocation & Set-Up Support ",
         description:
-            " <p>For founders, executives, and international teams relocating to the UAE, KPI provides practical relocation support to simplify the transition. This includes assistance with → </p>",
+            " <p>For founders, executives, and international teams relocating to the UAE, KPI provides practical relocation support to simplify the transition. This includes assistance with</p>",
         highlightsText: "Relocation support is delivered as part of a wider advisory engagement, ensuring personal and business requirements are addressed cohesively. ",
         advisoryItems: [
             {
