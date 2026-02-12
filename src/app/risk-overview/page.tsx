@@ -149,7 +149,7 @@ const localData = {
     title: "What Risk Advisory Means at KPI in Practice",
     description:
       " <p>KPI's risk advisory services focus on how risk emerges within organisations, not just how it appears on paper. We align risk management with real operations, decision-making and regulatory expectations. Our role is not to introduce complexity but to make risk visible, manageable, and defensible at the right level.  </p>",
-    highlightsText: "We support management and boards with ",
+    highlightsText: "We support management and boards with, ",
     advisoryItems: [
       {
         id: 1,
