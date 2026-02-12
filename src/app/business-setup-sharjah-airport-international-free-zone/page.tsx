@@ -814,6 +814,7 @@ const localData = {
     ftr_description:
       "<p>With KPI, your SAIF Free Zone company is structured for growth, letting you focus on scaling and managing your international business.</p>",
   } satisfies DocumentRequiredData,
+  
   insights: {
     title: "Related Blogs",
     items: [
@@ -863,7 +864,7 @@ const localData = {
         date: "12 NOV 2024",
         readTime: "2 MIN READ",
         slug: "#",
-      },
+      }, 
     ] satisfies InsightItem[],
   },
 };
