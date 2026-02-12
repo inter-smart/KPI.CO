@@ -5,7 +5,7 @@ import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
 import BlogTrustedLeader from "@/components/features/blogs/BlogTrustedLeader";
 import { blogData } from "@/data/blogData";
-import { ScrollLinked } from "@/components/features/blogs/ScrollLinked";
+import BlogReadingProgress from "@/components/features/blogs/BlogReadingProgress";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -132,10 +132,11 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <>
-      <ScrollLinked />
       <article style={{ width: "100%" }}>
-        <BlogInternalAudit data={pageData.audit_data} />
-        <BlogDetail data={pageData.blog_detail} />
+        <BlogReadingProgress>
+          <BlogInternalAudit data={pageData.audit_data} />
+          <BlogDetail data={pageData.blog_detail} />
+        </BlogReadingProgress>
         <BlogRelated data={pageData.related_blog} />
         <BlogTrustedLeader data={staticSections.BlogTrustedLeaders} />
         <BlogGetInTouch data={staticSections.GetInTouch} />
