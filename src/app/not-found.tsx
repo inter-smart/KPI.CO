@@ -1,18 +1,36 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function NotFound() {
-    return (
-        <div style={{
-            minHeight: "629px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            padding: "20px"
-        }}>
+    const router = useRouter();
+    const pathname = usePathname();
 
+    useEffect(() => {
+        const hasReloaded = sessionStorage.getItem("404-reloaded");
+        if (pathname === "/404") return;
+
+        // If not reloaded yet → redirect once
+        if (hasReloaded === "true") {
+            sessionStorage.setItem("404-reloaded", "true");
+            router.replace("/404");
+        }
+    }, [pathname, router]);
+    return (
+        <div
+            style={{
+                minHeight: "700px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                padding: "20px",
+            }}
+        >
             {/* Image */}
             <Image
                 src="/images/404.svg"
@@ -22,49 +40,59 @@ export default function NotFound() {
                 style={{
                     maxWidth: "100%",
                     height: "auto",
-                    marginBottom: "16px"
+                    marginBottom: "16px",
                 }}
             />
 
-            <h1 style={{
-                fontFamily: "Poppins",
-                fontWeight: 700,
-                fontSize: "clamp(60px, 10vw, 96px)",
-                lineHeight: "120%",
-                color: "#1C5396",
-                margin: 0
-            }}>
+            {/* 404 Title */}
+            <h1
+                style={{
+                    fontWeight: 700,
+                    fontSize: "clamp(60px, 10vw, 96px)",
+                    lineHeight: "120%",
+                    color: "#1C5396",
+                    margin: 0,
+                }}
+            >
                 404
             </h1>
 
-            <div style={{
-                width: "66px",
-                height: "3px",
-                backgroundColor: "#FFC107",
-                margin: "5px auto"
-            }} />
+            {/* Yellow Line */}
+            <div
+                style={{
+                    width: "66px",
+                    height: "3px",
+                    backgroundColor: "#FFC107",
+                    margin: "5px auto",
+                }}
+            />
 
-            <p style={{
-                fontFamily: "Poppins",
-                fontWeight: 500,
-                fontSize: "clamp(20px, 4vw, 28px)",
-                marginTop: "10px"
-            }}>
+            {/* Subtitle */}
+            <p
+                style={{
+                    fontWeight: 500,
+                    fontSize: "clamp(20px, 4vw, 28px)",
+                    marginTop: "10px",
+                }}
+            >
                 Page not found.
             </p>
 
-            <p style={{
-                fontFamily: "Poppins",
-                fontWeight: 400,
-                fontSize: "clamp(14px, 3.5vw, 16px)",
-                lineHeight: "150%",
-                color: "#585858",
-                maxWidth: "554px",
-                marginTop: "16px"
-            }}>
+            {/* Description */}
+            <p
+                style={{
+                    fontWeight: 400,
+                    fontSize: "clamp(14px, 3.5vw, 16px)",
+                    lineHeight: "150%",
+                    color: "#585858",
+                    maxWidth: "554px",
+                    marginTop: "16px",
+                }}
+            >
                 This page may no longer exist. You can head back home to continue.
             </p>
 
+            {/* Button */}
             <Link
                 href="/"
                 style={{
@@ -74,12 +102,11 @@ export default function NotFound() {
                     color: "#212121",
                     borderRadius: "6px",
                     textDecoration: "none",
-                    fontWeight: 500
+                    fontWeight: 500,
                 }}
             >
                 Go to Homepage
             </Link>
-
         </div>
     );
 }
