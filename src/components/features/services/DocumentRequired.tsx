@@ -42,10 +42,7 @@ export default function DocumentRequired({
       )}
     >
       <div className="container">
-        <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
-          {/* Main Content */}
-          <div className="w-full md:w-[57%] xl:w-[60%]">
-            {(data?.title || data?.description) && (
+        {(data?.title || data?.description) && (
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
                 {data?.title && (
                   <Heading
@@ -56,8 +53,17 @@ export default function DocumentRequired({
                     {data.title}
                   </Heading>
                 )}
+                 
+              </div>
+            )}
+        <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
+          {/* Main Content */}
+          <div className="w-full md:w-[57%] xl:w-[60%]">
+            {(data?.title || data?.description) && (
+              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
+                
                 {data?.description && (
-                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
+                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
                     {parse(data.description)}
                   </div>
                 )}

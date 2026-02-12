@@ -15,7 +15,7 @@ export type MeydanStructureItem = {
 
 export type MeydanFreeZoneData = {
   title: string;
-  main_description: string;
+  main_description?: string;
   description?: string;
   free_zone_list: MeydanFreeZoneItem[];
   structure_list: MeydanStructureItem[];
