@@ -8,6 +8,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
+import { blogData } from "@/data/blogData";
 
 export type MainlandBusinessData = {
   title: string;
@@ -378,55 +379,15 @@ const localData = {
   } satisfies DocumentRequiredData,
   insights: {
     title: "Related Blogs",
-    items: [
-      {
-        id: 1,
-        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
-        date: "14 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 2,
-        media: {
-          path: "/images/home-insights-2.jpg",
-          alt: "Top Audit Firms UAE",
-        },
-        title: "Top 10 Audit firms in UAE",
-        description:
-          "State helps you see how many more days you need to work to reach.",
-        date: "13 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 3,
-        media: {
-          path: "/images/home-insights-3.jpg",
-          alt: "Audit Firm Selection",
-        },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
-        date: "12 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 4,
-        media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-        title:
-          "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-        description:
-          "State helps you see how many more days you need to work to reach.",
-        date: "12 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-    ] satisfies InsightItem[],
+    items: blogData.slice(0, 4).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
   },
   keyBenefits: {
     title: "Key Benefits of Business Setup in Meydan",

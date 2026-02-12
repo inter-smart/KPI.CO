@@ -77,22 +77,23 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
           </div>
 
-          
-            <div className={cn("w-full md:w-[43%] xl:w-[40%]", variant === "freezone" && "mt-[60px]",)}>
-              <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
-                {data?.title && (
-                  <Heading
-                    as="h2"
-                    size="h2"
-                    className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
-                  >
-                    {data.title}
-                  </Heading>
-                )}
-              </div>
 
-              <div
-                className="w-full h-full rounded-[12px] overflow-hidden max-md:mb-6">
+          <div className={cn("w-full md:w-[43%] xl:w-[40%]", variant === "freezone" && "mt-[60px]",)}>
+            <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
+              {data?.title && (
+                <Heading
+                  as="h2"
+                  size="h2"
+                  className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
+                >
+                  {data.title}
+                </Heading>
+              )}
+            </div>
+
+            <div
+              className="w-full h-full rounded-[12px] overflow-hidden max-md:mb-6">
+              {data?.media?.path && (
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "image"}
@@ -101,9 +102,10 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                   className="w-full h-full object-fill"
                   priority={false}
                 />
-              </div>
+              )}
             </div>
-         
+          </div>
+
         </div>
       </div>
     </section>
