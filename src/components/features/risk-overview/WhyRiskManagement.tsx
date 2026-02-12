@@ -20,7 +20,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
               <Heading
                 as="h3"
                 size="h3"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
+                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
               >
                 {data.title}
               </Heading>
@@ -36,7 +36,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                 <div className="flex flex-col">
                   {data.highlights?.map((item, index) => (
                     <div key={index} className="flex">
-                      <div className="w-full flex items-center gap-4 2xl:gap-6 py-3 lg:py-4 2xl:py-5 3xl:py-6 border-0 border-b border-[#DEDEDE]">
+                      <div className="w-full flex gap-4 2xl:gap-6 py-3 lg:py-4 2xl:py-5 3xl:py-6 border-0 border-b border-[#DEDEDE]">
                         <div className="w-[25px] h-[25px] 2xl:w-[34px] 2xl:h-[34px] 3xl:w-[42px] 3xl:h-[42px] rounded-full flex items-center">
                           <Image
                             src="/images/arrowMark.svg"
@@ -46,7 +46,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                             alt="arrow mark"
                           />
                         </div>
-                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black">
+                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black mt-[5px]">
                           {item}
                         </span>
                       </div>
@@ -66,7 +66,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
             >
               {data.title}
             </Heading>
-            <div className="relative w-full lg:h-full min-h-[300px] rounded-[10px] overflow-hidden">
+            <div className="relative w-full lg:h-full min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}
