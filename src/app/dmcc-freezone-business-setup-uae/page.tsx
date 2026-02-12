@@ -6,6 +6,9 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
+import { blogData } from "@/data/blogData";
 
 import { Metadata } from "next";
 
@@ -96,11 +99,43 @@ export type MediaItem = {
 };
 
 export type BankingPartner = {
-  id: number;
-  media: {
-    path: string;
-    alt: string;
-  };
+    id: number;
+    media: {
+        path: string;
+        alt: string;
+    };
+};
+
+export type MeydanFreeZoneItem = {
+    id: number;
+    title: string;
+    zone_list: string[];
+};
+
+export type MeydanStructureItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type MeydanFreeZoneData = {
+    title: string;
+    description?: string;
+    free_zone_list: MeydanFreeZoneItem[];
+    structure_list: MeydanStructureItem[];
+};
+
+export type MeydanKeyBenefitsData = {
+    title: string;
+    slides: {
+        id: number;
+        title: string;
+        items: string[];
+        media: {
+            path: string;
+            alt: string;
+        };
+    }[];
 };
 
 const localData = {
@@ -199,55 +234,55 @@ const localData = {
         ftr_description:
             "<p>Our approach ensures that your DMCC Free Zone company is structured for success, fully compliant, and ready to achieve your growth objectives.</p>",
     } satisfies DocumentRequiredData,
- banking: {
-    title: "Banking Support for Your UAE Business   ",
-    description:
-      "<p>We help founders and businesses open bank accounts with trusted UAE and international banking partners, ensuring smooth financial operations for your company.</p>",
-    partners: [
-      {
-        id: 1,
-        media: {
-          path: "/images/banking-partner-1.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 2,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 3,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 4,
-        media: {
-          path: "/images/banking-partner-4.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 5,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
-      },
-    ] satisfies BankingPartner[],
-  },
+    banking: {
+        title: "Banking Support for Your UAE Business   ",
+        description:
+            "<p>We help founders and businesses open bank accounts with trusted UAE and international banking partners, ensuring smooth financial operations for your company.</p>",
+        partners: [
+            {
+                id: 1,
+                media: {
+                    path: "/images/banking-partner-1.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 2,
+                media: {
+                    path: "/images/banking-partner-2.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 3,
+                media: {
+                    path: "/images/banking-partner-3.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 4,
+                media: {
+                    path: "/images/banking-partner-4.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 5,
+                media: {
+                    path: "/images/banking-partner-2.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+            {
+                id: 6,
+                media: {
+                    path: "/images/banking-partner-3.svg",
+                    alt: "Emirates NBD",
+                },
+            },
+        ] satisfies BankingPartner[],
+    },
     cta: {
         title: "Ready to Start Your New Business in the UAE? ",
         description:
@@ -313,56 +348,116 @@ const localData = {
 
     insights: {
         title: "Related Blogs",
-        items: [
+        items: blogData.slice(0, 4).map((blog) => ({
+            id: blog.id,
+            media: blog.media,
+            title: blog.title,
+            description: blog.description,
+            date: blog.date,
+            readTime: blog.readTime,
+            slug: `/blog/${blog.slug}`,
+        })),
+    },
+
+    keyBenefits: {
+        title: "Key Benefits of Company Formation in DMCC",
+        slides: [
             {
                 id: 1,
-                media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
-                title: "A Guide to Choosing the Best Audit Firm in 2025",
-                description:
-                    "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
-                date: "14 NOV 2024",
-                readTime: "2 MIN READ",
-                slug: "#",
+                title: "Business-Friendly Structure",
+                items: [
+                    "100% foreign ownership",
+                    "No local sponsor required",
+                    "Wide range of business activities available",
+                    "Combine multiple activity groups under one license",
+                    "Flexible company structures for startups and SMEs",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
             },
             {
                 id: 2,
+                title: "Cost-Effective Setup",
+                items: [
+                    "One of the most competitive license costs in Dubai",
+                    "No paid-up share capital required",
+                    "Reasonable visa allocation costs",
+                    "Zero personal income tax",
+                    "Zero corporate tax for qualifying companies",
+                ],
                 media: {
-                    path: "/images/home-insights-2.jpg",
-                    alt: "Top Audit Firms UAE",
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
                 },
-                title: "Top 10 Audit firms in UAE",
-                description:
-                    "State helps you see how many more days you need to work to reach.",
-                date: "13 NOV 2024",
-                readTime: "2 MIN READ",
-                slug: "#",
             },
             {
                 id: 3,
+                title: "Flexible Visa Options",
+                items: [
+                    "Choose 0 to 6 visa allocations",
+                    "Visas for owners, employees, and dependents",
+                    "Efficient visa processing through digital portal",
+                    "Option to upgrade visa package as you grow",
+                ],
                 media: {
-                    path: "/images/home-insights-3.jpg",
-                    alt: "Audit Firm Selection",
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
                 },
-                title: "A Guide to Choosing the Best Audit Firm in 2025",
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
-                date: "12 NOV 2024",
-                readTime: "2 MIN READ",
-                slug: "#",
             },
             {
                 id: 4,
-                media: { path: "/images/home-insights-1.jpg", alt: "VAT Guide UAE" },
-                title:
-                    "VAT in the United Arab Emirates: A Complete Guide for Companies in 2025",
-                description:
-                    "State helps you see how many more days you need to work to reach.",
-                date: "12 NOV 2024",
-                readTime: "2 MIN READ",
-                slug: "#",
+                title: "Tax & Banking Advantages",
+                items: [
+                    "100% repatriation of capital and profits",
+                    "No customs duties on import/export",
+                    "Assistance with corporate bank account opening",
+                    "Access to global trade networks",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
             },
         ],
-    },
+    } satisfies MeydanKeyBenefitsData,    
+
+    meydanFreeZone: {
+        title: "Is DMCC Free Zone Right for You?",
+        free_zone_list: [
+            {
+                id: 1,
+                title: "DMCC Free Zone is suitable if you:",
+                zone_list: [
+                    "Want 100% foreign ownership",
+                    "Prefer a quick, fully digital setup process",
+                    "Need a license covering multiple business activities",
+                    "Wish to expand regionally or globally easily",
+                    "Value access to a large business community",
+                ],
+            },
+            {
+                id: 2,
+                title: "DMCC Free Zone may not be suitable if you:",
+                zone_list: [
+                    "Wish to expand regionally or globally easily",
+                    "Require heavy industrial facilities or warehousing",
+                    "Plan activities outside DMCC free zone rules",
+                    "Need a physical office for all staff",
+                    "Require services outside free zone framework",
+                ],
+            },
+        ],
+        structure_list: [
+            {
+                id: 1,
+                title: "Choosing the Right Structure",
+                description:
+                    "If your business requires Mainland or other Free Zone options, our expert team will guide you to the best setup for your goals.",
+            },
+        ],
+    } satisfies MeydanFreeZoneData,
 
 }
 
@@ -377,6 +472,8 @@ export default function page() {
         <>
             <InnerHero data={localData.hero} />
             <MainlandBusiness data={localData.mainlandBusiness} />
+            <MeydanFreeZone data={localData.meydanFreeZone} />
+            <MeydanKeyBenefits data={localData.keyBenefits} />
 
             <BusinessLocation data={localData.businessLocation} />
             <DocumentRequired data={localData.document_required_data} />

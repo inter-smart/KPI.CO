@@ -11,6 +11,8 @@ import CorporateServicesUaeBanking from "@/components/features/services/Corporat
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { blogData } from "@/data/blogData";
 
 export type HeroData = {
   id: number;
@@ -86,6 +88,26 @@ export type InsightItem = {
   slug: string;
 };
 
+export type MeydanFreeZoneItem = {
+  id: number;
+  title: string;
+  zone_list: string[];
+};
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type MeydanFreeZoneData = {
+  title: string;
+  main_description?: string;
+  description?: string;
+  free_zone_list: MeydanFreeZoneItem[];
+  structure_list: MeydanStructureItem[];
+};
+
 const localData = {
   hero: {
     id: 1,
@@ -142,7 +164,7 @@ const localData = {
         description:
           "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
       },
-      
+
       {
         id: 3,
         media: {
@@ -219,9 +241,43 @@ const localData = {
         description:
           "For online businesses, digital platforms, and internet-based trading activities.",
       },
-      
+
     ] satisfies ServiceItem[],
   },
+  meydanFreeZone: {
+    title: "Documents Required for IFZA Business Setup",
+    main_description: "We assist you with all documents and approvals, ensuring a smooth setup and full compliance with IFZA regulations.",
+    free_zone_list: [
+      {
+        id: 1,
+        title: "Individual Shareholder(s)",
+        zone_list: [
+          "Passport copy",
+          "Passport-sized photograph",
+          "Emirates ID (if UAE resident)",
+          "UAE visa copy (if applicable)",
+        ],
+      },
+      {
+        id: 2,
+        title: "Corporate Shareholder(s",
+        zone_list: [
+          "Notarized board resolution",
+          "Notarized memorandum and articles of association",
+          "Plan business operations outside free zone permissions",
+          "Notarized certificate of incorporation",
+        ],
+      },
+    ],
+    structure_list: [
+      {
+        id: 1,
+        title: "Choosing the Right Structure",
+        description:
+          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+      },
+    ],
+  } satisfies MeydanFreeZoneData,
   banking: {
     title: "Banking Support for IFZA Companies  ",
     description:
@@ -345,44 +401,15 @@ const localData = {
   },
   related_blog: {
     title: " Related Blogs ",
-    items: [
-      {
-        id: 1,
-        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
-        date: "14 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 2,
-        media: {
-          path: "/images/home-insights-2.jpg",
-          alt: "Top Audit Firms UAE",
-        },
-        title: "Top 10 Audit firms in UAE",
-        description:
-          "State helps you see how many more days you need to work to reach.",
-        date: "13 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 3,
-        media: {
-          path: "/images/home-insights-3.jpg",
-          alt: "Audit Firm Selection",
-        },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
-        date: "12 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-    ] satisfies InsightItem[],
+    items: blogData.slice(0, 3).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
   },
 };
 
@@ -396,7 +423,7 @@ export default function DwtcFreezone() {
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-      
+<MeydanFreeZone  data={localData.meydanFreeZone} />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking variant="freezone" data={localData.banking} />
       <CorporateServicesUaeCta data={localData.contactUs} />

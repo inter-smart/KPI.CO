@@ -12,7 +12,35 @@ type Props = {
 };
 
 // Static data for sections that are not yet dynamic in the data model
-const staticSections = {
+export type GetInTouch = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images?: {
+    overlay: string;
+    overlayMobile: string;
+  };
+};
+
+export type TrustedLeader = {
+  id: number;
+  media: {
+    path: string;
+    alt: string;
+  };
+};
+
+const staticSections: {
+  BlogTrustedLeaders: {
+    title: string;
+    description: string;
+    partners: TrustedLeader[];
+  };
+  GetInTouch: GetInTouch;
+} = {
   BlogTrustedLeaders: {
     title: "Trusted by Industry Leaders",
     description: "",
@@ -56,7 +84,7 @@ export default async function BlogDetailPage({ params }: Props) {
     .slice(0, 3)
     .map(post => ({
       ...post,
-      slug: `/blog/${post.slug}` 
+      slug: `/blog/${post.slug}`
     }));
 
   const pageData = {
@@ -67,7 +95,7 @@ export default async function BlogDetailPage({ params }: Props) {
         desktop_path: blogPost.media.path,
         media_alt: blogPost.media.alt,
       },
-      sub_title: blogPost.sub_title || blogPost.category, 
+      sub_title: blogPost.sub_title || blogPost.category,
       title: blogPost.title,
       date: blogPost.date,
       readTime: blogPost.readTime,
@@ -93,7 +121,7 @@ export default async function BlogDetailPage({ params }: Props) {
           media_alt: "Course preview",
         },
       },
-      description: blogPost.content || blogPost.description, 
+      description: blogPost.content || blogPost.description,
 
     },
     related_blog: {
