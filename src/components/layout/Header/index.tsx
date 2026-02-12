@@ -11,7 +11,7 @@ const navItems = [
   { label: 'Home', href: '/', subItems: [] },
   {
     label: 'Services',
-    href: '/services',
+    href: '/',
     isMega: true,
     megaCategories: [
       {
@@ -63,7 +63,7 @@ const navItems = [
   },
   {
     label: 'Resources',
-    href: '/resources',
+    href: '/',
     isMega: true,
     megaCategories: [
       {
@@ -89,7 +89,7 @@ const navItems = [
   },
   {
     label: 'About',
-    href: '/about',
+    href: '/',
     isMega: true,
     megaCategories: [
       {

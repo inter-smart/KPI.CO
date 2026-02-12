@@ -11,6 +11,8 @@ import CorporateServicesUaeBanking from "@/components/features/services/Corporat
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
+import { blogData } from "@/data/blogData";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
   id: number;
@@ -85,6 +87,8 @@ export type InsightItem = {
   media: MediaItem;
   slug: string;
 };
+
+
 
 const localData = {
   hero: {
@@ -267,7 +271,7 @@ const localData = {
     ftr_description:
       "<p>Additional documents may be required depending on the business structure.</p>",
   } satisfies RiskOrganisationData,
-
+  
   banking: {
     title: "Banking Support for DWTC Companies",
     description:
@@ -391,44 +395,15 @@ const localData = {
   },
   related_blog: {
     title: " Related Blogs ",
-    items: [
-      {
-        id: 1,
-        media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "<p>What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.</p>",
-        date: "14 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 2,
-        media: {
-          path: "/images/home-insights-2.jpg",
-          alt: "Top Audit Firms UAE",
-        },
-        title: "Top 10 Audit firms in UAE",
-        description:
-          "State helps you see how many more days you need to work to reach.",
-        date: "13 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-      {
-        id: 3,
-        media: {
-          path: "/images/home-insights-3.jpg",
-          alt: "Audit Firm Selection",
-        },
-        title: "A Guide to Choosing the Best Audit Firm in 2025",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat adipiscing elit, sed do eiusmod tempor incididunt ut a days you need to work to reach.",
-        date: "12 NOV 2024",
-        readTime: "2 MIN READ",
-        slug: "#",
-      },
-    ] satisfies InsightItem[],
+    items: blogData.slice(0, 3).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
   },
 };
 
@@ -443,7 +418,11 @@ export default function DwtcFreezone() {
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
       <RiskOrganisation variant="freezone" data={localData.riskOrganisation} />
-      <CorporateServicesUaeBanking variant="freezone" data={localData.banking} />
+      
+      <CorporateServicesUaeBanking
+        variant="freezone"
+        data={localData.banking}
+      />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
