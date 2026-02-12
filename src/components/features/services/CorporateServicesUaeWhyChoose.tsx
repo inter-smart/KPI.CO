@@ -5,7 +5,7 @@ import type { WhyChooseItem } from "@/app/corporate-services-uae/page";
 
 type CorporateServicesUaeWhyChooseProps = {
   variant?: "default" | "mainland" | "advisory" | "risk";
-  titleClassName?: string | "risk";
+  titleClassName?: string;
   data: {
     title: string;
     description: string;
@@ -24,7 +24,9 @@ export default function CorporateServicesUaeWhyChoose({
         <div
           className={cn(
             "w-full h-auto mb-6 sm:mb-8 lg:mb-10 2xl:mb-12.5 3xl:mb-16",
-            variant === "mainland" || variant === "advisory"
+            variant === "mainland" ||
+              variant === "advisory" ||
+              variant === "risk"
               ? "text-left"
               : "sm:text-center",
           )}
@@ -35,7 +37,8 @@ export default function CorporateServicesUaeWhyChoose({
             className={cn(
               "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
               variant === "default" && "text-center",
-              titleClassName === "risk" && "text-left",
+              variant === "risk" && "text-left",
+              titleClassName,
             )}
           >
             {data?.title}
@@ -55,16 +58,15 @@ export default function CorporateServicesUaeWhyChoose({
                   (variant === "default" || variant === "advisory") &&
                     "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
                   variant === "risk" &&
-                    "before:bg-gradient-to-b before:from-[#6A9FE0] before:to-[#2c5f9c] after:bg-[#f3f7fd]",
+                    "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#377fd8] after:bg-[#f3f7fd]",
                 )}
               >
                 <div
                   className={cn(
                     "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
                     variant === "mainland" && "text-[#1C5396]",
-                    titleClassName === "risk" && "text-[#1C5396]",
+                    variant === "risk" && "text-[#1C5396]",
                     variant === "default" && "text-black",
-                    titleClassName,
                   )}
                 >
                   {item?.title}

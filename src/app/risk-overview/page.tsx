@@ -465,7 +465,7 @@ export default function RiskOverviewPage() {
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        titleClassName="risk"
+        variant="risk"
       />
       <DiscussYourRisk data={localData.discussYourRisk} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
