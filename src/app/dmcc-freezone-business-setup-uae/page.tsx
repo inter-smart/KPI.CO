@@ -6,6 +6,8 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import { blogData } from "@/data/blogData";
 
 import { Metadata } from "next";
@@ -102,6 +104,38 @@ export type BankingPartner = {
         path: string;
         alt: string;
     };
+};
+
+export type MeydanFreeZoneItem = {
+    id: number;
+    title: string;
+    zone_list: string[];
+};
+
+export type MeydanStructureItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type MeydanFreeZoneData = {
+    title: string;
+    description?: string;
+    free_zone_list: MeydanFreeZoneItem[];
+    structure_list: MeydanStructureItem[];
+};
+
+export type MeydanKeyBenefitsData = {
+    title: string;
+    slides: {
+        id: number;
+        title: string;
+        items: string[];
+        media: {
+            path: string;
+            alt: string;
+        };
+    }[];
 };
 
 const localData = {
@@ -325,6 +359,106 @@ const localData = {
         })),
     },
 
+    keyBenefits: {
+        title: "Key Benefits of Company Formation in DMCC",
+        slides: [
+            {
+                id: 1,
+                title: "Business-Friendly Structure",
+                items: [
+                    "100% foreign ownership",
+                    "No local sponsor required",
+                    "Wide range of business activities available",
+                    "Combine multiple activity groups under one license",
+                    "Flexible company structures for startups and SMEs",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
+            },
+            {
+                id: 2,
+                title: "Cost-Effective Setup",
+                items: [
+                    "One of the most competitive license costs in Dubai",
+                    "No paid-up share capital required",
+                    "Reasonable visa allocation costs",
+                    "Zero personal income tax",
+                    "Zero corporate tax for qualifying companies",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
+            },
+            {
+                id: 3,
+                title: "Flexible Visa Options",
+                items: [
+                    "Choose 0 to 6 visa allocations",
+                    "Visas for owners, employees, and dependents",
+                    "Efficient visa processing through digital portal",
+                    "Option to upgrade visa package as you grow",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
+            },
+            {
+                id: 4,
+                title: "Tax & Banking Advantages",
+                items: [
+                    "100% repatriation of capital and profits",
+                    "No customs duties on import/export",
+                    "Assistance with corporate bank account opening",
+                    "Access to global trade networks",
+                ],
+                media: {
+                    path: "/images/mayden-benefit-1.jpg",
+                    alt: "Business-Friendly Structure",
+                },
+            },
+        ],
+    } satisfies MeydanKeyBenefitsData,    
+
+    meydanFreeZone: {
+        title: "Is DMCC Free Zone Right for You?",
+        free_zone_list: [
+            {
+                id: 1,
+                title: "DMCC Free Zone is suitable if you:",
+                zone_list: [
+                    "Want 100% foreign ownership",
+                    "Prefer a quick, fully digital setup process",
+                    "Need a license covering multiple business activities",
+                    "Wish to expand regionally or globally easily",
+                    "Value access to a large business community",
+                ],
+            },
+            {
+                id: 2,
+                title: "DMCC Free Zone may not be suitable if you:",
+                zone_list: [
+                    "Wish to expand regionally or globally easily",
+                    "Require heavy industrial facilities or warehousing",
+                    "Plan activities outside DMCC free zone rules",
+                    "Need a physical office for all staff",
+                    "Require services outside free zone framework",
+                ],
+            },
+        ],
+        structure_list: [
+            {
+                id: 1,
+                title: "Choosing the Right Structure",
+                description:
+                    "If your business requires Mainland or other Free Zone options, our expert team will guide you to the best setup for your goals.",
+            },
+        ],
+    } satisfies MeydanFreeZoneData,
+
 }
 
 export const metadata: Metadata = {
@@ -338,6 +472,8 @@ export default function page() {
         <>
             <InnerHero data={localData.hero} />
             <MainlandBusiness data={localData.mainlandBusiness} />
+            <MeydanFreeZone data={localData.meydanFreeZone} />
+            <MeydanKeyBenefits data={localData.keyBenefits} />
 
             <BusinessLocation data={localData.businessLocation} />
             <DocumentRequired data={localData.document_required_data} />
