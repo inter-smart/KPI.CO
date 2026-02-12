@@ -48,15 +48,9 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
                 <div className="flex flex-col gap-3.5">
                   {data.highlights.map((item, index) => (
                     <div key={index} className="flex">
-                      <div className="flex items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[12px] sm:rounded-[16px]">
-                        <div className="w-[14px] 2xl:w-[17px] h-[14px] 3xl:w-[22px] 2xl:w-[17px] 3xl:h-[22px] rounded-full  flex items-center  ">
-                          <Image
-                            src="/images/tickMark.svg"
-                            width="22"
-                            height="22"
-                            className="w-full h-full object-cover"
-                            alt="tickMark"
-                          />
+                      <div className="flex items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[16px]">
+                        <div className="w-[17px] 2xl:w-[17px] h-[17px] 3xl:w-[22px] 2xl:w-[17px] 3xl:h-[22px] rounded-full  flex items-center  ">
+                          <Image src="/images/tickMark.svg" width="22" height="22" className="w-full h-full object-cover" alt="tickMark" />
                         </div>
                         <span className="text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396]">
                           {item}
@@ -67,8 +61,8 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
                 </div>
               </div>
 
-              <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
-                {parse(data.footerDescription)}
+              <div className="text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
+                {data.footerDescription && parse(data.footerDescription)}
               </div>
             </div>
           </div>

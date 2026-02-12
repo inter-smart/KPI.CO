@@ -11,13 +11,14 @@ const navItems = [
   { label: 'Home', href: '/', subItems: [] },
   {
     label: 'Services',
-    href: '/services',
+    href: '/',
     isMega: true,
     megaCategories: [
       {
         id: 'audit',
         label: 'Audit & Assurance',
         icon: "/images/audit_icon.svg",
+        href: '/',
         subItems: [
           { name: 'Financial Statement Audit', href: '/services/audit/financial' },
           { name: 'Agreed Upon Procedures', href: '/services/audit/agreed' },
@@ -29,27 +30,32 @@ const navItems = [
         id: 'advisory',
         label: 'Advisory Services',
         icon: "/images/advisory_icon.svg",
+        href: '/advisory-services-uae',
         subItems: [
-          { name: 'Corporate Services', href: '/services/advisory/strategy' },
-          { name: 'Tax Advisory', href: '/services/advisory/financial' },
-          { name: 'e-invoicing Services', href: '/services/advisory/deals' },
+          { name: 'Corporate Services', href: '/corporate-services-uae' },
+          { name: 'Advisory Services', href: '/advisory-services-uae' },
+          { name: 'Mainland Company Formation', href: '/mainland-company-formation-uae' },
+          { name: 'Dubai Silicon Oasis', href: '/company-formation-dubai-silicon-oasis' },
+          { name: 'Sharjah Airport Free Zone', href: '/business-setup-sharjah-airport-international-free-zone' },
         ]
       },
       {
         id: 'compliance',
         label: 'Risk & Compliance',
         icon: "/images/risk_icon.svg",
+        href: '/risk-overview',
         subItems: [
-          { name: 'Enterprise Risk Management', href: '/services/compliance/risk-management' },
-          { name: 'Internal Audit Services', href: '/services/compliance/internal-audit' },
-          { name: 'Standard Operating Procedures', href: '/services/compliance/sop' },
-          { name: 'Regulatory & Compliance Advisory', href: '/services/compliance/regulatory' },
+          { name: 'Enterprise Risk Management', href: '/risk-overview' },
+          { name: 'Internal Audit Services', href: '/risk-overview' },
+          { name: 'Standard Operating Procedures', href: '/risk-overview' },
+          { name: 'Regulatory & Compliance Advisory', href: '/risk-overview' },
         ]
       },
       {
         id: 'digital',
         label: 'Digital Transformation',
         icon: "/images/digital_icon.svg",
+        href: '/',
         subItems: [
         ]
       }
@@ -57,23 +63,25 @@ const navItems = [
   },
   {
     label: 'Resources',
-    href: '/resources',
+    href: '/',
     isMega: true,
     megaCategories: [
       {
         id: 'blogs',
         label: 'Blogs',
-        subItems: [
-        ]
+        href: '/blog',
+        subItems: []
       },
       {
         id: 'glossary',
         label: 'Glossary',
+        href: '/',
         subItems: []
       },
       {
         id: 'newsroom',
         label: 'Newsroom',
+        href: '/',
         subItems: [
         ]
       }
@@ -81,22 +89,25 @@ const navItems = [
   },
   {
     label: 'About',
-    href: '/about',
+    href: '/',
     isMega: true,
     megaCategories: [
       {
         id: 'about-us',
         label: 'About us',
+        href: '/about',
         subItems: []
       },
       {
         id: 'clients',
         label: 'Our Clients',
+        href: '/',
         subItems: []
       },
       {
         id: 'contact',
         label: 'Contact Us',
+        href: '/contact',
         subItems: []
       }
     ] as MegaCategory[]
@@ -227,7 +238,7 @@ export default function Header() {
                           {/* Nested Accordions */}
                           <Accordion type="single" collapsible className="w-full">
                             {navItems.slice(1).map((item, idx) => (
-                              <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-[#DDDCDE]">
+                              <AccordionItem key={idx} value={`item-${idx}`} className="border-0 shadow-none border-b border-[#DDDCDE]">
                                 <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
                                   {item.label}
                                 </AccordionTrigger>

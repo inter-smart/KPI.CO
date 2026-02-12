@@ -18,28 +18,25 @@ export default function HomePartner({ data }: HomePartnerProps) {
   React.useEffect(() => {
     if (swiper && swiper.el) {
       const stopAutoplay = () => {
-        swiper.autoplay.stop();
-        if (swiper.wrapperEl) {
-          const style = window.getComputedStyle(swiper.wrapperEl);
-          swiper.wrapperEl.style.transform = style.transform;
-          swiper.wrapperEl.style.transitionDuration = '0ms';
+        if (swiper.autoplay && swiper.autoplay.running) {
+          swiper.autoplay.stop();
         }
       };
 
       const startAutoplay = () => {
-        if (swiper.wrapperEl) {
-          swiper.wrapperEl.style.transform = '';
-          swiper.wrapperEl.style.transitionDuration = '';
+        if (swiper.autoplay && !swiper.autoplay.running) {
+          swiper.autoplay.start();
         }
-        swiper.autoplay.start();
       };
 
       swiper.el.addEventListener('mouseenter', stopAutoplay);
       swiper.el.addEventListener('mouseleave', startAutoplay);
 
       return () => {
-        swiper.el.removeEventListener('mouseenter', stopAutoplay);
-        swiper.el.removeEventListener('mouseleave', startAutoplay);
+        if (swiper.el) {
+          swiper.el.removeEventListener('mouseenter', stopAutoplay);
+          swiper.el.removeEventListener('mouseleave', startAutoplay);
+        }
       };
     }
   }, [swiper]);
@@ -63,7 +60,7 @@ export default function HomePartner({ data }: HomePartnerProps) {
             delay: 0,
             disableOnInteraction: false,
           }}
-          allowTouchMove={false}
+          allowTouchMove={true}
           breakpoints={{
             480: {
               spaceBetween: 10,

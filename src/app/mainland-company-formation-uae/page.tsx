@@ -9,13 +9,14 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
+import { Metadata } from "next";
 
 export type MainlandBusinessData = {
   title: string;
   description: string;
   highlightsTitle: string;
   highlights: string[];
-  footerDescription: string;
+  footerDescription?: string;
   image: {
     path: string;
     alt: string;
@@ -139,6 +140,7 @@ const localData = {
     description:
       "<p>Set up your mainland company in the UAE and operate freely across all Emirates. Ideal for businesses that need local market access, onshore operations, and long term flexibility.</p>",
   } satisfies HeroData,
+
   mainlandBusiness: {
     title: "Start A Mainland Business In The UAE",
     description:
@@ -154,7 +156,7 @@ const localData = {
     footerDescription:
       "<p>For most business activities, 100% foreign ownership is allowed, making mainland setup a flexible option for both local and international investors.</p>",
     image: {
-      path: "/images/mainlandBusineesuae.jpg",
+      path: "/images/mainland-busnes.jpg",
       alt: "Mainland Business Setup UAE",
     },
   } satisfies MainlandBusinessData,
@@ -833,6 +835,13 @@ const localData = {
       "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
   } satisfies DocumentRequiredData,
 };
+
+export const metadata: Metadata = {
+    title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
+    description:
+        "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees. ",
+};
+
 
 export default function MainlandCompanyFormationUaePage() {
   return (

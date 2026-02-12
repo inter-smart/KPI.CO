@@ -26,14 +26,15 @@
   --container-sm: 40rem;
   --container-md: 50rem;
   --container-lg: 855px;
-  --container-xl: 1070px;
+  --container-xl: 1200px;
   --container-2xl: 1280px;
   --container-3xl: 1600px;
 
   /* Header Sizes */
-  --header-y-sm: 60px;
-  --header-y-lg: 60px;
-  --header-y-2xl: 80px;
+  --header-y-sm: 65px;
+  --header-y-lg: 70px;
+  --header-y-xl: 70px;
+  --header-y-2xl: 80px; 
   --header-y-3xl: 90px;
 
   --animate-scroll: scroll 40s forwards linear infinite;
@@ -205,6 +206,12 @@
 
     h6 {
       @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-tight font-normal text-(--text-color);
+    }
+    ul  {
+      @apply ml-[25px];
+    }
+    ul > li {
+      @apply list-disc mb-[5px] mt-0;
     }
   }
 }

@@ -42,7 +42,7 @@ export default function AdvisorySerice({ data }: AdvisorySericeProps) {
         <section className="py-12 lg:py-20 2xl:py-24 3xl:py-32 bg-white">
             <div className="container">
                 <div className="flex flex-col gap-8 lg:gap-12">
-                    {data.cards.map((card) => (
+                    {data.cards.map((card, index) => (
                         <div
                             key={card.id}
                             className={cn(
@@ -98,7 +98,8 @@ export default function AdvisorySerice({ data }: AdvisorySericeProps) {
                             <Link
                                 href={card.button.link}
                                 className={cn(
-                                    "text-[16px] 2xl:text-[17px] 3xl:text-[21px] inline-flex items-center justify-center px-12 py-3 xl:py-4 rounded-[10px] 2xl:rounded-[13px] text-white font-medium transition-all hover:opacity-90 active:scale-95",
+                                    "text-[16px] 2xl:text-[17px] 3xl:text-[21px] inline-flex items-center justify-center px-12 py-3 xl:py-4 rounded-[10px] 2xl:rounded-[13px] font-medium transition-all hover:opacity-90 active:scale-95",
+                                    index % 2 !== 0 ? "text-black" : "text-white",
                                     card.theme.buttonBg
                                 )}
                             >

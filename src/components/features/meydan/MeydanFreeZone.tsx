@@ -15,6 +15,7 @@ export type MeydanStructureItem = {
 
 export type MeydanFreeZoneData = {
   title: string;
+  main_description?: string;
   description?: string;
   free_zone_list: MeydanFreeZoneItem[];
   structure_list: MeydanStructureItem[];
@@ -38,6 +39,9 @@ export default function MeydanFreeZone({ data }: MeydanFreeZoneProps) {
           >
             {data?.title}
           </Heading>
+          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
+            {data?.main_description}
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]">
           {data?.free_zone_list?.map((item, index) => {
