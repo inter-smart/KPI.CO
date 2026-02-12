@@ -64,9 +64,24 @@ export default function BlogDetail({ data }: BlogDetailProps) {
         .filter(Boolean) as HTMLElement[];
       if (!headings.length) return;
 
+      // Check if we're near the bottom of the page
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const clientHeight = window.innerHeight;
+      const isNearBottom = scrollHeight - scrollTop - clientHeight < 100;
+
       let currentId = toc[0].id;
-      for (const el of headings)
-        if (el.getBoundingClientRect().top <= 120) currentId = el.id;
+
+      // If near bottom, activate the last item
+      if (isNearBottom) {
+        currentId = toc[toc.length - 1].id;
+      } else {
+        // Otherwise, find the heading that's currently in view
+        for (const el of headings) {
+          if (el.getBoundingClientRect().top <= 120) currentId = el.id;
+        }
+      }
+
       setActiveId(currentId);
     };
 
