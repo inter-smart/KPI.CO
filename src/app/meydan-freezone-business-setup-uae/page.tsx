@@ -300,8 +300,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/dfza-cta-overlay.svg",
-      overlayMobile: "/images/dfza-cta-overlay-mobile.svg",
+      overlay: "/images/meydan-cta-overlay.svg",
+      overlayMobile: "/images/meydan-cta-overlay-mobile.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {
