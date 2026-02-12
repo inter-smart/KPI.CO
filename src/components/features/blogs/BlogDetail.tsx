@@ -35,7 +35,6 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   const [toc, setToc] = useState<TocItem[]>([]);
   const [htmlWithIds, setHtmlWithIds] = useState<string>("");
   const [activeId, setActiveId] = useState<string>("");
-  const [isSidebarSticky, setIsSidebarSticky] = useState<boolean>(true);
 
   // Generate TOC from headings
   useEffect(() => {
@@ -70,18 +69,6 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const clientHeight = window.innerHeight;
       const isNearBottom = scrollHeight - scrollTop - clientHeight < 100;
-
-      // Check if the last heading has reached the top (with offset for header)
-      const lastHeading = headings[headings.length - 1];
-      const lastHeadingTop = lastHeading.getBoundingClientRect().top;
-      const headerOffset = 120; // Same as the sticky top offset
-
-      // Disable sticky when last section reaches the top
-      if (lastHeadingTop <= headerOffset) {
-        setIsSidebarSticky(false);
-      } else {
-        setIsSidebarSticky(true);
-      }
 
       let currentId = toc[0].id;
 
@@ -118,7 +105,7 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       <div className="container">
         <div className="flex md:gap-[30px] xl:gap-[40px] items-start">
           {/* Sidebar */}
-          <div className={`md:w-[30%] lg:w-[25%] 2xl:w-[24%] shrink-0 h-full hidden md:block ${isSidebarSticky ? 'sticky top-[100px]' : ''}`}
+          <div className="md:w-[30%] lg:w-[25%] 2xl:w-[24%] shrink-0 sticky h-full top-[100px] hidden md:block"
           >
             <div
               className="overflow-visible"
