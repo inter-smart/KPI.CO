@@ -1,0 +1,7 @@
+services:
+  kpi_website:
+    container_name: kpi_website
+    image: 016222040435.dkr.ecr.ap-south-1.amazonaws.com/kpi.co-website:development
+    restart: always
+    ports:
+      - 3000:3000
