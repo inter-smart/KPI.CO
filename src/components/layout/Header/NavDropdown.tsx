@@ -36,7 +36,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     const isAbout = activeCategoryId === 'clients';
     const showCTACard = activeCategoryId === 'digital' || isResource || isAbout;
 
-    // Check if the current category has any right-side content
+    // Check if the current category has any right-side content (CTA card or sub-items)
     const hasSubItems = activeCategory?.subItems && activeCategory.subItems.length > 0;
     const hasNestedItems = activeCategory?.subItems?.some(item => item.subItems && item.subItems.length > 0);
     const hasRightContent = showCTACard || hasSubItems || hasNestedItems;
@@ -45,7 +45,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
         <div
             className={cn(
                 "absolute top-[calc(100%-1px)] left-0 bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden  origin-top",
-                // Dynamic width based on content
+                // Dynamic width: only full width if there's right content
                 hasRightContent
                     ? "w-[550px] xl:w-[730px] 2xl:w-[750px] 3xl:w-[1000px]"
                     : "w-[230px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px]",
@@ -55,9 +55,8 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
             <div className="flex">
                 {/* Left Column: Categories */}
                 <div className={cn(
-                    "border-r border-black/10 bg-white  ",
-                    "w-[230px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px]",
-                    !hasRightContent && "border-r-0"
+                    "w-[230px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px] bg-white  ",
+                    hasRightContent ? "border-r border-black/10" : "border-r-0"
                 )}>
                     <div className="flex flex-col xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
                         {categories.map((category) => (
@@ -112,14 +111,16 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                 {hasRightContent && (
                     <div className="flex-1 bg-white relative p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px] overflow-y-auto">
                         {!showCTACard ? (
-                            <div className={cn( 
+                            <div className={cn(
+                                "grid gap-6",
+                                hasNestedItems ? "grid-cols-2" : "grid-cols-1"
                             )}>
                                 {activeCategory?.subItems.map((item, index) => (
                                     <div key={`${activeCategory.id}-${index}`} className="flex flex-col gap-2">
                                         <Link
                                             href={item.href}
                                             className={cn(
-                                                "group flex items-center w-full px-4 py-2 2xl:py-3 rounded-xl ",
+                                                "group flex items-center w-full px-4 py-2 2xl:py-3 rounded-xl transition-all",
                                                 item.subItems ? "hover:bg-transparent px-0" : "hover:bg-[rgba(143,216,254,0.15)]"
                                             )}
                                         >
