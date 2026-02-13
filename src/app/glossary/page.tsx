@@ -1,87 +1,313 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { glossaryData } from "@/data/glossaryData";
+import { ArrowUp } from "lucide-react";
 export default function GlossaryPage() {
+  const [selectedLetter, setSelectedLetter] = useState("A");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showButton, setShowButton] = useState(false);
+
+  // Show button after scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  // Filter logic
+  const filteredData = glossaryData.filter((item) => {
+    const matchesSearch =
+      item.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    // If user is typing → ignore selectedLetter
+    if (searchTerm.trim() !== "") {
+      return matchesSearch;
+    }
+
+    // If no search → filter by selected letter
+    return item.term
+      .toLowerCase()
+      .startsWith(selectedLetter.toLowerCase());
+  });
+
   return (
     <div className="bg-gray-100 min-h-screen">
-      
+
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-800 to-blue-400 text-white py-16 px-6 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold">
-          Accounting Glossary:
-        </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold mt-2">
+      <div
+        className="h-[467px] flex flex-col justify-center items-center text-center px-6"
+        style={{
+          background: "linear-gradient(180deg, #053269 0%, #6A9FE0 100%);",
+
+
+        }}
+      >
+        {/* Heading */}
+        <h1
+          className="
+      text-white
+
+      /* 📱 Mobile (default) */
+      font-archivo font-bold
+      text-[25.01px]
+      leading-[120%]
+
+      /* 💻 Desktop */
+      md:font-poppins
+      md:text-[48.83px]
+      md:leading-[150%]
+    "
+        >
+          Accounting Glossary: <br />
           A–Z Terminology
-        </h2>
-        <p className="text-sm mt-4 opacity-90">
+        </h1>
+
+        {/* Paragraph */}
+        <p
+          className="
+      text-white mt-4
+
+      /* 📱 Mobile */
+      font-mona font-normal
+      text-[16px]
+      leading-[150%]
+
+      /* 💻 Desktop */
+      md:font-poppins
+    "
+        >
           A quick reference for key audit and accounting terms in the UAE.
         </p>
 
-        <div className="mt-6 max-w-md mx-auto">
-          <input
-            type="text"
-            placeholder="Search Glossary"
-            className="w-full px-4 py-2 rounded-md text-black"
-          />
+        {/* Search Input */}
+        <div className="mt-6">
+          <div className="relative w-fit">
+
+            <input
+              type="text"
+              placeholder="Search Glossary"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="
+        bg-[#F3F3F566]
+        text-[#1C5396]
+        placeholder:text-[#1C5396]
+        outline-none
+        font-medium
+
+        /* 📱 Mobile */
+        w-[259px]
+        h-[33px]
+        px-[18px]
+        pr-[45px]   /* space for image */
+        rounded-[10px]
+        text-[16px]
+
+        /* 💻 Desktop */
+        md:w-[512px]
+        md:h-[48px]
+        md:px-6
+        md:pr-[50px]
+      "
+            />
+
+            {/* Right Side Image */}
+            <img
+              src="/images/search-icon.svg"
+              alt="search"
+              className="
+        absolute
+        right-3
+        top-1/2
+        -translate-y-1/2
+        w-[18px]
+        h-[18px]
+        pointer-events-none
+      "
+            />
+
+          </div>
         </div>
       </div>
+
+
 
       {/* Alphabet Navigation */}
-      <div className="bg-blue-900 text-white text-center py-3 text-sm">
-        {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => (
-          <span
-            key={letter}
-            className="mx-2 cursor-pointer hover:text-yellow-400"
+      <div
+        className="
+    w-full
+    h-[35.333335876464844px]
+    px-6 md:px-[48px]
+    bg-[#08406D]
+    flex
+    items-center
+    justify-center
+  "
+      >
+        <div className="flex items-center justify-center gap-4 w-full max-w-[1200px]">
+
+          {/* Text */}
+          <div
+            className="
+        text-white
+        font-poppins
+        font-normal
+        text-[16px]
+        leading-[120%]
+        tracking-[-0.02em]
+        whitespace-nowrap
+      "
           >
-            {letter}
-          </span>
-        ))}
+            Go to Section :
+          </div>
+
+          {/* Letters Wrapper */}
+          <div
+            className="
+    max-[1063px]:overflow-x-auto
+    min-[1064px]:overflow-visible
+  "
+            style={{
+              scrollbarWidth: "none",        // Firefox
+              msOverflowStyle: "none",       // IE/Edge
+            }}
+          >
+            <div
+              className="
+          flex
+          min-w-max
+          justify-center
+          max-[1063px]:gap-[12px]
+          min-[1064px]:gap-[24px]
+        "
+            >
+              {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => {
+
+                const isDisabledLetter = ["X", "Y", "Z"].includes(letter);
+
+                return (
+                  <span
+                    key={letter}
+                    onClick={() => {
+                      if (!isDisabledLetter) {
+                        setSelectedLetter(letter);
+                        setSearchTerm("");
+                      }
+                    }}
+                    className={`
+                cursor-pointer
+                font-poppins
+                text-[16px]
+                leading-[120%]
+                tracking-[-0.02em]
+                capitalize
+                transition-colors
+
+                ${isDisabledLetter
+                        ? "text-[#787878] font-normal cursor-not-allowed"
+                        : `
+                      text-white
+                      font-semibold
+                      hover:text-yellow-400
+                      ${selectedLetter === letter
+                          ? "text-yellow-400"
+                          : ""
+                        }
+                    `
+                      }
+              `}
+                  >
+                    {letter}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      {/* Glossary Content */}
+
+
+      {/* 📚 Glossary Content */}
       <div className="max-w-5xl mx-auto px-6 py-10 space-y-8">
+        {filteredData.length > 0 ? (
+          filteredData.map((item, index) => (
+            <div key={index}>
+              <h3
+                className="
+      font-poppins
+      font-semibold
+      text-[20px]
+      md:text-[24px]
+      text-[#1C5396]
+      leading-[120%]
+      tracking-[-0.02em]
+    "
+              >
+                {item.term}
+              </h3>
 
-        <div>
-          <h3 className="text-blue-800 font-semibold text-lg">
-            Actionable KPI
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            A KPI that provides clear insights leading to specific actions for improvement.
-          </p>
-        </div>
+              <p
+                className="font-poppins font-normal text-[14px] md:text-[16px] text-[#4E4E4E] mt-2 leading-[150%]
+">
+                {item.description}
+              </p>
+            </div>
 
-        <div>
-          <h3 className="text-blue-800 font-semibold text-lg">
-            Analytics Dashboard
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            A centralized platform that displays visual representations of KPIs and metrics.
+          ))
+        ) : (
+          <p className="text-gray-500 text-center">
+            No results found.
           </p>
-        </div>
+        )}
+        <button
+          onClick={scrollToTop}
+          className="
+    ml-auto
+    flex items-center gap-2
+    hover:opacity-70
+    transition-opacity
+  "
+        >
+          <span
+            className="
+      font-poppins
+      font-medium
+      text-[16px]
+      leading-[150%]
+      tracking-[0.02em]
+      text-center
+      text-black
+       cursor-pointer
+    "
+          >
+            Back to the Top
+          </span>
 
-        <div>
-          <h3 className="text-blue-800 font-semibold text-lg">
-            Annual Growth Rate
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            The yearly rate of increase in a specific metric such as revenue or profit.
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-blue-800 font-semibold text-lg">
-            Average Handle Time (AHT)
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            A KPI used in customer service to measure time taken to resolve queries.
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-blue-800 font-semibold text-lg">
-            Audit Trail
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            A chronological record of system activities and transactions.
-          </p>
-        </div>
+          <img
+            src="/images/arrow.svg"
+            alt="Back to top"
+            className="w-[32px] h-[32px] opacity-100"
+          />
+        </button>
 
       </div>
 

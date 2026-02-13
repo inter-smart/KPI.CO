@@ -10,12 +10,11 @@ export default function NotFound() {
     const pathname = usePathname();
 
     useEffect(() => {
-        const hasReloaded = sessionStorage.getItem("404-reloaded");
+       
         if (pathname === "/404") return;
 
         // If not reloaded yet → redirect once
-        if (hasReloaded === "true") {
-            sessionStorage.setItem("404-reloaded", "true");
+        if (pathname !== "/404") {
             router.replace("/404");
         }
     }, [pathname, router]);
