@@ -60,6 +60,10 @@ const staticSections: {
       label: "Get In Touch",
       link: "/contact",
     },
+    images: {
+      overlay: "/images/get-touch-overlay.svg",
+      overlayMobile: "/images/get-touch-overlay-mobile.svg",
+    },
   },
 };
 
