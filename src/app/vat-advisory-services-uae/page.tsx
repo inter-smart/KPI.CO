@@ -14,7 +14,7 @@ import VatGuidance, {
 export type InsightItem = {
   id: number;
   title: string;
-  description: string;
+  description: string; 
   date: string;
   readTime: string;
   media: MediaItem;
