@@ -83,7 +83,6 @@ export default function BlogDetail({ data }: BlogDetailProps) {
         .filter(Boolean) as HTMLElement[];
       if (!headings.length) return;
 
-<<<<<<< HEAD
       // Check if we're near the bottom of the page
       const scrollHeight = document.documentElement.scrollHeight;
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -103,21 +102,6 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       }
 
       setActiveId(currentId);
-=======
-      // Activate the next section once the current heading scrolls past
-      // the trigger line near the top of the viewport.
-      const triggerTop = 120;
-      const nextVisibleHeading = headings.find(
-        (el) => el.getBoundingClientRect().top > triggerTop,
-      );
-
-      if (nextVisibleHeading) {
-        setActiveId(nextVisibleHeading.id);
-        return;
-      }
-
-      setActiveId(headings[headings.length - 1].id);
->>>>>>> 02682882bb9ef85d9be95390dc69b50b8f150a37
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
