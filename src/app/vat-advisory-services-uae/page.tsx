@@ -1,6 +1,5 @@
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
-import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
@@ -10,11 +9,16 @@ import { blogData } from "@/data/blogData";
 import VatGuidance, {
   VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
+import VatAdvisory, {
+  VatAdvisoryData,
+} from "@/components/features/vat-services/VatAdvisory";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type InsightItem = {
   id: number;
   title: string;
-  description: string; 
+  description: string;
   date: string;
   readTime: string;
   media: MediaItem;
@@ -58,6 +62,13 @@ export type HeroData = {
   additionalContent?: string[];
 };
 
+export type WhyBuildItem = {
+  id: number;
+  media: MediaItem;
+  title: string;
+  description: string;
+};
+
 export type CtaData = {
   title: string;
   description: string;
@@ -74,6 +85,14 @@ export type CtaData = {
 export type FaqItem = {
   id: number;
   title: string;
+  description: string;
+};
+
+export type ProcessStep = {
+  id: number;
+  step: string;
+  title: string;
+  sub_title: string;
   description: string;
 };
 
@@ -127,6 +146,227 @@ const localData = {
       alt: "VAT Guidance & Support",
     },
   } satisfies VatGuidanceData,
+  keyBenefits: {
+    title: "Understanding UAE VAT ",
+    description:
+      "Value Added Tax (VAT) was introduced in the UAE in 2018 at a standard rate of 5%. It applies to most goods and services, with specific rules for registration, rates, and compliance. ",
+    slides: [
+      {
+        id: 1,
+        title: "VAT Registration Thresholds ",
+        items: [
+          {
+            title: "Mandatory registration: ",
+            description:
+              "Required when taxable supplies exceed AED 375,000 in the past 12 months or are expected to exceed this amount in the next 30 days ",
+          },
+          {
+            title: "Voluntary registration:",
+            description:
+              "Available when taxable supplies exceed AED 187,500 in the same period  ",
+          },
+          {
+            title: "Group registration: ",
+            description:
+              "Group registration: Businesses with multiple UAE entities can register as a single taxable group  ",
+          },
+        ],
+        media: {
+          path: "/images/vat-benefit-1.jpg",
+          alt: "Business-Friendly Structure",
+        },
+      },
+      {
+        id: 2,
+        title: "VAT Rates in the UAE ",
+        items: [
+          "One of the most competitive license costs in Dubai",
+          "No paid-up share capital required",
+          "Reasonable visa allocation costs",
+          "Zero personal income tax",
+          "Zero corporate tax for qualifying companies",
+        ],
+        media: {
+          path: "/images/mayden-benefit-1.jpg",
+          alt: "Business-Friendly Structure",
+        },
+      },
+      {
+        id: 3,
+        title: "VAT Return Filing ",
+        items: [
+          "Choose 0 to 6 visa allocations",
+          "Visas for owners, employees, and dependents",
+          "Efficient visa processing through digital portal",
+          "Option to upgrade visa package as you grow",
+        ],
+        media: {
+          path: "/images/mayden-benefit-1.jpg",
+          alt: "Business-Friendly Structure",
+        },
+      },
+    ],
+  } satisfies MeydanKeyBenefitsData,
+  vatAdvisory: {
+    title: "Our VAT Advisory Services ",
+    description:
+      "KPI supports businesses across the full VAT lifecycle, from registration to ongoing advisory and compliance. All services are tailored to your business complexity and need, not templates. ",
+    service_list: [
+      {
+        id: 1,
+        title: "VAT Registration & Deregistration ",
+        description:
+          "Assess VAT obligations, registration support, and deregistration where needed - aligned with business activity and thresholds. ",
+      },
+      {
+        id: 2,
+        title: "Advisory & Structuring ",
+        description:
+          "Provide practical guidance on VAT treatment for transactions, contracts, pricing models, and operating structures. ",
+      },
+      {
+        id: 3,
+        title: "Compliance & Return Filing",
+        description:
+          "Preparation and review of monthly or quarterly VAT returns, reconciliation with accounting records, accurate calculation of output and input tax, and timely submission within the 28-day deadline to avoid penalties. ",
+      },
+      {
+        id: 4,
+        title: "Reviews & Health Checks ",
+        description:
+          "Independent review of VAT positions, filings, and processes to identify gaps, risks, or opportunities for improvement. ",
+      },
+      {
+        id: 5,
+        title: "Advisory & Structuring ",
+        description:
+          "Provide practical guidance on VAT treatment for transactions, contracts, pricing models, and operating structures. ",
+      },
+    ],
+  } satisfies VatAdvisoryData,
+  whyBuild: {
+    title: "Common VAT Challenges We Help Solve ",
+    description:
+      "<p>Businesses across the UAE face recurring VAT issues that create risk, inefficiency, and financial exposure. We identify these issues early and implement practical solutions before they escalate</p>",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/vat-service-1.svg",
+          alt: "Incorrect VAT treatment",
+        },
+        title: "Incorrect VAT treatment ",
+        description:
+          "<p>Misclassification of supplies leading to under or overpayment </p>",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/vat-service-2.svg",
+          alt: "Missed input tax recovery ",
+        },
+        title: "Missed input tax recovery ",
+        description:
+          "<p>Failure to claim eligible VAT, reducing cash flow </p>",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/vat-service-3.svg",
+          alt: "System misalignment ",
+        },
+        title: "System misalignment  ",
+        description:
+          "<p>Disconnect between invoicing software and VAT reporting </p>",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/vat-service-4.svg",
+          alt: "Documentation gaps",
+        },
+        title: "Documentation gaps",
+        description:
+          "<p>Incomplete records that create problems during FTA audits </p>",
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/vat-service-5.svg",
+          alt: "Cross-border complexity ",
+        },
+        title: "Cross-border complexity ",
+        description:
+          "<p>Confusion over GCC, export, and international service rules </p>",
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/vat-service-6.svg",
+          alt: "Penalty exposure",
+        },
+        title: "Penalty exposure",
+        description:
+          "<p>Late filings, errors, or non-compliance leading to fines </p>",
+      },
+    ] satisfies WhyBuildItem[],
+  },
+  formationProcess: {
+    title: "How We Approach VAT ",
+    sub_title: null,
+    description: null,
+    steps: [
+      {
+        id: 1,
+        step: "Step One",
+        title: "Free Consultation with Our Experts",
+        sub_title: "Free Consultation with Our Experts",
+        description:
+          "<p>Share your business details with our team. We’ll guide you on the best mainland setup for your goals.</p>",
+      },
+      {
+        id: 2,
+        step: "Step Two",
+        title: "Choose Your Business Activity & Structure",
+        sub_title: "Choose Your Business Activity & Structure",
+        description:
+          "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
+      },
+      {
+        id: 3,
+        step: "Step Three",
+        title: "Reserve Your Company Name & Apply for License",
+        sub_title: "Reserve Your Company Name & Apply for License",
+        description:
+          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+      },
+      {
+        id: 4,
+        step: "Step Four",
+        title: "Office & Workspace Setup",
+        sub_title: "Office & Workspace Setup",
+        description:
+          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+      },
+      {
+        id: 5,
+        step: "Step Five",
+        title: "UAE Residency & Visas",
+        sub_title: "UAE Residency & Visas",
+        description:
+          "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
+      },
+      {
+        id: 6,
+        step: "Step Six",
+        title: "Open Your Business Bank Account",
+        sub_title: "Open Your Business Bank Account",
+        description:
+          "<p>Set up a corporate bank account to start operating and managing your company finances. </p>",
+      },
+    ] satisfies ProcessStep[],
+  },
+
   banking: {
     title: "Banking Support for Your UAE Business",
     description:
@@ -274,67 +514,6 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
-  keyBenefits: {
-    title: "Understanding UAE VAT ",
-    description:
-      "Value Added Tax (VAT) was introduced in the UAE in 2018 at a standard rate of 5%. It applies to most goods and services, with specific rules for registration, rates, and compliance. ",
-    slides: [
-      {
-        id: 1,
-        title: "VAT Registration Thresholds ",
-        items: [
-          {
-            title: "Mandatory registration: ",
-            description:
-              "Required when taxable supplies exceed AED 375,000 in the past 12 months or are expected to exceed this amount in the next 30 days ",
-          },
-          {
-            title: "Voluntary registration:",
-            description:
-              "Available when taxable supplies exceed AED 187,500 in the same period  ",
-          },
-          {
-            title: "Group registration: ",
-            description:
-              "Group registration: Businesses with multiple UAE entities can register as a single taxable group  ",
-          },
-        ],
-        media: {
-          path: "/images/vat-benefit-1.jpg",
-          alt: "Business-Friendly Structure",
-        },
-      },
-      {
-        id: 2,
-        title: "VAT Rates in the UAE ",
-        items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
-        ],
-        media: {
-          path: "/images/mayden-benefit-1.jpg",
-          alt: "Business-Friendly Structure",
-        },
-      },
-      {
-        id: 3,
-        title: "VAT Return Filing ",
-        items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
-        ],
-        media: {
-          path: "/images/mayden-benefit-1.jpg",
-          alt: "Business-Friendly Structure",
-        },
-      },
-    ],
-  } satisfies MeydanKeyBenefitsData,
 };
 
 export default function VatServicesUaePage() {
@@ -343,6 +522,12 @@ export default function VatServicesUaePage() {
       <InnerHero data={localData.hero} variant="saifz" />
       <VatGuidance data={localData.vatGuidance} />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
+      <VatAdvisory data={localData.vatAdvisory} />
+      <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="dafz" />
+      <CorporateServicesUaeFormationProcess
+        variant="mainland"
+        data={localData.formationProcess}
+      />
       <DocumentRequired data={localData.document_required_data} />
       <CorporateServicesUaeBanking
         data={localData.banking}

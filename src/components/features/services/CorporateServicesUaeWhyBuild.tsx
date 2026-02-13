@@ -130,7 +130,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
-            hasVariant(variant, "dafz") && "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]"   
+            hasVariant(variant, "dafz") &&
+              "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
           )}
         >
           {data.items.map((item) => (
