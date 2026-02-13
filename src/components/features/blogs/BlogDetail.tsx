@@ -147,9 +147,9 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   const tocItems = toc.length
     ? toc
     : (data?.item || []).map((item) => ({
-        id: String(item.id),
-        text: item.text,
-      }));
+      id: String(item.id),
+      text: item.text,
+    }));
   const activeIndex = tocItems.findIndex((i) => i.id === activeId);
 
   return (
@@ -199,11 +199,10 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                       {/* Bullet */}
                       <div
                         className={`absolute left-0 top-[2px] h-[15px] w-[15px] rounded-full flex items-center justify-center
-                        ${
-                          isActive || isCompleted
+                        ${isActive || isCompleted
                             ? "bg-gradient-to-b from-[#053269] to-[#6A9FE0]"
                             : "border border-[#9fb4d4] bg-white"
-                        }`}
+                          }`}
                       />
 
                       {/* Title */}
@@ -214,11 +213,10 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                           scrollToHeading(item.id);
                         }}
                         className={`block text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.4] transition-colors
-                    ${
-                      isActive || isCompleted
-                        ? "text-[#1C5396] font-semibold"
-                        : "text-[#A0A0A0] hover:text-[#1C5396]"
-                    }`}>
+                    ${isActive || isCompleted
+                            ? "text-[#1C5396] font-semibold"
+                            : "text-[#A0A0A0] hover:text-[#1C5396]"
+                          }`}>
                         {item.text}
                       </a>
                     </li>
