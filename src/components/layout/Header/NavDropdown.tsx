@@ -47,15 +47,15 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                 "absolute top-[calc(100%-1px)] left-0 bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] 2xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden  origin-top",
                 // Dynamic width: only full width if there's right content
                 hasRightContent
-                    ? "w-[550px] xl:w-[730px] 2xl:w-[750px] 3xl:w-[1000px]"
-                    : "w-[230px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px]",
+                    ? "w-[590px] xl:w-[730px] 2xl:w-[750px] 3xl:w-[1000px]"
+                    : "w-[300px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px]",
                 isVisible ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-3 scale-[0.98] pointer-events-none"
             )}
         >
             <div className="flex">
                 {/* Left Column: Categories */}
                 <div className={cn(
-                    "w-[230px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px] bg-white  ",
+                    "w-[300px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px] bg-white  ",
                     hasRightContent ? "border-r border-black/10" : "border-r-0"
                 )}>
                     <div className="flex flex-col xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
