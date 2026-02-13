@@ -19,7 +19,8 @@ export type HeroData = {
   title: string;
   description: string;
   media?: {
-    path: string;
+    desktopPath: string;
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -112,7 +113,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/ifza-bg.png",
+      desktopPath: "/images/ifza-bg.png",
+      mobilePath: "/images/ifza-mobile-bg.png",
       alt: "Company Formation in IFZA, UAE",
     },
     title: "Company Formation in IFZA, UAE ",
@@ -132,8 +134,7 @@ const localData = {
       "Trading businesses with regional or global operations",
       "Holding companies and group structures",
     ],
-    footerDescription:
-      "",
+    footerDescription: "",
     image: {
       path: "/images/ifza.jpg",
       alt: "Business in IFZA",
@@ -241,12 +242,12 @@ const localData = {
         description:
           "For online businesses, digital platforms, and internet-based trading activities.",
       },
-
     ] satisfies ServiceItem[],
   },
   meydanFreeZone: {
     title: "Documents Required for IFZA Business Setup",
-    main_description: "We assist you with all documents and approvals, ensuring a smooth setup and full compliance with IFZA regulations.",
+    main_description:
+      "We assist you with all documents and approvals, ensuring a smooth setup and full compliance with IFZA regulations.",
     free_zone_list: [
       {
         id: 1,
@@ -423,9 +424,12 @@ export default function DwtcFreezone() {
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-<MeydanFreeZone  data={localData.meydanFreeZone} />
+      <MeydanFreeZone data={localData.meydanFreeZone} />
       <RiskOrganisation data={localData.workWithKpi} />
-      <CorporateServicesUaeBanking variant="freezone" data={localData.banking} />
+      <CorporateServicesUaeBanking
+        variant="freezone"
+        data={localData.banking}
+      />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />

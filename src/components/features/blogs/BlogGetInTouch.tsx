@@ -17,14 +17,14 @@ export default function BlogGetInTouch({ data }: BlogGetInTouchProps) {
         <div className="w-full lg:max-w-237.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]">
           <div className="w-full h-full aspect-square pointer-events-none absolute -z-1 inset-0">
             <Image
-              src={data?.images?.overlay || ""}
+              src={data?.images?.overlay || '/images/placeholder-image.png'}
               alt="overlay"
               width={500}
               height={500}
               className="w-full h-full object-cover max-md:hidden block"
             />
             <Image
-              src={data?.images?.overlayMobile || ""}
+              src={data?.images?.overlayMobile || '/images/placeholder-image.png'}
               alt="overlay"
               width={500}
               height={500}

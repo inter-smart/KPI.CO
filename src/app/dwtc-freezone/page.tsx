@@ -15,16 +15,16 @@ import { blogData } from "@/data/blogData";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
-  id: number;
-  title: string;
-  description: string;
-  media?: {
-    path: string;
-    alt: string;
-  };
-  additionalContent?: string[];
+    id: number;
+    title: string;
+    description: string;
+    media?: {
+        desktopPath: string;
+        mobilePath: string;
+        alt: string;
+    };
+    additionalContent?: string[];
 };
-
 export type MainlandBusinessData = {
   title: string;
   description: string;
@@ -94,9 +94,10 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      path: "/images/risk-overview-bg.png",
-      alt: "Mainland Company Formation & Licensing in the UAE",
-    },
+            desktopPath: "/images/dwtc-desk.png",
+            mobilePath: "/images/ddwtc-mobpng",
+            alt: "Company Formation in DMCC Free Zone, UAE",
+        },
     title: "Company Formation in DWTC, UAE ",
     description:
       "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised business district. DWTC offers flexible office solutions and a streamlined setup ideal for founders, startups, and growing businesses.</p>",

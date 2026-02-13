@@ -109,7 +109,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold transition-colors duration-300",
+                      "font-semibold capitalize transition-colors duration-300",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >
@@ -153,7 +153,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                       <Heading
                         as="h4"
                         size="h6"
-                        className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
+                        className="font-semibold text-[#212121] capitalize mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
                       >
                         {data.steps[activeStep].title}
                       </Heading>

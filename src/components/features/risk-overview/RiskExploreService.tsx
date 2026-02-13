@@ -133,7 +133,7 @@ function Service({ data }: ServiceProps) {
             className="w-full h-full block mt-1 transition-transform duration-300"
           />
         </div>
-        <div className="text-[16px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-semibold line-clamp-3 text-white mb-1.5 xl:mb-2.5 2xl:mb-3.5">
+        <div className="text-[16px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]">
           {parse(data.title ?? "title")}
         </div>
       </div>
