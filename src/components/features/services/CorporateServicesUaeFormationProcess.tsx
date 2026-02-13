@@ -133,7 +133,6 @@ export default function CorporateServicesUaeFormationProcess({
               ))}
             </div>
           </div>
-
           <div className="relative">
             <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] 2xl:min-h-[560px] 3xl:min-h-[680px] bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
               <Image
