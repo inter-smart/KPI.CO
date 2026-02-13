@@ -142,8 +142,8 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            desktopPath: "/images/audit-banner.png",
-            mobilePath: "/images/audit-mobile.png",
+            desktopPath: "/images/dmcc-bannerr-desk.png",
+            mobilePath: "/images/dmcc-banner-mob.png",
             alt: "Company Formation in DMCC Free Zone, UAE",
         },
         title: "Company Formation in DMCC Free Zone, UAE",
