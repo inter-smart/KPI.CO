@@ -152,14 +152,15 @@ export default function GlossaryPage() {
       {/* Alphabet Navigation */}
       <div
         className="
-    w-full
-    h-[35.333335876464844px]
-    px-6 md:px-[48px]
-    bg-[#08406D]
-    flex
-    items-center
-    justify-center
-  "
+  w-full
+  h-[35.333335876464844px] md:h-[60px]
+  px-6 md:px-[48px]
+  bg-[#08406D]
+  flex
+  items-center
+  justify-center
+"
+
       >
         <div className="flex items-center justify-center gap-4 w-full max-w-[1200px]">
 
@@ -212,30 +213,31 @@ export default function GlossaryPage() {
                       }
                     }}
                     className={`
-                cursor-pointer
-                font-poppins
-                text-[16px]
-                leading-[120%]
-                tracking-[-0.02em]
-                capitalize
-                transition-colors
+    cursor-pointer
+    font-poppins
+    text-[16px] md:text-[24px]
+    leading-[120%]
+    tracking-[-0.02em]
+    capitalize
+    transition-colors
 
-                ${isDisabledLetter
+    ${isDisabledLetter
                         ? "text-[#787878] font-normal cursor-not-allowed"
                         : `
-                      text-white
-                      font-semibold
-                      hover:text-yellow-400
-                      ${selectedLetter === letter
+          text-white
+          font-semibold
+          hover:text-yellow-400
+          ${selectedLetter === letter
                           ? "text-yellow-400"
                           : ""
                         }
-                    `
+        `
                       }
-              `}
+  `}
                   >
                     {letter}
                   </span>
+
                 );
               })}
             </div>
