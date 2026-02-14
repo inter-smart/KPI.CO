@@ -249,37 +249,48 @@ export default function GlossaryPage() {
 
 
       {/* 📚 Glossary Content */}
-      <div className="max-w-5xl mx-auto px-6 py-10 space-y-8">
+      <div className="max-w-5xl mx-auto px-6 pt-[32px] md:pt-[48px] pb-10">
         {filteredData.length > 0 ? (
           filteredData.map((item, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className="
+          mt-[32px] md:mt-[48px]
+          first:mt-0
+        "
+            >
               <h3
                 className="
-      font-poppins
-      font-semibold
-      text-[20px]
-      md:text-[24px]
-      text-[#1C5396]
-      leading-[120%]
-      tracking-[-0.02em]
-    "
+            font-poppins
+            font-semibold
+            text-[20px]
+            md:text-[24px]
+            text-[#1C5396]
+            leading-[120%]
+            tracking-[-0.02em]
+          "
               >
                 {item.term}
               </h3>
 
               <p
-                className="font-poppins font-normal text-[14px] md:text-[16px] text-[#4E4E4E] mt-2 leading-[150%]
-">
+                className="
+            font-poppins
+            font-normal
+            text-[14px]
+            md:text-[16px]
+            text-[#4E4E4E]
+            leading-[150%]
+          "
+              >
                 {item.description}
               </p>
             </div>
-
           ))
         ) : (
-          <p className="text-gray-500 text-center">
-            No results found.
-          </p>
+          <p>No results found.</p>
         )}
+
         <button
           onClick={scrollToTop}
           className="
