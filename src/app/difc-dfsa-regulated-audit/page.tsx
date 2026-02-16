@@ -1,6 +1,7 @@
 "use client";
 
 import InnerHero from "@/components/common/InnerHero";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskApproach from "@/components/features/risk-overview/RiskAooroach";
 import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManagement";
@@ -44,6 +45,28 @@ export type ApproachStep = {
   title: string;
   sub_title: string;
   description: string;
+};
+
+export type MeydanFreeZoneItem = {
+  id: number;
+  title: string;
+  description: string;
+  highlightsText: string;
+  zone_list: string[];
+  footer_description: string;
+};
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type MeydanFreeZoneData = {
+  title: string;
+  description?: string;
+  free_zone_list: MeydanFreeZoneItem[];
+  structure_list: MeydanStructureItem[];
 };
 
 const localData = {
@@ -98,40 +121,66 @@ const localData = {
     ],
   } satisfies RiskAdvisoryDta,
   approachProcess: {
-      title: "How KPI Approaches Risk",
-      sub_title: null,
-      description: null,
-      steps: [
-        {
-          id: 1,
-          title: "Risk identification with business context",
-          sub_title: "Risk identification with business context",
-          description:
-            "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
-        },
-        {
-          id: 2,
-          title: "Control assessment and gap analysis",
-          sub_title: "Control assessment and gap analysis",
-          description:
-            "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
-        },
-        {
-          id: 3,
-          title: "Clear prioritisation",
-          sub_title: "Clear prioritisation",
-          description:
-            "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
-        },
-        {
-          id: 4,
-          title: "Actionable recommendations",
-          sub_title: "Actionable recommendations",
-          description:
-            "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
-        },
-      ] satisfies ApproachStep[],
-    },
+    title: "How KPI Approaches Risk",
+    sub_title: null,
+    description: null,
+    steps: [
+      {
+        id: 1,
+        title: "Risk identification with business context",
+        sub_title: "Risk identification with business context",
+        description:
+          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
+      },
+      {
+        id: 2,
+        title: "Control assessment and gap analysis",
+        sub_title: "Control assessment and gap analysis",
+        description:
+          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
+      },
+      {
+        id: 3,
+        title: "Clear prioritisation",
+        sub_title: "Clear prioritisation",
+        description:
+          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+      },
+      {
+        id: 4,
+        title: "Actionable recommendations",
+        sub_title: "Actionable recommendations",
+        description:
+          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+      },
+    ] satisfies ApproachStep[],
+  },
+  meydanFreeZone: {
+    title: "Audit Support During DIFC Liquidation & Regulatory Closure",
+    free_zone_list: [
+      {
+        id: 1,
+        title: "Audit Support During DIFC Liquidation & Regulatory Closure",
+        description: "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
+        highlightsText: "KPI provides audit support aligned with DIFC and DFSA requirements, including:",
+        zone_list: [
+          "Audit of final financial statements",
+          "Support for regulatory and authority submissions",
+          "Audit coordination with liquidators and legal advisors",
+        ],
+        footer_description: "Our focus during closure is ensuring financial information remains accurate, documented, and defensible throughout regulatory and legal review.",
+      },
+      
+    ],
+    structure_list: [
+      {
+        id: 1,
+        title: "DIFC Experience Built Over Time",
+        description:
+          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles.</p> <p> This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved across DIFC entities.</p>",
+      },
+    ],
+  } satisfies MeydanFreeZoneData,
 };
 
 export default function DwtcFreezone() {
@@ -141,6 +190,7 @@ export default function DwtcFreezone() {
       <WhyRiskManagement data={localData.whyRisk} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
+      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
     </>
   );
 }
