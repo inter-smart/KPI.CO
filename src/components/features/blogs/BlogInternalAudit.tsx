@@ -24,7 +24,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
           <Text
             as="p"
             size="p4"
-            className="text-[12px] lg:text-[12px] 2xl:text-[16px] 3xl:text-[18px] font-medium md:text-center text-[#4E4E4E] flex w-fit px-5 xl:px-5 2xl:px-7 py-1 xl:py-1.5 2xl:py-2  mb-2 xl:mb-3 2xl:mb-4 md:mx-auto bg-[#FFE595] rounded-[40px]"
+            className="text-[12px] lg:text-[11px] 2xl:text-[16px] 3xl:text-[18px] font-medium md:text-center text-[#4E4E4E] flex w-fit px-5 xl:px-6 2xl:px-7 py-1 xl:py-1.5 2xl:py-2  mb-2 xl:mb-3 2xl:mb-4 md:mx-auto bg-[#FFE595] rounded-[40px]"
           >
             {data?.sub_title}
           </Text>
