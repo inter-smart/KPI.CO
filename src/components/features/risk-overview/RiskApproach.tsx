@@ -32,11 +32,11 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
           )}
         >
           <Heading
-            as="h6"
-            size="h6"
+            as="h3"
+            size="h3"
             className="text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7"
           >
-            {data.title}
+            {parse(data.title)}
           </Heading>
           {data?.description && (
             <Text as="div" size="p5" className="text-[#4e4e4e]">
@@ -57,12 +57,12 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
 
         <div
           className={cn(
-            "flex flex-col lg:flex-row gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+            "flex flex-col lg:flex-row 2xl:gap-14",
             variant === "risk" && "items-center",
           )}
         >
           <div className="w-full lg:w-1/2">
-            <div className="flex flex-row lg:flex-col overflow-auto lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
+            <div className="flex flex-row lg:flex-col overflow-auto max-sm:-mr-4">
               {data.steps.map((step, index) => (
                 <motion.div
                   key={step.id}
@@ -77,7 +77,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] absolute -z-1 top-2.5 lg:top-4 2xl:top-6 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[100%] absolute -z-1 top-2.5 lg:top-4 2xl:top-6 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
@@ -114,7 +114,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold capitalize transition-colors duration-300",
+                      "font-semibold capitalize transition-colors duration-300 lg:pb-[30px] xl:pb-[40px] 2xl:pb-[60px] 3xl:pb-[70px]",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >

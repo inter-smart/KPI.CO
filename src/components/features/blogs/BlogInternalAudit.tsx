@@ -20,7 +20,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
   return (
     <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[60px] bg-white relative z-0">
       <div className="container">
-        <div className="w-full md:max-w-[65%] xl:max-w-[55%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
+        <div className="w-full md:max-w-[65%] xl:max-w-[49%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
           <Text
             as="p"
             size="p4"

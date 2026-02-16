@@ -158,8 +158,8 @@ const localData = {
   riskAdvisory: {
     title: "DIFC & DFSA Regulated Audit Services",
     description:
-      "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with →</p><p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with →Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.</p> ",
-    highlightsText: "",
+      "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with</p> ",
+    highlightsText: "Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.",
     advisoryItems: [
       {
         id: 1,
@@ -192,7 +192,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Regulatory focused risk prioritisation",
+        title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
           "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
@@ -206,7 +206,7 @@ const localData = {
       },
       {
         id: 4,
-        title: "Testing of key controls and balances",
+        title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
           "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
