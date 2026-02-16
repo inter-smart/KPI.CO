@@ -5,7 +5,7 @@ type BlogInternalAuditProps = {
   data: {
     media: {
       media_type: string;
-      mobile_path: string;    
+      mobile_path: string;
       desktop_path: string;
       media_alt: string;
     };
@@ -20,7 +20,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
   return (
     <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[60px] bg-white relative z-0">
       <div className="container">
-        <div className="w-full md:max-w-[65%] xl:max-w-[55%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
+        <div className="w-full md:max-w-[65%] xl:max-w-[49%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
           <Text
             as="p"
             size="p4"
@@ -35,7 +35,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
           >
             {data?.title}
           </Heading>
-          
+
           <Text
             size="p1"
             className="leading-none md:text-center font-medium text-[#4E4E4E] uppercase"
@@ -46,15 +46,15 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
             {data?.description}
           </div>
         </div>
-        <div className="w-full overflow-hidden rounded-[10px] relative aspect-[1280/360]">
-          <div className="absolute inset-0 bg-[rgba(28,83,150,40%)] z-10"></div>
+        <div className="w-full !overflow-hidden !rounded-[10px] relative aspect-[1280/360]">
           <Image
             src={data?.media?.desktop_path || "/images/icon-placeholder.svg"}
             alt={data?.media?.media_alt}
             width={1200}
             height={340}
-            className="h-full w-full object-fill min-h-[220px]" 
+            className="h-full w-full object-cover !rounded-[10px] min-h-[220px]"
           />
+          <div className="absolute inset-0 bg-[#1C5396]/40 z-20 pointer-events-none !m-0 !rounded-[10px]"></div>
         </div>
       </div>
     </section>

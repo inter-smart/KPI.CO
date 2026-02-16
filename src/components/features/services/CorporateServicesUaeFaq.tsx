@@ -6,13 +6,27 @@ import {
 } from "@/components/ui/accordion";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
-import type { FaqItem } from "@/app/corporate-services-uae/page";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-type CorporateServicesUaeFaqProps = {
-  data: {
-    title: string;
-    faq_list: FaqItem[];
+export type FaqItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type CorporateServicesUaeFaqData = {
+  title: string;
+  button?: {
+    label: string;
+    link: string;
+    target: string;
   };
+  faq_list: FaqItem[];
+};
+
+export type CorporateServicesUaeFaqProps = {
+  data: CorporateServicesUaeFaqData;
 };
 
 export default function CorporateServicesUaeFaq({
@@ -26,7 +40,7 @@ export default function CorporateServicesUaeFaq({
             as="h2"
             size="h2"
             className="text-center text-[#1C5396] lg:mb-8.75 2xl:mb-10 3xl:mb-13"
-          >
+            >
             {data?.title}
           </Heading>
         </div>
@@ -48,7 +62,7 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:last:my-0 mb-0 max-w-[90%]">
+                  <div className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>
@@ -56,6 +70,21 @@ export default function CorporateServicesUaeFaq({
             ))}
           </Accordion>
         </div>
+        {data?.button && (
+          <Button
+            variant="yellow"
+            size="lg"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex relative z-2"
+            asChild
+          >
+            <Link
+              href={data?.button?.link}
+              target={data?.button?.target ? "_blank" : "_self"}
+            >
+              {data?.button?.label || "Get in Touch"}
+            </Link>
+          </Button>
+        )}
       </div>
     </section>
   );

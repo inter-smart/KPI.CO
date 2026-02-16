@@ -1,8 +1,8 @@
 import BlogHero, { BlogHeroData } from "@/components/features/blogs/BlogHero";
 import BlogList from "@/components/features/blogs/BlogList";
 import React from "react";
-import type { InsightItem } from "@/app/page";
-import { Metadata } from "next";
+import type { InsightItem } from "@/app/page"; 
+import { Metadata } from "next";   
 import { blogData } from "@/data/blogData";
 
 type BlogPageData = {

@@ -9,7 +9,7 @@ import BlogReadingProgress from "@/components/features/blogs/BlogReadingProgress
 
 type Props = {
   params: Promise<{ slug: string }>;
-};
+}; 
 
 // Static data for sections that are not yet dynamic in the data model
 export type GetInTouch = {
@@ -138,8 +138,8 @@ export default async function BlogDetailPage({ params }: Props) {
     <>
       <article style={{ width: "100%" }}>
         <BlogReadingProgress>
-          <BlogInternalAudit data={pageData.audit_data} />
-          <BlogDetail data={pageData.blog_detail} />
+        <BlogInternalAudit data={pageData.audit_data} />
+        <BlogDetail data={pageData.blog_detail} />
         </BlogReadingProgress>
         <BlogRelated data={pageData.related_blog} />
         <BlogTrustedLeader data={staticSections.BlogTrustedLeaders} />

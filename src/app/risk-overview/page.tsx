@@ -7,7 +7,7 @@ import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManage
 import { MediaItem } from "../page";
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
-import RiskApproach from "@/components/features/risk-overview/RiskAooroach";
+import RiskApproach from "@/components/features/risk-overview/RiskApproach";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
@@ -460,7 +460,7 @@ export default function RiskOverviewPage() {
       <RiskAdvisory data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
-      <RiskApproach variant="mainland" data={localData.approachProcess} />
+      <RiskApproach variant="risk" data={localData.approachProcess} />
       <HomeCounter data={localData.counterList} variant="risk" />
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeWhyChoose
