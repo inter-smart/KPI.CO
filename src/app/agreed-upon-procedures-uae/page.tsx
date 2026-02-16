@@ -5,6 +5,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import HomeCounter from "@/components/features/home/HomeCounter";
+import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
@@ -92,6 +93,20 @@ export type CounterItem = {
     label: string;
 };
 
+
+export type RiskOrganisationData = {
+  title?: string;
+  description?: string;
+  items?: {
+    id: number;
+    text: string;
+  }[];
+  ftr_description?: string;
+  media?: {
+    path?: string;
+    alt?: string;
+  };
+};
 
 export type CtaData = {
     title: string;
@@ -326,6 +341,30 @@ const localData = {
         },
     ] satisfies CounterItem[],
 
+      explore_service: {
+        title: "Explore Related Audit Services",
+        items: [
+          {
+            id: 1,
+            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+            title: "Financial Statement  <br/>Audit",
+            slug: "#",
+          },
+          {
+            id: 2,
+            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+            title: "DIFC & DFSA Regulated  <br/>Audits",
+            slug: "#",
+          },
+          {
+            id: 3,
+            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+            title: "ADGM Regulated <br/>Audit",
+            slug: "#",
+          },
+        ] satisfies ServiceItem[],
+      },
+
     cta: {
         title: "Discuss an Agreed-Upon Procedures Engagement",
         description:
@@ -424,6 +463,7 @@ export default function page() {
                 variant="mainland"
             />
             <HomeCounter data={localData.counterList} />
+            <RiskExploreService variant="difc" data={localData.explore_service} />
             <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
             <HomeOurInsights data={localData.insights} />
