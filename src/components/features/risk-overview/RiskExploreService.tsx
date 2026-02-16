@@ -15,13 +15,19 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
+  variant?: "difc" | "default";
 };
 
 type ServiceProps = {
   data: ServiceItem;
+  variant?: "difc" | "default";
 };
 
-export default function RiskExploreService({ data }: RiskExploreServiceProps) {
+export default function RiskExploreService({
+  data,
+  variant = "default",
+
+}: RiskExploreServiceProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -76,7 +82,11 @@ export default function RiskExploreService({ data }: RiskExploreServiceProps) {
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%] min-w-0 select-none",)}
+                    "min-w-0 select-none",
+                    variant === "difc"
+                      ? "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]" // ⭐ 3 items
+                      : "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]", // existing
+                  )}
                 >
                   <Service data={item} />
                 </div>
