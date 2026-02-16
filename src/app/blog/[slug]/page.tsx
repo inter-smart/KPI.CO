@@ -138,8 +138,8 @@ export default async function BlogDetailPage({ params }: Props) {
     <>
       <article style={{ width: "100%" }}>
         <BlogReadingProgress>
-          <BlogInternalAudit data={pageData.audit_data} />
-          <BlogDetail data={pageData.blog_detail} />
+        <BlogInternalAudit data={pageData.audit_data} />
+        <BlogDetail data={pageData.blog_detail} />
         </BlogReadingProgress>
         <BlogRelated data={pageData.related_blog} />
         <BlogTrustedLeader data={staticSections.BlogTrustedLeaders} />
