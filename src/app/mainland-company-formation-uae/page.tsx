@@ -140,7 +140,6 @@ const localData = {
     description:
       "<p>Set up your mainland company in the UAE and operate freely across all Emirates. Ideal for businesses that need local market access, onshore operations, and long term flexibility.</p>",
   } satisfies HeroData,
-
   mainlandBusiness: {
     title: "Start A Mainland Business In The UAE",
     description:

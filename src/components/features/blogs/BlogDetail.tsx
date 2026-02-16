@@ -83,19 +83,25 @@ export default function BlogDetail({ data }: BlogDetailProps) {
         .filter(Boolean) as HTMLElement[];
       if (!headings.length) return;
 
-      // Activate the next section once the current heading scrolls past
-      // the trigger line near the top of the viewport.
-      const triggerTop = 120;
-      const nextVisibleHeading = headings.find(
-        (el) => el.getBoundingClientRect().top > triggerTop,
-      );
+      // Check if we're near the bottom of the page
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const clientHeight = window.innerHeight;
+      const isNearBottom = scrollHeight - scrollTop - clientHeight < 100;
 
-      if (nextVisibleHeading) {
-        setActiveId(nextVisibleHeading.id);
-        return;
+      let currentId = toc[0].id;
+
+      // If near bottom, activate the last item
+      if (isNearBottom) {
+        currentId = toc[toc.length - 1].id;
+      } else {
+        // Otherwise, find the heading that's currently in view
+        for (const el of headings) {
+          if (el.getBoundingClientRect().top <= 120) currentId = el.id;
+        }
       }
 
-      setActiveId(headings[headings.length - 1].id);
+      setActiveId(currentId);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -141,9 +147,9 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   const tocItems = toc.length
     ? toc
     : (data?.item || []).map((item) => ({
-        id: String(item.id),
-        text: item.text,
-      }));
+      id: String(item.id),
+      text: item.text,
+    }));
   const activeIndex = tocItems.findIndex((i) => i.id === activeId);
 
   return (
@@ -193,11 +199,10 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                       {/* Bullet */}
                       <div
                         className={`absolute left-0 top-[2px] h-[15px] w-[15px] rounded-full flex items-center justify-center
-                        ${
-                          isActive || isCompleted
+                        ${isActive || isCompleted
                             ? "bg-gradient-to-b from-[#053269] to-[#6A9FE0]"
                             : "border border-[#9fb4d4] bg-white"
-                        }`}
+                          }`}
                       />
 
                       {/* Title */}
@@ -208,11 +213,10 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                           scrollToHeading(item.id);
                         }}
                         className={`block text-[12px] lg:text-[13px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.4] transition-colors
-                    ${
-                      isActive || isCompleted
-                        ? "text-[#1C5396] font-semibold"
-                        : "text-[#A0A0A0] hover:text-[#1C5396]"
-                    }`}>
+                    ${isActive || isCompleted
+                            ? "text-[#1C5396] font-semibold"
+                            : "text-[#A0A0A0] hover:text-[#1C5396]"
+                          }`}>
                         {item.text}
                       </a>
                     </li>

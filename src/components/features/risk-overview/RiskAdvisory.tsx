@@ -42,21 +42,23 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               {data.title}
             </Heading>
-            <div className="w-full">
-              <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] [&_p]:mb-[20px] [&_p:last-child]:mb-0">
-                {parse(data?.description)}
-              </div>
+            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]">
+              {parse(
+                data?.description?.replace(
+                  /<\/p>\s*$/,
+                  ' <span class="text-[#5280CA]">→</span></p>'
+                ) || ""
+              )}
+            </div>
 
-              <div className="flex flex-row gap-3">
-                <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
-                  {data.highlightsText}
-                  <span className="text-[#5280CA] hidden first-of-type:visible">
-                    →
-                  </span>
-                </div>
+            <div className="flex flex-row gap-3">
+              <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
+                {data.highlightsText}
+
               </div>
             </div>
           </div>
+
           <div className="w-full lg:w-[51%] 2xl:w-[55%]">
             <div className="h-full flex items-center justify-center bg-[rgba(143,216,254,10%)] rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
@@ -98,6 +100,6 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
