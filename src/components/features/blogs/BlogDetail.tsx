@@ -5,6 +5,7 @@ import parse, { type DOMNode } from "html-react-parser";
 import { Element } from "domhandler";
 import { Heading } from "@/components/utils/typography";
 import BlogSponsoredCard from "./BlogSponsoredCard";
+import { cn } from "@/lib/utils";
 
 type TocItem = { id: string; text: string };
 
@@ -238,12 +239,21 @@ export default function BlogDetail({ data }: BlogDetailProps) {
             <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto">
               {htmlWithIds &&
                 parse(htmlWithIds, {
-                  replace: (node: DOMNode) =>
-                    node instanceof Element && node.name === "img" ? (
-                      <span className="image-overlay my-[25px] md:my-[30px] xl:my-[38px]">
-                        <img {...node.attribs} alt={node.attribs?.alt || ""} />
-                      </span>
-                    ) : undefined,
+                  replace: (node: DOMNode) => {
+                    const el = node as any;
+                    if (el.type === "tag" && el.name === "img") {
+                      return (
+                        <span className="image-overlay relative block my-[25px] md:my-[30px] xl:my-[38px] !overflow-hidden !rounded-[10px]">
+                          <img
+                            {...el.attribs}
+                            alt={el.attribs?.alt || ""}
+                            className={cn("w-full h-auto block !rounded-[10px] !m-0", el.attribs?.class, el.attribs?.className)}
+                          />
+                          <div className="absolute inset-0 bg-[#1C5396]/30 z-20 pointer-events-none !m-0 !rounded-[10px]"></div>
+                        </span>
+                      );
+                    }
+                  },
                 })}
             </div>
           </div>
