@@ -10,8 +10,8 @@ export default function BlogReadingProgress({
 }) {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end end"],
+        target: containerRef, 
+        offset: ["start start", "end end"], 
     });
 
     const clampedProgress = useTransform(scrollYProgress, [0, 1], [0, 1], {

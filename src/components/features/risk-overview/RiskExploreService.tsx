@@ -15,13 +15,19 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
+  variant?: "difc" | "default";
 };
 
 type ServiceProps = {
   data: ServiceItem;
+  variant?: "difc" | "default";
 };
 
-export default function RiskExploreService({ data }: RiskExploreServiceProps) {
+export default function RiskExploreService({
+  data,
+  variant = "default",
+
+}: RiskExploreServiceProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -76,7 +82,11 @@ export default function RiskExploreService({ data }: RiskExploreServiceProps) {
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%] min-w-0 select-none",)}
+                    "min-w-0 select-none",
+                    variant === "difc"
+                      ? "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]" // ⭐ 3 items
+                      : "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]", // existing
+                  )}
                 >
                   <Service data={item} />
                 </div>
@@ -133,7 +143,7 @@ function Service({ data }: ServiceProps) {
             className="w-full h-full block mt-1 transition-transform duration-300"
           />
         </div>
-        <div className="text-[16px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]">
+        <div className="text-[16px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]">
           {parse(data.title ?? "title")}
         </div>
       </div>

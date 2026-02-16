@@ -2,19 +2,32 @@
 import Image from "next/image";
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
-import type { WhyBuildItem } from "@/app/corporate-services-uae/page";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 
-type Variant = "dafz" | "saifz" | "mainland" | "freezone" | "default";
+export type MediaItem = {
+  path: string;
+  alt: string;
+};
 
-type CorporateServicesUaeWhyBuildProps = {
+export type WhyBuildItem = {
+  id: number;
+  media: MediaItem;
+  title: string;
+  description: string;
+};
+
+export type CorporateServicesUaeWhyBuildData = {
+  title: string;
+  description?: string;
+  items: WhyBuildItem[];
+};
+
+export type Variant = "dafz" | "saifz" | "mainland" | "freezone" | "default";
+
+export type CorporateServicesUaeWhyBuildProps = {
   variant?: Variant | Variant[];
-  data: {
-    title: string;
-    description?: string;
-    items: WhyBuildItem[];
-  };
+  data: CorporateServicesUaeWhyBuildData;
 };
 
 const hasVariant = (
@@ -51,7 +64,7 @@ function WhyBuildCard({
         className={cn(
           "font-semibold text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
-            "text-[#1C5396]",
+          "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "text-[#1C5396]",
@@ -94,7 +107,7 @@ export default function CorporateServicesUaeWhyBuild({
           ? "bg-[#f9fafb] "
           : "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "saifz") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
       )}
     >
       <div className="container">
@@ -130,7 +143,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
-            hasVariant(variant, "dafz") && "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]"   
+            hasVariant(variant, "dafz") &&
+            "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
           )}
         >
           {data.items.map((item) => (
