@@ -53,6 +53,7 @@ export type MeydanFreeZoneItem = {
   description: string;
   highlightsText: string;
   zone_list: string[];
+  footer_description: string;
 };
 
 export type MeydanStructureItem = {
@@ -167,15 +168,16 @@ const localData = {
           "Support for regulatory and authority submissions",
           "Audit coordination with liquidators and legal advisors",
         ],
+        footer_description: "Our focus during closure is ensuring financial information remains accurate, documented, and defensible throughout regulatory and legal review.",
       },
       
     ],
     structure_list: [
       {
         id: 1,
-        title: "Choosing the Right Structure",
+        title: "DIFC Experience Built Over Time",
         description:
-          "If your business requires Mainland or other Free Zone options, our expert team will guide you to the best setup for your goals.",
+          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles.</p> <p> This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved across DIFC entities.</p>",
       },
     ],
   } satisfies MeydanFreeZoneData,

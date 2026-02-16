@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils";
 import { Heading } from "@/components/utils/typography";
+import parse from "html-react-parser";
 
 export type MeydanFreeZoneItem = {
   id: number;
   title: string;
   description: string;
   highlightsText: string;
+  footer_description: string;
   zone_list: string[];
 };
 
@@ -28,7 +30,10 @@ interface MeydanFreeZoneProps {
   variant?: "difc" | "default";
 }
 
-export default function MeydanFreeZone({ data, variant = "default" }: MeydanFreeZoneProps) {
+export default function MeydanFreeZone({
+  data,
+  variant = "default",
+}: MeydanFreeZoneProps) {
   if (!data) return null;
 
   return (
@@ -60,7 +65,7 @@ export default function MeydanFreeZone({ data, variant = "default" }: MeydanFree
                     <div className="text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#053269] mb-[15px]">
                       {card?.title}
                     </div>
-                    <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-medium text-[#053269] mb-[15px]">
+                    <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[15px]">
                       {card?.description}
                     </div>
                     <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-medium text-[#053269] mb-[15px]">
@@ -79,6 +84,9 @@ export default function MeydanFreeZone({ data, variant = "default" }: MeydanFree
                         </li>
                       ))}
                     </ul>
+                    <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[20px] 2xl:mt-[25px] 3xl:mt-[30px]">
+                      {card?.footer_description}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -121,9 +129,10 @@ export default function MeydanFreeZone({ data, variant = "default" }: MeydanFree
                   <div className="text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-[#003268] mb-[10px]">
                     {item.title}
                   </div>
-                  <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
-                    {item.description}
-                  </p>
+                  <div className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
+                    {/* {item.description} */}
+                    {parse(item?.description)}
+                  </div>
                 </div>
               </div>
             ))}
