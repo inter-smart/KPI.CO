@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type CorporateServicesUaeFormationProcessProps = {
-  variant?: "mainland" | "default";
+  variant?: "mainland" | "default" | "aup";
   data: {
     title: string;
     description?: string | null;
@@ -59,7 +59,7 @@ export default function CorporateServicesUaeFormationProcess({
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14">
-          <div className="">
+          <div className="flex items-center">
             <div className="flex flex-row lg:flex-col overflow-auto lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
                 <motion.div
@@ -108,16 +108,18 @@ export default function CorporateServicesUaeFormationProcess({
                     )}
                   </div>
 
-                  <Text
-                    as="div"
-                    size="p3"
-                    className={cn(
-                      "font-normal transition-colors duration-300",
-                      index <= activeStep ? "text-[#3eb0ea]" : "text-[#a7a7a7]",
-                    )}
-                  >
-                    {step.step}
-                  </Text>
+                  {variant !== "aup" && (
+                    <Text
+                      as="div"
+                      size="p3"
+                      className={cn(
+                        "font-normal transition-colors duration-300",
+                        index <= activeStep ? "text-[#3eb0ea]" : "text-[#a7a7a7]",
+                      )}
+                    >
+                      {step.step}
+                    </Text>
+                  )}
 
                   <Heading
                     as="div"
@@ -135,7 +137,7 @@ export default function CorporateServicesUaeFormationProcess({
           </div>
 
           <div className="relative">
-            <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] 2xl:min-h-[560px] 3xl:min-h-[680px] bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
+            <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] 2xl:min-h-[560px] 3xl:min-h-[680px] bg-white rounded-[12px] 2xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-10 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
               <Image
                 src="/images/corporate-services-formationProcess-bg.png"
                 alt="background decoration"
@@ -153,19 +155,21 @@ export default function CorporateServicesUaeFormationProcess({
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                   className="relative z-10 w-full"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.1 }}
-                  >
-                    <Heading
-                      as="h4"
-                      size="h6"
-                      className="font-normal text-[#3eb0ea] mb-0.5"
+                  {variant !== "aup" && (
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
                     >
-                      {data.steps[activeStep].step}
-                    </Heading>
-                  </motion.div>
+                      <Heading
+                        as="h4"
+                        size="h6"
+                        className="font-normal text-[#3eb0ea] mb-0.5"
+                      >
+                        {data.steps[activeStep].step}
+                      </Heading>
+                    </motion.div>
+                  )}
 
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}

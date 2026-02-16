@@ -22,7 +22,7 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
-  variant?: "default" | "saifz" | "dfza";
+  variant?: "default" | "saifz" | "dfza" | "aup";
 };
 
 export default function DocumentRequired({
@@ -36,31 +36,32 @@ export default function DocumentRequired({
       className={cn(
         "w-full py-[40px] lg:py-[60px] xl:py-[80px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible",
         variant === "saifz" &&
-          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
-          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "aup" && "bg-white",
       )}
     >
       <div className="container">
-        
+
         <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
           {/* Main Content */}
           <div className="w-full md:w-[57%] xl:w-[60%]">
             {(data?.title || data?.description) && (
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
-                 <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
-                {data?.title && (
-                  <Heading
-                    as="h2"
-                    size="h2"
-                    className="text-[#1C5396] mb-[25] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
-                  >
-                    {data.title}
-                  </Heading>
-                )}
-                 
-              </div>
-                
+                <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
+                  {data?.title && (
+                    <Heading
+                      as="h2"
+                      size="h2"
+                      className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
+                    >
+                      {data.title}
+                    </Heading>
+                  )}
+
+                </div>
+
                 {data?.description && (
                   <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
                     {parse(data.description)}
@@ -126,7 +127,7 @@ export default function DocumentRequired({
                   <Heading
                     as="h2"
                     size="h2"
-                    className="text-[#1C5396] mb-[25] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
                   >
                     {data.title}
                   </Heading>

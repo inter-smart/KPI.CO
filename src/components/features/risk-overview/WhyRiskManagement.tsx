@@ -15,22 +15,23 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
       <div className="container">
         <div className="flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[25px] 3xl:mb-[35px]">
           {/* Left Content */}
-          <div className="w-full lg:w-[calc(100%-365px)] xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)]">
+          <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
             <div className="w-full">
               <Heading
-                as="h3"
+                as="div"
                 size="h3"
                 className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] max-w-[90%] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
               >
-                {data.title}
+                {parse(data.title)}
               </Heading>
 
               <div className="w-full">
                 <Text
+                  as="div"
                   size="p2"
-                  className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
+                  className="text-[16px] lg:text-[13px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] [&_span]:font-bold"
                 >
-                  {data.highlightsTitle}
+                  {parse(data.highlightsTitle)}
                 </Text>
 
                 <div className="flex flex-col">
@@ -58,13 +59,13 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[365px] xl:w-[510px] 3xl:w-[680px]">
+          <div className="w-full lg:w-[395px] xl:w-[510px] 3xl:w-[680px]">
             <Heading
-              as="h3"
+              as="div"
               size="h3"
-              className="font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] sm:hidden"
+              className="font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] sm:hidden "
             >
-              {data.title}
+              {parse(data.title)}
             </Heading>
             <div className="relative w-full lg:h-full min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
