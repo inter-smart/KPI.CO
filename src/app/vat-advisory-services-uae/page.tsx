@@ -3,7 +3,6 @@ import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import { blogData } from "@/data/blogData";
 import VatGuidance, {
@@ -14,6 +13,13 @@ import VatAdvisory, {
 } from "@/components/features/vat-services/VatAdvisory";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import VatHealth, {
+  VatHealthData,
+} from "@/components/features/vat-services/VatHealth";
+import VatRelatedTax, {
+  VatRelatedTaxData,
+} from "@/components/features/vat-services/VatRelatedTax";
 
 export type InsightItem = {
   id: number;
@@ -35,14 +41,6 @@ export type DocumentRequiredData = {
     alt?: string;
   };
   ftr_description?: string;
-};
-
-export type BankingPartner = {
-  id: number;
-  media: {
-    path: string;
-    alt: string;
-  };
 };
 
 export type MediaItem = {
@@ -88,10 +86,17 @@ export type FaqItem = {
   description: string;
 };
 
+export type WhyChooseItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
 export type ProcessStep = {
   id: number;
-  step: string;
+  step?: string;
   title: string;
+  inner_title?: string;
   sub_title: string;
   description: string;
 };
@@ -178,16 +183,32 @@ const localData = {
       },
       {
         id: 2,
-        title: "VAT Rates in the UAE ",
+        title: "VAT Rates in the UAE  ",
         items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
+          {
+            title: "5% standard rate: ",
+            description: "Applied to most goods and services  ",
+          },
+          {
+            title: "0% zero-rated: ",
+            description:
+              "Exports, international transport, and certain supplies ",
+          },
+          {
+            title: "Exempt supplies: ",
+            description: "Residential property, certain financial services ",
+          },
+          {
+            title: "Reverse Charge Mechanism (RCM): ",
+            description: "For specific imported services and goods ",
+          },
+          {
+            title: "Out of scope:  ",
+            description: "Transactions outside UAE VAT jurisdiction  ",
+          },
         ],
         media: {
-          path: "/images/mayden-benefit-1.jpg",
+          path: "/images/vat-benefit-1.jpg",
           alt: "Business-Friendly Structure",
         },
       },
@@ -195,13 +216,24 @@ const localData = {
         id: 3,
         title: "VAT Return Filing ",
         items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
+          {
+            title: "Filing frequency: ",
+            description:
+              "Monthly (for businesses with annual turnover above AED 150 million) or quarterly (for most other businesses) ",
+          },
+          {
+            title: "Deadline: ",
+            description:
+              "VAT returns and payments must be submitted within 28 days from the end of each tax period ",
+          },
+          {
+            title: "Penalties: ",
+            description:
+              "Late filing can result in penalties starting at AED 1,000, with additional fines for late payment and non-compliance reaching up to AED 50,000 ",
+          },
         ],
         media: {
-          path: "/images/mayden-benefit-1.jpg",
+          path: "/images/vat-benefit-1.jpg",
           alt: "Business-Friendly Structure",
         },
       },
@@ -318,115 +350,125 @@ const localData = {
     steps: [
       {
         id: 1,
-        step: "Step One",
-        title: "Free Consultation with Our Experts",
-        sub_title: "Free Consultation with Our Experts",
+        title: "Risk identification with business context",
+        sub_title: "Control assessment and gap analysis",
         description:
-          "<p>Share your business details with our team. We’ll guide you on the best mainland setup for your goals.</p>",
+          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
       },
       {
         id: 2,
-        step: "Step Two",
-        title: "Choose Your Business Activity & Structure",
-        sub_title: "Choose Your Business Activity & Structure",
+        title: "Control assessment and gap analysis",
+        sub_title: "Control assessment and gap analysis",
         description:
-          "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
+          "<p>Evaluating whether controls exist, appropriately designed, operate effectively, and are properly documented.</p>",
       },
       {
         id: 3,
-        step: "Step Three",
-        title: "Reserve Your Company Name & Apply for License",
-        sub_title: "Reserve Your Company Name & Apply for License",
+        title: "Clear prioritisation",
+        sub_title: "Clear prioritisation",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Focusing on risks that carry regulatory, financial, or reputational consequences. </p>",
       },
       {
         id: 4,
-        step: "Step Four",
-        title: "Office & Workspace Setup",
-        sub_title: "Office & Workspace Setup",
+        title: "Actionable recommendations",
+        sub_title: "Actionable recommendations",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
-      },
-      {
-        id: 5,
-        step: "Step Five",
-        title: "UAE Residency & Visas",
-        sub_title: "UAE Residency & Visas",
-        description:
-          "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
-      },
-      {
-        id: 6,
-        step: "Step Six",
-        title: "Open Your Business Bank Account",
-        sub_title: "Open Your Business Bank Account",
-        description:
-          "<p>Set up a corporate bank account to start operating and managing your company finances. </p>",
+          "<p>Suggest practical suggestion that management can implement, rather than an abstract observation.</p>",
       },
     ] satisfies ProcessStep[],
   },
-
-  banking: {
-    title: "Banking Support for Your UAE Business",
-    description:
-      "<p>We support clients with bank account opening through trusted UAE and international banking partners.</p>",
-    partners: [
+  document_required_data: {
+    title: "Who We Commonly Support ",
+    description: "<p>Our VAT services are relevant for: </p>",
+    items: [
       {
         id: 1,
-        media: {
-          path: "/images/banking-partner-1.svg",
-          alt: "Emirates NBD",
-        },
+        text: "UAE mainland and free zone companies ",
       },
       {
         id: 2,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
+        text: "Professional services and advisory firms ",
       },
       {
         id: 3,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
+        text: "Trading and distribution businesses ",
       },
       {
         id: 4,
-        media: {
-          path: "/images/banking-partner-4.svg",
-          alt: "Emirates NBD",
-        },
+        text: "Technology and digital companies ",
       },
       {
         id: 5,
-        media: {
-          path: "/images/banking-partner-5.svg",
-          alt: "Emirates NBD",
-        },
+        text: "Groups with multiple entities or cross-border activity ",
+      },
+    ],
+    ftr_description:
+      "<p>Whether VAT is new or already in place, our role is to bring structure and confidence to how it is managed. </p>",
+    media: {
+      path: "/images/vat-services-document.jpg",
+      alt: "vat-services-document",
+    },
+  } satisfies DocumentRequiredData,
+  vatHealth: {
+    title: "VAT Health Check",
+    description:
+      "Not sure if your VAT processes are optimized? Request a complimentary VAT health check to identify: ",
+    health_list: [
+      "Potential input tax recovery opportunities",
+      "Compliance gaps and penalty risks",
+      "Process inefficiencies and system issues",
+      "Documentation and record-keeping improvements",
+    ],
+    button: {
+      label: "Book Your Free VAT Health Check",
+      link: "/contact",
+    },
+    media: {
+      path: "/images/vat-benefit-1.jpg",
+      alt: "VAT Health Check",
+    },
+  } satisfies VatHealthData,
+  whyChoose: {
+    title: "Why Choose KPI for VAT Services ",
+    items: [
+      {
+        id: 1,
+        title: "Commercially grounded advice ",
+        description:
+          "<p>VAT guidance aligned around how your business operates.  </p>",
       },
       {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
+        id: 2,
+        title: "Regulatory awareness ",
+        description:
+          "<p>Clear understanding of UAE VAT legislation and FTA <br> expectations in practice. </p>",
       },
-    ] satisfies BankingPartner[],
+      {
+        id: 3,
+        title: "Integrated perspective",
+        description:
+          "<p>Ability to align VAT with corporate tax, audit, and risk <br> considerations. </p>",
+      },
+      {
+        id: 4,
+        title: "Clear communication ",
+        description:
+          "<p>Straightforward advice without unnecessary complexity or <br> jargon. </p>",
+      },
+    ] satisfies WhyChooseItem[],
   },
   cta: {
-    title: "Ready to Start Your Business in the UAE?",
+    title: "Discuss Your VAT Requirements ",
     description:
-      "<p>Our team will help you choose the right setup, jurisdiction, and structure based on your goals, risk profile, and budget. Talk to our experts today!</p>",
+      "<p>If you want VAT to be predictable, embedded, and easy to manage as your business grows, KPI can support you with clarity and confidence. </p>",
     button: {
       label: "Get in Touch",
       link: "/contact",
     },
     images: {
-      overlay: "/images/meydan-cta-overlay.svg",
-      overlayMobile: "/images/meydan-cta-overlay-mobile.svg",
+      overlay: "/images/vat-services-cta-overlay.svg",
+      overlayMobile: "/images/vat-services-cta-overlay-mobile.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {
@@ -434,76 +476,43 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is a Meydan Free Zone company?",
+        title: "Who must register for VAT in the UAE?",
         description: `
                     <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
                     `,
       },
       {
         id: 2,
-        title: "Can I set up remotely from outside the UAE?",
+        title: "How often do I need to file VAT returns?",
         description: `
                     <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
                     `,
       },
       {
         id: 3,
-        title: "Is 100% foreign ownership allowed?",
+        title: "What happens if I miss the VAT filing deadline?",
         description: `
                     <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
                     `,
       },
       {
         id: 4,
-        title: "How long does setup take?",
+        title: "Can I claim VAT on all business expenses?",
         description: `
                     <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
                     `,
       },
       {
         id: 5,
-        title: "How much does a Meydan Free Zone license cost?",
+        title: "Do free zone companies need to register for VAT?",
         description: `
-                    <p>Packages start from approximately AED 12,500; costs vary by visa package and services required.</p>
+                    <p>Yes. Free zone companies must register if they exceed the mandatory registration threshold and make taxable supplies within the UAE or to other GCC countries. Different rules may apply for designated zones.</p>
                     `,
       },
     ] satisfies FaqItem[],
   },
-  document_required_data: {
-    title: "Why Work with KPI",
-    description:
-      "<p>KPI is more than a company formation agent. We’re your partner in business growth, providing end-to-end support across audit, risk, and corporate services. We help businesses with:</p>",
-    items: [
-      {
-        id: 1,
-        text: "Strategic business structuring",
-      },
-      {
-        id: 2,
-        text: "Regulatory and compliance guidance",
-      },
-      {
-        id: 3,
-        text: "Corporate governance support",
-      },
-      {
-        id: 4,
-        text: "Risk assessment and advisory",
-      },
-      {
-        id: 5,
-        text: "Ongoing post‑setup service",
-      },
-    ],
-    ftr_description:
-      "<p>Our approach ensures that your Meydan Free Zone company is structured for growth, compliant, and aligned with your business strategy.</p>",
-    media: {
-      path: "/images/meydan-document.jpg",
-      alt: "Meydan Document",
-    },
-  } satisfies DocumentRequiredData,
   insights: {
-    title: "Related Blogs",
+    title: "Our Insights",
     items: blogData.slice(0, 4).map((blog) => ({
       id: blog.id,
       media: blog.media,
@@ -514,6 +523,55 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
+  vatRelatedTax: {
+    title: "Related Tax & Advisory Services",
+    tax_list: [
+      {
+        id: 1,
+        title: "Tax Advisory",
+        link: {
+          url: "/tax-advisory-services-uae",
+        },
+        media: {
+          path: "/images/vat-related-1.jpg",
+          alt: "Tax Advisory",
+        },
+      },
+      {
+        id: 2,
+        title: "Corporate Tax",
+        link: {
+          url: "/corporate-tax-services-uae",
+        },
+        media: {
+          path: "/images/vat-related-1.jpg",
+          alt: "Corporate Tax",
+        },
+      },
+      {
+        id: 3,
+        title: "eInvoicing Solution",
+        link: {
+          url: "/einvoicing-solutions-uae",
+        },
+        media: {
+          path: "/images/vat-related-1.jpg",
+          alt: "eInvoicing Solution",
+        },
+      },
+      {
+        id: 4,
+        title: "Corporate Tax",
+        link: {
+          url: "/corporate-tax-services-uae",
+        },
+        media: {
+          path: "/images/vat-related-1.jpg",
+          alt: "Corporate Tax",
+        },
+      },
+    ],
+  } satisfies VatRelatedTaxData,
 };
 
 export default function VatServicesUaePage() {
@@ -525,17 +583,22 @@ export default function VatServicesUaePage() {
       <VatAdvisory data={localData.vatAdvisory} />
       <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="dafz" />
       <CorporateServicesUaeFormationProcess
-        variant="mainland"
+        variant="Vat-Services"
         data={localData.formationProcess}
       />
-      <DocumentRequired data={localData.document_required_data} />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
+      <DocumentRequired
+        data={localData.document_required_data}
+        variant="dfza"
+      />
+      <VatHealth data={localData.vatHealth} />
+      <VatRelatedTax data={localData.vatRelatedTax} />
+      <CorporateServicesUaeWhyChoose
+        data={localData.whyChoose}
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights data={localData.insights} variant="saifz" />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

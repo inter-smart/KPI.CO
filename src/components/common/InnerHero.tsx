@@ -5,14 +5,14 @@ import parse from "html-react-parser";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-type InnerHeroMedia = {
+export type InnerHeroMedia = {
   path?: string;
   desktopPath?: string;
   mobilePath?: string;
   alt?: string;
 };
 
-type InnerHeroData = {
+export type InnerHeroData = {
   id: number;
   title: string;
   description?: string;
@@ -20,7 +20,7 @@ type InnerHeroData = {
   media?: InnerHeroMedia;
 };
 
-type InnerHeroProps = {
+export type InnerHeroProps = {
   data: InnerHeroData;
   variant?: "default" | "saifz";
 };

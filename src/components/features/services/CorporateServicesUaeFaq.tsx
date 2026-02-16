@@ -6,13 +6,27 @@ import {
 } from "@/components/ui/accordion";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
-import type { FaqItem } from "@/app/corporate-services-uae/page";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-type CorporateServicesUaeFaqProps = {
-  data: {
-    title: string;
-    faq_list: FaqItem[];
+export type FaqItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type CorporateServicesUaeFaqData = {
+  title: string;
+  button?: {
+    label: string;
+    link: string;
+    target: string;
   };
+  faq_list: FaqItem[];
+};
+
+export type CorporateServicesUaeFaqProps = {
+  data: CorporateServicesUaeFaqData;
 };
 
 export default function CorporateServicesUaeFaq({
@@ -56,6 +70,21 @@ export default function CorporateServicesUaeFaq({
             ))}
           </Accordion>
         </div>
+        {data?.button && (
+          <Button
+            variant="yellow"
+            size="lg"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex"
+            asChild
+          >
+            <Link
+              href={data?.button?.link}
+              target={data?.button?.target ? "_blank" : "_self"}
+            >
+              {data?.button?.label || "Get in Touch"}
+            </Link>
+          </Button>
+        )}
       </div>
     </section>
   );

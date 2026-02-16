@@ -82,7 +82,9 @@ export default function HomeOurInsights({
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",variant === "saifz" && "flex-[0_0_90%] sm:flex-[0_0_40%] lg:flex-[0_0_33.5%]",
+                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",
+                  variant === "saifz" &&
+                  "flex-[0_0_90%] sm:flex-[0_0_40%] lg:flex-[0_0_33.5%]",
                 )}
               >
                 <InsightCard data={item} />
@@ -90,7 +92,12 @@ export default function HomeOurInsights({
             ))}
           </div>
         </div>
-        <div className={cn("flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ", variant === "saifz" && "hidden")}>
+        <div
+          className={cn(
+            "flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ",
+            variant === "saifz" && "hidden",
+          )}
+        >
           {scrollSnaps.map((_, index) => (
             <button
               key={index}

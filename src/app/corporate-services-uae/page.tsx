@@ -43,8 +43,9 @@ export type SetupOptionItem = {
 
 export type ProcessStep = {
   id: number;
-  step: string;
+  step?: string;
   title: string;
+  inner_title?: string;
   sub_title: string;
   description: string;
 };
