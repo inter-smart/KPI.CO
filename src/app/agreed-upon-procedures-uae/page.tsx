@@ -80,6 +80,13 @@ export type MediaItem = {
     alt: string;
 };
 
+export type ServiceItem = {
+    id: number;
+    media: MediaItem;
+    title: string;
+    slug: string;
+};
+
 export type WhyChooseItem = {
     id: number;
     title: string;
@@ -95,17 +102,17 @@ export type CounterItem = {
 
 
 export type RiskOrganisationData = {
-  title?: string;
-  description?: string;
-  items?: {
-    id: number;
-    text: string;
-  }[];
-  ftr_description?: string;
-  media?: {
-    path?: string;
-    alt?: string;
-  };
+    title?: string;
+    description?: string;
+    items?: {
+        id: number;
+        text: string;
+    }[];
+    ftr_description?: string;
+    media?: {
+        path?: string;
+        alt?: string;
+    };
 };
 
 export type CtaData = {
@@ -341,29 +348,29 @@ const localData = {
         },
     ] satisfies CounterItem[],
 
-      explore_service: {
+    explore_service: {
         title: "Explore Related Audit Services",
         items: [
-          {
-            id: 1,
-            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-            title: "Financial Statement  <br/>Audit",
-            slug: "#",
-          },
-          {
-            id: 2,
-            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-            title: "DIFC & DFSA Regulated  <br/>Audits",
-            slug: "#",
-          },
-          {
-            id: 3,
-            media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-            title: "ADGM Regulated <br/>Audit",
-            slug: "#",
-          },
+            {
+                id: 1,
+                media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+                title: "Financial Statement  <br/>Audit",
+                slug: "#",
+            },
+            {
+                id: 2,
+                media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+                title: "DIFC & DFSA Regulated  <br/>Audits",
+                slug: "#",
+            },
+            {
+                id: 3,
+                media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
+                title: "ADGM Regulated <br/>Audit",
+                slug: "#",
+            },
         ] satisfies ServiceItem[],
-      },
+    },
 
     cta: {
         title: "Discuss an Agreed-Upon Procedures Engagement",

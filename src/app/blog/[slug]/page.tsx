@@ -9,7 +9,7 @@ import BlogReadingProgress from "@/components/features/blogs/BlogReadingProgress
 
 type Props = {
   params: Promise<{ slug: string }>;
-};
+}; 
 
 // Static data for sections that are not yet dynamic in the data model
 export type GetInTouch = {

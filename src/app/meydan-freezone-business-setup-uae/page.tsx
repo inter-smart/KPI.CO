@@ -124,10 +124,11 @@ export type MeydanFreeZoneData = {
 
 export type MeydanKeyBenefitsData = {
   title: string;
+  description?: string;
   slides: {
     id: number;
     title: string;
-    items: string[];
+    items: (string | { title?: string; description?: string })[];
     media: {
       path: string;
       alt: string;
@@ -166,7 +167,7 @@ const localData = {
       alt: "Meydan",
     },
   } satisfies MainlandBusinessData,
-  
+
   meydanFreeZone: {
     title: "Is Meydan the Free Zone Right For You?",
     free_zone_list: [

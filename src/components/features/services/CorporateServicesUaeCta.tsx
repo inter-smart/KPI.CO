@@ -4,9 +4,20 @@ import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
 import { Button } from "@/components/ui/button";
-import type { CtaData } from "@/app/corporate-services-uae/page";
+export type CtaData = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
+  };
+};
 
-type CorporateServicesUaeCtaProps = {
+export type CorporateServicesUaeCtaProps = {
   data: CtaData;
   variant?: "default" | "mainland" | "saifz";
 };
@@ -32,7 +43,7 @@ export default function CorporateServicesUaeCta({
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "saifz" &&
-              "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
+            "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
           )}
         >
           <div
@@ -82,7 +93,7 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
-                  "px-[20px] xl:px-[25px] 2xl:px-[30px] 3xl:px-[35px]",
+                "px-[20px] xl:px-[25px] 2xl:px-[30px] 3xl:px-[35px]",
               )}
               asChild
             >

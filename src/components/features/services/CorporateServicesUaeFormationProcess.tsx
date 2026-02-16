@@ -1,20 +1,30 @@
 "use client";
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
-import type { ProcessStep } from "@/app/corporate-services-uae/page";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type CorporateServicesUaeFormationProcessProps = {
-  variant?: "mainland" | "default" | "aup";
-  data: {
-    title: string;
-    description?: string | null;
-    sub_title?: string | null;
-    steps: ProcessStep[];
-  };
+export type ProcessStep = {
+  id: number;
+  step?: string;
+  title: string;
+  inner_title?: string;
+  sub_title: string;
+  description: string;
+};
+
+export type CorporateServicesUaeFormationProcessData = {
+  title: string;
+  description?: string | null;
+  sub_title?: string | null;
+  steps: ProcessStep[];
+};
+
+export type CorporateServicesUaeFormationProcessProps = {
+  variant?: "Vat-Services" | "mainland" | "aup" | "default";
+  data: CorporateServicesUaeFormationProcessData;
 };
 
 export default function CorporateServicesUaeFormationProcess({
@@ -29,9 +39,10 @@ export default function CorporateServicesUaeFormationProcess({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            variant === "mainland"
+            variant === "mainland" || variant === "aup"
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
+            variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
           )}
         >
           <Heading
@@ -58,9 +69,9 @@ export default function CorporateServicesUaeFormationProcess({
           </Heading>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14">
+        <div className={cn("grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14", variant === "Vat-Services" && "items-center")}>
           <div className="flex items-center">
-            <div className="flex flex-row lg:flex-col overflow-auto lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
+            <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
                 <motion.div
                   key={step.id}
@@ -76,6 +87,7 @@ export default function CorporateServicesUaeFormationProcess({
                   <motion.div
                     className={cn(
                       "w-[100%] lg:w-[1px] h-[1px] lg:h-[160%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      variant === "Vat-Services" && "lg:h-[250%]",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
@@ -107,20 +119,20 @@ export default function CorporateServicesUaeFormationProcess({
                       />
                     )}
                   </div>
-
-                  {variant !== "aup" && (
+                  {step.step && (
                     <Text
                       as="div"
                       size="p3"
                       className={cn(
                         "font-normal transition-colors duration-300",
-                        index <= activeStep ? "text-[#3eb0ea]" : "text-[#a7a7a7]",
+                        index <= activeStep
+                          ? "text-[#3eb0ea]"
+                          : "text-[#a7a7a7]",
                       )}
                     >
                       {step.step}
                     </Text>
                   )}
-
                   <Heading
                     as="div"
                     size="h6"
@@ -135,7 +147,6 @@ export default function CorporateServicesUaeFormationProcess({
               ))}
             </div>
           </div>
-
           <div className="relative">
             <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] 2xl:min-h-[560px] 3xl:min-h-[680px] bg-white rounded-[12px] 2xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-10 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
               <Image
@@ -183,6 +194,15 @@ export default function CorporateServicesUaeFormationProcess({
                     >
                       {data.steps[activeStep].title}
                     </Heading>
+                    {data.steps[activeStep].inner_title && (
+                      <Heading
+                        as="h4"
+                        size="h6"
+                        className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
+                      >
+                        {data.steps[activeStep].inner_title}
+                      </Heading>
+                    )}
                   </motion.div>
 
                   <motion.div

@@ -43,7 +43,6 @@ export default function DocumentRequired({
       )}
     >
       <div className="container">
-
         <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
           {/* Main Content */}
           <div className="w-full md:w-[57%] xl:w-[60%]">

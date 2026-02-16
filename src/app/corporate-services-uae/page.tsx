@@ -43,8 +43,9 @@ export type SetupOptionItem = {
 
 export type ProcessStep = {
   id: number;
-  step: string;
+  step?: string;
   title: string;
+  inner_title?: string;
   sub_title: string;
   description: string;
 };
@@ -224,7 +225,7 @@ const localData = {
     steps: [
       {
         id: 1,
-        step: "01",
+        step: "Step One",
         title: "Speak To A Consultant",
         sub_title: "Define Scope & Objectives",
         description:
@@ -232,7 +233,7 @@ const localData = {
       },
       {
         id: 2,
-        step: "02",
+        step: "Step Two",
         title: "Choose The Right Jurisdiction",
         sub_title: "Choose the Right Jurisdiction",
         description:
@@ -240,7 +241,7 @@ const localData = {
       },
       {
         id: 3,
-        step: "03",
+        step: "Step Three",
         title: "Secure Your Trade License",
         sub_title: "Secure Your Trade License",
         description:
@@ -248,7 +249,7 @@ const localData = {
       },
       {
         id: 4,
-        step: "04",
+        step: "Step Four",
         title: "Apply For UAE Residency",
         sub_title: "Apply For UAE Residency",
         description:
@@ -256,7 +257,7 @@ const localData = {
       },
       {
         id: 5,
-        step: "05",
+        step: "Step Five",
         title: "Open Your Business Bank Account",
         sub_title: "Open Your Business Bank Account",
         description:

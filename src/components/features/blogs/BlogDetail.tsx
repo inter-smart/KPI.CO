@@ -66,7 +66,8 @@ export default function BlogDetail({ data }: BlogDetailProps) {
         getComputedStyle(document.body).getPropertyValue("--header-y") || "0",
       ) + 40;
 
-    const y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+    const y =
+      el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
 
     window.scrollTo({
       top: y,
@@ -179,7 +180,6 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                   {data.sidebar_title}
                 </Heading>
               )}
-
               <ul className="space-y-[18px]">
                 {tocItems.map((item, index) => {
                   const isActive = index === activeIndex;
@@ -224,8 +224,7 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                   );
                 })}
               </ul>
-
-              {/* Sponsored Card */}
+              {/* Sponsored Card */} ``
               {data?.sponsored && (
                 <div className="mt-[24px]">
                   <BlogSponsoredCard data={data.sponsored} />
