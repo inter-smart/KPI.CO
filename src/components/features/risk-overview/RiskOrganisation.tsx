@@ -24,7 +24,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
         <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]", variant === "freezone" && "items-end",)}>
           <div className="w-full md:w-[57%] xl:w-[60%]">
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
+              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%]">
                 {data?.title && (
                   <Heading
                     as="h2"
@@ -71,7 +71,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
 
             {data?.ftr_description && (
-              <div className="mt-6 lg:mt-7 2xl:mt-8 text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal text-[#4E4E4E]">
+              <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal text-[#4E4E4E] mt-6 lg:mt-7 2xl:mt-8 max-w-[90%]">
                 {parse(data.ftr_description)}
               </div>
             )}
