@@ -77,7 +77,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] absolute -z-1 top-2.5 lg:top-5 2xl:top-8 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] absolute -z-1 top-2.5 lg:top-4 2xl:top-6 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
@@ -96,7 +96,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
 
                   <div
                     className={cn(
-                      "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-3 transition-all duration-300",
+                      "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-1 2xl:top-3 transition-all duration-300",
                       "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                     )}
                   >
@@ -118,7 +118,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >
-                    {step.title}
+                   {parse(step.title)}
                   </Heading>
                 </motion.div>
               ))}

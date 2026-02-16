@@ -140,7 +140,7 @@ const localData = {
       "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
   } satisfies HeroData,
   whyRisk: {
-    title: "Why DIFC Audits Are Different And Demand More",
+    title: "Why DIFC Audits Are Different <br/> And Demand More",
     highlightsTitle:
       "In DIFC, audit quality is assessed not only on compliance, but on defensibility. It operates with a regulatory environment where:",
     highlights: [

@@ -20,9 +20,9 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
               <Heading
                 as="h3"
                 size="h3"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
+                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block max-md:[&_br]:hidden"
               >
-                {data.title}
+                {parse(data.title)}
               </Heading>
 
               <div className="w-full">

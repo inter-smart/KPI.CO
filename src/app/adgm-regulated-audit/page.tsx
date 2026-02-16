@@ -125,7 +125,7 @@ const localData = {
       "<p>In the ADGM ecosystem, financial reports are never in isolation. They are subject to board and audit committee scrutiny, relied upon by investors, and ultimately subject to regulatory review. As an ADGM-registered audit firm, KPI delivers FSRA-compliant audit services to regulated entities and other entities. Our audits are designed to meet statutory filing requirements and are prepared with regulatory review in mind.</p>",
   } satisfies HeroData,
   whyRisk: {
-    title: "Why ADGM Audits Are Different And Demand More",
+    title: "Why ADGM Audits Are Different <br/> And Demand More",
     highlightsTitle: "ADGM operates within a regulatory framework where:",
     highlights: [
       "Financial reporting is subject to rigorous review by FSRA",
@@ -177,7 +177,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Regulatory focused risk prioritisation",
+        title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
           "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
@@ -191,7 +191,7 @@ const localData = {
       },
       {
         id: 4,
-        title: "Testing of key controls and balances",
+        title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
           "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
