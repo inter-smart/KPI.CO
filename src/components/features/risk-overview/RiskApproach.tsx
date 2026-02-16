@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type RiskApproachProps = {
-  variant?: "mainland" | "default";
+  variant?: "mainland" | "risk" | "default";
   data: {
     title: string;
     description?: string | null;
@@ -55,7 +55,12 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
           </Heading>
         )}
 
-        <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-8 xl:gap-12 2xl:gap-14">
+        <div
+          className={cn(
+            "flex flex-col lg:flex-row gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+            variant === "risk" && "items-center",
+          )}
+        >
           <div className="w-full lg:w-1/2">
             <div className="flex flex-row lg:flex-col overflow-auto lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
@@ -72,7 +77,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] absolute -z-1 top-2.5 lg:top-5 2xl:top-8 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
@@ -91,7 +96,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
 
                   <div
                     className={cn(
-                      "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
+                      "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-3 transition-all duration-300",
                       "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                     )}
                   >
@@ -120,8 +125,8 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="relative">
-              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] 2xl:min-h-[560px] 3xl:min-h-[680px] bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
+            <div className="relative h-full">
+              <div className="w-full h-full bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"

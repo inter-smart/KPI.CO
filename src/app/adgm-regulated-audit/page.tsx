@@ -13,7 +13,6 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
-import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -54,20 +53,6 @@ export type ApproachStep = {
   title: string;
   sub_title: string;
   description: string;
-};
-
-export type RiskOrganisationData = {
-  title?: string;
-  description?: string;
-  items?: {
-    id: number;
-    text: string;
-  }[];
-  ftr_description?: string;
-  media?: {
-    path?: string;
-    alt?: string;
-  };
 };
 
 export type MeydanFreeZoneItem = {
@@ -131,23 +116,22 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/regulated-audit-bg.png",
-      mobilePath: "/images/regulated-audit-mobile-bg.png",
-      alt: "Mainland Company Formation & Licensing in the UAE",
+      desktopPath: "/images/adgm-regulated-bg.png",
+      mobilePath: "/images/adgm-regulated-mobile-bg.png",
+      alt: "ADGM Audits Built to Withstand Regulatory Scrutiny",
     },
-    title: "DIFC Audits Built to Withstand Regulatory Scrutiny ",
+    title: "ADGM Audits Built to Withstand Regulatory Scrutiny ",
     description:
-      "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
+      "<p>In the ADGM ecosystem, financial reports are never in isolation. They are subject to board and audit committee scrutiny, relied upon by investors, and ultimately subject to regulatory review. As an ADGM-registered audit firm, KPI delivers FSRA-compliant audit services to regulated entities and other entities. Our audits are designed to meet statutory filing requirements and are prepared with regulatory review in mind.</p>",
   } satisfies HeroData,
   whyRisk: {
-    title: "Why DIFC Audits Are Different And Demand More",
-    highlightsTitle:
-      "In DIFC, audit quality is assessed not only on compliance, but on defensibility. It operates with a regulatory environment where:",
+    title: "Why ADGM Audits Are Different And Demand More",
+    highlightsTitle: "ADGM operates within a regulatory framework where:",
     highlights: [
-      "Financial reporting is subject to active review by the DFSA",
-      "Governance weaknesses and control failures carry regulatory consequences",
-      "Audit judgement extends beyond numbers and is open to challenge",
-      "Inadequate documentation can trigger enhanced regulatory scrutiny",
+      "Financial reporting is subject to rigorous review by FSRA",
+      "Weak governance and control failures carry direct consequences",
+      "Audit judgement is not just numbers, is open to challenge",
+      "Inadequate documentation leads to intensive regulatory consequences",
     ],
     footerDescription: "",
     image: {
@@ -156,25 +140,26 @@ const localData = {
     },
   } satisfies WhyRiskData,
   riskAdvisory: {
-    title: "DIFC & DFSA Regulated Audit Services",
+    title: "ADGM Regulated Audit Services",
     description:
-      "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with →</p><p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with →Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.</p> ",
-    highlightsText: "",
+      "<p>KPI provides audit services to ADGM registered and FSRA regulated entities in line with </p>",
+    highlightsText:
+      "We follow a risk-based audit methodology, prioritising regulatory and financial significance over audit volume. Audit quality is supported by documented processes and consistent application of professional judgement.",
     advisoryItems: [
       {
         id: 1,
         slNo: 1,
-        description: "DIFC Companies Law and Regulations (as amended)",
+        description: "ADGM Companies Regulations, as amended",
       },
       {
         id: 2,
         slNo: 2,
-        description: "DFSA Rulebooks and prescribed reporting requirements",
+        description: "FSRA Rulebooks and prescribed reporting requirements",
       },
       {
         id: 3,
         slNo: 3,
-        description: "International Standards on Auditing (ISA)",
+        description: "International Standards on Auditing (ISA",
       },
     ],
   } satisfies RiskAdvisoryDta,
@@ -188,14 +173,14 @@ const localData = {
         title: "Entity specific risk assessment",
         sub_title: "Entity specific risk assessment",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
       },
       {
         id: 2,
         title: "Regulatory focused risk prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
       },
       {
         id: 3,
@@ -209,7 +194,7 @@ const localData = {
         title: "Testing of key controls and balances",
         sub_title: "Testing of key controls and balances",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
       },
       {
         id: 5,
@@ -220,65 +205,36 @@ const localData = {
       },
     ] satisfies ApproachStep[],
   },
-  riskOrganisation: {
-    title: "Who We Audit in DIFC",
-    description:
-      "<p>Our audit services are designed for entities where clarity, precision, and regulatory certainty are required, including: </p>",
-    items: [
-      {
-        id: 1,
-        text: "DFSA-regulated financial institutions and financial services firms ",
-      },
-      {
-        id: 2,
-        text: "DIFC-registered entities including holding companies and SPVs ",
-      },
-      {
-        id: 3,
-        text: "Investment funds and asset management structures",
-      },
-      { id: 4, text: "Repeated control issues or unresolved audit findings  " },
-      
 
-    ],
-
-    media: {
-      path: "/images/document-required-img.jpg", // <-- your image path
-      alt: "Required documents",
-    },
-    ftr_description:
-      "<p>Audit scope and depth are proportionate to regulatory risk and supervisory focus.</p>",
-  } satisfies RiskOrganisationData,
   meydanFreeZone: {
     title: "",
     free_zone_list: [
       {
         id: 1,
-        title: "Audit Support During DIFC Liquidation & Regulatory Closure",
-        description:
-          "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
+        title: "Who We Audit in ADGM",
+        description: "",
         highlightsText:
-          "KPI provides audit support aligned with DIFC and DFSA requirements, including:",
+          "Our audit services are designed for entities where clarity, precision and regulatory certainty are required including:",
         zone_list: [
-          "Audit of final financial statements",
-          "Support for regulatory and authority submissions",
-          "Audit coordination with liquidators and legal advisors",
+          "FSRA regulated financial institutions or financial services firms",
+          "ADGM registered entities including holding companies, special purpose vehicles (SPVs) and foundations",
+          "Investment funds",
         ],
         footer_description:
-          "Our focus during closure is ensuring financial information remains accurate, documented, and defensible throughout regulatory and legal review.",
+          "Scope of audit and depth are proportionate to regulatory risk and supervisory focus.",
       },
     ],
     structure_list: [
       {
         id: 1,
-        title: "DIFC Experience Built Over Time",
+        title: "ADGM Experience From The Early Years",
         description:
-          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles.</p> <p> This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved across DIFC entities.</p>",
+          "<p>KPI was the first audit firm registered with ADGM and has been involved in the ADGM-regulated entities audits from the jurisdiction’s initial years. This longstanding presence provides us with deep understanding, practical insight into regulatory expectations and how audit challenges have emerged in ADGM entities over time.</p>",
       },
     ],
   } satisfies MeydanFreeZoneData,
   whyChoose: {
-    title: "Why DIFC Entities Trust KPI",
+    title: "Why ADGM Entities Trust KPI",
     description:
       "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
     items: [
@@ -286,7 +242,7 @@ const localData = {
         id: 1,
         title: "Regulatory familiarity",
         description:
-          "<p>Strong understanding of DFSA expectations without unnecessary complexity.</p>",
+          "<p>Deep understanding of FSRA expectations without introducing unnecessary complexity</p>",
       },
       {
         id: 2,
@@ -309,16 +265,16 @@ const localData = {
     ] satisfies WhyChooseItem[],
   },
   contactUs: {
-    title: "Discuss Your DIFC Audit Requirements",
+    title: "Discuss Your ADGM Audit Requirements",
     description:
-      "<p>Your audit must satisfy DFSA expectations, board scrutiny, and <br/> stakeholder confidence - not just statutory compliance. <br/> If you have questions regarding audits of DIFC-registered or DFSA- <br/>regulated entities, let’s talk.</p>",
+      "<p>If you have any questions regarding audit of ADGM registered entities, <br/> please reach out to us for assistance.</p>",
     button: {
       label: "Get In Touch",
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-difc.png",
-      overlayMobile: "/images/overlay-difc-mobile.png",
+      overlay: "/images/overlay-adgm.png",
+      overlayMobile: "/images/overlay-adgm-mobile.png",
     },
   } satisfies CtaData,
   explore_service: {
@@ -327,7 +283,7 @@ const localData = {
       {
         id: 1,
         media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-        title: "Financial Statement Audit",
+        title: "Related Audit <br/> Services",
         slug: "#",
       },
       {
@@ -339,7 +295,7 @@ const localData = {
       {
         id: 3,
         media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-        title: "ADGM Regulated Audit",
+        title: "DIFC & DFSA Regulated Audit",
         slug: "#",
       },
     ] satisfies ServiceItem[],
@@ -349,53 +305,40 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is a DIFC regulated audit?",
+        title: "What is an ADGM regulated audit?",
         description: `
           <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
                         `,
       },
       {
         id: 2,
-        title: "Who requires a DIFC audit?",
+        title: "Who needs an ADGM audit?",
         description: `
           <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
                         `,
       },
       {
         id: 3,
-        title: "What makes DIFC audits different?",
+        title: "What makes ADGM audits different from other audits?",
         description: `
           <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
                         `,
       },
       {
         id: 4,
-        title: "Is KPI an approved DIFC audit firm?",
+        title: "Is KPI registered as an ADGM audit firm?",
         description: `
           <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
                         `,
       },
       {
         id: 5,
-        title: "What standards do you follow?",
+        title: "What standards do you follow for ADGM audits?",
         description: `
-          <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+          <p>We conduct ADGM audits in accordance with:· International Standards on Auditing (ISA)· ADGM Companies Regulations (as amended)· FSRA Rulebooks and prescribed reporting requirements· International Financial Reporting Standards (IFRS)</p>
                         `,
       },
-      {
-        id: 6,
-        title: "How long does a DIFC audit take?",
-        description: `
-          <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
-                        `,
-      },
-      {
-        id: 7,
-        title: "Do you audit DFSA-regulated financial institutions?",
-        description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
-                        `,
-      },
+     
     ] satisfies FaqItem[],
   },
   insights: {
@@ -419,7 +362,6 @@ export default function DwtcFreezone() {
       <WhyRiskManagement data={localData.whyRisk} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
-      <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}

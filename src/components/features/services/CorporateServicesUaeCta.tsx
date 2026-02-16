@@ -68,7 +68,7 @@ export default function CorporateServicesUaeCta({
             >
               {data?.title}
             </Heading>
-            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white">
+            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
               {parse(data?.description)}
             </div>
           </div>
