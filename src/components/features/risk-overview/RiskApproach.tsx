@@ -126,7 +126,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative h-full">
-              <div className="w-full h-full bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
+              <div className="w-full h-full bg-white rounded-[12px] 2xl:rounded-[14px] p-6 xl:p-10 2xl:p-12 border border-[#E2E2E2] shadow-[0_4px_20px_rgba(28,83,150,0.1)] relative z-0 overflow-hidden flex items-center">
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"

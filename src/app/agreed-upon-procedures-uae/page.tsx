@@ -68,13 +68,6 @@ export type DocumentRequiredData = {
     ftr_description?: string;
 };
 
-export type WhyBuildItem = {
-    id: number;
-    media: MediaItem;
-    title: string;
-    description: string;
-};
-
 export type MediaItem = {
     path: string;
     alt: string;
