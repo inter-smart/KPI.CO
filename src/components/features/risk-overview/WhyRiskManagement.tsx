@@ -15,12 +15,12 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
       <div className="container">
         <div className="flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[25px] 3xl:mb-[35px]">
           {/* Left Content */}
-          <div className="w-full lg:w-[calc(100%-365px)] xl:w-[calc(100%-450px)] 2xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)]">
+          <div className="w-full lg:w-[calc(100%-365px)] xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)]">
             <div className="w-full">
               <Heading
                 as="h3"
                 size="h3"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
+                className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] max-w-[90%] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
               >
                 {data.title}
               </Heading>
@@ -46,7 +46,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                             alt="arrow mark"
                           />
                         </div>
-                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black mt-[5px]">
+                        <span className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black mt-[5px]">
                           {item}
                         </span>
                       </div>
@@ -58,7 +58,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[365px] xl:w-[450px] 2xl:w-[510px] 3xl:w-[680px]">
+          <div className="w-full lg:w-[365px] xl:w-[510px] 3xl:w-[680px]">
             <Heading
               as="h3"
               size="h3"
