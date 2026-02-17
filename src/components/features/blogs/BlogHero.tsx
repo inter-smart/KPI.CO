@@ -1,14 +1,14 @@
 "use client";
-
 import { Heading } from "@/components/utils/typography";
-import Image from 'next/image'
+import Image from "next/image";
+
 export type BlogHeroData = {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 };
 
 type BlogHeroProps = {
-    data: BlogHeroData;
+  data: BlogHeroData;
 };
 
 export default function BlogHero({ data }: BlogHeroProps) {

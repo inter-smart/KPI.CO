@@ -33,17 +33,8 @@ const navItems = [
         href: '/advisory-services-uae',
         subItems: [
           { name: 'Corporate Services', href: '/corporate-services-uae' },
-          { name: 'Advisory Services', href: '/advisory-services-uae' },
-          { name: 'Mainland Company Formation', href: '/mainland-company-formation-uae' },
-          { name: 'Dubai Silicon Oasis', href: '/company-formation-dubai-silicon-oasis' },
-          { name: 'Sharjah Airport Free Zone', href: '/business-setup-sharjah-airport-international-free-zone' },
-          { name: 'Hamriyah Free Zone', href: '/company-setup-hamriyah-free-zone' },
-          { name: 'Dubai Airport Free Zone', href: '/business-setup-dubai-airport-free-zone' },
-          { name: 'DMCC Free Zone', href: '/dmcc-freezone-business-setup-uae' },
-          { name: 'DWTC Free Zone', href: '/dwtc-freezone' },
-          { name: 'IFZA', href: '/ifza' },
-          { name: 'Meydan Free Zone', href: '/meydan-freezone-business-setup-uae' },
-          { name: 'VAT Advisory Services', href: '/vat-advisory-services-uae' },
+          { name: 'Tax Advisory', href: '/advisory-services-uae' }, 
+          { name: 'e-invoicing Services', href: '/advisory-services-uae' }, 
         ]
       },
       {
@@ -275,7 +266,7 @@ export default function Header() {
                                                   )}
                                                 </div>
                                               )}
-                                              <span className="text-[15px] font-normal text-[#1C5396]">{mega.label}</span>
+                                              <span className="text-[15px] font-normal text-[#1C5396] !font-medium">{mega.label}</span>
                                             </div>
                                           </AccordionTrigger>
                                           <AccordionContent className="pl-11 pt-1">

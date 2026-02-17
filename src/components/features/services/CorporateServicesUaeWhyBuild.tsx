@@ -62,7 +62,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "font-semibold text-black mb-2 2xl:mb-2.5",
+          "font-semibold !text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
           "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",

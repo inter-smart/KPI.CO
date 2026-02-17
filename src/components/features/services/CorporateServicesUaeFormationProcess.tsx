@@ -280,13 +280,13 @@ export default function CorporateServicesUaeFormationProcess({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
                   >
-                    <Heading
+                    {/* <Heading
                       as="h4"
                       size="h6"
                       className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
                     >
                       {data.steps[activeStep].title}
-                    </Heading>
+                    </Heading> */}
                     {data.steps[activeStep].inner_title && (
                       <Heading
                         as="h4"
@@ -297,7 +297,6 @@ export default function CorporateServicesUaeFormationProcess({
                       </Heading>
                     )}
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
