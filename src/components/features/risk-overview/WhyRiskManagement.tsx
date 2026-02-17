@@ -47,7 +47,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                             alt="arrow mark"
                           />
                         </div>
-                        <span className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black mt-[5px]">
+                        <span className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black">
                           {item}
                         </span>
                       </div>

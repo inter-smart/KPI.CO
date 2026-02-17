@@ -114,7 +114,7 @@ export default function RiskExploreService({
 }
 
 /* ------------------------------------------------------------------ */
-/* CARD                                                               */
+/* Service CARD                                                               */
 /* ------------------------------------------------------------------ */
 
 function Service({ data }: ServiceProps) {

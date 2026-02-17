@@ -131,7 +131,7 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/regulated-audit-bg.png",
+      desktopPath: "/images/regulated-audit-bg.jpg",
       mobilePath: "/images/regulated-audit-mobile-bg.png",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
@@ -237,7 +237,6 @@ const localData = {
         id: 3,
         text: "Investment funds and asset management structures",
       },
-      { id: 4, text: "Repeated control issues or unresolved audit findings  " },
       
 
     ],
@@ -254,7 +253,7 @@ const localData = {
     free_zone_list: [
       {
         id: 1,
-        title: "Audit Support During DIFC Liquidation & Regulatory Closure",
+        title: "Audit Support During DIFC Liquidation & Regulatory <br/> Closure",
         description:
           "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
         highlightsText:
@@ -417,7 +416,7 @@ export default function DwtcFreezone() {
     <>
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
-      <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
+      <RiskAdvisory variant={["difc", "center"]}data={localData.riskAdvisory} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
