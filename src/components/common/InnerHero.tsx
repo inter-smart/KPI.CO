@@ -67,7 +67,7 @@ export default function InnerHero({
             <Text
               as="div"
               size="p3"
-              className="text-white xl:max-w-[91%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
+              className="text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
             >
               {parse(data?.description)}
             </Text>

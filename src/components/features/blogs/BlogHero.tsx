@@ -13,7 +13,7 @@ type BlogHeroProps = {
 
 export default function BlogHero({ data }: BlogHeroProps) {
     return (
-        <section className="relative h-[375px]  sm:h-[230px] xl:h-[300px] 2xl:h-[350px] 3xl:h-[440px]   w-full flex items-center overflow-hidden">
+        <section className="relative h-[375px]  sm:h-[230px] xl:h-[340px] 2xl:h-[350px] 3xl:h-[440px]   w-full flex items-center overflow-hidden">
             {/* Background Gradient */}
             <div
                 className="absolute inset-0 z-0 bg-gradient-to-b from-[#053269] to-[#6A9FE0]" 
@@ -31,7 +31,7 @@ export default function BlogHero({ data }: BlogHeroProps) {
                     >
                         {data.title}
                     </Heading>
-                    <p className="text-white/95 text-[17px] md:text-[19px] xl:text-[22px] 2xl:text-[24px] font-normal leading-[1.4] md:leading-[1.5] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                    <p className="text-white/95 text-[17px] md:text-[19px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] font-normal leading-[1.4] md:leading-[1.5] xl:max-w-[530px] 2xl:max-w-[570px] 3xl:max-w-[700px] duration-1000 delay-300">
                         {data.description}
                     </p>
                 </div>
