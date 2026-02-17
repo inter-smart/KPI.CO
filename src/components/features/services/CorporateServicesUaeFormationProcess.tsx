@@ -58,7 +58,6 @@ export default function CorporateServicesUaeFormationProcess({
             </Text>
           )}
         </div>
-
         {data.sub_title && (
           <Heading
             as="h3"
@@ -68,7 +67,6 @@ export default function CorporateServicesUaeFormationProcess({
             {data.sub_title}
           </Heading>
         )}
-
         <div
           className={cn(
             "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
@@ -119,7 +117,7 @@ export default function CorporateServicesUaeFormationProcess({
                       <motion.div
                         className="w-full h-full rounded-full bg-white"
                         initial={{ scale: 0 }}
-                        animate={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
                         transition={{ duration: 0.3 }}
                       />
                     )}
@@ -142,7 +140,7 @@ export default function CorporateServicesUaeFormationProcess({
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold line-clamp-1 transition-colors duration-300",
+                      "font-semibold line-clamp-2 transition-colors duration-300",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >
@@ -161,19 +159,18 @@ export default function CorporateServicesUaeFormationProcess({
                 height={740}
                 className="absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none"
               />
-
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStep}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  exit={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                   className="relative z-10 w-full"
                 >
                   {variant !== "aup" && (
                     <motion.div
-                      initial={{ opacity: 0, x: -10 }}
+                      initial={{ opacity: 1, x: 0 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
                     >
@@ -186,9 +183,8 @@ export default function CorporateServicesUaeFormationProcess({
                       </Heading>
                     </motion.div>
                   )}
-
                   <motion.div
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
                   >
@@ -210,7 +206,7 @@ export default function CorporateServicesUaeFormationProcess({
                     )}
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.3 }}
                   >

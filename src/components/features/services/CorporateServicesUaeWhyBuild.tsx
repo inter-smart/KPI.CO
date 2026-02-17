@@ -64,7 +64,7 @@ function WhyBuildCard({
         className={cn(
           "font-semibold !text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
-          "text-[#1C5396]",
+            "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "text-[#1C5396]",
@@ -78,7 +78,7 @@ function WhyBuildCard({
         className={cn(
           "font-normal text-[#4e4e4e] sm:text-black",
           hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
-            ? "lg:text-[12px] 2xl:text-[14px] 3xl:text-[18px]"
+            ? "text-[14px] 2xl:text-[14px] 3xl:text-[18px]"
             : "",
         )}
       >
@@ -107,7 +107,7 @@ export default function CorporateServicesUaeWhyBuild({
           ? "bg-[#f9fafb] "
           : "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "saifz") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
       )}
     >
       <div className="container">
@@ -144,7 +144,7 @@ export default function CorporateServicesUaeWhyBuild({
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
-            "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+              "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
           )}
         >
           {data.items.map((item) => (
