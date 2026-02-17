@@ -69,7 +69,12 @@ export default function CorporateServicesUaeFormationProcess({
           </Heading>
         )}
 
-        <div className={cn("grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14", variant === "Vat-Services" && "items-center")}>
+        <div
+          className={cn(
+            "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+            variant === "Vat-Services" && "items-center",
+          )}
+        >
           <div className="">
             <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
@@ -185,13 +190,13 @@ export default function CorporateServicesUaeFormationProcess({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
                   >
-                    <Heading
+                    {/* <Heading
                       as="h4"
                       size="h6"
                       className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
                     >
                       {data.steps[activeStep].title}
-                    </Heading>
+                    </Heading> */}
                     {data.steps[activeStep].inner_title && (
                       <Heading
                         as="h4"
@@ -202,7 +207,6 @@ export default function CorporateServicesUaeFormationProcess({
                       </Heading>
                     )}
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
