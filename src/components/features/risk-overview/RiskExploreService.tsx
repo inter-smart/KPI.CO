@@ -121,7 +121,7 @@ function Service({ data }: ServiceProps) {
   return (
     <Link
       href={data.slug ?? "#"}
-      className="group w-full h-[325px] xl:h-[425px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden shadow-lg relative"
+      className="group w-full h-[325px] xl:h-[425px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
     >
       <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
         <Image
