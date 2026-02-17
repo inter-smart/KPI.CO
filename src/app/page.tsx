@@ -122,7 +122,7 @@ const localData = {
         description:
           "For over 30 years, KPI has supported businesses across the UAE with audit, risk, tax, corporate, and technology advisory services. We work with organisations at every stage, from establishment to expansion, helping strengthen governance, manage risk, and support long-term, sustainable growth.",
         buttonText: "Get in Touch",
-        buttonLink: "/",
+        buttonLink: "/#contact",
         type: "video" as const,
         mediaUrl: "/videos/banner.mp4",
         posterUrl: "/images/hero-bg-2.jpg",
@@ -153,7 +153,7 @@ const localData = {
         title: "Audit & Assurance",
         description:
           "Independent, high-quality audits that strengthen stakeholder confidence and meet UAE statutory and regulatory requirements. ",
-        button: { link: "/", target: false },
+        button: { link: "/financial-statement-audit-uae", target: false },
       },
       {
         id: 2,
@@ -164,7 +164,7 @@ const localData = {
         title: "Risk Advisory",
         description:
           "Governance-led risk advisory that helps organisations identify, manage, and control risk across operations and compliance.",
-        button: { link: "/", target: false },
+        button: { link: "/risk-overview", target: false },
       },
       {
         id: 3,
@@ -175,7 +175,7 @@ const localData = {
         title: "Tax Advisory",
         description:
           "Practical advice on UAE corporate tax and VAT, focused on clarity, supporting compliance and effective financial planning.",
-        button: { link: "/", target: false },
+        button: { link: "/vat-advisory-services-uae", target: false },
       },
       {
         id: 4,
@@ -186,7 +186,7 @@ const localData = {
         title: "Corporate Services",
         description:
           "End-to-end corporate services to start a business in the UAE, including licensing, banking, PRO, and ongoing support. ",
-        button: { link: "/", target: false },
+        button: { link: "/corporate-services-uae", target: false },
       },
       {
         id: 5,
@@ -197,7 +197,7 @@ const localData = {
         title: "DIFC & ADGM",
         description:
           "Advisory and audit support for DIFC and ADGM entities, including regulatory, audit, and compliance needs.",
-        button: { link: "/", target: false },
+        button: { link: "/difc-dfsa-regulated-audit", target: false },
       },
       {
         id: 6,
@@ -304,7 +304,7 @@ const localData = {
       "<p>KPI was established in Dubai in the early 1990s, shaped by hands-on experience working with businesses under real commercial and regulatory pressure. From the outset, our focus has been on delivering reliable audit, accounting, and advisory services grounded in discipline, accountability, and professional judgement.</p><p>Over time, our work expanded beyond traditional audit into risk, regulatory advisory, corporate services, and enterprise technology - reflecting how modern businesses actually operate. Today, KPI is a multi-disciplinary advisory firm serving clients across the UAE and the wider region, guided by independence, integrity, and long-term trust.</p><p>Whether you are establishing a presence, strengthening governance, or scaling operations, KPI provides the expertise, structure, and insight to drive measurable results.</p>",
     button: {
       label: "Get in Touch",
-      link: "/",
+      link: "/#contact",
     },
   } satisfies AboutData,
 

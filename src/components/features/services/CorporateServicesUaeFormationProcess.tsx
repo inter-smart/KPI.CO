@@ -2,8 +2,8 @@
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import Image from "next/image";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export type ProcessStep = {
@@ -32,9 +32,97 @@ export default function CorporateServicesUaeFormationProcess({
   variant,
 }: CorporateServicesUaeFormationProcessProps) {
   const [activeStep, setActiveStep] = useState(0);
+  const containerRef = useRef<HTMLElement>(null);
+  const isScrollControlled = variant === "aup";
+
+  const activeStepRef = useRef(activeStep);
+  const scrollAccumulator = useRef(0);
+  const lastScrollTime = useRef(0);
+  const wasInLockZone = useRef(false);
+
+  // Keep ref in sync
+  useEffect(() => {
+    activeStepRef.current = activeStep;
+  }, [activeStep]);
+
+  useEffect(() => {
+    if (!isScrollControlled) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      const currentStep = activeStepRef.current;
+      const isScrollingDown = e.deltaY > 0;
+      const isScrollingUp = e.deltaY < 0;
+      const maxStep = data.steps.length - 1;
+
+      const rect = containerRef.current?.getBoundingClientRect();
+
+    
+      const MIN_TOP = -50;
+      const MAX_TOP = 380;
+
+      const isInLockZone = rect
+        ? (rect.top >= MIN_TOP && rect.top <= MAX_TOP)
+        : false;
+ 
+      const shouldLock = isInLockZone && (
+        (isScrollingDown && currentStep < maxStep) ||
+        (isScrollingUp && currentStep > 0)
+      );
+
+      if (shouldLock) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!wasInLockZone.current) {
+          scrollAccumulator.current = 0;
+          lastScrollTime.current = 0; 
+          wasInLockZone.current = true;
+        }
+
+        // Accumulate scroll delta
+        scrollAccumulator.current += e.deltaY;
+
+        const now = Date.now();
+        const THRESHOLD = 30; 
+        const COOLDOWN = 300; 
+
+        if (now - lastScrollTime.current > COOLDOWN) {
+          if (scrollAccumulator.current > THRESHOLD && currentStep < maxStep) {
+            setActiveStep((prev) => prev + 1);
+            lastScrollTime.current = now;
+            scrollAccumulator.current = 0;
+          } else if (scrollAccumulator.current < -THRESHOLD && currentStep > 0) {
+            setActiveStep((prev) => prev - 1);
+            lastScrollTime.current = now;
+            scrollAccumulator.current = 0;
+          }
+        }
+      } else {
+        // Exited lock zone
+        scrollAccumulator.current = 0;
+        wasInLockZone.current = false;
+      }
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("wheel", handleWheel, { passive: false });
+    }
+    return () => {
+      if (container)
+        container.removeEventListener("wheel", handleWheel);
+    };
+  }, [isScrollControlled, data.steps.length]);
 
   return (
-    <section className="w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white overflow-hidden">
+    <section
+      ref={containerRef}
+      className={cn(
+        "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white",
+        !isScrollControlled && "overflow-hidden",
+        isScrollControlled && "relative scroll-mt-24"
+      )}
+    >
       <div className="container">
         <div
           className={cn(
@@ -69,19 +157,24 @@ export default function CorporateServicesUaeFormationProcess({
           </Heading>
         )}
 
-        <div className={cn("grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14", variant === "Vat-Services" && "items-center")}>
+        <div className={cn(
+          "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+          variant === "Vat-Services" && "items-center",
+          // isScrollControlled && "sticky top-24 lg:top-32"
+        )}>
           <div className="flex items-center">
             <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
                 <motion.div
                   key={step.id}
                   className={cn(
-                    "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-10 xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] cursor-pointer transition-all duration-300 max-lg:pr-4",
+                    "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-10 xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
+                    isScrollControlled ? "cursor-default" : "cursor-pointer",
                     index <= activeStep
                       ? "opacity-100"
                       : "opacity-90 hover:opacity-100",
                   )}
-                  onClick={() => setActiveStep(index)}
+                  onClick={() => !isScrollControlled && setActiveStep(index)}
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div

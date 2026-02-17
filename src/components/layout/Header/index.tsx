@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, FileText, Users, ShieldCheck, Cpu, BookOpen, Briefcase, Globe, Info } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import NavDropdown, { MegaCategory } from './NavDropdown';
 
 const navItems = [
@@ -20,10 +20,10 @@ const navItems = [
         icon: "/images/audit_icon.svg",
         href: '/',
         subItems: [
-          { name: 'Financial Statement Audit', href: '/services/audit/financial' },
-          { name: 'Agreed Upon Procedures', href: '/services/audit/agreed' },
-          { name: 'ADGM Regulated Audit', href: '/services/audit/adgm' },
-          { name: 'DIFC & DFSA Regulated Audit', href: '/services/audit/difc' },
+          { name: 'Financial Statement Audit', href: '/financial-statement-audit-uae' },
+          { name: 'Agreed Upon Procedures', href: '/agreed-upon-procedures-uae' },
+          { name: 'ADGM Regulated Audit', href: '/adgm-regulated-audit' },
+          { name: 'DIFC & DFSA Regulated Audit', href: '/difc-dfsa-regulated-audit' },
         ]
       },
       {
@@ -37,6 +37,13 @@ const navItems = [
           { name: 'Mainland Company Formation', href: '/mainland-company-formation-uae' },
           { name: 'Dubai Silicon Oasis', href: '/company-formation-dubai-silicon-oasis' },
           { name: 'Sharjah Airport Free Zone', href: '/business-setup-sharjah-airport-international-free-zone' },
+          { name: 'Hamriyah Free Zone', href: '/company-setup-hamriyah-free-zone' },
+          { name: 'Dubai Airport Free Zone', href: '/business-setup-dubai-airport-free-zone' },
+          { name: 'DMCC Free Zone', href: '/dmcc-freezone-business-setup-uae' },
+          { name: 'DWTC Free Zone', href: '/dwtc-freezone' },
+          { name: 'IFZA', href: '/ifza' },
+          { name: 'Meydan Free Zone', href: '/meydan-freezone-business-setup-uae' },
+          { name: 'VAT Advisory Services', href: '/vat-advisory-services-uae' },
         ]
       },
       {
@@ -75,13 +82,13 @@ const navItems = [
       {
         id: 'glossary',
         label: 'Glossary',
-        href: '/',
+        href: '/glossary',
         subItems: []
       },
       {
         id: 'newsroom',
         label: 'Newsroom',
-        href: '/',
+        href: '/blog',
         subItems: [
         ]
       }
@@ -95,19 +102,19 @@ const navItems = [
       {
         id: 'about-us',
         label: 'About us',
-        href: '/about',
+        href: '/#about',
         subItems: []
       },
       {
         id: 'clients',
         label: 'Our Clients',
-        href: '/',
+        href: '/#clients',
         subItems: []
       },
       {
         id: 'contact',
         label: 'Contact Us',
-        href: '/contact',
+        href: '/#contact',
         subItems: []
       }
     ] as MegaCategory[]
