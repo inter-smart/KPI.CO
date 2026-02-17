@@ -22,7 +22,7 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
-  variant?: "default" | "saifz" | "dfza";
+  variant?: "default" | "saifz" | "dfza" | "aup";
 };
 
 export default function DocumentRequired({
@@ -36,9 +36,10 @@ export default function DocumentRequired({
       className={cn(
         "w-full py-[40px] lg:py-[60px] xl:py-[80px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible",
         variant === "saifz" &&
-          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
-          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "aup" && "bg-white",
       )}
     >
       <div className="container">
@@ -52,11 +53,12 @@ export default function DocumentRequired({
                     <Heading
                       as="h2"
                       size="h2"
-                      className="text-[#1C5396] mb-[25] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
+                      className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
                     >
                       {data.title}
                     </Heading>
                   )}
+
                 </div>
 
                 {data?.description && (
@@ -124,7 +126,7 @@ export default function DocumentRequired({
                   <Heading
                     as="h2"
                     size="h2"
-                    className="text-[#1C5396] mb-[25] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
                   >
                     {data.title}
                   </Heading>
