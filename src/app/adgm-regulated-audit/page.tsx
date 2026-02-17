@@ -302,6 +302,11 @@ const localData = {
   },
   difc_faq_data: {
     title: "FAQs",
+    button: {
+      label: "Learn More",
+      link: "/contact",
+      target: "_blank",
+    },
     faq_list: [
       {
         id: 1,
@@ -335,10 +340,14 @@ const localData = {
         id: 5,
         title: "What standards do you follow for ADGM audits?",
         description: `
-          <p>We conduct ADGM audits in accordance with:· International Standards on Auditing (ISA)· ADGM Companies Regulations (as amended)· FSRA Rulebooks and prescribed reporting requirements· International Financial Reporting Standards (IFRS)</p>
+          <p>We conduct ADGM audits in accordance with:  </p> 
+          <p>· International Standards on Auditing (ISA)</p>
+          <p>· ADGM Companies Regulations (as amended)</p>
+          <p>· FSRA Rulebooks and prescribed reporting requirements</p>
+          <p>· International Financial Reporting Standards (IFRS)</p>
+          
                         `,
       },
-     
     ] satisfies FaqItem[],
   },
   insights: {

@@ -40,7 +40,7 @@ export default function CorporateServicesUaeFaq({
             as="h2"
             size="h2"
             className="text-center text-[#1C5396] lg:mb-8.75 2xl:mb-10 3xl:mb-13"
-          >
+            >
             {data?.title}
           </Heading>
         </div>
@@ -62,7 +62,7 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:last:my-0 mb-0 max-w-[90%]">
+                  <div className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>
@@ -74,7 +74,7 @@ export default function CorporateServicesUaeFaq({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex relative z-2"
             asChild
           >
             <Link

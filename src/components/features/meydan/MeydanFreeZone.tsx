@@ -5,9 +5,9 @@ import parse from "html-react-parser";
 export type MeydanFreeZoneItem = {
   id: number;
   title: string;
-  description: string;
-  highlightsText: string;
-  footer_description: string;
+  description?: string;
+  highlightsText?: string;
+  footer_description?: string;
   zone_list: string[];
 };
 

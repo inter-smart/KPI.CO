@@ -152,7 +152,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                         ) : (
                             <div className="h-full w-full flex flex-col justify-start">
                                 <div className={cn(
-                                    "relative w-full xl:h-[80%] rounded-2xl overflow-hidden p-[15px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
+                                    "relative w-full h-full xl:h-[80%] min-h-[150px] rounded-2xl overflow-hidden p-[20px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
                                     activeCategoryId === 'digital' ? "bg-[linear-gradient(360deg,#3EB0EA_0%,#389FDB_18%,#1C5396_100%)]" :
                                         isResource ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
                                             "bg-[linear-gradient(360deg,#4A7DBF_0%,#2D5B94_40%,#1C5396_100%)]"
@@ -169,7 +169,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                     )}
 
                                     <div className="relative z-10 flex flex-col h-full justify-center">
-                                        <h4 className="text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px]  font-semibold text-white mb-[20px] 2xl:mb-[25px] leading-relaxed line-clamp-3 ">
+                                        <h4 className="text-[13px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px]  font-semibold text-white mb-[20px] 2xl:mb-[25px] leading-relaxed line-clamp-3 ">
                                             {activeCategoryId === 'digital' ? 'Empowering Businesses with Innovative Technology Solutions' :
                                                 isResource ? 'Practical Insights for Your Business Success' :
                                                     '30+ Years of Expertise That Drives Real Results'}
