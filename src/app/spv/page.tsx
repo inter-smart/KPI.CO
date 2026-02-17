@@ -9,6 +9,10 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
 
 export type HeroData = {
   id: number;
@@ -21,7 +25,30 @@ export type HeroData = {
   };
   additionalContent?: string[];
 };
-
+export type BusinessItem = {
+  id: number;
+  name: string;
+  description: string;
+  media: {
+    path: string;
+    alt: string;
+  };
+  button?: {
+    link: string;
+    target: boolean;
+  };
+};
+export type MainlandBusinessData = {
+  title: string;
+  description: string;
+  highlightsTitle: string;
+  highlights: string[];
+  footerDescription?: string;
+  image: {
+    path: string;
+    alt: string;
+  };
+};
 
 export type RiskAdvisoryDta = {
   title: string;
@@ -34,6 +61,30 @@ export type RiskAdvisoryDta = {
   }[];
 };
 
+export type RiskAssuranceData = {
+  id: number;
+  title: string;
+  description: string;
+  media: MediaItem;
+};
+
+export type WhyChooseItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type DocumentRequiredData = {
+  id?: number;
+  title?: string;
+  description?: string;
+  items?: { id: number; text: string }[];
+  media?: {
+    path?: string;
+    alt?: string;
+  };
+  ftr_description?: string;
+};
 export type ServiceItem = {
   id: number;
   title: string;
@@ -67,30 +118,48 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/regulated-audit-bg.jpg",
-      mobilePath: "/images/regulated-audit-mobile-bg.png",
-      alt: "Mainland Company Formation & Licensing in the UAE",
+      desktopPath: "/images/spv-banner.jpg",
+      mobilePath: "/images/spv-banner-mobile.jpg",
+      alt: "ADGM Special Purpose Vehicles Designed for Control, Protection, and Clarity",
     },
-    title: "DIFC Audits Built to Withstand Regulatory Scrutiny ",
+    title: "ADGM Special Purpose Vehicles Designed for Control, Protection, and Clarity ",
     description:
-      "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
+      "<p>ADGM SPVs operate under a common law framework recognised by regulators, banks, and investors. When structured properly, they provide control, protection, and credibility. We structure ADGM SPVs with attention to structural integrity, regulatory alignment, and long-term usability, not just incorporation speed.</p>",
   } satisfies HeroData,
-  
+  mainlandBusiness: {
+    title: "Why Organisations Use SPVs in ADGM",
+    description:
+      "<p>SPVs are not operational entities. They are used when ownership clarity <br/> and risk control cannot be compromised. When structured correctly, SPVs strengthen governance, reduce exposure, and provide confidence to counterparties and stakeholders. We have worked with SPVs since ADGM's early years. That experience shows in how we approach structuring.</p>",
+    highlightsTitle: "ADGM SPVs are commonly used for:",
+    highlights: [
+      "Asset and investment holding",
+      "Ring-fencing liabilities from operating businesses",
+      "Group restructuring and ownership layering",
+      "Joint venture and shareholder arrangements",
+      "Family office and private wealth structures",
+    ],
+    footerDescription: "",
+    image: {
+      path: "/images/spv-busnes.jpg",
+      alt: "Why Organisations Use SPVs in ADGM",
+    },
+  } satisfies MainlandBusinessData,
   riskAdvisory: {
     title: "What an ADGM SPVs Offer",
     description:
       "<p>ADGM SPVs combine flexibility with regulatory credibility. Key features include </p> ",
-    highlightsText: "This makes ADGM SPVs a preferred choice for investors and groups seeking clean ownership structures that stand up to scrutiny.",
+    highlightsText:
+      "This makes ADGM SPVs a preferred choice for investors and groups seeking clean ownership structures that stand up to scrutiny.",
     advisoryItems: [
       {
         id: 1,
         slNo: 1,
-        description: "No requirement for physical office space",
+        description: "No requirement for <br/> physical office space",
       },
       {
         id: 2,
         slNo: 2,
-        description: "No employees or UAE visas required",
+        description: "No employees or UAE visas <br/> required",
       },
       {
         id: 3,
@@ -100,7 +169,7 @@ const localData = {
       {
         id: 4,
         slNo: 4,
-        description: "Ability to hold regional and international assets",
+        description: "Ability to hold regional and <br/> international assets",
       },
       {
         id: 5,
@@ -109,6 +178,83 @@ const localData = {
       },
     ],
   } satisfies RiskAdvisoryDta,
+  riskAssurance: {
+    title: "Our Approach to SPV Structuring",
+    description:
+      "KPI provides risk and assurance services designed to strengthen governance, internal controls, and regulatory readiness. Our services are tailored to support organisations at different stages of maturity, growth and risk exposure.",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/spv-service-1.svg",
+          alt: "Structuring & Feasibility",
+        },
+        title: "Structuring & Feasibility",
+        description:
+          "Understanding the intended use of the SPV, risk profile, and future scenarios before incorporation.",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/spv-service-2.svg",
+          alt: "Regulatory Alignment",
+        },
+        title: "Regulatory Alignment",
+        description:
+          "Ensuring the structure reflects ADGM requirements <br/> and broader regulatory considerations.",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/spv-service-3.svg",
+          alt: "Controlled Incorporation",
+        },
+        title: "Controlled Incorporation",
+        description:
+          "Efficient execution without shortcuts that create <br/>problems later.",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/spv-service-4.svg",
+          alt: "Ongoing Readiness",
+        },
+        title: "Ongoing Readiness",
+        description:
+          "Support for banking, reporting, governance, and <br/> restructuring when required.",
+      },
+    ] satisfies RiskAssuranceData[],
+  },
+  whyChoose: {
+    title: "Why Organisations Choose KPI for ADGM SPVs",
+    description: "",
+    items: [
+      {
+        id: 1,
+        title: "First-hand ADGM experience",
+        description:
+          "<p>KPI was the first firm registered in ADGM. We have worked with SPVs since the jurisdiction's early years.</p>",
+      },
+      {
+        id: 2,
+        title: "Structuring-led advice",
+        description:
+          "<p>We focus on durability, governance, and clarity, not just incorporation speed or form completion.</p>",
+      },
+      {
+        id: 3,
+        title: "Regulatory awareness ",
+        description:
+          "<p>Our approach is based on how ADGM authorities assess SPVs in practice, not theory.</p>",
+      },
+      {
+        id: 4,
+        title: "Long-term partnership",
+        description:
+          "<p>Support beyond setup, covering governance, compliance, audit, and future restructuring needs.</p>",
+      },
+    ] satisfies WhyChooseItem[],
+  },
   contactUs: {
     title: "Discuss Your ADGM SPV Requirements",
     description:
@@ -122,12 +268,38 @@ const localData = {
       overlayMobile: "/images/overlay-spv-mobile.png",
     },
   } satisfies CtaData,
+  document_required_data: {
+    title: "Scope of Our ADGM SPV Services",
+    description:
+      "<p>We provide end-to-end SPV support, from structuring to post- <br/>incorporation readiness. Our work is purpose driven. The SPV must remain <br/> effective as ownership, assets, or strategies evolve </p>",
+    items: [
+      { id: 1, text: "Structuring advice aligned to asset type and commercial objectives " },
+      { id: 2, text: "Incorporation and registration with ADGM " },
+      { id: 3, text: "Drafting and coordination of constitutional documents " },
+      { id: 4, text: "Liaison with ADGM Registration Authority " },
+      {
+        id: 5,
+        text: "Banking support and ongoing compliance guidance",
+      },
+      
+    ],
+
+    media: {
+      path: "/images/spv-scope-img.jpg",
+      alt: "Required documents",
+    },
+    ftr_description:
+      "",
+  } satisfies DocumentRequiredData,
   explore_service: {
     title: " Related Audit Services ",
     items: [
       {
         id: 1,
-        media: { path: "/images/explore-01.jpg", alt: "Company Formation in ADGM" },
+        media: {
+          path: "/images/explore-01.jpg",
+          alt: "Company Formation in ADGM",
+        },
         title: "Company Formation in <br/> ADGM",
         slug: "#",
       },
@@ -183,7 +355,6 @@ const localData = {
           <p>Typical requirements include shareholder and beneficial owner information, constitutional documents, and supporting KYC materials. The exact documentation depends on ownership complexity, jurisdictional exposure, and intended use of the SPV.</p>
                         `,
       },
-      
     ] satisfies FaqItem[],
   },
   insights: {
@@ -204,7 +375,11 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
+      <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
+      <RiskAssuranceServices data={localData.riskAssurance} />
+      <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
+      <DocumentRequired variant="spv" data={localData.document_required_data} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />

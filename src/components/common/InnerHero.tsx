@@ -59,7 +59,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8"
+            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>

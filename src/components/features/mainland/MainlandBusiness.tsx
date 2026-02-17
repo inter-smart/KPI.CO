@@ -5,14 +5,29 @@ import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
 import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
+import { cn } from "@/lib/utils";
+
+type Variant = "spv";
 
 type MainlandBusinessProps = {
   data: MainlandBusinessData;
+  variant?: Variant | Variant[];
 };
 
-export default function MainlandBusiness({ data }: MainlandBusinessProps) {
+export default function MainlandBusiness({
+  data,
+  variant,
+}: MainlandBusinessProps) {
+  const hasVariant = (
+    variant: Variant | Variant[] | undefined,
+    target: Variant,
+  ) => {
+    if (Array.isArray(variant)) return variant.includes(target);
+    return variant === target;
+  };
+
   return (
-    <section className="w-full py-[45px] lg:py-24 bg-white overflow-hidden">
+    <section className="w-full py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden">
       <div className="container">
         <Heading
           as="h2"
@@ -23,8 +38,22 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
         </Heading>
         <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5">
           {/* Left Content */}
-          <div className="w-full lg:w-[calc(100%-365px)] xl:w-[calc(100%-420px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]">
-            <div className="w-full lg:max-w-[425px] xl:max-w-[565px] 2xl:max-w-[670px] 3xl:max-w-[850px]">
+          <div
+            className={cn(
+              "w-full lg:w-[calc(100%-365px)]",
+              hasVariant(variant, "spv")
+                ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
+                : "xl:w-[calc(100%-420px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+            )}
+          >
+            <div
+              className={cn(
+                "w-full",
+                hasVariant(variant, "spv")
+                  ? "max-w-[87%]"
+                  : "lg:max-w-[425px] xl:max-w-[565px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+              )}
+            >
               <Heading
                 as="h2"
                 size="h2"
@@ -74,7 +103,14 @@ export default function MainlandBusiness({ data }: MainlandBusinessProps) {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[365px] xl:w-[420px] 2xl:w-[520px] 3xl:w-[660px]">
+          <div
+            className={cn(
+              "w-full lg:w-[365px]",
+              hasVariant(variant, "spv")
+                ? "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]"
+                : "xl:w-[420px] 2xl:w-[520px] 3xl:w-[660px]",
+            )}
+          >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">
               <Image
                 src={data.image.path}

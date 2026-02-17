@@ -66,7 +66,7 @@ export default function MeydanFreeZone({
                       className={cn(
                         "leading-normal font-medium text-[#053269] mb-[15px]",
                         variant === "difc"
-                          ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] max-md:[&_br]:hidden"
+                          ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold max-md:[&_br]:hidden"
                           : "text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px]",
                       )}
                     >
@@ -137,7 +137,7 @@ export default function MeydanFreeZone({
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[10px]",
                       variant === "difc"
-                        ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396]"
+                        ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold"
                         : "text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
                     )}
                   >

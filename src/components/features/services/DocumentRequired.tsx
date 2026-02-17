@@ -22,7 +22,7 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
-  variant?: "default" | "saifz" | "dfza" | "aup";
+  variant?: "default" | "saifz" | "dfza" | "aup" | "spv";
 };
 
 export default function DocumentRequired({
@@ -34,15 +34,17 @@ export default function DocumentRequired({
   return (
     <section
       className={cn(
-        "w-full py-[40px] lg:py-[60px] xl:py-[80px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible",
+        "w-full py-[40px] lg:py-[60px] xl:py-[70px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible relative",
         variant === "saifz" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "spv" &&
+        "before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
       )}
     >
-      <div className="container">
+      <div className="container relative">
         <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
           {/* Main Content */}
           <div className="w-full md:w-[57%] xl:w-[60%]">
@@ -112,7 +114,7 @@ export default function DocumentRequired({
             )}
 
             {data?.ftr_description && (
-              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] md:[&_br]:hidden">
                 {parse(data.ftr_description)}
               </div>
             )}

@@ -45,9 +45,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               size="h3"
               className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
-              {data.title}
+              {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]">
+            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden">
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
@@ -96,8 +96,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
 
-                      <div className="text-[14px] lg:text-[13px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E]">
-                        {item.description}
+                      <div className="text-[14px] lg:text-[13px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E] max-md:[&_br]:hidden">
+                        {parse(item.description)}
                       </div>
                     </div>
                   ))}

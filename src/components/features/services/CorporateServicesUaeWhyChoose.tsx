@@ -79,7 +79,7 @@ export default function CorporateServicesUaeWhyChoose({
                 >
                   {item?.title}
                 </div>
-                <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E]">
+                <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                   {parse(item?.description)}
                 </div>
               </div>
