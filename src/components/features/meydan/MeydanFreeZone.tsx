@@ -62,8 +62,15 @@ export default function MeydanFreeZone({
               <div className="w-full h-full p-[30px_15px] sm:p-[35px_25px] xl:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white to-[#EFF6FF] border-2 border-[#5280CA] rounded-[15px] sm:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] overflow-hidden">
                 {data?.free_zone_list?.map((card) => (
                   <div key={card?.id} className="mb-[20px] last:mb-0">
-                    <div className="text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#053269] mb-[15px]">
-                      {card?.title}
+                    <div
+                      className={cn(
+                        "leading-normal font-medium text-[#053269] mb-[15px]",
+                        variant === "difc"
+                          ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] max-md:[&_br]:hidden"
+                          : "text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px]",
+                      )}
+                    >
+                      {parse(card?.title)}
                     </div>
                     <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[15px]">
                       {card?.description}
@@ -126,7 +133,14 @@ export default function MeydanFreeZone({
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
                 <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
-                  <div className="text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-[#003268] mb-[10px]">
+                  <div
+                    className={cn(
+                      "leading-normal font-medium text-[#003268] mb-[10px]",
+                      variant === "difc"
+                        ? "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396]"
+                        : "text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
+                    )}
+                  >
                     {item.title}
                   </div>
                   <div className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
