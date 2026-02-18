@@ -17,7 +17,7 @@ export type ProcessStep = {
 
 export type CorporateServicesUaeFormationProcessData = {
   title: string;
-  inner_title: string;
+  inner_title?: string;
   description?: string | null;
   sub_title?: string | null;
   steps: ProcessStep[];

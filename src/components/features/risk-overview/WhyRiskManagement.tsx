@@ -46,7 +46,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                             alt="arrow mark"
                           />
                         </div>
-                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black">
+                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black w-[calc(100%-25px)] 2xl:w-[calc(100%-34px)] 3xl:w-[calc(100%-42px)]">
                           {item}
                         </span>
                       </div>
@@ -66,7 +66,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="relative w-full lg:h-full min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
+            <div className="relative w-full lg:h-full min-h-[370px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}
