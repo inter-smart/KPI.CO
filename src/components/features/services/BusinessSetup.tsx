@@ -51,7 +51,7 @@ export default function BusinessSetup({ data }: BusinessSetupProps) {
                                     'flex-[0_0_100%] sm:flex-[0_0_45%] xl:flex-[0_0_28%] mr-[20px] xl:mr-[25px] 2xl:mr-[30px] 3xl:mr-[40px] min-w-0 select-none',
                                 )}
                             >
-                                <div className="w-full h-full rounded-[18px] border border-black/10 overflow-hidden block">
+                                <div className="w-full h-full rounded-[18px] border border-black/10 overflow-hidden flex flex-col">
                                     <div className="w-full h-auto aspect-[450/340] block relative z-0 before:content-[''] before:w-full before:h-full before:absolute before:z-2 before:inset-0 before:bg-linear-to-b before:from-transparent before:to-[#0F4C81]/80">
                                         <Image
                                             src={item?.media?.path || '/images/placeholder.png'}
@@ -62,7 +62,7 @@ export default function BusinessSetup({ data }: BusinessSetupProps) {
                                         />
                                         <div className='text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white m-[30px_25px] sm:m-[20px_15px] xl:m-[25px_20px] 2xl:m-[30px_25px] 3xl:m-[35px_30px] absolute z-2 inset-[auto_auto_0_0]'>{item?.name}</div>
                                     </div>
-                                    <div className="w-full h-auto p-[25px] sm:p-[15px] xl:p-[20px] 2xl:p-[25px] 3xl:p-[30px] flex flex-col justify-between">
+                                    <div className="w-full h-full p-[25px] sm:p-[15px] xl:p-[20px] 2xl:p-[25px] 3xl:p-[30px] flex flex-col justify-between">
                                         <div className="text-[16px] sm:text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] mb-[20px]">{item?.description}</div>
                                         <Link
                                             href={item?.button?.link || "#"}

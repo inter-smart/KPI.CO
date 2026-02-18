@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "spv";
+type Variant = "spv" | "hamriya";
 
 type MainlandBusinessProps = {
   data: MainlandBusinessData;
@@ -43,7 +43,7 @@ export default function MainlandBusiness({
               "w-full lg:w-[calc(100%-365px)]",
               hasVariant(variant, "spv")
                 ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
-                : "xl:w-[calc(100%-420px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+                : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
             )}
           >
             <div
@@ -51,7 +51,7 @@ export default function MainlandBusiness({
                 "w-full",
                 hasVariant(variant, "spv")
                   ? "max-w-[87%]"
-                  : "lg:max-w-[425px] xl:max-w-[565px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
               )}
             >
               <Heading
@@ -62,32 +62,43 @@ export default function MainlandBusiness({
                 {data.title}
               </Heading>
 
-              <div className="text-[16px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0">
+              <div
+                className={cn(
+                  "text-[16px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0",
+                  hasVariant(variant, "hamriya") && "mb-0",
+                )}
+              >
                 {parse(data.description)}
               </div>
 
-              <div className="w-full mb-[30px]">
-                <Text
-                  size="p2"
-                  className="lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
-                >
-                  {data.highlightsTitle}
-                </Text>
-
+              <div
+                className={cn(
+                  "w-full mb-[30px]",
+                  hasVariant(variant, "hamriya") && "mb-0",
+                )}
+              >
+                {data.highlightsTitle && (
+                  <Text
+                    size="p2"
+                    className="lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
+                  >
+                    {data.highlightsTitle}
+                  </Text>
+                )}
                 <div className="flex flex-col gap-3.5">
                   {data.highlights.map((item, index) => (
                     <div key={index} className="flex">
-                      <div className="flex items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[16px]">
-                        <div className="w-[17px] 2xl:w-[17px] h-[17px] 3xl:w-[22px] 2xl:w-[17px] 3xl:h-[22px] rounded-full  flex items-center  ">
+                      <div className="flex sm:items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[16px]">
+                        <div className="w-[17px] 2xl:w-[17px] h-[17px] 3xl:w-[22px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center  ">
                           <Image
                             src="/images/tickMark.svg"
                             width="22"
                             height="22"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396]">
+                        <span className="text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
                           {item}
                         </span>
                       </div>
@@ -95,8 +106,7 @@ export default function MainlandBusiness({
                   ))}
                 </div>
               </div>
-
-              <div className="text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
+              <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
                 {data.footerDescription && parse(data.footerDescription)}
               </div>
             </div>
@@ -108,7 +118,7 @@ export default function MainlandBusiness({
               "w-full lg:w-[365px]",
               hasVariant(variant, "spv")
                 ? "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]"
-                : "xl:w-[420px] 2xl:w-[520px] 3xl:w-[660px]",
+                : "xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">

@@ -307,14 +307,14 @@ const localData = {
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -390,7 +390,7 @@ const localData = {
   },
 
   whyChoose: {
-    title: "Why choose KPI?",
+    title: "Why Choose KPI?",
     description:
       "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
     items: [

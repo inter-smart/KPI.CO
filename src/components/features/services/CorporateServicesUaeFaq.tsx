@@ -40,16 +40,12 @@ export default function CorporateServicesUaeFaq({
             as="h2"
             size="h2"
             className="text-center text-[#1C5396] lg:mb-8.75 2xl:mb-10 3xl:mb-13"
-            >
+          >
             {data?.title}
           </Heading>
         </div>
         <div className="w-full lg:max-w-178 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
-          <Accordion
-            type="single"
-            collapsible
-            defaultValue={`item-${data?.faq_list?.[1]?.id}`}
-          >
+          <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem
                 value={`item-${item.id}`}
