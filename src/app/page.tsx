@@ -294,7 +294,7 @@ const localData = {
         alt: "ISO certification",
       },
       label: "ISO 27001",
-      description: "Information Security Management System",
+      description: "Information Security Management <br/> System",
     },
   } satisfies SecurityInfoData,
 

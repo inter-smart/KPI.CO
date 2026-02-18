@@ -10,6 +10,7 @@ import TaxDecision from '@/components/features/taxAdvisory/TaxDecision';
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import { Metadata } from "next";
+import MeydanFreeZone from '@/components/features/meydan/MeydanFreeZone';
 
 export type HeroData = {
     id: number;
@@ -33,6 +34,29 @@ export type WhyRiskData = {
         alt: string;
     };
 };
+
+export type MeydanFreeZoneItem = {
+    id: number;
+    title: string;
+    description: string;
+    highlightsText: string;
+    zone_list: string[];
+    footer_description: string;
+};
+
+export type MeydanStructureItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type MeydanFreeZoneData = {
+    title: string;
+    description?: string;
+    free_zone_list: MeydanFreeZoneItem[];
+    structure_list: MeydanStructureItem[];
+};
+
 
 export type ProcessStep = {
     id: number;
@@ -111,6 +135,8 @@ const localData = {
             "<p>In the UAE, tax is no longer just a number, its about interpretation and application. Corporate tax, VAT, cross-border transaction require practical judgement aligned with both regulation and business reality. KPI provides clear, practical tax advice that help UAE businesses to make appropriate tax decisions, manage risk, and remail compliant without compromising commercial objectives.</p>",
     } satisfies HeroData,
 
+
+
     whyRisk: {
         title: "<p>What Makes Tax Decisions <br/> Hard Today </p>",
         highlightsTitle:
@@ -128,6 +154,39 @@ const localData = {
             alt: "Risk advisory discussion",
         },
     } satisfies WhyRiskData,
+
+
+    meydanFreeZone: {
+        title: "",
+        free_zone_list: [
+            {
+                id: 1,
+                title: "Our Tax Advisory Services",
+                description: "Our tax advisory support is modular and engagement-led, designed to support informed decision making at both management and board level.",
+                highlightsText:
+                    "Our work typically covers:",
+                zone_list: [
+                    "Corporate tax interpretation and position setting",
+                    "VAT advisory for transactions, contracts, and operating models",
+                    "Tax impact assessment for restructurings, acquisitions and group or ownership changes",
+                    "Independent review of tax positions ahead of audits or authority review",
+                    "Alignment of tax treatment with accounting and governance",
+                    "Clear documentation of tax positions, assumptions and decision rationale",
+                ],
+                footer_description:
+                    "Each engagement starts with commercial and organizational context but not templates.",
+            },
+        ],
+        structure_list: [
+            {
+                id: 1,
+                title: "What Tax Advisory Means at KPI ",
+                description:
+                    "<p>We help you choose a position, and stand behind it.</p> <p>KPI’s tax advisory work focuses on governing tax outcomes before they crystallise into financial, regulatory or reputational exposure. We work with senior management to interpret regulations, assess viable alternatives, and ensure that the basis for each tax position is clearly articulated, documented and and capable of withstanding scrutiny.</p><p>This is not optimisation-driven advice. It is decision support for real transactions and operating models.</p>",
+            },
+        ],
+    } satisfies MeydanFreeZoneData,
+
 
     formationProcess: {
         title: "How We Work Through Tax Questions ",
@@ -304,9 +363,9 @@ const localData = {
 }
 
 export const metadata: Metadata = {
-    title: "AUP Audit Services in UAE | DFSA & Regulatory Compliance | KPI   ",
+    title: "UAE Tax Advisory & Structuring Services | KPI Group  ",
     description:
-        "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities.. ",
+        "KPI provides independent tax advisory services for UAE businesses. Get practical guidance on corporate tax, structuring, and compliance delivered with regulatory clarity. ",
 };
 
 export default function page() {
@@ -315,6 +374,7 @@ export default function page() {
 
             <InnerHero data={localData.hero} />
             <WhyRiskManagement data={localData.whyRisk} />
+            <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
             <CorporateServicesUaeFormationProcess variant="aup" data={localData.formationProcess} />
             <DocumentRequired data={localData.document_required_data} variant="tax-advisory" />
             <RiskExploreService variant="difc" data={localData.explore_service} />

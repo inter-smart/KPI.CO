@@ -96,7 +96,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! max-sm:mt-3"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>

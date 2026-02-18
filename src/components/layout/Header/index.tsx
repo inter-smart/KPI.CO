@@ -161,15 +161,14 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-6"
+                      className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4"
                     >
                       {item.label}
                       {item.isMega && (
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeMegaMenu === item.label ? 'rotate-180' : ''}`} />
                       )}
                     </Link>
-
-                    {/* Desktop Dropdown - Anchored to the start of the 'Services' link container */}
+ 
                     {item.isMega && item.megaCategories && (
                       <NavDropdown
                         categories={item.megaCategories}
@@ -181,7 +180,7 @@ export default function Header() {
               </div>
             </nav>
 
-            {/* Action Button & Mobile Menu Trigger */}
+            
             <div className="flex items-center gap-4">
               <div className="hidden lg:block">
                 <Link
