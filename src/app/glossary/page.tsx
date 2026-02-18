@@ -52,11 +52,13 @@ export default function GlossaryPage() {
 
       {/* Hero Section */}
       <div
-        className="h-[467px] flex flex-col justify-center items-center text-center px-6"
+        className="
+    h-[400px] 
+    md:h-[467px] 
+    flex flex-col justify-center items-center text-center px-6
+  "
         style={{
-          background: "linear-gradient(180deg, #053269 0%, #6A9FE0 100%);",
-
-
+          background: "linear-gradient(180deg, #053269 0%, #6A9FE0 100%)",
         }}
       >
         {/* Heading */}
@@ -82,7 +84,9 @@ export default function GlossaryPage() {
         {/* Paragraph */}
         <p
           className="
-      text-white mt-4
+      text-white    
+    my-[22px]        /* 📱 22px top & bottom */
+    md:my-4  
 
       /* 📱 Mobile */
       font-mona font-normal
@@ -97,7 +101,7 @@ export default function GlossaryPage() {
         </p>
 
         {/* Search Input */}
-        <div className="mt-6">
+        <div className="md:mt-4">
           <div className="relative w-fit">
 
             <input
@@ -167,14 +171,15 @@ export default function GlossaryPage() {
           {/* Text */}
           <div
             className="
-        text-white
-        font-poppins
-        font-normal
-        text-[16px]
-        leading-[120%]
-        tracking-[-0.02em]
-        whitespace-nowrap
-      "
+             text-white
+             font-poppins
+             text-[12px]        
+             md:text-[16px]     
+             font-normal        /* 👈 Not bold */
+             leading-[120%]
+             tracking-[-0.02em]
+             whitespace-nowrap
+"
           >
             Go to Section :
           </div>
@@ -201,7 +206,7 @@ export default function GlossaryPage() {
             >
               {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => {
 
-                const isDisabledLetter = ["X", "Y", "Z"].includes(letter);
+                const isDisabledLetter = ["B", "L", "W", "X", "Y", "Z"].includes(letter);
 
                 return (
                   <span
@@ -255,7 +260,7 @@ export default function GlossaryPage() {
             <div
               key={index}
               className="
-          mt-[32px] md:mt-[48px]
+          mt-[22px] md:mt-[30px]
           first:mt-0
         "
             >
@@ -294,6 +299,7 @@ export default function GlossaryPage() {
         <button
           onClick={scrollToTop}
           className="
+    mt-6
     ml-auto
     flex items-center gap-2
     hover:opacity-70
@@ -304,7 +310,8 @@ export default function GlossaryPage() {
             className="
       font-poppins
       font-medium
-      text-[16px]
+      text-[12px]        /* 📱 Mobile */
+      md:text-[16px]     /* 💻 Desktop */
       leading-[150%]
       tracking-[0.02em]
       text-center
@@ -318,7 +325,9 @@ export default function GlossaryPage() {
           <img
             src="/images/arrow.svg"
             alt="Back to top"
-            className="w-[32px] h-[32px] opacity-100"
+            className="w-[24px] h-[24px]      /* 📱 Mobile */
+            md:w-[32px] md:h-[32px] /* 💻 Desktop */
+            opacity-100"
           />
         </button>
 
