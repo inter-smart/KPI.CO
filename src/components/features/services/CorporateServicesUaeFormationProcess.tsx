@@ -17,6 +17,7 @@ export type ProcessStep = {
 
 export type CorporateServicesUaeFormationProcessData = {
   title: string;
+  inner_title: string;
   description?: string | null;
   sub_title?: string | null;
   steps: ProcessStep[];
@@ -159,8 +160,7 @@ export default function CorporateServicesUaeFormationProcess({
 
         <div className={cn(
           "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
-          variant === "Vat-Services" && "items-center",
-          // isScrollControlled && "sticky top-24 lg:top-32"
+          variant === "Vat-Services" && "items-center", 
         )}>
           <div className="flex items-center">
             <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
@@ -185,11 +185,7 @@ export default function CorporateServicesUaeFormationProcess({
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
                       data.steps.length === index + 1 && "lg:hidden",
-                    )}
-                    // initial={{ height: 0 }}
-                    // animate={{
-                    //   height: "160%",
-                    // }}
+                    )} 
                     transition={{
                       duration: 0.8,
                       ease: [0.25, 0.1, 0.25, 1],
@@ -230,7 +226,7 @@ export default function CorporateServicesUaeFormationProcess({
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold transition-colors duration-300",
+                      "font-semibold  transition-colors duration-300 capitalize",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >

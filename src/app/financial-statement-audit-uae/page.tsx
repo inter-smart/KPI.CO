@@ -13,6 +13,7 @@ import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
 import HomeCounter from "@/components/features/home/HomeCounter";
+import type { CounterItem } from "@/app/page";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 
 export type InsightItem = {
@@ -42,12 +43,7 @@ export type MediaItem = {
   alt: string;
 };
 
-export type CounterItem = {
-  id: number;
-  value: number;
-  symbol?: string;
-  label: string;
-};
+
 
 export type HeroData = {
   id: number;

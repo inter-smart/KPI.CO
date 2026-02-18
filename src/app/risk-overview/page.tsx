@@ -4,7 +4,7 @@ import InnerHero from "@/components/common/InnerHero";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
 import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManagement";
-import { MediaItem } from "../page";
+import { MediaItem, CounterItem } from "../page";
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import HomeCounter from "@/components/features/home/HomeCounter";
@@ -79,12 +79,7 @@ export type ProcessStep = {
   description: string;
 };
 
-export type CounterItem = {
-  id: number;
-  value: number;
-  symbol?: string;
-  label: string;
-};
+
 export type DiscussYourRiskData = {
   title: string;
   description: string;

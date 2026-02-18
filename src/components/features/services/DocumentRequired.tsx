@@ -22,7 +22,7 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
-  variant?: "default" | "saifz" | "dfza" | "aup" | "spv";
+  variant?: "default" | "saifz" | "dfza" | "aup" | "spv" | "tax-advisory";
 };
 
 export default function DocumentRequired({
@@ -38,6 +38,8 @@ export default function DocumentRequired({
         variant === "saifz" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "tax-advisory" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "spv" &&
         "before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
@@ -59,10 +61,8 @@ export default function DocumentRequired({
                     >
                       {parse(data.title)}
                     </Heading>
-                  )}
-
-                </div>
-
+                  )} 
+                </div> 
                 {data?.description && (
                   <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
                     {parse(data.description)}
