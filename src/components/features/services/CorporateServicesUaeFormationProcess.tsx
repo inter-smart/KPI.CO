@@ -159,8 +159,7 @@ export default function CorporateServicesUaeFormationProcess({
 
         <div className={cn(
           "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
-          variant === "Vat-Services" && "items-center",
-          // isScrollControlled && "sticky top-24 lg:top-32"
+          variant === "Vat-Services" && "items-center", 
         )}>
           <div className="flex items-center">
             <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
@@ -179,17 +178,13 @@ export default function CorporateServicesUaeFormationProcess({
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[160%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       variant === "Vat-Services" && "lg:h-[250%]",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
                       data.steps.length === index + 1 && "lg:hidden",
-                    )}
-                    // initial={{ height: 0 }}
-                    // animate={{
-                    //   height: "160%",
-                    // }}
+                    )} 
                     transition={{
                       duration: 0.8,
                       ease: [0.25, 0.1, 0.25, 1],
@@ -230,7 +225,7 @@ export default function CorporateServicesUaeFormationProcess({
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold line-clamp-1 transition-colors duration-300",
+                      "font-semibold  transition-colors duration-300 capitalize max-w-[90%]",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >
@@ -280,13 +275,13 @@ export default function CorporateServicesUaeFormationProcess({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
                   >
-                    {/* <Heading
+                    <Heading
                       as="h4"
                       size="h6"
                       className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
                     >
                       {data.steps[activeStep].title}
-                    </Heading> */}
+                    </Heading>
                     {data.steps[activeStep].inner_title && (
                       <Heading
                         as="h4"
