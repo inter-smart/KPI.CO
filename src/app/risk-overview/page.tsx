@@ -70,7 +70,6 @@ export type RiskOrganisationData = {
   };
 };
 
-
 export type ProcessStep = {
   id: number;
   title: string;
@@ -79,13 +78,16 @@ export type ProcessStep = {
   description: string;
 };
 
-
 export type DiscussYourRiskData = {
   title: string;
   description: string;
   button: {
     label: string;
     link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
   };
 };
 
@@ -117,7 +119,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/risk-overview-bg.png",
-      mobilePath: "/images/risk-overview-bg.png",
+      mobilePath: "/images/risk-overview-mobile-bg.jpg",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
     title: "Stay Ahead of Regulatory Risk  ",
@@ -268,29 +270,29 @@ const localData = {
         sub_title: "Risk identification with business context",
         description:
           "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
-        },
-        {
-          id: 2,
-          title: "Control assessment and gap <br/> analysis",
-          inner_title: "Control assessment and gap analysis",
-          sub_title: "Control assessment and gap analysis",
-          description:
+      },
+      {
+        id: 2,
+        title: "Control assessment and gap <br/> analysis",
+        inner_title: "Control assessment and gap analysis",
+        sub_title: "Control assessment and gap analysis",
+        description:
           "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
-        },
-        {
-          id: 3,
-          title: "Clear prioritisation",
-          inner_title: "Clear prioritisation",
-          sub_title: "Clear prioritisation",
-          description:
+      },
+      {
+        id: 3,
+        title: "Clear prioritisation",
+        inner_title: "Clear prioritisation",
+        sub_title: "Clear prioritisation",
+        description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
-        },
-        {
-          id: 4,
-          title: "Actionable recommendations",
-          inner_title: "Actionable recommendations",
-          sub_title: "Actionable recommendations",
-          description:
+      },
+      {
+        id: 4,
+        title: "Actionable recommendations",
+        inner_title: "Actionable recommendations",
+        sub_title: "Actionable recommendations",
+        description:
           "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
       },
     ] satisfies ProcessStep[],
@@ -330,6 +332,10 @@ const localData = {
     button: {
       label: "Request Consultation",
       link: "/#contact",
+    },
+    images: {
+      overlay: "/images/risk-discus-img.png",
+      overlayMobile: "/images/risk-discus-mobile-img.png",
     },
   } satisfies DiscussYourRiskData,
 
