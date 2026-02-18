@@ -49,7 +49,7 @@ export type RiskAdvisoryDta = {
   }[];
 };
 
-export type ApproachStep = {
+export type ProcessStep = {
   id: number;
   title: string;
   sub_title: string;
@@ -218,7 +218,7 @@ const localData = {
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
       },
-    ] satisfies ApproachStep[],
+    ] satisfies ProcessStep[],
   },
   riskOrganisation: {
     title: "Who We Audit in DIFC",

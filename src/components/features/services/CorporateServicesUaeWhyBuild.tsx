@@ -54,8 +54,13 @@ function WhyBuildCard({
   variant?: Variant | Variant[];
 }) {
   return (
-    <div className="group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300">
-      <div className="w-[46px] 2xl:w-[55px] aspect-square mb-[20px] 2xl:mb-[25px] transition-transform  ">
+    <div
+      className={cn(
+        "group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        variant === "freezone" ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]" : "",
+      )}
+    >
+      <div className="w-[46px] 2xl:w-[55px] aspect-square mb-[20px] 2xl:mb-[25px] transition-transform">
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -150,7 +155,7 @@ export default function CorporateServicesUaeWhyBuild({
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
-              "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+                "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
               "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
           )}
