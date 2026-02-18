@@ -343,7 +343,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Internal Auditor",
         description:
-            "An employee of an organization who evaluates and improves the effectiveness of risk management, control, and governance processes. They provide independent assurance that an organization&#39;s risk management, governance, and internal control processes are operating effectively.",
+            "An employee of an organization who evaluates and improves the effectiveness of risk management, control, and governance processes. They provide independent assurance that an organization's risk management, governance, and internal control processes are operating effectively.",
     },
     {
         term: "Internal Control Over Financial Reporting (ISOFR)",
@@ -385,14 +385,14 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Know Your Customer (KYC)",
         description:
-            "A process used by financial institutions to verify the identity of their clients and assess potential risks of illegal intentions for the business relationship. This includes verifying the customer&#39;s identity, understanding the nature of their activities, and ensuring they are not involved in illegal activities.",
+            "A process used by financial institutions to verify the identity of their clients and assess potential risks of illegal intentions for the business relationship. This includes verifying the customer's identity, understanding the nature of their activities, and ensuring they are not involved in illegal activities.",
     },
 
     // M Example
     {
         term: "Management Letter",
         description:
-            "A letter from auditors to a company&#39;s management detailing any issues found during the audit, including weaknesses in internal controls and recommendations for improvement.",
+            "A letter from auditors to a company's management detailing any issues found during the audit, including weaknesses in internal controls and recommendations for improvement.",
     },
 
     {
@@ -427,7 +427,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Notes to Financial Statements",
         description:
-            "Additional information provided in a company&#39;s financial statements to explain the figures in the main financial statements. These notes provide context and detail that help users understand the financial statements better.",
+            "Additional information provided in a company's financial statements to explain the figures in the main financial statements. These notes provide context and detail that help users understand the financial statements better.",
     },
 
 
@@ -503,7 +503,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Qualified Opinion",
         description:
-            "An auditor&#39;s opinion that, except for certain issues, the financial statements present a true and fair view.",
+            "An auditor's opinion that, except for certain issues, the financial statements present a true and fair view.",
     },
 
     // R Example
@@ -526,7 +526,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Risk Assessment",
         description:
-            "The process of identifying and evaluating risks that could affect the achievement of an organization&#39;s objectives. For example, assessing the risk of material misstatement in financial statements.",
+            "The process of identifying and evaluating risks that could affect the achievement of an organization's objectives. For example, assessing the risk of material misstatement in financial statements.",
     },
 
 
@@ -541,7 +541,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Sampling Risk",
         description:
-            "The risk that the auditor&#39;s conclusion based on a sample may be different from the conclusion if the entire population were tested. For example, there is a risk that a sample may not be representative of the population.",
+            "The risk that the auditor's conclusion based on a sample may be different from the conclusion if the entire population were tested. For example, there is a risk that a sample may not be representative of the population.",
     },
 
     {
@@ -565,19 +565,19 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Statement of Changes in Equity",
         description:
-            "A financial statement that shows the changes in a company&#39;s equity during a specific period. It includes transactions such as issuance of shares, dividends, and retained earnings.",
+            "A financial statement that shows the changes in a company's equity during a specific period. It includes transactions such as issuance of shares, dividends, and retained earnings.",
     },
 
     {
         term: "Statement of Financial Position",
         description:
-            "Also known as the balance sheet, it provides a snapshot of a company&#39;s assets, liabilities, and equity at a specific point in time. For example, it shows the company&#39;s financial position as of December 31st.",
+            "Also known as the balance sheet, it provides a snapshot of a company's assets, liabilities, and equity at a specific point in time. For example, it shows the company's financial position as of December 31st.",
     },
 
     {
         term: "Statement of Profit &amp; Loss and Other Comprehensive Income",
         description:
-            "A financial statement that shows a company&#39;s financial performance over a period, including both profit or loss and other comprehensive income items. For example, it includes net income and unrealized gains or losses on investments.",
+            "A financial statement that shows a company's financial performance over a period, including both profit or loss and other comprehensive income items. For example, it includes net income and unrealized gains or losses on investments.",
     },
 
     {
@@ -638,7 +638,7 @@ export const glossaryData: GlossaryItem[] = [
     {
         term: "Unqualified Opinion",
         description:
-            "An auditor&#39;s opinion that the financial statements present a true and fair view in accordance with the applicable financial reporting framework. It indicates that the auditor has no reservations about the financial statements.",
+            "An auditor's opinion that the financial statements present a true and fair view in accordance with the applicable financial reporting framework. It indicates that the auditor has no reservations about the financial statements.",
     },
 
 
