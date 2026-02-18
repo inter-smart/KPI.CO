@@ -49,7 +49,7 @@ export type RiskAdvisoryDta = {
   }[];
 };
 
-export type ApproachStep = {
+export type ProcessStep = {
   id: number;
   title: string;
   sub_title: string;
@@ -178,7 +178,7 @@ const localData = {
       },
     ],
   } satisfies RiskAdvisoryDta,
-  approachProcess: {
+  ProcessStep: {
     title: "Our Audit Approach",
     sub_title: null,
     description: null,
@@ -218,7 +218,7 @@ const localData = {
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
       },
-    ] satisfies ApproachStep[],
+    ] satisfies ProcessStep[],
   },
   riskOrganisation: {
     title: "Who We Audit in DIFC",
@@ -417,7 +417,7 @@ export default function DwtcFreezone() {
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
       <RiskAdvisory variant={["difc", "center"]}data={localData.riskAdvisory} />
-      <RiskApproach variant="mainland" data={localData.approachProcess} />
+      <RiskApproach variant="mainland" data={localData.ProcessStep} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
