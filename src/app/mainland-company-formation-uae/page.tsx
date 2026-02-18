@@ -99,6 +99,7 @@ export type ProcessStep = {
   id: number;
   step: string;
   title: string;
+  inner_title?: string;
   sub_title: string;
   description: string;
 };
@@ -212,20 +213,20 @@ const localData = {
       },
       {
         id: 6,
-        title: "Fujairah Mainland",
+        title: "Umm Al Quwain Mainland",
         type: "image",
         image: "/images/mainlandBusiness-6.jpg",
         description:
-          "Fujairah is a strategic maritime and oil hub with the only UAE access to the Indian Ocean.",
+          "UAQ offers a stable business environment with a focus on tourism and trade, providing great potential for sustainable growth.",
         link: "#",
       },
       {
         id: 7,
-        title: "Umm Al Quwain Mainland",
+        title: "Fujairah Mainland",
         type: "image",
         image: "/images/mainlandBusiness-7.jpg",
         description:
-          "UAQ offers a stable business environment with a focus on tourism and trade, providing great potential for sustainable growth.",
+          "Fujairah is a strategic maritime and oil hub with the only UAE access to the Indian Ocean.",
         link: "#",
       },
     ],
@@ -326,7 +327,8 @@ const localData = {
         id: 1,
         step: "Step One",
         title: "Free Consultation with Our Experts",
-        sub_title: "Free Consultation with Our Experts",
+        sub_title: "Choose Your Business Activity & Structure",
+        inner_title: "Free Consultation with Our Experts",
         description:
           "<p>Share your business details with our team. We’ll guide you on the best mainland setup for your goals.</p>",
       },
@@ -335,6 +337,7 @@ const localData = {
         step: "Step Two",
         title: "Choose Your Business Activity & Structure",
         sub_title: "Choose Your Business Activity & Structure",
+        inner_title: "Choose Your Business Activity & Structure",
         description:
           "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
       },
@@ -343,6 +346,7 @@ const localData = {
         step: "Step Three",
         title: "Reserve Your Company Name & Apply for License",
         sub_title: "Reserve Your Company Name & Apply for License",
+        inner_title: "Reserve Your Company Name & Apply for License",
         description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
       },
@@ -351,6 +355,7 @@ const localData = {
         step: "Step Four",
         title: "Office & Workspace Setup",
         sub_title: "Office & Workspace Setup",
+        inner_title: "Office & Workspace Setup",
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
       },
@@ -359,6 +364,7 @@ const localData = {
         step: "Step Five",
         title: "UAE Residency & Visas",
         sub_title: "UAE Residency & Visas",
+        inner_title: "UAE Residency & Visas",
         description:
           "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
       },
@@ -367,6 +373,7 @@ const localData = {
         step: "Step Six",
         title: "Open Your Business Bank Account",
         sub_title: "Open Your Business Bank Account",
+        inner_title: "Open Your Business Bank Account",
         description:
           "<p>Set up a corporate bank account to start operating and managing your company finances. </p>",
       },
@@ -413,7 +420,7 @@ const localData = {
         description:
           "A premium Dubai- based jurisdiction for finance, investment, and professional services. Operates under an independent legal and regulatory framework with international standards",
         media: {
-          path: "/images/mainland-business-2.jpg",
+          path: "/images/mainland-business-4.jpg",
           alt: "Business Structuring",
         },
       },
@@ -427,42 +434,42 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -477,25 +484,25 @@ const localData = {
         id: 1,
         title: "Business Structuring ",
         description:
-          "<p>We help you choose the right activity, license, and legal structure to align with your goals and long-term growth. </p>",
+          "<p>We help you choose the right activity, license, and legal <br> structure to align with your goals and long-term growth. </p>",
       },
       {
         id: 2,
         title: "Regulatory Guidance",
         description:
-          "<p>Stay fully compliant with UAE laws and regulations. We ensure approvals, documentation, and licenses are handled correctly. </p>",
+          "<p>Stay fully compliant with UAE laws and regulations. We ensure <br> approvals, documentation, and licenses are handled correctly. </p>",
       },
       {
         id: 3,
         title: "Office & Visa Support",
         description:
-          "<p>We handle your UAE office setup and visa processing for owners, employees, and dependents during the formation process.</p>",
+          "<p>We handle your UAE office setup and visa processing for owners, <br> employees, and dependents during the formation process.</p>",
       },
       {
         id: 4,
         title: "Banking & Operations",
         description:
-          "<p>We assist with corporate bank accounts, operational setup, and admin tasks to give your mainland company a solid foundation.</p>",
+          "<p>We assist with corporate bank accounts, operational setup, and <br> admin tasks to give your mainland company a solid foundation.</p>",
       },
       {
         id: 5,
@@ -507,7 +514,7 @@ const localData = {
         id: 6,
         title: "Accounting Services",
         description:
-          "<p>We manage bookkeeping, accounting, and reporting, helping your business maintain clarity for informed decision-making.</p>",
+          "<p>We manage bookkeeping, accounting, and reporting, helping <br> your business maintain clarity for informed decision-making.</p>",
       },
     ] satisfies WhyChooseItem[],
     hero: {
@@ -827,7 +834,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/document-required-img.jpg",
+      path: "/images/mainland-document-required.jpg",
       alt: "Required documents",
     },
     ftr_description:
@@ -836,11 +843,10 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-    title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
-    description:
-        "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees. ",
+  title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
+  description:
+    "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees. ",
 };
-
 
 export default function MainlandCompanyFormationUaePage() {
   return (

@@ -45,7 +45,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
             key={slide.id}
             className="relative w-full h-full overflow-hidden"
           >
-            {/* Background Media */}
+           
             <div className="absolute inset-0 w-full h-full">
               {slide.type === "video" ? (
                 <video
@@ -67,11 +67,10 @@ export default function HomeHero({ data }: HomeHeroProps) {
                   className="object-cover"
                 />
               )}
-              {/* Overlay Gradient */}
+              
               <div className="absolute inset-0 bg-gradient-to-b from-[#053269]/80  to-[#3869A4]/70 to-[#6A9FE0]/30" />
             </div>
-
-            {/* Content Container */}
+ 
             <div className="container relative z-10 h-full flex flex-col justify-center">
               <div className="max-w-full">
                 <Heading
@@ -86,7 +85,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
                 </p>
                 <Button
                   className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 
-                  h-[35px] sm:h-[45px] 2xl:h-[48px] 3xl:h-[60px] bg-base2 hover:bg-[#FFD54F] rounded-[8px] transition-all transform hover:scale-105 active:scale-95 duration-100 "
+                  h-[35px] sm:h-[45px] 2xl:h-[48px] 3xl:h-[60px] bg-base2 hover:bg-base2 rounded-[8px] transition-all transform !scale-100 "
                   asChild
                 >
                   <Link href={slide.buttonLink}>{slide.buttonText}</Link>
@@ -97,7 +96,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
         ))}
       </Swiper>
 
-      {/* Custom Styles for Swiper Pagination */}
+ 
       <style jsx global>{`
         .swiper-pagination {
           bottom: 40px !important;

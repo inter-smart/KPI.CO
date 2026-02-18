@@ -45,7 +45,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className='bg-[#053269]'>
+    <footer id="contact" className='bg-[#053269]'>
       <div className="container">
         <div className='pt-[40px] pb-[40px] xl:pb-[50px] 2xl:pb-[70px] 3xl:pb-[100px]'>
           <div className='flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] 2xl:pb-[40px] 3xl:pb-[65px] -m-[10px] mb-[30px] 3xl:mb-[40px]'>
@@ -181,10 +181,10 @@ export default function Footer() {
             <div className='w-4/12 p-[10px] lg:p-[20px] '>
               <div className={FOOTER_MAINLINKS}>Audit & Assurance</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>ADGM Regulated Audit</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>DIFC & DFSA Regulated Audit</Link></li>
+                <li><Link href="/financial-statement-audit-uae" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
+                <li><Link href="/agreed-upon-procedures-uae" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
+                <li><Link href="/adgm-regulated-audit" className={FOOTER_LINK_STYLES}>ADGM Regulated Audit</Link></li>
+                <li><Link href="/difc-dfsa-regulated-audit" className={FOOTER_LINK_STYLES}>DIFC & DFSA Regulated Audit</Link></li>
               </ul>
             </div>
 
@@ -192,13 +192,10 @@ export default function Footer() {
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] '>
               <div className={FOOTER_MAINLINKS}>Advisory Services</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
-                <li><Link href="/corporate-services-uae" className={FOOTER_LINK_STYLES}>Corporate Services</Link></li>
-                <li><Link href="/advisory-services-uae" className={FOOTER_LINK_STYLES}>Advisory Services</Link></li>
-                <li><Link href="/mainland-company-formation-uae" className={FOOTER_LINK_STYLES}>Mainland Company Formation</Link></li>
-                <li><Link href="/company-formation-dubai-silicon-oasis" className={FOOTER_LINK_STYLES}>Dubai Silicon Oasis</Link></li>
-                <li><Link href="/business-setup-sharjah-airport-international-free-zone" className={FOOTER_LINK_STYLES}>Sharjah Airport Free Zone</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>e-Invoicing</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Digital Transformation</Link></li>
+                <li><Link href="/corporate-services-uae" className={FOOTER_LINK_STYLES}>Corporate Services</Link></li> 
+                <li><Link href="/corporate-services-uae" className={FOOTER_LINK_STYLES}>Tax Advisory</Link></li> 
+                <li><Link href="/corporate-services-uae" className={FOOTER_LINK_STYLES}>e-Invoicing</Link></li> 
+                <li><Link href="/corporate-services-uae" className={FOOTER_LINK_STYLES}>Digital Transformation</Link></li> 
               </ul>
             </div>
 
@@ -206,10 +203,10 @@ export default function Footer() {
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[70px] 2xl:pl-[90px] 3xl:pl-[115px]'>
               <div className={FOOTER_MAINLINKS}>Risk & Compliance</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Standard Operating Procedures</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Regulatory & Compliance Advisory</Link></li>
+                <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
+                <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
+                <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Standard Operating Procedures</Link></li>
+                <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Regulatory & Compliance Advisory</Link></li>
               </ul>
             </div>
 
@@ -218,8 +215,8 @@ export default function Footer() {
               <div className={FOOTER_MAINLINKS}>Resources</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
                 <li><Link href="/blog" className={FOOTER_LINK_STYLES}>Blogs</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Newsroom</Link></li>
+                <li><Link href="/glossary" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
+                <li><Link href="/blog" className={FOOTER_LINK_STYLES}>Newsroom</Link></li>
               </ul>
             </div>
 
@@ -227,9 +224,9 @@ export default function Footer() {
             <div className='w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] '>
               <div className={FOOTER_MAINLINKS}>Company</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>About Us</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
-                <li><Link href="/" className={FOOTER_LINK_STYLES}>Contact Us</Link></li>
+                <li><Link href="/#about" className={FOOTER_LINK_STYLES}>About Us</Link></li>
+                <li><Link href="/#clients" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
+                <li><Link href="/#contact" className={FOOTER_LINK_STYLES}>Contact Us</Link></li>
               </ul>
             </div>
             {/* Contact Us */}
@@ -273,10 +270,10 @@ export default function Footer() {
                 <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px]  hover:no-underline border-b rounded-none border-white/20`}>Audit & Assurance</AccordionTrigger>
                 <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 ">
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>ADGM Regulated Audit</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>DIFC & DFSA Regulated Audit</Link></li>
+                    <li><Link href="/financial-statement-audit-uae" className={FOOTER_LINK_STYLES}>Financial Statement Audit</Link></li>
+                    <li><Link href="/agreed-upon-procedures-uae" className={FOOTER_LINK_STYLES}>Agreed Upon Procedures</Link></li>
+                    <li><Link href="/adgm-regulated-audit" className={FOOTER_LINK_STYLES}>ADGM Regulated Audit</Link></li>
+                    <li><Link href="/difc-dfsa-regulated-audit" className={FOOTER_LINK_STYLES}>DIFC & DFSA Regulated Audit</Link></li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -290,8 +287,13 @@ export default function Footer() {
                     <li><Link href="/mainland-company-formation-uae" className={FOOTER_LINK_STYLES}>Mainland Company Formation</Link></li>
                     <li><Link href="/company-formation-dubai-silicon-oasis" className={FOOTER_LINK_STYLES}>Dubai Silicon Oasis</Link></li>
                     <li><Link href="/business-setup-sharjah-airport-international-free-zone" className={FOOTER_LINK_STYLES}>Sharjah Airport Free Zone</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>e-Invoicing</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Digital Transformation</Link></li>
+                    <li><Link href="/company-setup-hamriyah-free-zone" className={FOOTER_LINK_STYLES}>Hamriyah Free Zone</Link></li>
+                    <li><Link href="/business-setup-dubai-airport-free-zone" className={FOOTER_LINK_STYLES}>Dubai Airport Free Zone</Link></li>
+                    <li><Link href="/dmcc-freezone-business-setup-uae" className={FOOTER_LINK_STYLES}>DMCC Free Zone</Link></li>
+                    <li><Link href="/dwtc-freezone" className={FOOTER_LINK_STYLES}>DWTC Free Zone</Link></li>
+                    <li><Link href="/ifza" className={FOOTER_LINK_STYLES}>IFZA</Link></li>
+                    <li><Link href="/meydan-freezone-business-setup-uae" className={FOOTER_LINK_STYLES}>Meydan Free Zone</Link></li>
+                    <li><Link href="/vat-advisory-services-uae" className={FOOTER_LINK_STYLES}>VAT Advisory Services</Link></li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -300,10 +302,10 @@ export default function Footer() {
                 <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}>Risk & Compliance</AccordionTrigger>
                 <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 ">
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Standard Operating Procedures</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Regulatory & Compliance Advisory</Link></li>
+                    <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Enterprise Risk Management</Link></li>
+                    <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Internal Audit Services</Link></li>
+                    <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Standard Operating Procedures</Link></li>
+                    <li><Link href="/risk-overview" className={FOOTER_LINK_STYLES}>Regulatory & Compliance Advisory</Link></li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -313,8 +315,8 @@ export default function Footer() {
                 <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 ">
                     <li><Link href="/blog" className={FOOTER_LINK_STYLES}>Blogs</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Newsroom</Link></li>
+                    <li><Link href="/glossary" className={FOOTER_LINK_STYLES}>Glossary</Link></li>
+                    <li><Link href="/blog" className={FOOTER_LINK_STYLES}>Newsroom</Link></li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -323,9 +325,9 @@ export default function Footer() {
                 <AccordionTrigger className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}>Company</AccordionTrigger>
                 <AccordionContent className='p-[15px_0]'>
                   <ul className="space-y-4 ">
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>About Us</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
-                    <li><Link href="/" className={FOOTER_LINK_STYLES}>Contact Us</Link></li>
+                    <li><Link href="/#about" className={FOOTER_LINK_STYLES}>About Us</Link></li>
+                    <li><Link href="/#clients" className={FOOTER_LINK_STYLES}>Our Clients</Link></li>
+                    <li><Link href="/#contact" className={FOOTER_LINK_STYLES}>Contact Us</Link></li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>

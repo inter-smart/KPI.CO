@@ -160,7 +160,7 @@ export default function RiskApproach({ data, variant }: RiskApproachProps) {
                         size="h6"
                         className="font-semibold text-[#212121] capitalize mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
                       >
-                        {data.steps[activeStep].title}
+                        {parse(data.steps[activeStep].title)}
                       </Heading>
                     </motion.div>
 

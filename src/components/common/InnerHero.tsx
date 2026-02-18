@@ -36,7 +36,7 @@ export default function InnerHero({
   return (
     <section
       className={cn(
-        "w-full h-[690px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
+        "w-full h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "bg-linear-to-t from-[#4578b5] to-[#053269]",
@@ -59,7 +59,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8"
+            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>
@@ -67,7 +67,7 @@ export default function InnerHero({
             <Text
               as="div"
               size="p3"
-              className="text-white xl:max-w-[88%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
+              className="text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
             >
               {parse(data?.description)}
             </Text>
@@ -96,7 +96,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! max-sm:mt-3"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>

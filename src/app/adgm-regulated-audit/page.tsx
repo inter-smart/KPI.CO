@@ -118,9 +118,9 @@ const localData = {
     media: {
       desktopPath: "/images/adgm-regulated-bg.png",
       mobilePath: "/images/adgm-regulated-mobile-bg.png",
-      alt: "ADGM Audits Built to Withstand Regulatory Scrutiny",
+      alt: "ADGM Audits Built To Withstand Regulatory Scrutiny",
     },
-    title: "ADGM Audits Built to Withstand Regulatory Scrutiny ",
+    title: "ADGM Audits Built To <br/> Withstand Regulatory Scrutiny ",
     description:
       "<p>In the ADGM ecosystem, financial reports are never in isolation. They are subject to board and audit committee scrutiny, relied upon by investors, and ultimately subject to regulatory review. As an ADGM-registered audit firm, KPI delivers FSRA-compliant audit services to regulated entities and other entities. Our audits are designed to meet statutory filing requirements and are prepared with regulatory review in mind.</p>",
   } satisfies HeroData,
@@ -149,12 +149,12 @@ const localData = {
       {
         id: 1,
         slNo: 1,
-        description: "ADGM Companies Regulations, as amended",
+        description: "ADGM Companies <br/> Regulations, as amended",
       },
       {
         id: 2,
         slNo: 2,
-        description: "FSRA Rulebooks and prescribed reporting requirements",
+        description: "FSRA Rulebooks and <br/> prescribed reporting <br/> requirements",
       },
       {
         id: 3,
@@ -236,31 +236,31 @@ const localData = {
   whyChoose: {
     title: "Why ADGM Entities Trust KPI",
     description:
-      "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
+      "",
     items: [
       {
         id: 1,
-        title: "Regulatory familiarity",
+        title: "Regulatory Familiarity",
         description:
-          "<p>Deep understanding of FSRA expectations without introducing unnecessary complexity</p>",
+          "<p>Deep understanding of FSRA expectations without introducing <br/> unnecessary complexity</p>",
       },
       {
         id: 2,
-        title: "Independent judgement",
+        title: "Independent Judgement",
         description:
-          "<p>Balanced, objective audit opinions that withstand regulatory and stakeholder challenge.</p>",
+          "<p>Balanced, objective audit opinions that withstand regulatory <br/> and stakeholder challenge.</p>",
       },
       {
         id: 3,
-        title: "Clear communication",
+        title: "Clear Communication",
         description:
-          "<p>Audit findings communicated clearly to management, boards, and key stakeholders.</p>",
+          "<p>Audit findings communicated clearly to management, boards,<br/> and key stakeholders.</p>",
       },
       {
         id: 4,
         title: "Professional accountability",
         description:
-          "<p>Consistently high standards of confidentiality, discipline, and audit integrity.</p>",
+          "<p>Consistently high standards of confidentiality, discipline, and <br/> audit integrity.</p>",
       },
     ] satisfies WhyChooseItem[],
   },

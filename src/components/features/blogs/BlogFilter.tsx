@@ -107,8 +107,8 @@ export default function BlogFilter({
                                             setIsSortOpen(false);
                                         }}
                                         className={cn(
-                                            "w-full px-5 py-3 text-[14px] font-semibold text-left transition-colors",
-                                            idx === 0 ? "bg-[#cccccc] text-[#1c5396]" : "text-gray-500 hover:bg-gray-200"
+                                            "w-full px-5 py-3 text-[14px] font-semibold text-center transition-colors cursor-pointer",
+                                            idx === 0 ? "bg-[#cccccc] text-[#053269]" : "text-gray-500 hover:bg-gray-200"
                                         )}
                                     >
                                         {option}

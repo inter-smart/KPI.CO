@@ -29,7 +29,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                   <Heading
                     as="h2"
                     size="h2"
-                    className="hidden md:block text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className="hidden md:block font-semibold text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
                   >
                     {data.title}
                   </Heading>
@@ -92,7 +92,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             </div>
 
             <div
-              className="w-full h-full rounded-[12px] overflow-hidden max-md:mb-6">
+              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto aspect-[615/636] max-md:mb-6">
               {data?.media?.path && (
                 <Image
                   src={data.media.path}

@@ -5,6 +5,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import HomeCounter from "@/components/features/home/HomeCounter";
+import type { CounterItem } from "@/app/page";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
@@ -86,12 +87,7 @@ export type WhyChooseItem = {
     description: string;
 };
 
-export type CounterItem = {
-    id: number;
-    value: number;
-    symbol?: string;
-    label: string;
-};
+
 
 
 export type RiskOrganisationData = {
