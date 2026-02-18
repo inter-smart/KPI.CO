@@ -327,7 +327,7 @@ const localData = {
       "<p>If risk is becoming harder to track, explain, or defend, our team can help you bring structure and clarity before issues escalate. Whether you are strengthening governance, preparing for regulatory review, or addressing control gaps, KPI can support you with clarity and confidence. </p>",
     button: {
       label: "Request Consultation",
-      link: "/contact",
+      link: "/#contact",
     },
   } satisfies DiscussYourRiskData,
 

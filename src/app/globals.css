@@ -288,3 +288,9 @@
 section {
   overflow: hidden;
 }
+
+  @media (max-width:768px) {
+    br{
+      display: none;
+    }
+  }

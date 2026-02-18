@@ -5,7 +5,7 @@ import { RiskAdvisoryDta } from "@/app/risk-overview/page";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "difc";
+type Variant = "default" | "difc" | "center";
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
@@ -33,28 +33,32 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
   return (
     <section className="w-full bg-white py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-center gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[100px]">
+        <div
+          className={cn(
+            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[100px]",
+            hasVariant(variant, "center") && "items-center",
+          )}
+        >
           <div className="w-full lg:w-[49%] 2xl:w-[45%]">
             <Heading
               as="h3"
               size="h3"
               className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
-              {data.title}
+              {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]">
+            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden">
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
-                  ' <span class="text-[#5280CA]">→</span></p>'
-                ) || ""
+                  ' <span class="text-[#5280CA]">→</span></p>',
+                ) || "",
               )}
             </div>
 
             <div className="flex flex-row gap-3">
               <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                 {data.highlightsText}
-
               </div>
             </div>
           </div>
@@ -71,9 +75,12 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         hasVariant(variant, "difc")
                           ? cn(
                               "border-[#DEDEDE]",
-                              index < 2 && "w-1/2 border-b border-r",
-                              index === 1 && "border-r-0",
-                              index >= 2 && "w-full border-b-0",
+                              index === advisoryItems.length - 1
+                                ? "w-full border-b-0 border-r-0" // last item full
+                                : cn(
+                                    "w-1/2 border-b",
+                                    index % 2 === 0 ? "border-r" : "border-r-0",
+                                  ),
                             )
                           : "w-1/2 border-b border-r border-[#DEDEDE]",
                       )}
@@ -89,8 +96,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
 
-                      <div className="text-[14px] lg:text-[13px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E]">
-                        {item.description}
+                      <div className="text-[14px] lg:text-[13px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E] max-md:[&_br]:hidden">
+                        {parse(item.description)}
                       </div>
                     </div>
                   ))}
@@ -100,6 +107,6 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 }

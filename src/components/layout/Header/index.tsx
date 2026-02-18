@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, FileText, Users, ShieldCheck, Cpu, BookOpen, Briefcase, Globe, Info } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import NavDropdown, { MegaCategory } from './NavDropdown';
 
 const navItems = [
@@ -20,10 +20,10 @@ const navItems = [
         icon: "/images/audit_icon.svg",
         href: '/',
         subItems: [
-          { name: 'Financial Statement Audit', href: '/services/audit/financial' },
-          { name: 'Agreed Upon Procedures', href: '/services/audit/agreed' },
-          { name: 'ADGM Regulated Audit', href: '/services/audit/adgm' },
-          { name: 'DIFC & DFSA Regulated Audit', href: '/services/audit/difc' },
+          { name: 'Financial Statement Audit', href: '/financial-statement-audit-uae' },
+          { name: 'Agreed Upon Procedures', href: '/agreed-upon-procedures-uae' },
+          { name: 'ADGM Regulated Audit', href: '/adgm-regulated-audit' },
+          { name: 'DIFC & DFSA Regulated Audit', href: '/difc-dfsa-regulated-audit' },
         ]
       },
       {
@@ -33,10 +33,8 @@ const navItems = [
         href: '/advisory-services-uae',
         subItems: [
           { name: 'Corporate Services', href: '/corporate-services-uae' },
-          { name: 'Advisory Services', href: '/advisory-services-uae' },
-          { name: 'Mainland Company Formation', href: '/mainland-company-formation-uae' },
-          { name: 'Dubai Silicon Oasis', href: '/company-formation-dubai-silicon-oasis' },
-          { name: 'Sharjah Airport Free Zone', href: '/business-setup-sharjah-airport-international-free-zone' },
+          { name: 'Tax Advisory', href: '/advisory-services-uae' }, 
+          { name: 'e-invoicing Services', href: '/advisory-services-uae' }, 
         ]
       },
       {
@@ -75,13 +73,13 @@ const navItems = [
       {
         id: 'glossary',
         label: 'Glossary',
-        href: '/',
+        href: '/glossary',
         subItems: []
       },
       {
         id: 'newsroom',
         label: 'Newsroom',
-        href: '/',
+        href: '/blog',
         subItems: [
         ]
       }
@@ -95,19 +93,19 @@ const navItems = [
       {
         id: 'about-us',
         label: 'About us',
-        href: '/about',
+        href: '/#about',
         subItems: []
       },
       {
         id: 'clients',
         label: 'Our Clients',
-        href: '/',
+        href: '/#clients',
         subItems: []
       },
       {
         id: 'contact',
         label: 'Contact Us',
-        href: '/contact',
+        href: '/#contact',
         subItems: []
       }
     ] as MegaCategory[]
@@ -268,7 +266,7 @@ export default function Header() {
                                                   )}
                                                 </div>
                                               )}
-                                              <span className="text-[15px] font-normal text-[#1C5396]">{mega.label}</span>
+                                              <span className="text-[15px] font-normal text-[#1C5396] !font-medium">{mega.label}</span>
                                             </div>
                                           </AccordionTrigger>
                                           <AccordionContent className="pl-11 pt-1">

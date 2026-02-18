@@ -39,15 +39,11 @@ const formSchema = z.object({
 });
 
 export default function BlogList({ data }: BlogListProps) {
-  const [activeFilters, setActiveFilters] = useState([
-    "Audit",
-    "Advisory",
-    "Tax",
-  ]);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8; // 5 items + CTA + 3 items = 9 slots (3x3 grid)
-  const topRef = useRef<HTMLElement>(null);
+    const [activeFilters, setActiveFilters] = useState<string[]>([]);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 8; // 5 items + CTA + 3 items = 9 slots (3x3 grid)
+    const topRef = useRef<HTMLElement>(null);
 
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter((f) => f !== filter));
@@ -101,20 +97,13 @@ export default function BlogList({ data }: BlogListProps) {
     }
   };
 
-  return (
-    <section
-      ref={topRef}
-      className="w-full py-[30px] md:py-[40px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[85px] bg-white"
-    >
-      <div className="container">
-        {/* Section Header */}
-        <Heading
-          as="h1"
-          size="h1"
-          className="text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold"
-        >
-          {data.title}
-        </Heading>
+    return (
+        <section ref={topRef} className="w-full py-[30px] md:py-[40px] xl:py-[60px] 2xl:py-[75px] 3xl:py-[85px] bg-white">
+            <div className="container">
+                {/* Section Header */}
+                <Heading as="h1" size="h1" className="text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold">
+                    {data.title}
+                </Heading>
 
         {/* Filter and Search Bar */}
         <div className="flex flex-row  gap-2 2xl:gap-3 3xl:gap-4 mb-6 max-w-[500px] xl:max-w-[620px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[42px] 2xl:h-[50px] 3xl:h-[65px]">
@@ -192,93 +181,66 @@ export default function BlogList({ data }: BlogListProps) {
               <BlogCard key={item.id} data={item} />
             ))}
 
-            {/* Special CTA Card (Position 6) */}
-            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[410px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
-              <div className="position absolute top-0 left-0 w-full h-full">
-                <Image
-                  src="/images/blogBg.jpg"
-                  className="w-full h-full object-cover"
-                  width="375"
-                  height="235"
-                  alt="bannerBg"
-                />
-              </div>
+                        {/* Special CTA Card (Position 6) */}
+                        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[450px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
+                            <div className="position absolute top-0 left-0 w-full h-full">
+                                <Image src="/images/blogBg.jpg" className="w-full h-full object-cover" width="375" height="235" alt="bannerBg" />
+                            </div>
 
-              <div className="relative z-10">
-                <h3 className="text-[16px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-semibold mb-4 leading-relaxed">
-                  Strong Decisions Start with Clear Insight
-                </h3>
-                <p className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 leading-relaxed">
-                  Our audit and business advisory services help you identify
-                  risks, improve performance, and plan for sustainable growth at
-                  every stage of your business.
-                </p>
+                            <div className="relative z-10">
+                                <h3 className="text-[16px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-semibold mb-4 leading-relaxed">
+                                    Strong Decisions Start <br/> with Clear Insight
+                                </h3>
+                                <p className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 leading-relaxed">
+                                    Our audit and business advisory services help you identify risks, improve performance, and plan for sustainable growth at every stage of your business.
+                                </p>
 
-                <div className="relative">
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="relative group "
-                    >
-                      <div className="bg-white rounded-[10px] 3xl:rounded-[13px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[42px] xl:h-[50px] 3xl:h-[55px] shadow-sm focus-within:ring-1 focus-within:ring-white/20 transition-all">
-                        <div className="flex-1 overflow-hidden">
-                          <FormField
-                            control={form.control}
-                            name="email"
-                            render={({ field }) => (
-                              <FormItem className="space-y-0">
-                                <FormControl>
-                                  <Input
-                                    placeholder="Subscribe Today"
-                                    className="text-[17px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(0,0,0)] font-medium px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none placeholder:text-black"
-                                    {...field}
-                                  />
-                                </FormControl>
-                              </FormItem>
-                            )}
-                          />
+                                <div className="relative">
+                                    <Form {...form}>
+                                        <form onSubmit={form.handleSubmit(onSubmit)} className="relative group ">
+                                            <div className="bg-white rounded-[13px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[42px] xl:h-[50px] 2xl:h-[46px] 3xl:h-[55px] shadow-sm focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                                                <div className="flex-1 overflow-hidden">
+                                                    <FormField
+                                                        control={form.control}
+                                                        name="email"
+                                                        render={({ field }) => (
+                                                            <FormItem className="space-y-0">
+                                                                <FormControl>
+                                                                    <Input
+                                                                        placeholder='Subscribe Today'
+                                                                        className='text-[17px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(0,0,0)] font-medium px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none placeholder:text-[17px] 2xl:placeholder:text-[19px] 3xl:placeholder:text-[21px] placeholder:text-black'
+                                                                        {...field}
+                                                                    />
+                                                                </FormControl>
+                                                            </FormItem>
+                                                        )}
+                                                    />
+                                                </div>
+                                                <Button
+                                                    type="submit"
+                                                    variant="ghost"
+                                                    className='!w-[32px] !h-[32px] xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] flex items-center justify-center !p-1.5 cursor-pointer  hover:opacity-90 transition-all active:scale-95'
+                                                >
+                                                    <svg viewBox="0 0 23 19" fill="none"  >
+                                                        <path d="M1.11119 9.43131L19.9983 9.17188" stroke="white" strokeWidth="2.22222" strokeLinecap="round" />
+                                                        <path d="M12.8395 1.11109L21.1099 9.15732L13.0959 17.3945" stroke="white" strokeWidth="2.22222" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </Button>
+                                            </div>
+                                            <div className="absolute left-0 -bottom-6">
+                                                <FormField
+                                                    control={form.control}
+                                                    name="email"
+                                                    render={() => (
+                                                        <FormMessage className="text-red-500 text-xs font-medium" />
+                                                    )}
+                                                />
+                                            </div>
+                                        </form>
+                                    </Form>
+                                </div>
+                            </div>
                         </div>
-                        <Button
-                          type="submit"
-                          variant="ghost"
-                          className="!w-[34px] xl:!w-[42px] h-full  3xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
-                        >
-                          <svg
-                            width="23"
-                            height="19"
-                            viewBox="0 0 23 19"
-                            fill="none"
-                          >
-                            <path
-                              d="M1.11119 9.43131L19.9983 9.17188"
-                              stroke="white"
-                              strokeWidth="2.22222"
-                              strokeLinecap="round"
-                            />
-                            <path
-                              d="M12.8395 1.11109L21.1099 9.15732L13.0959 17.3945"
-                              stroke="white"
-                              strokeWidth="2.22222"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </Button>
-                      </div>
-                      <div className="absolute left-0 -bottom-6">
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={() => (
-                            <FormMessage className="text-red-500 text-xs font-medium" />
-                          )}
-                        />
-                      </div>
-                    </form>
-                  </Form>
-                </div>
-              </div>
-            </div>
 
             {/* Remaining items */}
             {currentItems.slice(5).map((item) => (
@@ -352,33 +314,33 @@ export default function BlogList({ data }: BlogListProps) {
 }
 
 function BlogCard({ data }: BlogCardProps) {
-  return (
-    <div className="group flex flex-col bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[15px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border hover:border-[#3EB0EA] border-gray-50">
-      <div className="relative aspect-[440/268] overflow-hidden">
-        <Image
-          src={data.media.path || "/images/placeholder-image.png"}
-          alt={data.media.alt || data.title}
-          fill
-          className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
-        />
-      </div>
-      <div className="p-6 md:p-7 2xl:p-[25px_45px] 3xl:p-[34px_64px] flex flex-col flex-1">
-        <div className="text-[13px] font-medium text-[#5280ca] mb-3 uppercase tracking-wide">
-          {data.date} • {data.readTime}
+    return (
+        <div className="group flex flex-col bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+            <div className="relative aspect-[440/268] overflow-hidden">
+                <Image
+                    src={data.media.path || "/images/placeholder-image.png"}
+                    alt={data.media.alt || data.title}
+                    fill
+                    className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
+                />
+            </div>
+            <div className="p-6 md:p-7 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1">
+                <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide">
+                    {data.date} • {data.readTime}
+                </div>
+                <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black group-hover:text-[#1C5396] mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
+                    {parse(data.title)}
+                </h3>
+                <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-[25px] md:leading-[27px] 2xl:leading-[28px] 3xl:leading-[33px] mb-6">
+                    {parse(data.description)}
+                </div>
+                <Link
+                    href={data.slug ?? "#"}
+                    className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
+                >
+                    Read More <span>→</span>
+                </Link>
+            </div>
         </div>
-        <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black group-hover:text-[#1C5396] mb-3 line-clamp-2 leading-tight transition-colors">
-          {parse(data.title)}
-        </h3>
-        <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-6">
-          {parse(data.description)}
-        </div>
-        <Link
-          href={data.slug ?? "#"}
-          className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
-        >
-          Read More <span>→</span>
-        </Link>
-      </div>
-    </div>
-  );
+    );
 }

@@ -131,11 +131,11 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/regulated-audit-bg.png",
+      desktopPath: "/images/regulated-audit-bg.jpg",
       mobilePath: "/images/regulated-audit-mobile-bg.png",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
-    title: "DIFC Audits Built to Withstand Regulatory Scrutiny ",
+    title: "DIFC Audits Built To <br/> Withstand Regulatory Scrutiny ",
     description:
       "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
   } satisfies HeroData,
@@ -156,7 +156,7 @@ const localData = {
     },
   } satisfies WhyRiskData,
   riskAdvisory: {
-    title: "DIFC & DFSA Regulated Audit Services",
+    title: "DIFC & DFSA Regulated Audit <br/> Services",
     description:
       "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with</p> ",
     highlightsText: "Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.",
@@ -164,12 +164,12 @@ const localData = {
       {
         id: 1,
         slNo: 1,
-        description: "DIFC Companies Law and Regulations (as amended)",
+        description: "DIFC Companies Law and  <br/> Regulations (as amended)",
       },
       {
         id: 2,
         slNo: 2,
-        description: "DFSA Rulebooks and prescribed reporting requirements",
+        description: "DFSA Rulebooks and  <br/> prescribed reporting  <br/> requirements",
       },
       {
         id: 3,
@@ -237,7 +237,6 @@ const localData = {
         id: 3,
         text: "Investment funds and asset management structures",
       },
-      { id: 4, text: "Repeated control issues or unresolved audit findings  " },
       
 
     ],
@@ -254,7 +253,7 @@ const localData = {
     free_zone_list: [
       {
         id: 1,
-        title: "Audit Support During DIFC Liquidation & Regulatory Closure",
+        title: "Audit Support During DIFC Liquidation & Regulatory <br/> Closure",
         description:
           "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
         highlightsText:
@@ -280,31 +279,31 @@ const localData = {
   whyChoose: {
     title: "Why DIFC Entities Trust KPI",
     description:
-      "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
+      "",
     items: [
       {
         id: 1,
         title: "Regulatory familiarity",
         description:
-          "<p>Strong understanding of DFSA expectations without unnecessary complexity.</p>",
+          "<p>Strong understanding of DFSA expectations without <br/> unnecessary complexity.</p>",
       },
       {
         id: 2,
         title: "Independent judgement",
         description:
-          "<p>Balanced, objective audit opinions that withstand regulatory and stakeholder challenge.</p>",
+          "<p>Balanced, objective audit opinions that withstand regulatory <br/> and stakeholder challenge.</p>",
       },
       {
         id: 3,
         title: "Clear communication",
         description:
-          "<p>Audit findings communicated clearly to management, boards, and key stakeholders.</p>",
+          "<p>Audit findings communicated clearly to management, boards, <br/>and key stakeholders.</p>",
       },
       {
         id: 4,
         title: "Professional accountability",
         description:
-          "<p>Consistently high standards of confidentiality, discipline, and audit integrity.</p>",
+          "<p>Consistently high standards of confidentiality, discipline, and<br/> audit integrity.</p>",
       },
     ] satisfies WhyChooseItem[],
   },
@@ -417,7 +416,7 @@ export default function DwtcFreezone() {
     <>
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
-      <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
+      <RiskAdvisory variant={["difc", "center"]}data={localData.riskAdvisory} />
       <RiskApproach variant="mainland" data={localData.approachProcess} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />

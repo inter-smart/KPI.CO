@@ -59,7 +59,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8"
+            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>
@@ -67,7 +67,7 @@ export default function InnerHero({
             <Text
               as="div"
               size="p3"
-              className="text-white xl:max-w-[88%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
+              className="text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
             >
               {parse(data?.description)}
             </Text>

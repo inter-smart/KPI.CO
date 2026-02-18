@@ -66,7 +66,7 @@ export default function CorporateServicesUaeWhyChoose({
                   (variant === "default" || variant === "advisory") &&
                   "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
                   variant === "risk" &&
-                  "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#377fd8] after:bg-[#f3f7fd]",
+                  "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#3172c0] after:bg-[#f3f7fd]",
                 )}
               >
                 <div
@@ -79,7 +79,7 @@ export default function CorporateServicesUaeWhyChoose({
                 >
                   {item?.title}
                 </div>
-                <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E]">
+                <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                   {parse(item?.description)}
                 </div>
               </div>
