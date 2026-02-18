@@ -152,7 +152,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                         ) : (
                             <div className="h-full w-full flex flex-col justify-start">
                                 <div className={cn(
-                                    "relative w-full h-full lg:h-[80%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
+                                    "relative w-full h-full lg:h-[90%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
                                     activeCategoryId === 'digital' ? "bg-[linear-gradient(360deg,#3EB0EA_0%,#389FDB_18%,#1C5396_100%)]" :
                                         isResource ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
                                             "bg-[linear-gradient(360deg,#4A7DBF_0%,#2D5B94_40%,#1C5396_100%)]"
