@@ -57,8 +57,8 @@ export default function CorporateServicesUaeFaq({
                 className="w-full h-auto bg-transparent border-b border-[#DEDEDE] last:border-b overflow-hidden relative z-0"
               >
                 <AccordionTrigger className="py-4 sm:py-5 lg:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 2xl:[&>svg]:w-7.5 [&>svg]:h-5 2xl:[&>svg]:h-7.5">
-                  <div className="text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-black max-w-[90%]">
-                    {item?.title}
+                  <div className="text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-black max-w-[92%]">
+                    {parse(item?.title)}
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">

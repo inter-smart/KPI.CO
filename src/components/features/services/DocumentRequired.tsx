@@ -57,7 +57,7 @@ export default function DocumentRequired({
                       size="h2"
                       className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
                     >
-                      {data.title}
+                      {parse(data.title)}
                     </Heading>
                   )}
 
@@ -107,14 +107,14 @@ export default function DocumentRequired({
                         </svg>
                       )}
                     </span>
-                    {item.text}
+                    {parse(item.text)}
                   </li>
                 ))}
               </ul>
             )}
 
             {data?.ftr_description && (
-              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] md:[&_br]:hidden">
+              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                 {parse(data.ftr_description)}
               </div>
             )}

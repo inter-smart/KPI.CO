@@ -47,7 +47,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden">
+            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,

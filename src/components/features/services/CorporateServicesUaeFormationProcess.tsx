@@ -179,7 +179,7 @@ export default function CorporateServicesUaeFormationProcess({
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[160%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       variant === "Vat-Services" && "lg:h-[250%]",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
@@ -230,11 +230,11 @@ export default function CorporateServicesUaeFormationProcess({
                     as="div"
                     size="h6"
                     className={cn(
-                      "font-semibold line-clamp-1 transition-colors duration-300",
+                      "font-semibold transition-colors duration-300",
                       index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
                     )}
                   >
-                    {step.title}
+                    {parse(step.title)}
                   </Heading>
                 </motion.div>
               ))}
@@ -291,9 +291,9 @@ export default function CorporateServicesUaeFormationProcess({
                       <Heading
                         as="h4"
                         size="h6"
-                        className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7"
+                        className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7 max-md:[&_br]:hidden"
                       >
-                        {data.steps[activeStep].inner_title}
+                        {parse(data.steps[activeStep].inner_title)}
                       </Heading>
                     )}
                   </motion.div>
@@ -302,7 +302,7 @@ export default function CorporateServicesUaeFormationProcess({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.3 }}
                   >
-                    <Text as="div" size="p3" className="text-black">
+                    <Text as="div" size="p3" className="text-black max-md:[&_br]:hidden">
                       {parse(data.steps[activeStep].description)}
                     </Text>
                   </motion.div>

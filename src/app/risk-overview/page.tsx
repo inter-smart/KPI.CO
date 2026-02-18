@@ -7,7 +7,6 @@ import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManage
 import { MediaItem } from "../page";
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
-import RiskApproach from "@/components/features/risk-overview/RiskApproach";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
@@ -15,6 +14,7 @@ import CorporateServicesUaeWhyChoose from "@/components/features/services/Corpor
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -70,9 +70,11 @@ export type RiskOrganisationData = {
   };
 };
 
-export type ApproachStep = {
+
+export type ProcessStep = {
   id: number;
   title: string;
+  inner_title: string;
   sub_title: string;
   description: string;
 };
@@ -149,8 +151,8 @@ const localData = {
   riskAdvisory: {
     title: "What Risk Advisory Means at KPI in Practice",
     description:
-      " <p>KPI's risk advisory services focus on how risk emerges within organisations, not just how it appears on paper. We align risk management with real operations, decision-making and regulatory expectations. Our role is not to introduce complexity but to make risk visible, manageable, and defensible at the right level.  </p>",
-    highlightsText: "We support management and boards with, ",
+      " <p>KPI's risk advisory services focus on how risk emerges within organisations, not just how it appears on paper. We align risk management with real operations, decision-making and regulatory expectations. Our role is not to introduce complexity but to make risk visible, manageable, and defensible at the right level.  </p> <p>We support management and boards with, </p>",
+    highlightsText: "",
     advisoryItems: [
       {
         id: 1,
@@ -162,7 +164,7 @@ const localData = {
         id: 2,
         slNo: 2,
         description:
-          "Assessing control effectiveness and identifying material gaps ",
+          "Assessing control effectiveness and identifying material gaps ",
       },
       {
         id: 3,
@@ -258,40 +260,45 @@ const localData = {
       "<p>Engaging early allows organisations to address issues proactively, before they become external concerns. </p>",
   } satisfies RiskOrganisationData,
 
-  approachProcess: {
+  formationProcess: {
     title: "How KPI Approaches Risk",
     sub_title: null,
-    description: null,
+    description:
+      "A practical, governance-led approach that goes beyond theory-driven frameworks and and focuses on how risk emerges within organisations. ",
     steps: [
       {
         id: 1,
-        title: "Risk identification with business context",
+        title: "Risk identification with business <br/>  context",
+        inner_title: "Risk identification with business <br/> context",
         sub_title: "Risk identification with business context",
         description:
-          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
-      },
-      {
-        id: 2,
-        title: "Control assessment and gap analysis",
-        sub_title: "Control assessment and gap analysis",
-        description:
-          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
-      },
-      {
-        id: 3,
-        title: "Clear prioritisation",
-        sub_title: "Clear prioritisation",
-        description:
+          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
+        },
+        {
+          id: 2,
+          title: "Control assessment and gap <br/> analysis",
+          inner_title: "Control assessment and gap analysis",
+          sub_title: "Control assessment and gap analysis",
+          description:
+          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
+        },
+        {
+          id: 3,
+          title: "Clear prioritisation",
+          inner_title: "Clear prioritisation",
+          sub_title: "Clear prioritisation",
+          description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+        },
+        {
+          id: 4,
+          title: "Actionable recommendations",
+          inner_title: "Actionable recommendations",
+          sub_title: "Actionable recommendations",
+          description:
+          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
       },
-      {
-        id: 4,
-        title: "Actionable recommendations",
-        sub_title: "Actionable recommendations",
-        description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
-      },
-    ] satisfies ApproachStep[],
+    ] satisfies ProcessStep[],
   },
 
   counterList: [
@@ -460,7 +467,10 @@ export default function RiskOverviewPage() {
       <RiskAdvisory data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
-      <RiskApproach variant="risk" data={localData.approachProcess} />
+      <CorporateServicesUaeFormationProcess
+        variant="aup"
+        data={localData.formationProcess}
+      />
       <HomeCounter data={localData.counterList} variant="risk" />
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeWhyChoose
