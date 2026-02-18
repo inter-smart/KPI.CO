@@ -809,13 +809,12 @@ const localData = {
       },
     ],
     media: {
-      path: "/images/document-required-saifz-img.jpg",
+      path: "/images/saifz-document-saifz.jpg",
       alt: "Required documents",
     },
     ftr_description:
       "<p>With KPI, your SAIF Free Zone company is structured for growth, letting you focus on scaling and managing your international business.</p>",
   } satisfies DocumentRequiredData,
-
   insights: {
     title: "Related Blogs",
     items: blogData.slice(0, 4).map((blog) => ({
@@ -830,7 +829,7 @@ const localData = {
   },
 };
 
-export default function MainlandCompanyFormationUaePage() {
+export default function SaifzUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />

@@ -14,7 +14,7 @@ import CorporateServicesUaeSetupOptions from "@/components/features/services/Cor
 export type MainlandBusinessData = {
   title: string;
   description: string;
-  highlightsTitle: string;
+  highlightsTitle?: string;
   highlights: string[];
   footerDescription: string;
   image: {
@@ -172,7 +172,7 @@ const localData = {
     highlights: [],
     footerDescription: "",
     image: {
-      path: "/images/hamriyah-business.jpg",
+      path: "/images/hamriyah-business-mainland.jpg",
       alt: "Hamriyah",
     },
   } satisfies MainlandBusinessData,
@@ -242,7 +242,7 @@ const localData = {
       {
         id: 7,
         media: {
-          path: "/images/hamriyah-key-6.svg",
+          path: "/images/hamriyah-key-7.svg",
           alt: "Zone Security",
         },
         title: "Zone Security",
@@ -252,7 +252,7 @@ const localData = {
       {
         id: 8,
         media: {
-          path: "/images/hamriyah-key-6.svg",
+          path: "/images/hamriyah-key-8.svg",
           alt: "Sector Focus",
         },
         title: "Sector Focus",
@@ -534,9 +534,9 @@ export default function MainlandCompanyFormationUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="hamriya" />
       <CorporateServicesUaeWhyBuild
-        variant={["mainland", "saifz"]}
+        variant={["mainland", "saifz", "hamriya"]}
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices data={localData.services} variant="saifz" />

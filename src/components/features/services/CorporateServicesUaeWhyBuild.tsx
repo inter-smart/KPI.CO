@@ -23,7 +23,13 @@ export type CorporateServicesUaeWhyBuildData = {
   items: WhyBuildItem[];
 };
 
-export type Variant = "dafz" | "saifz" | "mainland" | "freezone" | "default";
+export type Variant =
+  | "hamriya"
+  | "dafz"
+  | "saifz"
+  | "mainland"
+  | "freezone"
+  | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
   variant?: Variant | Variant[];
@@ -145,6 +151,8 @@ export default function CorporateServicesUaeWhyBuild({
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
               "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+            hasVariant(variant, "hamriya") &&
+              "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
           )}
         >
           {data.items.map((item) => (

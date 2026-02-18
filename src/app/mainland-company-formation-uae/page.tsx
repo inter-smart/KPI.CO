@@ -420,7 +420,7 @@ const localData = {
         description:
           "A premium Dubai- based jurisdiction for finance, investment, and professional services. Operates under an independent legal and regulatory framework with international standards",
         media: {
-          path: "/images/mainland-business-2.jpg",
+          path: "/images/mainland-business-4.jpg",
           alt: "Business Structuring",
         },
       },
@@ -434,42 +434,42 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -484,25 +484,25 @@ const localData = {
         id: 1,
         title: "Business Structuring ",
         description:
-          "<p>We help you choose the right activity, license, and legal structure to align with your goals and long-term growth. </p>",
+          "<p>We help you choose the right activity, license, and legal <br> structure to align with your goals and long-term growth. </p>",
       },
       {
         id: 2,
         title: "Regulatory Guidance",
         description:
-          "<p>Stay fully compliant with UAE laws and regulations. We ensure approvals, documentation, and licenses are handled correctly. </p>",
+          "<p>Stay fully compliant with UAE laws and regulations. We ensure <br> approvals, documentation, and licenses are handled correctly. </p>",
       },
       {
         id: 3,
         title: "Office & Visa Support",
         description:
-          "<p>We handle your UAE office setup and visa processing for owners, employees, and dependents during the formation process.</p>",
+          "<p>We handle your UAE office setup and visa processing for owners, <br> employees, and dependents during the formation process.</p>",
       },
       {
         id: 4,
         title: "Banking & Operations",
         description:
-          "<p>We assist with corporate bank accounts, operational setup, and admin tasks to give your mainland company a solid foundation.</p>",
+          "<p>We assist with corporate bank accounts, operational setup, and <br> admin tasks to give your mainland company a solid foundation.</p>",
       },
       {
         id: 5,
@@ -514,7 +514,7 @@ const localData = {
         id: 6,
         title: "Accounting Services",
         description:
-          "<p>We manage bookkeeping, accounting, and reporting, helping your business maintain clarity for informed decision-making.</p>",
+          "<p>We manage bookkeeping, accounting, and reporting, helping <br> your business maintain clarity for informed decision-making.</p>",
       },
     ] satisfies WhyChooseItem[],
     hero: {
@@ -834,7 +834,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/document-required-img.jpg",
+      path: "/images/mainland-document-required.jpg",
       alt: "Required documents",
     },
     ftr_description:

@@ -24,7 +24,7 @@ export default function BusinessLocation({ data }: BusinessLocationProps) {
           >
             {data.title}
           </Heading>
-          <div className="text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
+          <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
             {data.description}
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function BusinessLocation({ data }: BusinessLocationProps) {
                 </div>
               </div>
 
-              <div className="relative  h-full w-full inset-0 bg-[#E2F5FF] flex items-start p-[30px] 3xl:p-[35px]    opacity-0 group-hover:opacity-100  group-hover:scale-100 scale-95 origin-center pointer-events-none group-hover:pointer-events-auto">
+              <div className="relative  h-full w-full inset-0 bg-[#E2F5FF] flex items-start p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100  group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto">
                 <div className="w-full h-auto">
                   <div className="flex items-center justify-between gap-4 mb-3 2xl:mb-5 3xl:mb-8">
                     <Heading
