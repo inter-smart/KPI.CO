@@ -178,7 +178,7 @@ const localData = {
       },
     ],
   } satisfies RiskAdvisoryDta,
-  approachProcess: {
+  ProcessStep: {
     title: "Our Audit Approach",
     sub_title: null,
     description: null,
@@ -417,7 +417,7 @@ export default function DwtcFreezone() {
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
       <RiskAdvisory variant={["difc", "center"]}data={localData.riskAdvisory} />
-      <RiskApproach variant="mainland" data={localData.approachProcess} />
+      <RiskApproach variant="mainland" data={localData.ProcessStep} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose

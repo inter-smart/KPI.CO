@@ -1,7 +1,7 @@
 "use client";
 import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
-import type { ApproachStep } from "@/app/risk-overview/page";
+import type { ProcessStep } from "@/app/risk-overview/page";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,7 +13,7 @@ type RiskApproachProps = {
     title: string;
     description?: string | null;
     sub_title?: string | null;
-    steps: ApproachStep[];
+    steps: ProcessStep[];
   };
 };
 
