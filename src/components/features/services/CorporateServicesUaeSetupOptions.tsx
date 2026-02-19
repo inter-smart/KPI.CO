@@ -36,7 +36,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
         initial={false}
       >
         <motion.div
-          className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 w-full pt-2 px-4"
+          className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 w-full sm:pt-2 px-4"
           animate={{
             y: isHovered ? "-120%" : "-50%",
             opacity: isHovered ? 0 : 1,

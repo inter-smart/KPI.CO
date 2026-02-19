@@ -45,7 +45,7 @@ export default function HomePartner({ data }: HomePartnerProps) {
   const duplicatedData = [...data, ...data, ...data, ...data];
 
   return (
-    <section className="bg-white py-[40px] lg:py-[60px] 2xl:py-[50px_90px] relative overflow-hidden">
+    <section id="clients" className="bg-white py-[40px] lg:py-[60px] 2xl:py-[50px_90px] relative overflow-hidden">
       <div
         className="container"
       >

@@ -412,7 +412,7 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
         variant="freezone"
         data={localData.whyBuild}

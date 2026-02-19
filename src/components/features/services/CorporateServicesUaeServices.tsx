@@ -23,7 +23,7 @@ export default function CorporateServicesUaeServices({
         <div
           className={cn(
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
-            variant === "saifz" && "sm:text-left"
+            variant === "saifz" && "sm:text-left",
           )}
         >
           <Heading
@@ -42,8 +42,8 @@ export default function CorporateServicesUaeServices({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 2xl:gap-7.5 3xl:gap-10">
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
-              <div className="group [--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex">
-                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 2xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="[--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396] ">
+                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-3 lg:p-2 2xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">
                   <Image
                     src={item?.media?.path}
                     alt={item?.media?.alt}

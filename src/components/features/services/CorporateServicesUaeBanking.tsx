@@ -22,7 +22,7 @@ export default function CorporateServicesUaeBanking({
 }: CorporateServicesUaeBankingProps) {
   const [emblaRef] = useEmblaCarousel(
     {
-      loop: true,
+      loop: false,
       align: "center",
       slidesToScroll: 1,
       containScroll: "trimSnaps",
@@ -62,7 +62,7 @@ export default function CorporateServicesUaeBanking({
         </div>
         <div ref={emblaRef} className="w-full max-w-full">
           <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75">
-            {data.partners.map((item) => (
+            {data?.partners?.map((item) => (
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(

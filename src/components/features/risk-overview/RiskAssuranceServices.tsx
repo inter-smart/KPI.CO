@@ -82,8 +82,8 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
                   <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75 3xl:mb-3">
                     {item?.title}
                   </div>
-                  <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]">
-                    {item?.description}
+                  <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-[93%]">
+                    {parse(item?.description)}
                   </p>
                 </div>
               </div>

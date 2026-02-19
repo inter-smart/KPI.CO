@@ -1,9 +1,11 @@
 'use client'
 
+import { useEffect } from 'react'
+
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
+import AutoScroll from 'embla-carousel-auto-scroll'
 import { Heading } from '@/components/utils/typography'
 import type { AffiliationItem } from '@/app/page'
 
@@ -15,15 +17,37 @@ type HomeProfessionalAffiliationsProps = {
 }
 
 export default function HomeProfessionalAffiliations({ data }: HomeProfessionalAffiliationsProps) {
-  const [emblaRef] = useEmblaCarousel(
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: 'start',
-      slidesToScroll: 1,
-      containScroll: 'trimSnaps',  
     },
-    [Autoplay({ delay: 6000, stopOnInteraction: true })],
+    [
+      AutoScroll({
+        speed: 1.5,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false, // Handle manually for instant response
+      }),
+    ],
   )
+
+  useEffect(() => {
+    const autoScroll = emblaApi?.plugins()?.autoScroll
+    if (!autoScroll) return
+
+    const emblaNode = emblaApi.rootNode()
+
+    const onMouseEnter = () => autoScroll.stop()
+    const onMouseLeave = () => autoScroll.play()
+
+    emblaNode.addEventListener('mouseenter', onMouseEnter)
+    emblaNode.addEventListener('mouseleave', onMouseLeave)
+
+    return () => {
+      emblaNode.removeEventListener('mouseenter', onMouseEnter)
+      emblaNode.removeEventListener('mouseleave', onMouseLeave)
+    }
+  }, [emblaApi])
 
   return (
     <section className="w-full py-8 xl:py-[90px] 2xl:py-[100px] overflow-hidden">

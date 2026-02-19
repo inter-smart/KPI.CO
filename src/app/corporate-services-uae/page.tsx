@@ -228,6 +228,7 @@ const localData = {
         step: "Step One",
         title: "Speak To A Consultant",
         sub_title: "Define Scope & Objectives",
+        inner_title: "Define Scope & Objectives",
         description:
           "<p>It begins with a conversation. We take the time to understand your business idea, goals, and where you want to operate. Based on this, we recommend the most suitable setup option across the UAE.</p>",
       },
@@ -236,6 +237,7 @@ const localData = {
         step: "Step Two",
         title: "Choose The Right Jurisdiction",
         sub_title: "Choose the Right Jurisdiction",
+        inner_title: "Choose the Right Jurisdiction",
         description:
           "<p>Mainland, free zone, or offshore - each serve a different purpose. We help you choose the structure that fits your business activity, budget, and future goals.</p>",
       },
@@ -244,6 +246,7 @@ const localData = {
         step: "Step Three",
         title: "Secure Your Trade License",
         sub_title: "Secure Your Trade License",
+        inner_title: "Secure Your Trade License",
         description:
           "<p>Once the structure is confirmed, we manage the license application from end to end. Our team prepares the documents, submits them to the relevant authorities, and keeps you informed until approval is complete.</p>",
       },
@@ -252,6 +255,7 @@ const localData = {
         step: "Step Four",
         title: "Apply For UAE Residency",
         sub_title: "Apply For UAE Residency",
+        inner_title: "Apply For UAE Residency",
         description:
           "<p>If your setup requires visas, we handle the full process for business owners, partners, employees, and family members. This includes applications, medicals, Emirates ID, and final approvals.</p>",
       },
@@ -260,6 +264,7 @@ const localData = {
         step: "Step Five",
         title: "Open Your Business Bank Account",
         sub_title: "Open Your Business Bank Account",
+        inner_title: "Open Your Business Bank Account",
         description:
           "<p>To complete your setup, we support you with opening a corporate bank account. From bank selection to compliance preparation, we help streamline a process that can otherwise be time-consuming.</p>",
       },
@@ -302,14 +307,14 @@ const localData = {
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -385,7 +390,7 @@ const localData = {
   },
 
   whyChoose: {
-    title: "Why choose KPI?",
+    title: "Why Choose KPI?",
     description:
       "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
     items: [
