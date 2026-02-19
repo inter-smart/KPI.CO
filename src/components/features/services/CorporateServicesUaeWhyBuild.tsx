@@ -76,7 +76,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "font-semibold !text-black mb-2 2xl:mb-2.5",
+          "max-sm:text-[16px] font-semibold !text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
             "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
@@ -156,7 +156,7 @@ export default function CorporateServicesUaeWhyBuild({
         </div>
         <div
           className={cn(
-            "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
+            "hidden sm:grid grid-cols-2 md:grid-cols-2 sm:px-[15px] 2xl:px-[25px]",
             hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
@@ -178,7 +178,7 @@ export default function CorporateServicesUaeWhyBuild({
               <div
                 key={`why-build-${item.id}`}
                 className="flex-[0_0_340px] min-w-0 select-none px-2.5"
-              >
+              > 
                 <WhyBuildCard item={item} variant={variant} />
               </div>
             ))}

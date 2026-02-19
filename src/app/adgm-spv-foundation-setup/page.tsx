@@ -279,16 +279,8 @@ const localData = {
       },
       {
         id: 2,
-<<<<<<< HEAD:src/app/adgm-foundations/page.tsx
         media: { path: "/images/explore-01.jpg", alt: "Holding Companies in ADGM" },
         title: "Holding Companies in <br/> ADGM",
-=======
-        media: {
-          path: "/images/explore-01.jpg",
-          alt: "Holding Companies in ADGM",
-        },
-        title: "SPHolding Companies in <br/> ADGM",
->>>>>>> c41c5e9d2c6c39c2f0f1db2a21d3bd0cfd2c9082:src/app/adgm-spv-foundation-setup/page.tsx
         slug: "#",
       },
       {

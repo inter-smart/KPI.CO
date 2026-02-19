@@ -153,7 +153,7 @@ function InsightCard({ data }: InsightCardProps) {
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
+          className="text-[14px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto  transition-colors duration-300"
         >
           Read More <span>→</span>
         </Link>

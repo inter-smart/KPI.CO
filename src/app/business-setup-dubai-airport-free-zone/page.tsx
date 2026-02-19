@@ -274,7 +274,7 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/dafz-servive-2.svg",
+          path: "/images/dafz-servive-3.svg",
           alt: "Industrial License",
         },
         title: "Industrial License",
@@ -284,7 +284,7 @@ const localData = {
       {
         id: 4,
         media: {
-          path: "/images/dafz-servive-2.svg",
+          path: "/images/dafz-servive-4.svg",
           alt: "General Trading License",
         },
         title: "General Trading License",
@@ -477,7 +477,7 @@ const localData = {
   },
 };
 
-export default function MainlandCompanyFormationUaePage() {
+export default function DafzaUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />

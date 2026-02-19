@@ -1,6 +1,13 @@
+"use client";
 import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
+import useEmblaCarousel from "embla-carousel-react";
+import {
+  DotButton,
+  useDotButton,
+} from "@/components/utils/embla-carousel-dot-button";
+
 export type WhyChooseItem = {
   id: number;
   title: string;
@@ -14,9 +21,14 @@ export type CorporateServicesUaeWhyChooseData = {
 };
 
 export type CorporateServicesUaeWhyChooseProps = {
-  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "advisory" | "spv";
+  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
+};
+
+type ServiceCardProps = {
+  item: WhyChooseItem;
+  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -24,6 +36,14 @@ export default function CorporateServicesUaeWhyChoose({
   variant = "default",
   titleClassName,
 }: CorporateServicesUaeWhyChooseProps) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: "start",
+    slidesToScroll: 1,
+    containScroll: "trimSnaps",
+  });
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
   return (
     <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
       <div className="container">
@@ -34,7 +54,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "advisory" ||
               variant === "risk" ||
               variant === "spv" ||
-              variant === "tax-advisory"  
+              variant === "tax-advisory"
 
               ? "text-left"
               : "sm:text-center",
@@ -60,44 +80,86 @@ export default function CorporateServicesUaeWhyChoose({
             </div>
           )}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]">
-          {data?.items.map((item) => (
-            <div key={item?.id} className="w-full h-auto max-sm:min-h-[160px]">
-              <div
-                className={cn(
-                  "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
-                  variant === "mainland" &&
-                  "before:bg-[#FFC916] after:bg-[#f9fafb]",
-                  (variant === "default" || variant === "advisory") &&
-                  "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
-                  (variant === "risk" || variant === "tax-advisory" ) &&
-                  "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
-                  (variant === "spv" ) &&
-                  "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
-                )}
-              >
+        {variant === "mainland" && (
+          <div ref={emblaRef} className="w-full max-w-full block sm:hidden">
+            <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5">
+              {data?.items?.map((item) => (
                 <div
-                  className={cn(
-                    "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
-                    variant === "mainland" && "text-[#1C5396]",
-                    variant === "risk" && "text-[#1C5396]",
-                    variant === "advisory" && "text-[#1C5396]",
-                    variant === "spv" && "text-[#1C5396]",
-                    variant === "tax-advisory" && "text-[#1C5396] capitalize",
-                    variant === "default" && "text-black",
-                  )}
+                  key={`service-${item.id}`}
+                  className="flex-[0_0_100%] min-w-0 select-none px-2.5"
                 >
-                  {item?.title}
+                  <ServiceCard item={item} variant={variant} />
                 </div>
-                <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
-                  {parse(item?.description)}
-                </div>
-              </div>
+              ))}
+            </div>
+            <div className="flex justify-center items-center mt-6 gap-1.5 sm:hidden">
+              {scrollSnaps.map((_, index) => {
+                const distance = Math.abs(index - selectedIndex);
+                return (
+                  <DotButton
+                    key={index}
+                    onClick={() => onDotButtonClick(index)}
+                    className={cn(
+                      "rounded-full transition-all duration-300",
+                      distance === 0 ? "w-3 h-3 bg-[#FFC916]" :
+                        distance === 1 ? "w-2.5 h-2.5 bg-[#D9D9D9]" :
+                          distance === 2 ? "w-2 h-2 bg-[#D9D9D9]" :
+                            "w-1.5 h-1.5 bg-[#D9D9D9]"
+                    )}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        )}
+        <div
+          className={cn(
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
+            variant === "mainland" && "hidden sm:grid",
+          )}
+        >
+          {data?.items?.map((item) => (
+            <div key={item?.id} className="w-full h-auto max-sm:min-h-[160px]">
+              <ServiceCard key={item.id} item={item} variant={variant} />
             </div>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
+  return (
+    <div
+      className={cn(
+        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
+        variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        (variant === "default" || variant === "advisory") &&
+        "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
+        (variant === "risk" || variant === "tax-advisory") &&
+        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+        (variant === "spv") &&
+        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
+      )}
+    >
+      <div
+        className={cn(
+          "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
+          variant === "mainland" && "text-[#1C5396]",
+          variant === "risk" && "text-[#1C5396]",
+          variant === "advisory" && "text-[#1C5396]",
+          variant === "spv" && "text-[#1C5396]",
+          variant === "tax-advisory" && "text-[#1C5396] capitalize",
+          variant === "default" && "text-black",
+        )}
+      >
+        {item?.title}
+      </div>
+      <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+        {parse(item?.description)}
+      </div>
+    </div>
   );
 }
 
