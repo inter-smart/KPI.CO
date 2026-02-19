@@ -126,7 +126,7 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            desktopPath: "/images/tax-banner-desk.png",
+            desktopPath: "/images/tax_advisory-banner-desk.png",
             mobilePath: "/images/tax-banner-mob.png",
             alt: "Practical Tax Advisory for UAE Businesses",
         },
@@ -341,7 +341,7 @@ const localData = {
             link: "/",
         },
         images: {
-            overlay: "/images/taxDecisionBanner-desk.png",
+            overlay: "/images/taxDecisionBanner-desk.jpg",
             overlayMobile: "/images/taxDecisionBanner-mob.png",
         },
     } satisfies CtaData,

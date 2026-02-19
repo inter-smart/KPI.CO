@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "spv" | "hamriya";
+type Variant = "spv" | "hamriya" | "dsoa";
 
 type MainlandBusinessProps = {
   data: MainlandBusinessData;
@@ -57,7 +57,7 @@ export default function MainlandBusiness({
               <Heading
                 as="h2"
                 size="h2"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
+                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
               >
                 {data.title}
               </Heading>
@@ -88,8 +88,9 @@ export default function MainlandBusiness({
                 <div className="flex flex-col gap-3.5">
                   {data.highlights.map((item, index) => (
                     <div key={index} className="flex">
-                      <div className="flex sm:items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[16px]">
-                        <div className="w-[17px] 2xl:w-[17px] h-[17px] 3xl:w-[22px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center  ">
+                      <div className="flex sm:items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[12px] md:rounded-[16px]">
+                        <div className={cn("w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center", hasVariant(variant, "dsoa") && "max-sm:min-h-[378px]",
+                        )}>
                           <Image
                             src="/images/tickMark.svg"
                             width="22"

@@ -22,7 +22,7 @@ export type DocumentRequiredData = {
 
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
-  variant?: "default" | "saifz" | "dfza" | "aup" | "spv" | "tax-advisory";
+  variant?: "default" | "saifz" | "dfza" | "aup" | "spv" | "tax-advisory" | "advisory" | "dsoa";
 };
 
 export default function DocumentRequired({
@@ -41,9 +41,12 @@ export default function DocumentRequired({
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "tax-advisory" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "dsoa" &&
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "spv" &&
           "before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
+        variant === "advisory" && "bg-white",
       )}
     >
       <div className="container relative">
@@ -72,14 +75,14 @@ export default function DocumentRequired({
             )}
 
             {items.length > 0 && (
-              <ul className="space-y-3.75 lg:space-y-4.5 2xl:space-y-5">
+              <ul className="space-y-4.3 lg:space-y-4.5 2xl:space-y-5">
                 {items.map((item) => (
                   <li
                     key={item.id}
-                    className="text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[10px] xl:mb-[13px] 3xl:mb-[23px] relative"
+                    className="text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
                   >
                     <span className="absolute inset-0 w-[16px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] right-auto top-[4px] 2xl:top-[6px]">
-                      {variant === "saifz" ? (
+                      {variant === "saifz" || variant === "dsoa" ? (
                         <>
                           <div className="hidden sm:block">
                             <svg

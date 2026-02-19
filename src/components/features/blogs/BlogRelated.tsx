@@ -121,29 +121,29 @@ function InsightCard({ data }: InsightCardProps) {
         />
       </div>
 
-      <div className="w-full p-3 xl:p-5 2xl:p-6 flex-1 flex flex-col">
+      <div className="w-full p-[23px] xl:p-5 2xl:p-6 flex-1 flex flex-col">
         <Text
           size="p1"
-          className="leading-none font-medium text-[#5280ca] mb-3 xl:mb-3 2xl:mb-4"
+          className="leading-none font-medium text-[#5280ca] mb-[15px] xl:mb-3 2xl:mb-4"
         >
           {data.date} • {data.readTime}
         </Text>
 
-        <div className="text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-1.5 xl:mb-2.5 2xl:mb-3.5">
+        <div className="text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-[15px] xl:mb-2.5 2xl:mb-3.5">
           {parse(data.title ?? "title")}
         </div>
 
         <Text
           as="div"
           size="p1"
-          className="leading-relaxed line-clamp-5 text-[#4e4e4e] mb-3 xl:mb-3 2xl:mb-4"
+          className="leading-relaxed line-clamp-5 text-[#4e4e4e] mb-[20px] xl:mb-3 2xl:mb-4"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
+          className="text-[14px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
         >
           Read More
           <Image

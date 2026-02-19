@@ -1,6 +1,6 @@
 import InnerHero from "@/components/common/InnerHero";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import BusinessLocation from "@/components/features/mainland/BusinessLocation";
+import BusinessLocation, { type BusinessLocationData } from "@/components/features/mainland/BusinessLocation";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
@@ -36,20 +36,8 @@ export type MainlandBusinessData = {
   };
 };
 
-export type LocationItem = {
-  id: number;
-  title: string;
-  type: "image" | "content";
-  image?: string;
-  description?: string;
-  link?: string;
-};
+// BusinessLocationData and LocationItem are imported from BusinessLocation component
 
-export type BusinessLocationData = {
-  title: string;
-  description: string;
-  items: LocationItem[];
-};
 
 export type DocumentRequiredData = {
   id?: number;

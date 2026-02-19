@@ -11,14 +11,14 @@ const navItems = [
   { label: 'Home', href: '/', subItems: [] },
   {
     label: 'Services',
-    href: '/',
+    href: '#',
     isMega: true,
     megaCategories: [
       {
         id: 'audit',
         label: 'Audit & Assurance',
         icon: "/images/audit_icon.svg",
-        href: '/',
+        href: '#',
         subItems: [
           { name: 'Financial Statement Audit', href: '/financial-statement-audit-uae' },
           { name: 'Agreed Upon Procedures', href: '/agreed-upon-procedures-uae' },
@@ -30,7 +30,7 @@ const navItems = [
         id: 'advisory',
         label: 'Advisory Services',
         icon: "/images/advisory_icon.svg",
-        href: '/advisory-services-uae',
+        href: '#',
         subItems: [
           { name: 'Corporate Services', href: '/corporate-services-uae' },
           { name: 'Tax Advisory', href: '/advisory-services-uae' }, 
@@ -41,19 +41,19 @@ const navItems = [
         id: 'compliance',
         label: 'Risk & Compliance',
         icon: "/images/risk_icon.svg",
-        href: '/risk-overview',
+        href: '#',
         subItems: [
-          { name: 'Enterprise Risk Management', href: '/risk-overview' },
-          { name: 'Internal Audit Services', href: '/risk-overview' },
-          { name: 'Standard Operating Procedures', href: '/risk-overview' },
-          { name: 'Regulatory & Compliance Advisory', href: '/risk-overview' },
+          { name: 'Enterprise Risk Management', href: '#' },
+          { name: 'Internal Audit Services', href: '#' },
+          { name: 'Standard Operating Procedures', href: '#' },
+          { name: 'Regulatory & Compliance Advisory', href: '#' },
         ]
       },
       {
         id: 'digital',
         label: 'Digital Transformation',
         icon: "/images/digital_icon.svg",
-        href: '/',
+        href: '#',
         subItems: [
         ]
       }
@@ -61,7 +61,7 @@ const navItems = [
   },
   {
     label: 'Resources',
-    href: '/',
+    href: '#',
     isMega: true,
     megaCategories: [
       {
@@ -73,13 +73,13 @@ const navItems = [
       {
         id: 'glossary',
         label: 'Glossary',
-        href: '/glossary',
+        href: '#',
         subItems: []
       },
       {
         id: 'newsroom',
         label: 'Newsroom',
-        href: '/blog',
+        href: '#',
         subItems: [
         ]
       }
@@ -87,25 +87,25 @@ const navItems = [
   },
   {
     label: 'About',
-    href: '/',
+    href: '#',
     isMega: true,
     megaCategories: [
       {
         id: 'about-us',
         label: 'About us',
-        href: '/#about',
+        href: '#',
         subItems: []
       },
       {
         id: 'clients',
         label: 'Our Clients',
-        href: '/#clients',
+        href: '#',
         subItems: []
       },
       {
         id: 'contact',
         label: 'Contact Us',
-        href: '/#contact',
+        href: '#',
         subItems: []
       }
     ] as MegaCategory[]

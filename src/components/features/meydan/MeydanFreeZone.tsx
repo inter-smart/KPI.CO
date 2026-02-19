@@ -84,7 +84,7 @@ export default function MeydanFreeZone({
                       {item?.highlightsText}
                     </div>
 
-                    <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px]">
+                    <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[25px]">
                       {item?.zone_list?.map((zone, i) => (
                         <li
                           key={i}
@@ -101,6 +101,9 @@ export default function MeydanFreeZone({
                         </li>
                       ))}
                     </ul>
+                    <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[15px]">
+                      {parse(item?.footer_description ?? "")}
+                    </div>
                   </div>
                 </div>
               ))

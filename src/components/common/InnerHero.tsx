@@ -22,7 +22,7 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz";
+  variant?: "default" | "saifz" | "advisory";
 };
 
 export default function InnerHero({
@@ -39,7 +39,10 @@ export default function InnerHero({
         "w-full h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
-          : "bg-linear-to-t from-[#4578b5] to-[#053269]",
+          : "",
+        variant === "advisory"
+          ? "max-sm:h-[715px]"
+          : "",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -59,7 +62,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden"
+            className="leading-normal text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px]]max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>

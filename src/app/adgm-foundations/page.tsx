@@ -278,7 +278,7 @@ const localData = {
       {
         id: 2,
         media: { path: "/images/explore-01.jpg", alt: "Holding Companies in ADGM" },
-        title: "SPHolding Companies in <br/> ADGM",
+        title: "Holding Companies in <br/> ADGM",
         slug: "#",
       },
       {

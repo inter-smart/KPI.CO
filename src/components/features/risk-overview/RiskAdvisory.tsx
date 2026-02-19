@@ -31,7 +31,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
     );
 
   return (
-    <section className="w-full bg-white py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
+    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
       <div className="container">
         <div
           className={cn(
