@@ -1,4 +1,3 @@
-"use client";
 
 import InnerHero from "@/components/common/InnerHero";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
@@ -12,6 +11,7 @@ import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -158,15 +158,17 @@ const localData = {
   } satisfies MainlandBusinessData,
   meydanFreeZone: {
     title: "How ADGM Foundations Are Typically Used",
-    description: "ADGM Foundations work well when traditional companies or trusts don't fully address ownership, succession, or asset-protection requirements, particularly where SPV-like structuring outcomes are needed. They're often used within family offices, investment groups, or as",
+    description:
+      "ADGM Foundations work well when traditional companies or trusts don't fully address ownership, succession, or asset-protection requirements, particularly where SPV-like structuring outcomes are needed. They're often used within family offices, investment groups, or as",
     free_zone_list: [
       {
         id: 1,
         title: "Structural Role",
-        description: "ADGM Foundations work well when traditional companies or trusts don't fully address ownership, succession, or asset-protection requirements, particularly where SPV-like structuring outcomes are needed. They're often used within family offices, investment groups, or as ownership layers within broader holding structures.",
-       highlightsText:"Key Points:",
-       zone_list: [
-         "Serves as an ownership layer above operating companies or <br/> SPVs",
+        description:
+          "ADGM Foundations work well when traditional companies or trusts don't fully address ownership, succession, or asset-protection requirements, particularly where SPV-like structuring outcomes are needed. They're often used within family offices, investment groups, or as ownership layers within broader holding structures.",
+        highlightsText: "Key Points:",
+        zone_list: [
+          "Serves as an ownership layer above operating companies or <br/> SPVs",
           "Separates legal ownership from economic benefit",
           "Establishes long-term governance independent of <br/> shareholders",
           "Provides stability across generations or changes in control",
@@ -178,8 +180,9 @@ const localData = {
       {
         id: 2,
         title: "Typical Use Case",
-        description: "Most people consider an ADGM Foundation when they're thinking about long-term ownership, succession, or isolating risk, particularly where SPV-like outcomes are required. Used correctly, ADGM Foundations reduce ambiguity around control, continuity, and decision-making.",
-        highlightsText:"Key Points:",
+        description:
+          "Most people consider an ADGM Foundation when they're thinking about long-term ownership, succession, or isolating risk, particularly where SPV-like outcomes are required. Used correctly, ADGM Foundations reduce ambiguity around control, continuity, and decision-making.",
+        highlightsText: "Key Points:",
         zone_list: [
           "Founder wants ownership continuity beyond personal <br/> involvement",
           "Family succession planning without transferring shares",
@@ -191,10 +194,9 @@ const localData = {
         ],
       },
     ],
-    structure_list: [
-    ],
+    structure_list: [],
   } satisfies MeydanFreeZoneData,
- 
+
   whyChoose: {
     title: "Why Work With Us On ADGM Foundations",
     description: "",
@@ -277,13 +279,24 @@ const localData = {
       },
       {
         id: 2,
+<<<<<<< HEAD:src/app/adgm-foundations/page.tsx
         media: { path: "/images/explore-01.jpg", alt: "Holding Companies in ADGM" },
         title: "Holding Companies in <br/> ADGM",
+=======
+        media: {
+          path: "/images/explore-01.jpg",
+          alt: "Holding Companies in ADGM",
+        },
+        title: "SPHolding Companies in <br/> ADGM",
+>>>>>>> c41c5e9d2c6c39c2f0f1db2a21d3bd0cfd2c9082:src/app/adgm-spv-foundation-setup/page.tsx
         slug: "#",
       },
       {
         id: 3,
-        media: { path: "/images/explore-01.jpg", alt: "Company Formation in ADGM" },
+        media: {
+          path: "/images/explore-01.jpg",
+          alt: "Company Formation in ADGM",
+        },
         title: "Company Formation in <br/> ADGM",
         slug: "#",
       },
@@ -343,14 +356,23 @@ const localData = {
   },
 };
 
+export const metadata: Metadata = {
+  title: "ADGM SPV Foundations Advisory & Setup | KPI Group",
+  description:
+    "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity. ",
+};
+
 export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
       <MainlandBusiness data={localData.mainlandBusiness} />
-      <MeydanFreeZone data={localData.meydanFreeZone} />
+      <MeydanFreeZone variant="adgm" data={localData.meydanFreeZone} />
       <DocumentRequired variant="spv" data={localData.document_required_data} />
-      <CorporateServicesUaeWhyChoose variant="risk" data={localData.whyChoose} />
+      <CorporateServicesUaeWhyChoose
+        variant="risk"
+        data={localData.whyChoose}
+      />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />

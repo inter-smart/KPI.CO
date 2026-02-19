@@ -1,5 +1,3 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
@@ -12,6 +10,7 @@ import { blogData } from "@/data/blogData";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -121,7 +120,7 @@ const localData = {
     description:
       "<p>Holding companies sit above operating entities, acting <br/> as the legal and governance anchor for a group.</p> <p>They are used to</p>",
     highlightsText:
-      "This is an active ownership structure, not a passive asset-holding vehicle. ADGM holding companies can be operational. ",
+      "This is an active ownership structure, not a passive <br/> asset-holding vehicle. ADGM holding companies can be <br/> operational. ",
     advisoryItems: [
       {
         id: 1,
@@ -197,8 +196,7 @@ const localData = {
   } satisfies DocumentRequiredData,
   meydanFreeZone: {
     title: "",
-    description:
-      "",
+    description: "",
     free_zone_list: [
       {
         id: 1,
@@ -345,7 +343,8 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is the difference between an ADGM holding company and an SPV?",
+        title:
+          "What is the difference between an ADGM holding company and an SPV?",
         description: `
           <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
                         `,
@@ -394,13 +393,19 @@ const localData = {
   },
 };
 
+export const metadata: Metadata = {
+  title: "ADGM SPV Foundations Advisory & Setup | KPI Group",
+  description:
+    "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.  ",
+};
+
 export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <DocumentRequired variant="spv" data={localData.holding_company_data} />
-      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
+      <MeydanFreeZone variant="holding" data={localData.meydanFreeZone} />
       <DocumentRequired variant="spv" data={localData.common_use_data} />
       <CorporateServicesUaeWhyChoose
         variant="risk"

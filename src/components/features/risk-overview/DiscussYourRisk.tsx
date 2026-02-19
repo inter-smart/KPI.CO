@@ -5,7 +5,7 @@ import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
 import { Button } from "@/components/ui/button";
-import { DiscussYourRiskData } from "@/app/risk-overview/page";
+import { DiscussYourRiskData } from "@/app/risk-services-uae/page";
 import { cn } from "@/lib/utils";
 
 export type DiscussYourRiskProps = {

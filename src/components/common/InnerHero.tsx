@@ -22,7 +22,7 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz" | "advisory";
+  variant?: "default" | "saifz" | "advisory" | "dwtc";
 };
 
 export default function InnerHero({
@@ -43,6 +43,9 @@ export default function InnerHero({
         variant === "advisory"
           ? "max-sm:h-[715px]"
           : "",
+        variant === "dwtc"
+          ? "h-[540px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]"
+          : "h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -62,8 +65,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px]]max-md:[&_br]:hidden"
-          >
+            className="leading-normal text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px]]max-md:[&_br]:hidden" >
             {parse(data?.title)}
           </Heading>
           {data?.description && (
@@ -99,7 +101,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className="text-[13px] sm:text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>

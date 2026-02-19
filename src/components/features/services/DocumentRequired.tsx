@@ -44,7 +44,7 @@ export default function DocumentRequired({
         variant === "dsoa" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "spv" &&
-          "before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
+          "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
         variant === "advisory" && "bg-white",
       )}

@@ -27,16 +27,16 @@ export default function MainlandBusiness({
   };
 
   return (
-    <section className="w-full py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden">
+    <section className="w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden">
       <div className="container">
         <Heading
           as="h2"
           size="h2"
-          className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
+          className="text-[28px] lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
         >
-          {data.title}
+          {parse(data.title)}
         </Heading>
-        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5">
+        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5 2xl:gap-4">
           {/* Left Content */}
           <div
             className={cn(
@@ -50,7 +50,7 @@ export default function MainlandBusiness({
               className={cn(
                 "w-full",
                 hasVariant(variant, "spv")
-                  ? "max-w-[87%]"
+                  ? "max-w-[87%] 3xl:max-w-[100%]"
                   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
               )}
             >
@@ -59,7 +59,7 @@ export default function MainlandBusiness({
                 size="h2"
                 className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
               >
-                {data.title}
+                {parse(data.title)}
               </Heading>
 
               <div
@@ -114,14 +114,20 @@ export default function MainlandBusiness({
           </div>
 
           {/* Right Image */}
-          <div
+          {/* <div
             className={cn(
               "w-full lg:w-[365px]",
               hasVariant(variant, "spv")
                 ? "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]"
                 : "xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
             )}
-          >
+          > */}
+            <div
+              className={cn(
+                "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
+                variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
+              )}
+            >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">
               <Image
                 src={data.image.path}

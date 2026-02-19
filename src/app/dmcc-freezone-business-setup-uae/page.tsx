@@ -454,7 +454,7 @@ export default function page() {
     <>
       <InnerHero data={localData.hero} />
       <MainlandBusiness data={localData.mainlandBusiness} />
-      <MeydanFreeZone data={localData.meydanFreeZone} />
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="default" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
 
       <BusinessLocation data={localData.businessLocation} />
