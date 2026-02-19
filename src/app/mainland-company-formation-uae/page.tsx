@@ -616,63 +616,6 @@ const localData = {
         },
       ] satisfies WhyBuildItem[],
     },
-
-    formationProcess: {
-      title: "Steps to Get a Mainland License",
-      sub_title: null,
-      description: null,
-      steps: [
-        {
-          id: 1,
-          step: "Step One",
-          title: "Free Consultation with Our Experts",
-          sub_title: "Free Consultation with Our Experts",
-          description:
-            "<p>Share your business details with our team. We’ll guide you on the best mainland setup for your goals.</p>",
-        },
-        {
-          id: 2,
-          step: "Step Two",
-          title: "Choose Your Business Activity & Structure",
-          sub_title: "Choose Your Business Activity & Structure",
-          description:
-            "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
-        },
-        {
-          id: 3,
-          step: "Step Three",
-          title: "Reserve Your Company Name & Apply for License",
-          sub_title: "Reserve Your Company Name & Apply for License",
-          description:
-            "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
-        },
-        {
-          id: 4,
-          step: "Step Four",
-          title: "Office & Workspace Setup",
-          sub_title: "Office & Workspace Setup",
-          description:
-            "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
-        },
-        {
-          id: 5,
-          step: "Step Five",
-          title: "UAE Residency & Visas",
-          sub_title: "UAE Residency & Visas",
-          description:
-            "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
-        },
-        {
-          id: 6,
-          step: "Step Six",
-          title: "Open Your Business Bank Account",
-          sub_title: "Open Your Business Bank Account",
-          description:
-            "<p>Set up a corporate bank account to start operating and managing your company finances. </p>",
-        },
-      ] satisfies ProcessStep[],
-    },
-
     whyChoose: {
       title: "Why choose KPI?",
       description:
