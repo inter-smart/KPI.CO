@@ -110,7 +110,7 @@ export default function BlogRelated({ data }: BlogrelatedProps) {
 
 function InsightCard({ data }: InsightCardProps) {
   return (
-    <div className="group w-full h-full flex flex-col bg-white rounded-[10px] overflow-hidden shadow-lg hover:shadow-xl transition">
+    <div className="group flex flex-col w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
       <div className="w-full aspect-440/268 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
