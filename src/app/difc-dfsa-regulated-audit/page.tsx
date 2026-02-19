@@ -1,5 +1,3 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
@@ -14,6 +12,7 @@ import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -159,7 +158,8 @@ const localData = {
     title: "DIFC & DFSA Regulated Audit <br/> Services",
     description:
       "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with</p> ",
-    highlightsText: "Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.",
+    highlightsText:
+      "Our audits follow a risk-based methodology that prioritises regulatory and financial significance over audit volume. Audit quality is reinforced through documented processes and consistent application of professional judgement.",
     advisoryItems: [
       {
         id: 1,
@@ -169,7 +169,8 @@ const localData = {
       {
         id: 2,
         slNo: 2,
-        description: "DFSA Rulebooks and  <br/> prescribed reporting  <br/> requirements",
+        description:
+          "DFSA Rulebooks and  <br/> prescribed reporting  <br/> requirements",
       },
       {
         id: 3,
@@ -237,8 +238,6 @@ const localData = {
         id: 3,
         text: "Investment funds and asset management structures",
       },
-      
-
     ],
 
     media: {
@@ -253,7 +252,8 @@ const localData = {
     free_zone_list: [
       {
         id: 1,
-        title: "Audit Support During DIFC Liquidation & Regulatory <br/> Closure",
+        title:
+          "Audit Support During DIFC Liquidation & Regulatory <br/> Closure",
         description:
           "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
         highlightsText:
@@ -278,8 +278,7 @@ const localData = {
   } satisfies MeydanFreeZoneData,
   whyChoose: {
     title: "Why DIFC Entities Trust KPI",
-    description:
-      "",
+    description: "",
     items: [
       {
         id: 1,
@@ -411,12 +410,21 @@ const localData = {
   },
 };
 
+export const metadata: Metadata = {
+  title: "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI ",
+  description:
+    "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA. ",
+};
+
 export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
-      <RiskAdvisory variant={["difc", "center"]}data={localData.riskAdvisory} />
+      <RiskAdvisory
+        variant={["difc", "center"]}
+        data={localData.riskAdvisory}
+      />
       <RiskApproach variant="mainland" data={localData.ProcessStep} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />

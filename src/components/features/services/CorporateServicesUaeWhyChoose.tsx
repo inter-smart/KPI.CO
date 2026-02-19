@@ -14,7 +14,7 @@ export type CorporateServicesUaeWhyChooseData = {
 };
 
 export type CorporateServicesUaeWhyChooseProps = {
-  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory";
+  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
@@ -33,6 +33,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "mainland" ||
               variant === "advisory" ||
               variant === "risk" ||
+              variant === "spv" ||
               variant === "tax-advisory"  
 
               ? "text-left"
@@ -46,6 +47,7 @@ export default function CorporateServicesUaeWhyChoose({
               "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
               variant === "default" && "text-center",
               variant === "risk" && "text-left",
+              variant === "spv" && "text-left",
               variant === "tax-advisory" && "text-left",
               titleClassName,
             )}
@@ -70,6 +72,8 @@ export default function CorporateServicesUaeWhyChoose({
                   "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
                   (variant === "risk" || variant === "tax-advisory" ) &&
                   "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+                  (variant === "spv" ) &&
+                  "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
                 )}
               >
                 <div
@@ -77,6 +81,7 @@ export default function CorporateServicesUaeWhyChoose({
                     "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
                     variant === "mainland" && "text-[#1C5396]",
                     variant === "risk" && "text-[#1C5396]",
+                    variant === "spv" && "text-[#1C5396]",
                     variant === "tax-advisory" && "text-[#1C5396] capitalize",
                     variant === "default" && "text-black",
                   )}
@@ -94,3 +99,8 @@ export default function CorporateServicesUaeWhyChoose({
     </section>
   );
 }
+
+
+
+
+

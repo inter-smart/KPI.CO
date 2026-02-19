@@ -1,5 +1,3 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
@@ -13,6 +11,7 @@ import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -122,14 +121,15 @@ const localData = {
       mobilePath: "/images/spv-banner-mobile.jpg",
       alt: "ADGM Special Purpose Vehicles Designed for Control, Protection, and Clarity",
     },
-    title: "ADGM Special Purpose Vehicles Designed for Control, Protection, and Clarity ",
+    title:
+      "ADGM Special Purpose Vehicles <br/> Designed for Control, <br/> Protection, and Clarity ",
     description:
       "<p>ADGM SPVs operate under a common law framework recognised by regulators, banks, and investors. When structured properly, they provide control, protection, and credibility. We structure ADGM SPVs with attention to structural integrity, regulatory alignment, and long-term usability, not just incorporation speed.</p>",
   } satisfies HeroData,
   mainlandBusiness: {
-    title: "Why Organisations Use SPVs in ADGM",
+    title: "Why Organisations Use SPVs <br/> in ADGM",
     description:
-      "<p>SPVs are not operational entities. They are used when ownership clarity <br/> and risk control cannot be compromised. When structured correctly, SPVs strengthen governance, reduce exposure, and provide confidence to counterparties and stakeholders. We have worked with SPVs since ADGM's early years. That experience shows in how we approach structuring.</p>",
+      "<p>SPVs are not operational entities. They are used when ownership clarity <br/> and risk control cannot be compromised. When structured correctly, <br/> SPVs strengthen governance, reduce exposure, and provide <br/>confidence to counterparties and stakeholders. We have worked with SPVs since ADGM's early years. That experience shows in how we approach structuring.</p>",
     highlightsTitle: "ADGM SPVs are commonly used for:",
     highlights: [
       "Asset and investment holding",
@@ -179,9 +179,8 @@ const localData = {
     ],
   } satisfies RiskAdvisoryDta,
   riskAssurance: {
-    title: "Our Approach to SPV Structuring",
-    description:
-      "KPI provides risk and assurance services designed to strengthen governance, internal controls, and regulatory readiness. Our services are tailored to support organisations at different stages of maturity, growth and risk exposure.",
+    title: "Our Approach To SPV Structuring",
+    description: "",
     items: [
       {
         id: 1,
@@ -273,7 +272,10 @@ const localData = {
     description:
       "<p>We provide end-to-end SPV support, from structuring to post- <br/>incorporation readiness. Our work is purpose driven. The SPV must remain <br/> effective as ownership, assets, or strategies evolve </p>",
     items: [
-      { id: 1, text: "Structuring advice aligned to asset type and commercial objectives " },
+      {
+        id: 1,
+        text: "Structuring advice aligned to asset type and commercial objectives ",
+      },
       { id: 2, text: "Incorporation and registration with ADGM " },
       { id: 3, text: "Drafting and coordination of constitutional documents " },
       { id: 4, text: "Liaison with ADGM Registration Authority " },
@@ -281,18 +283,16 @@ const localData = {
         id: 5,
         text: "Banking support and ongoing compliance guidance",
       },
-      
     ],
 
     media: {
       path: "/images/spv-scope-img.jpg",
       alt: "Required documents",
     },
-    ftr_description:
-      "",
+    ftr_description: "",
   } satisfies DocumentRequiredData,
   explore_service: {
-    title: " Related Audit Services ",
+    title: " Related Corporate Services ",
     items: [
       {
         id: 1,
@@ -371,6 +371,12 @@ const localData = {
   },
 };
 
+export const metadata: Metadata = {
+  title: "ADGM SPV Formation Services | Special Purpose Vehicles UAE | KPI Group   ",
+  description:
+    "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support. ",
+};
+
 export default function DwtcFreezone() {
   return (
     <>
@@ -378,7 +384,7 @@ export default function DwtcFreezone() {
       <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
-      <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
+      <CorporateServicesUaeWhyChoose variant="spv" data={localData.whyChoose} />
       <DocumentRequired variant="spv" data={localData.document_required_data} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
