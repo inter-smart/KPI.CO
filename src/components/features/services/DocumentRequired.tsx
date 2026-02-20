@@ -43,7 +43,7 @@ export default function DocumentRequired({
           "before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
         variant === "hamriya" &&
-          "bg-linear-to-t from-[#f5fbfe] via-white to-white shadow-[0_2px_12px_0_rgba(0,0,0,0.15)]",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
       )}
     >
       <div className="container relative">
@@ -112,7 +112,7 @@ export default function DocumentRequired({
                           </div>
                         </>
                       )}
-                      {variant === "saifz" ? (
+                      {variant === "saifz" && (
                         <>
                           <div className="hidden sm:block">
                             <svg
@@ -143,7 +143,8 @@ export default function DocumentRequired({
                             </svg>
                           </div>
                         </>
-                      ) : (
+                      )}
+                      {variant === "default" && (
                         <svg
                           width="100%"
                           height="100%"

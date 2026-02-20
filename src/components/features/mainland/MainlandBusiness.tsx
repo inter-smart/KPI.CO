@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "spv" | "hamriya";
+type Variant = "spv" | "hamriya" | "dafza";
 
 type MainlandBusinessProps = {
   data: MainlandBusinessData;
@@ -27,7 +27,7 @@ export default function MainlandBusiness({
   };
 
   return (
-    <section className="w-full py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden">
+    <section className={cn("w-full py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",variant === "dafza" && "max-2xl:!pb-[20px]")}>
       <div className="container">
         <Heading
           as="h2"
@@ -75,6 +75,7 @@ export default function MainlandBusiness({
                 className={cn(
                   "w-full mb-[30px]",
                   hasVariant(variant, "hamriya") && "mb-0",
+                  hasVariant(variant, "dafza") && "mb-0",
                 )}
               >
                 {data.highlightsTitle && (
