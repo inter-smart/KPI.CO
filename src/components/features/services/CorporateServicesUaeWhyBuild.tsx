@@ -131,7 +131,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
+            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "ifza")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
@@ -157,7 +157,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 sm:px-[15px] 2xl:px-[25px]",
-            hasVariant(variant, "mainland") || hasVariant(variant, "freezone")
+            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "ifza")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&

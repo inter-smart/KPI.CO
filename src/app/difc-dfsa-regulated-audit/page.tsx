@@ -1,7 +1,6 @@
 import InnerHero from "@/components/common/InnerHero";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
-import RiskApproach from "@/components/features/risk-overview/RiskApproach";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
 import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManagement";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
@@ -13,6 +12,7 @@ import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import { Metadata } from "next";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -51,6 +51,7 @@ export type RiskAdvisoryDta = {
 export type ProcessStep = {
   id: number;
   title: string;
+  inner_title: string;
   sub_title: string;
   description: string;
 };
@@ -130,11 +131,11 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/regulated-audit-bg.jpg",
+      desktopPath: "/images/regulated-audit-bg.svg",
       mobilePath: "/images/regulated-audit-mobile-bg.png",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
-    title: "DIFC Audits Built To <br/> Withstand Regulatory Scrutiny ",
+    title: "DIFC Audits Built To  Withstand <br/>Regulatory Scrutiny ",
     description:
       "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
   } satisfies HeroData,
@@ -155,7 +156,7 @@ const localData = {
     },
   } satisfies WhyRiskData,
   riskAdvisory: {
-    title: "DIFC & DFSA Regulated Audit <br/> Services",
+    title: "DIFC & DFSA Regulated<br/> Audit  Services",
     description:
       "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with</p> ",
     highlightsText:
@@ -186,14 +187,16 @@ const localData = {
     steps: [
       {
         id: 1,
-        title: "Entity specific risk assessment",
-        sub_title: "Entity specific risk assessment",
+        title: "Entity-specific risk assessment",
+        inner_title: "Entity-specific risk assessment",
+        sub_title: "Entity-specific risk assessment",
         description:
           "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
       },
       {
         id: 2,
         title: "Regulatory focused risk <br/> prioritisation",
+        inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
           "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
@@ -201,6 +204,7 @@ const localData = {
       {
         id: 3,
         title: "Judgement-driven audit execution",
+        inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
@@ -208,6 +212,7 @@ const localData = {
       {
         id: 4,
         title: "Testing of key controls and <br/> balances",
+        inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
           "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
@@ -215,6 +220,7 @@ const localData = {
       {
         id: 5,
         title: "Documentation",
+        inner_title: "Documentation",
         sub_title: "Documentation",
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
@@ -411,7 +417,8 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI ",
+  title:
+    "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI ",
   description:
     "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA. ",
 };
@@ -425,7 +432,10 @@ export default function DwtcFreezone() {
         variant={["difc", "center"]}
         data={localData.riskAdvisory}
       />
-      <RiskApproach variant="mainland" data={localData.ProcessStep} />
+      <CorporateServicesUaeFormationProcess
+        variant="aup"
+        data={localData.ProcessStep}
+      />
       <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose

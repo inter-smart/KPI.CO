@@ -22,7 +22,7 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz" | "advisory" | "dwtc";
+  variant?: "default" | "saifz" | "advisory" | "dwtc" | "ifza";
 };
 
 export default function InnerHero({
@@ -61,18 +61,24 @@ export default function InnerHero({
         </picture>
       )}
       <div className="container">
-        <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]">
+        <div className={cn("w-full max-w-[576px] md:max-w-[743px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]",
+          variant === "dwtc" && "max-w-[576px] xl:max-w-[756px] 2xl:max-w-[870px] 3xl:max-w-[1130px]",
+          variant === "ifza" && "max-w-[576px] xl:max-w-[80%]"
+        )}>
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px]]max-md:[&_br]:hidden" >
+            className="leading-normal font-bold text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px] max-md:[&_br]:hidden" >
             {parse(data?.title)}
           </Heading>
           {data?.description && (
             <Text
               as="div"
               size="p3"
-              className="text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8"
+              className={cn("text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden",
+
+                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]"
+              )}
             >
               {parse(data?.description)}
             </Text>

@@ -19,9 +19,12 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
   const items = data?.items ?? [];
 
   return (
-    <section className="w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]">
+    <section className={cn("w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
+
+      variant === "dwtc" && "bg-[#F9FAFB]"
+    )}>
       <div className="container">
-        <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]", variant === "freezone" && "items-end",)}>
+        <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]", (variant === "freezone") || (variant === "dwtc") && "items-end",)}>
           <div className="w-full md:w-[57%] xl:w-[60%]">
             {(data?.title || data?.description) && (
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%]">
@@ -31,7 +34,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                     size="h2"
                     className="hidden md:block font-semibold text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
                   >
-                    {data.title}
+                    {parse(data.title)}
                   </Heading>
                 )}
 
@@ -86,7 +89,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                   size="h2"
                   className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
                 >
-                  {data.title}
+                  {parse(data.title)}
                 </Heading>
               )}
             </div>

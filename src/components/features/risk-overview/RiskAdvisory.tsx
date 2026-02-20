@@ -51,7 +51,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
-                  ' <span class="text-[#5280CA]">→</span></p>',
+                  ' <span class="text-[#5280CA] font-bold">→</span></p>',
                 ) || "",
               )}
             </div>

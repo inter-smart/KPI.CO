@@ -50,14 +50,14 @@ export default function MainlandBusiness({
               className={cn(
                 "w-full",
                 hasVariant(variant, "spv")
-                  ? "max-w-[87%] 3xl:max-w-[100%]"
+                  ? "max-w-[93%] 3xl:max-w-[100%]"
                   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
               )}
             >
               <Heading
                 as="h2"
                 size="h2"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[520px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
+                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
               >
                 {parse(data.title)}
               </Heading>
@@ -89,8 +89,13 @@ export default function MainlandBusiness({
                   {data.highlights.map((item, index) => (
                     <div key={index} className="flex">
                       <div className="flex sm:items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[12px] md:rounded-[16px]">
-                        <div className={cn("w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center", hasVariant(variant, "dsoa") && "max-sm:min-h-[378px]",
-                        )}>
+                        <div
+                          className={cn(
+                            "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
+                            hasVariant(variant, "dsoa") &&
+                              "max-sm:min-h-[378px]",
+                          )}
+                        >
                           <Image
                             src="/images/tickMark.svg"
                             width="22"
@@ -122,12 +127,12 @@ export default function MainlandBusiness({
                 : "xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
             )}
           > */}
-            <div
-              className={cn(
-                "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
-                variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
-              )}
-            >
+          <div
+            className={cn(
+              "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
+              variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
+            )}
+          >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">
               <Image
                 src={data.image.path}
