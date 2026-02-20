@@ -11,6 +11,7 @@ import VatRelatedTax, {
 } from "@/components/features/vat-services/VatRelatedTax";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
   id: number;
@@ -52,6 +53,28 @@ export type ServiceItem = {
   media: MediaItem;
   title: string;
   description: string;
+};
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type MeydanFreeZoneItem = {
+  id: number;
+  title: string;
+  description: string;
+  highlightsText: string;
+  zone_list: string[];
+  footer_description?: string;
+};
+
+export type MeydanFreeZoneData = {
+  title: string;
+  description?: string;
+  free_zone_list: MeydanFreeZoneItem[];
+  structure_list?: MeydanStructureItem[];
 };
 
 export type WhyChooseItem = {
@@ -116,32 +139,27 @@ const localData = {
       {
         id: 1,
         slNo: 1,
-        description:
-          "Operate under multiple authorities or free zones",
+        description: "Operate under multiple authorities or free zones",
       },
       {
         id: 2,
         slNo: 2,
-        description:
-          "Face licensing, reporting, or inspection requirements",
+        description: "Face licensing, reporting, or inspection requirements",
       },
       {
         id: 3,
         slNo: 3,
-        description:
-          "Rely on informal or undocumented compliance processes",
+        description: "Rely on informal or undocumented compliance processes",
       },
       {
         id: 4,
         slNo: 4,
-        description:
-          "Experience repeated regulatory queries or audit findings",
+        description: "Experience repeated regulatory queries or audit findings",
       },
       {
         id: 5,
         slNo: 5,
-        description:
-          "Underestimate the documentation regulators expect",
+        description: "Underestimate the documentation regulators expect",
       },
     ],
   } satisfies RiskAdvisoryDta,
@@ -232,6 +250,27 @@ const localData = {
       },
     ] satisfies ServiceItem[],
   },
+  meydanFreeZone: {
+    title: "",
+    free_zone_list: [
+      {
+        id: 1,
+        title: "When Organisations Engage Compliance Advisory",
+        description:
+          "Regulatory & compliance advisory is most effective when engaged proactively, not reactively.",
+        highlightsText: "Common triggers include:",
+        zone_list: [
+          "Preparation for regulatory inspection or authority review",
+          "New licensing or regulatory classification",
+          "Findings from internal or external audits",
+          "Board or investor concerns around compliance oversight",
+          "Expansion into regulated or free zone environments",
+        ],
+        footer_description:
+          "Early engagement allows organisations to address issues privately, before they become formal regulatory matters.",
+      },
+    ],
+  } satisfies MeydanFreeZoneData,
   whyChoose: {
     title: "How KPI Approaches Regulatory & Compliance Advisory",
     description:
@@ -361,19 +400,20 @@ export const metadata: Metadata = {
     "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk. ",
 };
 
-export default function StandardOperatingProceduresUaePage() {
+export default function RegulatoryComplianceAdvisoryUaePage() {
   return (
     <>
       <InnerHero data={localData?.hero} variant="saifz" />
-      <RiskAdvisory data={localData.riskAdvisory} />
+      <RiskAdvisory data={localData.riskAdvisory} variant="difc" />
       <DocumentRequired
         data={localData?.document_required_data}
-        variant="sop"
+        variant="regulatory"
       />
       <CorporateServicesUaeServices
         data={localData?.services}
         variant="saifz"
       />
+      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
         variant="sop"
