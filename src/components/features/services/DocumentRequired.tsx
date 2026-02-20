@@ -160,9 +160,7 @@ export default function DocumentRequired({
                           </div>
                         </>
                       )}
-                      {variant === "default" ||
-                        variant === "dfza" ||
-                        (variant === "sop" || variant === "advisory" || variant === "dmcc" || variant === "tax-advisory" || variant === "mainland" && (
+                      {(variant === "default" ||  variant === "dfza" ||  variant === "sop" || variant === "advisory" || variant === "dmcc" || variant === "tax-advisory" || variant === "mainland" ) && (
                           <svg
                             width="100%"
                             height="100%"
@@ -175,7 +173,7 @@ export default function DocumentRequired({
                               fill="#5280CA"
                             />
                           </svg>
-                        ))}
+                        )}
                     </span>
                     {parse(item.text)}
                   </li>
