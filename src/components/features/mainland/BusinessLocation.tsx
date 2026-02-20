@@ -28,7 +28,6 @@ type BusinessLocationProps = {
   variant?: "dsoa" | "default";
 };
 
-
 export default function BusinessLocation({
   data,
   variant = "default",
@@ -76,8 +75,8 @@ export default function BusinessLocation({
 
               <div
                 className={cn(
-                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-10",
-                  variant === "dsoa" && "flex items-center"
+                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
+                  variant === "dsoa" && "flex items-center",
                 )}
               >
                 <div className="w-full h-auto">
@@ -102,7 +101,7 @@ export default function BusinessLocation({
                     </div>
                   </div>
 
-                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="group-hover:translate-y-0 duration-300">
                     <Text className="text-[#1C5396] text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.6] font-normal">
                       {item.description}
                     </Text>

@@ -31,6 +31,7 @@ export type Variant =
   | "freezone"
   | "dsoa"
   | "ifza"
+  | "erm"
   | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
@@ -132,7 +133,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "dsoa")
+            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "dsoa") || hasVariant(variant, "erm")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",

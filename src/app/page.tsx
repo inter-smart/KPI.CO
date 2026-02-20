@@ -378,9 +378,9 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-    title: "Home | KPI Group  ",
+    title: "Audit & Advisory Services UAE | 30+ Years of Expertise | KPI ",
     description:
-        "KPI Group. ",
+        "KPI is a leading UAE firm providing Audit, Accounting, Advisory, and Business Consulting services. Get in touch for your business needs. ",
 };
 
 /* ------------------------------------------------------------------ */

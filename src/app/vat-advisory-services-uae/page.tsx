@@ -246,33 +246,27 @@ const localData = {
     service_list: [
       {
         id: 1,
-        title: "VAT Registration & Deregistration ",
+        title: "VAT Registration & <br> Deregistration ",
         description:
-          "Assess VAT obligations, registration support, and deregistration where needed - aligned with business activity and thresholds. ",
+          "Assess VAT obligations, registration <br> support, and deregistration where <br> needed - aligned with business <br> activity and thresholds. ",
       },
       {
         id: 2,
-        title: "Advisory & Structuring ",
+        title: "Advisory & <br> Structuring ",
         description:
-          "Provide practical guidance on VAT treatment for transactions, contracts, pricing models, and operating structures. ",
+          "Provide practical guidance on VAT <br> treatment for transactions, <br> contracts, pricing models, and <br> operating structures. ",
       },
       {
         id: 3,
-        title: "Compliance & Return Filing",
+        title: "Compliance & <br> Return Filing",
         description:
-          "Preparation and review of monthly or quarterly VAT returns, reconciliation with accounting records, accurate calculation of output and input tax, and timely submission within the 28-day deadline to avoid penalties. ",
+          "Preparation and review of monthly <br> or quarterly VAT returns, <br> reconciliation with accounting <br> records, accurate calculation <br> of output and input tax, and timely <br> submission within the 28-day <br> deadline to avoid penalties. ",
       },
       {
         id: 4,
-        title: "Reviews & Health Checks ",
+        title: "Reviews & <br> Health Checks ",
         description:
-          "Independent review of VAT positions, filings, and processes to identify gaps, risks, or opportunities for improvement. ",
-      },
-      {
-        id: 5,
-        title: "Advisory & Structuring ",
-        description:
-          "Provide practical guidance on VAT treatment for transactions, contracts, pricing models, and operating structures. ",
+          "Independent review of VAT positions, <br> filings, and processes <br> to identify gaps, risks, or <br> opportunities for improvement. ",
       },
     ],
   } satisfies VatAdvisoryData,

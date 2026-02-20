@@ -276,7 +276,7 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/audit-banner.png",
+      overlay: "/images/dmcc-cta-Dsk.svg",
       overlayMobile: "/images/dmcc-cta-mob.png",
     },
   } satisfies CtaData,
@@ -458,10 +458,10 @@ export default function page() {
       <MeydanKeyBenefits data={localData.keyBenefits} />
 
       <BusinessLocation data={localData.businessLocation} />
-      <DocumentRequired data={localData.document_required_data} />
+      <DocumentRequired data={localData.document_required_data} variant="dmcc" />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="mainland"
+        variant="dmcc"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
