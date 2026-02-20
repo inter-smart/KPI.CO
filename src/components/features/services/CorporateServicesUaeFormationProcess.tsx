@@ -175,7 +175,7 @@ export default function CorporateServicesUaeFormationProcess({
                 <motion.div
                   key={step.id}
                   className={cn(
-                    "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-10 xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
+                    "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
                     isScrollControlled ? "cursor-default" : "cursor-pointer",
                     index <= activeStep
                       ? "opacity-100"
@@ -186,7 +186,7 @@ export default function CorporateServicesUaeFormationProcess({
                 >
                   <motion.div
                     className={cn(
-                      "w-[100%] lg:w-[1px] h-[1px] lg:h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                      "w-[100%] lg:w-[1px] h-[1px] h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       variant === "Vat-Services" && "lg:h-[250%]",
                       variant === "mainland" && "lg:h-[190%]",
                       index <= activeStep

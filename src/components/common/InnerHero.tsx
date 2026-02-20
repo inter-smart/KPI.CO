@@ -22,7 +22,7 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz" | "advisory" | "dwtc";
+  variant?: "default" | "saifz" | "advisory" | "dwtc" | "erm";
 };
 
 export default function InnerHero({
@@ -61,7 +61,8 @@ export default function InnerHero({
         </picture>
       )}
       <div className="container">
-        <div className="w-full max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]">
+        <div className={cn("w-full",  variant === "erm" ? "max-w-full"
+          : " max-w-[576px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]", )}>
           <Heading
             as="h1"
             size="h1"
