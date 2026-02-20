@@ -93,7 +93,7 @@ export default function DocumentRequired({
                     className="text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
                   >
                     <span className="absolute inset-0 w-[16px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] right-auto top-[4px] 2xl:top-[6px]">
-                      {variant === "hamriya" && (
+                      {variant === "hamriya" || variant === "aup" && (
                         <>
                           <div className="hidden sm:block">
                             <svg
@@ -158,7 +158,7 @@ export default function DocumentRequired({
                             </div>
                           </>
                         ))}
-                      {variant === "default" && (
+                      {variant === "default" || variant === "advisory" && (
                         <svg
                           width="100%"
                           height="100%"
