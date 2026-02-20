@@ -27,6 +27,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "advisory"
     | "risk"
     | "tax-advisory"
+    | "sop"
     | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
@@ -40,6 +41,7 @@ type ServiceCardProps = {
     | "advisory"
     | "risk"
     | "tax-advisory"
+    | "sop"
     | "spv";
 };
 
@@ -66,6 +68,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "advisory" ||
               variant === "risk" ||
               variant === "spv" ||
+              variant === "sop" ||
               variant === "tax-advisory"
               ? "text-left"
               : "sm:text-center",
@@ -86,7 +89,7 @@ export default function CorporateServicesUaeWhyChoose({
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-sm:[&_br]:hidden">
+            <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]">
               {parse(data?.description)}
             </div>
           )}
@@ -149,6 +152,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
       className={cn(
         "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "sop" &&
+          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
         (variant === "default" || variant === "advisory") &&
           "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" || variant === "tax-advisory") &&
@@ -165,6 +170,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           variant === "advisory" && "text-[#1C5396]",
           variant === "spv" && "text-[#1C5396]",
           variant === "tax-advisory" && "text-[#1C5396] capitalize",
+          variant === "sop" && "text-[#1C5396]",
           variant === "default" && "text-black",
         )}
       >

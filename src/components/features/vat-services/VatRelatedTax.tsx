@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { Heading } from "@/components/utils/typography";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -23,9 +24,13 @@ export type VatRelatedTaxData = {
 
 interface VatRelatedTaxProps {
   data: VatRelatedTaxData;
+  variant?: "sop" | "default";
 }
 
-export default function VatRelatedTax({ data }: VatRelatedTaxProps) {
+export default function VatRelatedTax({
+  data,
+  variant = "default",
+}: VatRelatedTaxProps) {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
@@ -48,7 +53,10 @@ export default function VatRelatedTax({ data }: VatRelatedTaxProps) {
             {data?.tax_list?.map((item) => (
               <div
                 key={`tax-${item?.id}`}
-                className="mr-[30px] mr-[25px] sm:mr-[15px] xl:mr-[20px] 2xl:mr-[25px] 3xl:mr-[30px] flex-[0_0_80%] sm:flex-[0_0_40%] xl:flex-[0_0_32.1%] 2xl:flex-[0_0_32%] min-w-0 select-none"
+                className={cn(
+                  "mr-[30px] mr-[25px] sm:mr-[15px] xl:mr-[20px] 2xl:mr-[25px] 3xl:mr-[30px] flex-[0_0_80%] sm:flex-[0_0_40%] xl:flex-[0_0_32.1%] 2xl:flex-[0_0_32%] min-w-0 select-none",
+                  variant === "sop" && "lg:!flex-[0_0_23.5%]",
+                )}
               >
                 <Link
                   href={item?.link?.url || "#"}

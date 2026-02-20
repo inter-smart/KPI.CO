@@ -464,6 +464,7 @@ export const metadata: Metadata = {
   description:
     "Independent risk and assurance services for UAE organisations. Strengthen governance, internal controls, and regulatory compliance with clarity and discipline. ",
 };
+
 export default function RiskOverviewPage() {
   return (
     <>

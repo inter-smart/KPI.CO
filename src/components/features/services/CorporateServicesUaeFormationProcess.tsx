@@ -3,7 +3,12 @@ import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export type ProcessStep = {
@@ -11,7 +16,7 @@ export type ProcessStep = {
   step?: string;
   title: string;
   inner_title?: string;
-  sub_title: string;
+  sub_title?: string;
   description: string;
 };
 
@@ -57,18 +62,17 @@ export default function CorporateServicesUaeFormationProcess({
 
       const rect = containerRef.current?.getBoundingClientRect();
 
-    
       const MIN_TOP = -50;
       const MAX_TOP = 380;
 
       const isInLockZone = rect
-        ? (rect.top >= MIN_TOP && rect.top <= MAX_TOP)
+        ? rect.top >= MIN_TOP && rect.top <= MAX_TOP
         : false;
- 
-      const shouldLock = isInLockZone && (
-        (isScrollingDown && currentStep < maxStep) ||
-        (isScrollingUp && currentStep > 0)
-      );
+
+      const shouldLock =
+        isInLockZone &&
+        ((isScrollingDown && currentStep < maxStep) ||
+          (isScrollingUp && currentStep > 0));
 
       if (shouldLock) {
         e.preventDefault();
@@ -76,7 +80,7 @@ export default function CorporateServicesUaeFormationProcess({
 
         if (!wasInLockZone.current) {
           scrollAccumulator.current = 0;
-          lastScrollTime.current = 0; 
+          lastScrollTime.current = 0;
           wasInLockZone.current = true;
         }
 
@@ -84,15 +88,18 @@ export default function CorporateServicesUaeFormationProcess({
         scrollAccumulator.current += e.deltaY;
 
         const now = Date.now();
-        const THRESHOLD = 30; 
-        const COOLDOWN = 300; 
+        const THRESHOLD = 30;
+        const COOLDOWN = 300;
 
         if (now - lastScrollTime.current > COOLDOWN) {
           if (scrollAccumulator.current > THRESHOLD && currentStep < maxStep) {
             setActiveStep((prev) => prev + 1);
             lastScrollTime.current = now;
             scrollAccumulator.current = 0;
-          } else if (scrollAccumulator.current < -THRESHOLD && currentStep > 0) {
+          } else if (
+            scrollAccumulator.current < -THRESHOLD &&
+            currentStep > 0
+          ) {
             setActiveStep((prev) => prev - 1);
             lastScrollTime.current = now;
             scrollAccumulator.current = 0;
@@ -110,8 +117,7 @@ export default function CorporateServicesUaeFormationProcess({
       container.addEventListener("wheel", handleWheel, { passive: false });
     }
     return () => {
-      if (container)
-        container.removeEventListener("wheel", handleWheel);
+      if (container) container.removeEventListener("wheel", handleWheel);
     };
   }, [isScrollControlled, data.steps.length]);
 
@@ -121,7 +127,7 @@ export default function CorporateServicesUaeFormationProcess({
       className={cn(
         "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white",
         !isScrollControlled && "overflow-hidden",
-        isScrollControlled && "relative scroll-mt-24"
+        isScrollControlled && "relative scroll-mt-24",
       )}
     >
       <div className="container">
@@ -157,10 +163,12 @@ export default function CorporateServicesUaeFormationProcess({
           </Heading>
         )}
 
-        <div className={cn(
-          "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
-          variant === "Vat-Services" && "items-center", 
-        )}>
+        <div
+          className={cn(
+            "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+            variant === "Vat-Services" && "items-center",
+          )}
+        >
           <div className="flex items-center">
             <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
               {data.steps.map((step, index) => (
@@ -185,7 +193,7 @@ export default function CorporateServicesUaeFormationProcess({
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",
                       data.steps.length === index + 1 && "lg:hidden",
-                    )} 
+                    )}
                     transition={{
                       duration: 0.8,
                       ease: [0.25, 0.1, 0.25, 1],
@@ -296,7 +304,11 @@ export default function CorporateServicesUaeFormationProcess({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.3 }}
                   >
-                    <Text as="div" size="p3" className="text-black max-md:[&_br]:hidden">
+                    <Text
+                      as="div"
+                      size="p3"
+                      className="text-black max-md:[&_br]:hidden"
+                    >
                       {parse(data.steps[activeStep].description)}
                     </Text>
                   </motion.div>
