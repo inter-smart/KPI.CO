@@ -84,7 +84,6 @@ export default function DocumentRequired({
                 )}
               </div>
             )}
-
             {items.length > 0 && (
               <ul className="space-y-4.3 lg:space-y-4.5 2xl:space-y-5">
                 {items.map((item) => (
@@ -157,7 +156,7 @@ export default function DocumentRequired({
                           </div>
                         </>
                       )}
-                      {variant === "default" && (
+                      {variant === "default" || variant === "dfza" && (
                         <svg
                           width="100%"
                           height="100%"
