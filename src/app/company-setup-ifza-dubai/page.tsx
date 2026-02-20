@@ -1,30 +1,30 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import { MediaItem } from "../page";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
-import { RiskOrganisationData } from "../risk-overview/page";
+import { RiskOrganisationData } from "../risk-services-uae/page";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
-import { blogData } from "@/data/blogData";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { blogData } from "@/data/blogData";
+import { Metadata } from "next";
 
 export type HeroData = {
-    id: number;
-    title: string;
-    description: string;
-    media?: {
-        desktopPath: string;
-        mobilePath: string;
-        alt: string;
-    };
-    additionalContent?: string[];
+  id: number;
+  title: string;
+  description: string;
+  media?: {
+    desktopPath: string;
+    mobilePath: string;
+    alt: string;
+  };
+  additionalContent?: string[];
 };
+
 export type MainlandBusinessData = {
   title: string;
   description: string;
@@ -88,91 +88,109 @@ export type InsightItem = {
   slug: string;
 };
 
+export type MeydanFreeZoneItem = {
+  id: number;
+  title: string;
+  zone_list: string[];
+};
 
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type MeydanFreeZoneData = {
+  title: string;
+  main_description?: string;
+  description?: string;
+  free_zone_list: MeydanFreeZoneItem[];
+  structure_list: MeydanStructureItem[];
+};
 
 const localData = {
   hero: {
     id: 1,
     media: {
-            desktopPath: "/images/dwtc-desk.png",
-            mobilePath: "/images/ddwtc-mobpng",
-            alt: "Company Formation in DMCC Free Zone, UAE",
-        },
-    title: "Company Formation in DWTC, UAE ",
+      desktopPath: "/images/ifza-bg.png",
+      mobilePath: "/images/ifza-mobile-bg.png",
+      alt: "Company Formation in IFZA, UAE",
+    },
+    title: "Company Formation in IFZA, UAE ",
     description:
-      "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised business district. DWTC offers flexible office solutions and a streamlined setup ideal for founders, startups, and growing businesses.</p>",
+      "<p>Set up your business in IFZA (International Free Zone Authority), Dubai - one of the UAE’s most founder-friendly free zones. Fast setup timelines, diverse licence options, and competitive pricing for entrepreneurs, startups, and international companies.</p>",
   } satisfies HeroData,
 
   mainlandBusiness: {
-    title: "Start a Business in Dubai World Trade Centre",
+    title: "Start a Business in IFZA Dubai",
     description:
-      "<p>Dubai World Trade Centre (DWTC) Free Zone is a government-backed business district located in the heart of Dubai. Known for its strategic location and strong commercial reputation, DWTC is a preferred choice for companies seeking a prestigious address with direct access to key business hubs such as DIFC, Downtown Dubai, and Sheikh Zayed Road.</p>",
-    highlightsTitle: "DWTC Free Zone is Well Suited For:",
+      "<p>The International Free Zone Authority (IFZA), based in Dubai Silicon Oasis (DSO), is a rapidly growing free zone that supports businesses with simple and fast company formation. Fully licensed by the UAE government, IFZA provides access to world-class infrastructure and new business opportunities. The free zone offers a flexible platform to scale, connect internationally, and thrive in one of the world’s most dynamic business hubs.</p>",
+    highlightsTitle: "IFZA Free Zone is Well Suited For:",
     highlights: [
-      "Consulting and advisory firms",
-      "Professional and service-based businesses",
-      "Trading companies with light operational needs",
-      "Holding and management structures",
-      "Companies seeking a prestigious Dubai business address",
+      "Startups and first-time founders entering the UAE",
+      "International companies expanding into Dubai",
+      "Consultants, freelancers, and service providers",
+      "Trading businesses with regional or global operations",
+      "Holding companies and group structures",
     ],
-    footerDescription:
-      "<p>DWTC Free Zone is particularly attractive for founders who value credibility, accessibility, and a central business presence without the operational complexity of larger free zones</p>",
+    footerDescription: "",
     image: {
-      path: "/images/dwtc-img.jpg",
-      alt: "Business in Dubai World",
+      path: "/images/ifza.jpg",
+      alt: "Business in IFZA",
     },
   } satisfies MainlandBusinessData,
 
   whyBuild: {
-    title: "Why Businesses Choose DWTC Free Zone?",
+    title: "Why Businesses Choose IFZA Free Zone",
     description: "",
     items: [
       {
         id: 1,
         media: {
-          path: "/images/busness-freezone-1.svg",
-          alt: "Prime Location",
+          path: "/images/ifza-busness-1.svg",
+          alt: "Cost Effective",
         },
-        title: "Prime Location",
+        title: "Cost Effective",
         description:
           "<p>A central Dubai address with excellent connectivity to DIFC, Downtown Dubai, and Sheikh Zayed Road.</p>",
       },
       {
         id: 2,
         media: {
-          path: "/images/busness-freezone-2.svg",
+          path: "/images/ifza-busness-2.svg",
           alt: "Global Reputation",
         },
         title: "Global Reputation",
         description:
           "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
       },
+
       {
         id: 3,
         media: {
-          path: "/images/busness-freezone-3.svg",
-          alt: "Client Focused",
+          path: "/images/ifza-busness-4.svg",
+          alt: "Flexible Licences",
         },
-        title: "Client Focused",
+        title: "Flexible Licences",
         description:
-          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
+          "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
       },
       {
         id: 4,
         media: {
-          path: "/images/busness-freezone-4.svg",
-          alt: "Flexible Offices",
+          path: "/images/ifza-busness-4.svg",
+          alt: "Full Ownership",
         },
-        title: "Flexible Offices",
+        title: "Full Ownership",
         description:
           "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
       },
     ] satisfies WhyBuildItem[],
   },
   services: {
-    title: "Types of Business Licenses in DWTC",
+    title: "Business Licenses in IFZA Dubai",
     description:
-      "<p>DWTC Free Zone offers a diverse range of licences to support a wide variety of business activities. You can choose the most suitable licence based on your planned activity and business model.</p>",
+      "<p>IFZA offers a broad range of licences to accommodate different business models. Licences can often include multiple activities, depending on approval.</p>",
     items: [
       {
         id: 1,
@@ -202,7 +220,7 @@ const localData = {
         },
         title: "Professional License",
         description:
-          "For service-oriented activities including consulting, advisory, IT services, and other specialised services",
+          "For service-based businesses such as consulting, advisory, IT services, marketing, education, and management services.",
       },
       {
         id: 4,
@@ -216,65 +234,52 @@ const localData = {
       {
         id: 5,
         media: {
-          path: "/images/busnes-license-5.svg",
-          alt: "Event Management License",
+          path: "/images/busnes-license-8.svg",
+          alt: "Industrial License",
         },
-        title: "Event Management License",
+        title: "Industrial License",
         description:
-          "For companies organising and managing events, exhibitions, conferences, and related services. ",
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/busnes-license-6.svg",
-          alt: "Family Office License",
-        },
-        title: "Family Office Licenses",
-        description:
-          "For wealth management, investment planning, estate management, and related advisory services.",
-      },
-      {
-        id: 7,
-        media: {
-          path: "/images/busnes-license-7.svg",
-          alt: "Virtual Assets License",
-        },
-        title: "Virtual Assets License",
-        description:
-          "For companies operating in digital assets, blockchain, cryptocurrencies, and related services.",
+          "For online businesses, digital platforms, and internet-based trading activities.",
       },
     ] satisfies ServiceItem[],
   },
-  riskOrganisation: {
-    title: "Documents Required for DWTC Business License",
-    description:
-      "<p>To set up a company in DWTC Free Zone, founders typically need: </p>",
-    items: [
+  meydanFreeZone: {
+    title: "Documents Required for IFZA Business Setup",
+    main_description:
+      "We assist you with all documents and approvals, ensuring a smooth setup and full compliance with IFZA regulations.",
+    free_zone_list: [
       {
         id: 1,
-        text: "Passport copies of shareholders ",
+        title: "Individual Shareholder(s)",
+        zone_list: [
+          "Passport copy",
+          "Passport-sized photograph",
+          "Emirates ID (if UAE resident)",
+          "UAE visa copy (if applicable)",
+        ],
       },
       {
         id: 2,
-        text: "UAE entry stamp or residence visa copy (if applicable) ",
+        title: "Corporate Shareholder(s)",
+        zone_list: [
+          "Notarized board resolution",
+          "Notarized memorandum and articles of association",
+          "Plan business operations outside free zone permissions",
+          "Notarized certificate of incorporation",
+        ],
       },
-      {
-        id: 3,
-        text: "Trade name and business activity selection",
-      },
-      { id: 4, text: "Office or workspace confirmation" },
     ],
-
-    media: {
-      path: "/images/document-required.jpg", // <-- your image path
-      alt: "Required documents",
-    },
-    ftr_description:
-      "<p>Additional documents may be required depending on the business structure.</p>",
-  } satisfies RiskOrganisationData,
-  
+    structure_list: [
+      {
+        id: 1,
+        title: "Choosing the Right Structure",
+        description:
+          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+      },
+    ],
+  } satisfies MeydanFreeZoneData,
   banking: {
-    title: "Banking Support for DWTC Companies",
+    title: "Banking Support for IFZA Companies  ",
     description:
       "<p>We assist clients with corporate bank account opening through trusted UAE and international banking partners, helping you choose the right bank based on your business activity and structure.</p>",
     partners: [
@@ -325,21 +330,21 @@ const localData = {
   workWithKpi: {
     title: "Why Work with KPI ",
     description:
-      "<p>KPI is more than a formation provider - we’re your growth partner. We support your DWTC Free Zone business from setup through ongoing operations.</p>",
+      "<p>KPI is more than a company formation provider - we’re your long-term growth partner in the UAE. We help founders navigate IFZA setup decisions with clarity, speed, and compliance.</p>",
     items: [
       {
         id: 1,
-        text: "Strategic DWTC setup advice ",
+        text: "Strategic IFZA setup and licence structuring ",
       },
       {
         id: 2,
-        text: "Compliance and regulatory guidance ",
+        text: "Regulatory and compliance guidance ",
       },
       {
         id: 3,
-        text: "Corporate governance support",
+        text: "Corporate governance and structuring support",
       },
-      { id: 4, text: "Ongoing advisory as your business grows" },
+      { id: 4, text: "Ongoing advisory as your UAE operations scale" },
     ],
 
     media: {
@@ -349,16 +354,16 @@ const localData = {
     ftr_description: "",
   } satisfies RiskOrganisationData,
   contactUs: {
-    title: "Not sure if DWTC Free Zone is the right choice for your business?",
+    title: "Not Sure if IFZA Free Zone is Right for your Business",
     description:
-      "<p>Our team will help you compare options, understand requirements, and choose the setup that best aligns with your goals in the UAE.</p>",
+      "<p>Our team will help you compare free zones, understand licence options, and choose a setup structure that aligns with your commercial goals.</p>",
     button: {
-      label: "Contact Us",
+      label: "Get In Touch",
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-freezone.png",
-      overlayMobile: "/images/overlay-freezone-mobile.png",
+      overlay: "/images/overlay-ifza.png",
+      overlayMobile: "/images/overlay-ifza-mobile.png",
     },
   } satisfies CtaData,
   corporate_faq_data: {
@@ -366,30 +371,30 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "Is DWTC Free Zone suitable for startups?",
+        title: "Is IFZA Free Zone suitable for startups?",
         description: `
                   <p>You can start by choosing the right business structure - mainland, free zone, or offshore - then completing licensing, visas, and banking. KPI guides you through each step for a smooth setup.</p>
                   `,
       },
       {
         id: 2,
-        title: "Can I apply for UAE residence visas through DWTC?",
+        title: "Is IFZA Free Zone suitable for startups?",
         description: `
                   <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
                   `,
       },
       {
         id: 3,
-        title: "Do I need a physical office in DWTC?",
+        title: "Is IFZA Free Zone suitable for startups?",
         description: `
                   <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
                   `,
       },
       {
         id: 4,
-        title: "How long does it take to set up a company in DWTC Free Zone?",
+        title: "How long does it take to set up a company in IFZA Free Zone?",
         description: `
-                  <p>Company setup timelines are generally efficient and depend on document readiness and licence type.</p>
+                  <p>Company formation is typically fast and depends on document readiness and activity approvals.</p>
                   `,
       },
     ] satisfies FaqItem[],
@@ -407,24 +412,27 @@ const localData = {
     })),
   },
 };
-
+export const metadata: Metadata = {
+  title: "IFZA Company Setup Dubai | Fast & Affordable Free Zone Setup ",
+  description:
+    "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses. ",
+};
 export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} />
       <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
-        variant="freezone"
+        variant="ifza"
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-      <RiskOrganisation variant="freezone" data={localData.riskOrganisation} />
-      
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
+      <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking
         variant="freezone"
         data={localData.banking}
       />
-      <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />

@@ -1,5 +1,3 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
@@ -15,6 +13,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -460,6 +459,11 @@ const localData = {
   },
 };
 
+export const metadata: Metadata = {
+  title: "Risk Advisory & Governance Services UAE | KPI Group",
+  description:
+    "Independent risk and assurance services for UAE organisations. Strengthen governance, internal controls, and regulatory compliance with clarity and discipline. ",
+};
 export default function RiskOverviewPage() {
   return (
     <>

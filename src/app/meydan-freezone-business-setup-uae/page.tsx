@@ -461,7 +461,7 @@ export default function MainlandCompanyFormationUaePage() {
     <>
       <InnerHero data={localData.hero} variant="saifz" />
       <MainlandBusiness data={localData.mainlandBusiness} />
-      <MeydanFreeZone data={localData.meydanFreeZone} />
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="default"/>
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <BusinessLocation data={localData.businessLocation} />
       <DocumentRequired data={localData.document_required_data} />

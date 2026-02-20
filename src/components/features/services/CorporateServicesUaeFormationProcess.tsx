@@ -34,7 +34,7 @@ export default function CorporateServicesUaeFormationProcess({
 }: CorporateServicesUaeFormationProcessProps) {
   const [activeStep, setActiveStep] = useState(0);
   const containerRef = useRef<HTMLElement>(null);
-  const isScrollControlled = variant === "aup";
+  const isScrollControlled = useRef(0);
 
   const activeStepRef = useRef(activeStep);
   const scrollAccumulator = useRef(0);
@@ -180,6 +180,7 @@ export default function CorporateServicesUaeFormationProcess({
                     className={cn(
                       "w-[100%] lg:w-[1px] h-[1px] lg:h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                       variant === "Vat-Services" && "lg:h-[250%]",
+                      variant === "mainland" && "lg:h-[190%]",
                       index <= activeStep
                         ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                         : "bg-[#dcdcdc]",

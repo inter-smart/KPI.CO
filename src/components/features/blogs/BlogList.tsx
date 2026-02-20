@@ -315,7 +315,7 @@ export default function BlogList({ data }: BlogListProps) {
 
 function BlogCard({ data }: BlogCardProps) {
     return (
-        <div className="group flex flex-col bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+        <div className="group flex flex-col w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
             <div className="relative aspect-[440/268] overflow-hidden">
                 <Image
                     src={data.media.path || "/images/placeholder-image.png"}
@@ -336,7 +336,7 @@ function BlogCard({ data }: BlogCardProps) {
                 </div>
                 <Link
                     href={data.slug ?? "#"}
-                    className="text-[12px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
+                    className="text-[14px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
                 >
                     Read More <span>→</span>
                 </Link>

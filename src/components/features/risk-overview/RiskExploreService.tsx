@@ -8,7 +8,7 @@ import type { EmblaCarouselType } from "embla-carousel";
 import { useCallback, useEffect, useState } from "react";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
-import type { ServiceItem } from "@/app/risk-overview/page";
+import type { ServiceItem } from "@/app/risk-services-uae/page";
 
 type RiskExploreServiceProps = {
   data: {

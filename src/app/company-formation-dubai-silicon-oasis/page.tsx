@@ -117,8 +117,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/dsoa-desktop.png",
-      mobilePath: "/images/dsoa-mobile.png",
+      desktopPath: "/images/dsoa-banner-dsk.svg",
+      mobilePath: "/images/dsoa-banner-mob.svg",
       alt: "Company Formation in Dubai Silicon oasis",
     },
     title: "Company Formation in Dubai Silicon oasis ",
@@ -258,7 +258,7 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/saifz-servive-3.svg",
+          path: "/images/types_icon3.svg",
           alt: "Company Formation",
         },
         title: "Industrial License",
@@ -268,7 +268,7 @@ const localData = {
       {
         id: 4,
         media: {
-          path: "/images/saifz-servive-4.svg",
+          path: "/images/types_icon4.svg",
           alt: "Company Formation",
         },
         title: "Special Licenses",
@@ -311,7 +311,7 @@ const localData = {
       },
       {
         id: 4,
-        title: "Dubai Economy Companies",
+        title: "Dubai Economy <br/> Companies",
         type: "image",
         image: "/images/dsoa_location4.jpg",
         description:
@@ -336,7 +336,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/whyImg.jpg",
+      path: "/images/dsoaDocument.jpg",
       alt: "Required documents",
     },
 
@@ -400,8 +400,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/cta-bg-desk.jpg",
-      overlayMobile: "/images/cta-bg-mob.jpg",
+      overlay: "/images/dsoa-card-desk.svg",
+      overlayMobile: "/images/dsoa-card-mob.svg",
     },
   } satisfies CtaData,
 
@@ -476,12 +476,12 @@ export default function page() {
       <InnerHero data={localData.hero} />
       <MainlandBusiness data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
-        variant="mainland"
+        variant="dsoa"
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices data={localData.services} variant="saifz" />
-      <BusinessLocation data={localData.businessLocation} />
-      <DocumentRequired data={localData.document_required_data} />
+      <BusinessLocation data={localData.businessLocation} variant="dsoa" />
+      <DocumentRequired data={localData.document_required_data} variant="dsoa"  />
       <CorporateServicesUaeBanking
         data={localData.banking}
         variant="mainland"

@@ -8,7 +8,7 @@ import CorporateServicesUaeWhyBuild from "@/components/features/services/Corpora
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import BusinessLocation from "@/components/features/mainland/BusinessLocation";
+import BusinessLocation, { type BusinessLocationData } from "@/components/features/mainland/BusinessLocation";
 import { Metadata } from "next";
 
 export type MainlandBusinessData = {
@@ -22,21 +22,8 @@ export type MainlandBusinessData = {
     alt: string;
   };
 };
+ 
 
-export type LocationItem = {
-  id: number;
-  title: string;
-  type: "image" | "content";
-  image?: string;
-  description?: string;
-  link?: string;
-};
-
-export type BusinessLocationData = {
-  title: string;
-  description: string;
-  items: LocationItem[];
-};
 
 export type DocumentRequiredData = {
   id?: number;
@@ -172,7 +159,7 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-1.jpg",
         description:
-          "Dubai offers world-class infrastructure and a global trade hub environment, perfect for ambitious international businesses.",
+          "Dubai is a global business hub with a vibrant commercial ecosystem, advanced infrastructure, and access to international markets. It's ideal for companies that want a high-profile presence and exposure to global clients.",
         link: "#",
       },
       {
@@ -190,7 +177,7 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-3.jpg",
         description:
-          "Ajman provides a cost-effective mainland setup with a fast-growing industrial base and strategic port access.",
+          "Ajman provides an affordable setup experience with fast approvals and a central location near key ports. Ideal for smaller companies and service providers looking for simplicity and convenience.",
         link: "#",
       },
       {
@@ -199,7 +186,7 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-4.jpg",
         description:
-          "Sharjah is the cultural and educational hub of the UAE, offering unique opportunities in logistics and creative industries.",
+          "Sharjah offers a cost-effective environment with a growing SME ecosystem. It is known for supporting creative, educational, and industrial initiatives while maintaining close access to Dubai's markets.",
         link: "#",
       },
       {
@@ -208,7 +195,7 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-5.jpg",
         description:
-          "RAK is known for its diverse economy and strong manufacturing sector, offering a high quality of life and business-friendly regulations.",
+          "RAK is known for industrial diversity and investor-friendly policies. Lower operating costs and supportive infrastructure make it attractive for manufacturing and construction ventures.",
         link: "#",
       },
       {
@@ -217,7 +204,7 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-6.jpg",
         description:
-          "UAQ offers a stable business environment with a focus on tourism and trade, providing great potential for sustainable growth.",
+          "Umm Al Quwain offers minimal overhead and a relaxed business environment. Particularly suitable for startups, freelancers, and first-time entrepreneurs seeking straightforward entry into the UAE market.",
         link: "#",
       },
       {
@@ -226,11 +213,13 @@ const localData = {
         type: "image",
         image: "/images/mainlandBusiness-7.jpg",
         description:
-          "Fujairah is a strategic maritime and oil hub with the only UAE access to the Indian Ocean.",
+          "Fujairah's strategic position on the eastern coast gives direct access to sea routes and shipping channels. It is well-suited for logistics, trade, and import/export businesses seeking a coastal base.",
         link: "#",
       },
     ],
   } satisfies BusinessLocationData,
+
+
   whyBuild: {
     title: "Why Choose a Mainland Company Setup?",
     description:
@@ -318,6 +307,7 @@ const localData = {
       },
     ] satisfies WhyBuildItem[],
   },
+
   formationProcess: {
     title: "Steps to Get a Mainland License",
     sub_title: null,
@@ -641,7 +631,7 @@ const localData = {
         {
           id: 3,
           step: "Step Three",
-          title: "Reserve Your Company Name & Apply for License",
+          title: "Reserve Your Company Name & <br/> Apply for License",
           sub_title: "Reserve Your Company Name & Apply for License",
           description:
             "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",

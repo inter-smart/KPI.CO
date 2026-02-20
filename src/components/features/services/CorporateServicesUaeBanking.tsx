@@ -30,7 +30,7 @@ export default function CorporateServicesUaeBanking({
     [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
-    <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
+    <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] overflow-visible relative z-0 block shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]">
       <div className="container">
         <div
           className={cn(

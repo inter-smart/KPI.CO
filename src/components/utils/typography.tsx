@@ -10,10 +10,10 @@ export const headingVariants = cva("leading-tight font-semibold", {
   variants: {
     size: {
       h1: "text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[44px] 2xl:text-[52px] 3xl:text-[65px]",
-      h2: "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px]",
+      h2: "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px]",
       h3: "text-[24px] sm:text-[28px] lg:text-[34px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px]",
       h4: "text-[16px] sm:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] 3xl:text-[30px]",
-      h5: "text-[14px] sm:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[21px] 3xl:text-[26px]",
+      h5: "text-[16px] sm:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[21px] 3xl:text-[26px]",
       h6: "text-[16px] sm:text-[17px] lg:text-[19px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
       h8: "text-[14px] sm:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[22px] 3xl:text-[25px]",
     },

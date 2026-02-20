@@ -29,7 +29,7 @@ export default function AdvisoryProservice({
   data,
 }: AdvisoryProserviceProps) {
   return (
-    <section className="w-full h-auto py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
+    <section className="w-full h-auto py-[40px_30px] md:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
       <div className="container">
         <div
           className={cn(

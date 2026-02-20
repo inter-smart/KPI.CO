@@ -525,12 +525,12 @@ const localData = {
       description: blog.description,
       date: blog.date,
       readTime: blog.readTime,
-      slug: `/blog/${blog.slug}`,
+      slug: `/blog/${blog.slug}`, 
     })),
   },
 };
 
-export default function MainlandCompanyFormationUaePage() {
+export default function HamriyaUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />
@@ -547,7 +547,7 @@ export default function MainlandCompanyFormationUaePage() {
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="saifz"
+        variant="hamriya"
       />
       <CorporateServicesUaeBanking
         data={localData.banking}

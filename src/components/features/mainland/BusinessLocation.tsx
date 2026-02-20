@@ -5,13 +5,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heading, Text } from "@/components/utils/typography";
 import { ArrowRight } from "lucide-react";
-import type { BusinessLocationData } from "@/app/mainland-company-formation-uae/page";
+import { cn } from "@/lib/utils";
+import parse from "html-react-parser";
+
+export type LocationItem = {
+  id: number;
+  title: string;
+  type: "image" | "content";
+  image?: string;
+  description?: string;
+  link?: string;
+};
+
+export type BusinessLocationData = {
+  title: string;
+  description: string;
+  items: LocationItem[];
+};
 
 type BusinessLocationProps = {
   data: BusinessLocationData;
+  variant?: "dsoa" | "default";
 };
 
-export default function BusinessLocation({ data }: BusinessLocationProps) {
+
+export default function BusinessLocation({
+  data,
+  variant = "default",
+}: BusinessLocationProps) {
   return (
     <section className="w-full py-[35px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[110px] bg-white">
       <div className="container">
@@ -35,7 +56,7 @@ export default function BusinessLocation({ data }: BusinessLocationProps) {
               key={item.id}
               className="group relative min-h-[210px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md"
             >
-              <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 group-hover:pointer-events-none aspect-[500/312]">
+              <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">
                 <Image
                   src={item.image || "/images/placeholder.png"}
                   alt={item.title}
@@ -48,21 +69,26 @@ export default function BusinessLocation({ data }: BusinessLocationProps) {
                     as="h3"
                     className="text-white text-[17px] xl:text-[21px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
                   >
-                    {item.title}
+                    {parse(item.title)}
                   </Heading>
                 </div>
               </div>
 
-              <div className="relative  h-full w-full inset-0 bg-[#E2F5FF] flex items-start p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100  group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto">
+              <div
+                className={cn(
+                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-10",
+                  variant === "dsoa" && "flex items-center"
+                )}
+              >
                 <div className="w-full h-auto">
-                  <div className="flex items-center justify-between gap-4 mb-3 2xl:mb-5 3xl:mb-8">
+                  <div className="flex items-center justify-between gap-4 mb-2 2xl:mb-5 3xl:mb-8">
                     <Heading
                       as="h3"
-                      className="text-[#1C5396] !text-[24px] sm:!text-[16px] lg:!text-[17px] xl:!text-[18px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight"
+                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[18px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight"
                     >
-                      {item.title}
+                      {parse(item.title)}
                     </Heading>
-                    <div className="w-[25px] h-[25px] 3xl:w-[35px] 3xl:w-[35px] flex items-center justify-center">
+                    <div className="w-[20px] h-[20px] 3xl:w-[35px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"
@@ -76,14 +102,14 @@ export default function BusinessLocation({ data }: BusinessLocationProps) {
                     </div>
                   </div>
 
-                  <div className="translate-y-4 group-hover:translate-y-0">
+                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <Text className="text-[#1C5396] text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.6] font-normal">
                       {item.description}
                     </Text>
                   </div>
 
                   {item.link && (
-                    <Link href={item.link} className="absolute inset-0 z-10">
+                    <Link href={item.link} className="absolute inset-0 z-20">
                       <span className="sr-only">View {item.title} details</span>
                     </Link>
                   )}

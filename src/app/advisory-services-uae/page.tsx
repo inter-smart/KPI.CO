@@ -90,8 +90,8 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            desktopPath: "/images/audit-banner.png",
-            mobilePath: "/images/audit-mobile.png",
+            desktopPath: "/images/advisoryBanner-desk.svg",
+            mobilePath: "/images/advisoryBanner-mob.svg",
             alt: "VAT Advisory & Compliance That Works for Your Business",
         },
         title: "VAT Advisory & Compliance That Works for Your Business",
@@ -376,8 +376,8 @@ export const metadata: Metadata = {
 export default function page() {
     return (
         <>
-            <InnerHero data={localData.hero} />
-            <DocumentRequired data={localData.document_required_data} />
+            <InnerHero data={localData.hero} variant="advisory" />
+            <DocumentRequired data={localData.document_required_data}  variant="advisory"/>
             <AdvisorySerice data={localData.advisory_data} />
             <AdvisoryProservice data={localData.Proservice} />
             <RiskAdvisory data={localData.riskAdvisory} />
