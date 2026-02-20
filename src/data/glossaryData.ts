@@ -575,7 +575,7 @@ export const glossaryData: GlossaryItem[] = [
     },
 
     {
-        term: "Statement of Profit &amp; Loss and Other Comprehensive Income",
+        term: "Statement of Profit & Loss and Other Comprehensive Income ",
         description:
             "A financial statement that shows a company's financial performance over a period, including both profit or loss and other comprehensive income items. For example, it includes net income and unrealized gains or losses on investments.",
     },

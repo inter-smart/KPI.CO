@@ -122,7 +122,7 @@ export default function GlossaryPage() {
         px-[18px]
         pr-[45px]   /* space for image */
         rounded-[10px]
-        text-[16px]
+        text-[10px]
 
         /* 💻 Desktop */
         md:w-[512px]
@@ -167,22 +167,22 @@ export default function GlossaryPage() {
 
       >
         <div className="flex items-center justify-center gap-4 w-full max-w-[1200px]">
-
-          {/* Text */}
           <div
             className="
-             text-white
-             font-poppins
-             text-[12px]        
-             md:text-[16px]     
-             font-normal        /* 👈 Not bold */
-             leading-[120%]
-             tracking-[-0.02em]
-             whitespace-nowrap
-"
+
+    font-poppins
+    text-[12px]
+    md:text-[16px]
+style-regular
+    whitespace-nowrap
+    font-weight-400
+    text-[#fff]
+  "
           >
-            Go to Section :
+         Go To Section :
+
           </div>
+
 
           {/* Letters Wrapper */}
           <div
