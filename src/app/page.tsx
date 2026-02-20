@@ -8,6 +8,7 @@ import HomeSecurityInfo from "@/components/features/home/HomeSecurityInfo";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import HomeService from "@/components/features/home/HomeService";
 import { blogData } from "@/data/blogData";
+import { Metadata } from "next";
 
 /* ------------------------------------------------------------------ */
 /* Types                                                              */
@@ -294,7 +295,7 @@ const localData = {
         alt: "ISO certification",
       },
       label: "ISO 27001",
-      description: "Information Security Management System",
+      description: "Information Security Management <br/> System",
     },
   } satisfies SecurityInfoData,
 
@@ -374,6 +375,12 @@ const localData = {
       },
     ] satisfies AffiliationItem[],
   },
+};
+
+export const metadata: Metadata = {
+    title: "Home | KPI Group  ",
+    description:
+        "KPI Group. ",
 };
 
 /* ------------------------------------------------------------------ */

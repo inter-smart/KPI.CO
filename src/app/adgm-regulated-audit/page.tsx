@@ -1,5 +1,3 @@
-"use client";
-
 import InnerHero from "@/components/common/InnerHero";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
@@ -13,6 +11,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
+import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -48,7 +47,7 @@ export type RiskAdvisoryDta = {
   }[];
 };
 
-export type ApproachStep = {
+export type ProcessStep = {
   id: number;
   title: string;
   sub_title: string;
@@ -203,7 +202,7 @@ const localData = {
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
       },
-    ] satisfies ApproachStep[],
+    ] satisfies ProcessStep[],
   },
 
   meydanFreeZone: {
@@ -362,6 +361,12 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
+};
+
+export const metadata: Metadata = {
+  title: "ADGM Approved Audit Firm | FSRA Regulated Audits UAE  ",
+  description:
+    "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA ",
 };
 
 export default function DwtcFreezone() {

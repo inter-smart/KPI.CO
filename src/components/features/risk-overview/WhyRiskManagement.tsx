@@ -3,7 +3,7 @@
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
-import type { WhyRiskData } from "@/app/risk-overview/page";
+import type { WhyRiskData } from "@/app/risk-services-uae/page";
 
 type WhyRiskProps = {
   data: WhyRiskData;
@@ -15,7 +15,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
       <div className="container">
         <div className="flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[25px] 3xl:mb-[35px]">
           {/* Left Content */}
-          <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
+          <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-454px)] 2xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
             <div className="w-full">
               <Heading
                 as="div"
@@ -33,11 +33,10 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                 >
                   {parse(data.highlightsTitle)}
                 </Text>
-
                 <div className="flex flex-col">
                   {data.highlights?.map((item, index) => (
                     <div key={index} className="flex">
-                      <div className="w-full flex gap-4 2xl:gap-6 py-3 lg:py-4 2xl:py-5 3xl:py-6 border-0 border-b border-[#DEDEDE]">
+                      <div className="w-full flex gap-4 2xl:gap-6 py-3 lg:py-4 xl:py-6 3xl:py-7 border-0 border-b border-[#DEDEDE]">
                         <div className="w-[25px] h-[25px] 2xl:w-[34px] 2xl:h-[34px] 3xl:w-[42px] 3xl:h-[42px] rounded-full flex items-center">
                           <Image
                             src="/images/arrowMark.svg"
@@ -47,7 +46,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                             alt="arrow mark"
                           />
                         </div>
-                        <span className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black">
+                        <span className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-medium text-black w-[calc(100%-25px)] 2xl:w-[calc(100%-34px)] 3xl:w-[calc(100%-42px)]">
                           {item}
                         </span>
                       </div>
@@ -59,7 +58,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[395px] xl:w-[510px] 3xl:w-[680px]">
+          <div className="w-full lg:w-[395px] xl:w-[454px] 2xl:w-[510px] 3xl:w-[680px]">
             <Heading
               as="div"
               size="h3"
@@ -67,7 +66,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="relative w-full lg:h-full min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
+            <div className="relative w-full lg:h-full min-h-[370px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

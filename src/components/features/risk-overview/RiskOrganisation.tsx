@@ -3,7 +3,7 @@
 import { Heading } from "@/components/utils/typography";
 import Image from "next/image";
 import parse from "html-react-parser";
-import { RiskOrganisationData } from "@/app/risk-overview/page";
+import { RiskOrganisationData } from "@/app/risk-services-uae/page";
 import { cn } from "@/lib/utils";
 
 type Variant = "default" | "freezone";
@@ -19,7 +19,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
   const items = data?.items ?? [];
 
   return (
-    <section className="w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]">
+    <section className="w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]">
       <div className="container">
         <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]", variant === "freezone" && "items-end",)}>
           <div className="w-full md:w-[57%] xl:w-[60%]">
@@ -50,7 +50,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                     key={item.id}
                     className="relative pl-[25px] 3xl:pl-[35px] text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E]"
                   >
-                    <span className="absolute left-0 top-[6px] w-[16px] h-[16px] 3xl:w-[23px] 3xl:h-[23px]">
+                    <span className="absolute left-0 top-[6px] w-[14px] h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[23px] 3xl:h-[23px]">
                       <svg
                         width="100%"
                         height="100%"
@@ -78,7 +78,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
           </div>
 
 
-          <div className={cn("w-full md:w-[43%] xl:w-[40%]", variant === "freezone" && "mt-[60px]",)}>
+          <div className={cn("w-full md:w-[43%] xl:w-[40%]", variant === "freezone" && "md:mt-[60px]",)}>
             <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
               {data?.title && (
                 <Heading
@@ -92,7 +92,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             </div>
 
             <div
-              className="w-full h-full rounded-[12px] overflow-hidden max-md:mb-6">
+              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto aspect-[615/636] max-md:mb-6">
               {data?.media?.path && (
                 <Image
                   src={data.media.path}

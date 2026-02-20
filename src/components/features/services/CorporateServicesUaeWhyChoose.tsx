@@ -21,14 +21,14 @@ export type CorporateServicesUaeWhyChooseData = {
 };
 
 export type CorporateServicesUaeWhyChooseProps = {
-  variant?: "default" | "mainland" | "advisory" | "risk";
+  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
 
 type ServiceCardProps = {
   item: WhyChooseItem;
-  variant?: "default" | "mainland" | "advisory" | "risk";
+  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -52,7 +52,10 @@ export default function CorporateServicesUaeWhyChoose({
             "w-full h-auto mb-6 sm:mb-8 lg:mb-10 2xl:mb-12.5 3xl:mb-16",
             variant === "mainland" ||
               variant === "advisory" ||
-              variant === "risk"
+              variant === "risk" ||
+              variant === "spv" ||
+              variant === "tax-advisory"
+
               ? "text-left"
               : "sm:text-center",
           )}
@@ -64,6 +67,8 @@ export default function CorporateServicesUaeWhyChoose({
               "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
               variant === "default" && "text-center",
               variant === "risk" && "text-left",
+              variant === "spv" && "text-left",
+              variant === "tax-advisory" && "text-left",
               titleClassName,
             )}
           >
@@ -114,7 +119,7 @@ export default function CorporateServicesUaeWhyChoose({
           )}
         >
           {data?.items?.map((item) => (
-            <div key={item?.id} className="w-full h-auto">
+            <div key={item?.id} className="w-full h-auto max-sm:min-h-[160px]">
               <ServiceCard key={item.id} item={item} variant={variant} />
             </div>
           ))}
@@ -128,19 +133,24 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] duration-300",
+        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         (variant === "default" || variant === "advisory") &&
         "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
-        variant === "risk" &&
-        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#3172c0] after:bg-[#f3f7fd]",
+        (variant === "risk" || variant === "tax-advisory") &&
+        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+        (variant === "spv") &&
+        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
       )}
     >
       <div
         className={cn(
-          "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
+          "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
           variant === "mainland" && "text-[#1C5396]",
           variant === "risk" && "text-[#1C5396]",
+          variant === "advisory" && "text-[#1C5396]",
+          variant === "spv" && "text-[#1C5396]",
+          variant === "tax-advisory" && "text-[#1C5396] capitalize",
           variant === "default" && "text-black",
         )}
       >
@@ -152,3 +162,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
     </div>
   );
 }
+
+
+
+
+

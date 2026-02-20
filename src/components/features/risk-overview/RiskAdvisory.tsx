@@ -1,7 +1,7 @@
 "use client";
 
 import { Heading, Text } from "@/components/utils/typography";
-import { RiskAdvisoryDta } from "@/app/risk-overview/page";
+import { RiskAdvisoryDta } from "@/app/risk-services-uae/page";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
@@ -31,15 +31,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
     );
 
   return (
-    <section className="w-full bg-white py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
+    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
       <div className="container">
         <div
           className={cn(
-            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[100px]",
+            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[80px]",
             hasVariant(variant, "center") && "items-center",
           )}
         >
-          <div className="w-full lg:w-[49%] 2xl:w-[45%]">
+          <div className="w-full lg:w-[49%] 2xl:w-[45%] 3xl:w-[51%]">
             <Heading
               as="h3"
               size="h3"
@@ -47,7 +47,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden">
+            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
@@ -58,12 +58,12 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
 
             <div className="flex flex-row gap-3">
               <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
-                {data.highlightsText}
+                {parse(data.highlightsText)}
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-[51%] 2xl:w-[55%]">
+          <div className="w-full lg:w-[51%] 2xl:w-[55%] 2xl:w-[49%]">
             <div className="h-full flex items-center justify-center bg-[rgba(143,216,254,10%)] rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">

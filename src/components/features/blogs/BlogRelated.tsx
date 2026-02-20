@@ -110,7 +110,7 @@ export default function BlogRelated({ data }: BlogrelatedProps) {
 
 function InsightCard({ data }: InsightCardProps) {
   return (
-    <div className="group w-full h-full flex flex-col bg-white rounded-[10px] overflow-hidden shadow-lg hover:shadow-xl transition">
+    <div className="group flex flex-col w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
       <div className="w-full aspect-440/268 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
@@ -121,29 +121,29 @@ function InsightCard({ data }: InsightCardProps) {
         />
       </div>
 
-      <div className="w-full p-3 xl:p-5 2xl:p-6 flex-1 flex flex-col">
+      <div className="w-full p-[23px] xl:p-5 2xl:p-6 flex-1 flex flex-col">
         <Text
           size="p1"
-          className="leading-none font-medium text-[#5280ca] mb-3 xl:mb-3 2xl:mb-4"
+          className="leading-none font-medium text-[#5280ca] mb-[15px] xl:mb-3 2xl:mb-4"
         >
           {data.date} • {data.readTime}
         </Text>
 
-        <div className="text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-1.5 xl:mb-2.5 2xl:mb-3.5">
+        <div className="text-[16px] sm:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold line-clamp-2 text-black mb-[15px] xl:mb-2.5 2xl:mb-3.5">
           {parse(data.title ?? "title")}
         </div>
 
         <Text
           as="div"
           size="p1"
-          className="leading-relaxed line-clamp-5 text-[#4e4e4e] mb-3 xl:mb-3 2xl:mb-4"
+          className="leading-relaxed line-clamp-5 text-[#4e4e4e] mb-[20px] xl:mb-3 2xl:mb-4"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[12px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
+          className="text-[14px] xl:text-[14px] 2xl:text-[17px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto hover:[&_img]:translate-x-1  transition-colors duration-300"
         >
           Read More
           <Image
