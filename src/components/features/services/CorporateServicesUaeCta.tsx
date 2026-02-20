@@ -77,7 +77,7 @@ export default function CorporateServicesUaeCta({
               size="h2"
               className="max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] text-white mb-3.75 lg:mb-2.5"
             >
-              {data?.title}
+              {parse(data?.title)}
             </Heading>
             <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
               {parse(data?.description)}

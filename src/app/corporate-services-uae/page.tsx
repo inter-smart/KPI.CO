@@ -478,9 +478,9 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "#1 UAE Business Setup Consultants | Start Your Business in UAE",
+  title: "UAE Corporate Tax Advisory & Compliance | KPI Group ",
   description:
-    "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
+    "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime. ",
 };
 
 export default function CorporateServicesUaePage() {

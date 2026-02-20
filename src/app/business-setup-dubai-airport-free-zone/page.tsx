@@ -481,7 +481,7 @@ export default function DafzaUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="dafza" />
       <CorporateServicesUaeWhyBuild variant="dafz" data={localData.whyBuild} />
       <CorporateServicesUaeServices data={localData.services} variant="saifz" />
       <BusinessLocation data={localData.businessLocation} />

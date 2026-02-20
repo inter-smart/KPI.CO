@@ -60,6 +60,7 @@ export type MeydanFreeZoneData = {
 export type ProcessStep = {
   id: number;
   title: string;
+    inner_title: string;
   sub_title: string;
   description: string;
 };
@@ -189,12 +190,14 @@ const localData = {
         id: 1,
         title: "Establish the commercial reality",
         sub_title: "",
+                inner_title: "Establish the commercial reality",
         description:
           "<p>We begin by understanding what is actually happening commercially and not just legally.</p>",
       },
       {
         id: 2,
         title: "Interpret the applicable tax framewrok",
+                inner_title: "Interpret the applicable tax framewrok",
         sub_title: "",
         description:
           "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
@@ -202,6 +205,7 @@ const localData = {
       {
         id: 3,
         title: "Evaluate viable tax positions",
+                inner_title: "Evaluate viable tax positions",
         sub_title: "",
         description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
@@ -209,6 +213,7 @@ const localData = {
       {
         id: 4,
         title: "Document and support the rationale",
+                inner_title: "Document and support the rationale",
         sub_title: "",
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",

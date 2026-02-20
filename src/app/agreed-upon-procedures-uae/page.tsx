@@ -53,6 +53,7 @@ export type ProcessStep = {
   id: number;
   title: string;
   sub_title: string;
+    inner_title: string;
   description: string;
 };
 
@@ -221,6 +222,7 @@ const localData = {
         id: 1,
         title: "Clear Scoping",
         sub_title: "",
+                inner_title: "Clear Scoping",
         description:
           "<p>Procedures are agreed upfront to ensure clarity and alignment.</p>",
       },
@@ -228,6 +230,7 @@ const localData = {
         id: 2,
         title: "Precise Execution",
         sub_title: "",
+                inner_title: "Precise Execution",
         description:
           "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
       },
@@ -235,6 +238,7 @@ const localData = {
         id: 3,
         title: "Structured Reporting",
         sub_title: "",
+                inner_title: "Structured Reporting",
         description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
       },
@@ -242,6 +246,7 @@ const localData = {
         id: 4,
         title: "Timely Delivery",
         sub_title: "",
+                inner_title: "Timely Delivery",
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
       },

@@ -484,7 +484,7 @@ export default function page() {
       <DocumentRequired data={localData.document_required_data} variant="dsoa"  />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="mainland"
+        variant="dsoa"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
