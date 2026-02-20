@@ -431,6 +431,7 @@ const localData = {
   } satisfies VatHealthData,
   whyChoose: {
     title: "Why Choose KPI for VAT Services ",
+    sub_title: "",
     items: [
       {
         id: 1,

@@ -266,6 +266,7 @@ const localData = {
   whyChoose: {
     title: "Why Choose KPI for ADGM Holding Companies",
     description: "",
+    sub_title: "",
     items: [
       {
         id: 1,

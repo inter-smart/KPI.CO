@@ -285,6 +285,7 @@ const localData = {
   whyChoose: {
     title: "Why DIFC Entities Trust KPI",
     description: "",
+    sub_title: "",
     items: [
       {
         id: 1,

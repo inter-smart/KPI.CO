@@ -243,6 +243,7 @@ const localData = {
     title: "Why ADGM Entities Trust KPI",
     description:
       "",
+      sub_title: "",
     items: [
       {
         id: 1,

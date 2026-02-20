@@ -200,6 +200,7 @@ const localData = {
   whyChoose: {
     title: "Why Work With Us On ADGM Foundations",
     description: "",
+    sub_title: "",
     items: [
       {
         id: 1,

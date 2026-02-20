@@ -13,7 +13,7 @@ type CorporateServicesUaeBankingProps = {
     description: string;
     partners: BankingPartner[];
   };
-  variant?: "default" | "mainland" | "freezone";
+  variant?: "default" | "mainland" | "freezone" | "audit";
 };
 
 export default function CorporateServicesUaeBanking({
@@ -30,12 +30,14 @@ export default function CorporateServicesUaeBanking({
     [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
-    <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
+    <section className={cn("w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]",
+      variant === "audit" && "!pt-1"
+    )}>
       <div className="container">
         <div
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
-            variant === "mainland" || variant === "freezone"
+            variant === "mainland" || variant === "freezone" || variant === "audit"
               ? "text-left"
               : "sm:text-center",
           )}

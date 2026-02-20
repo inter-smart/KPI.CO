@@ -468,7 +468,8 @@ const localData = {
   whyChoose: {
     title: "Why choose KPI?",
     description:
-      "KPI is more than a company setup service. We guide businesses through every step of mainland formation and beyond, helping you build a compliant, growth-ready company in the UAE. Our team supports you with: ",
+    "KPI is more than a company setup service. We guide businesses through every step of mainland formation and beyond, helping you build a compliant, growth-ready company in the UAE. Our team supports you with: ",
+    sub_title: "",
     items: [
       {
         id: 1,

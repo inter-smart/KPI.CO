@@ -393,7 +393,8 @@ const localData = {
     title: "Why Choose KPI?",
     description:
       "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
-    items: [
+   sub_title: "",
+      items: [
       {
         id: 1,
         title: "Experienced Guidance",

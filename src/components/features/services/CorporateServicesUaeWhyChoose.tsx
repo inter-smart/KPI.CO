@@ -16,19 +16,32 @@ export type WhyChooseItem = {
 
 export type CorporateServicesUaeWhyChooseData = {
   title: string;
+  sub_title: string;
   description?: string;
   items: WhyChooseItem[];
 };
 
 export type CorporateServicesUaeWhyChooseProps = {
-  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
+  variant?:
+    | "default"
+    | "mainland"
+    | "advisory"
+    | "risk"
+    | "tax-advisory"
+    | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
 
 type ServiceCardProps = {
   item: WhyChooseItem;
-  variant?: "default" | "mainland" | "advisory" | "risk" | "tax-advisory" | "spv";
+  variant?:
+    | "default"
+    | "mainland"
+    | "advisory"
+    | "risk"
+    | "tax-advisory"
+    | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -55,7 +68,6 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "risk" ||
               variant === "spv" ||
               variant === "tax-advisory"
-
               ? "text-left"
               : "sm:text-center",
           )}
@@ -79,6 +91,10 @@ export default function CorporateServicesUaeWhyChoose({
               {parse(data?.description)}
             </div>
           )}
+
+          <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black my-2 lg:my-3 2xl:my-4">
+            {data?.sub_title}
+          </div>
         </div>
         {variant === "mainland" && (
           <div ref={emblaRef} className="w-full max-w-full block sm:hidden">
@@ -101,10 +117,13 @@ export default function CorporateServicesUaeWhyChoose({
                     onClick={() => onDotButtonClick(index)}
                     className={cn(
                       "rounded-full transition-all duration-300",
-                      distance === 0 ? "w-3 h-3 bg-[#FFC916]" :
-                        distance === 1 ? "w-2.5 h-2.5 bg-[#D9D9D9]" :
-                          distance === 2 ? "w-2 h-2 bg-[#D9D9D9]" :
-                            "w-1.5 h-1.5 bg-[#D9D9D9]"
+                      distance === 0
+                        ? "w-3 h-3 bg-[#FFC916]"
+                        : distance === 1
+                          ? "w-2.5 h-2.5 bg-[#D9D9D9]"
+                          : distance === 2
+                            ? "w-2 h-2 bg-[#D9D9D9]"
+                            : "w-1.5 h-1.5 bg-[#D9D9D9]",
                     )}
                   />
                 );
@@ -136,11 +155,11 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         (variant === "default" || variant === "advisory") &&
-        "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
+          "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" || variant === "tax-advisory") &&
-        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
-        (variant === "spv") &&
-        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
+          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+        variant === "spv" &&
+          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
       )}
     >
       <div
@@ -162,8 +181,3 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
     </div>
   );
 }
-
-
-
-
-

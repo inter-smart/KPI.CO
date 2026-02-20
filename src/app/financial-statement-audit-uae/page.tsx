@@ -232,6 +232,7 @@ const localData = {
   } satisfies DocumentRequiredData,
   whyChoose: {
     title: "Why Organisations Choose KPI for Financial Statement Audits",
+    sub_title: "",
     items: [
       {
         id: 1,

@@ -227,6 +227,7 @@ const localData = {
   whyChoose: {
     title: "Why Organisations Choose KPI for ADGM SPVs",
     description: "",
+    sub_title: "",
     items: [
       {
         id: 1,
