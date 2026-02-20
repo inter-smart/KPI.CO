@@ -7,6 +7,8 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -71,16 +73,16 @@ export type ServiceItem = {
 };
 
 export type CtaData = {
-    title: string;
-    description: string;
-    button: {
-        label: string;
-        link: string;
-    };
-    images: {
-        overlay: string;
-        overlayMobile: string;
-    };
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
+  };
 };
 
 
@@ -394,9 +396,22 @@ const localData = {
     },
     images: {
       overlay: "/images/ermCta-desk.svg",
-      overlayMobile: "/images/ermCta-mob.svg",
+      overlayMobile: "/images/aupCta-desk.png",
     },
   } satisfies CtaData,
+
+  insights: {
+    title: "Our Insights",
+    items: blogData.slice(0, 4).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
+  },
 
 }
 
@@ -424,6 +439,7 @@ export default function page() {
       <HomeCounter data={localData.counterList} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <HomeOurInsights data={localData.insights} />
     </>
   )
 }

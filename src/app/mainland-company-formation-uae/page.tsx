@@ -852,7 +852,7 @@ export default function MainlandCompanyFormationUaePage() {
         variant="mainland"
         data={localData.formationProcess}
       />
-      <DocumentRequired data={localData.document_required_data} />
+      <DocumentRequired data={localData.document_required_data}  variant="mainland"/>
       <CorporateServicesUaeBanking
         data={localData.banking}
         variant="mainland"

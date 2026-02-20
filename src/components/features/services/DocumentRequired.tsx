@@ -32,6 +32,7 @@ type DocumentRequiredProps = {
     | "advisory"
     | "dsoa"
     | "dmcc"
+    | "mainland"
     | "hamriya";
 };
 
@@ -157,7 +158,7 @@ export default function DocumentRequired({
                           </div>
                         </>
                       )}
-                      {variant === "default" || variant === "dfza" || variant === "advisory" || variant === "dmcc" && (
+                      {variant === "default" || variant === "dfza" || variant === "advisory" || variant === "dmcc" || variant === "tax-advisory" || variant === "mainland" && (
                         <svg
                           width="100%"
                           height="100%"
