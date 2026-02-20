@@ -1,7 +1,8 @@
 "use client";
-import { Heading } from "@/components/utils/typography";
-import useEmblaCarousel from "embla-carousel-react";
+import parse from "html-react-parser";
 import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
+import { Heading } from "@/components/utils/typography";
 
 export type VatAdvisoryData = {
   title: string;
@@ -55,10 +56,10 @@ export default function VatAdvisory({ data }: VatAdvisoryProps) {
               >
                 <div className="w-full h-full gap-[25px] sm:gap-[20px] 2xl:gap-[25px] 3xl:gap-[40px] p-[30px_20px] sm:p-[25px_20px] xl:p-[30px_20px] 2xl:p-[35px_25px] 3xl:p-[40px_30px] bg-white rounded-[14px] xl:rounded-[12px] 2xl:rounded-[20px] border-1 border-black/10 overflow-hidden flex flex-col">
                   <div className="text-[16px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-[#1C5396]">
-                    {item?.title}
+                    {parse(item?.title)}
                   </div>
                   <div className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]">
-                    {item?.description}
+                    {parse(item?.description)}
                   </div>
                 </div>
               </div>

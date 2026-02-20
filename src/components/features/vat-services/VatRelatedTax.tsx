@@ -62,7 +62,7 @@ export default function VatRelatedTax({ data }: VatRelatedTaxProps) {
                     height={630}
                     className="w-full h-full object-cover absolute -z-1 inset-0"
                   />
-                  <div className="text-[24px] sm:text-[18px] xl:text-[20px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end">
+                  <div className="text-[24px] sm:text-[18px] xl:text-[22px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end">
                     {item?.title}
                   </div>
                 </Link>
