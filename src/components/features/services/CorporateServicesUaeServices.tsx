@@ -10,7 +10,7 @@ type CorporateServicesUaeServicesProps = {
     description?: string;
     items: ServiceItem[];
   };
-  variant?: "default" | "saifz" | "advisory" | "dafza";
+  variant?: "default" | "saifz" | "advisory" | "dafza" | "rakez";
 };
 
 export default function CorporateServicesUaeServices({
@@ -25,6 +25,7 @@ export default function CorporateServicesUaeServices({
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "saifz" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
+            variant === "rakez" && "sm:text-left",
           )}
         >
           <Heading

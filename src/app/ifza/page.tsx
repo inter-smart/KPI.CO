@@ -279,6 +279,7 @@ const localData = {
       },
     ],
   } satisfies MeydanFreeZoneData,
+  
   banking: {
     title: "Banking Support for IFZA Companies  ",
     description:
