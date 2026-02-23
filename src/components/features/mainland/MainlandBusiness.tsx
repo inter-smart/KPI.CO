@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "spv" | "hamriya" | "dsoa" | "dafza";
+type Variant = "spv" | "hamriya" | "dsoa" | "dafza" | "rakez";
 
 type MainlandBusinessProps = {
   data: MainlandBusinessData;
@@ -27,7 +27,7 @@ export default function MainlandBusiness({
   };
 
   return (
-    <section className={cn("w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",variant === "dafza" && "max-2xl:!pb-[20px]")}>
+    <section className={cn("w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden", variant === "dafza" && "max-2xl:!pb-[20px]")}>
       <div className="container">
         <Heading
           as="h2"
@@ -41,7 +41,7 @@ export default function MainlandBusiness({
           <div
             className={cn(
               "w-full lg:w-[calc(100%-365px)]",
-              hasVariant(variant, "spv")
+              hasVariant(variant, "spv") ||  hasVariant(variant, "rakez")
                 ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
             )}
@@ -49,7 +49,7 @@ export default function MainlandBusiness({
             <div
               className={cn(
                 "w-full",
-                hasVariant(variant, "spv")
+                hasVariant(variant, "spv") ||  hasVariant(variant, "rakez")
                   ? "max-w-[93%] 3xl:max-w-[100%]"
                   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
               )}
@@ -64,7 +64,7 @@ export default function MainlandBusiness({
 
               <div
                 className={cn(
-                  "text-[16px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0",
+                  "text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0",
                   hasVariant(variant, "hamriya") && "mb-0",
                 )}
               >
@@ -94,7 +94,7 @@ export default function MainlandBusiness({
                           className={cn(
                             "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
-                              "max-sm:min-h-[378px]",
+                            "max-sm:min-h-[378px]",
                           )}
                         >
                           <Image
@@ -105,7 +105,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
+                        <span className="text-[14px] lg:text-[12px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
                           {item}
                         </span>
                       </div>
@@ -113,7 +113,7 @@ export default function MainlandBusiness({
                   ))}
                 </div>
               </div>
-              <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
+              <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
                 {data.footerDescription && parse(data.footerDescription)}
               </div>
             </div>

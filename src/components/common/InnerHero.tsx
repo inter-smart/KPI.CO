@@ -22,7 +22,7 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz" | "advisory" | "dwtc" | "erm" | "ifza";
+  variant?: "default" | "saifz" | "advisory" | "dwtc" | "erm" | "ifza" | "e-invoicing" ;
 };
 
 export default function InnerHero({
@@ -40,12 +40,15 @@ export default function InnerHero({
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
-        variant === "advisory"
+        variant === "advisory" 
           ? "max-sm:h-[715px]"
           : "",
-        variant === "dwtc"
+        variant === "dwtc" || variant ==="e-invoicing"
           ? "h-[540px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]"
           : "h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]",
+        variant ==="e-invoicing"
+          ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
+          : "",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (

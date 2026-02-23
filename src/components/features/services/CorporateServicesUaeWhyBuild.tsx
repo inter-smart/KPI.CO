@@ -32,6 +32,7 @@ export type Variant =
   | "dsoa"
   | "ifza"
   | "erm"
+  | "rakez"
   | "formation"
   | "default";
 
@@ -127,13 +128,15 @@ export default function CorporateServicesUaeWhyBuild({
     <section
       className={cn(
         "w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]",
-        hasVariant(variant, "formation")
+        hasVariant(variant, "formation")  
           ? "bg-[#f9fafb]"
           : hasVariant(variant, "mainland")
             ? "bg-[#f9fafb]"
             : hasVariant(variant, "saifz") &&
               "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "rakez") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
@@ -175,7 +178,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "mainland") ||
               hasVariant(variant, "freezone") ||
               hasVariant(variant, "dsoa") ||
-              hasVariant(variant, "ifza")
+              hasVariant(variant, "ifza") || hasVariant(variant, "rakez")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
