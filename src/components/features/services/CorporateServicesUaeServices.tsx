@@ -9,6 +9,7 @@ type CorporateServicesUaeServicesProps = {
     title: string;
     description?: string;
     items: ServiceItem[];
+    footer_description?: string;
   };
   variant?: "default" | "saifz" | "advisory" | "dafza" | "rakez";
 };
@@ -63,14 +64,21 @@ export default function CorporateServicesUaeServices({
                   <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75 3xl:mb-3">
                     {item?.title}
                   </div>
-                  <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
-                    {item?.description}
-                  </p>
+                  {item?.description && (
+                    <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
+                      {item?.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
+        {data?.footer_description && (
+          <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[25px] sm:mt-[30px] 2xl:mt-[40px]">
+            {data?.footer_description}
+          </div>
+        )}
       </div>
     </section>
   );

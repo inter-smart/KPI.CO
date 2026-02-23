@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
@@ -42,8 +43,6 @@ export type MediaItem = {
   path: string;
   alt: string;
 };
-
-
 
 export type HeroData = {
   id: number;
@@ -397,6 +396,12 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
+};
+
+export const metadata: Metadata = {
+  title: "Corporate Tax Advisory Services in the UAE | KPI Group ",
+  description:
+    "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime. ",
 };
 
 export default function VatServicesUaePage() {
