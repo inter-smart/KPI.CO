@@ -430,7 +430,7 @@ export default function DwtcFreezone() {
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking
-        variant="freezone"
+        variant="ifza"
         data={localData.banking}
       />
       <CorporateServicesUaeCta data={localData.contactUs} />

@@ -92,9 +92,9 @@ const localData = {
     media: {
       desktopPath: "/images/erm-banner-desk.svg",
       mobilePath: "/images/erm-banner-mob.svg",
-      alt: "Enterprise Risk Management Built for Decisions, Not Documents ",
+      alt: "Enterprise Risk Management Built for Decisions, Not Documents",
     },
-    title: "Enterprise Risk Management Built <br/>  for Decisions, Not Documents ",
+    title: "Enterprise Risk Management Built <br/>  for Decisions, Not Documents",
     description:
       "<p>Enterprise Risk Management is not about producing risk registers that sit unused. It is about <br/>  giving leadership a clear, structured view of the risks that could materially affect strategy,<br/>  objectives, operations, and regulatory compliance. KPI helps organisations design and <br/> implement ERM frameworks that support informed decision-making, clear accountability, and <br/> regulatory readiness. </p>",
   } satisfies HeroData,
@@ -248,7 +248,7 @@ const localData = {
         },
         title: "Risk assessment and prioritisation",
         description:
-          "Evaluate risk based on impact, likelihood, and velocity. ",
+          "Evaluate risk based on impact, likelihood, and velocity.",
       },
       {
         id: 3,

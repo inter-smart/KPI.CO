@@ -112,11 +112,11 @@ const localData = {
     media: {
       desktopPath: "/images/internal-audit-bg.svg",
       mobilePath: "/images/reinternal-audit-mobile-bg.png",
-      alt: "Mainland Company Formation & Licensing in the UAE",
+      alt: "Trusted Internal Audit Services in the UAE",
     },
-    title: "DIFC Audits Built To  Withstand <br/>Regulatory Scrutiny ",
+    title: "Trusted Internal Audit Services in the UAE ",
     description:
-      "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
+      "<p>Enhance governance and safeguard your business with our trusted internal audit services. We help you identify risk, strengthen internal controls, and maintain regulatory compliance. Supporting steady growth at every stage.</p>",
   } satisfies HeroData,
 
   document_required_data: {
