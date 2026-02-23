@@ -4,6 +4,7 @@ import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
@@ -144,6 +145,11 @@ export type DocumentRequiredData = {
   ftr_description?: string;
 };
 
+export type FaqItem = {
+  id: number;
+  title: string;
+  description: string;
+};
 
 const localData = {
     hero: {
@@ -449,7 +455,7 @@ const localData = {
     cta: {
         title: "Launch Your RAKEZ Business Today",
         description:
-            "<p>Get expert guidance to select the right company type, licence, and setup for your goals. Start your UAE journey with confidence and speed - our team handles the process from start to finish.</p>",
+            "<p>Get expert guidance to select the right company type, licence, and <br/> setup for your goals. Start your UAE journey with confidence and speed - <br/> our team handles the process from start to finish.</p>",
         button: {
             label: "Get in Touch",
             link: "/contact",
@@ -459,6 +465,49 @@ const localData = {
             overlayMobile: "/images/spv-banner-mobile.jpg",
         },
     } satisfies CtaData,
+
+     corporate_faq_data: {
+        title: "FAQs",
+        faq_list: [
+          {
+            id: 1,
+            title: "What types of companies can I register in RAKEZ?",
+            description: `
+                            <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                            `,
+          },
+          {
+            id: 2,
+            title: "What types of companies can I register in RAKEZ?",
+            description: `
+                            <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                            `,
+          },
+          {
+            id: 3,
+            title: "Can I have 100% foreign ownership?",
+            description: `
+                            <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                            `,
+          },
+          {
+            id: 4,
+            title: "How long does it take to set up a business in RAKEZ?",
+            description: `
+                            <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                            `,
+          },
+          {
+            id: 5,
+            title: "Are there minimum capital requirements?",
+            description: `
+                            <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+                            `,
+          },
+          
+        ] satisfies FaqItem[],
+      },
+    
 
     insights: {
         title: "Our Insights",
@@ -498,7 +547,8 @@ export default function page() {
             <BusinessLocation data={localData.businessLocation} />
             <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
             <DocumentRequired data={localData.document_required_data} variant="dmcc" />
-            <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+            <CorporateServicesUaeCta data={localData.cta} variant="rakez" />
+             <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
             <HomeOurInsights data={localData.insights} />
         </>
     );

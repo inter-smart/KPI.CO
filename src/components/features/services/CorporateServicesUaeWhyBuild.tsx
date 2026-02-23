@@ -79,8 +79,8 @@ function WhyBuildCard({
         size="h5"
         className={cn(
           "max-sm:text-[16px] font-semibold text-black mb-2 2xl:mb-2.5",
-          (hasVariant(variant, "saifz") || hasVariant(variant, "freezone") ) &&
-            "text-[#1C5396]",
+          (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
+          "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "text-[#1C5396]",
@@ -121,15 +121,15 @@ export default function CorporateServicesUaeWhyBuild({
     <section
       className={cn(
         "w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]",
-        hasVariant(variant, "mainland")  
+        hasVariant(variant, "mainland")
           ? "bg-[#f9fafb] "
           : "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "saifz") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
       )}
     >
       <div className="container">
@@ -166,9 +166,9 @@ export default function CorporateServicesUaeWhyBuild({
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
-                "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+            "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
-              "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
+            "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
           )}
         >
           {data.items.map((item) => (
@@ -183,7 +183,7 @@ export default function CorporateServicesUaeWhyBuild({
               <div
                 key={`why-build-${item.id}`}
                 className="flex-[0_0_340px] min-w-0 select-none px-2.5"
-              > 
+              >
                 <WhyBuildCard item={item} variant={variant} />
               </div>
             ))}

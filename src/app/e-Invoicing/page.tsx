@@ -5,7 +5,7 @@ import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose"; 
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { blogData } from "@/data/blogData";
 import { Metadata } from "next";
 
@@ -89,18 +89,18 @@ export type CtaData = {
 };
 
 export type InsightItem = {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  readTime: string;
-  media: MediaItem;
-  slug: string;
+    id: number;
+    title: string;
+    description: string;
+    date: string;
+    readTime: string;
+    media: MediaItem;
+    slug: string;
 };
 
 export type MediaItem = {
-  path: string;
-  alt: string;
+    path: string;
+    alt: string;
 };
 
 
@@ -302,6 +302,7 @@ export default function page() {
             <CorporateServicesUaeWhyChoose data={localData.whyChoose} variant="mainland" />
             <HomeCounter data={localData.counterList} />
             <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+
             <HomeOurInsights data={localData.insights} />
         </>
     );
