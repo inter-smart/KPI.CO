@@ -150,7 +150,7 @@ export default function CorporateServicesUaeWhyBuild({
             <Text
               as="div"
               size="p5"
-              className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8"
+              className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8 [&_b]:text-[18px] xl:[&_b]:text-[20px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
             >
               {parse(data?.description)}
             </Text>
