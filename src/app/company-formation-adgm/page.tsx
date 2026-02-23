@@ -490,9 +490,9 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Internal Auditor in Dubai | Internal Audit Firms in UAE  ",
+  title: "ADGM Company Formation & Structuring Services | KPI Group  ",
   description:
-    "Looking for a trusted internal audit firm in the UAE? KPI Group provides tailored audits to strengthen controls, ensure compliance - get in touch!",
+    "Set up your company in Abu Dhabi Global Market (ADGM) with expert regulatory and structure-led support. KPI Group delivers end-to-end ADGM company formation with clarity and precision.",
 };
 
 export default function InternalAudit() {

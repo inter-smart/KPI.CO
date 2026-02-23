@@ -247,7 +247,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/document-required-img.jpg", // <-- your image path
+      path: "/images/why-audit.jpg", // <-- your image path
       alt: "Required documents",
     },
     ftr_description:
@@ -278,7 +278,7 @@ const localData = {
         id: 1,
         title: "DIFC Experience Built Over Time",
         description:
-          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles.</p> <p> This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved across DIFC entities.</p>",
+          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles<br/>This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved <br/> across DIFC entities.</p>",
       },
     ],
   } satisfies MeydanFreeZoneData,

@@ -122,7 +122,7 @@ const localData = {
   document_required_data: {
     title: "Audit and Compliance Experts in <br/> the UAE",
     description:
-      "<p>Our internal audit service independently evaluates the effectiveness of your internal controls, risk management, and governance frameworks. We carry out focused risk-based reviews to identify control weaknesses, process deficiencies and regulatory exposure that could impact business performance or compliance.</p><p>Our audit services are designed for entities where clarity, precision, and regulatory certainty are required, including: </p><p>By aligning our audit with your business objectives and UAE regulatory requirements, we help management and stakeholders gain confidence and enable informed decision-making and steady growth.</p>",
+      "<p>Our internal audit service independently evaluates the effectiveness of your internal controls, risk management, and governance frameworks. We carry out focused risk-based reviews to identify control weaknesses, process deficiencies and regulatory exposure that could impact business performance or compliance.</p><p>By aligning our audit with your business objectives and UAE regulatory requirements, we help management and stakeholders gain confidence and enable informed decision-making and steady growth.</p>",
     items: [],
 
     media: {
@@ -143,7 +143,7 @@ const localData = {
         },
         title: "Regulatory Compliance",
         description:
-          "Comply with the UAE local laws, regulatory requirements, and applicable international standards which reduce the risk of penalties, regulatory actions, and reputational damages.",
+          "Comply with the UAE local laws, regulatory <br/> requirements, and applicable international standards <br/> which reduce the risk of penalties, regulatory <br/> actions, and reputational damages.",
       },
       {
         id: 2,
@@ -153,7 +153,7 @@ const localData = {
         },
         title: "Risk Identification & Mitigation",
         description:
-          "Proactively identify operational, financial, and compliance risks and strengthen your control environment to minimize exposure and support business continuity.",
+          "Proactively identify operational, financial, and<br/> compliance risks and strengthen your control<br/> environment to minimize exposure and support business<br/> continuity.",
       },
       {
         id: 3,
@@ -163,7 +163,7 @@ const localData = {
         },
         title: "Operational Efficiency",
         description:
-          "Assess business processes to identify inefficiencies, optimize workflows, and implement controls that enhance performance while keeping the operational costs low.",
+          "Assess business processes to identify inefficiencies, <br/> optimize workflows, and implement controls that <br/> enhance performance while keeping the operational <br/> costs low.",
       },
       {
         id: 4,
@@ -173,7 +173,7 @@ const localData = {
         },
         title: "Stronger Governance & Transparency",
         description:
-          "Enhance accountability, accuracy, and transparency in the financial and operational reporting, reinforce stakeholder confidence and corporate governance standards.",
+          "Enhance accountability, accuracy, and transparency <br/> in the financial and operational reporting, reinforce <br/> stakeholder confidence and corporate governance<br/> standards.",
       },
     ] satisfies RiskAssuranceData[],
   },
@@ -252,7 +252,7 @@ const localData = {
   },
 
   whyChoose: {
-    title: "Leading Internal Audit Firm in the UAE",
+    title: "Leading Internal Audit Firm In The UAE",
     description:
       "<p>As a trusted internal audit firm in the UAE, we help organizations strengthen governance, enhance operational controls, and effectively manage risk and compliance. Our experienced professionals deliver tailored, value-driven internal audit solutions aligned with your business objectives and regulatory environment. By combining technical expertise with a practical, business-focused approach, we support informed decision-making and improve efficiency for long-term growth.</p>",
     sub_title: "Why Businesses Choose KPI",

@@ -95,7 +95,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             </div>
 
             <div
-              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto aspect-[615/636] max-md:mb-6">
+              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto max-md:mb-6">
               {data?.media?.path && (
                 <Image
                   src={data.media.path}

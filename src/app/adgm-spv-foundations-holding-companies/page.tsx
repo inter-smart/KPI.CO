@@ -11,6 +11,7 @@ import CorporateServicesUaeWhyChoose from "@/components/features/services/Corpor
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import { Metadata } from "next";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -154,7 +155,7 @@ const localData = {
       },
     ],
   } satisfies RiskAdvisoryDta,
-  holding_company_data: {
+  riskOrganisation: {
     title: "Why ADGM for Holding Companies",
     description:
       "<p>ADGM offers distinct advantages for structured ownership: </p>",
@@ -405,9 +406,11 @@ export default function DwtcFreezone() {
     <>
       <InnerHero data={localData.hero} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
-      <DocumentRequired variant="spv" data={localData.holding_company_data} />
+      {/* <DocumentRequired variant="spv" data={localData.holding_company_data} /> */}
+      <RiskOrganisation data={localData.riskOrganisation} />
       <MeydanFreeZone variant="holding" data={localData.meydanFreeZone} />
-      <DocumentRequired variant="spv" data={localData.common_use_data} />
+      {/* <DocumentRequired variant="spv" data={localData.common_use_data} /> */}
+      <RiskOrganisation data={localData.common_use_data} />
       <CorporateServicesUaeWhyChoose
         variant="risk"
         data={localData.whyChoose}

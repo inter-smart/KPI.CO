@@ -11,6 +11,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -98,7 +99,7 @@ const localData = {
     media: {
       desktopPath: "/images/sop-innerbanner-desktop.svg",
       mobilePath: "/images/sop-innerbanner-mobile.svg",
-      alt: "Expert SOP Consulting & Development in UAE",
+      alt: "Expert SOP Consulting & Development In UAE",
     },
     title: "Expert SOP Consulting & Development in UAE",
     description:
@@ -129,20 +130,20 @@ const localData = {
   whyChoose: {
     title: "SOPs Made Simple with KPI",
     description:
-      "<p>At KPI, our team of business consultants in the UAE have decades of experience in developing comprehensive policies and procedures for various industries. Using a structured approach, we thoroughly analyze your existing business processes, identify gaps, and provide actionable steps for improvements. Our well-defined SOPs empower businesses to streamline operations and achieve sustainable growth with confidence.</p><p><b>Why Businesses Choose KPI:</b></p>",
+      "<p>At KPI, our team of business consultants in the UAE have decades of experience in developing comprehensive policies and <br/>procedures for various industries. Using a structured approach, we thoroughly analyze your existing business processes,<br/> identify gaps, and provide actionable steps for improvements. Our well-defined SOPs empower businesses to streamline<br/> operations and achieve sustainable growth with confidence.</p><p><b>Why Businesses Choose KPI:</b></p>",
     sub_title: "",
       items: [
       {
         id: 1,
         title: "Skilled Experts",
         description:
-          "<p>Deep experience operating within UAE regulatory environment, including federal authorities and free zone frameworks.</p>",
+          "<p>Deep experience operating within UAE regulatory environment, <br/> including federal authorities and free zone frameworks.</p>",
       },
       {
         id: 2,
         title: "Tailored Solution",
         description:
-          "<p>Our SOP services are designed keeping your business needs in mind to govern processes and deliver consistent results</p>",
+          "<p>Our SOP services are designed keeping your business needs in<br/> mind to govern processes and deliver consistent results</p>",
       },
       {
         id: 3,
@@ -180,7 +181,7 @@ const localData = {
         },
         title: "Task Efficiency",
         description:
-          "With clear documentation in place, employees spend less time figuring out how to complete tasks, speeding up overall productivity and performance.",
+          "With clear documentation in place, employees <br/> spend less time figuring out how to complete <br/>tasks, speeding up overall productivity and <br/>performance.",
       },
       {
         id: 3,
@@ -200,7 +201,7 @@ const localData = {
         },
         title: "Risk Management",
         description:
-          "By conducting a thorough analysis of risk identification, assessment and mitigation, businesses can reduce the risk of non-compliance and penalties.",
+          "By conducting a thorough analysis of risk <br/>identification, assessment and mitigation,<br/> businesses can reduce the risk of non-<br/>compliance and penalties.",
       },
       {
         id: 5,
@@ -409,7 +410,7 @@ export default function StandardOperatingProceduresUaePage() {
   return (
     <>
       <InnerHero data={localData?.hero} variant="saifz" />
-      <DocumentRequired
+      <RiskOrganisation
         data={localData?.document_required_data}
         variant="sop"
       />
