@@ -84,7 +84,7 @@ export default function HomeOurInsights({
                 className={cn(
                   "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",
                   variant === "saifz" &&
-                  "flex-[0_0_90%] sm:flex-[0_0_40%] lg:flex-[0_0_33.5%]",
+                    "flex-[0_0_90%] sm:flex-[0_0_40%] lg:flex-[0_0_33.5%]",
                 )}
               >
                 <InsightCard data={item} />
@@ -120,7 +120,7 @@ export default function HomeOurInsights({
 
 function InsightCard({ data }: InsightCardProps) {
   return (
-     <div className="group flex flex-col  w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+    <div className="group flex flex-col  w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
       <div className="relative aspect-[440/268] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}

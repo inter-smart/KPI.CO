@@ -62,7 +62,7 @@ export type ServiceItem = {
   id: number;
   media: MediaItem;
   title: string;
-  description: string;
+  description?: string;
 };
 
 export type WhyChooseItem = {
