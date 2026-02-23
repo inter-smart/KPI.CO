@@ -300,6 +300,7 @@ const localData = {
   } satisfies MainlandBusinessData,
   whyChoose: {
     title: "Why Leading Organisations Work with KPI Group",
+    sub_title: "",
     description: "",
     items: [
       {
