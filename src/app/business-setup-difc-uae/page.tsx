@@ -10,6 +10,8 @@ import BusinessLocation, {
 } from "@/components/features/mainland/BusinessLocation";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 
 export type HeroData = {
   id: number;
@@ -43,6 +45,25 @@ export type ProcessStep = {
   title: string;
   inner_title?: string;
   sub_title?: string;
+  description: string;
+};
+
+export type CtaData = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
+  };
+};
+
+export type FaqItem = {
+  id: number;
+  title: string;
   description: string;
 };
 
@@ -289,6 +310,67 @@ const localData = {
           "<p>Pick the type of business you want to run and make sure it’s allowed in DIFC.</p>",
       },
     ] satisfies ProcessStep[],
+    process_list: [
+      {
+        id: 1,
+        title: "Required documents",
+        description:
+          "<p>Passport copies, business plan (for regulated entities), corporate documents (if applicable), compliance/AML documents.</p>",
+      },
+    ],
+  },
+  cta: {
+    title: "Ready to Start Your DIFC Company?",
+    description:
+      "<p>Talk to our experts to select the right structure, license, and package for your business goals.</p>",
+    button: {
+      label: "Get in Touch",
+      link: "/contact",
+    },
+    images: {
+      overlay: "/images/mainland-cta-overlay-mainland.svg",
+      overlayMobile: "/images/mainland-cta-overlay-mobile.svg",
+    },
+  } satisfies CtaData,
+  corporate_faq_data: {
+    title: "FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: "What is a DIFC company?",
+        description: `
+                      <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                      `,
+      },
+      {
+        id: 2,
+        title: "Who can set up a DIFC company?",
+        description: `
+                      <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                      `,
+      },
+      {
+        id: 3,
+        title: "How long does it take to set up a DIFC company?",
+        description: `
+                      <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                      `,
+      },
+      {
+        id: 4,
+        title: "Can DIFC companies hire employees and issue visas?",
+        description: `
+                      <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                      `,
+      },
+      {
+        id: 5,
+        title: "How much does DIFC company setup cost?",
+        description: `
+                      <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+                      `,
+      },
+    ] satisfies FaqItem[],
   },
 };
 
@@ -313,6 +395,8 @@ export default function CompanyFormationDIFC() {
         variant="mainland"
         data={localData.formationProcess}
       />
+      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
     </>
   );
 }

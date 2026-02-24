@@ -36,9 +36,9 @@ export default function VatRelatedTax({
       loop: true,
       align: "start",
       slidesToScroll: 1,
-      containScroll: "trimSnaps",
+      containScroll: 'trimSnaps',
     },
-    [Autoplay({ delay: 2500, stopOnInteraction: true })],
+    // [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
     <section className="w-full h-auto py-[45px] sm:py-[30px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">

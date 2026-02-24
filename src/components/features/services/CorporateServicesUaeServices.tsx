@@ -11,7 +11,7 @@ type CorporateServicesUaeServicesProps = {
     items: ServiceItem[];
     footer_description?: string;
   };
-  variant?: "default" | "saifz" | "advisory" | "dafza";
+  variant?: "default" | "saifz" | "advisory" | "dafza" | "regulatory";
 };
 
 export default function CorporateServicesUaeServices({
@@ -24,7 +24,7 @@ export default function CorporateServicesUaeServices({
         <div
           className={cn(
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
-            variant === "saifz" && "sm:text-left",
+            variant === "saifz" || variant === "regulatory" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
           )}
         >
@@ -48,6 +48,7 @@ export default function CorporateServicesUaeServices({
                 className={cn(
                   "[--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
                   variant === "dafza" && "max-sm:min-h-[150px]",
+                  variant === "regulatory" && "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[12px] lg:p-2 2xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">

@@ -455,7 +455,7 @@ const localData = {
     ],
   } satisfies MeydanKeyBenefitsData,
 };
-
+  
 export default function MainlandCompanyFormationUaePage() {
   return (
     <>

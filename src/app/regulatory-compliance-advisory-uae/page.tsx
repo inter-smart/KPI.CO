@@ -7,7 +7,7 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatRelatedTax, {
-  VatRelatedTaxData,
+  VatRelatedTaxData, 
 } from "@/components/features/vat-services/VatRelatedTax";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
@@ -126,14 +126,14 @@ const localData = {
       mobilePath: "/images/regulatory-innerbanner-mobile.svg",
       alt: "Expert SOP Consulting & Development in UAE",
     },
-    title: "Regulatory Compliance That Stands Up to Review",
+    title: "Regulatory Compliance That Stands Up To Review",
     description:
       "<p>Regulatory compliance is not just about filing requirements. It is about demonstrating control, governance, and accountability when regulators, auditors, or stakeholders ask questions. KPI Group supports organisations in meeting regulatory and compliance obligations across UAE jurisdictions with structured, defensible, and practical advisory support.</p>",
   } satisfies HeroData,
   riskAdvisory: {
-    title: "Why Regulatory & Compliance Advisory Matters",
+    title: "Why Regulatory & <br> Compliance Advisory Matters",
     description:
-      " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations →</p><p>At this stage, compliance gaps are rarely intentional - they are structural.</p>",
+      " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations →</p><div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
     highlightsText: "",
     advisoryItems: [
       {
@@ -149,12 +149,12 @@ const localData = {
       {
         id: 3,
         slNo: 3,
-        description: "Rely on informal or undocumented compliance processes",
+        description: "Rely on informal or undocumented compliance <br> processes",
       },
       {
         id: 4,
         slNo: 4,
-        description: "Experience repeated regulatory queries or audit findings",
+        description: "Experience repeated regulatory queries or audit <br> findings",
       },
       {
         id: 5,
@@ -164,7 +164,7 @@ const localData = {
     ],
   } satisfies RiskAdvisoryDta,
   document_required_data: {
-    title: "What Regulatory & Compliance Advisory Means at KPI ",
+    title: "What Regulatory & Compliance Advisory Means At KPI ",
     description:
       "<p>Practical Compliance Support. Aligned with Regulatory Expectations.</p><p>KPI Regulatory & Compliance Advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
     items: [
@@ -196,7 +196,7 @@ const localData = {
   services: {
     title: "Our Regulatory & Compliance Advisory Services",
     description:
-      "Our services are designed to support organisations operating across mainland and free zone jurisdictions, including regulated environments.",
+      "Our services are designed to support organisations operating across mainland and free zone jurisdictions, including <br> regulated environments.",
     items: [
       {
         id: 1,
@@ -364,6 +364,17 @@ const localData = {
           alt: "eInvoicing Solution",
         },
       },
+      {
+        id: 4,
+        title: "Standard Operating Procedures",
+        link: {
+          url: "/einvoicing-solutions-uae",
+        },
+        media: {
+          path: "/images/vat-related-1.jpg",
+          alt: "eInvoicing Solution",
+        },
+      },
     ],
   } satisfies VatRelatedTaxData,
   cta: {
@@ -391,7 +402,7 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
-};
+}; 
 
 export const metadata: Metadata = {
   title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group ",
@@ -410,12 +421,12 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
       />
       <CorporateServicesUaeServices
         data={localData?.services}
-        variant="saifz"
+        variant="regulatory"
       />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="sop"
+        variant="regulatory"
       />
       <HomeCounter data={localData.counterList} />
       <VatRelatedTax data={localData.vatRelatedTax} />

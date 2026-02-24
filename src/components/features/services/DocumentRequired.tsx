@@ -48,6 +48,8 @@ export default function DocumentRequired({
     <section
       className={cn(
         "w-full py-[40px] lg:py-[60px] xl:py-[70px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible relative",
+        variant === "regulatory" &&
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "saifz" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
