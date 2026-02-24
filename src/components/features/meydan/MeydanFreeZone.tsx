@@ -47,7 +47,7 @@ export default function MeydanFreeZone({
           >
             {data?.title}
           </Heading>
-          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] mb-[40px]">
+          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
             {data?.main_description}
           </p>
         </div>

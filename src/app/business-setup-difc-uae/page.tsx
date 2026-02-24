@@ -12,6 +12,8 @@ import CorporateServicesUaeServices from "@/components/features/services/Corpora
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 
 export type HeroData = {
   id: number;
@@ -45,6 +47,20 @@ export type ProcessStep = {
   title: string;
   inner_title?: string;
   sub_title?: string;
+  description: string;
+};
+
+export type BankingPartner = {
+  id: number;
+  media: {
+    path: string;
+    alt: string;
+  };
+};
+
+export type WhyChooseItem = {
+  id: number;
+  title: string;
   description: string;
 };
 
@@ -319,6 +335,87 @@ const localData = {
       },
     ],
   },
+  banking: {
+    title: "Banking Support for Your UAE Business",
+    description:
+      "<p>We assist with corporate bank accounts in DIFC and UAE banks, ensuring smooth compliance and KYC processes based on your business type.</p>",
+    partners: [
+      {
+        id: 1,
+        media: {
+          path: "/images/banking-partner-6.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/banking-partner-1.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/banking-partner-2.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/banking-partner-4.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/banking-partner-7.svg",
+          alt: "Emirates NBD",
+        },
+      },
+    ] satisfies BankingPartner[],
+  },
+  whyChoose: {
+    title: "Why Work with KPI ",
+    description:
+      "<p>We’re more than a company formation agent. Our audit, risk, and corporate services expertise ensure your DIFC company is compliant, strategically structured, and ready for growth. Ongoing support is included post-incorporation.</p>",
+    sub_title: "",
+    items: [
+      {
+        id: 1,
+        title: "Industry Leaders",
+        description:
+          "<p>Years of experience in DIFC company setup.</p>",
+      },
+      {
+        id: 2,
+        title: "End-to-End Support",
+        description:
+          "<p>From consultation to post-setup services. </p>",
+      },
+      {
+        id: 3,
+        title: "Local Expertise",
+        description:
+          "<p>Deep knowledge of DIFC regulations and business environments. </p>",
+      },
+      {
+        id: 4,
+        title: "Streamlined Process",
+        description:
+          "<p>We handle documentation, approvals, and compliance efficiently.</p>",
+      },
+    ] satisfies WhyChooseItem[],
+  },
   cta: {
     title: "Ready to Start Your DIFC Company?",
     description:
@@ -394,6 +491,14 @@ export default function CompanyFormationDIFC() {
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
+      />
+      <CorporateServicesUaeBanking
+        data={localData.banking}
+        variant="mainland"
+      />
+      <CorporateServicesUaeWhyChoose
+        data={localData?.whyChoose}
+        variant="sop"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
