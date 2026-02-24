@@ -1,7 +1,6 @@
 "use client";
 
-import { Heading, Text } from "@/components/utils/typography";
-import { RiskAdvisoryDta } from "@/app/risk-services-uae/page";
+import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +8,16 @@ type Variant = "default" | "difc" | "center";
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
-  data: RiskAdvisoryDta;
+  data: {
+    title: string;
+    description: string;
+    highlightsText: string;
+    advisoryItems: {
+      id: number;
+      slNo: number;
+      description: string;
+    }[];
+  };
 };
 const hasVariant = (
   variant: Variant | Variant[] | undefined,

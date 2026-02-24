@@ -461,17 +461,17 @@ const localData = {
     } satisfies CtaData,
 
     insights: {
-        title: "Our Insights",
-        items: blogData.slice(0, 7).map((blog) => ({
-            id: blog.id,
-            media: blog.media,
-            title: blog.title,
-            description: blog.description,
-            date: blog.date,
-            readTime: blog.readTime,
-            slug: `/blog/${blog.slug}`,
-        })),
-    },
+       title: "Our Insights",
+       items: blogData.slice(0, 7).map((blog) => ({
+         id: blog.id,
+         media: blog.media,
+         title: blog.title,
+         description: blog.description,
+         date: blog.date,
+         readTime: blog.readTime,
+         slug: `/blog/${blog.slug}`,
+       })),
+     },
 }
 
 export const metadata: Metadata = {
@@ -500,6 +500,7 @@ export default function page() {
             <DocumentRequired data={localData.document_required_data} variant="dmcc" />
             <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
             <HomeOurInsights data={localData.insights} />
+            
         </>
     );
 }

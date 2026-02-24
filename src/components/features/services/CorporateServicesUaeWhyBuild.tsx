@@ -33,6 +33,7 @@ export type Variant =
   | "ifza"
   | "erm"
   | "rakez"
+  | "offshore"
   | "formation"
   | "default";
 
@@ -138,6 +139,8 @@ export default function CorporateServicesUaeWhyBuild({
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "offshore") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
     >
@@ -149,6 +152,7 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "freezone") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
+              hasVariant(variant, "offshore") ||
               hasVariant(variant, "ifza")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
@@ -177,6 +181,7 @@ export default function CorporateServicesUaeWhyBuild({
             "hidden sm:grid grid-cols-2 md:grid-cols-2 sm:px-[15px] 2xl:px-[25px]",
             hasVariant(variant, "mainland") ||
               hasVariant(variant, "freezone") ||
+              hasVariant(variant, "offshore") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "ifza") || hasVariant(variant, "rakez")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"

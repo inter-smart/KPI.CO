@@ -11,8 +11,6 @@ import VatRelatedTax, {
 } from "@/components/features/vat-services/VatRelatedTax";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
-import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
-import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -35,6 +33,11 @@ export type RiskAdvisoryDta = {
     slNo: number;
     description: string;
   }[];
+  structure_list: {
+    id: number;
+    title: string;
+    description: string;
+  }[];
 };
 
 export type DocumentRequiredData = {
@@ -54,28 +57,6 @@ export type ServiceItem = {
   media: MediaItem;
   title: string;
   description: string;
-};
-
-export type MeydanStructureItem = {
-  id: number;
-  title: string;
-  description: string;
-};
-
-export type MeydanFreeZoneItem = {
-  id: number;
-  title: string;
-  description: string;
-  highlightsText: string;
-  zone_list: string[];
-  footer_description?: string;
-};
-
-export type MeydanFreeZoneData = {
-  title: string;
-  description?: string;
-  free_zone_list: MeydanFreeZoneItem[];
-  structure_list?: MeydanStructureItem[];
 };
 
 export type WhyChooseItem = {
@@ -125,79 +106,63 @@ const localData = {
     media: {
       desktopPath: "/images/regulatory-innerbanner-desktop.svg",
       mobilePath: "/images/regulatory-innerbanner-mobile.svg",
-      alt: "Expert SOP Consulting & Development in UAE",
+      alt: "Audit That Stands up to Regulatory Scrutiny ",
     },
-    title: "Regulatory Compliance That Stands Up to Review",
+    title: "Audit That Stands up to Regulatory Scrutiny ",
     description:
-      "<p>Regulatory compliance is not just about filing requirements. It is about demonstrating control, governance, and accountability when regulators, auditors, or stakeholders ask questions. KPI Group supports organisations in meeting regulatory and compliance obligations across UAE jurisdictions with structured, defensible, and practical advisory support.</p>",
+      "<p>When compliance and credibility audit is not a checkbox exercise. KPI provides independent audit and assurance services designed for businesses operating in growth-oriented environments where expectations are high and scrutiny is real.</p>",
   } satisfies HeroData,
   riskAdvisory: {
-    title: "Why Regulatory & Compliance Advisory Matters",
-    description:
-      " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations →</p><p>At this stage, compliance gaps are rarely intentional - they are structural.</p>",
-    highlightsText: "",
+    title: "Why Audit Becomes <br/>Critical as Organizations <br/> Grow",
+    description: " ",
+    highlightsText:
+      "As companies scale, expand into free zones, or operate under formal regulatory and governance frameworks:",
     advisoryItems: [
       {
         id: 1,
         slNo: 1,
-        description: "Operate under multiple authorities or free zones",
+        description: "Financial statements face deeper scrutiny",
       },
       {
         id: 2,
         slNo: 2,
-        description: "Face licensing, reporting, or inspection requirements",
+        description: "Regulatory obligations increase",
       },
       {
         id: 3,
         slNo: 3,
-        description: "Rely on informal or undocumented compliance processes",
+        description: "Stakeholders expect transparency and consistency",
       },
       {
         id: 4,
         slNo: 4,
-        description: "Experience repeated regulatory queries or audit findings",
+        description: "Errors carry reputational and legal consequences",
       },
+    ],
+    structure_list: [
       {
-        id: 5,
-        slNo: 5,
-        description: "Underestimate the documentation regulators expect",
+        id: 1,
+        title: "Choosing the Right Structure",
+        description:
+          "At this stage, audit is no longer about compliance alone - it becomes about confidence. Confidence in the numbers, the process, and the judgement behind them.",
       },
     ],
   } satisfies RiskAdvisoryDta,
   document_required_data: {
-    title: "What Regulatory & Compliance Advisory Means at KPI ",
+    title: "Tone at the Top ",
     description:
-      "<p>Practical Compliance Support. Aligned with Regulatory Expectations.</p><p>KPI Regulatory & Compliance Advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
-    items: [
-      {
-        id: 1,
-        text: "Interpretation of regulatory and authority requirements",
-      },
-      {
-        id: 2,
-        text: "Design and assessment of compliance frameworks and controls",
-      },
-      {
-        id: 3,
-        text: "Preparation for regulatory inspections, audits, and reviews",
-      },
-      { id: 4, text: "Addressing identified compliance gaps and weaknesses" },
-      {
-        id: 5,
-        text: "Ongoing compliance support aligned with governance needs",
-      },
-    ],
+      "<p> At KPI, independence isn’t optional; it’s a discipline. Professional skepticism not only drives how we think, but also every audit, shaping how we plan, execute, and conclude engagements.</p> <p>We never compromise on audit quality. When faced with decisions that could dilute standards, we prioritize integrity over convenience. This discipline guides which engagements we accept and ensures audit remains separate from advisory and technology services, keeping every opinion objective, defensible, and regulator ready.</p>",
+    items: [],
     media: {
-      path: "/images/regulatory-document-required.jpg",
+      path: "/images/audit-img.jpg",
       alt: "Required documents",
     },
-    ftr_description:
-      "Our role is not to create unnecessary complexity. It is to help organisations meet expectations with clarity and discipline.",
+    ftr_description: "",
   } satisfies DocumentRequiredData,
   services: {
-    title: "Our Regulatory & Compliance Advisory Services",
+    title: "Why Audit Becomes Critical as Organizations Grow",
     description:
-      "Our services are designed to support organisations operating across mainland and free zone jurisdictions, including regulated environments.",
+      "As companies scale, expand into free zones, or operate under formal regulatory and governance frameworks:",
     items: [
       {
         id: 1,
@@ -251,27 +216,7 @@ const localData = {
       },
     ] satisfies ServiceItem[],
   },
-  meydanFreeZone: {
-    title: "",
-    free_zone_list: [
-      {
-        id: 1,
-        title: "When Organisations Engage Compliance Advisory",
-        description:
-          "Regulatory & compliance advisory is most effective when engaged proactively, not reactively.",
-        highlightsText: "Common triggers include:",
-        zone_list: [
-          "Preparation for regulatory inspection or authority review",
-          "New licensing or regulatory classification",
-          "Findings from internal or external audits",
-          "Board or investor concerns around compliance oversight",
-          "Expansion into regulated or free zone environments",
-        ],
-        footer_description:
-          "Early engagement allows organisations to address issues privately, before they become formal regulatory matters.",
-      },
-    ],
-  } satisfies MeydanFreeZoneData,
+  
   whyChoose: {
     title: "How KPI Approaches Regulatory & Compliance Advisory",
     description:
@@ -396,26 +341,25 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group ",
+  title: "Audit Firms in Dubai | External & Regulatory Audit Services UAE ",
   description:
-    "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk. ",
+    "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
 };
 
 export default function RegulatoryComplianceAdvisoryUaePage() {
   return (
     <>
       <InnerHero data={localData?.hero} variant="saifz" />
-      <RiskAdvisory data={localData.riskAdvisory} variant="difc" />
-      {/* <DocumentRequired
+      <DocumentRequired
         data={localData?.document_required_data}
         variant="regulatory"
-      /> */}
-      <RiskOrganisation data={localData?.document_required_data} />
+      />
+      <RiskAdvisory data={localData.riskAdvisory} />
+      {/* <RiskOrganisation data={localData?.document_required_data} /> */}
       <CorporateServicesUaeServices
         data={localData?.services}
         variant="saifz"
       />
-      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
         variant="sop"
