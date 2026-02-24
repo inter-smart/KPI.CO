@@ -19,7 +19,7 @@ export type CtaData = {
 
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
-  variant?: "default" | "mainland" | "saifz";
+  variant?: "default" | "mainland" | "saifz" | "rakez";
 };
 
 export default function CorporateServicesUaeCta({
@@ -69,7 +69,8 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full max-lg:mb-3.75",
-              variant === "mainland" ? "lg:w-[60%]" : "lg:w-[65%]",
+              variant === "mainland" ? "lg:w-[70%]" : "lg:w-[70%]",
+              variant === "rakez" ? "lg:w-[70%]" : "",
             )}
           >
             <Heading
@@ -86,7 +87,8 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full lg:w-[33%] flex lg:justify-end",
-              variant === "mainland" ? "lg:w-[40%]" : "lg:w-[35%]",
+              variant === "mainland" ? "lg:w-[30%]" : "lg:w-[30%]",
+              variant === "rakez" ? "lg:w-[30%]" : "",
             )}
           >
             <Button

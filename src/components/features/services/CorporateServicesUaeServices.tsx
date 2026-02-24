@@ -11,7 +11,7 @@ type CorporateServicesUaeServicesProps = {
     items: ServiceItem[];
     footer_description?: string;
   };
-  variant?: "default" | "saifz" | "advisory" | "dafza" | "regulatory";
+  variant?: "default" | "saifz" | "advisory" | "dafza" | "rakez" | "regulatory";
 };
 
 export default function CorporateServicesUaeServices({
@@ -26,6 +26,7 @@ export default function CorporateServicesUaeServices({
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "saifz" || variant === "regulatory" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
+            variant === "rakez" && "sm:text-left",
           )}
         >
           <Heading
@@ -66,7 +67,7 @@ export default function CorporateServicesUaeServices({
                   </div>
                   {item?.description && (
                     <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
-                      {item?.description}
+                      {parse(item?.description)}
                     </p>
                   )}
                 </div>

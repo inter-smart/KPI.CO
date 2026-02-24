@@ -112,13 +112,13 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/ifza-bg.png",
+      desktopPath: "/images/ifza-bg.svg",
       mobilePath: "/images/ifza-mobile-bg.png",
-      alt: "Company Formation in IFZA, UAE",
+      alt: "Company Formation in IFZA,  UAE",
     },
-    title: "Company Formation in IFZA, UAE ",
+    title: "Company Formation in IFZA,<br/> UAE ",
     description:
-      "<p>Set up your business in IFZA (International Free Zone Authority), Dubai - one of the UAE’s most founder-friendly free zones. Fast setup timelines, diverse licence options, and competitive pricing for entrepreneurs, startups, and international companies.</p>",
+      "<p>Set up your business in IFZA (International Free Zone Authority), Dubai - one of the UAE’s most <br/> founder-friendly free zones. Fast setup timelines, diverse licence options, and competitive <br/> pricing for entrepreneurs, startups, and international companies.</p>",
   } satisfies HeroData,
 
   mainlandBusiness: {
@@ -152,28 +152,28 @@ const localData = {
         },
         title: "Cost Effective",
         description:
-          "<p>A central Dubai address with excellent connectivity to DIFC, Downtown Dubai, and Sheikh Zayed Road.</p>",
+          "<p>One of Dubai’s most affordable free zones, with competitive licence and visa packages</p>",
       },
       {
         id: 2,
         media: {
           path: "/images/ifza-busness-2.svg",
-          alt: "Global Reputation",
+          alt: "Fast Setup",
         },
-        title: "Global Reputation",
+        title: "Fast Setup",
         description:
-          "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
+          "<p>Efficient registration and approval process Efficient registration and approval process</p>",
       },
 
       {
         id: 3,
         media: {
-          path: "/images/ifza-busness-4.svg",
+          path: "/images/ifza-busness-3.svg",
           alt: "Flexible Licences",
         },
         title: "Flexible Licences",
         description:
-          "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
+          "<p>Multiple business activities can often be combined under a single licence.</p>",
       },
       {
         id: 4,
@@ -183,7 +183,7 @@ const localData = {
         },
         title: "Full Ownership",
         description:
-          "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
+          "<p>Allows 100% foreign ownership and 100% repatriation of capital and profits.</p>",
       },
     ] satisfies WhyBuildItem[],
   },
@@ -328,9 +328,9 @@ const localData = {
     ] satisfies BankingPartner[],
   },
   workWithKpi: {
-    title: "Why Work with KPI ",
+    title: "Why Work With KPI ",
     description:
-      "<p>KPI is more than a company formation provider - we’re your long-term growth partner in the UAE. We help founders navigate IFZA setup decisions with clarity, speed, and compliance.</p>",
+      "<p>KPI is more than a company formation provider - we’re your <br/> long-term growth partner in the UAE. We help founders navigate <br/> IFZA setup decisions with clarity, speed, and compliance.</p>",
     items: [
       {
         id: 1,
@@ -420,7 +420,7 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero variant="ifza" data={localData.hero} />
       <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
         variant="ifza"
@@ -430,7 +430,7 @@ export default function DwtcFreezone() {
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking
-        variant="freezone"
+        variant="ifza"
         data={localData.banking}
       />
       <CorporateServicesUaeCta data={localData.contactUs} />

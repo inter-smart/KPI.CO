@@ -13,7 +13,16 @@ type CorporateServicesUaeBankingProps = {
     description: string;
     partners: BankingPartner[];
   };
-  variant?: "default" | "mainland" | "freezone" | "dsoa" | "saifz" | "dmcc";
+  variant?:
+    | "default"
+    | "mainland"
+    | "freezone"
+    | "dsoa"
+    | "saifz"
+    | "dmcc"
+    | "ifza"
+    | "company"
+    | "audit";
 };
 
 export default function CorporateServicesUaeBanking({
@@ -30,15 +39,29 @@ export default function CorporateServicesUaeBanking({
     [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
-    <section className={cn("w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] overflow-visible relative z-0 block " ,variant === "dsoa" || variant === "dmcc"  
-              ? "shadow-none"
-              : "shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
-          )}>
+    <section
+      className={cn(
+        "w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
+        variant === "dsoa" || variant === "dmcc"
+          ? "shadow-none"
+          : "shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
+
+        variant === "audit" && "!pt-1 shadow-none",
+        variant === "company" && "!pt-1 shadow-none",
+        variant === "ifza" && "!pt-5 shadow-none",
+      )}
+    >
       <div className="container">
         <div
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
-            variant === "mainland" || variant === "freezone" || variant === "dsoa" || variant === "dmcc"
+            variant === "mainland" ||
+              variant === "freezone" ||
+              variant === "dsoa" ||
+              variant === "dmcc" ||
+              variant === "company" ||
+              variant === "ifza" ||
+              variant === "audit"
               ? "text-left"
               : "sm:text-center",
           )}
@@ -55,10 +78,14 @@ export default function CorporateServicesUaeBanking({
               "text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
               variant === "mainland"
                 ? ""
-                : variant === "freezone" || variant === "dsoa" || variant === "dmcc"
+                : variant === "freezone" ||
+                    variant === "dsoa" ||
+                    variant === "dmcc"
                   ? "text-left"
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "saifz" && "text-left !max-w-full",
+              variant === "company" && "text-left !max-w-full ",
+              variant === "ifza" && "text-left !max-w-full ",
             )}
           >
             {parse(data?.description)}

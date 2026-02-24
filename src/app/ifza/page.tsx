@@ -260,7 +260,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Corporate Shareholder(s",
+        title: "Corporate Shareholder(s)",
         zone_list: [
           "Notarized board resolution",
           "Notarized memorandum and articles of association",
@@ -278,6 +278,7 @@ const localData = {
       },
     ],
   } satisfies MeydanFreeZoneData,
+  
   banking: {
     title: "Banking Support for IFZA Companies  ",
     description:
@@ -426,7 +427,7 @@ export default function DwtcFreezone() {
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
       <RiskOrganisation data={localData.workWithKpi} />
       <CorporateServicesUaeBanking
-        variant="freezone"
+        variant="ifza"
         data={localData.banking}
       />
       <CorporateServicesUaeCta data={localData.contactUs} />

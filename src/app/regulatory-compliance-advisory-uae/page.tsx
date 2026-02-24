@@ -274,7 +274,8 @@ const localData = {
   whyChoose: {
     title: "How KPI Approaches Regulatory & Compliance Advisory",
     description:
-      "<p>A regulator-aware approach focused on clarity and accountability.</p>",
+    "<p>A regulator-aware approach focused on clarity and accountability.</p>",
+    sub_title: "",
     items: [
       {
         id: 1,

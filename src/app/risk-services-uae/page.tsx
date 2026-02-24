@@ -371,6 +371,7 @@ const localData = {
   whyChoose: {
     title: "Why Organisations Trust KPI for Risk Services ",
     description: "",
+    sub_title: "",
     items: [
       {
         id: 1,

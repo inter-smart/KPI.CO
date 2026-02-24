@@ -12,6 +12,7 @@ import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import { Metadata } from "next";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -50,6 +51,7 @@ export type RiskAdvisoryDta = {
 export type ProcessStep = {
   id: number;
   title: string;
+  inner_title: string;
   sub_title: string;
   description: string;
 };
@@ -170,6 +172,7 @@ const localData = {
       {
         id: 1,
         title: "Entity specific risk assessment",
+        inner_title: "Entity specific risk assessment",
         sub_title: "Entity specific risk assessment",
         description:
           "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
@@ -177,6 +180,7 @@ const localData = {
       {
         id: 2,
         title: "Regulatory focused risk <br/> prioritisation",
+        inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
           "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
@@ -184,6 +188,7 @@ const localData = {
       {
         id: 3,
         title: "Judgement-driven audit execution",
+        inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
           "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
@@ -191,6 +196,7 @@ const localData = {
       {
         id: 4,
         title: "Testing of key controls and <br/> balances",
+        inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
           "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
@@ -198,6 +204,7 @@ const localData = {
       {
         id: 5,
         title: "Documentation",
+        inner_title: "Documentation",
         sub_title: "Documentation",
         description:
           "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
@@ -236,6 +243,7 @@ const localData = {
     title: "Why ADGM Entities Trust KPI",
     description:
       "",
+      sub_title: "",
     items: [
       {
         id: 1,
@@ -375,7 +383,11 @@ export default function DwtcFreezone() {
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
-      <RiskApproach variant="mainland" data={localData.approachProcess} />
+      {/* <RiskApproach variant="mainland" data={localData.approachProcess} /> */}
+      <CorporateServicesUaeFormationProcess
+              variant="aup"
+              data={localData.approachProcess}
+            />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}

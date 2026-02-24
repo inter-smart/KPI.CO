@@ -93,11 +93,11 @@ const localData = {
   hero: {
     id: 1,
     media: {
-            desktopPath: "/images/dwtc-desk.png",
+            desktopPath: "/images/dwtc-desk.svg",
             mobilePath: "/images/ddwtc-mob.svg",
             alt: "Company Formation in DMCC Free Zone, UAE",
         },
-    title: "Company Formation in DWTC, UAE ",
+    title: "Company Formation in DWTC, <br/> UAE ",
     description:
       "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised business district. DWTC offers flexible office solutions and a streamlined setup ideal for founders, startups, and growing businesses.</p>",
   } satisfies HeroData,
@@ -410,7 +410,7 @@ export default function DwtcFreezone() {
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-      <RiskOrganisation variant="freezone" data={localData.riskOrganisation} />
+      <RiskOrganisation variant="dwtc" data={localData.riskOrganisation} />
       
       <CorporateServicesUaeBanking
         variant="freezone"

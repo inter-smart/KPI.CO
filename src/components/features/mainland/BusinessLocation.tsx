@@ -79,8 +79,8 @@ export default function BusinessLocation({
                   variant === "dsoa" && "flex items-center",
                 )}
               >
-                <div className="w-full h-auto">
-                  <div className="flex items-center justify-between gap-4 mb-2 2xl:mb-5 3xl:mb-8">
+                <div className="w-full h-auto m-auto">
+                  <div className="flex justify-between gap-4 mb-2 2xl:mb-3 3xl:mb-4">
                     <Heading
                       as="h3"
                       className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[18px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight"
