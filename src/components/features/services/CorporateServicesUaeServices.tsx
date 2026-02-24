@@ -66,7 +66,7 @@ export default function CorporateServicesUaeServices({
                   </div>
                   {item?.description && (
                     <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
-                      {item?.description}
+                      {parse(item?.description)}
                     </p>
                   )}
                 </div>

@@ -33,6 +33,8 @@ export type Variant =
   | "ifza"
   | "erm"
   | "rakez"
+  | "formation"
+  | "freeZone"
   | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
@@ -61,8 +63,12 @@ function WhyBuildCard({
     <div
       className={cn(
         "group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
-        variant === "freezone" ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]" : "",
-        variant === "ifza" ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]" : "",
+        variant === "freezone"
+          ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
+          : "",
+        variant === "ifza"
+          ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
+          : "",
       )}
     >
       <div className="w-[46px] 2xl:w-[55px] aspect-square mb-[20px] 2xl:mb-[25px] transition-transform">
@@ -80,7 +86,7 @@ function WhyBuildCard({
         className={cn(
           "max-sm:text-[16px] font-semibold text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
-          "text-[#1C5396]",
+            "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "text-[#1C5396]",
@@ -95,7 +101,9 @@ function WhyBuildCard({
         size="p1"
         className={cn(
           "font-normal text-[#4e4e4e] sm:text-black",
-          hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "ifza")
+          hasVariant(variant, "mainland") ||
+            hasVariant(variant, "freezone") ||
+            hasVariant(variant, "ifza")
             ? "text-[14px] 2xl:text-[14px] 3xl:text-[18px]"
             : "",
         )}
@@ -121,25 +129,34 @@ export default function CorporateServicesUaeWhyBuild({
     <section
       className={cn(
         "w-full block py-8 sm:py-10 xl:py-[70px_50px] 2xl:py-[85px_65px]",
-        hasVariant(variant, "mainland")
-          ? "bg-[#f9fafb] "
-          : "bg-linear-to-t from-[#f1fafe] via-white to-white",
-        hasVariant(variant, "saifz") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "formation")
+          ? "bg-[#f9fafb]"
+          : hasVariant(variant, "mainland")
+            ? "bg-[#f9fafb]"
+            : hasVariant(variant, "saifz") &&
+            "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "freeZone") &&
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
     >
       <div className="container">
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "dsoa") || hasVariant(variant, "erm") || hasVariant(variant, "ifza")
+            hasVariant(variant, "mainland") ||
+              hasVariant(variant, "freezone") ||
+              hasVariant(variant, "dsoa") ||
+              hasVariant(variant, "erm") ||
+              hasVariant(variant, "ifza")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
+            hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
           )}
         >
           <Heading
@@ -161,12 +178,15 @@ export default function CorporateServicesUaeWhyBuild({
         </div>
         <div
           className={cn(
-            "hidden sm:grid grid-cols-2 md:grid-cols-2 sm:px-[15px] 2xl:px-[25px]",
-            hasVariant(variant, "mainland") || hasVariant(variant, "freezone") || hasVariant(variant, "dsoa") || hasVariant(variant, "ifza") || hasVariant(variant, "rakez")
+            "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
+            hasVariant(variant, "mainland") ||
+              hasVariant(variant, "freezone") ||
+              hasVariant(variant, "dsoa") ||
+              hasVariant(variant, "ifza") || hasVariant(variant, "rakez") || hasVariant(variant, "freeZone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
-            "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+              "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
             "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
           )}

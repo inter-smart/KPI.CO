@@ -20,6 +20,8 @@ type CorporateServicesUaeBankingProps = {
     | "dsoa"
     | "saifz"
     | "dmcc"
+    | "ifza"
+    | "company"
     | "audit";
 };
 
@@ -45,6 +47,8 @@ export default function CorporateServicesUaeBanking({
           : "shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 
         variant === "audit" && "!pt-1 shadow-none",
+        variant === "company" && "!pt-1 shadow-none",
+        variant === "ifza" && "!pt-5 shadow-none",
       )}
     >
       <div className="container">
@@ -55,6 +59,8 @@ export default function CorporateServicesUaeBanking({
               variant === "freezone" ||
               variant === "dsoa" ||
               variant === "dmcc" ||
+              variant === "company" ||
+              variant === "ifza" ||
               variant === "audit"
               ? "text-left"
               : "sm:text-center",
@@ -78,6 +84,8 @@ export default function CorporateServicesUaeBanking({
                   ? "text-left"
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "saifz" && "text-left !max-w-full",
+              variant === "company" && "text-left !max-w-full ",
+              variant === "ifza" && "text-left !max-w-full ",
             )}
           >
             {parse(data?.description)}

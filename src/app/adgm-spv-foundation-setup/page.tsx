@@ -9,9 +9,10 @@ import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import { blogData } from "@/data/blogData";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
+// import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import { Metadata } from "next";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -204,21 +205,21 @@ const localData = {
     items: [
       {
         id: 1,
-        title: "First-hand ADGM experience",
+        title: "Structuring-led advisory",
         description:
-          "<p>We prioritise substance, governance, and long-term viability <br/> over speed.</p>",
+          "<p>We prioritise substance, governance, and long-term viability over speed.</p>",
       },
       {
         id: 2,
         title: "ADGM regulatory familiarity",
         description:
-          "<p>Hands-on experience with how ADGM Foundations are reviewed <br/> and maintained in practice</p>",
+          "<p>Hands-on experience with how ADGM Foundations are reviewed and maintained in practice</p>",
       },
       {
         id: 3,
         title: "Integrated perspective ",
         description:
-          "<p>Ability to align foundations with SPVs, holding companies, audit,<br/> and compliance needs.</p>",
+          "<p>Ability to align foundations with SPVs, holding companies, audit, and compliance needs..</p>",
       },
       {
         id: 4,
@@ -361,7 +362,7 @@ export default function DwtcFreezone() {
       <InnerHero data={localData.hero} />
       <MainlandBusiness data={localData.mainlandBusiness} />
       <MeydanFreeZone variant="adgm" data={localData.meydanFreeZone} />
-      <DocumentRequired variant="spv" data={localData.document_required_data} />
+      <RiskOrganisation variant="spv" data={localData.document_required_data} />
       <CorporateServicesUaeWhyChoose
         variant="risk"
         data={localData.whyChoose}

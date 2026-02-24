@@ -75,7 +75,7 @@ export default function CorporateServicesUaeWhyChoose({
       <div className="container">
         <div
           className={cn(
-            "w-full h-auto mb-6 sm:mb-8 lg:mb-10 2xl:mb-12.5 3xl:mb-16",
+            "w-full h-auto mb-6 sm:mb-8 lg:mb-6 2xl:mb-8 3xl:mb-16",
             variant === "mainland" ||
               variant === "advisory" ||
               variant === "risk" ||
@@ -106,7 +106,7 @@ export default function CorporateServicesUaeWhyChoose({
             </div>
           )}
 
-          <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black my-2 lg:my-3 2xl:my-4">
+          <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
             {data?.sub_title}
           </div>
         </div>
@@ -166,7 +166,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
+        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "sop" &&
           "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
@@ -180,7 +180,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
     >
       <div
         className={cn(
-          "text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
+          "text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
           variant === "mainland" && "text-[#1C5396]",
           variant === "risk" && "text-[#1C5396]",
           variant === "advisory" && "text-[#1C5396]",

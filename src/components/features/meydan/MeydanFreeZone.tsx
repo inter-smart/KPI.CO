@@ -27,7 +27,7 @@ export type MeydanFreeZoneData = {
 
 interface MeydanFreeZoneProps {
   data: MeydanFreeZoneData;
-  variant: "difc" | "holding" | "adgm" | "default" | "ifza";  
+  variant: "difc" | "holding" | "adgm" | "default" | "ifza";
 }
 
 export default function MeydanFreeZone({
@@ -56,9 +56,9 @@ export default function MeydanFreeZone({
             "grid grid-cols-1 md:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
             (variant === "difc" || variant === "holding") && "md:grid-cols-1",
             variant === "adgm" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
             variant === "ifza" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
           )}
         >
           {data?.free_zone_list?.map((item, index) => (
@@ -75,11 +75,11 @@ export default function MeydanFreeZone({
                   className={cn(
                     "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] leading-normal text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "holding" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
+                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
                     variant === "adgm" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
+                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                   )}
                 >
                   {parse(item?.title)}
@@ -105,7 +105,7 @@ export default function MeydanFreeZone({
                         className={cn(
                           "text-[14px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "adgm" &&
-                            "text-[15px] 2xl:text-[18px] 3xl:text-[20px]",
+                          "text-[15px] 2xl:text-[18px] 3xl:text-[20px]",
                         )}
                       >
                         {parse(zone)}
@@ -132,7 +132,7 @@ export default function MeydanFreeZone({
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[30px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "difc" &&
-                        "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     )}
                   >
                     {item.title}

@@ -12,6 +12,7 @@ import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssur
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import { Metadata } from "next";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -386,10 +387,11 @@ export default function DwtcFreezone() {
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <CorporateServicesUaeWhyChoose variant="spv" data={localData.whyChoose} />
-      <DocumentRequired variant="spv" data={localData.document_required_data} />
+      {/* <DocumentRequired variant="spv" data={localData.document_required_data} /> */}
+      <RiskOrganisation data={localData.document_required_data} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} />
+      <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>
   );
