@@ -68,7 +68,7 @@ export default function BlogFilter({
                     Filters
                 </button>
             </DialogTrigger>
-            <DialogContent className="max-w-[95%] lg:max-w-[900px] p-[25px] xl:p-[30px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
+            <DialogContent className="max-w-[95%] lg:max-w-[900px] p-[25px] xl:p-[32px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
                 {/* Custom Close Button matching image */}
                 <DialogClose className="absolute right-6 top-6  w-[24px] 2xl:w-[32px] h-[24px] 2xl:h-[32px] flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,12 +79,12 @@ export default function BlogFilter({
 
                 <div className="space-y-10">
                     {/* Sort Selection */}
-                    <div className="relative inline-block">
+                    <div className="relative inline-block max-w-[250px] ">
                         <button
                             onClick={() => setIsSortOpen(!isSortOpen)}
                             className={cn(
-                                "text-[14px] md:text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-5 py-2.5 bg-white border border-black/10 rounded-[10px] h-[40px] font-medium transition-all min-w-[200px] justify-between",
-                                isSortOpen ? "border-gray-300 ring-2 ring-gray-100 " : "border-gray-200"
+                                "text-[14px] md:text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-3 py-2.5 w-full bg-white border border-black/10 rounded-[10px] h-[40px] font-medium transition-all min-w-[200px] justify-between",
+                                isSortOpen ? "" : "border-gray-200"
                             )}
                         >
                             <span>
@@ -98,7 +98,7 @@ export default function BlogFilter({
 
                         {/* Dropdown Menu */}
                         {isSortOpen && (
-                            <div className="absolute left-0 top-[100%] w-full bg-[#f2f2f2]  border-gray-100 rounded-[10px] overflow-hidden z-40  ">
+                            <div className="relative w-full bg-[#f2f2f2] min-w-fit max-w-fit border-gray-100 rounded-[15px] overflow-hidden z-40  ">
                                 {sortOptions.map((option, idx) => (
                                     <button
                                         key={option}
@@ -107,8 +107,8 @@ export default function BlogFilter({
                                             setIsSortOpen(false);
                                         }}
                                         className={cn(
-                                            "w-full px-5 py-3 text-[14px] font-semibold text-center transition-colors cursor-pointer",
-                                            idx === 0 ? "bg-[#cccccc] text-[#053269]" : "text-gray-500 hover:bg-gray-200"
+                                            "w-full px-2 py-2 text-[14px] font-semibold text-center transition-colors cursor-pointer",
+                                            idx === 0 ? "bg-[#cccccc] text-[#053269] rounded-[8px]" : "text-gray-500 hover:bg-gray-200"
                                         )}
                                     >
                                         {option}
@@ -149,7 +149,7 @@ export default function BlogFilter({
                         <div className="w-1/2 h-full">
                             <button
                                 onClick={handleApply}
-                                className="flex items-center w-full h-full justify-center bg-[#FFC916] hover:scale-105 text-black font-medium rounded-[10px] transition-all shadow-md shadow-yellow-100 active:scale-[0.98] text-[14px] xl:text-[18px] 2xl:text-[20px]"
+                                className="flex items-center w-full h-full justify-center bg-[#FFC916]  cursor-pointer text-black font-medium rounded-[10px] transition-all shadow-md shadow-yellow-100 hover:scale-100 text-[14px] xl:text-[18px] 2xl:text-[20px]"
                             >
                                 Apply Filters
                             </button>
@@ -157,7 +157,7 @@ export default function BlogFilter({
                         <div className="w-1/2 h-full">
                             <button
                                 onClick={handleClear}
-                                className="flex items-center w-full h-full justify-center bg-white border border-[#FFC916] hover:scale-105 text-gray-700 font-medium rounded-[10px] hover:bg-gray-50 transition-all active:scale-[0.98] text-[14px] xl:text-[18px] 2xl:text-[20px]"
+                                className="flex items-center w-full h-full justify-center bg-white border border-[#FFC916] cursor-pointer   text-gray-700 font-medium rounded-[10px] hover:bg-gray-50 transition-all hover:scale-100   text-[14px] xl:text-[18px] 2xl:text-[20px]"
                             >
                                 Clear All Filters
                             </button>
