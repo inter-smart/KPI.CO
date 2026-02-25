@@ -22,7 +22,15 @@ export type InnerHeroData = {
 
 export type InnerHeroProps = {
   data: InnerHeroData;
-  variant?: "default" | "saifz" | "advisory" | "dwtc" | "erm" | "ifza" | "e-invoicing" ;
+  variant?:
+    | "default"
+    | "saifz"
+    | "advisory"
+    | "dwtc"
+    | "erm"
+    | "ifza"
+    | "e-invoicing"
+    | "meydan";
 };
 
 export default function InnerHero({
@@ -40,13 +48,11 @@ export default function InnerHero({
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
-        variant === "advisory" 
-          ? "max-sm:h-[715px]"
-          : "",
-        variant === "dwtc" || variant ==="e-invoicing"
-          ? "h-[540px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]"
-          : "h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]",
-        variant ==="e-invoicing"
+        variant === "advisory" ? "max-sm:h-[715px]" : "",
+        variant === "dwtc" || variant === "e-invoicing"
+          ? "h-[540px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]"
+          : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
+        variant === "e-invoicing"
           ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
           : "",
       )}
@@ -72,16 +78,17 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal font-bold text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px] max-md:[&_br]:hidden" >
+            className="leading-normal font-bold text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px] max-md:[&_br]:hidden"
+          >
             {parse(data?.title)}
           </Heading>
           {data?.description && (
             <Text
               as="div"
               size="p3"
-              className={cn("text-white leading-relaxed xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-7 2xl:mb-8 max-md:[&_br]:hidden",
-
-                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]"
+              className={cn(
+                "text-white leading-relaxed xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-7 2xl:mb-8 max-md:[&_br]:hidden",
+                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
               )}
             >
               {parse(data?.description)}

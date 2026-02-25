@@ -39,7 +39,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                 )}
 
                 {data?.description && (
-                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
+                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 3xl:[&_p]:mb-[35px]">
                     {parse(data.description)}
                   </div>
                 )}
@@ -47,11 +47,11 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
 
             {items.length > 0 && (
-              <ul className="space-y-4 lg:space-y-4 2xl:space-y-6">
+              <ul className="space-y-4 lg:space-y-4 xl:space-y-5 2xl:space-y-6">
                 {items.map((item) => (
                   <li
                     key={item.id}
-                    className="relative pl-[25px] 3xl:pl-[35px] text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#4E4E4E]"
+                    className="relative pl-[25px] 3xl:pl-[35px] text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.3] text-[#4E4E4E]"
                   >
                     <span className="absolute left-0 top-[6px] w-[14px] h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[23px] 3xl:h-[23px]">
                       <svg

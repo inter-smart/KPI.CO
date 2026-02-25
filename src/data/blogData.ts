@@ -23,7 +23,7 @@ export const blogData: BlogItem[] = [
         media: { path: "/images/home-insights-1.jpg", alt: "Audit Firm Guide" },
         title: "A Guide to Choosing the Best Audit Firm in 2025",
         sub_title: "Internal Audit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed insights.",
+        description: "What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.",
         category: "Audit",
         date: "14 NOV 2024",
         readTime: "2 MIN READ",

@@ -156,7 +156,7 @@ const localData = {
     ],
   } satisfies RiskAdvisoryDta,
   riskOrganisation: {
-    title: "Why ADGM for Holding Companies",
+    title: "Why ADGM For Holding Companies",
     description:
       "<p>ADGM offers distinct advantages for structured ownership: </p>",
     items: [

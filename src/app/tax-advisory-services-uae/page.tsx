@@ -127,9 +127,9 @@ const localData = {
       mobilePath: "/images/tax-banner-mob.png",
       alt: "Practical Tax Advisory for UAE Businesses",
     },
-    title: "Practical Tax Advisory for UAE Businesses",
+    title: "Practical Tax Advisory for UAE <br/> Businesses",
     description:
-      "<p>In the UAE, tax is no longer just a number, its about interpretation and application. Corporate tax, VAT, cross-border transaction require practical judgement aligned with both regulation and business reality. KPI provides clear, practical tax advice that help UAE businesses to make appropriate tax decisions, manage risk, and remail compliant without compromising commercial objectives.</p>",
+      "<p>In the UAE, tax is no longer just a number, its about interpretation and <br/>  application. Corporate tax, VAT, cross-border transaction require practical <br/>  judgement aligned with both regulation and business reality. KPI provides <br/>  clear, practical tax advice that help UAE businesses to make appropriate tax <br/>  decisions, manage risk, and remail compliant without compromising <br/>  commercial objectives.</p>",
   } satisfies HeroData,
 
   whyRisk: {
@@ -145,8 +145,8 @@ const localData = {
     ],
     footerDescription: "",
     image: {
-      path: "/images/difc-audit.jpg",
-      alt: "Risk advisory discussion",
+      path: "/images/tax-advisory.jpg",
+      alt: "tax-advisory discussion",
     },
   } satisfies WhyRiskData,
 
@@ -375,7 +375,7 @@ export default function page() {
       <WhyRiskManagement data={localData.whyRisk} />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeFormationProcess
-        variant="aup"
+        variant="tax-advisory"
         data={localData.formationProcess}
       />
       <DocumentRequired

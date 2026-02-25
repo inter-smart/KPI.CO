@@ -49,7 +49,7 @@ export default function MeydanFreeZone({
           >
             {data?.title}
           </Heading>
-          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]">
+          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] " >
             {data?.main_description}
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function MeydanFreeZone({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-[30px_15px] sm:p-[35px_25px] xl:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-2 rounded-[15px] sm:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] overflow-hidden",
+                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[40px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-1 lg:border-2 rounded-[15px] sm:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] overflow-hidden",
                   index % 2 !== 0
                     ? "to-[#FEFCE8] border-[#FFCB18]"
                     : "to-[#EFF6FF] border-[#5280CA]",
@@ -86,7 +86,7 @@ export default function MeydanFreeZone({
                 >
                   {parse(item?.title)}
                 </div>
-                <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[15px]">
+                <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[15px] max-sm:!mb-[40px]">
                   {parse(item?.description ?? "")}
                 </div>
                 <div className="text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]">
@@ -107,7 +107,7 @@ export default function MeydanFreeZone({
                         className={cn(
                           "text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "adgm" &&
-                          "text-[15px] 2xl:text-[18px] 3xl:text-[20px]",
+                          "text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px]",
                         )}
                       >
                         {parse(zone)}
