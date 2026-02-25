@@ -3,10 +3,7 @@ import { Heading, Text } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import Image from "next/image";
 import { useState, useRef, useEffect, useCallback } from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -81,7 +78,7 @@ export default function CorporateServicesUaeFormationProcess({
           const progress = self.progress;
           const stepIndex = Math.min(
             Math.floor(progress * totalSteps),
-            totalSteps - 1
+            totalSteps - 1,
           );
           setActiveStep(stepIndex);
         },
@@ -208,7 +205,9 @@ export default function CorporateServicesUaeFormationProcess({
                       size="h6"
                       className={cn(
                         "font-semibold  transition-colors duration-300 capitalize",
-                        index <= activeStep ? "text-[#1c5396]" : "text-[#a7a7a7]",
+                        index <= activeStep
+                          ? "text-[#1c5396]"
+                          : "text-[#a7a7a7]",
                       )}
                     >
                       {parse(step.title)}
@@ -293,7 +292,10 @@ export default function CorporateServicesUaeFormationProcess({
           {data?.process_list && (
             <>
               {data?.process_list?.map((item) => (
-                <div key={item?.id} className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px]">
+                <div
+                  key={item?.id}
+                  className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px]"
+                >
                   <div className="w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
                     <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium text-[#1C5396] mb-2 lg:mb-1.25 2xl:mb-2.5">
                       {item?.title}
