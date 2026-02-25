@@ -142,7 +142,7 @@ const localData = {
   mainlandBusiness: {
     title: "How KPI Approaches ADGM Foundations",
     description:
-      "<p>We don't just file paperwork. We focus on whether the structure will hold up over time. Our goal is simple: a foundation that is defensible, functional, and future-ready. We are deliberate about structure naming, purpose alignment, and regulatory positioning - because how a Foundation is framed matters as much as how it is formed.</p>",
+      "<p>We don't just file paperwork. We focus on whether the structure will <br> hold up over time. Our goal is simple: a foundation that is defensible, <br> functional, and future-ready. We are deliberate about structure <br> naming, purpose alignment, and regulatory positioning - because how <br> a Foundation is framed matters as much as how it is formed.</p>",
     highlightsTitle: "KPI supports clients through:",
     highlights: [
       "Structuring advice aligned with the intended purpose of the foundation",
@@ -361,7 +361,10 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero data={localData.hero} variant="ADGM-Foundations" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness
+        data={localData.mainlandBusiness}
+        variant="ADGM-Foundations"
+      />
       <MeydanFreeZone variant="adgm" data={localData.meydanFreeZone} />
       <RiskOrganisation variant="spv" data={localData.document_required_data} />
       <CorporateServicesUaeWhyChoose
@@ -369,7 +372,10 @@ export default function DwtcFreezone() {
         data={localData.whyChoose}
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} variant="ADGM-Foundations"/>
+      <CorporateServicesUaeCta
+        data={localData.contactUs}
+        variant="ADGM-Foundations"
+      />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>

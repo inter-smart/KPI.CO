@@ -146,7 +146,7 @@ export default function CorporateServicesUaeFormationProcess({
                     key={step.id}
                     className={cn(
                       "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
-                      variant === "tax-advisory" && "min-w-[330px]" ,
+                      variant === "tax-advisory" && "min-w-[330px]",
                       isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
@@ -208,7 +208,8 @@ export default function CorporateServicesUaeFormationProcess({
                         "max-sm:text-[16px] font-semibold  transition-colors duration-300 capitalize",
                         index <= activeStep
                           ? "text-[#1c5396]"
-                          : "text-[#a7a7a7]", variant== "tax-advisory" && "text-nowrap"
+                          : "text-[#a7a7a7]",
+                        variant == "tax-advisory" && "text-nowrap",
                       )}
                     >
                       {parse(step.title)}

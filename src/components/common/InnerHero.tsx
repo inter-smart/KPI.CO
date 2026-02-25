@@ -72,7 +72,11 @@ export default function InnerHero({
       )}
       <div className="container">
         <div
-          className="w-full"
+          className={cn(
+            "w-full",
+            variant === "ADGM-Foundations" &&
+              "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+          )}
         >
           <Heading
             as="h1"
@@ -88,7 +92,8 @@ export default function InnerHero({
               className={cn(
                 "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
-                variant === "ADGM-Foundations" && "leading-[1.6] ",
+                variant === "ADGM-Foundations" &&
+                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
               )}
             >
               {parse(data?.description)}
