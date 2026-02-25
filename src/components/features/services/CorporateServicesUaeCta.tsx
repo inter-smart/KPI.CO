@@ -19,7 +19,7 @@ export type CtaData = {
 
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
-  variant?: "default" | "mainland" | "saifz" | "rakez";
+  variant?: "default" | "mainland" | "saifz" | "rakez" | "ADGM-Foundations";
 };
 
 export default function CorporateServicesUaeCta({
@@ -44,6 +44,8 @@ export default function CorporateServicesUaeCta({
               : "p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "saifz" &&
               "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
+            variant === "ADGM-Foundations" &&
+              "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
           )}
         >
           <div
@@ -96,6 +98,8 @@ export default function CorporateServicesUaeCta({
                 "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                variant === "ADGM-Foundations" &&
+                  "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
               )}
               asChild
             >

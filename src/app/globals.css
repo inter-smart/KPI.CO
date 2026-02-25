@@ -18,7 +18,7 @@
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
+  --breakpoint-xl: 77.5rem;
   --breakpoint-2xl: 96rem;
   --breakpoint-3xl: 120rem;
 
@@ -34,7 +34,7 @@
   --header-y-sm: 65px;
   --header-y-lg: 70px;
   --header-y-xl: 70px;
-  --header-y-2xl: 80px; 
+  --header-y-2xl: 80px;
   --header-y-3xl: 90px;
 
   --animate-scroll: scroll 40s forwards linear infinite;
@@ -207,7 +207,7 @@
     h6 {
       @apply text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-tight font-normal text-(--text-color);
     }
-    ul  {
+    ul {
       @apply ml-[25px];
     }
     ul > li {
@@ -289,17 +289,17 @@ section {
   overflow: hidden;
 }
 
-  @media (max-width:768px) {
-    br{
-      display: none;
-    }
+@media (max-width: 768px) {
+  br {
+    display: none;
   }
-.ring-offset-background{
+}
+.ring-offset-background {
   width: 27px;
   height: 27px;
 }
 
-.ring-offset-background svg{
+.ring-offset-background svg {
   width: 100%;
   height: 100%;
 }

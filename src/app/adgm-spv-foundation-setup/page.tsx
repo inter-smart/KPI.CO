@@ -1,4 +1,3 @@
-
 import InnerHero from "@/components/common/InnerHero";
 import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
@@ -136,9 +135,9 @@ const localData = {
       alt: "ADGM Foundations: Built for <br/>Control, Continuity, and Asset Protection",
     },
     title:
-      "ADGM Foundations: Built for <br/> Control, Continuity, and Asset Protection ",
+      "ADGM Foundations: Built For <br/> Control, Continuity, And Asset Protection ",
     description:
-      "<p>ADGM Foundations in the ADGM help you separate ownership from control, protect assets, and create long-term governance structures for families, founders, and investment groups. We help you set up and structure ADGM Foundations with a clear understanding of regulatory expectations, governance design, and real-world use cases.</p>",
+      "<p>ADGM Foundations in the ADGM help you separate ownership from control, protect assets, and create long-term governance structures for families, founders, and investment groups. We help you set up and structure ADGM Foundations with a clear understanding of regulatory expectations, <br>  governance design, and real-world use cases.</p>",
   } satisfies HeroData,
   mainlandBusiness: {
     title: "How KPI Approaches ADGM Foundations",
@@ -229,7 +228,6 @@ const localData = {
       },
     ] satisfies WhyChooseItem[],
   },
-
   contactUs: {
     title: "Let's Talk About Your ADGM Foundation",
     description:
@@ -239,8 +237,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-adgm-foundation.png",
-      overlayMobile: "/images/overlay-adgm-foundation-mobile.png",
+      overlay: "/images/overlay-adgm-foundation.svg",
+      overlayMobile: "/images/overlay-adgm-foundation-mobile.svg",
     },
   } satisfies CtaData,
   document_required_data: {
@@ -281,7 +279,10 @@ const localData = {
       },
       {
         id: 2,
-        media: { path: "/images/explore-01.jpg", alt: "Holding Companies in ADGM" },
+        media: {
+          path: "/images/explore-01.jpg",
+          alt: "Holding Companies in ADGM",
+        },
         title: "Holding Companies in <br/> ADGM",
         slug: "#",
       },
@@ -359,7 +360,7 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="ADGM-Foundations" />
       <MainlandBusiness data={localData.mainlandBusiness} />
       <MeydanFreeZone variant="adgm" data={localData.meydanFreeZone} />
       <RiskOrganisation variant="spv" data={localData.document_required_data} />
@@ -368,7 +369,7 @@ export default function DwtcFreezone() {
         data={localData.whyChoose}
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeCta data={localData.contactUs} variant="ADGM-Foundations"/>
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>

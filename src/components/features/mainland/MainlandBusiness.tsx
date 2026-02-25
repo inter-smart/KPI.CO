@@ -105,7 +105,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] lg:text-[12px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
+                        <span className="text-[14px] lg:text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
                           {item}
                         </span>
                       </div>

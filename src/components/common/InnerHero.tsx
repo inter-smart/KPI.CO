@@ -30,6 +30,7 @@ export type InnerHeroProps = {
     | "erm"
     | "ifza"
     | "e-invoicing"
+    | "ADGM-Foundations"
     | "meydan";
 };
 
@@ -76,7 +77,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal font-bold text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px] max-md:[&_br]:hidden"
+            className="leading-normal font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>
@@ -85,8 +86,9 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden",
+                "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
+                variant === "ADGM-Foundations" && "leading-[1.6] ",
               )}
             >
               {parse(data?.description)}
@@ -116,7 +118,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[13px] sm:text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[150px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-[40px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>
