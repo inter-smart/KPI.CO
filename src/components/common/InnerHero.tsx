@@ -45,14 +45,14 @@ export default function InnerHero({
   return (
     <section
       className={cn(
-        "w-full h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
+        "w-full h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[540px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]"
-          : "h-[600px] sm:h-[500px] xl:h-[530px] 2xl:h-[640px] 3xl:h-[800px]",
+          ? "h-[540px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]"
+          : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
           : "",
@@ -74,14 +74,6 @@ export default function InnerHero({
         <div
           className={cn(
             "w-full",
-            variant === "erm"
-              ? "max-w-full"
-              : " max-w-[576px] md:max-w-[743px] xl:max-w-[720px] 2xl:max-w-[870px] 3xl:max-w-[1070px]",
-            variant === "dwtc" &&
-              "max-w-[576px] xl:max-w-[756px] 2xl:max-w-[870px] 3xl:max-w-[1130px]",
-            variant === "ifza" && "max-w-[576px] xl:max-w-[80%]",
-            variant === "meydan" &&
-              "md:max-w-[870px] xl:max-w-[870px] 2xl:max-w-[1070px] 3xl:max-w-[1280px]",
             variant === "ADGM-Foundations" &&
               "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
           )}
@@ -100,7 +92,8 @@ export default function InnerHero({
               className={cn(
                 "text-white xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-6 2xl:mb-8 max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
-                variant === "ADGM-Foundations" && "leading-[1.6] xl:mb-[40px] 2xl:mb-[50px]",
+                variant === "ADGM-Foundations" &&
+                  "leading-[1.6] xl:mb-[40px] 2xl:mb-[50px]",
               )}
             >
               {parse(data?.description)}

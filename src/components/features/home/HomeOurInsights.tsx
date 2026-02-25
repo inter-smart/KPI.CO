@@ -63,7 +63,7 @@ export default function HomeOurInsights({
   return (
     <section
       className={cn(
-        "w-full py-8 xl:py-[70px_100px] 2xl:py-[80px_110px] overflow-hidden",
+        "w-full py-[45px] xl:py-[70px_100px] 2xl:py-[80px_110px] overflow-hidden",
         variant === "saifz" && "bg-[#F9F9F9]",
       )}
     >
@@ -131,10 +131,10 @@ function InsightCard({ data }: InsightCardProps) {
         />
       </div>
 
-      <div className="w-full h-full p-[18px] md:p-[18px] xl:p-[25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col">
+      <div className="w-full h-full p-[22px_18px] md:p-[18px] xl:p-[25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col">
         <Text
           size="p1"
-          className=" lg:text-[11px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[10px] 2xl:mb-[12px] 3xl:mb-[15px]"
+          className=" lg:text-[11px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[14px] 2xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
         </Text>
@@ -146,14 +146,14 @@ function InsightCard({ data }: InsightCardProps) {
         <Text
           as="div"
           size="p1"
-          className="text-[16px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-relaxed line-clamp-5 text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
+          className="text-[16px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-relaxed   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[14px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto  transition-colors duration-300"
+          className="text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto  transition-colors duration-300"
         >
           Read More <span>→</span>
         </Link>

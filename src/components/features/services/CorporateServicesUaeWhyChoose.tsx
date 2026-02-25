@@ -74,6 +74,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "risk" ||
               variant === "spv" ||
               variant === "sop" ||
+              variant === "freezone-business" ||
               variant === "regulatory" ||
               variant === "tax-advisory"
               ? "text-left"
@@ -149,7 +150,7 @@ export default function CorporateServicesUaeWhyChoose({
           )}
         >
           {data?.items?.map((item) => (
-            <div key={item?.id} className="w-full h-auto max-sm:min-h-[160px]">
+            <div key={item?.id} className="w-full h-auto ">
               <ServiceCard key={item.id} item={item} variant={variant} />
             </div>
           ))}
@@ -163,12 +164,13 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
+        "w-full h-full p-[20px_24px] lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
-        variant === "sop" &&
-          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
-        variant === "regulatory" &&
-          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
+        variant === "freezone-business" &&
+          "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "sop" ||
+          (variant === "regulatory" &&
+            "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]"),
         (variant === "default" || variant === "advisory") &&
           "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" || variant === "tax-advisory") &&
@@ -179,7 +181,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
     >
       <div
         className={cn(
-          "text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-2 lg:mb-1.25 2xl:mb-2.5",
+          "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5",
           variant === "mainland" && "text-[#1C5396]",
           variant === "risk" && "text-[#1C5396]",
           variant === "advisory" && "text-[#1C5396]",

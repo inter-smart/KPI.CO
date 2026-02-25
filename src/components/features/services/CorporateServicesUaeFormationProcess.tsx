@@ -35,7 +35,7 @@ export type ProcessListItem = {
 };
 
 export type CorporateServicesUaeFormationProcessProps = {
-  variant?: "Vat-Services" | "mainland" | "aup" | "default";
+  variant?: "Vat-Services" | "mainland" | "aup" | "default" | "tax-advisory";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -101,14 +101,14 @@ export default function CorporateServicesUaeFormationProcess({
           <div
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
-              variant === "mainland" || variant === "aup"
+              variant === "mainland" || variant === "aup" || "tax-advisory"
                 ? "text-start "
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
               variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
             )}
           >
             <Heading
-              as="h2"
+              as="div"
               size="h2"
               className="text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7"
             >
@@ -126,7 +126,7 @@ export default function CorporateServicesUaeFormationProcess({
           </div>
           {data.sub_title && (
             <Heading
-              as="h3"
+              as="div"
               size="h4"
               className="font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
             >
@@ -146,6 +146,7 @@ export default function CorporateServicesUaeFormationProcess({
                     key={step.id}
                     className={cn(
                       "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
+                      variant === "tax-advisory" && "min-w-[330px]",
                       isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
@@ -156,7 +157,7 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <motion.div
                       className={cn(
-                        "w-[100%] lg:w-[1px] h-[1px] h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                        "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "mainland" && "lg:h-[190%]",
                         index <= activeStep
@@ -204,10 +205,11 @@ export default function CorporateServicesUaeFormationProcess({
                       as="div"
                       size="h6"
                       className={cn(
-                        "font-semibold  transition-colors duration-300 capitalize",
+                        "max-sm:text-[16px] font-semibold  transition-colors duration-300 capitalize",
                         index <= activeStep
                           ? "text-[#1c5396]"
                           : "text-[#a7a7a7]",
+                        variant == "tax-advisory" && "text-nowrap",
                       )}
                     >
                       {parse(step.title)}
@@ -243,7 +245,7 @@ export default function CorporateServicesUaeFormationProcess({
                         <Heading
                           as="h4"
                           size="h6"
-                          className="font-normal text-[#3eb0ea] mb-0.5"
+                          className="font-normal text-[#3eb0ea] capitalize mb-0.5"
                         >
                           {data.steps[activeStep].step}
                         </Heading>
@@ -265,7 +267,7 @@ export default function CorporateServicesUaeFormationProcess({
                         <Heading
                           as="h4"
                           size="h6"
-                          className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7 max-md:[&_br]:hidden"
+                          className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7 capitalize max-md:[&_br]:hidden"
                         >
                           {parse(data.steps[activeStep].inner_title)}
                         </Heading>

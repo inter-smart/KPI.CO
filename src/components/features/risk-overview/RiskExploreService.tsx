@@ -121,7 +121,7 @@ function Service({ data }: ServiceProps) {
   return (
     <Link
       href={data.slug ?? "#"}
-      className="group w-full h-[325px] xl:h-[425px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
+      className="group w-full h-[348px] xl:h-[425px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
     >
       <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
         <Image
@@ -143,7 +143,7 @@ function Service({ data }: ServiceProps) {
             className="w-full h-full block mt-1 transition-transform duration-300"
           />
         </div>
-        <div className="text-[16px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]">
+        <div className="text-[24px] sm:text-[17px] xl:text-[22px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]">
           {parse(data.title ?? "title")}
         </div>
       </div>
