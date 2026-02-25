@@ -128,9 +128,9 @@ const localData = {
       "<p>ADGM SPVs operate under a common law framework recognised by regulators, banks, and investors. When structured properly, they provide control, protection, and credibility. We structure ADGM SPVs with attention to structural integrity, regulatory alignment, and long-term usability, not just incorporation speed.</p>",
   } satisfies HeroData,
   mainlandBusiness: {
-    title: "Why Organisations Use SPVs <br/> in ADGM",
+    title: "Why Organisations Use SPVs in ADGM",
     description:
-      "<p>SPVs are not operational entities. They are used when ownership clarity <br/> and risk control cannot be compromised. When structured correctly, <br/> SPVs strengthen governance, reduce exposure, and provide <br/>confidence to counterparties and stakeholders. We have worked with SPVs since ADGM's early years. That experience shows in how we approach structuring.</p>",
+      "<p>SPVs are not operational entities. They are used when ownership clarity and risk control cannot be compromised. When structured correctly, SPVs strengthen governance, reduce exposure, and provide confidence to counterparties and stakeholders. We have worked with SPVs since ADGM's early years. That experience shows in how we approach structuring.</p>",
     highlightsTitle: "ADGM SPVs are commonly used for:",
     highlights: [
       "Asset and investment holding",
