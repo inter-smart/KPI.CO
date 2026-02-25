@@ -42,7 +42,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[calc(100%-365px)]",
               hasVariant(variant, "spv") ||  hasVariant(variant, "rakez")
-                ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
+                ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
             )}
           >
@@ -131,7 +131,7 @@ export default function MainlandBusiness({
           <div
             className={cn(
               "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
-              variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
+              variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
