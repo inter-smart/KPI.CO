@@ -123,7 +123,7 @@ export default function Header() {
 
   return (
     <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-50 shadow-sm flex items-center">
-      <div className="container mx-auto px-4">
+      <div className="container">
         <div className="flex items-center">
           {/* Logo Section */}
           <div className="w-[120px] lg:w-[100px] xl:w-[130px] 2xl:w-[150px] 3xl:w-[180px]">

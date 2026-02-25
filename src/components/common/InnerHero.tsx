@@ -30,6 +30,7 @@ export type InnerHeroProps = {
     | "erm"
     | "ifza"
     | "e-invoicing"
+    | "ADGM-Foundations"
     | "meydan";
 };
 
@@ -70,15 +71,17 @@ export default function InnerHero({
         </picture>
       )}
       <div className="container">
-        <div className={cn("w-full max-w-full",  variant === "erm" ? "max-w-full"
-          : "max-w-full", 
-          variant === "dwtc" && "max-w-[576px] xl:max-w-[756px] 2xl:max-w-[870px] 3xl:max-w-[1130px]",
-          variant === "ifza" && "max-w-[576px] xl:max-w-[80%]"
-        )}>
+        <div
+          className={cn(
+            "w-full",
+            variant === "ADGM-Foundations" &&
+              "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+          )}
+        >
           <Heading
             as="h1"
             size="h1"
-            className="leading-normal font-bold text-white mb-[15px] xl:mb-[15px] 2xl:mb-[20px] max-md:[&_br]:hidden"
+            className="leading-normal font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>
@@ -87,8 +90,10 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "text-white leading-relaxed xl:max-w-[92%] 3xl:max-w-[95%] mb-4 xl:mb-7 2xl:mb-8 max-md:[&_br]:hidden",
+                "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
+                variant === "ADGM-Foundations" &&
+                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
               )}
             >
               {parse(data?.description)}
@@ -118,7 +123,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[13px] sm:text-[16px] xl:text-[14px] 2xl:text-[17px] min-w-[150px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-11! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[150px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-[40px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>
