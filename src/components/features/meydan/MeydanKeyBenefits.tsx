@@ -10,6 +10,7 @@ import { Heading, Text } from "@/components/utils/typography";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/effect-fade";
+import parse from "html-react-parser";
 
 export type MeydanKeyBenefitsData = {
   title: string;
@@ -135,8 +136,8 @@ export default function MeydanKeyBenefits({
                             )}
                           >
                             {typeof item === "string" ? (
-                              <span className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black">
-                                {item}
+                              <span className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden">
+                                {parse(item)}
                               </span>
                             ) : (
                               <div className="[&_span]:text-[16px] 2xl:[&_span]:text-[20px] 3xl:[&_span]:text-[24px] [&_span]:leading-normal [&_span]:font-medium [&_span]:text-black w-full h-auto gap-[5px] flex flex-col">

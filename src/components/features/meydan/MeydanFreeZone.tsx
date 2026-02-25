@@ -27,7 +27,7 @@ export type MeydanFreeZoneData = {
 
 interface MeydanFreeZoneProps {
   data: MeydanFreeZoneData;
-  variant: "difc" | "holding" | "adgm" | "default" | "ifza";
+  variant: "difc" | "holding" | "adgm" | "default" | "ifza" | "audit";
 }
 
 export default function MeydanFreeZone({
@@ -37,7 +37,9 @@ export default function MeydanFreeZone({
   if (!data) return null;
 
   return (
-    <section className="w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block">
+    <section className={cn("w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+      variant === "audit" && "!pt-0 !pb-4"
+    )}>
       <div className="container">
         <div className="typography">
           <Heading
@@ -133,6 +135,8 @@ export default function MeydanFreeZone({
                       "leading-normal font-medium text-[#003268] mb-[30px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                      variant === "audit" &&
+                      " text-[#1C5396]",
                     )}
                   >
                     {item.title}
