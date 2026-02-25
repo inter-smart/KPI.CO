@@ -107,13 +107,13 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/holding-bg.jpg",
+      desktopPath: "/images/holding-bg.svg",
       mobilePath: "/images/holding-bg-mobile.jpg",
       alt: "ADGM Holding Companies Built For Control And Clarity",
     },
     title: "ADGM Holding Companies Built  <br/>for Control and Clarity ",
     description:
-      "<p>ADGM holding companies are used to own and control subsidiaries, investments, and assets within a single, regulated structure. They provide clarity at the ownership level while separating strategic control from operational risk. KPI advises on the formation and structuring of ADGM  holding companies with a focus on governance integrity, regulatory acceptance, and long-term usability.</p>",
+      "<p>ADGM holding companies are used to own and control subsidiaries, <br/>investments, and assets within a single, regulated structure. They provide<br/> clarity at the ownership level while separating strategic control from<br/> operational risk. KPI advises on the formation and structuring of ADGM <br/>  holding companies with a focus on governance integrity, regulatory <br/>acceptance, and long-term usability.</p>",
   } satisfies HeroData,
 
   riskAdvisory: {
@@ -262,7 +262,7 @@ const localData = {
       alt: "Common Use Cases for ADGM Holding Companies",
     },
     ftr_description:
-      "In these cases, a holding company simplifies control, oversight, and <br/> decision-making.",
+      "In these cases, a holding company simplifies control, oversight, and  decision-making.",
   } satisfies DocumentRequiredData,
   whyChoose: {
     title: "Why Choose KPI for ADGM Holding Companies",
