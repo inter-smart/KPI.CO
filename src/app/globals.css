@@ -19,16 +19,16 @@
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 77.5rem;
-  --breakpoint-2xl: 77.5rem;
-  --breakpoint-3xl: 77.5rem;
+  --breakpoint-2xl: 96rem;
+  --breakpoint-3xl: 120rem;
 
   /* Container Sizes */
   --container-sm: 40rem;
   --container-md: 50rem;
   --container-lg: 955px;
   --container-xl: 1200px;
-  --container-2xl: 1200px;
-  --container-3xl: 1200px;
+  --container-2xl: 1280px;
+  --container-3xl: 1600px;
 
   /* Header Sizes */
   --header-y-sm: 65px;
@@ -165,7 +165,7 @@
   .container {
     width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     @apply max-w-sm! sm:max-w-sm! md:max-w-md! lg:max-w-lg! xl:max-w-xl! 2xl:max-w-2xl! 3xl:max-w-3xl! max-lg:px-[1rem];
   }
 
