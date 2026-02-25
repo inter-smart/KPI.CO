@@ -210,6 +210,7 @@ const localData = {
           "Shareholding and control mechanics",
           "Governance design aligned with real decision-making",
           "Regulatory positioning within ADGM",
+          "Practical considerations around audit, reporting, and banking",
         ],
       },
       {
@@ -230,7 +231,7 @@ const localData = {
     structure_list: [],
   } satisfies MeydanFreeZoneData,
   common_use_data: {
-    title: "Common Use Cases for ADGM <br/> Holding Companies",
+    title: "Common Use Cases For ADGM <br/> Holding Companies",
     description: "<p>A holding company is typically used when: </p>",
     items: [
       {
@@ -301,7 +302,7 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "Special Purpose Vehicles (SPVs)",
         },
         title: "Special Purpose Vehicles<br/> (SPVs)",
@@ -310,7 +311,7 @@ const localData = {
       {
         id: 2,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "SPV Foundations in ADGM",
         },
         title: "SPV Foundations in<br/> ADGM",
@@ -319,7 +320,7 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "Company Formation in ADGM",
         },
         title: "Company Formation in <br/> ADGM",
@@ -336,7 +337,7 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-holding.png",
+      overlay: "/images/overlay-holding.svg",
       overlayMobile: "/images/overlay-holding-mobile.png",
     },
   } satisfies CtaData,
@@ -417,7 +418,7 @@ export default function DwtcFreezone() {
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} />
+      <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>
   );

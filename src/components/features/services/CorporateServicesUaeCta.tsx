@@ -32,13 +32,13 @@ export default function CorporateServicesUaeCta({
         "w-full h-auto block",
         variant === "mainland"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[80px_55px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
-          : "py-10 lg:py-13 2xl:py-17 3xl:py-22",
+          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",
       )}
     >
       <div className="container">
         <div
           className={cn(
-            "w-full lg:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
+            "w-full lg:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
             variant === "mainland"
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",

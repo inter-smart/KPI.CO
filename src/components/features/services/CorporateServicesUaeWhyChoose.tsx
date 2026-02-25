@@ -66,7 +66,7 @@ export default function CorporateServicesUaeWhyChoose({
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   return (
-    <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
+    <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[55px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
       <div className="container">
         <div
           className={cn(
@@ -174,7 +174,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         (variant === "default" || variant === "advisory") &&
           "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" || variant === "tax-advisory") &&
-          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd] xl:p-[25px_25px_40px] 2xl:p-6.25 3xl:p-7.5 ",
         variant === "spv" &&
           "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
       )}
@@ -195,7 +195,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         {item?.title}
       </div>
       {item?.description && (
-        <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+        <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
           {parse(item?.description)}
         </div>
       )}
