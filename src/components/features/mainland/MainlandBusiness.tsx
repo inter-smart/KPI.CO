@@ -32,7 +32,7 @@ export default function MainlandBusiness({
         <Heading
           as="h2"
           size="h2"
-          className="text-[28px] lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
+          className="text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
         >
           {parse(data.title)}
         </Heading>
@@ -57,14 +57,14 @@ export default function MainlandBusiness({
               <Heading
                 as="h2"
                 size="h2"
-                className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
+                className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:!text-[48px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[625px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden"
               >
                 {parse(data.title)}
               </Heading>
 
               <div
                 className={cn(
-                  "text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0",
+                  "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0",
                   hasVariant(variant, "hamriya") && "mb-0",
                 )}
               >
@@ -73,7 +73,7 @@ export default function MainlandBusiness({
 
               <div
                 className={cn(
-                  "w-full mb-[30px]",
+                  "w-full max-md:mb-[30px]",
                   hasVariant(variant, "hamriya") && "mb-0",
                   hasVariant(variant, "dafza") && "mb-0",
                 )}
@@ -81,15 +81,15 @@ export default function MainlandBusiness({
                 {data.highlightsTitle && (
                   <Text
                     size="p2"
-                    className="lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
+                    className="lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
                   >
                     {data.highlightsTitle}
                   </Text>
                 )}
-                <div className="flex flex-col gap-3.5">
+                <div className="flex flex-col">
                   {data.highlights.map((item, index) => (
-                    <div key={index} className="flex">
-                      <div className="flex sm:items-center gap-2 px-2.5 2xl:px-3 3xl:px-5 py-2  bg-[#E2F5FF] rounded-[12px] md:rounded-[16px]">
+                    <div key={index} className="flex mb-[15px] last-of-type:mb-0">
+                      <div className="flex sm:items-center gap-2 px-[13px] 2xl:px-3 3xl:px-5 py-[8px]  bg-[#E2F5FF] rounded-[12px] md:rounded-[16px]">
                         <div
                           className={cn(
                             "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
@@ -105,7 +105,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] lg:text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
+                        <span className="text-[14px] lg:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
                           {item}
                         </span>
                       </div>
@@ -134,7 +134,7 @@ export default function MainlandBusiness({
               variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
             )}
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[10px] overflow-hidden">
+            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}
