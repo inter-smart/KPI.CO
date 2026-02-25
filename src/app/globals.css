@@ -100,7 +100,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --header-y: var(--header-y-sm);
-
+    overflow-x: hidden;
     font-family:
       var(--font-poppins),
       system-ui,
