@@ -27,7 +27,7 @@ export default function BlogHero({ data }: BlogHeroProps) {
                     <Heading
                         as="h1"
                         size="h1"
-                        className="text-white font-bold mb-6 !leading-[1.1] animate-in fade-in slide-in-from-bottom-12 duration-1000"
+                        className="text-white font-bold mb-6 !leading-[1.1] "
                     >
                         {data.title}
                     </Heading>

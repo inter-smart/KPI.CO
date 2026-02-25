@@ -13,6 +13,7 @@ type CorporateServicesUaeBankingProps = {
     description: string;
     partners: BankingPartner[];
   };
+
   variant?:
     | "default"
     | "mainland"
@@ -22,6 +23,8 @@ type CorporateServicesUaeBankingProps = {
     | "dmcc"
     | "ifza"
     | "company"
+    | "freezone-business"
+    | "downshadow"
     | "audit";
 };
 
@@ -47,8 +50,10 @@ export default function CorporateServicesUaeBanking({
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 
         variant === "audit" && "!pt-1 shadow-none",
+        variant === "freezone-business" && "shadow-none",
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && "!pt-5 shadow-none",
+        variant === "downshadow" && "!pt-5 shadow-none",
       )}
     >
       <div className="container">
@@ -61,7 +66,9 @@ export default function CorporateServicesUaeBanking({
               variant === "dmcc" ||
               variant === "company" ||
               variant === "ifza" ||
-              variant === "audit"
+              variant === "freezone-business" ||
+              variant === "audit" ||
+              variant === "downshadow"
               ? "text-left"
               : "sm:text-center",
           )}
@@ -80,19 +87,27 @@ export default function CorporateServicesUaeBanking({
                 ? ""
                 : variant === "freezone" ||
                     variant === "dsoa" ||
+                    variant === "freezone-business" ||
                     variant === "dmcc"
                   ? "text-left"
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "saifz" && "text-left !max-w-full",
               variant === "company" && "text-left !max-w-full ",
               variant === "ifza" && "text-left !max-w-full ",
+              variant === "downshadow" && "text-left !max-w-full ",
             )}
           >
             {parse(data?.description)}
           </div>
         </div>
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75">
+          <div
+            className={cn(
+              "flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75",
+              variant === "downshadow" &&
+                "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
+            )}
+          >
             {data?.partners?.map((item) => (
               <div
                 key={`affiliation-${item?.id}`}

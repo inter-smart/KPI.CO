@@ -106,6 +106,7 @@ export type FaqItem = {
 export type MeydanFreeZoneItem = {
   id: number;
   title: string;
+  highlightsText: string;
   zone_list: string[];
 };
 
@@ -174,6 +175,7 @@ const localData = {
       {
         id: 1,
         title: "Meydan Free Zone is suitable if you:",
+        highlightsText: "",
         zone_list: [
           "Want 100% foreign ownership",
           "Prefer a fast, digital setup process",
@@ -185,6 +187,7 @@ const localData = {
       {
         id: 2,
         title: "Meydan Free Zone may not be suitable if you:",
+        highlightsText: "",
         zone_list: [
           "Need direct UAE mainland market access (no branch conversion)",
           "Require heavy industrial facilities or large warehousing",

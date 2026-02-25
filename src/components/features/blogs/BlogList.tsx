@@ -98,7 +98,7 @@ export default function BlogList({ data }: BlogListProps) {
   };
 
     return (
-        <section ref={topRef} className="w-full py-[30px] md:py-[40px] xl:py-[60px] 2xl:py-[75px] 3xl:py-[85px] bg-white">
+        <section ref={topRef} className="w-full py-[30px] md:py-[40px] xl:py-[64px] 2xl:py-[75px] 3xl:py-[85px] bg-white">
             <div className="container">
                 {/* Section Header */}
                 <Heading as="h1" size="h1" className="text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold">
@@ -182,7 +182,7 @@ export default function BlogList({ data }: BlogListProps) {
             ))}
 
                         {/* Special CTA Card (Position 6) */}
-                        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[450px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
+                        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[477px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
                             <div className="position absolute top-0 left-0 w-full h-full">
                                 <Image src="/images/blogBg.jpg" className="w-full h-full object-cover" width="375" height="235" alt="bannerBg" />
                             </div>
@@ -328,7 +328,7 @@ function BlogCard({ data }: BlogCardProps) {
                 <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide">
                     {data.date} • {data.readTime}
                 </div>
-                <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black group-hover:text-[#1C5396] mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
+                <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
                     {parse(data.title)}
                 </h3>
                 <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-[25px] md:leading-[27px] 2xl:leading-[28px] 3xl:leading-[33px] mb-6">
