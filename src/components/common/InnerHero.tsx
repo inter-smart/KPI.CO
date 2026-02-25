@@ -93,7 +93,7 @@ export default function InnerHero({
                 "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
                 variant === "ADGM-Foundations" &&
-                  "leading-[1.6] xl:mb-[40px] 2xl:mb-[50px]",
+                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
               )}
             >
               {parse(data?.description)}

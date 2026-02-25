@@ -47,7 +47,7 @@ export default function MainlandBusiness({
         >
           {parse(data.title)}
         </Heading>
-        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5 2xl:gap-4">
+        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5">
           {/* Left Content */}
           <div
             className={cn(
@@ -55,6 +55,8 @@ export default function MainlandBusiness({
               hasVariant(variant, "spv") || hasVariant(variant, "rakez")
                 ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+              hasVariant(variant, "ADGM-Foundations") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[40px]",
             )}
           >
             <div
@@ -63,6 +65,7 @@ export default function MainlandBusiness({
                 hasVariant(variant, "spv") || hasVariant(variant, "rakez")
                   ? "max-w-[93%] 3xl:max-w-[100%]"
                   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
               )}
             >
               <Heading
@@ -93,20 +96,28 @@ export default function MainlandBusiness({
                 {data.highlightsTitle && (
                   <Text
                     size="p2"
-                    className="lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]"
+                    className={cn(
+                      "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]",
+                      variant === "ADGM-Foundations" &&
+                        "mb-[20px] sm:mb-[25px]",
+                    )}
                   >
                     {data.highlightsTitle}
                   </Text>
                 )}
                 <div className="flex flex-col">
                   {data.highlights.map((item, index) => (
-                    <div key={index} className="flex mb-[15px] last-of-type:mb-0">
-                      <div className="flex sm:items-center gap-2 px-[13px] 2xl:px-3 3xl:px-5 py-[8px]  bg-[#E2F5FF] rounded-[12px] md:rounded-[16px]">
+                    <div
+                      key={index}
+                      className="flex mb-[15px] last-of-type:mb-0"
+                    >
+                      <div className="flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                         <div
                           className={cn(
                             "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
-                              "max-sm:min-h-[378px]",
+                            "max-sm:min-h-[378px]",
+                            hasVariant(variant, "ADGM-Foundations") && "xl:w-[17px]",
                           )}
                         >
                           <Image
@@ -117,7 +128,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] lg:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
+                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
                           {item}
                         </span>
                       </div>
@@ -143,6 +154,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
+              variant === "ADGM-Foundations" && "xl:w-[520px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
