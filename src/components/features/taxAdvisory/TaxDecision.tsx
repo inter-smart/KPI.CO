@@ -25,7 +25,7 @@ type TaxDecisionProps = {
 
 export default function TaxDecision({ data }: TaxDecisionProps) {
   return (
-    <section className="relative py-[88px] lg:py-[55px] xl:py-[70px] 2xl:py-[85px] 3xl:py-[110px]  ">
+    <section className="relative max-sm:px-[30px] py-[85px] lg:py-[55px] xl:py-[70px] 2xl:py-[85px] 3xl:py-[110px]  ">
       <div
         className={cn(
           "w-full h-full aspect-square pointer-events-none absolute -z-1 inset-0",

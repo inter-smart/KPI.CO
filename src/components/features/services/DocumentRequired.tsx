@@ -97,7 +97,7 @@ export default function DocumentRequired({
                   )}
                 </div>
                 {data?.description && (
-                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
+                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
                     {parse(data.description)}
                   </div>
                 )}
@@ -109,16 +109,16 @@ export default function DocumentRequired({
                   item.type === "heading" ? (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] first:mt-0"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] first:mt-0"
                     >
                       {parse(item.text)}
                     </li>
                   ) : (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
                     >
-                      <span className="absolute inset-0 w-[16px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] right-auto top-[4px] 2xl:top-[6px]">
+                      <span className="absolute inset-0 w-[16px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-0 bottom-0 m-auto left-0 right-auto">
 
                         {(variant === "hamriya" || variant === "aup") && (
                           <>
@@ -207,7 +207,7 @@ export default function DocumentRequired({
             )}
 
             {data?.ftr_description && (
-              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+              <div className="mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                 {parse(data.ftr_description)}
               </div>
             )}
@@ -255,7 +255,7 @@ export default function DocumentRequired({
                   >
                     {item.title}
                   </div>
-                  <div className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px]  lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
+                  <div className="text-[14px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px]  lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
                     {/* {item.description} */}
                     {parse(item?.description)}
                   </div>
