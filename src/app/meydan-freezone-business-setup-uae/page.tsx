@@ -145,9 +145,9 @@ const localData = {
       mobilePath: "/images/meydan-inner-hero-mobile.svg",
       alt: "Meydan Free Zone Company Formation",
     },
-    title: "Meydan Free Zone Company Formation",
+    title: "Meydan Free Zone Company <br> Formation",
     description:
-      "<p>Set up your business in Meydan Free Zone, Dubai, with 100% foreign ownership and fast digital licensing. A strategic location for startups, SMEs, and international businesses.</p>",
+      "<p>Set up your business in Meydan Free Zone, Dubai, with 100% foreign ownership and fast digital <br> licensing. A strategic location for startups, SMEs, and international businesses.</p>",
   } satisfies HeroData,
   mainlandBusiness: {
     title: "Start a Business in Meydan Free Zone, UAE",
@@ -458,11 +458,11 @@ const localData = {
     ],
   } satisfies MeydanKeyBenefitsData,
 };
-  
+
 export default function MainlandCompanyFormationUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="saifz" />
+      <InnerHero data={localData.hero} variant="meydan" />
       <MainlandBusiness data={localData.mainlandBusiness} />
       <MeydanFreeZone data={localData.meydanFreeZone} variant="default" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
