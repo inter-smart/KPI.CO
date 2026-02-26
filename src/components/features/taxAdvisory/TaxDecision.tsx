@@ -55,7 +55,7 @@ export default function TaxDecision({ data }: TaxDecisionProps) {
             >             
                  {parse(data?.title ?? "")}
             </Heading>
-            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden">
+            <div className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden">
               {parse(data?.description ?? "")}
             </div>
           </div>
