@@ -32,7 +32,7 @@ export default function CorporateServicesUaeCta({
         "w-full h-auto block",
         variant === "mainland"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[80px_55px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
-          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",)}>
+          : "py-10 lg:py-13 xl:py-[70px_45px] 2xl:py-17 3xl:py-22",)}>
 
       <div className="container">
         <div
@@ -81,7 +81,7 @@ export default function CorporateServicesUaeCta({
             >
               {parse(data?.title)}
             </Heading>
-            <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal [&_p]:leading-relaxed text-white max-md:[&_br]:hidden">
+            <div className="text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-medium [&_p]:leading-relaxed text-white max-md:[&_br]:hidden">
               {parse(data?.description)}
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
+                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[22px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "ADGM-Foundations" &&

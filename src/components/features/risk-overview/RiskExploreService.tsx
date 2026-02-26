@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "risk";
+  variant?: "difc" | "default" | "risk" | "holding";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "risk";
+  variant?: "difc" | "default" | "risk" | "holding";
 };
 
 export default function RiskExploreService({
@@ -82,10 +82,11 @@ export default function RiskExploreService({
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "min-w-0 select-none",
-                    variant === "difc"
-                      ? "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]" 
-                      : "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]", 
+                    "min-w-0 select-none lex-[0_0_55%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]",
+                    variant === "difc" &&
+                     "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "holding" &&
+                     "flex-[0_0_82%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   )}
                 >
                   <Service data={item} variant="risk"  />
@@ -95,7 +96,7 @@ export default function RiskExploreService({
           </div>
         </div>
         {data.items.length > 4 && (
-          <div className="flex justify-center gap-[10px] xl:gap-[20px] 3xl:gap-[30px] mt-4 xl:mt-6 ">
+          <div className="flex justify-center gap-[10px] xl:gap-[20px] 3xl:gap-[30px] mt-4 xl:mt-6">
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
