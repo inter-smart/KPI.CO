@@ -107,13 +107,13 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/holding-bg.jpg",
+      desktopPath: "/images/holding-bg.svg",
       mobilePath: "/images/holding-bg-mobile.jpg",
       alt: "ADGM Holding Companies Built For Control And Clarity",
     },
     title: "ADGM Holding Companies Built  <br/>for Control and Clarity ",
     description:
-      "<p>ADGM holding companies are used to own and control subsidiaries, investments, and assets within a single, regulated structure. They provide clarity at the ownership level while separating strategic control from operational risk. KPI advises on the formation and structuring of ADGM  holding companies with a focus on governance integrity, regulatory acceptance, and long-term usability.</p>",
+      "<p>ADGM holding companies are used to own and control subsidiaries, <br/>investments, and assets within a single, regulated structure. They provide<br/> clarity at the ownership level while separating strategic control from<br/> operational risk. KPI advises on the formation and structuring of ADGM <br/>  holding companies with a focus on governance integrity, regulatory <br/>acceptance, and long-term usability.</p>",
   } satisfies HeroData,
 
   riskAdvisory: {
@@ -156,7 +156,7 @@ const localData = {
     ],
   } satisfies RiskAdvisoryDta,
   riskOrganisation: {
-    title: "Why ADGM for Holding Companies",
+    title: "Why ADGM For Holding Companies",
     description:
       "<p>ADGM offers distinct advantages for structured ownership: </p>",
     items: [
@@ -210,6 +210,7 @@ const localData = {
           "Shareholding and control mechanics",
           "Governance design aligned with real decision-making",
           "Regulatory positioning within ADGM",
+          "Practical considerations around audit, reporting, and banking",
         ],
       },
       {
@@ -230,7 +231,7 @@ const localData = {
     structure_list: [],
   } satisfies MeydanFreeZoneData,
   common_use_data: {
-    title: "Common Use Cases for ADGM <br/> Holding Companies",
+    title: "Common Use Cases For ADGM <br/> Holding Companies",
     description: "<p>A holding company is typically used when: </p>",
     items: [
       {
@@ -262,7 +263,7 @@ const localData = {
       alt: "Common Use Cases for ADGM Holding Companies",
     },
     ftr_description:
-      "In these cases, a holding company simplifies control, oversight, and <br/> decision-making.",
+      "In these cases, a holding company simplifies control, oversight, and  decision-making.",
   } satisfies DocumentRequiredData,
   whyChoose: {
     title: "Why Choose KPI for ADGM Holding Companies",
@@ -301,7 +302,7 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "Special Purpose Vehicles (SPVs)",
         },
         title: "Special Purpose Vehicles<br/> (SPVs)",
@@ -310,7 +311,7 @@ const localData = {
       {
         id: 2,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "SPV Foundations in ADGM",
         },
         title: "SPV Foundations in<br/> ADGM",
@@ -319,7 +320,7 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/explore-01.jpg",
+          path: "/images/related-img.jpg",
           alt: "Company Formation in ADGM",
         },
         title: "Company Formation in <br/> ADGM",
@@ -336,7 +337,7 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-holding.png",
+      overlay: "/images/overlay-holding.svg",
       overlayMobile: "/images/overlay-holding-mobile.png",
     },
   } satisfies CtaData,
@@ -416,8 +417,8 @@ export default function DwtcFreezone() {
         data={localData.whyChoose}
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} />
+      <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
+      <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>
   );

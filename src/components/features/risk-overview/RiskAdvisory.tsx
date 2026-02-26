@@ -51,11 +51,11 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             <Heading
               as="h3"
               size="h3"
-              className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+              className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
               {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
+            <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
@@ -65,14 +65,14 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
 
             <div className="flex flex-row gap-3">
-              <div className="text-[16px] lg:text-[14px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
+              <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                 {parse(data.highlightsText)}
               </div>
             </div>
           </div>
 
           <div className="w-full lg:w-[51%] 2xl:w-[55%] 2xl:w-[49%]">
-            <div className="h-full flex items-center justify-center bg-[rgba(143,216,254,10%)] rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (
@@ -95,7 +95,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                     >
                       <div
                         className={cn(
-                          "w-full text-[16px] md:text-[18px] xl:text-[23px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
+                          "w-full text-[16px] md:text-[18px] xl:text-[25px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
                           hasVariant(variant, "difc")
                             ? "text-[#5280CA]"
                             : "text-[#5280CA]",
@@ -104,7 +104,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
 
-                      <div className="text-[14px] lg:text-[13px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item.description)}
                       </div>
                     </div>
