@@ -63,13 +63,13 @@ export default function CorporateServicesUaeFaq({
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]"
                   )}
                 >
-                  <div className="text-[16px] lg:text-[18px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
+                  <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
                     {parse(item?.title)}
                   </div>
                 </AccordionTrigger>
 
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] 2xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
+                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>

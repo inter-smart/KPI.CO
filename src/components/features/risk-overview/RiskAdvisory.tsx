@@ -39,49 +39,47 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
     );
 
   return (
-    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
+    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[50px_70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
       <div className="container">
         <div
           className={cn(
-            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[80px]",
+            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[80px] 3xl:gap-[80px]",
             hasVariant(variant, "center") && "items-center",
           )}
         >
-          <div className="w-full lg:w-[49%] 2xl:w-[45%] 3xl:w-[51%]">
+          <div className="w-full lg:w-[49%] xl:w-[calc(100%-590px)] xl:pr-[50px]">
             <Heading
               as="h3"
               size="h3"
-              className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] font-semibold capitalize text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+              className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
               {parse(data.title)}
             </Heading>
-            <div className="max-w-[520px]">
-              <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]  max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
-                {parse(
-                  data?.description?.replace(
-                    /<\/p>\s*$/,
-                    ' <span class="text-[#5280CA] text-[18px] font-bold">→</span></p>',
-                  ) || "",
-                )}
-              </div>
+            <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
+              {parse(
+                data?.description?.replace(
+                  /<\/p>\s*$/,
+                  ' <span class="text-[#5280CA] text-[18px] font-bold">→</span></p>',
+                ) || "",
+              )}
+            </div>
 
-              <div className="flex flex-row gap-3">
-                <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
-                  {parse(data.highlightsText)}
-                </div>
+            <div className="flex flex-row gap-3">
+              <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
+                {parse(data.highlightsText)}
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-[51%] 2xl:w-[55%] 2xl:w-[49%]">
-            <div className="h-full flex items-center justify-center bg-[rgba(143,216,254,0.1)] rounded-[15px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+          <div className="w-full lg:w-[51%] xl:w-[590px]">
+            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (
                     <div
                       key={`item-${item.id ?? index}`}
                       className={cn(
-                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_35px_40px] 3xl:p-[10px_20px_30px_40px]",
+                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                         hasVariant(variant, "difc")
                           ? cn(
                             "border-[#DEDEDE]",
@@ -106,7 +104,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
 
-                      <div className="text-[14px] lg:text-[13px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item.description)}
                       </div>
                     </div>

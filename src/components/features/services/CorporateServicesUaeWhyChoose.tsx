@@ -23,15 +23,15 @@ export type CorporateServicesUaeWhyChooseData = {
 
 export type CorporateServicesUaeWhyChooseProps = {
   variant?:
-    | "default"
-    | "mainland"
-    | "advisory"
-    | "freezone-business"
-    | "risk"
-    | "tax-advisory"
-    | "sop"
-    | "regulatory"
-    | "spv";
+  | "default"
+  | "mainland"
+  | "advisory"
+  | "freezone-business"
+  | "risk"
+  | "tax-advisory"
+  | "sop"
+  | "regulatory"
+  | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
@@ -39,15 +39,15 @@ export type CorporateServicesUaeWhyChooseProps = {
 type ServiceCardProps = {
   item: WhyChooseItem;
   variant?:
-    | "default"
-    | "mainland"
-    | "advisory"
-    | "risk"
-    | "freezone-business"
-    | "tax-advisory"
-    | "sop"
-    | "regulatory"
-    | "spv";
+  | "default"
+  | "mainland"
+  | "advisory"
+  | "risk"
+  | "freezone-business"
+  | "tax-advisory"
+  | "sop"
+  | "regulatory"
+  | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -64,11 +64,11 @@ export default function CorporateServicesUaeWhyChoose({
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   return (
-    <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
+    <section className="w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[55px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block">
       <div className="container">
         <div
           className={cn(
-            "w-full h-auto mb-6 sm:mb-8 lg:mb-6 2xl:mb-8 3xl:mb-16",
+            "w-full h-auto ",
             variant === "mainland" ||
               variant === "advisory" ||
               variant === "risk" ||
@@ -80,7 +80,7 @@ export default function CorporateServicesUaeWhyChoose({
               ? "text-left"
               : "sm:text-center",
             variant === "regulatory" &&
-              "mb-[20px] lg:mb-[25px] 2xl:mb-[30px] 3xl:mb-[25px]",
+            "",
           )}
         >
           <Heading
@@ -120,7 +120,7 @@ export default function CorporateServicesUaeWhyChoose({
                 </div>
               ))}
             </div>
-            <div className="flex justify-center items-center mt-6 gap-1.5 sm:hidden">
+            <div className="flex justify-center items-center mt-6 gap-[30px] sm:hidden">
               {scrollSnaps.map((_, index) => {
                 const distance = Math.abs(index - selectedIndex);
                 return (
@@ -164,41 +164,43 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full p-[20px_24px] lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]  ",
+        "w-full h-full p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[145px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] ",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "freezone-business" &&
-          "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "sop" ||
-          (variant === "regulatory" &&
-            "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]"),
+        (variant === "regulatory" &&
+          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]"),
         (variant === "default" || variant === "advisory") &&
-          "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
+        "before:bg-gradient-to-t before:from-[#6A9FE0] before:to-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" || variant === "tax-advisory") &&
-          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd]",
+        "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd] xl:p-[25px_25px_40px] 2xl:p-6.25 3xl:p-7.5 ",
         variant === "spv" &&
-          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
+        "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
       )}
     >
-      <div
-        className={cn(
-          "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5",
-          variant === "mainland" && "text-[#1C5396]",
-          variant === "risk" && "text-[#1C5396]",
-          variant === "advisory" && "text-[#1C5396]",
-          variant === "freezone-business" && "text-[#1C5396]",
-          variant === "spv" && "text-[#1C5396]",
-          variant === "tax-advisory" && "text-[#1C5396] capitalize",
-          variant === "sop" || (variant === "regulatory" && "text-[#1C5396]"),
-          variant === "default" && "text-black",
-        )}
-      >
-        {item?.title}
-      </div>
-      {item?.description && (
-        <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
-          {parse(item?.description)}
+      <div className="w-full h-full relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:content-[''] before:bg-[#f9fafb] before:-z-1">
+        <div
+          className={cn(
+            "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 re ",
+            variant === "mainland" && "text-[#1C5396]",
+            variant === "risk" && "text-[#1C5396]",
+            variant === "advisory" && "text-[#1C5396]",
+            variant === "freezone-business" && "text-[#1C5396]",
+            variant === "spv" && "text-[#1C5396]",
+            variant === "tax-advisory" && "text-[#1C5396] capitalize",
+            variant === "sop" || (variant === "regulatory" && "text-[#1C5396]"),
+            variant === "default" && "text-black",
+          )}
+        >
+          {item?.title}
         </div>
-      )}
+        {item?.description && (
+          <div className="text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+            {parse(item?.description)}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

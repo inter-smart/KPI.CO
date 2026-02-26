@@ -19,15 +19,15 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
   const items = data?.items ?? [];
 
   return (
-    <section className={cn("w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
+    <section className={cn("w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[75px] 2xl:pb-[85px] 3xl:pb-[105px]",
 
       variant === "dwtc" && "bg-[#F9FAFB]"
     )}>
       <div className="container">
-        <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]", (variant === "freezone") || (variant === "dwtc") && "items-end",)}>
+        <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[35px] xl:gap-[40px] 2xl:gap-[57px] 3xl:gap-[75px]", (variant === "freezone") || (variant === "dwtc") && "items-end",)}>
           <div className="w-full md:w-[57%] xl:w-[60%]">
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%]">
+              <div className="max-w-[100%]">
                 {data?.title && (
                   <Heading
                     as="h2"
@@ -39,7 +39,7 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                 )}
 
                 {data?.description && (
-                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
+                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 3xl:[&_p]:mb-[35px]">
                     {parse(data.description)}
                   </div>
                 )}
@@ -47,13 +47,13 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
 
             {items.length > 0 && (
-              <ul className="space-y-4 lg:space-y-5 2xl:space-y-6">
+              <ul className="space-y-4 lg:space-y-4 xl:space-y-3.5 2xl:space-y-6">
                 {items.map((item) => (
                   <li
                     key={item.id}
-                    className="relative pl-[25px] 3xl:pl-[35px] text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E]"
+                    className="relative pl-[25px] xl:pl-[32px] 3xl:pl-[35px] text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.3] text-[#4E4E4E]"
                   >
-                    <span className="absolute left-0 top-[6px] w-[14px] h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[23px] 3xl:h-[23px]">
+                    <span className="absolute left-0 top-[6px] xl:top-[2px] 3xl:top-[5px] w-[14px] h-[14px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] 3xl:h-[23px]">
                       <svg
                         width="100%"
                         height="100%"
@@ -67,14 +67,14 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
                         />
                       </svg>
                     </span>
-                    {item.text}
+                    {parse(item.text)}
                   </li>
                 ))}
               </ul>
             )}
 
             {data?.ftr_description && (
-              <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] leading-normal text-[#4E4E4E] mt-6 lg:mt-7 2xl:mt-8 max-w-[90%]">
+              <div className="text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]">
                 {parse(data.ftr_description)}
               </div>
             )}
