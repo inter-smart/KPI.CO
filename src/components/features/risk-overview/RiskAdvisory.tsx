@@ -39,15 +39,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
     );
 
   return (
-    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
+    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[50px_70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
       <div className="container">
         <div
           className={cn(
-            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[60px] 2xl:gap-[80px] 3xl:gap-[80px]",
+            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[80px] 3xl:gap-[80px]",
             hasVariant(variant, "center") && "items-center",
           )}
         >
-          <div className="w-full lg:w-[49%] 2xl:w-[45%] 3xl:w-[51%]">
+          <div className="w-full lg:w-[49%] xl:w-[calc(100%-590px)] xl:pr-[50px]">
             <Heading
               as="h3"
               size="h3"
@@ -71,15 +71,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
           </div>
 
-          <div className="w-full lg:w-[51%] 2xl:w-[55%] 2xl:w-[49%]">
-            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[9px] lg:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+          <div className="w-full lg:w-[51%] xl:w-[590px]">
+            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (
                     <div
                       key={`item-${item.id ?? index}`}
                       className={cn(
-                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[10px_20px_20px_40px] 3xl:p-[10px_20px_30px_40px]",
+                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                         hasVariant(variant, "difc")
                           ? cn(
                               "border-[#DEDEDE]",

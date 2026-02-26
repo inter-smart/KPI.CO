@@ -48,13 +48,13 @@ export default function CorporateServicesUaeFaq({
           <Heading
             as="h2"
             size="h2"
-            className="text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
+            className="text-center text-[#1C5396] lg:mb-8.75 xl:mb-[35px]  2xl:mb-10 3xl:mb-13"
           >
             {data?.title}
           </Heading>
         </div>
 
-        <div className="w-full lg:max-w-178 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
+        <div className="w-full lg:max-w-178 xl:w-[70%] 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
           <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem

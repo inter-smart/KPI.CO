@@ -67,7 +67,7 @@ export default function RiskExploreService({
         <Heading
           as="h2"
           size="h2"
-          className="text-[#1c5396] mb-4 lg:mb-6 xl:mb-8 3xl:mb-9 animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className="text-[#1c5396] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000"
         >
           {data.title}
         </Heading>

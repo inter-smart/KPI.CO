@@ -46,7 +46,7 @@ export default function RiskOrganisation({
             {(data?.title || data?.description) && (
               <div
                 className={cn(
-                  "mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%])}",
+                  "max-w-[90%])}",
                   variant === "ADGM-Foundation" &&
                     "max-sm:mb-[30px] xl:mb-[30px]",
                 )}
@@ -78,7 +78,7 @@ export default function RiskOrganisation({
             {items.length > 0 && (
               <ul
                 className={cn(
-                  "space-y-4 lg:space-y-5 2xl:space-y-6",
+                  "space-y-4 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
                   variant === "ADGM-Foundation" && "xl:space-y-[20px]",
                 )}
               >

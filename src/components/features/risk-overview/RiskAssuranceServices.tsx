@@ -50,13 +50,13 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
     [emblaApi],
   );
   return (
-    <section className="w-full py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]">
+    <section className="w-full py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]">
       <div className="container">
-        <div className="w-full mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
+        <div className="w-full">
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10"
+            className="text-[#1C5396] mb-25px] xl:mb-[30px]"
           >
             {data?.title}
           </Heading>
@@ -65,11 +65,11 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
           </div>
         </div>
 
-        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 2xl:gap-7.5 3xl:gap-9">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 2xl:gap-7.5 3xl:gap-9">
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
-              <div className="group [--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:58px] w-full h-full p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex">
-                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 2xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
+              <div className="group [--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 2xl:[--icon-size:45px] 3xl:[--icon-size:58px] w-full h-full p-6.25 lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[10px] border-1 border-[#E2E2E2] flex">
+                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
                   <Image
                     src={item?.media?.path}
                     alt={item?.media?.alt}
@@ -78,11 +78,11 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 2xl:pl-3.75 3xl:pl-5">
-                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-1.5 lg:mb-1.75 3xl:mb-3">
+                <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 xl:pl-[20px] 2xl:pl-3.75 3xl:pl-5">
+                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-[10px]">
                     {item?.title}
                   </div>
-                  <p className="text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]">
+                  <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]">
                     {parse(item?.description)}
                   </p>
                 </div>
@@ -99,7 +99,8 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
               {data.items.map((item) => (
                 <div
                   key={`insight-${item.id}`}
-                  className="flex-[0_0_100%] min-w-0 select-none">
+                  className="flex-[0_0_100%] min-w-0 select-none"
+                >
                   <div key={item?.id} className="w-full h-auto block">
                     <div className="group [--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex">
                       <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 2xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center  ">
@@ -112,10 +113,10 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
                         />
                       </div>
                       <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 2xl:pl-3.75 3xl:pl-5">
-                        <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-1.5 lg:mb-1.75 3xl:mb-3">
+                        <div className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-[10px] 3xl:mb-3">
                           {item?.title}
                         </div>
-                        <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]">
+                        <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]">
                           {item?.description}
                         </p>
                       </div>

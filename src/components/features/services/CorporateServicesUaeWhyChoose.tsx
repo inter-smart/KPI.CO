@@ -76,7 +76,7 @@ export default function CorporateServicesUaeWhyChoose({
       <div className="container">
         <div
           className={cn(
-            "w-full h-auto mb-6 sm:mb-8 lg:mb-6 2xl:mb-8 3xl:mb-16",
+            "w-full h-auto ",
             variant === "mainland" ||
               variant === "advisory" ||
               variant === "risk" ||
@@ -130,7 +130,7 @@ export default function CorporateServicesUaeWhyChoose({
                 </div>
               ))}
             </div>
-            <div className="flex justify-center items-center mt-6 gap-1.5 sm:hidden">
+            <div className="flex justify-center items-center mt-6 gap-[30px] sm:hidden">
               {scrollSnaps.map((_, index) => {
                 const distance = Math.abs(index - selectedIndex);
                 return (
@@ -190,7 +190,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           variant === "ADGM-Foundation") &&
           "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "spv" &&
-          "before:bg-gradient-to-b before:from-[#8fb4e0] before:to-[#1756a3] after:bg-[#F9FAFB]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
       )}
     >
       <div
@@ -209,16 +209,22 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
       >
         {item?.title}
       </div>
+
       {item?.description && (
-        <div
-          className={cn(
-            "text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
-            variant === "ADGM-Foundation" &&
-              "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
-          )}
-        >
-          {parse(item?.description)}
-        </div>
+        <>
+          <div
+            className={cn(
+              "text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+              variant === "ADGM-Foundation" &&
+                "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
+            )}
+          >
+            {parse(item?.description)}
+          </div>
+          {/* <div className="text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+            {parse(item?.description)}
+          </div> */}
+        </>
       )}
     </div>
   );
