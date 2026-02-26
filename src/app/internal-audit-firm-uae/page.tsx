@@ -105,7 +105,6 @@ export type InsightItem = {
   slug: string;
 };
 
-
 const localData = {
   hero: {
     id: 1,
@@ -392,18 +391,18 @@ const localData = {
     ] satisfies FaqItem[],
   },
   related_blog: {
-      title: " Our Insights ",
-      items: blogData.slice(0, 3).map((blog) => ({
-        id: blog.id,
-        media: blog.media,
-        title: blog.title,
-        description: blog.description,
-        date: blog.date,
-        readTime: blog.readTime,
-        slug: `/blog/${blog.slug}`,
-      })),
-    },
-  
+    title: " Our Insights ",
+    items: blogData.slice(0, 3).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      date_full: blog.date_full,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
+  },
 };
 
 export const metadata: Metadata = {
@@ -422,10 +421,7 @@ export default function InternalAudit() {
         variant="aup"
         data={localData.ProcessStep}
       />
-      <CorporateServicesUaeBanking
-        variant="audit"
-        data={localData.banking}
-      />
+      <CorporateServicesUaeBanking variant="audit" data={localData.banking} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
         variant="risk"
@@ -433,7 +429,7 @@ export default function InternalAudit() {
       <HomeCounter data={localData.counterList} />
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
-       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />
     </>
   );

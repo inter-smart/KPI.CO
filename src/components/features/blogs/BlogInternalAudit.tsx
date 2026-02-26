@@ -36,14 +36,20 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
           >
             {data?.title}
           </Heading>
-
-          <Text
-            size="p1"
-            className="leading-none md:text-center font-medium text-[#4E4E4E] uppercase"
+          {data.date_full && (
+            <Text
+              size="p1"
+              className="leading-none md:text-center font-medium text-[#4E4E4E] uppercase"
+            >
+              {data.date_full} • {data.readTime}
+            </Text>
+          )}
+          <div
+            className={cn(
+              "typography",
+              "[--text-color:#282828] md:text-center",
+            )}
           >
-            {data.date_full} • {data.readTime}
-          </Text>
-          <div className={cn("typography", "[--text-color:#282828] md:text-center")}>
             {data?.description}
           </div>
         </div>

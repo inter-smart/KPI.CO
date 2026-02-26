@@ -155,7 +155,8 @@ const localData = {
       {
         id: 2,
         slNo: 2,
-        description: "FSRA Rulebooks and <br/> prescribed reporting <br/> requirements",
+        description:
+          "FSRA Rulebooks and <br/> prescribed reporting <br/> requirements",
       },
       {
         id: 3,
@@ -241,9 +242,8 @@ const localData = {
   } satisfies MeydanFreeZoneData,
   whyChoose: {
     title: "Why ADGM Entities Trust KPI",
-    description:
-      "",
-      sub_title: "",
+    description: "",
+    sub_title: "",
     items: [
       {
         id: 1,
@@ -365,6 +365,7 @@ const localData = {
       title: blog.title,
       description: blog.description,
       date: blog.date,
+      date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
@@ -385,9 +386,9 @@ export default function DwtcFreezone() {
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       {/* <RiskApproach variant="mainland" data={localData.approachProcess} /> */}
       <CorporateServicesUaeFormationProcess
-              variant="aup"
-              data={localData.approachProcess}
-            />
+        variant="aup"
+        data={localData.approachProcess}
+      />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
