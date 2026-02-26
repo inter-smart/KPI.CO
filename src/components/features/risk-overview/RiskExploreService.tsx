@@ -78,7 +78,7 @@ export default function RiskExploreService({
           >
             <div
               className={cn(
-                "flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-2 lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
+                "flex touch-pan-y touch-pinch-zoom -mx-[12px] lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-[12px] lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
                 variant === "ADGM-Foundations" &&
                   "max-sm:!-mx-[13px] max-sm:[&>*]:!p-[13px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
               )}
