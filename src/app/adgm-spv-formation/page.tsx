@@ -257,9 +257,9 @@ const localData = {
     ] satisfies WhyChooseItem[],
   },
   contactUs: {
-    title: "Discuss Your ADGM SPV Requirements",
+    title: "Discuss Your ADGM SPV <br/> Requirements",
     description:
-      "<p>If you are structuring assets, investments, or ownership through an SPV, <br/> we can help you design a structure that works today and as it evolves.</p>",
+      "<p>If you are structuring assets, investments, or ownership through an SPV,  we can help you design a structure that works today and as it evolves.</p>",
     button: {
       label: "Get In Touch",
       link: "/contact",

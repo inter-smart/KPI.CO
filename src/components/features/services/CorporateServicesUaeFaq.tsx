@@ -50,7 +50,7 @@ export default function CorporateServicesUaeFaq({
           </Heading>
         </div>
 
-        <div className="w-full lg:max-w-178 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
+        <div className="w-full lg:max-w-178 xl:w-[70%] 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
           <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem

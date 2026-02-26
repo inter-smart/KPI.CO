@@ -51,9 +51,9 @@ export default function MainlandBusiness({
           {/* Left Content */}
           <div
             className={cn(
-              "w-full lg:w-[calc(100%-365px)]",
+              "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
               hasVariant(variant, "spv") || hasVariant(variant, "rakez")
-                ? "xl:w-[calc(100%-510px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
+                ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[40px]",
@@ -72,7 +72,7 @@ export default function MainlandBusiness({
                 as="h2"
                 size="h2"
                 className={cn(
-                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:!text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
+                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                 )}
               >
@@ -153,7 +153,7 @@ export default function MainlandBusiness({
           <div
             className={cn(
               "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
-              variant === "spv" && "xl:w-[510px] 2xl:w-[550px] 3xl:w-[690px]",
+              variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
               variant === "ADGM-Foundations" && "xl:w-[520px]",
             )}
           >
