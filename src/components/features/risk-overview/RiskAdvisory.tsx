@@ -51,7 +51,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             <Heading
               as="h3"
               size="h3"
-              className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+              className="text-[26px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
               {parse(data.title)}
             </Heading>
@@ -82,14 +82,14 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                         hasVariant(variant, "difc")
                           ? cn(
-                            "border-[#DEDEDE]",
-                            index === advisoryItems.length - 1
-                              ? "w-full border-b-0 border-r-0" // last item full
-                              : cn(
-                                "w-1/2 border-b",
-                                index % 2 === 0 ? "border-r" : "border-r-0",
-                              ),
-                          )
+                              "border-[#DEDEDE]",
+                              index === advisoryItems.length - 1
+                                ? "w-full border-b-0 border-r-0" // last item full
+                                : cn(
+                                    "w-1/2 border-b",
+                                    index % 2 === 0 ? "border-r" : "border-r-0",
+                                  ),
+                            )
                           : "w-1/2 border-b border-r border-[#DEDEDE]",
                       )}
                     >

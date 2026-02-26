@@ -229,9 +229,9 @@ const localData = {
     ] satisfies WhyChooseItem[],
   },
   contactUs: {
-    title: "Let's Talk About Your ADGM Foundation",
+    title: "Let's Talk About Your ADGM <br> Foundation",
     description:
-      "<p>If you are considering a ADGM Foundation as part of a wider ownership, <br/> succession, or asset protection strategy, KPI can help you structure it with <br/> clarity and confidence.</p>",
+      "<p>If you are considering a ADGM Foundation as part of a wider ownership, <br> succession, or asset protection strategy, KPI can help you structure it with <br> clarity and confidence.</p>",
     button: {
       label: "Get In Touch",
       link: "/contact",
@@ -244,7 +244,7 @@ const localData = {
   document_required_data: {
     title: "Formation & Governance Scope",
     description:
-      "<p>We tailor everything to your situation - no unnecessary complexity, just <br/> what you actually need. The result? A foundation that meets regulatory <br/> standards and is practical to run and maintain. Our ADGM Foundation <br/> support typically includes: </p>",
+      "<p>We tailor everything to your situation - no unnecessary complexity, just what you actually need. The result? A foundation that meets regulatory standards and is practical to run and maintain. Our ADGM Foundation <br> support typically includes:</p>",
     items: [
       {
         id: 1,
@@ -365,19 +365,28 @@ export default function DwtcFreezone() {
         data={localData.mainlandBusiness}
         variant="ADGM-Foundations"
       />
-      <MeydanFreeZone variant="adgm" data={localData.meydanFreeZone} />
-      <RiskOrganisation variant="spv" data={localData.document_required_data} />
+      <MeydanFreeZone
+        variant="ADGM-Foundation"
+        data={localData.meydanFreeZone}
+      />
+      <RiskOrganisation
+        variant="ADGM-Foundation"
+        data={localData.document_required_data}
+      />
       <CorporateServicesUaeWhyChoose
-        variant="risk"
+        variant="ADGM-Foundation"
         data={localData.whyChoose}
       />
-      <RiskExploreService variant="difc" data={localData.explore_service} />
+      <RiskExploreService
+        variant="ADGM-Foundations"
+        data={localData.explore_service}
+      />
       <CorporateServicesUaeCta
         data={localData.contactUs}
         variant="ADGM-Foundations"
       />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} variant="ADGM-Foundations" />
     </>
   );
 }

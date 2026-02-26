@@ -108,7 +108,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/holding-bg.svg",
-      mobilePath: "/images/holding-bg-mobile.jpg",
+      mobilePath: "/images/holding-bg-mobile.svg",
       alt: "ADGM Holding Companies Built For Control And Clarity",
     },
     title: "ADGM Holding Companies Built  <br/>for Control and Clarity ",
@@ -329,9 +329,9 @@ const localData = {
     ] satisfies ServiceItem[],
   },
   contactUs: {
-    title: "Assess Whether a Holding Company Is Right for You",
+    title: "Assess Whether a Holding <br/> Company Is Right for You",
     description:
-      "<p>If you are considering a holding company as part of a wider group or ownership structure, KPI can help you assess, design, and implement it with clarity and full regulatory compliance. Initial consultations focus on structure appropriateness, QFZP qualification, realistic costs and timelines, and integration with existing arrangements.</p>",
+      "<p>If you are considering a holding company as part of a wider group or <br/> ownership structure, KPI can help you assess, design, and implement it <br/> with clarity and full regulatory compliance. Initial consultations focus on <br/> structure appropriateness, QFZP qualification, realistic costs and <br/>timelines, and integration with existing arrangements.</p>",
     button: {
       label: "Get In Touch",
       link: "/contact",
@@ -416,9 +416,9 @@ export default function DwtcFreezone() {
         variant="risk"
         data={localData.whyChoose}
       />
-      <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
+      <RiskExploreService variant="holding" data={localData.explore_service} />
+      <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
+      <CorporateServicesUaeFaq variant="holding" data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>
   );
