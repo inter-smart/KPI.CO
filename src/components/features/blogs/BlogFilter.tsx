@@ -83,7 +83,7 @@ export default function BlogFilter({
                         <button
                             onClick={() => setIsSortOpen(!isSortOpen)}
                             className={cn(
-                                "text-[14px] md:text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-3 py-2.5 w-full bg-white border border-black/10 rounded-[10px] h-[40px] font-medium transition-all min-w-[200px] justify-between",
+                                "text-[14px] md:text-[15px] text-[#4E4E4E]  flex items-center gap-3 px-3 py-2.5 w-full bg-white border border-black/10 rounded-[10px] h-[50px] font-medium transition-all min-w-[200px] justify-between",
                                 isSortOpen ? "" : "border-gray-200"
                             )}
                         >
@@ -120,7 +120,7 @@ export default function BlogFilter({
 
                     {/* Categories Section */}
                     <div className="mb-[30px]">
-                        <h3 className="text-[14px] sm:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-semibold text-[#1C5396] tracking-tight mb-[20px]">Categories</h3>
+                        <h3 className="text-[14px] sm:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-semibold text-[#1C5396] tracking-tight mb-[15px]">Categories</h3>
 
                         <div className="flex flex-wrap gap-4">
                             {categories.map((category) => {
