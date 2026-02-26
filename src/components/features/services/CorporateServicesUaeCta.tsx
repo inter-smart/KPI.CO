@@ -37,7 +37,11 @@ export default function CorporateServicesUaeCta({
       <div className="container">
         <div
           className={cn(
+<<<<<<< HEAD
             "w-full lg:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
+=======
+            "w-full xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px] lg:rounded-[17px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
+>>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
             variant === "mainland"
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
@@ -81,7 +85,11 @@ export default function CorporateServicesUaeCta({
             >
               {parse(data?.title)}
             </Heading>
+<<<<<<< HEAD
             <div className="text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-medium [&_p]:leading-relaxed text-white max-md:[&_br]:hidden">
+=======
+            <div className="text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
+>>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
               {parse(data?.description)}
             </div>
           </div>

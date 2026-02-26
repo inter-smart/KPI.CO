@@ -6,40 +6,61 @@ import parse from "html-react-parser";
 import { RiskOrganisationData } from "@/app/risk-services-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "freezone";
-
+type Variant = "default" | "freezone" | "ADGM-Foundation";
 
 export type RiskOrganisationProps = {
   data: RiskOrganisationData;
   variant?: string;
 };
 
-
-export default function RiskOrganisation({ data, variant = "default", }: RiskOrganisationProps) {
+export default function RiskOrganisation({
+  data,
+  variant = "default",
+}: RiskOrganisationProps) {
   const items = data?.items ?? [];
 
   return (
-    <section className={cn("w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
+    <section
+      className={cn(
+        "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
 
-      variant === "dwtc" && "bg-[#F9FAFB]"
-    )}>
+        variant === "dwtc" && "bg-[#F9FAFB]",
+        variant === "ADGM-Foundation" &&
+          "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
+      )}
+    >
       <div className="container">
-        <div className={cn("flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[35px] xl:gap-[40px] 2xl:gap-[57px] 3xl:gap-[75px]", (variant === "freezone") || (variant === "dwtc") && "items-end",)}>
-          <div className="w-full md:w-[57%] xl:w-[60%]">
+        <div
+          className={cn(
+            "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[35px] xl:gap-[40px] 2xl:gap-[57px] 3xl:gap-[75px]",
+            variant === "freezone" || (variant === "dwtc" && "items-end"),
+            variant === "ADGM-Foundation" && "xl:gap-0",
+          )}
+        >
+          <div
+            className={cn(
+              "w-full md:w-[57%] xl:w-[60%]",
+              variant === "ADGM-Foundation" &&
+                "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+            )}
+          >
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[100%]">
+              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%]">
                 {data?.title && (
                   <Heading
                     as="h2"
                     size="h2"
-                    className="hidden md:block font-semibold text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className={cn(
+                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                      variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
+                    )}
                   >
                     {parse(data.title)}
                   </Heading>
                 )}
 
                 {data?.description && (
-                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 3xl:[&_p]:mb-[35px]">
+                  <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]">
                     {parse(data.description)}
                   </div>
                 )}
@@ -47,13 +68,13 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
 
             {items.length > 0 && (
-              <ul className="space-y-4 lg:space-y-4 2xl:space-y-6">
+              <ul className="space-y-4 lg:space-y-5 2xl:space-y-6">
                 {items.map((item) => (
                   <li
                     key={item.id}
-                    className="relative pl-[25px] xl:pl-[32px] 3xl:pl-[35px] text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.3] text-[#4E4E4E]"
+                    className="relative pl-[25px] 3xl:pl-[35px] text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E]"
                   >
-                    <span className="absolute left-0 top-[6px] xl:top-[4px] 3xl:top-[6px] w-[14px] h-[14px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] 3xl:h-[23px]">
+                    <span className="absolute left-0 top-[6px] w-[14px] h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[23px] 3xl:h-[23px]">
                       <svg
                         width="100%"
                         height="100%"
@@ -80,8 +101,13 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             )}
           </div>
 
-
-          <div className={cn("w-full md:w-[43%] xl:w-[40%]", variant === "freezone" && "md:mt-[60px]",)}>
+          <div
+            className={cn(
+              "w-full md:w-[43%] xl:w-[40%]",
+              variant === "freezone" && "md:mt-[60px]",
+              variant === "ADGM-Foundation" && "xl:w-[475px]",
+            )}
+          >
             <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
               {data?.title && (
                 <Heading
@@ -95,20 +121,19 @@ export default function RiskOrganisation({ data, variant = "default", }: RiskOrg
             </div>
 
             <div
-              className="w-full h-full rounded-[16px] overflow-hidden min-h-[370px] sm:min-h-auto max-md:mb-6">
+              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto max-md:mb-6">
               {data?.media?.path && (
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "image"}
                   width={615}
                   height={636}
-                  className="w-full h-full object-fill"
+                  className="w-full h-full object-cover"
                   priority={false}
                 />
               )}
             </div>
           </div>
-
         </div>
       </div>
     </section>

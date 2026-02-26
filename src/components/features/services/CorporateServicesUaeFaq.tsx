@@ -62,6 +62,7 @@ export default function CorporateServicesUaeFaq({
               >
                 <AccordionTrigger
                   className={cn(
+<<<<<<< HEAD
                     "py-[35px_10px] sm:py-5 xl:py-7 2xl:py-8.75 3xl:py-10 md:pr-[8px] xl:pr-[12px] [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-6 2xl:[&>svg]:w-7.5 [&>svg]:h-5 xl:[&>svg]:h-6 2xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
@@ -70,6 +71,14 @@ export default function CorporateServicesUaeFaq({
                   )}
                 >
                   <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
+=======
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-7.5 [&>svg]:h-5 xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    variant === "side-arrow" &&
+                      "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
+                  )}
+                >
+                  <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
+>>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
                     {parse(item?.title)}
                   </div>
                 </AccordionTrigger>
