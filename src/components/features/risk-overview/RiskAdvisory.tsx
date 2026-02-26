@@ -51,7 +51,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             <Heading
               as="h3"
               size="h3"
-              className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+              className="text-[26px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
             >
               {parse(data.title)}
             </Heading>
@@ -72,7 +72,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           </div>
 
           <div className="w-full lg:w-[51%] 2xl:w-[55%] 2xl:w-[49%]">
-            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[9px] lg:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (

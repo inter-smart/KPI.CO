@@ -19,7 +19,13 @@ export type CtaData = {
 
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
-  variant?: "default" | "mainland" | "saifz" | "rakez" | "ADGM-Foundations" | "holding";
+  variant?:
+    | "default"
+    | "mainland"
+    | "saifz"
+    | "rakez"
+    | "ADGM-Foundations"
+    | "holding";
 };
 
 export default function CorporateServicesUaeCta({
@@ -32,8 +38,9 @@ export default function CorporateServicesUaeCta({
         "w-full h-auto block",
         variant === "mainland"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[80px_55px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
-          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",)}>
-
+          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",
+      )}
+    >
       <div className="container">
         <div
           className={cn(
@@ -109,7 +116,6 @@ export default function CorporateServicesUaeCta({
           </div>
         </div>
       </div>
-
     </section>
   );
 }

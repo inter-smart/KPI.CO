@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
 };
 
 export default function RiskExploreService({
@@ -87,22 +87,23 @@ export default function RiskExploreService({
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "min-w-0 select-none",
-                    variant === "difc"
-                      ? "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]" // ⭐ 3 items
-                      : "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]", // existing
+                    "min-w-0 select-none lex-[0_0_55%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]",
+                    variant === "difc" &&
+                      "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "holding" &&
+                      "flex-[0_0_82%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "ADGM-Foundations" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
-                  <Service data={item} variant="risk"  />
+                  <Service data={item} variant="risk" />
                 </div>
               ))}
             </div>
           </div>
         </div>
         {data.items.length > 4 && (
-          <div className="flex justify-center gap-[10px] xl:gap-[20px] 3xl:gap-[30px] mt-4 xl:mt-6 ">
+          <div className="flex justify-center gap-[10px] xl:gap-[20px] 3xl:gap-[30px] mt-4 xl:mt-6">
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
@@ -124,8 +125,7 @@ export default function RiskExploreService({
 /* Service CARD                                                               */
 /* ------------------------------------------------------------------ */
 
-function Service({ data, variant  }: ServiceProps) {
-  
+function Service({ data, variant }: ServiceProps) {
   return (
     <Link
       href={data.slug ?? "#"}
@@ -151,9 +151,12 @@ function Service({ data, variant  }: ServiceProps) {
             className="w-full h-full block mt-1 transition-transform duration-300"
           />
         </div>
-        <div className={cn("text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
-          variant === "risk" && " min-h-[52px] !min-h-fit "
-        )}>
+        <div
+          className={cn(
+            "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
+            variant === "risk" && " min-h-[52px] !min-h-fit ",
+          )}
+        >
           {parse(data.title ?? "title")}
         </div>
       </div>

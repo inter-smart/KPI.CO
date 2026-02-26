@@ -28,7 +28,7 @@ export type CorporateServicesUaeFaqData = {
 
 export type CorporateServicesUaeFaqProps = {
   data: CorporateServicesUaeFaqData;
-  variant?: "side-arrow";
+  variant?: "side-arrow" | "holding";
 };
 
 export default function CorporateServicesUaeFaq({
@@ -36,13 +36,19 @@ export default function CorporateServicesUaeFaq({
   variant,
 }: CorporateServicesUaeFaqProps) {
   return (
-    <section className="w-full h-auto py-[40px_70px] lg:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block">
+    <section
+      className={cn(
+        "w-full h-auto py-[40px_70px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
+        variant === "holding" &&
+          "py-[40px_70px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
+      )}
+    >
       <div className="container">
         <div className="typography">
           <Heading
             as="h2"
             size="h2"
-            className="text-center text-[#1C5396] lg:mb-8.75 2xl:mb-10 3xl:mb-13"
+            className="text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
           >
             {data?.title}
           </Heading>
@@ -54,7 +60,10 @@ export default function CorporateServicesUaeFaq({
               <AccordionItem
                 value={`item-${item.id}`}
                 key={item.id}
-                className="w-full h-auto bg-transparent border-b border-[#DEDEDE] last:border-b overflow-hidden relative z-0"
+                className={cn(
+                  "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
+                  variant === "holding" && "last:border-b-0 ",
+                )}
               >
                 <AccordionTrigger
                   className={cn(
