@@ -15,7 +15,7 @@ type HomeOurInsightsProps = {
     title: string;
     items: InsightItem[];
   };
-  variant?: "default" | "saifz";
+  variant?: "default" | "saifz" | "holding";
 };
 
 type InsightCardProps = {
@@ -71,7 +71,9 @@ export default function HomeOurInsights({
         <Heading
           as="h2"
           size="h2"
-          className="text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className={cn("text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
+            variant === "holding" && "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]"
+          )}
         >
           {data.title}
         </Heading>
@@ -94,7 +96,7 @@ export default function HomeOurInsights({
         </div>
         <div
           className={cn(
-            "flex justify-center gap-1 xl:gap-2 mt-4 xl:mt-6 ",
+            "flex justify-center gap-1 xl:gap-2 mt-6 xl:mt-6 ",
             variant === "saifz" && "hidden",
           )}
         >

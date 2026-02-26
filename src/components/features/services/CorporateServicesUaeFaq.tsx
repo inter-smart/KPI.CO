@@ -57,7 +57,7 @@ export default function CorporateServicesUaeFaq({
                 value={`item-${item.id}`}
                 key={item.id}
                 className={cn("w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
-                  variant === "holding" && "last:border-b-0 "
+                  variant === "holding" && "last:border-b-0"
                 )}
               >
                 <AccordionTrigger

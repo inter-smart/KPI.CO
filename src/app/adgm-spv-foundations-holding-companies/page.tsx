@@ -338,7 +338,7 @@ const localData = {
     },
     images: {
       overlay: "/images/overlay-holding.svg",
-      overlayMobile: "/images/overlay-holding-mobile.png",
+      overlayMobile: "/images/overlay-holding-mobile.svg",
     },
   } satisfies CtaData,
   difc_faq_data: {
@@ -413,13 +413,13 @@ export default function DwtcFreezone() {
       {/* <DocumentRequired variant="spv" data={localData.common_use_data} /> */}
       <RiskOrganisation variant="holding" data={localData.common_use_data} />
       <CorporateServicesUaeWhyChoose
-        variant="risk"
+        variant="holding"
         data={localData.whyChoose}
       />
       <RiskExploreService variant="holding" data={localData.explore_service} />
       <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
       <CorporateServicesUaeFaq variant="holding" data={localData.difc_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights variant="holding" data={localData.insights} />
     </>
   );
 }
