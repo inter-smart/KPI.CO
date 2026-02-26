@@ -51,7 +51,7 @@ export default function InnerHero({
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[540px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]"
+          ? "h-[740px] sm:h-[650px] xl:h-[640px] 3xl:h-[800px]"
           : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"

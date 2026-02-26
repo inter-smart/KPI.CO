@@ -214,7 +214,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         <>
           <div
             className={cn(
-              "text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+              "text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
               variant === "ADGM-Foundation" &&
                 "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
             )}
