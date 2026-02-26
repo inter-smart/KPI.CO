@@ -52,13 +52,13 @@ export default function MeydanFreeZone({
       <div className="container">
         <div className="typography">
           <Heading
-            as="h2"
+            as="div"
             size="h2"
-            className="text-[#1C5396] mb-[20px] lg:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]"
+            className="text-[#1C5396] xl:!text-[38px] mb-[20px] lg:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]"
           >
             {data?.title}
           </Heading>
-          <p className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] ">
+          <p className="text-[14px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] ">
             {data?.main_description}
           </p>
         </div>
@@ -77,6 +77,7 @@ export default function MeydanFreeZone({
               <div
                 className={cn(
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[50px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-1 lg:border-2 rounded-[15px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   index % 2 !== 0
                     ? "to-[#FEFCE8] border-[#FFCB18]"
                     : "to-[#EFF6FF] border-[#5280CA]",
@@ -86,7 +87,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] leading-normal text-[24px] sm:text-[20px] xl:text-[26px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "holding" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
                     variant === "ADGM-Foundation" &&
@@ -111,7 +112,7 @@ export default function MeydanFreeZone({
                 >
                   {item?.highlightsText}
                 </div>
-                <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px]">
+                <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[20px]">
                   {item?.zone_list?.map((zone, i) => (
                     <li
                       key={i}
@@ -151,15 +152,15 @@ export default function MeydanFreeZone({
                 <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
                   <div
                     className={cn(
-                      "leading-normal font-medium text-[#003268] mb-[30px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
+                      "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "difc" &&
-                        "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                        "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                       variant === "audit" && " text-[#1C5396]",
                     )}
                   >
                     {item.title}
                   </div>
-                  <div className="text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px]  lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
+                  <div className="text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]">
                     {/* {item.description} */}
                     {parse(item?.description)}
                   </div>

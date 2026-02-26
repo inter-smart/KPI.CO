@@ -24,7 +24,7 @@ export default function HomeService({ data }: HomeServiceProps) {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] xl:gap-[40px]">
           {data.serviceList.map((service) => (
             <div
               key={service.id}
@@ -42,15 +42,15 @@ export default function HomeService({ data }: HomeServiceProps) {
               </div>
 
               {/* Content */}
-              <h3 className="text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-semibold text-gray-900 mb-[15px]">
+              <h3 className="text-[17px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] font-semibold text-gray-900 mb-[15px]">
                 {service.title}
               </h3>
-              <p className="text-[15px] text-gray-600 leading-relaxed mb-[25px] flex-grow">
+              <p className="text-[16px] text-gray-600 leading-relaxed mb-[25px] flex-grow">
                 {service.description}
               </p>
               <div>
                 <Button
-                  className="text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto !bg-transparent !scale-none "
+                  className="text-[16px] xl:text-[16px] 3xl:text-[21px] text-[#3570B8] font-semibold transition-all duration-500 mt-auto !p-0 h-auto !bg-transparent !scale-none "
                   asChild
                 >
                   <Link href={service.button.link}>

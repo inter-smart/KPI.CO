@@ -30,7 +30,7 @@ export default function HomeCounter({ data, variant = "default", }: HomeCounterP
                 {item.value.toLocaleString()}
                 {item.symbol || "+"}
               </div>
-              <div className="text-[14px] sm:text-[15px] md:text-[14px] xl:text-[17px] 2xl:text-[21px] 3xl:text-[26px] font-normal text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]">
+              <div className="text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] font-normal text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]">
                 {parse(item.label)}
               </div>
             </div>
