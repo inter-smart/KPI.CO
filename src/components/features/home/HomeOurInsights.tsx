@@ -140,12 +140,12 @@ function InsightCard({ data }: InsightCardProps) {
         >
           {data.date} • {data.readTime}
         </Text>
-        <Text
+        {/* <Text
           size="p1"
           className=" lg:text-[11px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[14px] 2xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
-        </Text>
+        </Text> */}
 
         <div className="text-[16px] sm:text-[15px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-normal font-semibold line-clamp-2 text-black mb-[10px] xl:mb-[12px] 2xl:mb-[15px]">
           {parse(data.title ?? "title")}
