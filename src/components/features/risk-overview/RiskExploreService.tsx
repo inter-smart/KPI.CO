@@ -15,18 +15,17 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default";
+  variant?: "difc" | "default" | "ADGM-Foundations";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default";
+  variant?: "difc" | "default" | "ADGM-Foundations";
 };
 
 export default function RiskExploreService({
   data,
   variant = "default",
-
 }: RiskExploreServiceProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -77,7 +76,13 @@ export default function RiskExploreService({
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"
           >
-            <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-2 lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]">
+            <div
+              className={cn(
+                "flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-2 lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
+                variant === "ADGM-Foundations" &&
+                  "max-sm:!-mx-[13px] max-sm:[&>*]:!p-[13px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
+              )}
+            >
               {data.items.map((item) => (
                 <div
                   key={`insight-${item.id}`}
@@ -86,6 +91,8 @@ export default function RiskExploreService({
                     variant === "difc"
                       ? "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]" // ⭐ 3 items
                       : "flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]", // existing
+                    variant === "ADGM-Foundations" &&
+                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
                   <Service data={item} />
