@@ -345,6 +345,7 @@ const localData = {
       title: blog.title,
       description: blog.description,
       date: blog.date,
+      date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
