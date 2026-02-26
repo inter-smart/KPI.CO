@@ -360,12 +360,11 @@ function BlogCard({ data }: BlogCardProps) {
         <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide">
           {data.date} • {data.readTime}
         </div>
-        <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide hidden">
-          {data.date_full} • {data.readTime}
-        </div>
-        <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
-          {parse(data.title)}
-        </h3>
+        {data.date_full && (
+          <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide hidden">
+            {data.date_full} • {data.readTime}
+          </div>
+        )}
         <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
           {parse(data.title)}
         </h3>

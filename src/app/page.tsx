@@ -73,7 +73,7 @@ export type InsightItem = {
   description: string;
   date: string;
   readTime: string;
-  date_full: string;
+  date_full?: string;
   media: MediaItem;
   slug: string;
   category?: string;
