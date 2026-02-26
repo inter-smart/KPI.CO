@@ -81,7 +81,7 @@ export default function InnerHero({
           <Heading
             as="h1"
             size="h1"
-            className="leading-relaxed font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] max-md:[&_br]:hidden"
+            className="leading-relaxed font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden"
           >
             {parse(data?.title)}
           </Heading>
