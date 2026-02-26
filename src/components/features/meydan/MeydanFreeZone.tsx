@@ -77,6 +77,7 @@ export default function MeydanFreeZone({
               <div
                 className={cn(
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[50px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-1 lg:border-2 rounded-[15px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   index % 2 !== 0
                     ? "to-[#FEFCE8] border-[#FFCB18]"
                     : "to-[#EFF6FF] border-[#5280CA]",

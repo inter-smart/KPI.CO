@@ -88,7 +88,7 @@ export default function CorporateServicesUaeWhyChoose({
               ? "text-left"
               : "sm:text-center",
             variant === "regulatory" &&
-              "mb-[20px] lg:mb-[25px] 2xl:mb-[30px] 3xl:mb-[25px]",
+            "",
             variant === "ADGM-Foundation" && "max-xl:!mb-[25px] xl:mb-[30px]",
           )}
         >
@@ -155,6 +155,8 @@ export default function CorporateServicesUaeWhyChoose({
         )}
         <div
           className={cn(
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
+            variant === "mainland" && "hidden sm:grid", 
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid", 
             variant === "ADGM-Foundation" &&

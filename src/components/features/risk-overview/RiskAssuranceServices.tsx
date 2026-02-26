@@ -79,7 +79,7 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 xl:pl-[20px] 2xl:pl-3.75 3xl:pl-5">
-                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-[10px]">
+                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] capitalize mb-[10px]">
                     {item?.title}
                   </div>
                   <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]">

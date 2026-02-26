@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 import { RiskOrganisationData } from "@/app/risk-services-uae/page";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "freezone" | "ADGM-Foundation";
+type Variant = "default" | "freezone" | "ADGM-Foundation" | "holding";
 
 export type RiskOrganisationProps = {
   data: RiskOrganisationData;
@@ -26,20 +26,26 @@ export default function RiskOrganisation({
         variant === "dwtc" && "bg-[#F9FAFB]",
         variant === "ADGM-Foundation" &&
           "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
+        variant === "holding" &&
+          "max-sm:!py-[0px_35px] xl:!py-[0px_75px]",
       )}
     >
       <div className="container">
         <div
           className={cn(
             "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
+            "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
             variant === "freezone" || (variant === "dwtc" && "items-end"),
             variant === "ADGM-Foundation" && "xl:gap-0",
+            variant === "holding" && "xl:gap-0",
           )}
         >
           <div
             className={cn(
               "w-full md:w-[57%] xl:w-[60%]",
               variant === "ADGM-Foundation" &&
+                "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "holding" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
             )}
           >
@@ -120,6 +126,7 @@ export default function RiskOrganisation({
               "w-full md:w-[43%] xl:w-[40%]",
               variant === "freezone" && "md:mt-[60px]",
               variant === "ADGM-Foundation" && "xl:w-[475px]",
+              variant === "holding" && "xl:w-[475px]",
             )}
           >
             <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
