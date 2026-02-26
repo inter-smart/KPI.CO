@@ -141,7 +141,7 @@ export default function Header() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   return (
-    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-50 shadow-sm flex items-center">
+    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[99999] shadow-sm flex items-center">
       <div className="container">
         <div className="flex items-center">
           {/* Logo Section */}
