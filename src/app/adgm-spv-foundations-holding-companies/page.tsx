@@ -417,7 +417,7 @@ export default function DwtcFreezone() {
         data={localData.whyChoose}
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
       <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>

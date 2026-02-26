@@ -19,7 +19,7 @@ export type CtaData = {
 
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
-  variant?: "default" | "mainland" | "saifz" | "rakez" | "ADGM-Foundations";
+  variant?: "default" | "mainland" | "saifz" | "rakez" | "ADGM-Foundations" | "holding";
 };
 
 export default function CorporateServicesUaeCta({
@@ -32,9 +32,8 @@ export default function CorporateServicesUaeCta({
         "w-full h-auto block",
         variant === "mainland"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[80px_55px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
-          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",
-      )}
-    >
+          : "py-10 lg:py-13 xl:py-[80px_45px] 2xl:py-17 3xl:py-22",)}>
+
       <div className="container">
         <div
           className={cn(
@@ -78,11 +77,11 @@ export default function CorporateServicesUaeCta({
             <Heading
               as="h2"
               size="h2"
-              className="max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] text-white mb-3.75 lg:mb-2.5"
+              className="max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5"
             >
               {parse(data?.title)}
             </Heading>
-            <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
+            <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal [&_p]:leading-relaxed text-white max-md:[&_br]:hidden">
               {parse(data?.description)}
             </div>
           </div>
@@ -100,6 +99,8 @@ export default function CorporateServicesUaeCta({
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "ADGM-Foundations" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
+                variant === "holding" &&
+                  "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >
@@ -108,6 +109,7 @@ export default function CorporateServicesUaeCta({
           </div>
         </div>
       </div>
+
     </section>
   );
 }
