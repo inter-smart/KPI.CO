@@ -4,6 +4,7 @@ export type BlogItem = {
     title: string;
     description: string;
     date: string;
+    date_full: string;
     readTime: string;
     media: {
         path: string;
@@ -26,6 +27,7 @@ export const blogData: BlogItem[] = [
         description: "What to look for when choosing an audit firm in 2025 – from expertise and independence to technology and trust that support better business decisions.",
         category: "Audit",
         date: "14 NOV 2024",
+        date_full: "14 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: `
             <h2>Introduction</h2>
@@ -86,6 +88,7 @@ export const blogData: BlogItem[] = [
         description: "Slate helps you see how many more days you need to work to reach.",
         category: "Advisory",
         date: "13 NOV 2024",
+        date_full: "13 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for Top 10 Audit firms in UAE...</p>"
     },
@@ -97,6 +100,7 @@ export const blogData: BlogItem[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt e days you need to work to reach",
         category: "Audit",
         date: "12 NOV 2024",
+        date_full: "12 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for duplicate guide...</p>"
     },
@@ -108,6 +112,7 @@ export const blogData: BlogItem[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed insights.",
         category: "Corporate Services",
         date: "14 NOV 2024",
+        date_full: "14 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for Choosing the Right Business License...</p>"
     },
@@ -119,6 +124,7 @@ export const blogData: BlogItem[] = [
         description: "Slate helps you see how many more days you need to work to reach.",
         category: "Risk",
         date: "13 NOV 2024",
+        date_full: "13 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for AI in Auditing...</p>"
     },
@@ -130,6 +136,7 @@ export const blogData: BlogItem[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed insights.",
         category: "Corporate Services",
         date: "14 NOV 2024",
+        date_full: "14 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for FAQs about Company Formation...</p>"
     },
@@ -141,6 +148,7 @@ export const blogData: BlogItem[] = [
         description: "Slate helps you see how many more days you need to work.",
         category: "Advisory",
         date: "13 NOV 2024",
+        date_full: "13 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for Bookkeeping Guide...</p>"
     },
@@ -152,6 +160,7 @@ export const blogData: BlogItem[] = [
         description: "Slate helps you see how many more days you need to work to  reach.",
         category: "Tax",
         date: "12 NOV 2024",
+        date_full: "12 NOVEMBER 2024",
         readTime: "2 MIN READ",
         content: "<p>Content for VAT Registration...</p>"
     }

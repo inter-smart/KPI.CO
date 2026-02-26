@@ -112,9 +112,9 @@ const localData = {
     media: {
       desktopPath: "/images/internal-audit-bg.svg",
       mobilePath: "/images/reinternal-audit-mobile-bg.png",
-      alt: "Trusted Internal Audit Services in the UAE",
+      alt: "Trusted Internal Audit Services In The UAE",
     },
-    title: "Trusted Internal Audit Services in the UAE ",
+    title: "Trusted Internal Audit Services<br/> In The UAE ",
     description:
       "<p>Enhance governance and safeguard your business with our trusted internal audit services. We help you identify risk, strengthen internal controls, and maintain regulatory compliance. Supporting steady growth at every stage.</p>",
   } satisfies HeroData,

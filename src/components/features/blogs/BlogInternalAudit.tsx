@@ -13,6 +13,7 @@ type BlogInternalAuditProps = {
     title: string;
     description?: string;
     date?: string;
+    date_full?: string;
     readTime?: string;
   };
 };
@@ -40,7 +41,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
             size="p1"
             className="leading-none md:text-center font-medium text-[#4E4E4E] uppercase"
           >
-            {data.date} • {data.readTime}
+            {data.date_full} • {data.readTime}
           </Text>
           <div className={cn("typography", "[--text-color:#282828] md:text-center")}>
             {data?.description}
