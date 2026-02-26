@@ -42,13 +42,13 @@ export default function CorporateServicesUaeFaq({
           <Heading
             as="h2"
             size="h2"
-            className="text-center text-[#1C5396] lg:mb-8.75 2xl:mb-10 3xl:mb-13"
+            className="text-center text-[#1C5396] lg:mb-8.75 xl:mb-[35px]  2xl:mb-10 3xl:mb-13"
           >
             {data?.title}
           </Heading>
         </div>
 
-        <div className="w-full lg:max-w-178 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
+        <div className="w-full lg:max-w-178 xl:w-[70%] 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
           <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem
@@ -58,7 +58,7 @@ export default function CorporateServicesUaeFaq({
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 2xl:[&>svg]:w-7.5 [&>svg]:h-5 2xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-[35px_25px] 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 2xl:[&>svg]:w-7.5 [&>svg]:h-5 2xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]"
                   )}
