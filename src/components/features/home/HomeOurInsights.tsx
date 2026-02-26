@@ -15,7 +15,7 @@ type HomeOurInsightsProps = {
     title: string;
     items: InsightItem[];
   };
-  variant?: "default" | "saifz";
+  variant?: "default" | "saifz" | "ADGM-Foundations";
 };
 
 type InsightCardProps = {
@@ -77,7 +77,7 @@ export default function HomeOurInsights({
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className="flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] 2xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] 2xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]">
+          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] 2xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] 2xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]")}>
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}

@@ -67,7 +67,7 @@ export default function CorporateServicesUaeFaq({
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-7.5 [&>svg]:h-5 xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                   )}
@@ -76,7 +76,6 @@ export default function CorporateServicesUaeFaq({
                     {parse(item?.title)}
                   </div>
                 </AccordionTrigger>
-
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
                   <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}

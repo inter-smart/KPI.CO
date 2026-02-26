@@ -1,120 +1,139 @@
-'use client'
-import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown } from 'lucide-react';
-import NavDropdown, { MegaCategory } from './NavDropdown';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
+import NavDropdown, { MegaCategory } from "./NavDropdown";
 
 const navItems = [
-  { label: 'Home', href: '/', subItems: [] },
+  { label: "Home", href: "/", subItems: [] },
   {
-    label: 'Services',
-    href: '#',
+    label: "Services",
+    href: "#",
     isMega: true,
     megaCategories: [
       {
-        id: 'audit',
-        label: 'Audit & Assurance',
+        id: "audit",
+        label: "Audit & Assurance",
         icon: "/images/audit_icon.svg",
-        href: '#',
+        href: "#",
         subItems: [
-          { name: 'Financial Statement Audit', href: '/financial-statement-audit-uae' },
-          { name: 'Agreed Upon Procedures', href: '/agreed-upon-procedures-uae' },
-          { name: 'ADGM Regulated Audit', href: '/adgm-regulated-audit' },
-          { name: 'DIFC & DFSA Regulated Audit', href: '/difc-dfsa-regulated-audit' },
-        ]
+          {
+            name: "Financial Statement Audit",
+            href: "/financial-statement-audit-uae",
+          },
+          {
+            name: "Agreed Upon Procedures",
+            href: "/agreed-upon-procedures-uae",
+          },
+          { name: "ADGM Regulated Audit", href: "/adgm-regulated-audit" },
+          {
+            name: "DIFC & DFSA Regulated Audit",
+            href: "/difc-dfsa-regulated-audit",
+          },
+        ],
       },
       {
-        id: 'advisory',
-        label: 'Advisory Services',
+        id: "advisory",
+        label: "Advisory Services",
         icon: "/images/advisory_icon.svg",
-        href: '#',
+        href: "#",
         subItems: [
-          { name: 'Corporate Services', href: '/corporate-services-uae' },
-          { name: 'Tax Advisory', href: '/advisory-services-uae' }, 
-          { name: 'e-invoicing Services', href: '/advisory-services-uae' }, 
-        ]
+          { name: "Corporate Services", href: "/corporate-services-uae" },
+          { name: "Tax Advisory", href: "/advisory-services-uae" },
+          { name: "e-invoicing Services", href: "/advisory-services-uae" },
+        ],
       },
       {
-        id: 'compliance',
-        label: 'Risk & Compliance',
+        id: "compliance",
+        label: "Risk & Compliance",
         icon: "/images/risk_icon.svg",
-        href: '#',
+        href: "#",
         subItems: [
-          { name: 'Enterprise Risk Management', href: '#' },
-          { name: 'Internal Audit Services', href: '#' },
-          { name: 'Standard Operating Procedures', href: '#' },
-          { name: 'Regulatory & Compliance Advisory', href: '#' },
-        ]
+          { name: "Enterprise Risk Management", href: "#" },
+          { name: "Internal Audit Services", href: "#" },
+          { name: "Standard Operating Procedures", href: "#" },
+          { name: "Regulatory & Compliance Advisory", href: "#" },
+        ],
       },
       {
-        id: 'digital',
-        label: 'Digital Transformation',
+        id: "digital",
+        label: "Digital Transformation",
         icon: "/images/digital_icon.svg",
-        href: '#',
-        subItems: [
-        ]
-      }
-    ] as MegaCategory[]
+        href: "#",
+        subItems: [],
+      },
+    ] as MegaCategory[],
   },
   {
-    label: 'Resources',
-    href: '#',
+    label: "Resources",
+    href: "#",
     isMega: true,
     megaCategories: [
       {
-        id: 'blogs',
-        label: 'Blogs',
-        href: '/blog',
-        subItems: []
+        id: "blogs",
+        label: "Blogs",
+        href: "/blog",
+        subItems: [],
       },
       {
-        id: 'glossary',
-        label: 'Glossary',
-        href: '#',
-        subItems: []
+        id: "glossary",
+        label: "Glossary",
+        href: "#",
+        subItems: [],
       },
       {
-        id: 'newsroom',
-        label: 'Newsroom',
-        href: '#',
-        subItems: [
-        ]
-      }
-    ] as MegaCategory[]
+        id: "newsroom",
+        label: "Newsroom",
+        href: "#",
+        subItems: [],
+      },
+    ] as MegaCategory[],
   },
   {
-    label: 'About',
-    href: '#',
+    label: "About",
+    href: "#",
     isMega: true,
     megaCategories: [
       {
-        id: 'about-us',
-        label: 'About us',
-        href: '#',
-        subItems: []
+        id: "about-us",
+        label: "About us",
+        href: "#",
+        subItems: [],
       },
       {
-        id: 'clients',
-        label: 'Our Clients',
-        href: '#',
-        subItems: []
+        id: "clients",
+        label: "Our Clients",
+        href: "#",
+        subItems: [],
       },
       {
-        id: 'contact',
-        label: 'Contact Us',
-        href: '#',
-        subItems: []
-      }
-    ] as MegaCategory[]
+        id: "contact",
+        label: "Contact Us",
+        href: "#",
+        subItems: [],
+      },
+    ] as MegaCategory[],
   },
-]
+];
 
 const site_settings = {
   header_logo_value: "/images/logo-2.svg",
-  header_logo_alt_text_value: "KPI Logo"
+  header_logo_alt_text_value: "KPI Logo",
 };
 
 export default function Header() {
@@ -145,7 +164,7 @@ export default function Header() {
               {/* Home Link (No Dropdown) */}
               <Link
                 href={navItems[0].href}
-                className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] font-medium text-[#1C5396] whitespace-nowrap"
+                className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium text-[#1C5396] whitespace-nowrap"
               >
                 {navItems[0].label}
               </Link>
@@ -156,7 +175,9 @@ export default function Header() {
                   <div
                     key={index}
                     className="group"
-                    onMouseEnter={() => item.isMega && setActiveMegaMenu(item.label)}
+                    onMouseEnter={() =>
+                      item.isMega && setActiveMegaMenu(item.label)
+                    }
                     onMouseLeave={() => setActiveMegaMenu(null)}
                   >
                     <Link
@@ -165,10 +186,12 @@ export default function Header() {
                     >
                       {item.label}
                       {item.isMega && (
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeMegaMenu === item.label ? 'rotate-180' : ''}`} />
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-300 ${activeMegaMenu === item.label ? "rotate-180" : ""}`}
+                        />
                       )}
                     </Link>
- 
+
                     {item.isMega && item.megaCategories && (
                       <NavDropdown
                         categories={item.megaCategories}
@@ -180,7 +203,6 @@ export default function Header() {
               </div>
             </nav>
 
-            
             <div className="flex items-center gap-4">
               <div className="hidden lg:block">
                 <Link
@@ -197,15 +219,32 @@ export default function Header() {
                 <Sheet open={menuSheetOpen} onOpenChange={setMenuSheetOpen}>
                   <SheetTrigger className="p-2">
                     <div className="w-[26px] h-[17px] flex flex-col justify-around">
-                      <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.4957 1.88666L1.31954 1.88666C1.14043 1.89834 0.960653 1.89445 0.782225 1.87502C0.567692 1.85601 0.368353 1.75635 0.224424 1.59613C0.0804939 1.43591 0.00268745 1.22707 0.00670242 1.01174C-0.0214348 0.784451 0.0402031 0.555155 0.178511 0.372614C0.316818 0.190072 0.52088 0.0686867 0.747299 0.034273C0.946793 0.00222254 1.14925 -0.00738966 1.35088 0.00561619C8.80193 0.00681031 16.2528 0.00890005 23.7036 0.011885C24.6434 0.011885 25.0433 0.28681 25.0545 0.932482C25.0657 1.60412 24.6595 1.8889 23.6722 1.88935C19.9469 1.89144 16.2213 1.89159 12.4957 1.8898V1.88666Z" fill="black" />
-                        <path d="M12.5228 14.8731L23.6963 14.8731C23.8979 14.8614 24.1002 14.8654 24.3012 14.8852C24.5163 14.9051 24.7152 15.0084 24.8552 15.173C24.9953 15.3376 25.0654 15.5504 25.0507 15.7659C25.0765 15.9811 25.0173 16.1978 24.8858 16.3699C24.7543 16.5421 24.5607 16.6562 24.3464 16.6879C24.1688 16.7148 23.989 16.724 23.8095 16.7152C16.3385 16.7131 8.8673 16.7104 1.39596 16.7071C0.382227 16.7071 -0.00463867 16.4483 0.00297356 15.7794C0.0105839 15.1194 0.38715 14.874 1.417 14.8731C5.11909 14.8716 8.82103 14.8716 12.5228 14.8731Z" fill="black" />
-                        <path d="M17.674 7.46294C19.7386 7.46294 21.8032 7.45801 23.8683 7.46294C24.6586 7.46697 25.0446 7.76921 25.0526 8.35756C25.0607 8.94592 24.6635 9.27682 23.8943 9.27727C19.691 9.28085 15.4878 9.28085 11.2849 9.27727C10.5944 9.27727 10.1686 8.92712 10.1587 8.38622C10.1489 7.84533 10.5819 7.46921 11.2584 7.46607C13.3969 7.45801 15.5354 7.46339 17.674 7.46294Z" fill="black" />
+                      <svg
+                        width="26"
+                        height="17"
+                        viewBox="0 0 26 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.4957 1.88666L1.31954 1.88666C1.14043 1.89834 0.960653 1.89445 0.782225 1.87502C0.567692 1.85601 0.368353 1.75635 0.224424 1.59613C0.0804939 1.43591 0.00268745 1.22707 0.00670242 1.01174C-0.0214348 0.784451 0.0402031 0.555155 0.178511 0.372614C0.316818 0.190072 0.52088 0.0686867 0.747299 0.034273C0.946793 0.00222254 1.14925 -0.00738966 1.35088 0.00561619C8.80193 0.00681031 16.2528 0.00890005 23.7036 0.011885C24.6434 0.011885 25.0433 0.28681 25.0545 0.932482C25.0657 1.60412 24.6595 1.8889 23.6722 1.88935C19.9469 1.89144 16.2213 1.89159 12.4957 1.8898V1.88666Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M12.5228 14.8731L23.6963 14.8731C23.8979 14.8614 24.1002 14.8654 24.3012 14.8852C24.5163 14.9051 24.7152 15.0084 24.8552 15.173C24.9953 15.3376 25.0654 15.5504 25.0507 15.7659C25.0765 15.9811 25.0173 16.1978 24.8858 16.3699C24.7543 16.5421 24.5607 16.6562 24.3464 16.6879C24.1688 16.7148 23.989 16.724 23.8095 16.7152C16.3385 16.7131 8.8673 16.7104 1.39596 16.7071C0.382227 16.7071 -0.00463867 16.4483 0.00297356 15.7794C0.0105839 15.1194 0.38715 14.874 1.417 14.8731C5.11909 14.8716 8.82103 14.8716 12.5228 14.8731Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M17.674 7.46294C19.7386 7.46294 21.8032 7.45801 23.8683 7.46294C24.6586 7.46697 25.0446 7.76921 25.0526 8.35756C25.0607 8.94592 24.6635 9.27682 23.8943 9.27727C19.691 9.28085 15.4878 9.28085 11.2849 9.27727C10.5944 9.27727 10.1686 8.92712 10.1587 8.38622C10.1489 7.84533 10.5819 7.46921 11.2584 7.46607C13.3969 7.45801 15.5354 7.46339 17.674 7.46294Z"
+                          fill="black"
+                        />
                       </svg>
-
                     </div>
                   </SheetTrigger>
-                  <SheetContent side="right" className="w-full sm:w-[350px] p-0 overflow-y-auto">
+                  <SheetContent
+                    side="right"
+                    className="w-full sm:w-[350px] p-0 overflow-y-auto"
+                  >
                     <SheetHeader className="p-4">
                       <div className="flex items-center justify-between">
                         <SheetTitle className="text-left">
@@ -233,28 +272,56 @@ export default function Header() {
                           </Link>
 
                           {/* Nested Accordions */}
-                          <Accordion type="single" collapsible className="w-full">
+                          <Accordion
+                            type="single"
+                            collapsible
+                            className="w-full"
+                          >
                             {navItems.slice(1).map((item, idx) => (
-                              <AccordionItem key={idx} value={`item-${idx}`} className="border-0 shadow-none border-b border-[#DDDCDE]">
+                              <AccordionItem
+                                key={idx}
+                                value={`item-${idx}`}
+                                className="border-0 shadow-none border-b border-[#DDDCDE]"
+                              >
                                 <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
                                   {item.label}
                                 </AccordionTrigger>
                                 <AccordionContent className="pb-4 pl-0">
                                   {item.isMega && item.megaCategories ? (
-                                    <Accordion type="single" collapsible className="w-full space-y-2">
+                                    <Accordion
+                                      type="single"
+                                      collapsible
+                                      className="w-full space-y-2"
+                                    >
                                       {item.megaCategories.map((mega, mIdx) => (
-                                        <AccordionItem key={mIdx} value={`mega-${idx}-${mIdx}`} className="border-none">
+                                        <AccordionItem
+                                          key={mIdx}
+                                          value={`mega-${idx}-${mIdx}`}
+                                          className="border-none"
+                                        >
                                           <AccordionTrigger
                                             className="hover:no-underline py-2"
-                                            hideIcon={mega.subItems.length === 0}
+                                            hideIcon={
+                                              mega.subItems.length === 0
+                                            }
                                           >
                                             <div className="flex items-center gap-3">
                                               {mega.icon && (
                                                 <div className="w-8 h-8 rounded-[6px] flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
-                                                  {typeof mega.icon === 'string' ? (
+                                                  {typeof mega.icon ===
+                                                  "string" ? (
                                                     <div className="relative w-5 h-5">
                                                       <Image
-                                                        src={mega.icon.endsWith('.svg') || mega.icon.includes('.') ? mega.icon : `${mega.icon}.svg`}
+                                                        src={
+                                                          mega.icon.endsWith(
+                                                            ".svg",
+                                                          ) ||
+                                                          mega.icon.includes(
+                                                            ".",
+                                                          )
+                                                            ? mega.icon
+                                                            : `${mega.icon}.svg`
+                                                        }
                                                         alt={mega.label}
                                                         fill
                                                         className="object-contain brightness-0 invert"
@@ -265,21 +332,27 @@ export default function Header() {
                                                   )}
                                                 </div>
                                               )}
-                                              <span className="text-[15px] font-normal text-[#1C5396] !font-medium">{mega.label}</span>
+                                              <span className="text-[15px] font-normal text-[#1C5396] !font-medium">
+                                                {mega.label}
+                                              </span>
                                             </div>
                                           </AccordionTrigger>
                                           <AccordionContent className="pl-11 pt-1">
                                             <div className="flex flex-col space-y-1">
-                                              {mega.subItems.map((sub, sIdx) => (
-                                                <Link
-                                                  key={sIdx}
-                                                  href={sub.href}
-                                                  className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
-                                                  onClick={() => setMenuSheetOpen(false)}
-                                                >
-                                                  {sub.name}
-                                                </Link>
-                                              ))}
+                                              {mega.subItems.map(
+                                                (sub, sIdx) => (
+                                                  <Link
+                                                    key={sIdx}
+                                                    href={sub.href}
+                                                    className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
+                                                    onClick={() =>
+                                                      setMenuSheetOpen(false)
+                                                    }
+                                                  >
+                                                    {sub.name}
+                                                  </Link>
+                                                ),
+                                              )}
                                             </div>
                                           </AccordionContent>
                                         </AccordionItem>
@@ -312,6 +385,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
-
