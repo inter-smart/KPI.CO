@@ -104,6 +104,7 @@ export default async function BlogDetailPage({ params }: Props) {
       title: blogPost.title,
       date: blogPost.date,
       readTime: blogPost.readTime,
+      date_full: blogPost.date_full,
     },
     blog_detail: {
       media: {

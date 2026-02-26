@@ -73,6 +73,7 @@ export type InsightItem = {
   description: string;
   date: string;
   readTime: string;
+  date_full: string;
   media: MediaItem;
   slug: string;
   category?: string;
@@ -318,6 +319,7 @@ const localData = {
       description: blog.description,
       date: blog.date,
       readTime: blog.readTime,
+      date_full: blog.date_full,
       slug: `/blog/${blog.slug}`,
     })),
   },

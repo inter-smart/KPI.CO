@@ -356,14 +356,20 @@ function BlogCard({ data }: BlogCardProps) {
           className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
         />
       </div>
-      <div className="p-6 md:p-7 xl:p-[25px_40px] 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1">
-        <div className="text-[14px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] uppercase tracking-wide">
+      <div className="p-6 md:p-7 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1">
+        <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide">
           {data.date} • {data.readTime}
         </div>
-        <h3 className="text-[18px] xl:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] line-clamp-2 leading-tight transition-colors">
+        <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide hidden">
+          {data.date_full} • {data.readTime}
+        </div>
+        <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
           {parse(data.title)}
         </h3>
-        <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-[1.6]  mb-6">
+        <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
+          {parse(data.title)}
+        </h3>
+        <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-[25px] md:leading-[27px] 2xl:leading-[28px] 3xl:leading-[33px] mb-6">
           {parse(data.description)}
         </div>
         <Link

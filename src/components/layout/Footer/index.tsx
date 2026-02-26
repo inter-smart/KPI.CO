@@ -95,7 +95,7 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className="!w-[34px] 2xxl:!w-[34px] 3xxl:!w-[42px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
+                      className="!w-[34px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
                     >
                       <svg
                         width="23"
@@ -223,7 +223,7 @@ export default function Footer() {
                 </li>
                 <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
                   <Link href="/" className={SOCIAL_LINKS} aria-label="facebook">
-                    <div className="w-full h-full flex">
+                    <div className="w-full h-full hidden sm:flex">
                       <svg
                         viewBox="0 0 43 43"
                         fill="none"
@@ -242,6 +242,27 @@ export default function Footer() {
                               height="42.6667"
                               fill="white"
                             />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div className="w-full h-full max-sm:flex hidden">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clipPath="url(#clip0_2549_375)">
+                          <path
+                            d="M16 0C7.16352 0 0 7.16352 0 16C0 23.5034 5.16608 29.7997 12.135 31.529V20.8896H8.83584V16H12.135V13.8931C12.135 8.44736 14.5997 5.9232 19.9462 5.9232C20.96 5.9232 22.7091 6.12224 23.4246 6.32064V10.7526C23.047 10.713 22.391 10.6931 21.5763 10.6931C18.953 10.6931 17.9392 11.687 17.9392 14.2707V16H23.1654L22.2675 20.8896H17.9392V31.8829C25.8618 30.9261 32.0006 24.1805 32.0006 16C32 7.16352 24.8365 0 16 0Z"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2549_375">
+                            <rect width="32" height="32" fill="white" />
                           </clipPath>
                         </defs>
                       </svg>
