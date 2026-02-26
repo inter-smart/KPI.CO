@@ -109,6 +109,7 @@ export type InsightItem = {
   title: string;
   description: string;
   date: string;
+  date_full: string;
   readTime: string;
   media: MediaItem;
   slug: string;
@@ -366,15 +367,17 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date,
       readTime: blog.readTime,
+      date: blog.date, 
+      date_full: blog.date_full,
       slug: `/blog/${blog.slug}`,
     })),
   },
 };
 
 export const metadata: Metadata = {
-  title: "ADGM SPV Formation Services | Special Purpose Vehicles UAE | KPI Group   ",
+  title:
+    "ADGM SPV Formation Services | Special Purpose Vehicles UAE | KPI Group   ",
   description:
     "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support. ",
 };
@@ -391,7 +394,10 @@ export default function DwtcFreezone() {
       <RiskOrganisation data={localData.document_required_data} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq variant="side-arrow" data={localData.difc_faq_data} />
+      <CorporateServicesUaeFaq
+        variant="side-arrow"
+        data={localData.difc_faq_data}
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );
