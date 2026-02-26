@@ -33,10 +33,10 @@ export default function HomeApart({ data }: HomeApartProps) {
           <div className="w-[1px] h-full bg-white/30 absolute inset-y-0 left-1/2 max-lg:hidden" />
           {data.items.map((item) => {
             const mobileOrder =
-              item.id === 1 ? "order-1" :
-                item.id === 3 ? "order-2" :
-                  item.id === 5 ? "order-3" :
-                    item.id === 2 ? "order-4" :
+              item.id === 1 ? "max-lg:order-1" :
+                item.id === 3 ? "max-lg:order-2" :
+                  item.id === 5 ? "max-lg:order-3" :
+                    item.id === 2 ? "max-lg:order-4" :
                       item.id === 4 ? "order-5" : "";
 
             // item.id === 4 is visually last on mobile (order-5), no border needed
@@ -51,7 +51,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                   mobileOrder
                 )}
               >
-                <div className="w-full h-auto block max-sm:py-[20px] ">
+                <div className="w-full h-auto block max-lg:py-[20px] ">
                   <div className="text-[20px] md:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
                     <Image
                       src={item.media.path || "/images/placeholder-image.png"}
@@ -62,7 +62,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                     />
                     {parse(item.title ?? "title")}
                   </div>
-                  <div className="text-[16px] md:text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px] leading-normal font-normal text-[#d3dde8]">
+                  <div className="text-[16px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-normal font-normal text-[#d3dde8]">
                     {parse(item.description ?? "description")}
                   </div>
                 </div>

@@ -51,7 +51,7 @@ export default function Footer() {
     <footer id="contact" className="bg-[#053269]">
       <div className="container">
         <div className="pt-[40px] pb-[40px] xl:pb-[50px] 2xl:pb-[70px] 3xl:pb-[100px]">
-          <div className="flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] 2xl:pb-[40px] 3xl:pb-[65px] -m-[10px] mb-[30px] 3xl:mb-[40px]">
+          <div className="flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] xl:pb-[50px] -m-[10px] mb-[30px] 3xl:mb-[40px]">
             <div className="w-full lg:w-3/12 mb-8 lg:mb-0 p-[10px]">
               <Link
                 href="/"
@@ -73,7 +73,7 @@ export default function Footer() {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="relative group lg:max-w-[90%] ml-auto "
                 >
-                  <div className="bg-white rounded-[5px] lg:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] 2xl:h-[42px] 3xl:h-[55px]  focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                  <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] 2xl:h-[42px] 3xl:h-[55px]  focus-within:ring-1 focus-within:ring-white/20 transition-all">
                     <div className="flex-1 overflow-hidden">
                       <FormField
                         control={form.control}
@@ -83,8 +83,8 @@ export default function Footer() {
                             <FormControl>
                               <Input
                                 placeholder="Subscribe for the Latest Insights"
-                                className=" text-[16px] md:text-[17px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(33,33,33,0.6)] font-normal px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none 
-                                placeholder:text-[16px] md:placeholder:text-[17px] 2xl:placeholder:text-[19px] 3xl:placeholder:text-[21px] placeholder:text-[rgba(33,33,33,0.6)]"
+                                className=" text-[16px] xl:text-[16px] 3xl:text-[21px] text-[rgba(33,33,33,0.6)] font-normal px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none 
+                                placeholder:text-[16px] xl:placeholder:text-[16px] 2xl:placeholder:text-[19px] 3xl:placeholder:text-[21px] placeholder:text-[#212121]/60"
                                 {...field}
                               />
                             </FormControl>
@@ -95,7 +95,7 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className="!w-[34px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full 3xl:rounded-[10px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
+                      className="!w-[34px] 2xxl:!w-[34px] 3xxl:!w-[42px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
                     >
                       <svg
                         width="23"
@@ -225,21 +225,23 @@ export default function Footer() {
                   <Link href="/" className={SOCIAL_LINKS} aria-label="facebook">
                     <div className="w-full h-full flex">
                       <svg
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
+                        viewBox="0 0 43 43"
                         fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-full h-full object-contain"
                       >
-                        <g clipPath="url(#clip0_2549_375)">
+                        <g clipPath="url(#clip0_2022_930)">
                           <path
-                            d="M16 0C7.16352 0 0 7.16352 0 16C0 23.5034 5.16608 29.7997 12.135 31.529V20.8896H8.83584V16H12.135V13.8931C12.135 8.44736 14.5997 5.9232 19.9462 5.9232C20.96 5.9232 22.7091 6.12224 23.4246 6.32064V10.7526C23.047 10.713 22.391 10.6931 21.5763 10.6931C18.953 10.6931 17.9392 11.687 17.9392 14.2707V16H23.1654L22.2675 20.8896H17.9392V31.8829C25.8618 30.9261 32.0006 24.1805 32.0006 16C32 7.16352 24.8365 0 16 0Z"
+                            d="M40.32 0H2.34667C1.72429 0 1.12741 0.247238 0.687323 0.687323C0.247238 1.12741 0 1.72429 0 2.34667V40.32C0 40.9424 0.247238 41.5393 0.687323 41.9793C1.12741 42.4194 1.72429 42.6667 2.34667 42.6667H22.784V26.1333H17.2373V19.7333H22.784V14.9333C22.6691 13.8064 22.8021 12.668 23.1738 11.5979C23.5454 10.5279 24.1467 9.5521 24.9354 8.73901C25.7241 7.92592 26.6811 7.29523 27.7394 6.89117C28.7976 6.48711 29.9314 6.31947 31.0613 6.4C32.7218 6.38854 34.3815 6.47401 36.032 6.656V12.416H32.64C29.952 12.416 29.44 13.696 29.44 15.552V19.6693H35.84L35.008 26.0693H29.44V42.6667H40.32C40.6282 42.6667 40.9333 42.606 41.218 42.488C41.5027 42.3701 41.7614 42.1973 41.9793 41.9793C42.1973 41.7614 42.3701 41.5027 42.488 41.218C42.606 40.9333 42.6667 40.6282 42.6667 40.32V2.34667C42.6667 2.0385 42.606 1.73335 42.488 1.44864C42.3701 1.16393 42.1973 0.905231 41.9793 0.687323C41.7614 0.469415 41.5027 0.296561 41.218 0.17863C40.9333 0.0606985 40.6282 0 40.32 0Z"
                             fill="white"
                           />
                         </g>
                         <defs>
-                          <clipPath id="clip0_2549_375">
-                            <rect width="32" height="32" fill="white" />
+                          <clipPath id="clip0_2022_930">
+                            <rect
+                              width="42.6667"
+                              height="42.6667"
+                              fill="white"
+                            />
                           </clipPath>
                         </defs>
                       </svg>

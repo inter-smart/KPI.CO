@@ -36,15 +36,20 @@ export default function CorporateServicesUaeFaq({
   variant,
 }: CorporateServicesUaeFaqProps) {
   return (
-    <section className={cn("w-full h-auto py-[40px_70px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
-      variant === "holding" && "py-[40px_70px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]"
-          )}>
+    <section
+      className={cn(
+        "w-full h-auto py-[40px_70px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
+        variant === "holding" &&
+          "py-[40px_70px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
+      )}
+    >
       <div className="container">
         <div className="typography">
           <Heading
             as="h2"
             size="h2"
             className="text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
+           
           >
             {data?.title}
           </Heading>
@@ -56,24 +61,22 @@ export default function CorporateServicesUaeFaq({
               <AccordionItem
                 value={`item-${item.id}`}
                 key={item.id}
-                className={cn("w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
-                  variant === "holding" && "last:border-b-0"
+                className={cn(
+                  "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
+                  variant === "holding" && "last:border-b-0",
                 )}
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 xl:py-7 2xl:py-8.75 3xl:py-10 md:pr-[8px] xl:pr-[12px] [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-6 2xl:[&>svg]:w-7.5 [&>svg]:h-5 xl:[&>svg]:h-6 2xl:[&>svg]:h-7.5 [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
-                      "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
-                    variant === "holding" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                   )}
                 >
-                  <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
+                  <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
                     {parse(item?.title)}
                   </div>
                 </AccordionTrigger>
-
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
                   <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}

@@ -22,8 +22,7 @@ export default function RiskOrganisation({
   return (
     <section
       className={cn(
-        "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(62,176,234,0.05)] md:to-[rgba(62,176,234,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
-
+        "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
         variant === "dwtc" && "bg-[#F9FAFB]",
         variant === "ADGM-Foundation" &&
           "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
@@ -34,6 +33,7 @@ export default function RiskOrganisation({
       <div className="container">
         <div
           className={cn(
+            "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
             "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
             variant === "freezone" || (variant === "dwtc" && "items-end"),
             variant === "ADGM-Foundation" && "xl:gap-0",
@@ -52,7 +52,7 @@ export default function RiskOrganisation({
             {(data?.title || data?.description) && (
               <div
                 className={cn(
-                  "mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 max-w-[90%])}",
+                  "max-w-[90%])}",
                   variant === "ADGM-Foundation" &&
                     "max-sm:mb-[30px] xl:mb-[30px]",
                 )}
@@ -69,11 +69,10 @@ export default function RiskOrganisation({
                     {parse(data.title)}
                   </Heading>
                 )}
-
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
+                      "text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                     )}
                   >
@@ -82,25 +81,22 @@ export default function RiskOrganisation({
                 )}
               </div>
             )}
-
             {items.length > 0 && (
               <ul
                 className={cn(
-                  "space-y-4 lg:space-y-5 2xl:space-y-6",
+                  "space-y-4 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
                   variant === "ADGM-Foundation" && "xl:space-y-[20px]",
-                  variant === "holding" && "xl:space-y-[20px]",
                 )}
               >
                 {items.map((item) => (
                   <li
                     key={item.id}
                     className={cn(
-                      "relative pl-[30px] xl:pl-[30px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E]",
+                      "relative pl-[25px] xl:pl-[30px] text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
-                      variant === "holding" && "xl:text-[18px]",
                     )}
                   >
-                    <span className="absolute left-0 top-[2px] xl:top-[4.5px] w-[20px] h-[20px]">
+                    <span className="absolute left-0 top-[2px] xl:top-[4.5px] w-[18px] h-[18px]">
                       <svg
                         width="100%"
                         height="100%"
@@ -119,14 +115,12 @@ export default function RiskOrganisation({
                 ))}
               </ul>
             )}
-
             {data?.ftr_description && (
               <div className="text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]">
                 {parse(data.ftr_description)}
               </div>
             )}
           </div>
-
           <div
             className={cn(
               "w-full md:w-[43%] xl:w-[40%]",
@@ -146,9 +140,7 @@ export default function RiskOrganisation({
                 </Heading>
               )}
             </div>
-
-            <div
-              className="w-full h-full rounded-[12px] overflow-hidden min-h-[370px] sm:min-h-auto max-md:mb-6">
+            <div className="w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[370px] min-h-[370px] sm:min-h-auto max-md:mb-6 block">
               {data?.media?.path && (
                 <Image
                   src={data.media.path}

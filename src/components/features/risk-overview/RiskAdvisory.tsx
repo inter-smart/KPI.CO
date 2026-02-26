@@ -72,7 +72,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           </div>
 
           <div className="w-full lg:w-[51%] xl:w-[590px]">
-            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[9px] lg:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (
@@ -82,14 +82,14 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                         hasVariant(variant, "difc")
                           ? cn(
-                            "border-[#DEDEDE]",
-                            index === advisoryItems.length - 1
-                              ? "w-full border-b-0 border-r-0" // last item full
-                              : cn(
-                                "w-1/2 border-b",
-                                index % 2 === 0 ? "border-r" : "border-r-0",
-                              ),
-                          )
+                              "border-[#DEDEDE]",
+                              index === advisoryItems.length - 1
+                                ? "w-full border-b-0 border-r-0" // last item full
+                                : cn(
+                                    "w-1/2 border-b",
+                                    index % 2 === 0 ? "border-r" : "border-r-0",
+                                  ),
+                            )
                           : "w-1/2 border-b border-r border-[#DEDEDE]",
                       )}
                     >
