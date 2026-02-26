@@ -73,6 +73,7 @@ export default function MeydanFreeZone({
               <div
                 className={cn(
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[50px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-1 lg:border-2 rounded-[15px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   index % 2 !== 0
                     ? "to-[#FEFCE8] border-[#FFCB18]"
                     : "to-[#EFF6FF] border-[#5280CA]",
@@ -84,7 +85,7 @@ export default function MeydanFreeZone({
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "holding" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
                     variant === "ADGM-Foundation" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[30px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                   )}
