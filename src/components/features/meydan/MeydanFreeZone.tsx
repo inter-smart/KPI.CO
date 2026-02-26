@@ -60,15 +60,10 @@ export default function MeydanFreeZone({
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
             (variant === "difc" || variant === "holding") && "md:grid-cols-1",
-<<<<<<< HEAD
-            variant === "adgm" &&
-            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
             variant === "holding" &&
             "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
-=======
             variant === "ADGM-Foundation" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
->>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
             variant === "ifza" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
           )}
@@ -89,24 +84,14 @@ export default function MeydanFreeZone({
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "holding" &&
-<<<<<<< HEAD
-                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium  xl:mb-[30px] 2xl:mb-[35px]",
-                    variant === "adgm" &&
-                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
-=======
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium",
                     variant === "ADGM-Foundation" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[30px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
->>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
                   )}
                 >
                   {parse(item?.title)}
                 </div>
-<<<<<<< HEAD
-                <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-relaxed font-normal text-[#4E4E4E] mb-[25px] max-sm:!mb-[40px]">
-=======
                 <div className={cn("text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] mb-[15px] max-sm:!mb-[40px]",variant === "ADGM-Foundation" && "xl:mb-[25px]")}>
->>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
                   {parse(item?.description ?? "")}
                 </div>
                 <div className={cn("text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",variant === "ADGM-Foundation" && "xl:mb-[20px]")}>
@@ -117,26 +102,16 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-<<<<<<< HEAD
-                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] relative z-0 before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 2xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[2px]",
-=======
                         "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[27px] 2xl:pl-[35px] 3xl:pl-[40px] relative z-0 before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[3px] xl:before:top-[2px]",
->>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
                         index % 2 !== 0
                           ? "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3333%2024.4444C19.4698%2024.4444%2024.4444%2019.4698%2024.4444%2013.3333C24.4444%207.19678%2019.4698%202.22217%2013.3333%202.22217C7.19678%202.22217%202.22217%207.19678%202.22217%2013.3333C2.22217%2019.4698%207.19678%2024.4444%2013.3333%2024.4444Z%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]"
                           : "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3328%2024.4444C19.4693%2024.4444%2024.4439%2019.4698%2024.4439%2013.3333C24.4439%207.19678%2019.4693%202.22217%2013.3328%202.22217C7.19629%202.22217%202.22168%207.19678%202.22168%2013.3333C2.22168%2019.4698%207.19629%2024.4444%2013.3328%2024.4444Z%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]",
                       )}>
                       <span
                         className={cn(
-<<<<<<< HEAD
-                          "text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#364153]",
-                          variant === "adgm" &&
-                          "text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px]",
-=======
                           "text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "ADGM-Foundation" &&
                             "text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
->>>>>>> 1dafae913ed208f097438ce23ba88804b9b0cf1a
                         )}
                       >
                         {parse(zone)}
