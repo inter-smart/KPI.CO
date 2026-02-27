@@ -84,7 +84,7 @@ export default function CorporateServicesUaeCta({
             <Heading
               as="h2"
               size="h2"
-              className={cn("max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5",
+              className={cn("max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
                 variant === "holding" && "font-bold leading-relaxed",
               )}
             >

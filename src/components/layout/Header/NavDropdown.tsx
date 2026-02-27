@@ -44,7 +44,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
     return (
         <div
             className={cn(
-                "absolute top-[calc(100%-1px)] left-0 bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-3xl overflow-hidden  origin-top",
+                "absolute top-[calc(100%-1px)] left-0 bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-[10px] overflow-hidden  origin-top",
                 // Dynamic width: only full width if there's right content
                 hasRightContent
                     ? "w-[590px] xl:w-[730px] 2xl:w-[750px] 3xl:w-[1000px]"
@@ -152,19 +152,19 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                         ) : (
                             <div className="h-full w-full flex flex-col justify-start">
                                 <div className={cn(
-                                    "relative w-full h-full lg:h-[90%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] xl:p-[33px_24px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
+                                    "relative w-full h-full lg:h-[100%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] xl:p-[33px_24px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
                                     activeCategoryId === 'digital' ? "bg-[linear-gradient(360deg,#3EB0EA_0%,#389FDB_18%,#1C5396_100%)]" :
                                         isResource ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
                                             "bg-[linear-gradient(360deg,#4A7DBF_0%,#2D5B94_40%,#1C5396_100%)]"
                                 )}>
                                     {activeCategoryId === 'digital' && (
                                         <div className="absolute top-0 left-0 w-full h-full ">
-                                            <Image src="/images/dropBg.png" fill className='object-cover' alt="backgroundd_img" />
+                                            <Image src="/images/digital_banner.svg" fill className='object-cover' alt="backgroundd_img" />
                                         </div>
                                     )}
                                     {isResource && (
                                         <div className="absolute top-0 left-0 w-full h-full ">
-                                            <Image src="/images/glsaaryBg.png" fill className='object-cover' alt="backgroundd_img" />
+                                            <Image src="/images/glosary_banner.svg" fill className='object-cover' alt="backgroundd_img" />
                                         </div>
                                     )}
 

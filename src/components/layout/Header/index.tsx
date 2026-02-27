@@ -141,7 +141,7 @@ export default function Header() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   return (
-    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[99999] shadow-sm flex items-center">
+    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[4] shadow-sm flex items-center">
       <div className="container">
         <div className="flex items-center">
           {/* Logo Section */}
@@ -182,7 +182,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4"
+                      className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4"
                     >
                       {item.label}
                       {item.isMega && (

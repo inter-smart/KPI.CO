@@ -63,7 +63,7 @@ function WhyBuildCard({
   return (
     <div
       className={cn(
-        "group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        "group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
