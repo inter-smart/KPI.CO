@@ -24,6 +24,7 @@ export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "saifz"
     | "advisory"
     | "dwtc"
@@ -90,10 +91,11 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
+                "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
+                variant === "CorporateServicesUae" && "xl:text-[16px] lg:max-w-[60%]",
               )}
             >
               {parse(data?.description)}
@@ -106,7 +108,7 @@ export default function InnerHero({
                   key={index}
                   as="div"
                   size="p1"
-                  className="font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8"
+                  className={cn("font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",variant === "CorporateServicesUae" && "text-[14px] xl:text-[16px]")}
                 >
                   <Image
                     src="/images/icon-list.svg"

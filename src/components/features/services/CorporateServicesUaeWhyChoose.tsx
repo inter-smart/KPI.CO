@@ -24,6 +24,7 @@ export type CorporateServicesUaeWhyChooseData = {
 export type CorporateServicesUaeWhyChooseProps = {
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "mainland"
     | "advisory"
     | "freezone-business"
@@ -31,7 +32,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "ADGM-Foundation"
     | "tax-advisory"
     | "sop"
-  | "holding"
+    | "holding"
     | "regulatory"
     | "spv";
   titleClassName?: string;
@@ -42,6 +43,7 @@ type ServiceCardProps = {
   item: WhyChooseItem;
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "mainland"
     | "advisory"
     | "risk"
@@ -49,7 +51,7 @@ type ServiceCardProps = {
     | "freezone-business"
     | "tax-advisory"
     | "sop"
-  | "holding"
+    | "holding"
     | "regulatory"
     | "spv";
 };
@@ -73,6 +75,7 @@ export default function CorporateServicesUaeWhyChoose({
         "w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block",
         variant === "ADGM-Foundation" &&
           "max-sm:py-[45px_15px] xl:py-[55px_75px]",
+        variant === "CorporateServicesUae" && "xl:py-[50px_90px]",
       )}
     >
       <div className="container">
@@ -90,9 +93,10 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "tax-advisory"
               ? "text-left"
               : "sm:text-center",
-            variant === "regulatory" &&
-            "",
+            variant === "regulatory" && "",
             variant === "ADGM-Foundation" && "max-xl:!mb-[25px] xl:mb-[30px]",
+            variant === "CorporateServicesUae" &&
+              "max-xl:!mb-[25px] xl:mb-[50px]",
           )}
         >
           <Heading
@@ -107,17 +111,18 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "freezone-business" && "text-left",
               variant === "spv" && "text-left",
               variant === "tax-advisory" && "text-left",
+              variant === "CorporateServicesUae" &&
+                "max-xl:!mb-[20px] xl:mb-[30px]",
               titleClassName,
             )}
           >
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]">
+            <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]">
               {parse(data?.description)}
             </div>
           )}
-
           <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
             {data?.sub_title}
           </div>
@@ -160,9 +165,9 @@ export default function CorporateServicesUaeWhyChoose({
         <div
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
-            variant === "mainland" && "hidden sm:grid", 
+            variant === "mainland" && "hidden sm:grid",
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
-            variant === "mainland" && "hidden sm:grid", 
+            variant === "mainland" && "hidden sm:grid",
             variant === "ADGM-Foundation" &&
               "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
             variant === "holding" &&
@@ -184,7 +189,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px] ",
+        "w-full h-full p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "freezone-business" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
@@ -196,11 +201,11 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         (variant === "risk" ||
           variant === "tax-advisory" ||
           variant === "ADGM-Foundation") &&
-            "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
-          variant === "spv" &&
-            "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
-          variant === "holding" &&
-           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%]"
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
+        variant === "spv" &&
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
+        variant === "holding" &&
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%]",
       )}
     >
       <div
@@ -208,7 +213,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5",
           variant === "mainland" && "text-[#1C5396]",
           variant === "risk" && "text-[#1C5396]",
-            variant === "holding" && "text-[#1C5396]",
+          variant === "holding" && "text-[#1C5396]",
           variant === "ADGM-Foundation" && "text-[#1C5396]",
           variant === "advisory" && "text-[#1C5396]",
           variant === "freezone-business" && "text-[#1C5396]",
@@ -228,6 +233,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
               "text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
               variant === "ADGM-Foundation" &&
                 "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
+              variant === "CorporateServicesUae" && "xl:text-[14px]",
             )}
           >
             {parse(item?.description)}

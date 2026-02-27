@@ -16,6 +16,7 @@ type CorporateServicesUaeBankingProps = {
 
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "mainland"
     | "freezone"
     | "dsoa"
@@ -71,6 +72,7 @@ export default function CorporateServicesUaeBanking({
               variant === "downshadow"
               ? "text-left"
               : "sm:text-center",
+            variant === "CorporateServicesUae" && "xl:mb-[40px]",
           )}
         >
           <Heading
@@ -82,7 +84,7 @@ export default function CorporateServicesUaeBanking({
           </Heading>
           <div
             className={cn(
-              "text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
+              "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
               variant === "mainland"
                 ? ""
                 : variant === "freezone" ||
@@ -95,6 +97,7 @@ export default function CorporateServicesUaeBanking({
               variant === "company" && "text-left !max-w-full ",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
+              variant === "CorporateServicesUae" && "xl:max-w-[880px]",
             )}
           >
             {parse(data?.description)}

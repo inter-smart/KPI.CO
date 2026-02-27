@@ -48,8 +48,7 @@ export default function CorporateServicesUaeFaq({
           <Heading
             as="h2"
             size="h2"
-            className="text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
-           
+            className="text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
           >
             {data?.title}
           </Heading>

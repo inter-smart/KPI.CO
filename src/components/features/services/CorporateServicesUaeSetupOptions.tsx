@@ -17,7 +17,7 @@ type CorporateServicesUaeSetupOptionsProps = {
     description: string;
     items: SetupOptionItem[];
   };
-  variant?: "hamriyah" | "default";
+  variant?: "hamriyah" | "default" | "CorporateServicesUae";
 };
 
 function SetupOptionCard({ item }: { item: SetupOptionItem }) {
@@ -48,7 +48,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
         >
           <Heading
             as="div"
-            className="text-[24px] sm:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white"
+            className="text-[24px] sm:text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white"
           >
             {item.title}
             <span className="w-12 xl:w-10 2xl:w-12 h-[2px] bg-base2 block mx-auto mt-2" />
@@ -95,7 +95,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Heading
                 as="div"
                 size="h4"
-                className="max-sm:text-[22px] text-center font-semibold text-white mb-2 2xl:mb-2.5"
+                className="max-xl:!text-[22px] xl:text-[22px] text-center font-semibold text-white mb-2 2xl:mb-2.5"
               >
                 {item.title}
               </Heading>
@@ -116,7 +116,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Text
                 as="div"
                 size="p1"
-                className="max-sm:text-[14px] line-clamp-8 font-light text-center text-white mb-5 2xl:mb-6"
+                className="max-xl:!text-[14px] xl:text-[16px] line-clamp-8 font-light text-center text-white mb-5 2xl:mb-6"
               >
                 {parse(item?.description)}
               </Text>
@@ -137,7 +137,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Button
                 variant="yellow"
                 size="lg"
-                className="text-[12px] xl:text-[14px] 2xl:text-[17px] min-w-[120px] xl:min-w-[120px] 2xl:min-w-[145px] 3xl:min-w-[180px] h-8.5! 2xl:h-10.5! 3xl:h-12!"
+                className="text-[12px] xl:text-[16px] 2xl:text-[17px] min-w-[120px] xl:min-w-[120px] 2xl:min-w-[145px] 3xl:min-w-[180px] h-8.5! xl:h-[40px] 2xl:h-10.5! 3xl:h-12!"
                 asChild
               >
                 <Link href={item?.slug}>Learn More</Link>
@@ -167,6 +167,8 @@ export default function CorporateServicesUaeSetupOptions({
           className={cn(
             "sm:text-center w-full sm:max-w-[576px] xl:max-w-[840px] 2xl:max-w-[1000px] 3xl:max-w-[1280px] mx-auto mb-6 xl:mb-10 2xl:mb-12",
             variant === "hamriyah" && "sm:text-left !max-w-full",
+            variant === "CorporateServicesUae" &&
+              "xl:mb-[50px] xl:max-w-[950px]",
           )}
         >
           <Heading
