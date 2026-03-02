@@ -108,7 +108,7 @@ export default function BlogFilter({
                                         }}
                                         className={cn(
                                             "w-full px-2 py-2 text-[12px] font-semibold text-center transition-colors cursor-pointer",
-                                            idx === 0 ? "bg-[#cccccc] text-[#053269] rounded-[8px]" : "text-gray-500 hover:bg-gray-200"
+                                            idx === 0 ? "bg-[#cccccc] text-[#053269] rounded-[8px]" : "text-[rgba(78,78,78,0.7)]"
                                         )}
                                     >
                                         {option}

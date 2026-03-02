@@ -46,16 +46,16 @@ export default function InnerHero({
   return (
     <section
       className={cn(
-        "w-full h-[600px] sm:h-[500px] xl:h-[600px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
+        "w-full min-h-[600px] sm:min-h-[500px] xl:min-h-[600px]  lg:max-h-[calc(100vh-var(--header-y))] py-[50px] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[740px] sm:h-[650px] xl:h-[640px] 3xl:h-[800px]"
-          : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
+          ? "min-h-[740px] sm:min-hh-[650px] xl:min-h-[640px] "
+          : "min-h-[600px] sm:min-hh-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing"
-          ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
+          ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
       )}
     >
