@@ -76,7 +76,7 @@ export default function CorporateServicesUaeFormationProcess({
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: triggerRef.current,
-        start: "top 80px",
+        start: "top 50px",
         end: `+=${totalScrollDistance}`,
         pin: sectionRef.current,
         pinSpacing: true,
@@ -149,26 +149,27 @@ export default function CorporateServicesUaeFormationProcess({
             )}
           >
             <div className="flex items-center">
-              <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
+              <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ">
                 {data.steps.map((step, index) => (
                   <div
                     key={step.id}
                     className={cn(
-                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
+                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 ",
                       variant === "tax-advisory" && "min-w-[330px]",
                       isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
                         : "opacity-90 hover:opacity-100",
                     )}
-                    onClick={() => !isDesktop && setActiveStep(index)}
+                    // onClick={() => !isDesktop && setActiveStep(index)}
+                    onClick={() => setActiveStep(index)}
                     
                   >
                     <div
                       className={cn(
                         "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
-                        variant === "mainland" && "lg:h-[190%]",
+                        variant === "mainland" && "lg:h-[150%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                           : "bg-[#dcdcdc]",

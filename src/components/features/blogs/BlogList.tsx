@@ -311,7 +311,7 @@ export default function BlogList({ data }: BlogListProps) {
                   "w-10 h-10 rounded-md font-medium transition",
                   currentPage === page
                     ? "border border-[#1C5396] text-[#1c5396] bg-white font-semibold"
-                    : "border border-transparent hover:border-gray-200 text-gray-500 hover:bg-gray-50",
+                    : "border border-transparent hover:border-gray-200 text-black hover:bg-gray-50",
                 )}
               >
                 {page}

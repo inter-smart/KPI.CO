@@ -170,7 +170,7 @@
   }
 
   .typography {
-    --text-color: black;
+    --text-color: #4E4E4E;
 
     * {
       @apply my-2.5 lg:my-4;
