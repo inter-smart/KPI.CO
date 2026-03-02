@@ -288,7 +288,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location1.jpg",
         description:
-          "Dubai offers world-class infrastructure and a global trade hub environment, perfect for ambitious international businesses.",
+          "A Free Zone Establishment is owned by a single shareholder, either an individual or a corporate entity.",
         link: "#",
       },
       {
@@ -297,7 +297,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location2.jpg",
         description:
-          "Abu Dhabi combines strong government support with strategic industry clusters. Its focus on energy, technology, and innovation provides a solid base for businesses working on large-scale or specialized projects.",
+          "A Free Zone Company requires a minimum of two shareholders, who can be individuals or corporate entities.",
         link: "#",
       },
       {
@@ -306,7 +306,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location3.jpg",
         description:
-          "Ajman provides a cost-effective mainland setup with a fast-growing industrial base and strategic port access.",
+          "Existing UAE or foreign companies can open a branch in DSOA, with activities aligned to the parent company.",
         link: "#",
       },
       {
@@ -315,7 +315,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location4.jpg",
         description:
-          "Sharjah is the cultural and educational hub of the UAE, offering unique opportunities in logistics and creative industries.",
+          "Companies holding a Dubai Economy license can operate in DSOA’s administrative zone after obtaining a business operation permit.",
         link: "#",
       },
 

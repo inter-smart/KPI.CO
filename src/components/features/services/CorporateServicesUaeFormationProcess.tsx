@@ -118,7 +118,7 @@ export default function CorporateServicesUaeFormationProcess({
               <Text
                 as="div"
                 size="p5"
-                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[20px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
+                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[18px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
               >
                 {parse(data?.description)}
               </Text>
@@ -267,7 +267,7 @@ export default function CorporateServicesUaeFormationProcess({
                         <Heading
                           as="h4"
                           size="h6"
-                          className="font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-6 2xl:mb-7 capitalize max-md:[&_br]:hidden"
+                          className="xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden"
                         >
                           {parse(data.steps[activeStep].inner_title)}
                         </Heading>
@@ -281,7 +281,7 @@ export default function CorporateServicesUaeFormationProcess({
                       <Text
                         as="div"
                         size="p3"
-                        className="text-black max-md:[&_br]:hidden"
+                        className="text-black max-md:[&_br]:hidden xl:text-[18px] "
                       >
                         {parse(data.steps[activeStep].description)}
                       </Text>
@@ -303,7 +303,7 @@ export default function CorporateServicesUaeFormationProcess({
                       {item?.title}
                     </div>
                     {item?.description && (
-                      <div className="text-[14px] lg:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[16px] xl:text-[18px]  2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item?.description)}
                       </div>
                     )}

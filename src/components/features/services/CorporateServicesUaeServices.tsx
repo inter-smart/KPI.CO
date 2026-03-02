@@ -11,7 +11,7 @@ type CorporateServicesUaeServicesProps = {
     items: ServiceItem[];
     footer_description?: string;
   };
-  variant?: "default" | "saifz" | "advisory" | "dafza" | "rakez" | "regulatory";
+  variant?: "default" | "saifz" | "advisory" | "dafza" | "rakez" | "regulatory" | "dsoa";
 };
 
 export default function CorporateServicesUaeServices({
@@ -24,7 +24,8 @@ export default function CorporateServicesUaeServices({
         <div
           className={cn(
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
-            variant === "saifz" || variant === "regulatory" && "sm:text-left",
+            variant === "regulatory" && "sm:text-left",
+            variant === "saifz" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
             variant === "rakez" && "sm:text-left",
           )}
@@ -32,12 +33,12 @@ export default function CorporateServicesUaeServices({
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10"
+            className="text-[#1C5396] mb-5 sm:mb-6.25 xl:mb-[30px] 2xl:mb-7.5 3xl:mb-10"
           >
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+            <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] xl:mb-[35px] leading-normal font-normal text-[#4E4E4E]">
               {parse(data?.description)}
             </div>
           )}
@@ -47,7 +48,7 @@ export default function CorporateServicesUaeServices({
             <div key={item?.id} className="w-full h-auto block">
               <div
                 className={cn(
-                  "[--icon-size:45px] lg:[--icon-size:40px] 2xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
+                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[14px] border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "regulatory" && "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                 )}
@@ -58,15 +59,15 @@ export default function CorporateServicesUaeServices({
                     alt={item?.media?.alt}
                     width={32}
                     height={32}
-                    className="w-full h-full object-contain max-w-[20px] 2xl:max-w-[26px]"
+                    className="w-full h-full object-contain max-w-[20px] xl:max-w-[26px]"
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 2xl:pl-3.75 3xl:pl-5">
-                  <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75 3xl:mb-3">
+                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75 3xl:mb-3">
                     {item?.title}
                   </div>
                   {item?.description && (
-                    <p className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
+                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[400px] 2xl:max-w-full">
                       {parse(item?.description)}
                     </p>
                   )}

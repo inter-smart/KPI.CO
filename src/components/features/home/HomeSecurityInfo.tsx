@@ -21,7 +21,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               >
                 {data.title}
               </Heading>
-              <div className="lg:[&_p]:text-[16px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal !text-[#4E4E4E] 3xl:max-w-[85%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
+              <div className="lg:[&_p]:text-[16px] xl:text-[18px] 2xl:[&_p]:text-[19px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal !text-[#4E4E4E] 3xl:max-w-[85%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
                 {parse(data.description || '')}
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               <div className="lg:text-[22px] 2xl:text-[26px] 3xl:text-[34px] leading-normal font-bold text-[#1C5396] mb-2.5">
                 {data.isoInfo.label}
               </div>
-              <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-[15px]  relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
+              <div className="text-[12px] xl:text-[13px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-[15px]  relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
                 Certified
               </div>
               <div className="text-[11px] lg:text-[12px] 2xl:text-[15px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] max-sm:max-w-[87%] max-sm:m-auto p-[20px_15px] lg:p-[15px_25px] 2xl:p-[20px_25px] 3xl:p-[25px_30px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">

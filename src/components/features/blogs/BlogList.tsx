@@ -107,20 +107,19 @@ export default function BlogList({ data }: BlogListProps) {
         <Heading
           as="h1"
           size="h1"
-          className="text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold"
+          className="xl:text-[40px] text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold"
         >
           {data.title}
         </Heading>
 
         {/* Filter and Search Bar */}
-        <div className="flex flex-row  gap-2 2xl:gap-3 3xl:gap-4 mb-6 max-w-[500px] xl:max-w-[620px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[42px] 2xl:h-[50px] 3xl:h-[65px]">
+        <div className="flex flex-row  gap-2 xl:gap-[10px] mb-6 max-w-[500px] xl:max-w-[700px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[50px] 3xl:h-[65px]">
           <BlogFilter
             activeFilters={activeFilters}
             onFilterChange={setActiveFilters}
             onApply={() => {}}
             onClear={() => setActiveFilters([])}
           />
-
           <div className="relative flex-1 h-full rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px]  shadow-[0_0_26px_rgba(0,0,0,0.05)] ">
             <input
               type="text"
@@ -131,8 +130,8 @@ export default function BlogList({ data }: BlogListProps) {
                 setCurrentPage(1);
               }}
               className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px]  w-full h-full px-[20px] 2xl:px-[25px] 3xl:px-[35px] rounded-[8px] xl:rounded-[10px]
-                             3xl:rounded-[13px] focus:outline-none focus:ring-2 focus:ring-[#C7C5CE]/20 transition-all placeholder:text-[#C7C5CE]
-                             placeholder:text-[14px] md:placeholder:text-[12px] xl:placeholder:text-[16px] 2xl:placeholder:text-[17px] 3xl:placeholder:text-[21px] "
+                        3xl:rounded-[13px] focus:outline-none focus:ring-2 focus:ring-[#C7C5CE]/20 transition-all placeholder:text-[#C7C5CE]
+                        placeholder:text-[14px] md:placeholder:text-[12px] xl:placeholder:text-[16px] 2xl:placeholder:text-[17px] 3xl:placeholder:text-[21px] "
             />
             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
               <svg
@@ -150,13 +149,17 @@ export default function BlogList({ data }: BlogListProps) {
             </div>
           </div>
         </div>
-
         {/* Active Filters */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 md:mb-12">
           {activeFilters.map((filter) => (
             <div
               key={filter}
-              className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] flex items-center gap-1 sm:gap-2 px-3 py-1.5 bg-[rgba(143,216,254,0.15)] border border-[#d6e5f5] rounded-md text-[#4E4E4E] text-sm font-medium"
+              className={cn(
+                "text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] flex items-center gap-1 sm:gap-2 px-3 py-1.5 bg-[rgba(143,216,254,0.15)] border border-[#d6e5f5] rounded-md text-[#4E4E4E] text-sm font-medium",
+                activeFilters.includes(filter)
+                  ? "border-transparent"
+                  : "border-[#d6e5f5]",
+              )}
             >
               {filter}
               <button
@@ -183,16 +186,16 @@ export default function BlogList({ data }: BlogListProps) {
             No blogs found matching your search.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 2xl:gap-6 3xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] xl:gap-[32px_38px] 3xl:gap-8">
             {currentItems.slice(0, 5).map((item, index) => (
               <BlogCard key={item.id} data={item} />
             ))}
 
             {/* Special CTA Card (Position 6) */}
-            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] max-md:min-h-[477px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
+            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1c5396] to-[#4a84c4] z-0 max-md:min-h-[477px] p-[30px] xl:p-[40px] 2xl:p-[50px] 3xl:p-[60px] flex flex-col justify-center  text-white shadow-lg">
               <div className="position absolute top-0 left-0 w-full h-full">
                 <Image
-                  src="/images/blogBg.jpg"
+                  src="/images/blogBanner.svg"
                   className="w-full h-full object-cover"
                   width="375"
                   height="235"
@@ -200,11 +203,11 @@ export default function BlogList({ data }: BlogListProps) {
                 />
               </div>
 
-              <div className="relative z-10">
-                <h3 className="text-[16px] xl:text-[17px] 2xl:text-[20px] 3xl:text-[26px] font-semibold mb-4 leading-relaxed">
+              <div className="relative z-10 max-sm:max-w-[262px]">
+                <h3 className="text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] font-semibold mb-4 xl:mb-[15px] max-sm:max-w-[202px]">
                   Strong Decisions Start <br /> with Clear Insight
                 </h3>
-                <p className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 leading-relaxed">
+                <p className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white mb-8 ">
                   Our audit and business advisory services help you identify
                   risks, improve performance, and plan for sustainable growth at
                   every stage of your business.
@@ -216,7 +219,7 @@ export default function BlogList({ data }: BlogListProps) {
                       onSubmit={form.handleSubmit(onSubmit)}
                       className="relative group "
                     >
-                      <div className="bg-white rounded-[13px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[42px] xl:h-[50px] 2xl:h-[46px] 3xl:h-[55px] shadow-sm focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                      <div className="bg-white rounded-[10px] p-[5_10px] 3xl:p-[5px_15px] overflow-hidden flex items-center w-full h-[42px] xl:h-[45px] 3xl:h-[55px] shadow-sm focus-within:ring-1 focus-within:ring-white/20 transition-all">
                         <div className="flex-1 overflow-hidden">
                           <FormField
                             control={form.control}
@@ -226,7 +229,7 @@ export default function BlogList({ data }: BlogListProps) {
                                 <FormControl>
                                   <Input
                                     placeholder="Subscribe Today"
-                                    className="text-[17px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(0,0,0)] font-medium px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none placeholder:text-[17px] 2xl:placeholder:text-[19px] 3xl:placeholder:text-[21px] placeholder:text-black"
+                                    className="text-[17px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[21px] text-[rgba(0,0,0)] font-medium px-[5px] w-full h-full border-0 focus-visible:ring-0 focus-visible:ring-offset-0 !bg-transparent  shadow-none placeholder:text-[14px] xl:placeholder:text-[16px] 2xl:placeholder:text-[19px] 3xl:placeholder:text-[21px] placeholder:leading-[1.6] placeholder:text-black placeholder:translate-y-[-2px]"
                                     {...field}
                                   />
                                 </FormControl>
@@ -280,7 +283,7 @@ export default function BlogList({ data }: BlogListProps) {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 mt-16 h-[42px] [&>button]:h-full [&>button]:w-[42px] [&>button]:flex [&>button]:items-center [&>button]:justify-center ">
+          <div className="flex justify-center items-center gap-[12px] mt-16 h-[32px] [&>button]:h-full [&>button]:w-[32px] [&>button]:rounded-[4px] [&>button]:flex [&>button]:items-center [&>button]:justify-center ">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
@@ -307,7 +310,7 @@ export default function BlogList({ data }: BlogListProps) {
                 className={cn(
                   "w-10 h-10 rounded-md font-medium transition",
                   currentPage === page
-                    ? "border border-[#1c5396] text-[#1c5396] bg-[#f0f5fa] font-semibold"
+                    ? "border border-[#1C5396] text-[#1c5396] bg-white font-semibold"
                     : "border border-transparent hover:border-gray-200 text-gray-500 hover:bg-gray-50",
                 )}
               >
@@ -336,7 +339,7 @@ export default function BlogList({ data }: BlogListProps) {
               </div>
             </button>
           </div>
-        )}
+       )}
       </div>
     </section>
   );
@@ -344,7 +347,7 @@ export default function BlogList({ data }: BlogListProps) {
 
 function BlogCard({ data }: BlogCardProps) {
   return (
-    <div className="group flex flex-col w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+    <div className="group flex flex-col w-full h-full max-sm:min-h-[477px] bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
       <div className="relative aspect-[440/268] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
@@ -353,19 +356,19 @@ function BlogCard({ data }: BlogCardProps) {
           className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
         />
       </div>
-      <div className="p-6 md:p-7 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1">
-        <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide">
+      <div className="p-6 md:p-7 xl:p-[25px_48px] 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1 ">
+        <div className="text-[14px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[12px] uppercase tracking-wide">
           {data.date} • {data.readTime}
         </div>
         {data.date_full && (
-          <div className="text-[14px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[25px] uppercase tracking-wide hidden">
+          <div className="text-[14px] xl:text-[16px] font-medium text-[#5280ca] mb-[15px] xl:mb-[12px] uppercase tracking-wide hidden">
             {data.date_full} • {data.readTime}
           </div>
         )}
-        <h3 className="text-[18px] md:text-[20px] 2xl:text-[22px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[25px] line-clamp-2 leading-tight transition-colors">
+        <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] line-clamp-2 leading-relaxed transition-colors">
           {parse(data.title)}
         </h3>
-        <div className="text-[14px] md:text-[15px] 2xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-[25px] md:leading-[27px] 2xl:leading-[28px] 3xl:leading-[33px] mb-6">
+        <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-[23px]">
           {parse(data.description)}
         </div>
         <Link

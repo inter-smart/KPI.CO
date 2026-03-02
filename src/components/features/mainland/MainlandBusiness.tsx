@@ -62,17 +62,17 @@ export default function MainlandBusiness({
             <div
               className={cn(
                 "w-full",
-                hasVariant(variant, "spv") || hasVariant(variant, "rakez")
-                  ? "max-w-[93%] 3xl:max-w-[100%]"
-                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
-                hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
+                // hasVariant(variant, "spv") || hasVariant(variant, "rakez")
+                //   ? "max-w-[93%] 3xl:max-w-[100%]"
+                //   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                // hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
               )}
             >
               <Heading
                 as="h2"
                 size="h2"
                 className={cn(
-                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
+                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                 )}
               >

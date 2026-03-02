@@ -33,7 +33,7 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
 
         <div
           className={cn(
-            "typography [--text-color:#d2dbe7]! mb-6 xl:mb-8 2xl:mb-10",
+            "typography [--text-color:#d2dbe7]! mb-6 xl:text-[18px] xl:mb-8 2xl:mb-10",
           )}
         >
           {parse(data.description ?? "<p>no content</p>")}

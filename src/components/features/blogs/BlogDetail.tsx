@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import parse, { type DOMNode } from "html-react-parser";
 import { Element } from "domhandler";
@@ -224,7 +224,7 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                   );
                 })}
               </ul>
-              {/* Sponsored Card */} ``
+              {/* Sponsored Card */} 
               {data?.sponsored && (
                 <div className="mt-[24px]">
                   <BlogSponsoredCard data={data.sponsored} />
@@ -234,7 +234,7 @@ export default function BlogDetail({ data }: BlogDetailProps) {
           </div>
 
           {/* Main Content */}
-          <div className="md:w-[70%] lg:w-[75%] 2xl:w-[76%]">
+          <div className="md:w-[70%] lg:w-[75%] 2xl:w-[76%] pb-[750px]">
             <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto">
               {htmlWithIds &&
                 parse(htmlWithIds, {
