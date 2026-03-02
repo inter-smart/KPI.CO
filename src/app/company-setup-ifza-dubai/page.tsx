@@ -116,16 +116,16 @@ const localData = {
       mobilePath: "/images/ifza-mobile-bg.png",
       alt: "Company Formation in IFZA,  UAE",
     },
-    title: "Company Formation in IFZA,<br/> UAE ",
+    title: "Company Formation in IFZA, UAE ",
     description:
-      "<p>Set up your business in IFZA (International Free Zone Authority), Dubai - one of the UAE’s most <br/> founder-friendly free zones. Fast setup timelines, diverse licence options, and competitive <br/> pricing for entrepreneurs, startups, and international companies.</p>",
+      "<p>Set up your business in IFZA (International Free Zone Authority), Dubai - one of the UAE’s most founder-friendly free zones. Fast setup timelines, diverse licence options, and competitive pricing for entrepreneurs, startups, and international companies.</p>",
   } satisfies HeroData,
 
   mainlandBusiness: {
     title: "Start a Business in IFZA Dubai",
     description:
       "<p>The International Free Zone Authority (IFZA), based in Dubai Silicon Oasis (DSO), is a rapidly growing free zone that supports businesses with simple and fast company formation. Fully licensed by the UAE government, IFZA provides access to world-class infrastructure and new business opportunities. The free zone offers a flexible platform to scale, connect internationally, and thrive in one of the world’s most dynamic business hubs.</p>",
-    highlightsTitle: "IFZA Free Zone is Well Suited For:",
+    highlightsTitle: "IFZA Free Zone is well suited for:",
     highlights: [
       "Startups and first-time founders entering the UAE",
       "International companies expanding into Dubai",
@@ -152,7 +152,7 @@ const localData = {
         },
         title: "Cost Effective",
         description:
-          "<p>One of Dubai’s most affordable free zones, with competitive licence and visa packages</p>",
+          "<p>One of Dubai’s most affordable free zones, with competitive licence and visa packages. </p>",
       },
       {
         id: 2,
@@ -162,7 +162,7 @@ const localData = {
         },
         title: "Fast Setup",
         description:
-          "<p>Efficient registration and approval process Efficient registration and approval process</p>",
+          "<p>Efficient registration and approval process designed for quick market entry. </p>",
       },
 
       {
@@ -173,7 +173,7 @@ const localData = {
         },
         title: "Flexible Licences",
         description:
-          "<p>Multiple business activities can often be combined under a single licence.</p>",
+          "<p>Multiple business activities can often be combined under a single licence. </p>",
       },
       {
         id: 4,
@@ -183,7 +183,7 @@ const localData = {
         },
         title: "Full Ownership",
         description:
-          "<p>Allows 100% foreign ownership and 100% repatriation of capital and profits.</p>",
+          "<p>Allows 100% foreign ownership and 100% repatriation of capital and profits. </p>",
       },
     ] satisfies WhyBuildItem[],
   },
@@ -422,14 +422,14 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero variant="ifza" data={localData.hero} />
-      <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
+      <MainlandBusiness variant="ifza" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
         variant="ifza"
         data={localData.whyBuild}
       />
-      <CorporateServicesUaeServices variant="saifz" data={localData.services} />
+      <CorporateServicesUaeServices variant="ifza" data={localData.services} />
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
-      <RiskOrganisation data={localData.workWithKpi} />
+      <RiskOrganisation variant="ifza" data={localData.workWithKpi} />
       <CorporateServicesUaeBanking
         variant="ifza"
         data={localData.banking}

@@ -27,7 +27,8 @@ export type CorporateServicesUaeCtaProps = {
     | "blogdetail"
     | "rakez"
     | "ADGM-Foundations"
-    | "holding";
+    | "holding"
+    | "dwtc";
 };
 
 export default function CorporateServicesUaeCta({
@@ -79,8 +80,9 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full max-lg:mb-3.75",
-              variant === "mainland" ? "lg:w-[70%]" : "lg:w-[70%]",
+              variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
+              variant === "dwtc" ? "lg:w-[64%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[63%]",
             )}
           >
@@ -104,20 +106,23 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full lg:w-[33%] flex lg:justify-end",
-              variant === "mainland" ? "lg:w-[30%]" : "lg:w-[30%]",
+              variant === "mainland" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
+              variant === "dwtc" ? "lg:w-[36%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[37%]",
             )}
           >
             <Button
               className={cn(
-                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
+                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "ADGM-Foundations" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
                 variant === "holding" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+                variant === "dwtc" &&
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >

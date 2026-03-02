@@ -18,7 +18,7 @@ type CorporateServicesUaeBankingProps = {
     | "default"
     | "CorporateServicesUae"
     | "mainland"
-    | "freezone"
+    | "dwtc"
     | "dsoa"
     | "saifz"
     | "dmcc"
@@ -55,6 +55,7 @@ export default function CorporateServicesUaeBanking({
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && "!pt-5 shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
+        variant === "dwtc" && "!pt-5 !shadow-none",
       )}
     >
       <div className="container">
@@ -62,7 +63,7 @@ export default function CorporateServicesUaeBanking({
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
-              variant === "freezone" ||
+              variant === "dwtc" ||
               variant === "dsoa" ||
               variant === "dmcc" ||
               variant === "company" ||
@@ -87,7 +88,7 @@ export default function CorporateServicesUaeBanking({
               "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
               variant === "mainland"
                 ? ""
-                : variant === "freezone" ||
+                : variant === "dwtc" ||
                     variant === "dsoa" ||
                     variant === "freezone-business" ||
                     variant === "dmcc"

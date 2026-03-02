@@ -1,15 +1,17 @@
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import BusinessSetup from "@/components/features/services/BusinessSetup";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import { Metadata } from "next";
 import InnerHero from "@/components/common/InnerHero";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import BusinessSetup from "@/components/features/services/BusinessSetup";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import BusinessLocation, { type BusinessLocationData } from "@/components/features/mainland/BusinessLocation"; 
-import { Metadata } from "next";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import BusinessLocation, {
+  type BusinessLocationData,
+} from "@/components/features/mainland/BusinessLocation";
 
 export type MainlandBusinessData = {
   title: string;
@@ -122,7 +124,7 @@ const localData = {
       mobilePath: "/images/mainland-company-formation-uae-hero-bg-mobile.svg",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
-    title: "Mainland Company Formation & Licensing in the UAE ",
+    title: "Mainland Company Formation <br> & Licensing in the UAE ",
     description:
       "<p>Set up your mainland company in the UAE and operate freely across all Emirates. Ideal for businesses that need local market access, onshore operations, and long term flexibility.</p>",
   } satisfies HeroData,
@@ -463,7 +465,7 @@ const localData = {
     ] satisfies BankingPartner[],
   },
   whyChoose: {
-    title: "Why choose KPI?",
+    title: "Why Choose KPI?",
     description:
       "KPI is more than a company setup service. We guide businesses through every step of mainland formation and beyond, helping you build a compliant, growth-ready company in the UAE. Our team supports you with: ",
     sub_title: "",
@@ -593,7 +595,6 @@ const localData = {
     ftr_description:
       "<p>KPI handles the full process, from reviewing your documents to final submission, ensuring everything is compliant and your mainland company setup is handled professionally.</p>",
   } satisfies DocumentRequiredData,
- 
 };
 
 export const metadata: Metadata = {
@@ -606,17 +607,20 @@ export default function MainlandCompanyFormationUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="Mainland" />
       <CorporateServicesUaeWhyBuild
         variant="mainland"
         data={localData.whyBuild}
       />
-      <BusinessLocation data={localData.businessLocation} />
+      <BusinessLocation data={localData.businessLocation} variant="Mainland"/>
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
       />
-      <DocumentRequired data={localData.document_required_data} variant="mainland" />
+      <DocumentRequired
+        data={localData.document_required_data}
+        variant="mainland"
+      />
       <CorporateServicesUaeBanking
         data={localData.banking}
         variant="mainland"
@@ -627,7 +631,7 @@ export default function MainlandCompanyFormationUaePage() {
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} /> 
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
     </>
   );
 }

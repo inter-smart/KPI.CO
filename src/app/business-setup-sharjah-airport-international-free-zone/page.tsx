@@ -823,7 +823,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -835,7 +835,7 @@ export default function SaifzUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="saifz" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="SAIFZ" />
       <CorporateServicesUaeWhyBuild
         variant={["mainland", "saifz"]}
         data={localData.whyBuild}
@@ -846,10 +846,7 @@ export default function SaifzUaePage() {
         data={localData.document_required_data}
         variant="saifz"
       />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
-        variant="saifz"
-      />
+      <CorporateServicesUaeBanking data={localData.banking} variant="saifz" />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <HomeOurInsights data={localData.insights} variant="saifz" />
