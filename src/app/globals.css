@@ -170,7 +170,7 @@
   }
 
   .typography {
-    --text-color: black;
+    --text-color: #4E4E4E;
 
     * {
       @apply my-2.5 lg:my-4;
@@ -179,7 +179,7 @@
     p,
     &,
     li {
-      @apply text-[16px] sm:text-[14px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
+      @apply text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal font-normal text-(--text-color);
     }
 
     h1 {
@@ -285,6 +285,8 @@
 
 section {
   overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 @media (max-width: 768px) {

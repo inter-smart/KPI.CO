@@ -24,6 +24,7 @@ export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
     | "default"
+    | "Mainland"
     | "CorporateServicesUae"
     | "saifz"
     | "advisory"
@@ -74,7 +75,7 @@ export default function InnerHero({
       <div className="container">
         <div
           className={cn(
-            "w-full max-w-[750px]",
+            "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
             "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "saifz" &&
@@ -99,8 +100,9 @@ export default function InnerHero({
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
-                  "xl:text-[16px] lg:max-w-[60%]",
+                  "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
+                variant === "Mainland" && "lg:max-w-[75%]",
               )}
             >
               {parse(data?.description)}

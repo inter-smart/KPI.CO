@@ -20,7 +20,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
               <Heading
                 as="div"
                 size="h3"
-                className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize max-w-[94%] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block max-md:[&_br]:hidden"
+                className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize max-w-full !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
               >
                 {parse(data.title)}
               </Heading>
@@ -66,7 +66,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="relative w-full lg:h-full min-h-[370px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
+            <div className="relative w-full lg:h-full min-h-[380px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

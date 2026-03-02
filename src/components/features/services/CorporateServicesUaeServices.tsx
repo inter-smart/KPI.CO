@@ -19,7 +19,8 @@ type CorporateServicesUaeServicesProps = {
     | "rakez"
     | "dwtc"
     | "ifza"
-    | "regulatory" | "dsoa"
+    | "regulatory"
+    | "dsoa"
     | "CorporateServicesUae";
 };
 
@@ -40,6 +41,8 @@ export default function CorporateServicesUaeServices({
             variant === "dwtc" && "sm:text-left",
             variant === "rakez" && "sm:text-left",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
+            variant === "dafza" && "sm:text-left xl:mb-[35px]",
+            variant === "saifz" && "sm:text-left",
           )}
         >
           <Heading
@@ -48,6 +51,7 @@ export default function CorporateServicesUaeServices({
             className={cn(
               "text-[#1C5396] mb-5 sm:mb-6.25 xl:mb-[30px] 2xl:mb-7.5 3xl:mb-10",
               variant === "CorporateServicesUae" && "xl:mb-[30px]",
+              variant === "dafza" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -70,6 +74,7 @@ export default function CorporateServicesUaeServices({
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "regulatory" &&
                     "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
+                  variant === "saifz" && "max-sm:min-h-[140px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[12px] lg:p-2 xl:p-[10px] 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">

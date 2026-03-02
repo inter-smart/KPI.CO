@@ -41,6 +41,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "aup"
     | "default"
     | "tax-advisory"
+    | "risk"
     | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
@@ -75,7 +76,7 @@ export default function CorporateServicesUaeFormationProcess({
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: triggerRef.current,
-        start: "top 80px",
+        start: "top 50px",
         end: `+=${totalScrollDistance}`,
         pin: sectionRef.current,
         pinSpacing: true,
@@ -148,36 +149,33 @@ export default function CorporateServicesUaeFormationProcess({
             )}
           >
             <div className="flex items-center">
-              <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4">
+              <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ">
                 {data.steps.map((step, index) => (
-                  <motion.div
+                  <div
                     key={step.id}
                     className={cn(
-                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4",
+                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 ",
                       variant === "tax-advisory" && "min-w-[330px]",
                       isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
                         : "opacity-90 hover:opacity-100",
                     )}
-                    onClick={() => !isDesktop && setActiveStep(index)}
-                    transition={{ duration: 0.2 }}
+                    // onClick={() => !isDesktop && setActiveStep(index)}
+                    onClick={() => setActiveStep(index)}
+                    
                   >
-                    <motion.div
+                    <div
                       className={cn(
                         "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
-                        variant === "mainland" && "lg:h-[190%]",
+                        variant === "mainland" && "lg:h-[150%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                           : "bg-[#dcdcdc]",
                         data.steps.length === index + 1 && "lg:hidden",
                       )}
-                      transition={{
-                        duration: 0.8,
-                        ease: [0.25, 0.1, 0.25, 1],
-                        delay: index * 0.15,
-                      }}
+                     
                     />
 
                     <div
@@ -187,11 +185,9 @@ export default function CorporateServicesUaeFormationProcess({
                       )}
                     >
                       {index > activeStep && (
-                        <motion.div
+                        <div
                           className="w-full h-full rounded-full bg-white"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ duration: 0.3 }}
+                         
                         />
                       )}
                     </div>
@@ -200,7 +196,9 @@ export default function CorporateServicesUaeFormationProcess({
                         as="div"
                         size="p3"
                         className={cn(
-                          "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300",
+                          "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 my-[8px]",
+                           variant === "risk" &&
+                "sm:hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -213,21 +211,22 @@ export default function CorporateServicesUaeFormationProcess({
                       as="div"
                       size="h6"
                       className={cn(
-                        "max-sm:text-[16px] xl:text-[24px] font-semibold  transition-colors duration-300 capitalize",
+                        "max-sm:text-[16px] xl:text-[24px] font-semibold transition-colors duration-300 capitalize max-w-[80%]",
                         index <= activeStep
                           ? "text-[#1c5396]"
                           : "text-[#a7a7a7]",
                         variant == "tax-advisory" && "text-nowrap",
+                        variant == "aup" && "max-w-full",
                       )}
                     >
                       {parse(step.title)}
                     </Heading>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px]   bg-white rounded-[12px] 2xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-10 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
+              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] 2xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-10 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"
@@ -236,33 +235,24 @@ export default function CorporateServicesUaeFormationProcess({
                   className="absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none"
                 />
                 <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeStep}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  <div
+                    key={activeStep} 
                     className="relative z-10 w-full"
                   >
                     {variant !== "aup" && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -15 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
+                      <div 
                       >
                         <Heading
                           as="h4"
                           size="h6"
-                          className="font-normal text-[#3eb0ea] capitalize mb-0.5"
+                          className={cn("font-normal text-[#3eb0ea] capitalize mb-1",   variant === "risk" &&
+                "sm:hidden",)}
                         >
                           {data.steps[activeStep].step}
                         </Heading>
-                      </motion.div>
+                      </div>
                     )}
-                    <motion.div
-                      initial={{ opacity: 0, x: -15 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.2 }}
+                    <div 
                     >
                       {/* <Heading
                         as="h4"
@@ -280,11 +270,8 @@ export default function CorporateServicesUaeFormationProcess({
                           {parse(data.steps[activeStep].inner_title)}
                         </Heading>
                       )}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, x: -15 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
+                    </div>
+                    <div 
                     >
                       <Text
                         as="div"
@@ -293,8 +280,8 @@ export default function CorporateServicesUaeFormationProcess({
                       >
                         {parse(data.steps[activeStep].description)}
                       </Text>
-                    </motion.div>
-                  </motion.div>
+                    </div>
+                  </div>
                 </AnimatePresence>
               </div>
             </div>

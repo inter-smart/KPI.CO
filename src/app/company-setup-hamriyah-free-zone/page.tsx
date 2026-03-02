@@ -172,7 +172,7 @@ const localData = {
     highlights: [],
     footerDescription: "",
     image: {
-      path: "/images/hamriyah-business-mainland.jpg",
+      path: "/images/hamriya-img.jpg",
       alt: "Hamriyah",
     },
   } satisfies MainlandBusinessData,
@@ -318,7 +318,7 @@ const localData = {
         title: "FZE",
         type: "image",
         image: "/images/saifz-business-1.jpg",
-        description: "Free Zone Establishment with a single shareholder.",
+        description: "Single shareholder structure, suitable for founders or holding companies seeking full operational control. ",
         link: "#",
       },
       {
@@ -326,7 +326,7 @@ const localData = {
         title: "FZC",
         type: "image",
         image: "/images/saifz-business-2.jpg",
-        description: "Free Zone Company with two or more shareholders.",
+        description: "Multi-shareholder structure (2–5 shareholders), commonly used for joint ventures and partner-led businesses. ",
         link: "#",
       },
       {
@@ -335,7 +335,7 @@ const localData = {
         type: "image",
         image: "/images/saifz-business-4.jpg",
         description:
-          "A foreign company can establish a branch to operate in the UAE.",
+          "Allows an existing UAE or international company to operate in HFZA without creating a separate legal entity. ",
         link: "#",
       },
     ],
@@ -413,20 +413,7 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-      {
-        id: 5,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
-      },
+   
     ] satisfies BankingPartner[],
   },
   cta: {
@@ -434,7 +421,7 @@ const localData = {
     description:
       "<p>Speak with our consultants to assess licensing, facilities, timelines, and costs based on your business model. Get clear answers before you commit.</p>",
     button: {
-      label: "Get Started Today",
+      label: "Get in Touch",
       link: "/contact",
     },
     images: {
@@ -449,7 +436,7 @@ const localData = {
         id: 1,
         title: "What is Hamriyah Free Zone (HFZA)?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>Hamriyah Free Zone is an industrial and maritime free zone in Sharjah with direct access to Hamriyah Port.  </p>
                     `,
       },
       {
@@ -457,28 +444,28 @@ const localData = {
         title:
           "How much does it cost to set up a company in Hamriyah Free Zone?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>Company setup in Hamriyah Free Zone typically starts from AED 12,000, depending on the license and facility.</p>
                     `,
       },
       {
         id: 3,
         title: "How long does Hamriyah Free Zone company formation take?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Most HFZA companies are registered within 1 to 5 working days after approval.  </p>
                     `,
       },
       {
         id: 4,
         title: "What licenses are available in Hamriyah Free Zone?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>HFZA offers Industrial, Commercial, Service, and Maritime licenses. </p>
                     `,
       },
       {
         id: 5,
         title: "Can foreigners own 100% of a Hamriyah Free Zone company?",
         description: `
-                    <p>Yes, Hamriyah Free Zone allows 100% foreign ownership for all company types.</p>
+                    <p>Yes, Hamriyah Free Zone allows 100% foreign ownership for all company types. </p>
                     `,
       },
     ] satisfies FaqItem[],

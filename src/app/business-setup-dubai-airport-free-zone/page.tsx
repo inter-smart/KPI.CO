@@ -1,5 +1,6 @@
-import InnerHero from "@/components/common/InnerHero";
+import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
@@ -9,7 +10,6 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
-import CorporateServicesUaeSetupOptions from "@/components/features/services/CorporateServicesUaeSetupOptions";
 
 export type MainlandBusinessData = {
   title: string;
@@ -168,7 +168,7 @@ const localData = {
     title: "Business Setup in Dubai Airport Free Zone",
     description:
       "<p>DAFZA offers a strategic base in one of the UAE’s most dynamic business hubs. Companies can scale efficiently, access regional and international markets, and benefit from an ecosystem designed to support long-term growth. The free zone provides a platform for businesses to expand operations, attract partners, and reach new opportunities with confidence.</p>",
-    highlightsTitle: "DAFZA Free Zone Is Well Suited For:",
+    highlightsTitle: "DAFZA Free Zone Is well suited for:",
     highlights: [
       "Import-export and general trading companies",
       "Logistics and supply chain operators",
@@ -329,7 +329,8 @@ const localData = {
         title: "Branch of a UAE Company",
         type: "image",
         image: "/images/saifz-business-3.jpg",
-        description: "A UAE company can register a branch within SAIF Zone.",
+        description:
+          "A UAE-based company can open a branch in DAFZA to operate under its existing licence while accessing free zone benefits. ",
         link: "#",
       },
     ],
@@ -342,42 +343,42 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -403,35 +404,35 @@ const localData = {
         id: 1,
         title: "What types of businesses can be set up in DAFZA?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>DAFZA supports a wide range of activities including trading, logistics, aviation services, professional services, technology, and light industrial operations. The permitted activities depend on the selected license. </p>
                     `,
       },
       {
         id: 2,
         title: "Do I need a local sponsor to start a DAFZA company?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>No. DAFZA allows 100% foreign ownership, so no UAE national sponsor is required. </p>
                     `,
       },
       {
         id: 3,
         title: "How long does it take to set up a company in DAFZA?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Company registration and license issuance typically take 7–14 business days, subject to documentation and activity approvals.</p>
                     `,
       },
       {
         id: 4,
         title: "Is a physical office required in DAFZA?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>Yes. DAFZA requires companies to lease an approved office, warehouse, or facility within the free zone to obtain a license.</p>
                     `,
       },
       {
         id: 5,
         title: "Can a DAFZA company sponsor UAE residence visas?",
         description: `
-                    <p>Yes. Depending on the office or facility size and license type, DAFZA companies can sponsor visas for owners, employees, and dependents.</p>
+                    <p>Yes. Depending on the office or facility size and license type, DAFZA companies can sponsor visas for owners, employees, and dependents. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -470,12 +471,18 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
   },
+};
+
+export const metadata: Metadata = {
+  title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
+  description:
+    "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion. ",
 };
 
 export default function DafzaUaePage() {
@@ -484,7 +491,7 @@ export default function DafzaUaePage() {
       <InnerHero data={localData.hero} variant="saifz" />
       <MainlandBusiness data={localData.mainlandBusiness} variant="dafza" />
       <CorporateServicesUaeWhyBuild variant="dafz" data={localData.whyBuild} />
-      <CorporateServicesUaeServices data={localData.services} variant="saifz" />
+      <CorporateServicesUaeServices data={localData.services} variant="dafza" />
       <BusinessLocation data={localData.businessLocation} />
       <DocumentRequired
         data={localData.document_required_data}
@@ -494,7 +501,7 @@ export default function DafzaUaePage() {
         data={localData.banking}
         variant="mainland"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
+      <CorporateServicesUaeCta data={localData.cta} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <HomeOurInsights data={localData.insights} variant="saifz" />
     </>

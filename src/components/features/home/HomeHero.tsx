@@ -21,7 +21,7 @@ type HomeHeroProps = {
 
 export default function HomeHero({ data }: HomeHeroProps) {
   return (
-    <section className="relative w-full h-[600px] md:h-[450px] xl:h-[530px] 2xl:h-[600px] 3xl:h-[800px] overflow-hidden">
+    <section className="relative w-full h-[600px] xl:h-[600px] 3xl:h-[800px] overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"

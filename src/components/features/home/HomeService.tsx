@@ -18,7 +18,7 @@ export default function HomeService({ data }: HomeServiceProps) {
             {data.title}
           </Heading>
 
-          <div className="text-[12px] xl:text-[14px] 2xl:text-[19px] leading-normal font-normal line-clamp-5 text-[#4e4e4e] mb-2 xl:mb-3 2xl:mb-4">
+          <div className="text-[12px] xl:text-[18px] 2xl:text-[19px] leading-normal font-normal line-clamp-5 text-[#4e4e4e] mb-2 xl:mb-3 2xl:mb-4">
             {data.description}
           </div>
         </div>

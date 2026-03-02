@@ -71,7 +71,7 @@ export default function RiskOrganisation({
                     as="h2"
                     size="h2"
                     className={cn(
-                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
                     )}
                   >
@@ -81,7 +81,7 @@ export default function RiskOrganisation({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
+                      "text-[16px] xl:text-[18px] xl:text-[18px]  2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                       variant === "ifza" && "[&_p]:mb-[20px] xl:[&_p]:mb-[30px] leading-relaxed",
                     )}

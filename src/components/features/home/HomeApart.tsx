@@ -46,13 +46,13 @@ export default function HomeApart({ data }: HomeApartProps) {
               <div
                 key={`apart-item-${item.id}`}
                 className={cn(
-                  "w-full md:w-1/2 lg:w-[390px] xl:w-[468px] 2xl:w-[520px] 3xl:w-[680px] p-2 sm:p-3 xl:p-4 2xl:p-5 xl:border-none",
+                  "w-full md:w-1/2 lg:w-[390px] xl:w-[520px] 2xl:w-[520px] 3xl:w-[680px] p-2 sm:p-3 xl:p-4 2xl:p-5 xl:border-none",
                   !isVisuallyLastOnMobile && "max-md:border-b max-md:border-white/20",
                   mobileOrder
                 )}
               >
                 <div className="w-full h-auto block max-lg:py-[20px] ">
-                  <div className="text-[20px] md:text-[15px] xl:text-[17px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
+                  <div className="text-[20px] md:text-[15px] xl:text-[20px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
                     <Image
                       src={item.media.path || "/images/placeholder-image.png"}
                       alt={item.media.alt || "Home Apart"}
