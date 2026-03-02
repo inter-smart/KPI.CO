@@ -70,7 +70,7 @@ export default function BlogFilter({
             </DialogTrigger>
             <DialogContent className="max-w-[95%] lg:max-w-[900px] p-[25px] xl:p-[32px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
                 {/* Custom Close Button matching image */}
-                <DialogClose className="absolute right-6 top-6  w-[24px] 2xl:w-[32px] h-[24px] 2xl:h-[32px] cursor-pointer flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
+                <DialogClose className="absolute right-6 top-6  w-[24px] xl:w-[24px] h-[24px] xl:h-[24px] cursor-pointer flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.500091 0.499999L8.3811 8.38101" stroke="#212121" stroke-linecap="round" />
                         <path d="M8.38248 0.506927L0.501465 8.38794" stroke="#212121" stroke-linecap="round" />

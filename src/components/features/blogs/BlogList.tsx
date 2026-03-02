@@ -365,7 +365,7 @@ function BlogCard({ data }: BlogCardProps) {
             {data.date_full} • {data.readTime}
           </div>
         )}
-        <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] line-clamp-2 leading-relaxed transition-colors">
+        <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] leading-relaxed transition-colors">
           {parse(data.title)}
         </h3>
         <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-[23px]">
@@ -375,7 +375,7 @@ function BlogCard({ data }: BlogCardProps) {
           href={data.slug ?? "#"}
           className="text-[14px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
         >
-          Read More <span>→</span>
+         Read More<span className="text-[11px] font-semibold">→</span>
         </Link>
       </div>
     </div>
