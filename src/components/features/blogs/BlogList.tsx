@@ -42,6 +42,7 @@ export default function BlogList({ data }: BlogListProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedSort, setSelectedSort] = useState("Newest to Oldest");
   const itemsPerPage = 8; // 5 items + CTA + 3 items = 9 slots (3x3 grid)
   const topRef = useRef<HTMLElement>(null);
 
@@ -78,9 +79,27 @@ export default function BlogList({ data }: BlogListProps) {
     return matchesSearch && matchesFilter;
   });
 
+  // Helper to parse date strings like "14 NOVEMBER 2024" or "14 NOV 2024"
+  const parseDate = (dateStr?: string): number => {
+    if (!dateStr) return 0;
+    const parsed = new Date(dateStr);
+    return isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+  };
+
+  // Sort filtered items based on selected sort option
+  const sortedItems = [...filteredItems].sort((a, b) => {
+    const dateA = parseDate(a.date_full || a.date);
+    const dateB = parseDate(b.date_full || b.date);
+    if (selectedSort === "Oldest to Newest") {
+      return dateA - dateB;
+    }
+    // Default: Newest to Oldest
+    return dateB - dateA;
+  });
+
   // Calculate pagination
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-  const currentItems = filteredItems.slice(
+  const totalPages = Math.ceil(sortedItems.length / itemsPerPage);
+  const currentItems = sortedItems.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage,
   );
@@ -117,8 +136,13 @@ export default function BlogList({ data }: BlogListProps) {
           <BlogFilter
             activeFilters={activeFilters}
             onFilterChange={setActiveFilters}
-            onApply={() => {}}
+            onApply={() => { }}
             onClear={() => setActiveFilters([])}
+            selectedSort={selectedSort}
+            onSortChange={(sort) => {
+              setSelectedSort(sort);
+              setCurrentPage(1);
+            }}
           />
           <div className="relative flex-1 h-full rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px]  shadow-[0_0_26px_rgba(0,0,0,0.05)] ">
             <input
@@ -337,7 +361,7 @@ export default function BlogList({ data }: BlogListProps) {
               </div>
             </button>
           </div>
-       )}
+        )}
       </div>
     </section>
   );
@@ -363,7 +387,7 @@ function BlogCard({ data }: BlogCardProps) {
             {data.date_full} • {data.readTime}
           </div>
         )}
-        <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] line-clamp-2 leading-relaxed transition-colors">
+        <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] leading-relaxed transition-colors">
           {parse(data.title)}
         </h3>
         <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-[23px]">
@@ -373,7 +397,7 @@ function BlogCard({ data }: BlogCardProps) {
           href={data.slug ?? "#"}
           className="text-[14px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-2 mt-auto   transition-colors duration-300"
         >
-          Read More <span>→</span>
+          Read More<span className="text-[11px] font-semibold">→</span>
         </Link>
       </div>
     </div>
