@@ -29,20 +29,20 @@ export type DocumentRequiredData = {
 type DocumentRequiredProps = {
   data: DocumentRequiredData;
   variant?:
-  | "default"
-  | "saifz"
-  | "dfza"
-  | "aup"
-  | "spv"
-  | "tax-advisory"
-  | "dsoa"
-  | "advisory"
-  | "freezone-business"
-  | "regulatory"
-  | "dmcc"
-  | "mainland"
-  | "hamriya"
-  | "sop"
+    | "default"
+    | "saifz"
+    | "dfza"
+    | "aup"
+    | "spv"
+    | "tax-advisory"
+    | "dsoa"
+    | "advisory"
+    | "freezone-business"
+    | "regulatory"
+    | "dmcc"
+    | "mainland"
+    | "hamriya"
+    | "sop"
     | "difc"
     | "audit";
 };
@@ -58,31 +58,36 @@ export default function DocumentRequired({
       className={cn(
         "w-full py-[40px] lg:py-[60px] xl:py-[70px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible relative",
         variant === "regulatory" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "saifz" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "tax-advisory" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dsoa" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "spv" &&
-        "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
+          "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
         variant === "advisory" && "bg-white",
         variant === "hamriya" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "freezone-business" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "sop" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
+          "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
       )}
     >
       <div className="container relative">
-        <div className="flex max-md:flex-col-reverse max-md:flex-wrap md:gap-[35px] md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]">
+        <div className="flex max-md:flex-col-reverse max-md:flex-wrap">
           {/* Main Content */}
-          <div className="w-full md:w-[57%] xl:w-[60%]">
+          <div
+            className={cn(
+              "w-full md:w-[57%] xl:w-[60%] xl:pr-[60px]",
+              variant === "mainland" && "xl:w-[calc(100%-460px)]",
+            )}
+          >
             {(data?.title || data?.description) && (
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
                 <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
@@ -105,7 +110,7 @@ export default function DocumentRequired({
             )}
             {items.length > 0 && (
               <ul className="space-y-4.3 lg:space-y-4.5 2xl:space-y-5">
-                {items.map((item) => (
+                {items.map((item) =>
                   item.type === "heading" ? (
                     <li
                       key={item.id}
@@ -119,7 +124,6 @@ export default function DocumentRequired({
                       className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
                     >
                       <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-0 bottom-0 m-auto left-0 right-auto">
-
                         {(variant === "hamriya" || variant === "aup") && (
                           <>
                             <div className="hidden sm:block">
@@ -184,7 +188,14 @@ export default function DocumentRequired({
                             </div>
                           </>
                         )}
-                        {(variant === "default" || variant === "dfza" || variant === "sop" || variant === "advisory" || variant === "dmcc" || variant === "tax-advisory" || variant === "freezone-business"  || variant === "mainland") && (
+                        {(variant === "default" ||
+                          variant === "dfza" ||
+                          variant === "sop" ||
+                          variant === "advisory" ||
+                          variant === "dmcc" ||
+                          variant === "tax-advisory" ||
+                          variant === "freezone-business" ||
+                          variant === "mainland") && (
                           <svg
                             width="100%"
                             height="100%"
@@ -201,8 +212,8 @@ export default function DocumentRequired({
                       </span>
                       {parse(item.text)}
                     </li>
-                  )
-                ))}
+                  ),
+                )}
               </ul>
             )}
 
@@ -215,7 +226,12 @@ export default function DocumentRequired({
 
           {/* Image */}
           {data?.media?.path && (
-            <div className="w-full md:w-[43%] xl:w-[40%]">
+            <div
+              className={cn(
+                "w-full md:w-[43%] xl:w-[40%]",
+                variant === "mainland" && "xl:w-[460px]",
+              )}
+            >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">
                 {data?.title && (
                   <Heading

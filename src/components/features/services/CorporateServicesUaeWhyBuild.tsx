@@ -157,7 +157,6 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-            hasVariant(variant, "mainland") ||
               hasVariant(variant, "freezone") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
@@ -168,6 +167,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
             hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
             hasVariant(variant, "CorporateServicesUae") && "xl:mb-[50px]",
+            hasVariant(variant, "mainland") && "sm:text-left !max-w-full xl:mb-[50px]",
           )}
         >
           <Heading
@@ -193,7 +193,6 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
-            hasVariant(variant, "mainland") ||
               hasVariant(variant, "freezone") ||
               hasVariant(variant, "offshore") ||
               hasVariant(variant, "dsoa") ||
@@ -206,7 +205,10 @@ export default function CorporateServicesUaeWhyBuild({
               "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
               "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
-            hasVariant(variant, "CorporateServicesUae") && "sm:gap-[25px] xl:gap-[40px]",
+            hasVariant(variant, "CorporateServicesUae") &&
+              "sm:gap-[25px] xl:gap-[40px]",
+            hasVariant(variant, "mainland") &&
+              "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
           )}
         >
           {data.items.map((item) => (

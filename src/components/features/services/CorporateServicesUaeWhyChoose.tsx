@@ -81,7 +81,7 @@ export default function CorporateServicesUaeWhyChoose({
       <div className="container">
         <div
           className={cn(
-            "w-full h-auto ",
+            "w-full h-auto mb-[25px]",
             variant === "mainland" ||
               variant === "advisory" ||
               variant === "risk" ||
@@ -139,7 +139,7 @@ export default function CorporateServicesUaeWhyChoose({
                 </div>
               ))}
             </div>
-            <div className="flex justify-center items-center mt-6 gap-[30px] sm:hidden">
+            <div className="flex justify-center items-center mt-6 gap-[5px] sm:hidden">
               {scrollSnaps.map((_, index) => {
                 const distance = Math.abs(index - selectedIndex);
                 return (
@@ -166,7 +166,7 @@ export default function CorporateServicesUaeWhyChoose({
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[25px_30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
             variant === "ADGM-Foundation" &&
               "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",

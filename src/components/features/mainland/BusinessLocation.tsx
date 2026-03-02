@@ -25,7 +25,7 @@ export type BusinessLocationData = {
 
 type BusinessLocationProps = {
   data: BusinessLocationData;
-  variant?: "dsoa" | "default";
+  variant?: "dsoa" | "default" | "Mainland";
 };
 
 export default function BusinessLocation({
@@ -36,7 +36,12 @@ export default function BusinessLocation({
     <section className="w-full py-[35px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[110px] bg-white">
       <div className="container">
         {/* Header Section */}
-        <div className="w-full">
+        <div
+          className={cn(
+            "w-full mb-[20px] xl:mb-[30px]",
+            variant === "Mainland" && "mb-[20px] xl:mb-[30px]",
+          )}
+        >
           <Heading
             as="h2"
             size="h2"
@@ -44,12 +49,11 @@ export default function BusinessLocation({
           >
             {data.title}
           </Heading>
-          <div className="text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
+          <div className="text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
             {data.description}
           </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-[25px] 2xl:gap-8">
           {data.items.map((item) => (
             <div
               key={item.id}
@@ -66,13 +70,12 @@ export default function BusinessLocation({
                 <div className="absolute bottom-0 left-0 p-[40px_30px]">
                   <Heading
                     as="h3"
-                    className="text-white text-[17px] xl:text-[21px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
+                    className="text-white text-[17px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
                   >
                     {parse(item.title)}
                   </Heading>
                 </div>
               </div>
-
               <div
                 className={cn(
                   "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
@@ -83,11 +86,11 @@ export default function BusinessLocation({
                   <div className="flex justify-between gap-4 mb-2 2xl:mb-3 3xl:mb-4">
                     <Heading
                       as="h3"
-                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[18px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight"
+                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[24px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight xl:w-[calc(100%-25px)]"
                     >
                       {parse(item.title)}
                     </Heading>
-                    <div className="w-[20px] h-[20px] 3xl:w-[35px] 3xl:h-[35px] flex items-center justify-center">
+                    <div className="w-[20px] h-[20px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"
@@ -100,13 +103,11 @@ export default function BusinessLocation({
                       </svg>
                     </div>
                   </div>
-
                   <div className="group-hover:translate-y-0 duration-300">
                     <Text className="text-[#1C5396] text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.6] font-normal">
                       {item.description}
                     </Text>
                   </div>
-
                   {item.link && (
                     <Link href={item.link} className="absolute inset-0 z-20">
                       <span className="sr-only">View {item.title} details</span>

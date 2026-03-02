@@ -8,6 +8,8 @@ import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/
 import { cn } from "@/lib/utils";
 
 type Variant =
+  | "Mainland"
+  | "SAIFZ"
   | "spv"
   | "hamriya"
   | "dsoa"
@@ -57,6 +59,10 @@ export default function MainlandBusiness({
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+              hasVariant(variant, "Mainland") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "SAIFZ") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[20px]",
             )}
           >
             <div
@@ -66,6 +72,8 @@ export default function MainlandBusiness({
                   ? "max-w-[93%] 3xl:max-w-[100%]"
                   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
                 hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
+                hasVariant(variant, "Mainland") && "!max-w-full",
+                hasVariant(variant, "SAIFZ") && "!max-w-full",
               )}
             >
               <Heading
@@ -74,6 +82,7 @@ export default function MainlandBusiness({
                 className={cn(
                   "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
+                  variant === "SAIFZ" && "xl:max-w-[590px]",
                 )}
               >
                 {parse(data.title)}
@@ -97,7 +106,7 @@ export default function MainlandBusiness({
                   <Text
                     size="p2"
                     className={cn(
-                      "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px]",
+                      "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]",
                       variant === "ADGM-Foundations" &&
                         "mb-[20px] sm:mb-[25px]",
                     )}
@@ -105,7 +114,12 @@ export default function MainlandBusiness({
                     {data.highlightsTitle}
                   </Text>
                 )}
-                <div className="flex flex-col">
+                <div
+                  className={cn(
+                    "flex flex-col mb-[25px]",
+                    variant === "Mainland" && "mb-[25px]",
+                  )}
+                >
                   {data.highlights.map((item, index) => (
                     <div
                       key={index}
@@ -114,10 +128,15 @@ export default function MainlandBusiness({
                       <div className="flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                         <div
                           className={cn(
-                            "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
+                            "w-[20px] xl:w-[17px] 3xl:w-[22px] h-[20px] xl:h-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
-                            "max-sm:min-h-[378px]",
-                            hasVariant(variant, "ADGM-Foundations") && "xl:w-[17px]",
+                              "max-sm:min-h-[378px]",
+                            hasVariant(variant, "ADGM-Foundations") &&
+                              "xl:w-[17px]",
+                            hasVariant(variant, "Mainland") &&
+                              "xl:w-[17px]",
+                            hasVariant(variant, "SAIFZ") &&
+                              "xl:w-[17px]",
                           )}
                         >
                           <Image
@@ -155,6 +174,8 @@ export default function MainlandBusiness({
               "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
               variant === "ADGM-Foundations" && "xl:w-[520px]",
+              variant === "Mainland" && "xl:w-[520px]",
+              variant === "SAIFZ" && "xl:w-[520px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">

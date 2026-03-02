@@ -77,6 +77,8 @@ export default function InnerHero({
             "w-full",
             variant === "ADGM-Foundations" &&
               "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "saifz" &&
+              "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
           )}
         >
           <Heading
@@ -91,11 +93,13 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                "xl:text-[16px] text-white lg:max-w-[70%] mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
-                variant === "CorporateServicesUae" && "xl:text-[16px] lg:max-w-[60%]",
+                variant === "CorporateServicesUae" &&
+                  "xl:text-[16px] lg:max-w-[60%]",
+                variant === "saifz" && "!max-w-full",
               )}
             >
               {parse(data?.description)}
@@ -108,7 +112,11 @@ export default function InnerHero({
                   key={index}
                   as="div"
                   size="p1"
-                  className={cn("font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",variant === "CorporateServicesUae" && "text-[14px] xl:text-[16px]")}
+                  className={cn(
+                    "font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",
+                    variant === "CorporateServicesUae" &&
+                      "text-[14px] xl:text-[16px]",
+                  )}
                 >
                   <Image
                     src="/images/icon-list.svg"
