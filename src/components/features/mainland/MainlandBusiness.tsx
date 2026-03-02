@@ -15,6 +15,7 @@ type Variant =
   | "dsoa"
   | "dafza"
   | "rakez"
+  | "ifza"
   | "ADGM-Foundations";
 
 type MainlandBusinessProps = {
@@ -54,10 +55,14 @@ export default function MainlandBusiness({
           <div
             className={cn(
               "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
-              hasVariant(variant, "spv") || hasVariant(variant, "rakez")
+              hasVariant(variant, "spv") ||
+                hasVariant(variant, "rakez") ||
+                hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+              hasVariant(variant, "ifza") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
@@ -70,13 +75,17 @@ export default function MainlandBusiness({
             <div
               className={cn(
                 "w-full",
-                // hasVariant(variant, "spv") || hasVariant(variant, "rakez")
-                //   ? "max-w-[93%] 3xl:max-w-[100%]"
-                //   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
-                // hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
+                hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
                 hasVariant(variant, "Mainland") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
                 hasVariant(variant, "dafza") && "!max-w-full",
+                hasVariant(variant, "spv") || hasVariant(variant, "rakez")
+                  ? "max-w-[93%] 3xl:max-w-[100%]"
+                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
+                hasVariant(variant, "ifza") && "!max-w-full",
+                hasVariant(variant, "Mainland") && "!max-w-full",
+                hasVariant(variant, "SAIFZ") && "!max-w-full",
               )}
             >
               <Heading
@@ -181,6 +190,7 @@ export default function MainlandBusiness({
               variant === "Mainland" && "xl:w-[520px]",
               variant === "SAIFZ" && "xl:w-[520px]",
               variant === "dafza" && "xl:w-[520px]",
+              variant === "ifza" && "xl:w-[520px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">

@@ -24,9 +24,11 @@ export type CorporateServicesUaeCtaProps = {
     | "CorporateServicesUae"
     | "mainland"
     | "saifz"
+    | "blogdetail"
     | "rakez"
     | "ADGM-Foundations"
-    | "holding";
+    | "holding"
+    | "dwtc";
 };
 
 export default function CorporateServicesUaeCta({
@@ -80,6 +82,7 @@ export default function CorporateServicesUaeCta({
               "w-full max-lg:mb-3.75",
               variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
+              variant === "dwtc" ? "lg:w-[64%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[63%]",
               variant === "saifz" && "xl:w-[55%]",
             )}
@@ -90,11 +93,14 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
                 variant === "holding" && "font-bold leading-relaxed",
+                variant === "blogdetail" && "max-sm:text-[22px]",
               )}
             >
               {parse(data?.title)}
             </Heading>
-            <div className="text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
+            <div className={cn("text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden",
+              variant === "blogdetail" && "font-medium [&_p]:font-medium"
+            )}>
               {parse(data?.description)}
             </div>
           </div>
@@ -103,6 +109,7 @@ export default function CorporateServicesUaeCta({
               "w-full lg:w-[33%] flex lg:justify-end",
               variant === "mainland" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
+              variant === "dwtc" ? "lg:w-[36%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[37%]",
               variant === "saifz" && "xl:w-[45%]",
             )}
@@ -116,6 +123,8 @@ export default function CorporateServicesUaeCta({
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
                 variant === "holding" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+                variant === "dwtc" &&
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >

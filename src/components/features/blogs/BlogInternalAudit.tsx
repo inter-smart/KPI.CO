@@ -32,7 +32,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
           <Heading
             as="h2"
             size="h2"
-            className="font-bold md:text-center text-[#1C5396] w-full mb-4"
+            className="font-bold md:text-center text-[#1C5396] capitalize w-full mb-4"
           >
             {data?.title}
           </Heading>

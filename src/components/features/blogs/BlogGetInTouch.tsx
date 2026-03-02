@@ -35,11 +35,11 @@ export default function BlogGetInTouch({ data }: BlogGetInTouchProps) {
             <Heading
               as="h2"
               size="h2"
-              className="max-sm:text-[20px] lg:text-[25px] xl:text-[32px] 2xl:text-[38px] 3xl:text-[48px] text-white text-center sm:text-left mb-3.75 lg:mb-2.5"
+              className="max-sm:text-[22px] lg:text-[25px] xl:text-[32px] 2xl:text-[38px] 3xl:text-[48px] font-bold text-white text-center sm:text-left mb-3.75 lg:mb-2.5"
             >
               {data?.title}
             </Heading>
-            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white text-center sm:text-left md:max-w-[65%]">
+            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] font-medium [&_p]:font-medium text-white text-center sm:text-left md:max-w-[65%]">
               {parse(data?.description)}
             </div>
           </div>

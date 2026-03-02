@@ -97,16 +97,16 @@ const localData = {
             mobilePath: "/images/ddwtc-mob.svg",
             alt: "Company Formation in DMCC Free Zone, UAE",
         },
-    title: "Company Formation in DWTC, <br/> UAE ",
+    title: "Company Formation in DWTC, UAE ",
     description:
-      "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised business district. DWTC offers flexible office solutions and a streamlined setup ideal for founders, startups, and growing businesses.</p>",
+      "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised  business district. DWTC offers flexible office solutions and a streamlined setup ideal for  founders, startups, and growing businesses.</p>",
   } satisfies HeroData,
 
   mainlandBusiness: {
     title: "Start a Business in Dubai World Trade Centre",
     description:
       "<p>Dubai World Trade Centre (DWTC) Free Zone is a government-backed business district located in the heart of Dubai. Known for its strategic location and strong commercial reputation, DWTC is a preferred choice for companies seeking a prestigious address with direct access to key business hubs such as DIFC, Downtown Dubai, and Sheikh Zayed Road.</p>",
-    highlightsTitle: "DWTC Free Zone is Well Suited For:",
+    highlightsTitle: "DWTC Free Zone is well suited for:",
     highlights: [
       "Consulting and advisory firms",
       "Professional and service-based businesses",
@@ -265,7 +265,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/document-required.jpg", // <-- your image path
+      path: "/images/document-required.png",
       alt: "Required documents",
     },
     ftr_description:
@@ -335,7 +335,7 @@ const localData = {
     ftr_description: "",
   } satisfies RiskOrganisationData,
   contactUs: {
-    title: "Not sure if DWTC Free Zone is the right choice for your business?",
+    title: "Not Sure if DWTC Free Zone is the Right Choice For Your Business?",
     description:
       "<p>Our team will help you compare options, understand requirements, and choose the setup that best aligns with your goals in the UAE.</p>",
     button: {
@@ -343,8 +343,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-freezone.png",
-      overlayMobile: "/images/overlay-freezone-mobile.png",
+      overlay: "/images/overlay-freezone.svg",
+      overlayMobile: "/images/overlay-freezone-mobile.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {
@@ -354,28 +354,28 @@ const localData = {
         id: 1,
         title: "Is DWTC Free Zone suitable for startups?",
         description: `
-                  <p>You can start by choosing the right business structure - mainland, free zone, or offshore - then completing licensing, visas, and banking. KPI guides you through each step for a smooth setup.</p>
+                  <p>Yes, DWTC is suitable for startups, particularly service-based and consulting businesses seeking a central Dubai presence</p>
                   `,
       },
       {
         id: 2,
         title: "Can I apply for UAE residence visas through DWTC?",
         description: `
-                  <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
+                  <p>Yes, DWTC Free Zone companies are eligible to apply for UAE residence visas, subject to office type and licence.</p>
                   `,
       },
       {
         id: 3,
         title: "Do I need a physical office in DWTC?",
         description: `
-                  <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
+                  <p>DWTC offers flexible workspace options, including flexi desks and serviced offices, depending on your business needs. </p>
                   `,
       },
       {
         id: 4,
         title: "How long does it take to set up a company in DWTC Free Zone?",
         description: `
-                  <p>Company setup timelines are generally efficient and depend on document readiness and licence type.</p>
+                  <p>Company setup timelines are generally efficient and depend on document readiness and licence type. </p>
                   `,
       },
     ] satisfies FaqItem[],
@@ -410,15 +410,15 @@ export default function DwtcFreezone() {
         variant="freezone"
         data={localData.whyBuild}
       />
-      <CorporateServicesUaeServices variant="saifz" data={localData.services} />
-      <RiskOrganisation variant="dwtc" data={localData.riskOrganisation} />
+      <CorporateServicesUaeServices variant="dwtc" data={localData.services} />
+      <RiskOrganisation variant="dwtc-doc" data={localData.riskOrganisation} />
       
       <CorporateServicesUaeBanking
-        variant="freezone"
+        variant="dwtc"
         data={localData.banking}
       />
-      <RiskOrganisation data={localData.workWithKpi} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <RiskOrganisation variant="dwtc" data={localData.workWithKpi} />
+      <CorporateServicesUaeCta variant="dwtc" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />
     </>

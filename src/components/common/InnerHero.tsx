@@ -53,7 +53,7 @@ export default function InnerHero({
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[740px] sm:h-[650px] xl:h-[640px] 3xl:h-[800px]"
+          ? "h-[740px] sm:h-[650px] xl:h-[600px] 3xl:h-[800px]"
           : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
@@ -77,9 +77,10 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-              "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
           )}
         >
           <Heading
@@ -95,7 +96,7 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
-                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
+                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&

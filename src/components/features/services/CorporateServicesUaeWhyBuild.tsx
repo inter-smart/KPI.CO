@@ -143,6 +143,8 @@ export default function CorporateServicesUaeWhyBuild({
               "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "ifza") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "freeZone") &&

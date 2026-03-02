@@ -17,6 +17,8 @@ type CorporateServicesUaeServicesProps = {
     | "advisory"
     | "dafza"
     | "rakez"
+    | "dwtc"
+    | "ifza"
     | "regulatory"
     | "dsoa"
     | "CorporateServicesUae";
@@ -34,7 +36,9 @@ export default function CorporateServicesUaeServices({
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "regulatory" && "sm:text-left",
             variant === "saifz" && "sm:text-left",
+            variant === "ifza" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
+            variant === "dwtc" && "sm:text-left",
             variant === "rakez" && "sm:text-left",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
             variant === "dafza" && "sm:text-left xl:mb-[35px]",
@@ -63,6 +67,8 @@ export default function CorporateServicesUaeServices({
             "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
             variant === "dafza" && "!max-w-full",
+            variant === "dwtc" && "xl:max-w-full",
+            variant === "ifza" && "xl:max-w-full"
           )}
         >
           {data.items.map((item) => (
