@@ -103,7 +103,7 @@ export default function CorporateServicesUaeBanking({
         <div ref={emblaRef} className="w-full max-w-full">
           <div
             className={cn(
-              "flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 2xl:[&>*]:p-5.5 3xl:[&>*]:p-8.75",
+              "flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 xl:[&>*]:p-[25px] 3xl:[&>*]:p-8.75",
               variant === "downshadow" &&
                 "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
             )}

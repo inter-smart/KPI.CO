@@ -104,8 +104,9 @@ function WhyBuildCard({
           "font-normal text-[#4e4e4e] sm:text-black",
           hasVariant(variant, "mainland") ||
             hasVariant(variant, "freezone") ||
+            hasVariant(variant, "dsoa") ||
             hasVariant(variant, "ifza")
-            ? "text-[14px] 2xl:text-[14px] 3xl:text-[18px]"
+            ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
             : "",
         )}
       >

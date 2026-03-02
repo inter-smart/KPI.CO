@@ -109,14 +109,14 @@ export default function DocumentRequired({
                   item.type === "heading" ? (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] first:mt-0"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] last-of-type:mb-0 first:mt-0"
                     >
                       {parse(item.text)}
                     </li>
                   ) : (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] last-of-type:mb-0 relative"
                     >
                       <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-0 bottom-0 m-auto left-0 right-auto">
 

@@ -336,7 +336,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/dsoaDocument.jpg",
+      path: "/images/dsoa-image.jpg",
       alt: "Required documents",
     },
 
@@ -375,20 +375,7 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-      {
-        id: 5,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
-      },
+     
     ] satisfies BankingPartner[],
   },
   cta: {

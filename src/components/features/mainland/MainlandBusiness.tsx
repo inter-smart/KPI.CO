@@ -114,7 +114,7 @@ export default function MainlandBusiness({
                       <div className="flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                         <div
                           className={cn(
-                            "w-[22px] 2xl:w-[17px] 3xl:w-[22px] h-[20px] 2xl:w-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
+                            "w-[22px] xl:w-[17px] 3xl:w-[22px] h-[20px] xl:h-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
                             "max-sm:min-h-[378px]",
                             hasVariant(variant, "ADGM-Foundations") && "xl:w-[17px]",
