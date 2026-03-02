@@ -1,17 +1,17 @@
-import InnerHero from "@/components/common/InnerHero";
-import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import { Metadata } from "next";
 import { MediaItem } from "../page";
-import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
-import { blogData } from "@/data/blogData";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
+import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 // import DocumentRequired from "@/components/features/services/DocumentRequired";
-import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
-import { Metadata } from "next";
-import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;

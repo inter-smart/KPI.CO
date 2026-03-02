@@ -24,6 +24,7 @@ export type CorporateServicesUaeWhyBuildData = {
 };
 
 export type Variant =
+  | "CorporateServicesUae"
   | "hamriya"
   | "dafz"
   | "saifz"
@@ -72,7 +73,7 @@ function WhyBuildCard({
           : "",
       )}
     >
-      <div className="w-[46px] 2xl:w-[55px] aspect-square mb-[20px] 2xl:mb-[25px] transition-transform">
+      <div className="w-[46px] xl:w-[50px] aspect-square mb-[15px] transition-transform">
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -85,7 +86,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "max-sm:text-[16px] font-semibold text-black mb-2 2xl:mb-2.5",
+          "max-xl:!text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
             "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
@@ -93,6 +94,8 @@ function WhyBuildCard({
           hasVariant(variant, "dafz") && "text-[#1C5396]",
           hasVariant(variant, "dsoa") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "font-semibold",
+          hasVariant(variant, "CorporateServicesUae") &&
+            "xl:text-[20px] text-black mb-[15px]",
         )}
       >
         {item.title}
@@ -101,13 +104,14 @@ function WhyBuildCard({
         as="div"
         size="p1"
         className={cn(
-          "font-normal text-[#4e4e4e] sm:text-black",
+          "text-[14px] xl:text-[16px] font-normal text-[#4e4e4e] sm:text-black",
           hasVariant(variant, "mainland") ||
             hasVariant(variant, "freezone") ||
             hasVariant(variant, "dsoa") ||
             hasVariant(variant, "ifza")
             ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
             : "",
+          hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
         )}
       >
         {parse(item?.description)}
@@ -136,15 +140,17 @@ export default function CorporateServicesUaeWhyBuild({
           : hasVariant(variant, "mainland")
             ? "bg-[#f9fafb]"
             : hasVariant(variant, "saifz") &&
-            "bg-linear-to-t from-[#f1fafe] via-white to-white",
+              "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "freeZone") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "offshore") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "CorporateServicesUae") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
     >
@@ -162,6 +168,7 @@ export default function CorporateServicesUaeWhyBuild({
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
             hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
+            hasVariant(variant, "CorporateServicesUae") && "xl:mb-[50px]",
           )}
         >
           <Heading
@@ -175,7 +182,10 @@ export default function CorporateServicesUaeWhyBuild({
             <Text
               as="div"
               size="p5"
-              className="text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8 [&_b]:text-[18px] xl:[&_b]:text-[20px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
+              className={cn(
+                "text-[#4e4e4e] mb-4 xl:mb-6 2xl:mb-8 [&_b]:text-[18px] xl:[&_b]:text-[20px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
+                hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
+              )}
             >
               {parse(data?.description)}
             </Text>
@@ -188,13 +198,16 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "freezone") ||
               hasVariant(variant, "offshore") ||
               hasVariant(variant, "dsoa") ||
-              hasVariant(variant, "ifza") || hasVariant(variant, "rakez") || hasVariant(variant, "freeZone")
+              hasVariant(variant, "ifza") ||
+              hasVariant(variant, "rakez") ||
+              hasVariant(variant, "freeZone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
               "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
-            "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
+              "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
+            hasVariant(variant, "CorporateServicesUae") && "sm:gap-[25px] xl:gap-[40px]",
           )}
         >
           {data.items.map((item) => (

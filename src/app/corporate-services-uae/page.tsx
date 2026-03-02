@@ -1,13 +1,13 @@
+import { Metadata } from "next";
 import InnerHero from "@/components/common/InnerHero";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
-import CorporateServicesUaeSetupOptions from "@/components/features/services/CorporateServicesUaeSetupOptions";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import { Metadata } from "next";
+import CorporateServicesUaeSetupOptions from "@/components/features/services/CorporateServicesUaeSetupOptions";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type MediaItem = {
   path: string;
@@ -93,7 +93,7 @@ export type FaqItem = {
 const localData = {
   hero: {
     id: 1,
-    title: "Business Setup Experts - Start Your Business in the UAE",
+    title: "Business Setup Experts - Start <br> Your Business in the UAE",
     description:
       "<p>The United Arab Emirates is built for founders with ambition. Whether you are launching your first company or expanding internationally, KPI helps you set up in the UAE with the right structure, clear guidance, and full support beyond incorporation. From choosing the best jurisdiction to managing banking, tax, and visas, we make the process simple, transparent, and stress-free.</p>",
     additionalContent: [
@@ -107,7 +107,6 @@ const localData = {
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
   } satisfies HeroData,
-
   whyBuild: {
     title: "Why Build Your Business In The UAE?",
     description:
@@ -175,7 +174,6 @@ const localData = {
       },
     ] satisfies WhyBuildItem[],
   },
-
   setupOptions: {
     title: "Business Setup Options In The UAE",
     description:
@@ -216,7 +214,6 @@ const localData = {
       },
     ] satisfies SetupOptionItem[],
   },
-
   formationProcess: {
     title: "Company Formation Process",
     sub_title: "Steps to Start Your Business in the UAE",
@@ -270,9 +267,8 @@ const localData = {
       },
     ] satisfies ProcessStep[],
   },
-
   banking: {
-    title: "Corporate Banking Support  ",
+    title: "Corporate Banking Support",
     description:
       "<p>We work with trusted UAE and international banks to help our clients open compliant business bank accounts efficiently and with confidence. </p>",
     partners: [
@@ -320,7 +316,6 @@ const localData = {
       },
     ] satisfies BankingPartner[],
   },
-
   services: {
     title: "Related Corporate Services",
     description:
@@ -388,13 +383,12 @@ const localData = {
       },
     ] satisfies ServiceItem[],
   },
-
   whyChoose: {
     title: "Why Choose KPI?",
     description:
       "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
-   sub_title: "",
-      items: [
+    sub_title: "",
+    items: [
       {
         id: 1,
         title: "Experienced Guidance",
@@ -434,7 +428,6 @@ const localData = {
       overlayMobile: "/images/corporate-cta-overlay-mobile.svg",
     },
   } satisfies CtaData,
-
   corporate_faq_data: {
     title: "FAQs",
     faq_list: [
@@ -478,22 +471,43 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "UAE Corporate Tax Advisory & Compliance | KPI Group ",
+  title: "UAE Corporate Services | Business Setup & Company Formation ",
   description:
-    "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime. ",
+    "Start your business in the UAE today. Our experts handle company setup, banking, tax, visas and ongoing compliance - so you can focus on growth. Get in touch! ",
 };
 
 export default function CorporateServicesUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <CorporateServicesUaeWhyBuild data={localData.whyBuild} />
-      <CorporateServicesUaeSetupOptions data={localData.setupOptions} />
-      <CorporateServicesUaeFormationProcess data={localData.formationProcess} />
-      <CorporateServicesUaeBanking data={localData.banking} />
-      <CorporateServicesUaeServices data={localData.services} />
-      <CorporateServicesUaeWhyChoose data={localData.whyChoose} />
-      <CorporateServicesUaeCta data={localData.cta} />
+      <InnerHero data={localData.hero} variant="CorporateServicesUae" />
+      <CorporateServicesUaeWhyBuild
+        data={localData.whyBuild}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeSetupOptions
+        data={localData.setupOptions}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeFormationProcess
+        data={localData.formationProcess}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeBanking
+        data={localData.banking}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeServices
+        data={localData.services}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeWhyChoose
+        data={localData.whyChoose}
+        variant="CorporateServicesUae"
+      />
+      <CorporateServicesUaeCta
+        data={localData.cta}
+        variant="CorporateServicesUae"
+      />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
     </>
   );
