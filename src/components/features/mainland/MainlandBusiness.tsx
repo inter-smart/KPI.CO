@@ -63,6 +63,8 @@ export default function MainlandBusiness({
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[20px]",
+              hasVariant(variant, "dafza") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
             <div
@@ -74,6 +76,7 @@ export default function MainlandBusiness({
                 hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
                 hasVariant(variant, "Mainland") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
+                hasVariant(variant, "dafza") && "!max-w-full",
               )}
             >
               <Heading
@@ -83,6 +86,7 @@ export default function MainlandBusiness({
                   "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                   variant === "SAIFZ" && "xl:max-w-[590px]",
+                  variant === "dafza" && "xl:max-w-full",
                 )}
               >
                 {parse(data.title)}
@@ -118,6 +122,7 @@ export default function MainlandBusiness({
                   className={cn(
                     "flex flex-col mb-[25px]",
                     variant === "Mainland" && "mb-[25px]",
+                    variant === "dafza" && "mb-0",
                   )}
                 >
                   {data.highlights.map((item, index) => (
@@ -133,10 +138,9 @@ export default function MainlandBusiness({
                               "max-sm:min-h-[378px]",
                             hasVariant(variant, "ADGM-Foundations") &&
                               "xl:w-[17px]",
-                            hasVariant(variant, "Mainland") &&
-                              "xl:w-[17px]",
-                            hasVariant(variant, "SAIFZ") &&
-                              "xl:w-[17px]",
+                            hasVariant(variant, "Mainland") && "xl:w-[17px]",
+                            hasVariant(variant, "SAIFZ") && "xl:w-[17px]",
+                            hasVariant(variant, "dafza") && "xl:w-[17px]",
                           )}
                         >
                           <Image
@@ -176,6 +180,7 @@ export default function MainlandBusiness({
               variant === "ADGM-Foundations" && "xl:w-[520px]",
               variant === "Mainland" && "xl:w-[520px]",
               variant === "SAIFZ" && "xl:w-[520px]",
+              variant === "dafza" && "xl:w-[520px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">

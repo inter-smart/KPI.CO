@@ -32,9 +32,10 @@ export default function CorporateServicesUaeServices({
           className={cn(
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "saifz" || (variant === "regulatory" && "sm:text-left"),
-            variant === "dafza" && "sm:text-left",
             variant === "rakez" && "sm:text-left",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
+            variant === "dafza" && "sm:text-left xl:mb-[35px]",
+            variant === "saifz" && "sm:text-left",
           )}
         >
           <Heading
@@ -43,6 +44,7 @@ export default function CorporateServicesUaeServices({
             className={cn(
               "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
               variant === "CorporateServicesUae" && "xl:mb-[30px]",
+              variant === "dafza" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -53,7 +55,13 @@ export default function CorporateServicesUaeServices({
             </div>
           )}
         </div>
-        <div className="xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10">
+        <div
+          className={cn(
+            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            variant === "saifz" && "!max-w-full",
+            variant === "dafza" && "!max-w-full",
+          )}
+        >
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
               <div
@@ -62,6 +70,7 @@ export default function CorporateServicesUaeServices({
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "regulatory" &&
                     "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
+                  variant === "saifz" && "max-sm:min-h-[140px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[12px] lg:p-2 xl:p-[10px] 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">

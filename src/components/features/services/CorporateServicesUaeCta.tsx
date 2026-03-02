@@ -81,6 +81,7 @@ export default function CorporateServicesUaeCta({
               variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[63%]",
+              variant === "saifz" && "xl:w-[55%]",
             )}
           >
             <Heading
@@ -103,6 +104,7 @@ export default function CorporateServicesUaeCta({
               variant === "mainland" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[37%]",
+              variant === "saifz" && "xl:w-[45%]",
             )}
           >
             <Button

@@ -84,8 +84,10 @@ export default function DocumentRequired({
           {/* Main Content */}
           <div
             className={cn(
-              "w-full md:w-[57%] xl:w-[60%] xl:pr-[60px]",
+              "w-full md:w-[57%] xl:w-[60%] md:pr-[40px] xl:pr-[60px]",
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
+              variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[120px]",
+              variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
             )}
           >
             {(data?.title || data?.description) && (
@@ -123,7 +125,7 @@ export default function DocumentRequired({
                       key={item.id}
                       className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
                     >
-                      <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-0 bottom-0 m-auto left-0 right-auto">
+                      <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto">
                         {(variant === "hamriya" || variant === "aup") && (
                           <>
                             <div className="hidden sm:block">
@@ -230,6 +232,8 @@ export default function DocumentRequired({
               className={cn(
                 "w-full md:w-[43%] xl:w-[40%]",
                 variant === "mainland" && "xl:w-[460px]",
+                variant === "saifz" && "xl:w-[475px]",
+                variant === "dfza" && "xl:w-[475px]",
               )}
             >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">

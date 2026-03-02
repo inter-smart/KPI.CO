@@ -62,6 +62,7 @@ export default function CorporateServicesUaeBanking({
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
+              variant === "saifz" ||
               variant === "freezone" ||
               variant === "dsoa" ||
               variant === "dmcc" ||
