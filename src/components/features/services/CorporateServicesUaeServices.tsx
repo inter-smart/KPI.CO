@@ -62,16 +62,22 @@ export default function CorporateServicesUaeServices({
             </div>
           )}
         </div>
-        <div className={cn("xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
-          variant === "dwtc" && "xl:max-w-full",
-          variant === "ifza" && "xl:max-w-full"
-        )}>
+        <div
+          className={cn(
+            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[25px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            variant === "saifz" && "!max-w-full",
+            variant === "dafza" && "!max-w-full",
+            variant === "dwtc" && "xl:max-w-full",
+            variant === "ifza" && "xl:max-w-full"
+          )}
+        >
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
               <div
                 className={cn(
                   "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
                   variant === "dafza" && "max-sm:min-h-[150px]",
+                  variant === "ifza" && "max-sm:min-h-[160px]",
                   variant === "regulatory" &&
                     "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                   variant === "saifz" && "max-sm:min-h-[140px]",

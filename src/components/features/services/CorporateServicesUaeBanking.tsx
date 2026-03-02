@@ -64,8 +64,8 @@ export default function CorporateServicesUaeBanking({
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
               variant === "dwtc" ||
-              variant === "dsoa" ||
               variant === "saifz" ||
+              variant === "dsoa" ||
               variant === "dmcc" ||
               variant === "company" ||
               variant === "ifza" ||
@@ -123,7 +123,7 @@ export default function CorporateServicesUaeBanking({
                 <div className={cn("w-full h-[60px] md:h-[100px] xl:h-[130px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] 2xl:rounded-[13px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
                   variant === "ifza" && "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]"
                 )}>
-                  <div className="w-[65px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
+                  <div className="w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
                     <Image
                       src={item?.media?.path || "/images/placeholder-image.png"}
                       alt={item?.media?.alt || "Professional Affiliations"}

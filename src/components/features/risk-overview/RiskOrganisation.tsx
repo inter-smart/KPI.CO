@@ -81,7 +81,7 @@ export default function RiskOrganisation({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] xl:text-[18px]  2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
+                      "text-[16px] xl:text-[18px]  2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                       variant === "ifza" && "[&_p]:mb-[20px] xl:[&_p]:mb-[30px] leading-relaxed",
                     )}
