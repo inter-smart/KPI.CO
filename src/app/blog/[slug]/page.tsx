@@ -138,7 +138,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <>
-      <article style={{ width: "100%" , position: "absolute" , zIndex:"1"}}>
+      <article style={{ width: "100%"}}>
         <BlogReadingProgress >
           <BlogInternalAudit data={pageData.audit_data} />
           <BlogDetail data={pageData.blog_detail} />
