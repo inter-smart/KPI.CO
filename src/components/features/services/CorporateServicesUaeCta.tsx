@@ -78,7 +78,7 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full max-lg:mb-3.75",
-              variant === "mainland" ? "lg:w-[70%]" : "lg:w-[70%]",
+              variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[63%]",
             )}
@@ -100,14 +100,14 @@ export default function CorporateServicesUaeCta({
           <div
             className={cn(
               "w-full lg:w-[33%] flex lg:justify-end",
-              variant === "mainland" ? "lg:w-[30%]" : "lg:w-[30%]",
+              variant === "mainland" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[37%]",
             )}
           >
             <Button
               className={cn(
-                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
+                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "ADGM-Foundations" &&
