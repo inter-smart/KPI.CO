@@ -28,7 +28,7 @@ type PageData = {
 
 export default function DiscussYourRisk({ data }: DiscussYourRiskProps) {
   return (
-    <section className="relative w-full py-[95px] overflow-hidden">
+    <section className="relative w-full max-sm:px-[40px] py-[60px] xl:py-[70px] overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
           src={data?.images?.overlay || ""}
@@ -48,16 +48,16 @@ export default function DiscussYourRisk({ data }: DiscussYourRiskProps) {
 
       <div className="container relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-          <div className="w-[83%] lg:w-[70%]">
+          <div className="lg:w-[70%]">
             <Heading
               as="h2"
               size="h2"
-              className="max-sm:text-[20px] lg:text-[25px] xl:text-[32px] 2xl:text-[38px] 3xl:text-[48px] text-white mb-3.75 lg:mb-2.5"
+              className="max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] font-bold text-white mb-3.75 lg:mb-2.5"
             >
               {data?.title}
             </Heading>
 
-            <div className="text-[14px] lg:text-[15px] 2xl:text-[18px] 3xl:text-[22px] font-medium max-sm:font-normal text-white [&_p]:leading-[1.6] md:max-w-[80%]">
+            <div className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] font-medium max-sm:font-normal text-white [&_p]:leading-[1.6] md:max-w-[95%]">
               {parse(data?.description)}
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function DiscussYourRisk({ data }: DiscussYourRiskProps) {
           <div className="w-full lg:w-[30%] flex lg:justify-end">
             <Button
               asChild
-              className="bg-[#FFC916] text-black !font-medium leading-none text-[13px] sm:text-[14px] lg:text-[17px] 2xl:text-[20px] 3xl:text-[26px] min-w-[160px] xl:min-w-[178px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] 2xl:h-[50px] 3xl:h-[60px]"
+              className="bg-[#FFC916] text-black !font-medium leading-none text-[13px] sm:text-[14px] lg:text-[17px] 2xl:text-[20px] 3xl:text-[26px] min-w-[160px] xl:min-w-[178px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px]"
             >
               <Link href={data?.button?.link || "#"}>
                 {data?.button?.label}

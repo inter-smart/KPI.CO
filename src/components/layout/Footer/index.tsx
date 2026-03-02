@@ -95,7 +95,7 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className="!w-[34px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
+                      className="!w-[34px] xl:!w-[32px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
                     >
                       <svg
                         width="23"

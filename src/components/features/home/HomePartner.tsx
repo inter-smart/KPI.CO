@@ -97,9 +97,8 @@ export default function HomePartner({ data }: HomePartnerProps) {
           {duplicatedData.map((partner, index) => (
             <SwiperSlide key={`${partner.id}-${index}`} className="!h-auto">
               <div
-                className="partner-card bg-white rounded-[10px] 2xl:rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] flex items-center justify-center p-4 h-[60px] sm:h-[100px] xl:h-[120px] 2xl:min-h-[150px] 3xl:min-h-[200px]
-                            transition-all  duration-300 border border-gray-50"
-              >
+                className="partner-card bg-white rounded-[10px] 2xl:rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] flex items-center justify-center p-4 h-[60px] sm:h-[100px] xl:h-[120px] xl:min-h-[150px] 3xl:min-h-[200px]
+                            transition-all  duration-300 border border-gray-50">
                 <div className="relative w-[90%] xl:w-[80%] h-full ">
                   <Image
                     src={partner.logo}

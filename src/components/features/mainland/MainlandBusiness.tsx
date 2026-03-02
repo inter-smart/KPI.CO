@@ -70,10 +70,10 @@ export default function MainlandBusiness({
             <div
               className={cn(
                 "w-full",
-                hasVariant(variant, "spv") || hasVariant(variant, "rakez")
-                  ? "max-w-[93%] 3xl:max-w-[100%]"
-                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
-                hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
+                // hasVariant(variant, "spv") || hasVariant(variant, "rakez")
+                //   ? "max-w-[93%] 3xl:max-w-[100%]"
+                //   : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                // hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
                 hasVariant(variant, "Mainland") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
                 hasVariant(variant, "dafza") && "!max-w-full",
@@ -83,7 +83,7 @@ export default function MainlandBusiness({
                 as="h2"
                 size="h2"
                 className={cn(
-                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[435px] xl:max-w-[525px] 2xl:max-w-[650px] 3xl:max-w-[820px] max-lg:hidden",
+                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                   variant === "SAIFZ" && "xl:max-w-[590px]",
                   variant === "dafza" && "xl:max-w-full",
@@ -159,7 +159,7 @@ export default function MainlandBusiness({
                   ))}
                 </div>
               </div>
-              <div className="text-[16px] lg:text-[12px] xl:text-[16px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
+              <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
                 {data.footerDescription && parse(data.footerDescription)}
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function MainlandBusiness({
               variant === "dafza" && "xl:w-[520px]",
             )}
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
+            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

@@ -50,7 +50,7 @@ export default function HomeProfessionalAffiliations({ data }: HomeProfessionalA
   }, [emblaApi])
 
   return (
-    <section className="w-full py-8 xl:!  py-[50px] 2xl:py-[100px] overflow-hidden">
+    <section className="w-full py-8 xl:!py-[50px] 2xl:py-[100px] overflow-hidden">
       <div className="container">
         <Heading
           as="h2"

@@ -91,13 +91,13 @@ export default function DocumentRequired({
             )}
           >
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
-                <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
+              <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
+                <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
                   {data?.title && (
                     <Heading
                       as="h2"
                       size="h2"
-                      className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
+                      className="text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
                     >
                       {parse(data.title)}
                     </Heading>
@@ -116,14 +116,14 @@ export default function DocumentRequired({
                   item.type === "heading" ? (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] first:mt-0"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] last-of-type:mb-0 first:mt-0"
                     >
                       {parse(item.text)}
                     </li>
                   ) : (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] relative"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] last-of-type:mb-0 relative"
                     >
                       <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto">
                         {(variant === "hamriya" || variant === "aup") && (

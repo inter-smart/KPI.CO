@@ -93,11 +93,11 @@ const localData = {
     media: {
       desktopPath: "/images/advisoryBanner-desk.svg",
       mobilePath: "/images/advisoryBanner-mob.svg",
-      alt: "VAT Advisory & Compliance That Works for Your Business",
+      alt: "Structuring, Compliance, and Advisory Support Across the UAE ",
     },
-    title: "VAT Advisory & Compliance That Works for Your Business",
+    title: "Structuring, Compliance, and Advisory Support Across the UAE ",
     description:
-      "<p>Business decisions today are shaped by regulation, tax, governance, and risk, not just commercial intent. Poor structuring or delayed advice can create exposure that is difficult and expensive to unwind. KPI Group provides independent advisory services across risk, tax, compliance, and corporate structuring, helping organisations make informed decisions with clarity, control, and regulatory confidence.</p>",
+      "<p>Business decisions today are shaped by regulation, tax, governance, and risk,  not just commercial intent. Poor structuring or delayed advice can create exposure that is difficult and expensive to unwind. KPI provides independent advisory services across risk, tax, compliance, and corporate structuring, helping organisations make informed decisions with clarity, control, and regulatory confidence.</p>",
   } satisfies HeroData,
 
   document_required_data: {
@@ -276,7 +276,7 @@ const localData = {
   whyChoose: {
     title: "Why Organisations Choose KPI ",
     description:
-      "Choosing the right business setup consultants in the UAE can save you time, reduce costs, and prevent unnecessary restructuring. KPI supports founders and businesses with clear advice, practical execution, and ongoing guidance every step of the way.",
+      "",
     sub_title: "",
     items: [
       {

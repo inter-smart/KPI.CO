@@ -288,7 +288,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location1.jpg",
         description:
-          "Dubai offers world-class infrastructure and a global trade hub environment, perfect for ambitious international businesses.",
+          "A Free Zone Establishment is owned by a single shareholder, either an individual or a corporate entity.",
         link: "#",
       },
       {
@@ -297,7 +297,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location2.jpg",
         description:
-          "Abu Dhabi combines strong government support with strategic industry clusters. Its focus on energy, technology, and innovation provides a solid base for businesses working on large-scale or specialized projects.",
+          "A Free Zone Company requires a minimum of two shareholders, who can be individuals or corporate entities.",
         link: "#",
       },
       {
@@ -306,7 +306,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location3.jpg",
         description:
-          "Ajman provides a cost-effective mainland setup with a fast-growing industrial base and strategic port access.",
+          "Existing UAE or foreign companies can open a branch in DSOA, with activities aligned to the parent company.",
         link: "#",
       },
       {
@@ -315,7 +315,7 @@ const localData = {
         type: "image",
         image: "/images/dsoa_location4.jpg",
         description:
-          "Sharjah is the cultural and educational hub of the UAE, offering unique opportunities in logistics and creative industries.",
+          "Companies holding a Dubai Economy license can operate in DSOA’s administrative zone after obtaining a business operation permit.",
         link: "#",
       },
 
@@ -336,7 +336,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/dsoaDocument.jpg",
+      path: "/images/dsoa-image.jpg",
       alt: "Required documents",
     },
 
@@ -375,20 +375,7 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-      {
-        id: 5,
-        media: {
-          path: "/images/banking-partner-2.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-3.svg",
-          alt: "Emirates NBD",
-        },
-      },
+     
     ] satisfies BankingPartner[],
   },
   cta: {
@@ -412,35 +399,35 @@ const localData = {
         id: 1,
         title: "What types of businesses can I set up in DSOA?",
         description: `
-                      <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                      <p>DSOA supports a wide range of activities, including technology, professional services, trading, industrial, and special business operations. Your chosen licence determines the permitted activities</p>
                       `,
       },
       {
         id: 2,
         title: "Do I need a local sponsor to start a DSOA company?",
         description: `
-                      <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                      <p>No, DSOA allows 100% foreign ownership, so founders can fully own their business without a UAE national sponsor. </p>
                       `,
       },
       {
         id: 3,
         title: "How long does it take to set up a company in DSOA?",
         description: `
-                      <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                      <p>Company registration and licensing typically take 7–14 days, depending on document readiness and activity approvals.  </p>
                       `,
       },
       {
         id: 4,
         title: "Do I need a physical office to register in DSOA?",
         description: `
-                      <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                      <p>Yes - a valid office space, whether a flexi-desk or private office, is required to complete the licence registration. </p>
                       `,
       },
       {
         id: 5,
         title: "Can my DSOA company sponsor UAE residence visas? ",
         description: `
-                      <p>Yes, depending on your licence and office package, your company can sponsor visas for owners, employees, and family members.</p>
+                      <p>Yes, depending on your licence and office package, your company can sponsor visas for owners, employees, and family members. </p>
                       `,
       },
 

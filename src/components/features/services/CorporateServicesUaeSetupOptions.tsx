@@ -134,14 +134,14 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
                 ease: [0.4, 0, 0.2, 1],
               }}
             >
-              <Button
+              {/* <Button
                 variant="yellow"
                 size="lg"
                 className="text-[12px] xl:text-[16px] 2xl:text-[17px] min-w-[120px] xl:min-w-[120px] 2xl:min-w-[145px] 3xl:min-w-[180px] h-8.5! xl:h-[40px] 2xl:h-10.5! 3xl:h-12!"
                 asChild
               >
                 <Link href={item?.slug}>Learn More</Link>
-              </Button>
+              </Button> */}
             </motion.div>
           </div>
         </motion.div>

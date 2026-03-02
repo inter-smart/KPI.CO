@@ -45,11 +45,11 @@ export default function BusinessLocation({
           <Heading
             as="h2"
             size="h2"
-            className="lg:text-[27px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+            className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
           >
             {data.title}
           </Heading>
-          <div className="text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
+          <div className="text-[16px] xl:text-[18px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]">
             {data.description}
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function BusinessLocation({
               </div>
               <div
                 className={cn(
-                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
+                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] xl:p-[24px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
                   variant === "dsoa" && "flex items-center",
                 )}
               >
@@ -90,7 +90,7 @@ export default function BusinessLocation({
                     >
                       {parse(item.title)}
                     </Heading>
-                    <div className="w-[20px] h-[20px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
+                    <div className="w-[20px] h-[20px] xl:h-[26px] xl:w-[26px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"
