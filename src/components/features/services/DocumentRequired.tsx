@@ -1,6 +1,6 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
 
@@ -86,7 +86,7 @@ export default function DocumentRequired({
             className={cn(
               "w-full md:w-[57%] xl:w-[60%] md:pr-[40px] xl:pr-[60px]",
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
-              variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[120px]",
+              variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
             )}
           >
