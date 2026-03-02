@@ -24,6 +24,7 @@ export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
     | "default"
+    | "Mainland"
     | "CorporateServicesUae"
     | "saifz"
     | "advisory"
@@ -52,8 +53,8 @@ export default function InnerHero({
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "min-h-[740px] sm:min-hh-[650px] xl:min-h-[640px] "
-          : "min-h-[600px] sm:min-hh-[500px] xl:min-h-[640px] ",
+          ? "min-h-[740px] sm:min-h-[650px] xl:min-h-[600px] "
+          : "min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
@@ -76,9 +77,10 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-              "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
           )}
         >
           <Heading
@@ -94,12 +96,13 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
-                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
+                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
-                  "xl:text-[16px] lg:max-w-[60%]",
+                  "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
+                variant === "Mainland" && "lg:max-w-[75%]",
               )}
             >
               {parse(data?.description)}

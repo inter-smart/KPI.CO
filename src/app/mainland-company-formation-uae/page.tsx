@@ -606,7 +606,7 @@ export const metadata: Metadata = {
 export default function MainlandCompanyFormationUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="Mainland"/>
       <MainlandBusiness data={localData.mainlandBusiness} variant="Mainland" />
       <CorporateServicesUaeWhyBuild
         variant="mainland"

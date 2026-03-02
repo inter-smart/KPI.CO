@@ -1,5 +1,6 @@
-import InnerHero from "@/components/common/InnerHero";
+import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
@@ -403,42 +404,42 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -751,7 +752,7 @@ const localData = {
         id: 1,
         title: "How do I set up a company in SAIF Free Zone?",
         description: `
-                    <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance. </p>
                     `,
       },
       {
@@ -759,21 +760,21 @@ const localData = {
         title:
           "What types of licenses are available in Sharjah Airport Free Zone?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>SAIF Free Zone offers Trade, General Trading, Service, and Industrial licenses, suitable for commercial, industrial, and service-based businesses. </p>
                     `,
       },
       {
         id: 3,
         title: "Can I have 100% foreign ownership in SAIF Free Zone?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Yes. All company types in SAIF Free Zone allow 100% foreign ownership without the need for a local sponsor. </p>
                     `,
       },
       {
         id: 4,
         title: "How quickly can I start my SAIF Free Zone company?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>Some licenses can be issued within 1 hour, with others completed on the same day, making SAIF Free Zone ideal for rapid company setup. </p>
                     `,
       },
       {
@@ -781,7 +782,7 @@ const localData = {
         title:
           "Does KPI help with visas and permits for SAIF Free Zone companies?",
         description: `
-                    <p>Yes. KPI assists with shareholder and employee visas, manages visa quotas, and handles all company status updates efficiently.</p>
+                    <p>Yes. KPI assists with shareholder and employee visas, manages visa quotas, and handles all company status updates efficiently. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -829,6 +830,12 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
+};
+
+export const metadata: Metadata = {
+  title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
+  description:
+    "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion. ",
 };
 
 export default function SaifzUaePage() {

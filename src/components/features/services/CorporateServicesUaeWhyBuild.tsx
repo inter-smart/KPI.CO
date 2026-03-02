@@ -143,6 +143,8 @@ export default function CorporateServicesUaeWhyBuild({
               "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "ifza") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "freeZone") &&
@@ -151,6 +153,10 @@ export default function CorporateServicesUaeWhyBuild({
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "CorporateServicesUae") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "saifz") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "dafz") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
     >
@@ -158,7 +164,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
-              hasVariant(variant, "freezone") ||
+            hasVariant(variant, "freezone") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
               hasVariant(variant, "offshore") ||
@@ -168,7 +174,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
             hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
             hasVariant(variant, "CorporateServicesUae") && "xl:mb-[50px]",
-            hasVariant(variant, "mainland") && "sm:text-left !max-w-full xl:mb-[50px]",
+            hasVariant(variant, "mainland") &&
+              "sm:text-left !max-w-full xl:mb-[50px]",
           )}
         >
           <Heading
@@ -194,7 +201,7 @@ export default function CorporateServicesUaeWhyBuild({
         <div
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
-              hasVariant(variant, "freezone") ||
+            hasVariant(variant, "freezone") ||
               hasVariant(variant, "offshore") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "ifza") ||
@@ -210,6 +217,7 @@ export default function CorporateServicesUaeWhyBuild({
               "sm:gap-[25px] xl:gap-[40px]",
             hasVariant(variant, "mainland") &&
               "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
+            hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
           )}
         >
           {data.items.map((item) => (
