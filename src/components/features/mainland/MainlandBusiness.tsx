@@ -157,7 +157,7 @@ export default function MainlandBusiness({
               variant === "ADGM-Foundations" && "xl:w-[520px]",
             )}
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
+            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

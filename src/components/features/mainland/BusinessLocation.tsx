@@ -75,7 +75,7 @@ export default function BusinessLocation({
 
               <div
                 className={cn(
-                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
+                  "absolute inset-0 w-full h-full bg-[#E2F5FF] flex items-start p-[20px] sm:p-[30px] xl:p-[24px] 3xl:p-[35px] opacity-0 group-hover:opacity-100 group-hover:scale-100 origin-center pointer-events-none group-hover:pointer-events-auto duration-300 z-10",
                   variant === "dsoa" && "flex items-center",
                 )}
               >
@@ -83,11 +83,11 @@ export default function BusinessLocation({
                   <div className="flex justify-between gap-4 mb-2 2xl:mb-3 3xl:mb-4">
                     <Heading
                       as="h3"
-                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[18px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight"
+                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[24px] font-medium leading-tight"
                     >
                       {parse(item.title)}
                     </Heading>
-                    <div className="w-[20px] h-[20px] 3xl:w-[35px] 3xl:h-[35px] flex items-center justify-center">
+                    <div className="w-[20px] h-[20px] xl:h-[26px] xl:w-[26px] 3xl:w-[35px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"

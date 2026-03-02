@@ -54,7 +54,7 @@ export default function CorporateServicesUaeServices({
             </div>
           )}
         </div>
-        <div className="xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10">
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
               <div

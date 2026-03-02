@@ -56,11 +56,11 @@ export default function RiskAssuranceServices({ data }: RiskAssuranceProps) {
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-25px] xl:mb-[30px]"
+            className="text-[#1C5396] mb-25px] xl:mb-[25px]"
           >
             {data?.title}
           </Heading>
-          <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+          <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]">
             {parse(data?.description)}
           </div>
         </div>

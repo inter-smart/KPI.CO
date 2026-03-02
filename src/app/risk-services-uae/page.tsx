@@ -71,6 +71,7 @@ export type RiskOrganisationData = {
 
 export type ProcessStep = {
   id: number;
+  step: string;
   title: string;
   inner_title: string;
   sub_title: string;
@@ -264,35 +265,39 @@ const localData = {
     steps: [
       {
         id: 1,
-        title: "Risk identification with business <br/>  context",
-        inner_title: "Risk identification with business <br/> context",
+        step: "Step One",
+        title: "Risk Identification with Business Context ",
+        inner_title: "Risk identification with business context",
         sub_title: "Risk identification with business context",
         description:
-          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
+          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
       },
       {
         id: 2,
-        title: "Control assessment and gap <br/> analysis",
-        inner_title: "Control assessment and gap analysis",
-        sub_title: "Control assessment and gap analysis",
+        step: "Step Two",
+        title: "Control Assessment and Gap Analysis ",
+        inner_title: "Control Assessment and Gap Analysis ",
+        sub_title: "Control Assessment and Gap Analysis ",
         description:
-          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
+          "<p>Evaluating whether controls exist, appropriately designed, operate effectively, and are properly documented. </p>",
       },
       {
         id: 3,
-        title: "Clear prioritisation",
-        inner_title: "Clear prioritisation",
-        sub_title: "Clear prioritisation",
+        step: "Step Three",
+        title: "Clear Prioritisation ",
+        inner_title: "Clear Prioritisation ",
+        sub_title: "Clear Prioritisation ",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Focusing on risks that carry regulatory, financial, or reputational consequences. </p>",
       },
       {
         id: 4,
-        title: "Actionable recommendations",
-        inner_title: "Actionable recommendations",
-        sub_title: "Actionable recommendations",
+        step: "Step Four",
+        title: "Actionable Recommendations ",
+        inner_title: "Actionable Recommendations ",
+        sub_title: "Actionable Recommendations ",
         description:
-          "<p>Understanding how risks arise within day-to<br/>-day operations, decision making,<br/> organizations structures <br/>and not just within policy.</p>",
+          "<p>Suggest practical suggestion that management can implement, rather than an abstract observation. </p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -329,12 +334,12 @@ const localData = {
     description:
       "<p>If risk is becoming harder to track, explain, or defend, our team can help you bring structure and clarity before issues escalate. Whether you are strengthening governance, preparing for regulatory review, or addressing control gaps, KPI can support you with clarity and confidence. </p>",
     button: {
-      label: "Request Consultation",
+      label: "Get in Touch",
       link: "/#contact",
     },
     images: {
-      overlay: "/images/risk-discus-img.png",
-      overlayMobile: "/images/risk-discus-mobile-img.png",
+      overlay: "/images/riskcta.svg",
+      overlayMobile: "/images/riskcta-mob.svg",
     },
   } satisfies DiscussYourRiskData,
 
@@ -404,45 +409,95 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "How do I start a business in the UAE?",
+        title: "What are risk advisory services in the UAE?",
         description: `
-        <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+        <p>Risk advisory services in the UAE help organisations identify, assess, and manage operational, financial, and regulatory risks within a structured governance framework. These services strengthen internal controls, enterprise risk management (ERM), and regulatory compliance across mainland and free zone jurisdictions.</p>
+        <p>In the UAE’s evolving regulatory environment, risk advisory focuses on building defensible control frameworks, improving governance oversight, and preparing organisations for regulatory inspections, audits, and authority reviews.</p>
                       `,
       },
       {
         id: 2,
-        title: "What does it cost to set up a business in the UAE?",
+        title: " When should a company in the UAE engage risk advisory services?",
         description: `
-        <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+        <p>Companies in the UAE typically engage risk advisory services when they:</p>
+        <ul>
+          <li>Expand into regulated sectors or free zone jurisdictions</li>
+          <li>Prepare for regulatory inspection or internal audit</li>
+          <li>Experience rapid growth without formalised internal controls</li>
+          <li>Face recurring audit findings or compliance gaps</li>
+          <li>Require board-level governance strengthening</li>
+        </ul>
+        <p>Engaging a UAE risk advisory firm early helps mitigate regulatory risk, financial exposure, and reputational damage before issues escalate.</p>
                       `,
       },
       {
         id: 3,
-        title: "How long does it take to set up a company in the UAE",
+        title: "What is the difference between risk advisory and internal audit in the UAE?",
         description: `
-        <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
-                      `,
+        <p>Risk advisory services in the UAE focus on identifying risk exposure, designing governance frameworks, and strengthening internal control structures proactively.</p>
+         <p>Internal audit services in the UAE provide independent assurance that existing controls are operating effectively and in line with regulatory and governance expectations.</p>
+        <p>In short:</p>
+         <ul>
+          <li>Risk advisory strengthens and designs risk frameworks.</li>
+          <li>Internal audit evaluates and tests control effectiveness.</li> 
+        </ul>
+        <p>Both are critical components of strong corporate governance in the UAE.</p>  
+        `,
       },
       {
         id: 4,
-        title: "What does it cost to set up a business in the UAE?",
+        title: "Are risk management frameworks mandatory for UAE companies?",
         description: `
-        <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+        <p>While not all UAE companies are legally required to implement formal enterprise risk management frameworks, many regulators and free zone authorities expect documented risk management and internal control systems.</p>
+        <p>Regulated entities, financial services firms, government-related entities, and licensed free zone companies are often required to demonstrate governance structures, risk assessments, and compliance monitoring processes during inspections.</p>
+        <p>Implementing a structured risk management framework improves regulatory readiness and audit defensibility.</p> 
                       `,
       },
       {
         id: 5,
-        title: "What are the requirements for obtaining a UAE business visa? ",
+        title: "Which industries in the UAE require risk advisory support?",
         description: `
-        <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+        <p>Risk advisory services in the UAE are commonly required across:</p>
+          <ul>
+          <li>Financial services and regulated entities</li>
+          <li>Free zone licensed companies</li> 
+          <li>Government-related organisations</li> 
+          <li>Large family-owned groups</li> 
+          <li>Rapidly scaling SMEs</li> 
+          <li>Multi-entity or cross-border businesses</li> 
+        </ul>
+        <p>Any organisation subject to regulatory compliance obligations or governance scrutiny can benefit from professional risk advisory and internal control assessment.</p>
                       `,
       },
       {
         id: 6,
-        title: "Do I need to have a physical office in the UAE?",
+        title: "What does an enterprise risk management (ERM) framework include in the UAE?",
         description: `
-        <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
+        <p>An enterprise risk management (ERM) framework in the UAE typically includes:</p>
+          <ul>
+          <li>Structured risk identification and classification</li>
+          <li>Risk assessment and prioritisation aligned with risk appetite</li> 
+          <li>Internal control design and documentation</li> 
+          <li>Governance roles and accountability matrices</li> 
+          <li>Ongoing risk monitoring and reporting to management or boards</li>  
+        </ul>
+        <p>An effective ERM framework aligns business strategy with regulatory compliance requirements and strengthens long-term governance maturity.
+</p>
                       `,
+      },
+      {
+        id: 7,
+        title: "How do risk advisory services reduce regulatory compliance risk in the UAE?",
+        description: `
+        <p>Risk advisory services reduce regulatory compliance risk by:</p>
+          <ul>
+          <li>Identifying internal control weaknesses before regulatory review</li>
+          <li>Strengthening documentation and governance structures</li> 
+          <li>Aligning policies and procedures with UAE regulatory frameworks</li> 
+          <li>Preparing organisations for authority inspections and internal audits</li>  
+        </ul>
+        <p>By proactively addressing governance and compliance gaps, organisations reduce exposure to regulatory penalties, audit findings, and reputational risk.</p>
+                             `,
       },
     ] satisfies FaqItem[],
   },
@@ -453,7 +508,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -476,7 +531,7 @@ export default function RiskOverviewPage() {
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
       <CorporateServicesUaeFormationProcess
-        variant="aup"
+        variant="risk"
         data={localData.formationProcess}
       />
       <HomeCounter data={localData.counterList} variant="risk" />

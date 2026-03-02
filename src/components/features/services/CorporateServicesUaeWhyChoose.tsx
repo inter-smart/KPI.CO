@@ -177,7 +177,7 @@ export default function CorporateServicesUaeWhyChoose({
           )}
         >
           {data?.items?.map((item) => (
-            <div key={item?.id} className="w-full h-auto ">
+            <div key={item?.id} className="w-full h-auto max-md:mb-[20px]">
               <ServiceCard key={item.id} item={item} variant={variant} />
             </div>
           ))}

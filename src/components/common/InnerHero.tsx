@@ -74,7 +74,7 @@ export default function InnerHero({
       <div className="container">
         <div
           className={cn(
-            "w-full max-w-[750px]",
+            "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
               "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
           )}

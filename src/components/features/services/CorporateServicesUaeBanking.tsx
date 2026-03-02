@@ -40,7 +40,7 @@ export default function CorporateServicesUaeBanking({
       slidesToScroll: 1,
       containScroll: "trimSnaps",
     },
-    [Autoplay({ delay: 2500, stopOnInteraction: true })],
+    // [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
     <section
