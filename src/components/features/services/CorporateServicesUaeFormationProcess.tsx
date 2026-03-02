@@ -216,6 +216,7 @@ export default function CorporateServicesUaeFormationProcess({
                           ? "text-[#1c5396]"
                           : "text-[#a7a7a7]",
                         variant == "tax-advisory" && "text-nowrap",
+                        variant == "aup" && "max-w-full",
                       )}
                     >
                       {parse(step.title)}
