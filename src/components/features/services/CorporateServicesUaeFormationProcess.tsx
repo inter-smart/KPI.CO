@@ -35,7 +35,13 @@ export type ProcessListItem = {
 };
 
 export type CorporateServicesUaeFormationProcessProps = {
-  variant?: "Vat-Services" | "mainland" | "aup" | "default" | "tax-advisory";
+  variant?:
+    | "Vat-Services"
+    | "mainland"
+    | "aup"
+    | "default"
+    | "tax-advisory"
+    | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -105,6 +111,8 @@ export default function CorporateServicesUaeFormationProcess({
                 ? "text-start "
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
               variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
+              variant === "CorporateServicesUae" &&
+                "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
@@ -128,7 +136,7 @@ export default function CorporateServicesUaeFormationProcess({
             <Heading
               as="div"
               size="h4"
-              className="font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
+              className="xl:text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
             >
               {data.sub_title}
             </Heading>
@@ -192,7 +200,7 @@ export default function CorporateServicesUaeFormationProcess({
                         as="div"
                         size="p3"
                         className={cn(
-                          "font-normal transition-colors duration-300",
+                          "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -205,7 +213,7 @@ export default function CorporateServicesUaeFormationProcess({
                       as="div"
                       size="h6"
                       className={cn(
-                        "max-sm:text-[16px] font-semibold  transition-colors duration-300 capitalize",
+                        "max-sm:text-[16px] xl:text-[24px] font-semibold  transition-colors duration-300 capitalize",
                         index <= activeStep
                           ? "text-[#1c5396]"
                           : "text-[#a7a7a7]",

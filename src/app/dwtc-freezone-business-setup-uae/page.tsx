@@ -97,9 +97,9 @@ const localData = {
             mobilePath: "/images/ddwtc-mob.svg",
             alt: "Company Formation in DMCC Free Zone, UAE",
         },
-    title: "Company Formation in DWTC, <br/> UAE ",
+    title: "Company Formation in DWTC, UAE ",
     description:
-      "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised business district. DWTC offers flexible office solutions and a streamlined setup ideal for founders, startups, and growing businesses.</p>",
+      "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised  business district. DWTC offers flexible office solutions and a streamlined setup ideal for  founders, startups, and growing businesses.</p>",
   } satisfies HeroData,
 
   mainlandBusiness: {
@@ -417,7 +417,7 @@ export default function DwtcFreezone() {
         variant="freezone"
         data={localData.banking}
       />
-      <RiskOrganisation data={localData.workWithKpi} />
+      <RiskOrganisation variant="dwtc" data={localData.workWithKpi} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />

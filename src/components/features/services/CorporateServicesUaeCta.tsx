@@ -21,8 +21,10 @@ export type CorporateServicesUaeCtaProps = {
   data: CtaData;
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "mainland"
     | "saifz"
+    | "blogdetail"
     | "rakez"
     | "ADGM-Foundations"
     | "holding";
@@ -79,18 +81,23 @@ export default function CorporateServicesUaeCta({
               "w-full max-lg:mb-3.75",
               variant === "mainland" ? "lg:w-[70%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
+              variant === "CorporateServicesUae" && "xl:w-[63%]",
             )}
           >
             <Heading
               as="h2"
               size="h2"
-              className={cn("max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
+              className={cn(
+                "max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
                 variant === "holding" && "font-bold leading-relaxed",
+                variant === "blogdetail" && "max-sm:text-[22px]",
               )}
             >
               {parse(data?.title)}
             </Heading>
-            <div className="text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden">
+            <div className={cn("text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden",
+              variant === "blogdetail" && "font-medium [&_p]:font-medium"
+            )}>
               {parse(data?.description)}
             </div>
           </div>
@@ -99,6 +106,7 @@ export default function CorporateServicesUaeCta({
               "w-full lg:w-[33%] flex lg:justify-end",
               variant === "mainland" ? "lg:w-[30%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
+              variant === "CorporateServicesUae" && "xl:w-[37%]",
             )}
           >
             <Button

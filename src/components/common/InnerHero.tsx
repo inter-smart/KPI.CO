@@ -24,6 +24,7 @@ export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
     | "default"
+    | "CorporateServicesUae"
     | "saifz"
     | "advisory"
     | "dwtc"
@@ -51,7 +52,7 @@ export default function InnerHero({
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[740px] sm:h-[650px] xl:h-[640px] 3xl:h-[800px]"
+          ? "h-[740px] sm:h-[650px] xl:h-[600px] 3xl:h-[800px]"
           : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
@@ -75,7 +76,8 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[750px]",
             variant === "ADGM-Foundations" &&
-              "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
           )}
         >
           <Heading
@@ -90,10 +92,11 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px]max-md:[&_br]:hidden",
+                "text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%]",
                 variant === "ADGM-Foundations" &&
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
+                variant === "CorporateServicesUae" && "xl:text-[16px] lg:max-w-[60%]",
               )}
             >
               {parse(data?.description)}
@@ -106,7 +109,7 @@ export default function InnerHero({
                   key={index}
                   as="div"
                   size="p1"
-                  className="font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8"
+                  className={cn("font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",variant === "CorporateServicesUae" && "text-[14px] xl:text-[16px]")}
                 >
                   <Image
                     src="/images/icon-list.svg"

@@ -96,7 +96,7 @@ export default function RiskOrganisation({
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                     )}
                   >
-                    <span className="absolute left-0 top-[2px] xl:top-[4.5px] w-[18px] h-[18px]">
+                    <span className="absolute left-0 top-[4px] xl:top-[10px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
                       <svg
                         width="100%"
                         height="100%"
