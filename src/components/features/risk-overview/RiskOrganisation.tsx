@@ -62,6 +62,8 @@ export default function RiskOrganisation({
                   "max-w-[90%])}",
                   variant === "ADGM-Foundation" &&
                     "max-sm:mb-[30px] xl:mb-[30px]",
+                  variant === "ifza" &&
+                    "max-sm:mb-[30px] xl:mb-[30px]",
                 )}
               >
                 {data?.title && (
@@ -81,6 +83,7 @@ export default function RiskOrganisation({
                     className={cn(
                       "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[20px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
+                      variant === "ifza" && "[&_p]:mb-[20px] xl:[&_p]:mb-[30px] leading-relaxed",
                     )}
                   >
                     {parse(data.description)}
