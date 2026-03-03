@@ -33,7 +33,7 @@ interface MeydanFreeZoneProps {
   | "ADGM-Foundation"
   | "default"
   | "ifza"
-  | "audit";
+  | "audit"; 
 }
 
 export default function MeydanFreeZone({
@@ -157,7 +157,7 @@ export default function MeydanFreeZone({
                       className={cn(
                         "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
                         variant === "difc" &&
-                        "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "audit" && " text-[#1C5396]",
                       )}
                     >

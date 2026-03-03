@@ -4,7 +4,7 @@ import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "difc" | "center";
+type Variant = "default" | "difc" | "center" | "AuditServicesUae";
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
@@ -17,8 +17,16 @@ export type RiskAdvisoryProps = {
       slNo: number;
       description: string;
     }[];
+    structure_list?: MeydanStructureItem[];
   };
 };
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
 const hasVariant = (
   variant: Variant | Variant[] | undefined,
   target: Variant,
@@ -63,14 +71,12 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 ) || "",
               )}
             </div>
-
             <div className="flex flex-row gap-3">
               <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                 {parse(data.highlightsText)}
               </div>
             </div>
           </div>
-
           <div className="w-full lg:w-[51%] xl:w-[590px]">
             <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
               <div className="overflow-hidden">
@@ -82,14 +88,14 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                         hasVariant(variant, "difc")
                           ? cn(
-                              "border-[#DEDEDE]",
-                              index === advisoryItems.length - 1
-                                ? "w-full border-b-0 border-r-0" // last item full
-                                : cn(
-                                    "w-1/2 border-b",
-                                    index % 2 === 0 ? "border-r" : "border-r-0",
-                                  ),
-                            )
+                            "border-[#DEDEDE]",
+                            index === advisoryItems.length - 1
+                              ? "w-full border-b-0 border-r-0" // last item full
+                              : cn(
+                                "w-1/2 border-b",
+                                index % 2 === 0 ? "border-r" : "border-r-0",
+                              ),
+                          )
                           : "w-1/2 border-b border-r border-[#DEDEDE]",
                       )}
                     >
@@ -103,7 +109,6 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                       >
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
-
                       <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item.description)}
                       </div>
@@ -114,6 +119,28 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
           </div>
         </div>
+        {data?.structure_list && (
+          <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">
+            {data.structure_list.map((item) => (
+              <div key={item.id} className="w-full h-auto">
+                <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
+                  <div
+                    className={cn(
+                      "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
+                      variant === "AuditServicesUae" && " text-[#1C5396]",
+                    )}
+                  >
+                    {item.title}
+                  </div>
+                  <div className="text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]">
+                    {/* {item.description} */}
+                    {parse(item?.description)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

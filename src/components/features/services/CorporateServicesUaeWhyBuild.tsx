@@ -21,10 +21,18 @@ export type CorporateServicesUaeWhyBuildData = {
   title: string;
   description?: string;
   items: WhyBuildItem[];
+  structure_list?: MeydanStructureItem[];
+};
+
+export type MeydanStructureItem = {
+  id: number;
+  title: string;
+  description: string;
 };
 
 export type Variant =
   | "CorporateServicesUae"
+  | "AuditServicesUae"
   | "hamriya"
   | "dafz"
   | "saifz"
@@ -73,6 +81,7 @@ function WhyBuildCard({
         variant === "ifza"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
+        variant === "AuditServicesUae" && "shadow-none",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -90,14 +99,14 @@ function WhyBuildCard({
         className={cn(
           "max-xl:!text-[18px] xl:text-[18px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
-            "text-[#1C5396]",
+          "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
           hasVariant(variant, "saifz") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "text-[#1C5396]",
           hasVariant(variant, "dsoa") && "text-[#1C5396]",
           hasVariant(variant, "dafz") && "font-semibold",
           hasVariant(variant, "CorporateServicesUae") &&
-            "xl:text-[20px] text-black mb-[15px]",
+          "xl:text-[20px] text-black mb-[15px]",
         )}
       >
         {item.title}
@@ -142,27 +151,27 @@ export default function CorporateServicesUaeWhyBuild({
           : hasVariant(variant, "mainland")
             ? "bg-[#f9fafb]"
             : hasVariant(variant, "saifz") &&
-              "bg-linear-to-t from-[#f1fafe] via-white to-white",
+            "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dwtc") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "ifza") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "freeZone") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "offshore") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "CorporateServicesUae") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "saifz") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dafz") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "erm") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
     >
@@ -176,14 +185,15 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "erm") ||
               hasVariant(variant, "offshore") ||
               hasVariant(variant, "technology") ||
-              hasVariant(variant, "ifza")
+              hasVariant(variant, "ifza") ||
+              hasVariant(variant, "AuditServicesUae")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
             hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
             hasVariant(variant, "CorporateServicesUae") && "xl:mb-[50px]",
             hasVariant(variant, "mainland") &&
-              "sm:text-left !max-w-full xl:mb-[50px]",
+            "sm:text-left !max-w-full xl:mb-[50px]",
           )}
         >
           <Heading
@@ -219,13 +229,13 @@ export default function CorporateServicesUaeWhyBuild({
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
-              "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
+            "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&
-              "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
+            "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
             hasVariant(variant, "CorporateServicesUae") &&
-              "sm:gap-[25px] xl:gap-[40px]",
+            "sm:gap-[25px] xl:gap-[40px]",
             hasVariant(variant, "mainland") &&
-              "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
+            "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
               hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
               hasVariant(variant, "technology") &&
                 "lg:grid-cols-3 sm:gap-[25px] xl:gap-[25px]",
@@ -249,6 +259,28 @@ export default function CorporateServicesUaeWhyBuild({
             ))}
           </div>
         </div>
+        {data?.structure_list && (
+          <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">
+            {data.structure_list.map((item) => (
+              <div key={item.id} className="w-full h-auto">
+                <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
+                  <div
+                    className={cn(
+                      "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
+                      variant === "AuditServicesUae" && " text-[#1C5396]",
+                    )}
+                  >
+                    {item.title}
+                  </div>
+                  <div className="text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]">
+                    {/* {item.description} */}
+                    {parse(item?.description)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

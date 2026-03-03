@@ -20,16 +20,17 @@ export type CtaData = {
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
   variant?:
-    | "default"
-    | "CorporateServicesUae"
-    | "mainland"
-    | "saifz"
-    | "blogdetail"
-    | "rakez"
-    | "ADGM-Foundations"
-    | "holding"
+  | "default"
+  | "CorporateServicesUae"
+  | "AuditServicesUae"
+  | "mainland"
+  | "saifz"
+  | "blogdetail"
+  | "rakez"
+  | "ADGM-Foundations"
+  | "holding"
     | "ifza"
-    | "dwtc";
+  | "dwtc";
 };
 
 export default function CorporateServicesUaeCta({
@@ -53,9 +54,9 @@ export default function CorporateServicesUaeCta({
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] xl:p-[65px_50px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "saifz" &&
-              "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
+            "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
             variant === "ADGM-Foundations" &&
-              "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
+            "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
           )}
         >
           <div
@@ -104,6 +105,7 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-notmal text-white max-md:[&_br]:hidden",
                 variant === "blogdetail" && "font-medium [&_p]:font-medium",
+              variant === "AuditServicesUae" && "xl:max-w-[75%]",
               )}
             >
               {parse(data?.description)}
@@ -124,19 +126,19 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
-                  "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                "px-[20px] xl:px-[30px] 3xl:px-[35px]",
 
                 variant === "ADGM-Foundations" &&
-                  "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
+                "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
 
                 variant === "holding" &&
-                  "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
 
                 variant === "ifza" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
 
                 variant === "dwtc" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >
