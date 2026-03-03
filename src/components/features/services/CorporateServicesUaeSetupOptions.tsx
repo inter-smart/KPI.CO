@@ -17,7 +17,7 @@ type CorporateServicesUaeSetupOptionsProps = {
     description: string;
     items: SetupOptionItem[];
   };
-  variant?: "hamriyah" | "default" | "CorporateServicesUae";
+  variant?: "hamriyah" | "default" | "CorporateServicesUae" | "technology";
 };
 
 function SetupOptionCard({ item }: { item: SetupOptionItem }) {
@@ -95,7 +95,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
               <Heading
                 as="div"
                 size="h4"
-                className="max-xl:!text-[22px] xl:text-[22px] text-center font-semibold text-white mb-2 2xl:mb-2.5"
+                className="max-xl:!text-[22px] xl:text-[22px] text-center font-semibold text-white mb-2 2xl:mb-2.5 max-w-[85%] mx-auto"
               >
                 {item.title}
               </Heading>
@@ -153,6 +153,7 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
 export default function CorporateServicesUaeSetupOptions({
   data,
   variant = "default",
+
 }: CorporateServicesUaeSetupOptionsProps) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
@@ -160,6 +161,7 @@ export default function CorporateServicesUaeSetupOptions({
     slidesToScroll: 1,
     containScroll: "trimSnaps",
   });
+
   return (
     <section className="w-full block py-11.5 sm:py-10 xl:py-[50px_70px] 2xl:py-[65px_80px]">
       <div className="container">

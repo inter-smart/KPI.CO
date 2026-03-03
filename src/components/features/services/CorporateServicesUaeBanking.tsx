@@ -55,7 +55,7 @@ export default function CorporateServicesUaeBanking({
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && "!pt-5 shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
-        variant === "dwtc" && "!pt-5 !shadow-none",
+        variant === "dwtc" && "!pt-[48px] !shadow-none",
       )}
     >
       <div className="container">

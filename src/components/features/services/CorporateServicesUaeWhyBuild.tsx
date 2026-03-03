@@ -35,8 +35,10 @@ export type Variant =
   | "erm"
   | "rakez"
   | "offshore"
+  | "technology"
   | "formation"
   | "freeZone"
+  | "dwtc"
   | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
@@ -143,6 +145,8 @@ export default function CorporateServicesUaeWhyBuild({
               "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "dwtc") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "ifza") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "rakez") &&
@@ -165,9 +169,11 @@ export default function CorporateServicesUaeWhyBuild({
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
             hasVariant(variant, "freezone") ||
+            hasVariant(variant, "dwtc") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
               hasVariant(variant, "offshore") ||
+              hasVariant(variant, "technology") ||
               hasVariant(variant, "ifza")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
@@ -206,6 +212,7 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "ifza") ||
               hasVariant(variant, "rakez") ||
+              hasVariant(variant, "dwtc") ||
               hasVariant(variant, "freeZone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
@@ -217,7 +224,9 @@ export default function CorporateServicesUaeWhyBuild({
               "sm:gap-[25px] xl:gap-[40px]",
             hasVariant(variant, "mainland") &&
               "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
-            hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
+              hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
+              hasVariant(variant, "technology") &&
+                "lg:grid-cols-3 sm:gap-[25px] xl:gap-[25px]",
           )}
         >
           {data.items.map((item) => (

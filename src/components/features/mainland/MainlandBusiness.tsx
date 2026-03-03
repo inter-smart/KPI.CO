@@ -16,6 +16,7 @@ type Variant =
   | "dafza"
   | "rakez"
   | "ifza"
+  | "dwtc"
   | "ADGM-Foundations";
 
 type MainlandBusinessProps = {
@@ -56,6 +57,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
               hasVariant(variant, "spv") ||
+              hasVariant(variant, "dwtc") ||
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
@@ -86,6 +88,7 @@ export default function MainlandBusiness({
                 hasVariant(variant, "ifza") && "!max-w-full",
                 hasVariant(variant, "Mainland") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
+                hasVariant(variant, "dwtc") && "!max-w-full",
               )}
             >
               <Heading
@@ -96,6 +99,7 @@ export default function MainlandBusiness({
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                   variant === "SAIFZ" && "xl:max-w-[590px]",
                   variant === "dafza" && "xl:max-w-full",
+                  variant === "dwtc" && "xl:max-w-full",
                 )}
               >
                 {parse(data.title)}
@@ -139,7 +143,7 @@ export default function MainlandBusiness({
                       key={index}
                       className="flex mb-[15px] last-of-type:mb-0"
                     >
-                      <div className="flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
+                      <div className="max-sm:w-full flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                         <div
                           className={cn(
                             "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
@@ -161,7 +165,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] max-sm:w-[calc(100%-16px)]">
+                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]">
                           {item}
                         </span>
                       </div>
