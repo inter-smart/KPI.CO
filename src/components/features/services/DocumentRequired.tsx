@@ -95,13 +95,13 @@ export default function DocumentRequired({
             )}
           >
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
+              <div className={cn("mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10",variant === "dfza" && "xl:mb-[50px]")}>
                 <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
                   {data?.title && (
                     <Heading
                       as="h2"
                       size="h2"
-                      className="text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
+                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block",variant === "dfza" && "xl:mb-[35px]")}
                     >
                       {parse(data.title)}
                     </Heading>

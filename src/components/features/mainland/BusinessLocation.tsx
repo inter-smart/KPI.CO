@@ -70,7 +70,7 @@ export default function BusinessLocation({
                 <div className="absolute bottom-0 left-0 p-[40px_30px]">
                   <Heading
                     as="h3"
-                    className="text-white text-[17px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
+                    className="text-white text-[24px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
                   >
                     {parse(item.title)}
                   </Heading>

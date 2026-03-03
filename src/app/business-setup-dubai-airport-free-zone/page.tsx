@@ -478,7 +478,7 @@ const localData = {
     })),
   },
 };
-
+ 
 export const metadata: Metadata = {
   title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
   description:
