@@ -33,6 +33,7 @@ export type InnerHeroProps = {
     | "ifza"
     | "e-invoicing"
     | "ADGM-Foundations"
+    | "technology"
     | "meydan";
 };
 
@@ -53,11 +54,12 @@ export default function InnerHero({
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "min-h-[740px] sm:min-h-[650px] xl:min-h-[600px] "
-          : "min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
+          ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
+          : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
+        variant === "technology" && "!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] " ,
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -137,7 +139,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[35px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>
