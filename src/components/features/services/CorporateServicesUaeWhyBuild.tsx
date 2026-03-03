@@ -86,7 +86,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "max-xl:!text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5",
+          "max-xl:!text-[18px] xl:text-[18px] font-semibold text-black mb-2 2xl:mb-2.5",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
             "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
@@ -104,7 +104,7 @@ function WhyBuildCard({
         as="div"
         size="p1"
         className={cn(
-          "text-[14px] xl:text-[16px] font-normal text-[#4e4e4e] sm:text-black",
+          "text-[14px] xl:text-[16px] font-normal text-[#2E2E2E] ",
           hasVariant(variant, "mainland") ||
             hasVariant(variant, "freezone") ||
             hasVariant(variant, "dsoa") ||

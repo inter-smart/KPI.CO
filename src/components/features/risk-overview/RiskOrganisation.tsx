@@ -29,11 +29,12 @@ export default function RiskOrganisation({
     <section
       className={cn(
         "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
-        variant === "dwtc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB]",
+        variant === "dwtc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f18b] to-[#3eb1ea65] sm:bg-[#F9FAFB]",
         variant === "dwtc-doc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB] max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "ADGM-Foundation" &&
           "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "holding" && "max-sm:!py-[0px_35px] xl:!py-[0px_75px]",
+        variant === "dwtc-bg" && "bg-[#F9FAFB]",
       )}
     >
       <div className="container">
@@ -51,7 +52,7 @@ export default function RiskOrganisation({
               "w-full md:w-[57%] xl:w-[60%]",
               variant === "ADGM-Foundation" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
-              variant === "dwtc" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
+              variant === "dwtc" && "xl:w-[calc(100%-475px)] xl:pr-[80px]",
               variant === "ifza" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
               variant === "holding" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
             )}
@@ -106,7 +107,7 @@ export default function RiskOrganisation({
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                     )}
                   >
-                    <span className="absolute left-0 top-[4px] xl:top-[6px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
+                    <span className="absolute left-0 top-[4px] xl:top-[5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
                       {variant === "dwtc-doc" ? (
                         <svg
                           width="17"
