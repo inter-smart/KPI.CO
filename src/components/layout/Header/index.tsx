@@ -40,7 +40,8 @@ const navItems = [
             name: "Agreed Upon Procedures",
             href: "/agreed-upon-procedures-uae",
           },
-          { name: "ADGM Regulated Audit", href: "/adgm-regulated-audit" },
+          { name: "ADGM Regulated Audit", 
+            href: "/adgm-regulated-audit" },
           {
             name: "DIFC & DFSA Regulated Audit",
             href: "/difc-dfsa-regulated-audit",
@@ -54,8 +55,8 @@ const navItems = [
         href: "#",
         subItems: [
           { name: "Corporate Services", href: "/corporate-services-uae" },
-          { name: "Tax Advisory", href: "/advisory-services-uae" },
-          { name: "e-invoicing Services", href: "/advisory-services-uae" },
+          { name: "Tax Advisory", href: "/tax-advisory-services-uae" },
+          { name: "e-invoicing Services", href: "/e-Invoicing" },
         ],
       },
       {
@@ -64,8 +65,8 @@ const navItems = [
         icon: "/images/risk_icon.svg",
         href: "#",
         subItems: [
-          { name: "Enterprise Risk Management", href: "#" },
-          { name: "Internal Audit Services", href: "#" },
+          { name: "Enterprise Risk Management", href: "enterprise-risk-management-services-uae" },
+          { name: "Internal Audit Services", href: "internal-audit-firm-uae" },
           { name: "Standard Operating Procedures", href: "#" },
           { name: "Regulatory & Compliance Advisory", href: "#" },
         ],

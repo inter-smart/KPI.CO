@@ -61,12 +61,14 @@ export default function MainlandBusiness({
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
-                : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+                : "xl:w-[calc(100%-520px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "dsoa") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[20px]",
@@ -83,10 +85,10 @@ export default function MainlandBusiness({
                 hasVariant(variant, "dafza") && "!max-w-full",
                 hasVariant(variant, "spv") || hasVariant(variant, "rakez")
                   ? "max-w-[93%] 3xl:max-w-[100%]"
-                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                  : "lg:max-w-[100%] xl:max-w-full 2xl:max-w-[670px] 3xl:max-w-[850px]",
                 hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
                 hasVariant(variant, "ifza") && "!max-w-full",
-                hasVariant(variant, "Mainland") && "!max-w-full",
+                hasVariant(variant, "dsoa") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
                 hasVariant(variant, "dwtc") && "!max-w-full",
               )}
@@ -100,6 +102,7 @@ export default function MainlandBusiness({
                   variant === "SAIFZ" && "xl:max-w-[590px]",
                   variant === "dafza" && "xl:max-w-full",
                   variant === "dwtc" && "xl:max-w-full",
+                  variant === "dsoa" && "xl:max-w-[80%]",
                 )}
               >
                 {parse(data.title)}
@@ -189,10 +192,11 @@ export default function MainlandBusiness({
           > */}
           <div
             className={cn(
-              "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
+              "w-full lg:w-[365px] xl:w-[520px] 2xl:w-[520px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
               variant === "ADGM-Foundations" && "xl:w-[520px]",
               variant === "Mainland" && "xl:w-[520px]",
+              variant === "dsoa" && "xl:w-[520px]",
               variant === "SAIFZ" && "xl:w-[520px]",
               variant === "dafza" && "xl:w-[520px]",
               variant === "ifza" && "xl:w-[520px]",

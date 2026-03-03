@@ -128,7 +128,7 @@ const localData = {
   } satisfies HeroData,
 
   whyRisk: {
-    title: "Why Risk Management Becomes Critical as Organisations Scale ",
+    title: "Why Risk Management Becomes <span>Critical as Organisations Scale</span> ",
     highlightsTitle:
       "Risk exposure increases as organisation scale, particularly when  they:",
     highlights: [
