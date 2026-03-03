@@ -167,12 +167,12 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <div
                       className={cn(
-                        "w-[100%] lg:w-[1.8px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                        "w-[100%] lg:w-[1.8px] h-[1px] lg:h-[200%] xl:h-[200%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
                         index <= activeStep
-                          ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
+                          ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
                         data.steps.length === index + 1 && "lg:hidden",
                       )}
@@ -181,7 +181,7 @@ export default function CorporateServicesUaeFormationProcess({
 
                     <div
                       className={cn(
-                        "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
+                        "w-5 lg:w-4 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
                         "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                       )}
                     >
