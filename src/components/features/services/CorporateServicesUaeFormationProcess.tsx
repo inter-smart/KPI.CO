@@ -170,7 +170,7 @@ export default function CorporateServicesUaeFormationProcess({
                         "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
-                        variant === "mainland" && "lg:h-[150%]",
+                        variant === "mainland" && "lg:h-[200%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                           : "bg-[#dcdcdc]",
@@ -201,8 +201,8 @@ export default function CorporateServicesUaeFormationProcess({
                           variant === "risk" &&
                           "sm:hidden",
                           index <= activeStep
-                          ? "text-[#3eb0ea]"
-                          : "text-[#a7a7a7]",
+                            ? "text-[#3eb0ea]"
+                            : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0"
                         )}
                       >
