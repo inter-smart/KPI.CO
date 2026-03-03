@@ -12,16 +12,16 @@ type CorporateServicesUaeServicesProps = {
     footer_description?: string;
   };
   variant?:
-    | "default"
-    | "saifz"
-    | "advisory"
-    | "dafza"
-    | "rakez"
-    | "dwtc"
-    | "ifza"
-    | "regulatory"
-    | "dsoa"
-    | "CorporateServicesUae";
+  | "default"
+  | "saifz"
+  | "advisory"
+  | "dafza"
+  | "rakez"
+  | "dwtc"
+  | "ifza"
+  | "regulatory"
+  | "dsoa"
+  | "CorporateServicesUae";
 };
 
 export default function CorporateServicesUaeServices({
@@ -78,7 +78,7 @@ export default function CorporateServicesUaeServices({
                   "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "regulatory" &&
-                    "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
+                  "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                   variant === "saifz" && "max-sm:min-h-[140px]",
                 )}
               >
@@ -106,7 +106,7 @@ export default function CorporateServicesUaeServices({
           ))}
         </div>
         {data?.footer_description && (
-          <div className="text-[16px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[25px] sm:mt-[30px] 2xl:mt-[40px]">
+          <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[25px] sm:mt-[30px] 2xl:mt-[40px]">
             {data?.footer_description}
           </div>
         )}

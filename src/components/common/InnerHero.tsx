@@ -23,17 +23,18 @@ export type InnerHeroData = {
 export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
-    | "default"
-    | "Mainland"
-    | "CorporateServicesUae"
-    | "saifz"
-    | "advisory"
-    | "dwtc"
-    | "erm"
-    | "ifza"
-    | "e-invoicing"
-    | "ADGM-Foundations"
-    | "meydan";
+  | "default"
+  | "Mainland"
+  | "CorporateServicesUae"
+  | "AuditServicesUae"
+  | "saifz"
+  | "advisory"
+  | "dwtc"
+  | "erm"
+  | "ifza"
+  | "e-invoicing"
+  | "ADGM-Foundations"
+  | "meydan";
 };
 
 export default function InnerHero({
@@ -79,8 +80,9 @@ export default function InnerHero({
             variant === "ADGM-Foundations" &&
             "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "saifz" &&
-              "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
-            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
+            "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]"
           )}
         >
           <Heading
@@ -98,9 +100,9 @@ export default function InnerHero({
                 "xl:text-[16px] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
-                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
+                "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
-                  "xl:text-[16px] lg:max-w-[83%]",
+                "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
               )}
@@ -118,7 +120,7 @@ export default function InnerHero({
                   className={cn(
                     "font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",
                     variant === "CorporateServicesUae" &&
-                      "text-[14px] xl:text-[16px]",
+                    "text-[14px] xl:text-[16px]",
                   )}
                 >
                   <Image

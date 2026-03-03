@@ -5,8 +5,12 @@
             "color": "foldercolorizer.color_33cc00"
         },
         {
-            "folderPath": "KPI.CO\\src\\app\\business-setup-dubai-airport-free-zone\\page.tsx\\",
+            "folderPath": "KPI.CO\\src\\app\\audit-services-uae-old\\page.tsx\\",
             "color": "foldercolorizer.color_ccff00"
+        },
+        {
+            "folderPath": "KPI.CO\\src\\app\\audit-services-uae\\page.tsx\\",
+            "color": "foldercolorizer.color_00cc00"
         }
     ]
 }

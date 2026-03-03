@@ -168,7 +168,6 @@ const localData = {
       alt: "Meydan",
     },
   } satisfies MainlandBusinessData,
-
   meydanFreeZone: {
     title: "Is Meydan the Free Zone Right For You?",
     free_zone_list: [
