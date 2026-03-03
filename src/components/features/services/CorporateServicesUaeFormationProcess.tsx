@@ -36,13 +36,13 @@ export type ProcessListItem = {
 
 export type CorporateServicesUaeFormationProcessProps = {
   variant?:
-    | "Vat-Services"
-    | "mainland"
-    | "aup"
-    | "default"
-    | "tax-advisory"
-    | "risk"
-    | "CorporateServicesUae";
+  | "Vat-Services"
+  | "mainland"
+  | "aup"
+  | "default"
+  | "tax-advisory"
+  | "risk"
+  | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -113,7 +113,7 @@ export default function CorporateServicesUaeFormationProcess({
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
               variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
               variant === "CorporateServicesUae" &&
-                "sm:text-center xl:mb-[30px]",
+              "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
@@ -163,19 +163,20 @@ export default function CorporateServicesUaeFormationProcess({
                     )}
                     // onClick={() => !isDesktop && setActiveStep(index)}
                     onClick={() => setActiveStep(index)}
-                    
+
                   >
                     <div
                       className={cn(
                         "w-[100%] lg:w-[1.8px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
+                        variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[150%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
                           : "bg-[#dcdcdc]",
                         data.steps.length === index + 1 && "lg:hidden",
                       )}
-                     
+
                     />
 
                     <div
@@ -187,7 +188,7 @@ export default function CorporateServicesUaeFormationProcess({
                       {index > activeStep && (
                         <div
                           className="w-full h-full rounded-full bg-white"
-                         
+
                         />
                       )}
                     </div>
@@ -196,12 +197,13 @@ export default function CorporateServicesUaeFormationProcess({
                         as="div"
                         size="p3"
                         className={cn(
-                          "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 my-[8px]",
-                           variant === "risk" &&
-                            "sm:hidden",
+                          "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
+                          variant === "risk" &&
+                                      "sm:hidden",
                           index <= activeStep
-                            ? "text-[#3eb0ea]"
-                            : "text-[#a7a7a7]",
+                          ? "text-[#3eb0ea]"
+                          : "text-[#a7a7a7]",
+                          variant === "CorporateServicesUae" && "mt-0"
                         )}
                       >
                         {step.step}
@@ -237,23 +239,23 @@ export default function CorporateServicesUaeFormationProcess({
                 />
                 <AnimatePresence mode="wait">
                   <div
-                    key={activeStep} 
+                    key={activeStep}
                     className="relative z-10 w-full"
                   >
                     {variant !== "aup" && (
-                      <div 
+                      <div
                       >
                         <Heading
                           as="h4"
                           size="h6"
-                          className={cn("font-normal text-[#3eb0ea] capitalize mb-1",   variant === "risk" &&
-                "sm:hidden",)}
+                          className={cn("font-normal text-[#3eb0ea] capitalize mb-1", variant === "risk" &&
+                            "sm:hidden",)}
                         >
                           {data.steps[activeStep].step}
                         </Heading>
                       </div>
                     )}
-                    <div 
+                    <div
                     >
                       {/* <Heading
                         as="h4"
@@ -272,7 +274,7 @@ export default function CorporateServicesUaeFormationProcess({
                         </Heading>
                       )}
                     </div>
-                    <div 
+                    <div
                     >
                       <Text
                         as="div"
