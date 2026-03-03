@@ -164,6 +164,7 @@ export default function CorporateServicesUaeWhyBuild({
         hasVariant(variant, "erm") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
+        hasVariant(variant, "technology") && "bg-linear-to-t from-[#f1fafe] via-white to-white xl:pb-[80px]",
       )}
     >
       <div className="container">
@@ -189,7 +190,9 @@ export default function CorporateServicesUaeWhyBuild({
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7"
+            className={cn("text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7",
+              variant === "technology" && "xl:mb-[28px]"
+            )}
           >
             {data.title}
           </Heading>
@@ -228,7 +231,7 @@ export default function CorporateServicesUaeWhyBuild({
               "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
               hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
               hasVariant(variant, "technology") &&
-                "lg:grid-cols-3 sm:gap-[25px] xl:gap-[25px]",
+                "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
           )}
         >
           {data.items.map((item) => (

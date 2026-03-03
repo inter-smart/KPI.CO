@@ -97,7 +97,7 @@ export default function RiskOrganisation({
             {items.length > 0 && (
               <ul
                 className={cn(
-                  "space-y-4 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
+                  "space-y-5 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
                   variant === "ADGM-Foundation" && "xl:space-y-[20px]",
                 )}
               >

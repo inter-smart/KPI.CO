@@ -58,7 +58,7 @@ export default function MeydanFreeZone({
           >
             {data?.title}
           </Heading>
-          <p className="text-[14px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] ">
+          <p className="text-[16px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] max-sm:mb-[22px] ">
             {data?.main_description}
           </p>
         </div>
@@ -102,6 +102,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] mb-[15px] max-sm:!mb-[40px]",
                     variant === "ADGM-Foundation" && "xl:mb-[25px]",
+                    variant === "ifza" && "hidden",
                   )}
                 >
                   {parse(item?.description ?? "")}
@@ -114,7 +115,9 @@ export default function MeydanFreeZone({
                 >
                   {item?.highlightsText}
                 </div>
-                <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[20px]">
+                <ul className={cn("space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[20px]",
+                  variant === "ifza" && "mb-0"
+                )}>
                   {item?.zone_list?.map((zone, i) => (
                     <li
                       key={i}

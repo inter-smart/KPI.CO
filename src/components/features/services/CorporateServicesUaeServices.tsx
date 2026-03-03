@@ -21,6 +21,7 @@ type CorporateServicesUaeServicesProps = {
     | "ifza"
     | "regulatory"
     | "dsoa"
+    | "technology"
     | "CorporateServicesUae";
 };
 
@@ -43,6 +44,7 @@ export default function CorporateServicesUaeServices({
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
             variant === "dafza" && "sm:text-left xl:mb-[35px]",
             variant === "saifz" && "sm:text-left",
+            variant === "technology" && "sm:text-left",
           )}
         >
           <Heading
@@ -64,11 +66,12 @@ export default function CorporateServicesUaeServices({
         </div>
         <div
           className={cn(
-            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[25px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
             variant === "dafza" && "!max-w-full",
             variant === "dwtc" && "xl:max-w-full",
-            variant === "ifza" && "xl:max-w-full"
+            variant === "ifza" && "xl:max-w-full",
+            variant === "technology" && "xl:max-w-full"
           )}
         >
           {data.items.map((item) => (
@@ -93,7 +96,9 @@ export default function CorporateServicesUaeServices({
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
-                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75">
+                  <div className={cn("text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75",
+                    variant === "technology" && "mb-0"
+                  )}>
                     {item?.title}
                   </div>
                   {item?.description && (

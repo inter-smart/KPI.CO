@@ -18,6 +18,7 @@ export type MeydanKeyBenefitsData = {
   slides: {
     id: number;
     title: string;
+    data_description?: string;
     items: (string | { title?: string; description?: string })[];
     media: {
       path: string;
@@ -28,7 +29,7 @@ export type MeydanKeyBenefitsData = {
 
 export type MeydanKeyBenefitsProps = {
   data: MeydanKeyBenefitsData;
-  variant?: "default" | "Vat-Services";
+  variant?: "default" | "Vat-Services" | "technology";
 };
 
 export default function MeydanKeyBenefits({
@@ -88,9 +89,10 @@ export default function MeydanKeyBenefits({
               {data?.slides?.map((item, index) => (
                 <SwiperSlide key={item?.id} className="!w-auto !h-auto">
                   <div
-                    className={`text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-1 before:inset-[auto_0_0_0] ${activeIndex === index &&
+                    className={`text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-1 before:inset-[auto_0_0_0] ${
+                      activeIndex === index &&
                       "font-semibold !text-[#1C5396] before:opacity-100"
-                      }`}
+                    }`}
                   >
                     {item?.title}
                   </div>
@@ -121,10 +123,18 @@ export default function MeydanKeyBenefits({
                     className={cn(
                       "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row items-center",
                       variant === "Vat-Services" &&
-                      "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
+                        "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
                     )}
                   >
-                    <div className="w-full lg:w-1/2">
+                    <div className={cn("w-full lg:w-1/2",
+                       variant === "technology"  &&  "pr-[40px]"
+                    )}>
+                      {variant === "technology" && (
+                        <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[28px]">
+                          {item?.data_description}
+                        </div>
+                      )}
+
                       <ul className="space-y-[20px] sm:space-y-[15px] xl:space-y-[20px] 2xl:space-y-[25px] 3xl:space-y-[30px]">
                         {item?.items?.map((item, index) => (
                           <li
@@ -132,15 +142,21 @@ export default function MeydanKeyBenefits({
                             className={cn(
                               "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[33px] 2xl:pl-[35px] 3xl:pl-[40px] relative z-0 before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:h-auto before:aspect-square before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3328%2024.4444C19.4693%2024.4444%2024.4439%2019.4698%2024.4439%2013.3333C24.4439%207.19678%2019.4693%202.22217%2013.3328%202.22217C7.19629%202.22217%202.22168%207.19678%202.22168%2013.3333C2.22168%2019.4698%207.19629%2024.4444%2013.3328%2024.4444Z%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] before:bg-no-repeat before:bg-contain before:absolute before:inset-[0_auto_0_0] before:translate-y-[2px] sm:before:translate-y-[3px] 2xl:before:translate-y-[5px]",
                               variant === "Vat-Services" &&
-                              "pb-[10px] sm:pb-[15px] 2xl:pb-[20px] 3xl:pb-[25px] my-[10px] sm:my-[15px] 2xl:my-[20px] 3xl:my-[25px] border-b-1 border-[#DEDEDE] last:pb-0 last:mb-0 last:border-0",
+                                "pb-[10px] sm:pb-[15px] 2xl:pb-[20px] 3xl:pb-[25px] my-[10px] sm:my-[15px] 2xl:my-[20px] 3xl:my-[25px] border-b-1 border-[#DEDEDE] last:pb-0 last:mb-0 last:border-0",
+                             
                             )}
                           >
                             {typeof item === "string" ? (
-                              <span className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden">
+                              <span className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden",
+
+                                 variant === "technology"  &&  "text-[#4E4E4E] font-normal"
+                              )}>
                                 {parse(item)}
                               </span>
                             ) : (
-                              <div className="[&_span]:text-[16px] 2xl:[&_span]:text-[20px] 3xl:[&_span]:text-[24px] [&_span]:leading-normal [&_span]:font-medium [&_span]:text-black w-full h-auto gap-[5px] flex flex-col">
+                              <div className={cn("[&_span]:text-[16px] xl:[&_span]:text-[18px] 2xl:[&_span]:text-[20px] 3xl:[&_span]:text-[24px] [&_span]:leading-normal [&_span]:font-medium [&_span]:text-black w-full h-auto gap-[5px] flex flex-col",
+                                 variant === "technology"  &&  "[&_span]:!text-[#4E4E4E] [&_span]:!font-normal"
+                              )}>
                                 {item?.title && <span>{item?.title}</span>}
                                 {item?.description && (
                                   <span className="!leading-[1.7] !font-normal !text-[#4E4E4E]">
@@ -159,7 +175,7 @@ export default function MeydanKeyBenefits({
                           src={item?.media?.path}
                           alt={item?.media?.alt}
                           width={770}
-                          height={380}
+                          height={variant === "technology" ? 450 : 380}
                           className="w-full h-full object-cover"
                         />
                       </div>

@@ -21,12 +21,16 @@ export type DiscussYourRiskProps = {
       overlayMobile: string;
     };
   };
+  variant?:
+   | "technology";
 };
 type PageData = {
   discussYourRisk: DiscussYourRiskData;
+
 };
 
-export default function DiscussYourRisk({ data }: DiscussYourRiskProps) {
+
+export default function DiscussYourRisk({ data, variant }: DiscussYourRiskProps) {
   return (
     <section className="relative w-full max-sm:px-[40px] py-[60px] xl:py-[70px] overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -57,7 +61,9 @@ export default function DiscussYourRisk({ data }: DiscussYourRiskProps) {
               {data?.title}
             </Heading>
 
-            <div className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] font-medium max-sm:font-normal text-white [&_p]:leading-[1.6] md:max-w-[95%]">
+            <div className={cn("text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] font-medium max-sm:font-normal text-white [&_p]:leading-[1.6] md:max-w-[95%]",
+              variant === "technology" && "md:max-w-[100%]"
+            )}>
               {parse(data?.description)}
             </div>
           </div>
