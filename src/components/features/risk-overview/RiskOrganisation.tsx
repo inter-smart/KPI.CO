@@ -28,8 +28,8 @@ export default function RiskOrganisation({
   return (
     <section
       className={cn(
-        "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[25px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
-        variant === "dwtc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB]",
+        "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] py-[30px_25px] lg:py-[60px_60px] xl:py-[90px_70px] 2xl:py-[100px_85px] 3xl:py-[125px_105px]",
+        variant === "dwtc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB] py-[40px_30px] lg:py-[50px_50px] xl:py-[70px_70px] 2xl:py-[100px_85px] 3xl:py-[125px_105px]",
         variant === "dwtc-doc" && "bg-[#F9FAFB] max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "ADGM-Foundation" &&
           "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
@@ -75,6 +75,7 @@ export default function RiskOrganisation({
                     className={cn(
                       "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
+                      variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
                     )}
                   >
                     {parse(data.title)}

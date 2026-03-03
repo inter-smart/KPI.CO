@@ -59,7 +59,7 @@ export default function InnerHero({
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
-        variant === "technology" && "!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] " ,
+        variant === "technology"  &&  "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] " ,
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -82,7 +82,8 @@ export default function InnerHero({
             "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
-            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
+            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
           )}
         >
           <Heading
@@ -105,7 +106,7 @@ export default function InnerHero({
                   "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
-                variant === "Mainland" && "lg:max-w-[75%]",
+                variant === "ifza" && "lg:max-w-[100%]",
               )}
             >
               {parse(data?.description)}
