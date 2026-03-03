@@ -83,13 +83,17 @@ export default function InnerHero({
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
-            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
+            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "technology" && "!max-w-full"
           )}
         >
           <Heading
             as="h1"
             size="h1"
-            className="font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden"
+            className={cn("font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+
+              variant === "technology" && "max-w-[850px]",
+            )}
           >
             {parse(data?.title)}
           </Heading>
