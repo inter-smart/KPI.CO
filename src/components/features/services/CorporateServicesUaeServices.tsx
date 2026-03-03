@@ -64,7 +64,7 @@ export default function CorporateServicesUaeServices({
         </div>
         <div
           className={cn(
-            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[25px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
             variant === "dafza" && "!max-w-full",
             variant === "dwtc" && "xl:max-w-full",
@@ -97,7 +97,7 @@ export default function CorporateServicesUaeServices({
                     {item?.title}
                   </div>
                   {item?.description && (
-                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
+                    <p className="text-[16px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
                       {parse(item?.description)}
                     </p>
                   )}

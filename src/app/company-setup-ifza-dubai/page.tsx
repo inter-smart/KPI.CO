@@ -273,8 +273,7 @@ const localData = {
       {
         id: 1,
         title: "Choosing the Right Structure",
-        description:
-          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+        description: "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
       },
     ],
   } satisfies MeydanFreeZoneData,

@@ -58,7 +58,7 @@ export default function MeydanFreeZone({
           >
             {data?.title}
           </Heading>
-          <p className="text-[14px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] ">
+          <p className="text-[16px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153]  max-sm:mb-[25px]">
             {data?.main_description}
           </p>
         </div>
@@ -103,8 +103,7 @@ export default function MeydanFreeZone({
                     "text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] mb-[15px] max-sm:!mb-[40px]",
                     variant === "ADGM-Foundation" && "xl:mb-[25px]",
                   )}
-                >
-                  {parse(item?.description ?? "")}
+                >{parse(item?.description ?? "")}
                 </div>
                 <div
                   className={cn(
