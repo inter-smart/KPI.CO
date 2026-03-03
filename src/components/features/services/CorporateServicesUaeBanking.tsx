@@ -53,7 +53,7 @@ export default function CorporateServicesUaeBanking({
         variant === "audit" && "!pt-1 shadow-none",
         variant === "freezone-business" && "shadow-none",
         variant === "company" && "!pt-1 shadow-none",
-        variant === "ifza" && "!pt-5 shadow-none",
+        variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
       )}
@@ -80,7 +80,9 @@ export default function CorporateServicesUaeBanking({
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25"
+            className={cn("text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25",
+              variant === "ifza" && "!mb-[30px]"
+            )}
           >
             {data?.title}
           </Heading>

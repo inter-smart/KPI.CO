@@ -75,6 +75,7 @@ export default function RiskOrganisation({
                     className={cn(
                       "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
+                      variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
                     )}
                   >
                     {parse(data.title)}
