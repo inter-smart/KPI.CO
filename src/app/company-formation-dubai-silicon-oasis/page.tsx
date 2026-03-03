@@ -462,7 +462,7 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="dsoa"/>
       <CorporateServicesUaeWhyBuild
         variant="dsoa"
         data={localData.whyBuild}

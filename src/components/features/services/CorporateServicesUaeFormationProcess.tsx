@@ -167,7 +167,7 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <div
                       className={cn(
-                        "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                        "w-[100%] lg:w-[1.8px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "mainland" && "lg:h-[150%]",
                         index <= activeStep
@@ -198,7 +198,7 @@ export default function CorporateServicesUaeFormationProcess({
                         className={cn(
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 my-[8px]",
                            variant === "risk" &&
-                "sm:hidden",
+                            "sm:hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -217,6 +217,7 @@ export default function CorporateServicesUaeFormationProcess({
                           : "text-[#a7a7a7]",
                         variant == "tax-advisory" && "text-nowrap",
                         variant == "aup" && "max-w-full",
+                        variant == "mainland" && "max-w-full",
                       )}
                     >
                       {parse(step.title)}
