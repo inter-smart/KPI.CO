@@ -438,7 +438,7 @@ export default function CompanyFormationOffshoreUaePage() {
       <OffshoreCompaniesUae data={localData.offshoreCompanies} />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="sop"
+        variant="SOP"
       />
       <CorporateServicesUaeBanking
         data={localData.banking}

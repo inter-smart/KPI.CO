@@ -498,7 +498,7 @@ export default function CompanyFormationDIFC() {
       />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="sop"
+        variant="SOP"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
