@@ -32,7 +32,9 @@ type PageData = {
 
 export default function DiscussYourRisk({ data, variant }: DiscussYourRiskProps) {
   return (
-    <section className="relative w-full max-sm:px-[40px] py-[60px] xl:py-[70px] overflow-hidden">
+    <section className={cn("relative w-full max-sm:px-[40px] py-[60px] xl:py-[70px] overflow-hidden",
+      variant === "technology" && "max-sm:px-[85px] py-[80px] xl:py-[105px] "
+    )}>
       <div className="absolute inset-0 -z-10">
         <Image
           src={data?.images?.overlay || ""}

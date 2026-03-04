@@ -266,7 +266,7 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/busnes-license-1.svg",
+          path: "/images/technology-howwork-1.svg",
           alt: "Backed by KPI Group’s audit, tax, and regulatory expertise",
         },
         title: "Backed by KPI Group’s audit, tax, and regulatory expertise",
@@ -276,7 +276,7 @@ const localData = {
       {
         id: 2,
         media: {
-          path: "/images/busnes-license-2.svg",
+          path: "/images/technology-howwork-2.svg",
           alt: "Proven experience across ERP, HRMS, and compliance‑led systems",
         },
         title: "Proven experience across ERP, HRMS, and compliance‑led systems",
@@ -286,7 +286,7 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/busnes-license-3.svg",
+          path: "/images/technology-howwork-3.svg",
           alt: "Strong focus on governance, controls, and auditability",
         },
         title: "Strong focus on governance, controls, and auditability",
@@ -296,7 +296,7 @@ const localData = {
       {
         id: 4,
         media: {
-          path: "/images/busnes-license-4.svg",
+          path: "/images/technology-howwork-4.svg",
           alt: "Designed for organisations operating under UAE federal and free‑zone frameworks",
         },
         title: "Designed for organisations operating under UAE federal and free‑zone frameworks",

@@ -88,14 +88,18 @@ export default function MeydanKeyBenefits({
             >
               {data?.slides?.map((item, index) => (
                 <SwiperSlide key={item?.id} className="!w-auto !h-auto">
+                  
                   <div
-                    className={`text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-1 before:inset-[auto_0_0_0] ${
+                    className={cn(
+                      "text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-[1] before:inset-[auto_0_0_0]",
+                      variant === "technology" && "font-medium",
                       activeIndex === index &&
-                      "font-semibold !text-[#1C5396] before:opacity-100"
-                    }`}
+                        "font-semibold !text-[#1C5396] before:opacity-100",
+                    )}
                   >
                     {item?.title}
                   </div>
+                  
                 </SwiperSlide>
               ))}
             </Swiper>
