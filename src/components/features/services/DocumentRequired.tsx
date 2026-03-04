@@ -44,6 +44,7 @@ type DocumentRequiredProps = {
     | "hamriya"
     | "sop"
     | "difc"
+    | "internal-audit"
     | "audit";
 };
 
@@ -69,6 +70,8 @@ export default function DocumentRequired({
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "spv" &&
           "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
+        variant === "internal-audit" &&
+          "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" && "bg-white",
         variant === "advisory" && "bg-white",
         variant === "hamriya" &&
@@ -88,23 +91,30 @@ export default function DocumentRequired({
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
+              variant === "internal-audit" && "md:pr-[30px] xl:pr-[40px]",
             )}
           >
             {(data?.title || data?.description) && (
-              <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
+              <div className={cn("mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10",
+                variant === "internal-audit" && "mb-0"
+              )}>
                 <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
                   {data?.title && (
                     <Heading
                       as="h2"
                       size="h2"
-                      className="text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block"
+                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block",
+                        variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                      )}
                     >
                       {parse(data.title)}
                     </Heading>
                   )}
                 </div>
                 {data?.description && (
-                  <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]">
+                  <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]",
+                    variant === "internal-audit" && "leading-relaxed xl:[&_p]:mb-[30px] [&_p:last-of-type]:mb-0"
+                  )}>
                     {parse(data.description)}
                   </div>
                 )}

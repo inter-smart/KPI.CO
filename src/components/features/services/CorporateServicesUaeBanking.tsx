@@ -26,6 +26,7 @@ type CorporateServicesUaeBankingProps = {
     | "company"
     | "freezone-business"
     | "downshadow"
+    | "internal-audit"
     | "audit";
 };
 
@@ -51,6 +52,7 @@ export default function CorporateServicesUaeBanking({
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 
         variant === "audit" && "!pt-1 shadow-none",
+        variant === "internal-audit" && "!pt-1 shadow-none",
         variant === "freezone-business" && "shadow-none",
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && " shadow-none",
@@ -71,6 +73,7 @@ export default function CorporateServicesUaeBanking({
               variant === "ifza" ||
               variant === "freezone-business" ||
               variant === "audit" ||
+              variant === "internal-audit" ||
               variant === "downshadow"
               ? "text-left"
               : "sm:text-center",
@@ -128,6 +131,8 @@ export default function CorporateServicesUaeBanking({
                     "w-full h-[60px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
+                    variant === "internal-audit" &&
+                      "shadow-[0_13px_19px_#00000012]",
                   )}
                 >
                   <div

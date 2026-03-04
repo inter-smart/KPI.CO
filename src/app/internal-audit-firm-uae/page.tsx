@@ -113,13 +113,13 @@ const localData = {
       mobilePath: "/images/reinternal-audit-mobile-bg.png",
       alt: "Trusted Internal Audit Services In The UAE",
     },
-    title: "Trusted Internal Audit Services<br/> In The UAE ",
+    title: "Trusted Internal Audit Services In The UAE ",
     description:
       "<p>Enhance governance and safeguard your business with our trusted internal audit services. We help you identify risk, strengthen internal controls, and maintain regulatory compliance. Supporting steady growth at every stage.</p>",
   } satisfies HeroData,
 
   document_required_data: {
-    title: "Audit and Compliance Experts in <br/> the UAE",
+    title: "Audit And Compliance Experts In The UAE",
     description:
       "<p>Our internal audit service independently evaluates the effectiveness of your internal controls, risk management, and governance frameworks. We carry out focused risk-based reviews to identify control weaknesses, process deficiencies and regulatory exposure that could impact business performance or compliance.</p><p>By aligning our audit with your business objectives and UAE regulatory requirements, we help management and stakeholders gain confidence and enable informed decision-making and steady growth.</p>",
     items: [],
@@ -177,7 +177,7 @@ const localData = {
     ] satisfies RiskAssuranceData[],
   },
   ProcessStep: {
-    title: "Our Audit Approach",
+    title: "Our Internal Audit Approach",
     sub_title: null,
     description: null,
     steps: [
@@ -414,19 +414,28 @@ export const metadata: Metadata = {
 export default function InternalAudit() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <DocumentRequired variant="spv" data={localData.document_required_data} />
-      <RiskAssuranceServices data={localData.riskAssurance} />
+      <InnerHero variant="internal-audit" data={localData.hero} />
+      <DocumentRequired
+        variant="internal-audit"
+        data={localData.document_required_data}
+      />
+      <RiskAssuranceServices
+        variant="internal-audit"
+        data={localData.riskAssurance}
+      />
       <CorporateServicesUaeFormationProcess
-        variant="aup"
+        variant="internal-audit"
         data={localData.ProcessStep}
       />
-      <CorporateServicesUaeBanking variant="audit" data={localData.banking} />
+      <CorporateServicesUaeBanking
+        variant="internal-audit"
+        data={localData.banking}
+      />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="risk"
+        variant="internal-audit"
       />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter variant="internal-audit" data={localData.counterList} />
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
