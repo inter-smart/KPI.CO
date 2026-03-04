@@ -172,7 +172,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
                         index <= activeStep
-                          ? "bg-linear-to-b from-[#053269] to-[#6a9fe0]"
+                          ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
                         data.steps.length === index + 1 && "lg:hidden",
                       )}
@@ -199,7 +199,7 @@ export default function CorporateServicesUaeFormationProcess({
                         className={cn(
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" &&
-                          "sm:hidden",
+                                      "sm:hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -219,6 +219,7 @@ export default function CorporateServicesUaeFormationProcess({
                           : "text-[#a7a7a7]",
                         variant == "tax-advisory" && "text-nowrap",
                         variant == "aup" && "max-w-full",
+                        variant == "mainland" && "max-w-full",
                       )}
                     >
                       {parse(step.title)}

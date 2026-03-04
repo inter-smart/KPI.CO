@@ -273,8 +273,7 @@ const localData = {
       {
         id: 1,
         title: "Choosing the Right Structure",
-        description:
-          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+        description: "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
       },
     ],
   } satisfies MeydanFreeZoneData,
@@ -362,8 +361,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-ifza.png",
-      overlayMobile: "/images/overlay-ifza-mobile.png",
+      overlay: "/images/overlay-ifza.svg",
+      overlayMobile: "/images/overlay-ifza-mobile.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {
@@ -373,28 +372,28 @@ const localData = {
         id: 1,
         title: "Is IFZA Free Zone suitable for startups?",
         description: `
-                  <p>You can start by choosing the right business structure - mainland, free zone, or offshore - then completing licensing, visas, and banking. KPI guides you through each step for a smooth setup.</p>
+                  <p>Yes. IFZA is one of the most popular free zones for startups due to its affordability, fast setup, and flexible licence options.  </p>
                   `,
       },
       {
         id: 2,
         title: "Is IFZA Free Zone suitable for startups?",
         description: `
-                  <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
+                  <p>Yes, IFZA companies are eligible to apply for UAE residence visas, subject to licence type and package selection.  </p>
                   `,
       },
       {
         id: 3,
         title: "Is IFZA Free Zone suitable for startups?",
         description: `
-                  <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
+                  <p>IFZA offers flexible workspace solutions, including options that do not require a traditional physical office.  </p>
                   `,
       },
       {
         id: 4,
         title: "How long does it take to set up a company in IFZA Free Zone?",
         description: `
-                  <p>Company formation is typically fast and depends on document readiness and activity approvals.</p>
+                  <p>Company formation is typically fast and depends on document readiness and activity approvals. </p>
                   `,
       },
     ] satisfies FaqItem[],
@@ -406,7 +405,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -423,18 +422,12 @@ export default function DwtcFreezone() {
     <>
       <InnerHero variant="ifza" data={localData.hero} />
       <MainlandBusiness variant="ifza" data={localData.mainlandBusiness} />
-      <CorporateServicesUaeWhyBuild
-        variant="ifza"
-        data={localData.whyBuild}
-      />
+      <CorporateServicesUaeWhyBuild variant="ifza" data={localData.whyBuild} />
       <CorporateServicesUaeServices variant="ifza" data={localData.services} />
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
       <RiskOrganisation variant="ifza" data={localData.workWithKpi} />
-      <CorporateServicesUaeBanking
-        variant="ifza"
-        data={localData.banking}
-      />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeBanking variant="ifza" data={localData.banking} />
+      <CorporateServicesUaeCta variant="ifza" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <BlogRelated data={localData.related_blog} />
     </>

@@ -8,6 +8,7 @@ import {
     DialogContent,
     DialogTrigger,
     DialogClose,
+    DialogTitle,
 } from "@/components/ui/dialog";
 
 type BlogFilterProps = {
@@ -15,6 +16,8 @@ type BlogFilterProps = {
     onFilterChange: (filters: string[]) => void;
     onApply: () => void;
     onClear: () => void;
+    selectedSort: string;
+    onSortChange: (sort: string) => void;
 };
 
 const categories = ["Audit", "Advisory", "Corporate Services", "Risk", "Tax"];
@@ -25,11 +28,12 @@ export default function BlogFilter({
     onFilterChange,
     onApply,
     onClear,
+    selectedSort,
+    onSortChange,
 }: BlogFilterProps) {
     const [tempFilters, setTempFilters] = React.useState<string[]>(activeFilters);
     const [isOpen, setIsOpen] = React.useState(false);
     const [isSortOpen, setIsSortOpen] = React.useState(false);
-    const [selectedSort, setSelectedSort] = React.useState("Latest Posts");
 
     // Update temp filters when activeFilters changes or modal opens
     React.useEffect(() => {
@@ -69,11 +73,14 @@ export default function BlogFilter({
                 </button>
             </DialogTrigger>
             <DialogContent className="max-w-[95%] lg:max-w-[900px] p-[25px] xl:p-[32px] 2xl:p-[40px] border-none shadow-2xl rounded-[10px] overflow-visible">
+                <DialogTitle className="sr-only">
+                    Blog Filters
+                </DialogTitle>
                 {/* Custom Close Button matching image */}
-                <DialogClose className="absolute right-6 top-6  w-[24px] 2xl:w-[32px] h-[24px] 2xl:h-[32px] cursor-pointer flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
+                <DialogClose className="absolute right-6 top-6  w-[24px] xl:w-[24px] h-[24px] xl:h-[24px] cursor-pointer flex items-center justify-center bg-[#FFC107] rounded-[9px] text-black hover:bg-[#FFB300] transition-colors focus:outline-none z-50">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.500091 0.499999L8.3811 8.38101" stroke="#212121" stroke-linecap="round" />
-                        <path d="M8.38248 0.506927L0.501465 8.38794" stroke="#212121" stroke-linecap="round" />
+                        <path d="M0.500091 0.499999L8.3811 8.38101" stroke="#212121" strokeLinecap="round" />
+                        <path d="M8.38248 0.506927L0.501465 8.38794" stroke="#212121" strokeLinecap="round" />
                     </svg>
                 </DialogClose>
 
@@ -103,12 +110,12 @@ export default function BlogFilter({
                                     <button
                                         key={option}
                                         onClick={() => {
-                                            setSelectedSort(option);
+                                            onSortChange(option);
                                             setIsSortOpen(false);
                                         }}
                                         className={cn(
                                             "w-full px-2 py-2 text-[12px] font-semibold text-center transition-colors cursor-pointer",
-                                            idx === 0 ? "bg-[#cccccc] text-[#053269] rounded-[8px]" : "text-gray-500 hover:bg-gray-200"
+                                            selectedSort === option ? "bg-[#cccccc] text-[#053269] rounded-[8px]" : "text-[rgba(78,78,78,0.7)]"
                                         )}
                                     >
                                         {option}

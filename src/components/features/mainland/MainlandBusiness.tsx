@@ -17,6 +17,7 @@ type Variant =
   | "dafza"
   | "rakez"
   | "ifza"
+  | "dwtc"
   | "ADGM-Foundations";
 
 type MainlandBusinessProps = {
@@ -51,21 +52,24 @@ export default function MainlandBusiness({
         >
           {parse(data.title)}
         </Heading>
-        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-5">
+        <div className="flex flex-col-reverse lg:flex-row  max-lg:gap-6">
           {/* Left Content */}
           <div
             className={cn(
               "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
               hasVariant(variant, "spv") ||
+              hasVariant(variant, "dwtc") ||
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
-                : "xl:w-[calc(100%-460px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+                : "xl:w-[calc(100%-520px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
               "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
               "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "dsoa") &&
               "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
               "xl:w-[calc(100%-520px)] xl:pr-[20px]",
@@ -84,11 +88,12 @@ export default function MainlandBusiness({
                 hasVariant(variant, "dafza") && "!max-w-full",
                 hasVariant(variant, "spv") || hasVariant(variant, "rakez")
                   ? "max-w-[93%] 3xl:max-w-[100%]"
-                  : "lg:max-w-[425px] xl:max-w-[575px] 2xl:max-w-[670px] 3xl:max-w-[850px]",
+                  : "lg:max-w-[100%] xl:max-w-full 2xl:max-w-[670px] 3xl:max-w-[850px]",
                 hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
                 hasVariant(variant, "ifza") && "!max-w-full",
-                hasVariant(variant, "Mainland") && "!max-w-full",
+                hasVariant(variant, "dsoa") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
+                hasVariant(variant, "dwtc") && "!max-w-full",
                 hasVariant(variant, "AuditServicesUae") && "!max-w-full",
               )}
             >
@@ -100,13 +105,15 @@ export default function MainlandBusiness({
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                   variant === "SAIFZ" && "xl:max-w-[590px]",
                   variant === "dafza" && "xl:max-w-full",
+                  variant === "dwtc" && "xl:max-w-full",
+                  variant === "dsoa" && "xl:max-w-[80%]",
                 )}
               >
                 {parse(data.title)}
               </Heading>
               <div
                 className={cn(
-                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:leading-[1.6] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
+                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
                   hasVariant(variant, "hamriya") && "mb-0",
                   hasVariant(variant, "AuditServicesUae") && "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                 )}
@@ -144,17 +151,18 @@ export default function MainlandBusiness({
                       key={index}
                       className="flex mb-[15px] last-of-type:mb-0"
                     >
-                      <div className="flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
+                      <div className="max-sm:w-full flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                         <div
                           className={cn(
-                            "w-[20px] xl:w-[17px] 3xl:w-[22px] h-[20px] xl:h-[17px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
+                            "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
                             "max-sm:min-h-[378px]",
                             hasVariant(variant, "ADGM-Foundations") &&
-                            "xl:w-[17px]",
-                            hasVariant(variant, "Mainland") && "xl:w-[17px]",
-                            hasVariant(variant, "SAIFZ") && "xl:w-[17px]",
-                            hasVariant(variant, "dafza") && "xl:w-[17px]",
+                            "xl:w-[16px]",
+                            hasVariant(variant, "Mainland") && "xl:w-[16px]",
+                            hasVariant(variant, "ifza") && "xl:w-[16px]",
+                            hasVariant(variant, "SAIFZ") && "xl:w-[16px]",
+                            hasVariant(variant, "dafza") && "xl:w-[16px]",
                           )}
                         >
                           <Image
@@ -165,7 +173,7 @@ export default function MainlandBusiness({
                             alt="tickMark"
                           />
                         </div>
-                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] max-sm:w-[calc(100%-17px)]">
+                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]">
                           {item}
                         </span>
                       </div>
@@ -189,10 +197,11 @@ export default function MainlandBusiness({
           > */}
           <div
             className={cn(
-              "w-full lg:w-[365px] xl:w-[460px] 2xl:w-[520px] 3xl:w-[660px]",
+              "w-full lg:w-[365px] xl:w-[520px] 2xl:w-[520px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
               variant === "ADGM-Foundations" && "xl:w-[520px]",
               variant === "Mainland" && "xl:w-[520px]",
+              variant === "dsoa" && "xl:w-[520px]",
               variant === "SAIFZ" && "xl:w-[520px]",
               variant === "dafza" && "xl:w-[520px]",
               variant === "ifza" && "xl:w-[520px]",

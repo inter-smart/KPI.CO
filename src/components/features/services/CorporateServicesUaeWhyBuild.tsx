@@ -43,8 +43,10 @@ export type Variant =
   | "erm"
   | "rakez"
   | "offshore"
+  | "technology"
   | "formation"
   | "freeZone"
+  | "dwtc"
   | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
@@ -72,7 +74,7 @@ function WhyBuildCard({
   return (
     <div
       className={cn(
-        "group w-full h-full xl:min-h-[230px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:py-6 2xl:py-7.5 xl:px-5 2xl:px-5.5 shadow-[0px_0px_5px_0_rgba(28,83,150,0.1)] hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:p-[23px_18px_45px] 2xl:py-7.5 2xl:px-5.5  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
@@ -82,7 +84,7 @@ function WhyBuildCard({
         variant === "AuditServicesUae" && "shadow-none",
       )}
     >
-      <div className="w-[46px] xl:w-[50px] aspect-square mb-[15px] transition-transform">
+      <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -95,7 +97,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "max-xl:!text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5",
+          "max-xl:!text-[18px] xl:text-[18px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) &&
           "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
@@ -113,7 +115,7 @@ function WhyBuildCard({
         as="div"
         size="p1"
         className={cn(
-          "text-[14px] xl:text-[16px] font-normal text-[#4e4e4e] sm:text-black",
+          "text-[14px] xl:text-[16px] font-normal text-[#2E2E2E] ",
           hasVariant(variant, "mainland") ||
             hasVariant(variant, "freezone") ||
             hasVariant(variant, "dsoa") ||
@@ -151,6 +153,8 @@ export default function CorporateServicesUaeWhyBuild({
             : hasVariant(variant, "saifz") &&
             "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "dwtc") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "ifza") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
@@ -165,6 +169,8 @@ export default function CorporateServicesUaeWhyBuild({
         hasVariant(variant, "saifz") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dafz") &&
+          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        hasVariant(variant, "erm") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
       )}
@@ -174,9 +180,11 @@ export default function CorporateServicesUaeWhyBuild({
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
             hasVariant(variant, "freezone") ||
+            hasVariant(variant, "dwtc") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
               hasVariant(variant, "offshore") ||
+              hasVariant(variant, "technology") ||
               hasVariant(variant, "ifza") ||
               hasVariant(variant, "AuditServicesUae")
               ? "text-start "
@@ -216,6 +224,7 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "ifza") ||
               hasVariant(variant, "rakez") ||
+              hasVariant(variant, "dwtc") ||
               hasVariant(variant, "freeZone")
               ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
@@ -227,7 +236,9 @@ export default function CorporateServicesUaeWhyBuild({
             "sm:gap-[25px] xl:gap-[40px]",
             hasVariant(variant, "mainland") &&
             "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
-            hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
+              hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
+              hasVariant(variant, "technology") &&
+                "lg:grid-cols-3 sm:gap-[25px] xl:gap-[25px]",
           )}
         >
           {data.items.map((item) => (
@@ -241,7 +252,7 @@ export default function CorporateServicesUaeWhyBuild({
             {data.items.map((item) => (
               <div
                 key={`why-build-${item.id}`}
-                className="flex-[0_0_340px] min-w-0 select-none px-2.5"
+                className="flex-[0_0_290px] min-w-0 select-none px-2.5"
               >
                 <WhyBuildCard item={item} variant={variant} />
               </div>

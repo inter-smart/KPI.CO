@@ -135,8 +135,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/agreed-banner-desk.png",
-      mobilePath: "/images/agreed-banner-mob.png",
+      desktopPath: "/images/aupbanner.svg",
+      mobilePath: "/images/aupbanner-mob.svg",
       alt: "Company Formation in DMCC Free Zone, UAE",
     },
     title: "Focused Reviews. Factual Findings. No Opinions.",

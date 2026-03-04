@@ -146,18 +146,9 @@ const localData = {
         description:
           "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
       },
+     
       {
         id: 3,
-        media: {
-          path: "/images/busness-freezone-3.svg",
-          alt: "Client Focused",
-        },
-        title: "Client Focused",
-        description:
-          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
-      },
-      {
-        id: 4,
         media: {
           path: "/images/busness-freezone-4.svg",
           alt: "Flexible Offices",
@@ -165,6 +156,17 @@ const localData = {
         title: "Flexible Offices",
         description:
           "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
+      },
+
+       {
+        id: 4,
+        media: {
+          path: "/images/busness-freezone-3.svg",
+          alt: "Client Focused",
+        },
+        title: "Client Focused",
+        description:
+          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
       },
     ] satisfies WhyBuildItem[],
   },
@@ -405,13 +407,13 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero variant="dwtc" data={localData.hero} />
-      <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
+      <MainlandBusiness variant="dwtc" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
-        variant="freezone"
+        variant="dwtc"
         data={localData.whyBuild}
       />
       <CorporateServicesUaeServices variant="dwtc" data={localData.services} />
-      <RiskOrganisation variant="dwtc-doc" data={localData.riskOrganisation} />
+      <RiskOrganisation variant="dwtc-bg" data={localData.riskOrganisation} />
       
       <CorporateServicesUaeBanking
         variant="dwtc"

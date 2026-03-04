@@ -29,6 +29,7 @@ export type CorporateServicesUaeCtaProps = {
   | "rakez"
   | "ADGM-Foundations"
   | "holding"
+    | "ifza"
   | "dwtc";
 };
 
@@ -86,6 +87,7 @@ export default function CorporateServicesUaeCta({
               variant === "dwtc" ? "lg:w-[64%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[63%]",
               variant === "saifz" && "xl:w-[55%]",
+              variant === "ifza" ? "lg:w-[65%]" : "",
             )}
           >
             <Heading
@@ -95,14 +97,18 @@ export default function CorporateServicesUaeCta({
                 "max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] font-bold leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
                 variant === "holding" && "font-bold leading-relaxed",
                 variant === "blogdetail" && "max-sm:text-[22px]",
+                variant === "ifza" && "font-bold",
               )}
             >
               {parse(data?.title)}
             </Heading>
-            <div className={cn("text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
-              variant === "blogdetail" && "font-medium [&_p]:font-medium",
-              variant === "AuditServicesUae" && "xl:max-w-[75%]"
-            )}>
+            <div
+              className={cn(
+                "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
+                variant === "blogdetail" && "font-medium [&_p]:font-medium",
+              variant === "AuditServicesUae" && "xl:max-w-[75%]",
+              )}
+            >
               {parse(data?.description)}
             </div>
           </div>
@@ -114,17 +120,24 @@ export default function CorporateServicesUaeCta({
               variant === "dwtc" ? "lg:w-[36%]" : "",
               variant === "CorporateServicesUae" && "xl:w-[37%]",
               variant === "saifz" && "xl:w-[45%]",
+              variant === "ifza" ? "lg:w-[35%]" : "",
             )}
           >
             <Button
               className={cn(
-                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
+                "text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none !font-medium text-black min-w-[150px] xl:min-w-[160px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]",
                 variant === "mainland" &&
                 "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+
                 variant === "ADGM-Foundations" &&
                 "max-3xl:!font-medium max-sm:h-[30px] xl:h-[50px]",
+
                 variant === "holding" &&
                 "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+
+                variant === "ifza" &&
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+
                 variant === "dwtc" &&
                 "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}

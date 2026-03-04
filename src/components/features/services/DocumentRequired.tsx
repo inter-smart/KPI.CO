@@ -281,7 +281,7 @@ export default function DocumentRequired({
                   >
                     {item.title}
                   </div>
-                  <div className="text-[14px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
+                  <div className="text-[16px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
                     {/* {item.description} */}
                     {parse(item?.description)}
                   </div>

@@ -128,7 +128,7 @@ const localData = {
   } satisfies HeroData,
 
   whyRisk: {
-    title: "Why Risk Management Becomes Critical as Organisations Scale ",
+    title: "Why Risk Management Becomes <span>Critical as Organisations Scale</span> ",
     highlightsTitle:
       "Risk exposure increases as organisation scale, particularly when  they:",
     highlights: [
@@ -148,7 +148,7 @@ const localData = {
   riskAdvisory: {
     title: "What Risk Advisory Means at KPI in Practice",
     description:
-      " <p>KPI's risk advisory services focus on how risk emerges within organisations, not just how it appears on paper. We align risk management with real operations, decision-making and regulatory expectations. Our role is not to introduce complexity but to make risk visible, manageable, and defensible at the right level.  </p> <p>We support management and boards with, </p>",
+      " <p>KPI's risk advisory services focus on how risk emerges within organisations, not just how it appears on paper. We align risk management with real operations, decision-making and regulatory expectations. Our role is not to introduce complexity but to make risk visible, manageable, and defensible at the right level.  </p> <p>We support management and boards with </p>",
     highlightsText: "",
     advisoryItems: [
       {

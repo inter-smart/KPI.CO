@@ -86,11 +86,11 @@ export default function BusinessLocation({
                   <div className="flex justify-between gap-4 mb-2 2xl:mb-3 3xl:mb-4">
                     <Heading
                       as="h3"
-                      className="text-[#1C5396] !text-[18px] sm:!text-[16px] lg:!text-[17px] xl:!text-[24px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight xl:w-[calc(100%-25px)]"
+                      className="text-[#1C5396] !text-[24px] sm:!text-[16px] lg:!text-[17px] xl:!text-[24px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight xl:w-[calc(100%-25px)]"
                     >
                       {parse(item.title)}
                     </Heading>
-                    <div className="w-[20px] h-[20px] xl:h-[26px] xl:w-[26px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
+                    <div className="w-[32px] h-[32px] xl:h-[26px] xl:w-[26px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"
@@ -104,7 +104,7 @@ export default function BusinessLocation({
                     </div>
                   </div>
                   <div className="group-hover:translate-y-0 duration-300">
-                    <Text className="text-[#1C5396] text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.6] font-normal">
+                    <Text className="text-[#1C5396] text-[14px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[18px] leading-[1.6] font-normal">
                       {item.description}
                     </Text>
                   </div>

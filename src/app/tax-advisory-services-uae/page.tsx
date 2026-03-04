@@ -343,8 +343,8 @@ const localData = {
       link: "/",
     },
     images: {
-      overlay: "/images/taxDecisionBanner-desk.jpg",
-      overlayMobile: "/images/taxDecisionBanner-mob.png",
+      overlay: "/images/taxbanner.svg",
+      overlayMobile: "/images/taxbanner-mob.svg",
     },
   } satisfies CtaData,
 

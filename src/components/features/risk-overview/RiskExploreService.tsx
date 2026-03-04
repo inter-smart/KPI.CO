@@ -87,7 +87,7 @@ export default function RiskExploreService({
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "min-w-0 select-none lex-[0_0_55%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]",
+                    "min-w-0 select-none flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]",
                     variant === "difc" &&
                       "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "holding" &&

@@ -35,6 +35,7 @@ export type InnerHeroProps = {
   | "ifza"
   | "e-invoicing"
   | "ADGM-Foundations"
+    | "technology"
   | "meydan";
 };
 
@@ -49,17 +50,18 @@ export default function InnerHero({
   return (
     <section
       className={cn(
-        "w-full h-[600px] sm:h-[500px] xl:h-[600px] 2xl:h-[640px] 3xl:h-[800px] lg:max-h-[calc(100vh-var(--header-y))] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
+        "w-full min-h-[600px] sm:min-h-[500px] xl:min-h-[600px]  lg:max-h-[calc(100vh-var(--header-y))] py-[50px] sm:py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] overflow-hidden flex items-center relative z-0",
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
-          ? "h-[740px] sm:h-[650px] xl:h-[600px] 3xl:h-[800px]"
-          : "h-[600px] sm:h-[500px] xl:h-[640px] 3xl:h-[800px]",
+          ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
+          : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing"
-          ? "min-h-[640px] xl:h-[720px] 2xl:h-[770px] 3xl:h-[950px]"
+          ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
+        variant === "technology"  &&  "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] " ,
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -83,7 +85,8 @@ export default function InnerHero({
             variant === "saifz" &&
             "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
-            variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]"
+            variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
+            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
           )}
         >
           <Heading
@@ -107,6 +110,7 @@ export default function InnerHero({
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
                 variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
+                variant === "ifza" && "lg:max-w-[100%]",
               )}
             >
               {parse(data?.description)}
@@ -140,7 +144,7 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[35px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
             asChild
           >
             <Link href={"/"}>Get in Touch</Link>

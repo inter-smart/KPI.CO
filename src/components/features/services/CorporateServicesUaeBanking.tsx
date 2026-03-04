@@ -45,7 +45,7 @@ export default function CorporateServicesUaeBanking({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
+        "w-full h-auto py-[40px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
         variant === "dsoa" || variant === "dmcc"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
@@ -53,9 +53,9 @@ export default function CorporateServicesUaeBanking({
         variant === "audit" && "!pt-1 shadow-none",
         variant === "freezone-business" && "shadow-none",
         variant === "company" && "!pt-1 shadow-none",
-        variant === "ifza" && "!pt-5 shadow-none",
+        variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
-        variant === "dwtc" && "!pt-5 !shadow-none",
+        variant === "dwtc" && "!pt-[48px] !shadow-none",
       )}
     >
       <div className="container">
@@ -80,7 +80,9 @@ export default function CorporateServicesUaeBanking({
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-7.5 sm:mb-4 2xl:mb-5 3xl:mb-6.25"
+            className={cn("text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25",
+              variant === "ifza" && "!mb-[30px]"
+            )}
           >
             {data?.title}
           </Heading>
@@ -120,8 +122,10 @@ export default function CorporateServicesUaeBanking({
                   "flex-[0_0_115px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
                 )}
               >
-                <div className="w-full h-[60px] md:h-[100px] xl:h-[130px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] 2xl:rounded-[13px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition">
-                  <div className="w-[65px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
+                <div className={cn("w-full h-[60px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
+                  variant === "ifza" && "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]"
+                )}>
+                  <div className="w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
                     <Image
                       src={item?.media?.path || "/images/placeholder-image.png"}
                       alt={item?.media?.alt || "Professional Affiliations"}
