@@ -167,7 +167,7 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <div
                       className={cn(
-                        "w-[100%] lg:w-[1px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                        "w-[100%] lg:w-[2px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
@@ -181,13 +181,13 @@ export default function CorporateServicesUaeFormationProcess({
 
                     <div
                       className={cn(
-                        "w-5 lg:w-4 xl:w-5 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
+                        "w-5 lg:w-4 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
                         "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                       )}
                     >
                       {index > activeStep && (
                         <div
-                          className="w-full h-full rounded-full bg-white"
+                          className="w-full h-full rounded-full bg-white scale-[0.9]"
 
                         />
                       )}
@@ -228,7 +228,7 @@ export default function CorporateServicesUaeFormationProcess({
               </div>
             </div>
             <div className="relative">
-              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] 2xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-10 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
+              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"
@@ -278,7 +278,7 @@ export default function CorporateServicesUaeFormationProcess({
                       <Text
                         as="div"
                         size="p3"
-                        className="text-black max-md:[&_br]:hidden xl:text-[18px] "
+                        className="text-black max-md:[&_br]:hidden xl:text-[18px] leading-[1.7]"
                       >
                         {parse(data.steps[activeStep].description)}
                       </Text>

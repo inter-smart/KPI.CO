@@ -117,7 +117,7 @@ export default function BlogList({ data }: BlogListProps) {
           <BlogFilter
             activeFilters={activeFilters}
             onFilterChange={setActiveFilters}
-            onApply={() => {}}
+            onApply={() => { }}
             onClear={() => setActiveFilters([])}
           />
           <div className="relative flex-1 h-full rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px]  shadow-[0_0_26px_rgba(0,0,0,0.05)] ">
@@ -337,7 +337,7 @@ export default function BlogList({ data }: BlogListProps) {
               </div>
             </button>
           </div>
-       )}
+        )}
       </div>
     </section>
   );

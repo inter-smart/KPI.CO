@@ -1,19 +1,19 @@
-import InnerHero from "@/components/common/InnerHero";
 import { Metadata } from "next";
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import BlogRelated from "@/components/features/blogs/BlogRelated";
-import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
+import { BankingPartner } from "../corporate-services-uae/page";
+import BlogRelated from "@/components/features/blogs/BlogRelated";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import BusinessLocation, {
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import { BankingPartner } from "../corporate-services-uae/page";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 
 export type HeroData = {
   id: number;
@@ -50,14 +50,12 @@ export type MainlandBusinessData = {
     alt: string;
   };
 };
-
 export type WhyBuildItem = {
   id: number;
   media: MediaItem;
   title: string;
   description: string;
 };
-
 export type MediaItem = {
   path: string;
   alt: string;
@@ -73,7 +71,6 @@ export type RiskAssuranceData = {
   description: string;
   media: MediaItem;
 };
-
 export type ProcessStep = {
   id: number;
   step: string;
@@ -82,7 +79,6 @@ export type ProcessStep = {
   sub_title: string;
   description: string;
 };
-
 export type CtaData = {
   title: string;
   description: string;
@@ -95,13 +91,11 @@ export type CtaData = {
     overlayMobile: string;
   };
 };
-
 export type FaqItem = {
   id: number;
   title: string;
   description: string;
 };
-
 export type InsightItem = {
   id: number;
   title: string;
@@ -482,7 +476,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,

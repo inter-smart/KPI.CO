@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
@@ -11,7 +11,6 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
-import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 
 export type HeroData = {
   id: number;
@@ -108,7 +107,7 @@ const localData = {
   document_required_data: {
     title: "What are Standard Operating Procedures?",
     description:
-      "<p>A Standard Operating Procedure (SOP) is a set of detailed, written instructions that outline how to complete specific tasks or processes within an organization. SOPs help businesses simplify and standardize routine and critical operations, minimizing errors and driving efficiency.</p><p>Why Are Standard Operating Procedures Important?</p>",
+      "<p>A Standard Operating Procedure (SOP) is a set of detailed, written instructions that outline how to complete specific tasks or processes within an organization. SOPs help businesses simplify and standardize routine and critical operations, minimizing errors and driving efficiency.</p><div>Why Are Standard Operating Procedures Important?</div>",
     items: [
       { id: 1, text: "Ensures consistent processes across the organization" },
       {
@@ -128,11 +127,11 @@ const localData = {
     ftr_description: "",
   } satisfies DocumentRequiredData,
   whyChoose: {
-    title: "SOPs Made Simple with KPI",
+    title: "SOPs Made Simple With KPI",
     description:
       "<p>At KPI, our team of business consultants in the UAE have decades of experience in developing comprehensive policies and <br/>procedures for various industries. Using a structured approach, we thoroughly analyze your existing business processes,<br/> identify gaps, and provide actionable steps for improvements. Our well-defined SOPs empower businesses to streamline<br/> operations and achieve sustainable growth with confidence.</p><p><b>Why Businesses Choose KPI:</b></p>",
     sub_title: "",
-      items: [
+    items: [
       {
         id: 1,
         title: "Skilled Experts",
@@ -393,7 +392,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -410,18 +409,18 @@ export const metadata: Metadata = {
 export default function StandardOperatingProceduresUaePage() {
   return (
     <>
-      <InnerHero data={localData?.hero} variant="saifz" />
+      <InnerHero data={localData?.hero} variant="SOP" />
       <RiskOrganisation
         data={localData?.document_required_data}
-        variant="sop"
+        variant="SOP"
       />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="sop"
+        variant="SOP"
       />
       <CorporateServicesUaeServices
         data={localData?.services}
-        variant="saifz"
+        variant="SOP"
       />
       <CorporateServicesUaeFormationProcess
         variant="mainland"

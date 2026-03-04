@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 type Variant =
   | "default"
+  | "SOP"
   | "freezone"
   | "ADGM-Foundation"
   | "holding"
@@ -32,8 +33,9 @@ export default function RiskOrganisation({
         variant === "dwtc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB]",
         variant === "dwtc-doc" && "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB] max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "ADGM-Foundation" &&
-          "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
+        "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "holding" && "max-sm:!py-[0px_35px] xl:!py-[0px_75px]",
+        variant === "SOP" && "bg-white",
       )}
     >
       <div className="container">
@@ -44,15 +46,17 @@ export default function RiskOrganisation({
             variant === "freezone" || (variant === "dwtc" && "items-end"),
             variant === "ADGM-Foundation" && "xl:gap-0",
             variant === "holding" && "xl:gap-0",
+            variant === "SOP" && "xl:gap-0",
           )}
         >
           <div
             className={cn(
               "w-full md:w-[57%] xl:w-[60%]",
               variant === "ADGM-Foundation" &&
-                "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "dwtc" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
               variant === "ifza" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
+              variant === "SOP" && "xl:w-[calc(100%-475px)] xl:pr-[55px]",
               variant === "holding" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
             )}
           >
@@ -61,7 +65,9 @@ export default function RiskOrganisation({
                 className={cn(
                   "max-w-[90%])}",
                   variant === "ADGM-Foundation" &&
-                    "max-sm:mb-[30px] xl:mb-[30px]",
+                  "max-sm:mb-[30px] xl:mb-[30px]",
+                  variant === "SOP" &&
+                  "!max-w-full",
                 )}
               >
                 {data?.title && (
@@ -71,6 +77,7 @@ export default function RiskOrganisation({
                     className={cn(
                       "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
+                      variant === "SOP" && "mb-[20px] xl:mb-[25px]",
                     )}
                   >
                     {parse(data.title)}
@@ -79,8 +86,9 @@ export default function RiskOrganisation({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px]  2xl:text-[20px] 3xl:text-[24px] leading-normal text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
+                      "text-[16px] xl:text-[18px]  2xl:text-[20px] 3xl:text-[24px] leading-[1.6] text-[#4E4E4E] [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[24px]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
+                      variant === "SOP" && "[&_div]:my-[15px] sm:[&_div]:my-[20px] xl:[&_div]:my-[30px]",
                     )}
                   >
                     {parse(data.description)}
@@ -93,6 +101,7 @@ export default function RiskOrganisation({
                 className={cn(
                   "space-y-4 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
                   variant === "ADGM-Foundation" && "xl:space-y-[20px]",
+                  variant === "SOP" && "xl:space-y-[20px]",
                 )}
               >
                 {items.map((item) => (
@@ -103,7 +112,7 @@ export default function RiskOrganisation({
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                     )}
                   >
-                    <span className="absolute left-0 top-[4px] xl:top-[6px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
+                    <span className="absolute left-0 top-[4px] xl:top-[5.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
                       {variant === "dwtc-doc" ? (
                         <svg
                           width="17"
@@ -149,6 +158,7 @@ export default function RiskOrganisation({
               variant === "freezone" && "md:mt-[60px]",
               variant === "dwtc-doc" && "md:mt-[60px]",
               variant === "ADGM-Foundation" && "xl:w-[475px]",
+              variant === "SOP" && "xl:w-[475px]",
               variant === "ifza" && "xl:w-[475px]",
               variant === "holding" && "xl:w-[475px]",
             )}
@@ -159,14 +169,14 @@ export default function RiskOrganisation({
                   as="h2"
                   size="h2"
                   className={cn("text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
-                    variant ===  "dwtc-doc" && "max-sm:text-[26px]"
+                    variant === "dwtc-doc" && "max-sm:text-[26px]"
                   )}
                 >
                   {parse(data.title)}
                 </Heading>
               )}
             </div>
-            <div className={cn("w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[370px] min-h-[370px] sm:min-h-auto max-md:mb-6 block", )}>
+            <div className={cn("w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[370px] min-h-[370px] sm:min-h-auto max-md:mb-6 block",)}>
               {data?.media?.path && (
                 <Image
                   src={data.media.path}

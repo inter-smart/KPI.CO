@@ -14,6 +14,7 @@ type CorporateServicesUaeServicesProps = {
   variant?:
   | "default"
   | "saifz"
+  | "SOP"
   | "advisory"
   | "dafza"
   | "rakez"
@@ -36,13 +37,13 @@ export default function CorporateServicesUaeServices({
             "sm:text-center w-full h-auto mb-6.25 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "regulatory" && "sm:text-left",
             variant === "saifz" && "sm:text-left",
+            variant === "SOP" && "sm:text-left",
             variant === "ifza" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
             variant === "dwtc" && "sm:text-left",
             variant === "rakez" && "sm:text-left",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
             variant === "dafza" && "sm:text-left xl:mb-[35px]",
-            variant === "saifz" && "sm:text-left",
           )}
         >
           <Heading
@@ -66,6 +67,7 @@ export default function CorporateServicesUaeServices({
           className={cn(
             "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
+            variant === "SOP" && "!max-w-full xl:gap-[40px]",
             variant === "dafza" && "!max-w-full",
             variant === "dwtc" && "xl:max-w-full",
             variant === "ifza" && "xl:max-w-full"
@@ -75,11 +77,12 @@ export default function CorporateServicesUaeServices({
             <div key={item?.id} className="w-full h-auto block">
               <div
                 className={cn(
-                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
+                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "regulatory" &&
                   "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
-                  variant === "saifz" && "max-sm:min-h-[140px]",
+                  variant === "saifz" && "max-sm:min-h-[140px] border-[#E2E2E2]",
+                  variant === "SOP" && "max-sm:min-h-[140px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[12px] lg:p-2 xl:p-[10px] 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">
@@ -92,11 +95,11 @@ export default function CorporateServicesUaeServices({
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
-                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75">
+                  <div className="text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-[1.6] font-medium text-[#1C5396] mb-1.5 lg:mb-1.75">
                     {item?.title}
                   </div>
                   {item?.description && (
-                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
+                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.6] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
                       {parse(item?.description)}
                     </p>
                   )}

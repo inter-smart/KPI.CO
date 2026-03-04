@@ -27,6 +27,7 @@ export type InnerHeroProps = {
   | "Mainland"
   | "CorporateServicesUae"
   | "AuditServicesUae"
+  | "SOP"
   | "saifz"
   | "advisory"
   | "dwtc"
@@ -78,7 +79,7 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-            "md:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            "md:max-w-[500px] xl:max-w-[750px]",
             variant === "saifz" &&
             "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
@@ -97,7 +98,7 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "xl:text-[16px] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
                 "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
@@ -105,6 +106,7 @@ export default function InnerHero({
                 "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
+                variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
               )}
             >
               {parse(data?.description)}

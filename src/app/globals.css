@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant hover (&:hover); 
+@custom-variant hover (&:hover);
 
 @custom-variant dark (&:is(.dark *));
 
@@ -89,13 +89,17 @@
 
 @layer base {
   html {
+    height: auto;
     tab-size: 4;
     font-feature-settings: normal;
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
   }
 
   body {
+    height: auto;
+    overscroll-behavior: none;
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
@@ -172,7 +176,7 @@
   }
 
   .typography {
-    --text-color: #4E4E4E;
+    --text-color: #4e4e4e;
 
     * {
       @apply my-2.5 lg:my-4;
