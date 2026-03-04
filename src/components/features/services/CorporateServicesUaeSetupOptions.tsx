@@ -16,11 +16,25 @@ type CorporateServicesUaeSetupOptionsProps = {
     title: string;
     description: string;
     items: SetupOptionItem[];
+    variant?: VariantType;
   };
   variant?: "hamriyah" | "default" | "CorporateServicesUae" | "technology";
 };
 
-function SetupOptionCard({ item }: { item: SetupOptionItem }) {
+
+type VariantType =
+  | "hamriyah"
+  | "default"
+  | "CorporateServicesUae"
+  | "technology";
+
+function SetupOptionCard({
+  item,
+  variant,
+}: {
+  item: SetupOptionItem;
+  variant?: VariantType;
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -32,7 +46,9 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="group w-full aspect-square sm:aspect-53/56 relative z-0 overflow-hidden"
+        className={cn(
+          "group w-full aspect-square sm:aspect-53/56 relative z-0 overflow-hidden relative",
+        )}
         initial={false}
       >
         <motion.div
@@ -54,6 +70,9 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
             <span className="w-12 xl:w-10 2xl:w-12 h-[2px] bg-base2 block mx-auto mt-2" />
           </Heading>
         </motion.div>
+        {variant === "technology" && (
+          <div className="pointer-events-none absolute inset-0 -z-1 bg-gradient-to-b from-black/0 to-black/[0.98]" />
+        )}
 
         <div className="bg-linear-to-t from-black to-transparent opacity-30 absolute -z-1 inset-0" />
 
@@ -153,7 +172,6 @@ function SetupOptionCard({ item }: { item: SetupOptionItem }) {
 export default function CorporateServicesUaeSetupOptions({
   data,
   variant = "default",
-
 }: CorporateServicesUaeSetupOptionsProps) {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
@@ -195,7 +213,11 @@ export default function CorporateServicesUaeSetupOptions({
         >
           <div className="flex touch-pan-y touch-pinch-zoom max-sm:flex-col">
             {data.items.map((item) => (
-              <SetupOptionCard key={`setup-option-${item.id}`} item={item} />
+              <SetupOptionCard
+                key={`setup-option-${item.id}`}
+                item={item}
+                variant={variant}
+              />
             ))}
           </div>
         </div>

@@ -4,6 +4,10 @@ import CorporateServicesUaeSetupOptions from "@/components/features/services/Cor
 import HomeCounter from "@/components/features/home/HomeCounter";
 import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
+import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
+import { blogData } from "@/data/blogData";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -41,6 +45,7 @@ export type MeydanKeyBenefitsData = {
   title: string;
   description?: string;
   slides: {
+    data_description: string;
     id: number;
     title: string;
     items: (string | { title?: string; description?: string })[];
@@ -51,7 +56,6 @@ export type MeydanKeyBenefitsData = {
   }[];
 };
 
-
 export type WhyBuildItem = {
   id: number;
   media: MediaItem;
@@ -59,6 +63,37 @@ export type WhyBuildItem = {
   description: string;
 };
 
+export type ServiceItem = {
+  id: number;
+  media: MediaItem;
+  title: string;
+  description: string;
+};
+
+export type DiscussYourRiskData = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    link: string;
+  };
+  images: {
+    overlay: string;
+    overlayMobile: string;
+  };
+};
+
+export type InsightItem = {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  date_full?: string;
+  media: MediaItem;
+  slug: string;
+  category?: string;
+};
 
 const localData = {
   hero: {
@@ -142,99 +177,158 @@ const localData = {
     slides: [
       {
         id: 1,
-        title: "Business-Friendly Structure",
+        title: "ERP & Finance Systems",
+        data_description: "Vantheon is a NetSuite implementation and advisory partner, supporting organisations with complex finance, multi‑entity structures, and cross‑border operations. We focus on building finance systems that support control, transparency, and scale, not just transactional processing.",
         items: [
-          "100% foreign ownership",
-          "No local sponsor required",
-          "No minimum share capital requirement",
-          "Over 2,500+ business activities available",
-          "Combine multiple activity groups under one license",
+          "NetSuite implementation and optimisation",
+          "Multi‑entity and multi‑subsidiary architecture",
+          "Financial controls, workflows, and approval design",
+          "Regulatory‑aligned reporting and audit readiness",
         ],
         media: {
-          path: "/images/mayden-benefit-1.jpg",
+          path: "/images/technology-whatdo-1.jpg",
           alt: "Business-Friendly Structure",
         },
       },
       {
         id: 2,
-        title: "Cost-Effective Setup",
+        title: "HR & Workforce Systems",
+        data_description: "Through infithra, KPI Group’s HRMS platform, Vantheon supports organisations with distributed, high‑movement, and operationally complex workforces. infithra is designed for businesses where people, roles, and locations don’t stay static.",
         items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
+          "Employee lifecycle management",
+          "Attendance, payroll, and statutory alignment",
+          "Role‑based access and audit trails",
+          "Integration with finance and compliance systems",
         ],
         media: {
-          path: "/images/mayden-benefit-1.jpg",
+          path: "/images/technology-whatdo-2.jpg",
           alt: "Business-Friendly Structure",
         },
       },
       {
         id: 3,
-        title: "Flexible Visa Options",
+        title: "Compliance‑Driven Technology Initiatives",
+        data_description: "Vantheon plays a central role in system‑led compliance initiatives. This capability is critical as regulatory frameworks increasingly rely on real‑time, system‑generated data rather than post‑fact reporting.",
         items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
+          "E‑invoicing and transaction reporting readiness",
+          "System alignment for VAT, corporate tax, and regulatory audits",
+          "Data standardisation and master data governance",
+          "Integration between ERPs, ASPs, and external regulatory networks",
         ],
         media: {
-          path: "/images/mayden-benefit-1.jpg",
-          alt: "Business-Friendly Structure",
-        },
-      },
-      {
-        id: 4,
-        title: "Tax & Banking Advantages",
-        items: [
-          "100% repatriation of capital and profits",
-          "No customs duties on import/export",
-          "Assistance with corporate bank account opening",
-          "Access to global trade networks",
-        ],
-        media: {
-          path: "/images/mayden-benefit-1.jpg",
+          path: "/images/technology-whatdo-3.jpg",
           alt: "Business-Friendly Structure",
         },
       },
     ],
   } satisfies MeydanKeyBenefitsData,
   whyBuild: {
-    title: "Why Businesses Choose DWTC Free Zone?",
-    description: "",
+    title: "How We Work",
+    description: "Vantheon engagements are structured around three principles",
     items: [
       {
         id: 1,
         media: {
-          path: "/images/busness-freezone-1.svg",
-          alt: "Prime Location",
+          path: "/images/busness-technology-1.svg",
+          alt: "Regulatory Awareness",
         },
-        title: "Prime Location",
+        title: "Regulatory Awareness",
         description:
-          "<p>A central Dubai address with excellent connectivity to DIFC, Downtown Dubai, and Sheikh Zayed Road.</p>",
+          "<p>Systems are designed with audit, tax, and regulatory outcomes in mind from day one.</p>",
       },
       {
         id: 2,
         media: {
-          path: "/images/busness-freezone-2.svg",
-          alt: "Global Reputation",
+          path: "/images/busness-technology-2.svg",
+          alt: "System Integrity",
         },
-        title: "Global Reputation",
+        title: "System Integrity",
         description:
-          "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
+          "<p>We prioritise clean data models, clear controls, and defensible workflows over cosmetic configuration.</p>",
       },
       {
         id: 3,
         media: {
-          path: "/images/busness-freezone-3.svg",
-          alt: "Client Focused",
+          path: "/images/busness-technology-3.svg",
+          alt: "Long‑Term Scalability",
         },
-        title: "Client Focused",
+        title: "Long‑Term Scalability",
         description:
-          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
+          "<p>Solutions are built to accommodate regulatory change, business growth, and system evolution.</p>",
       },
     ] satisfies WhyBuildItem[],
+  },
+  services: {
+    title: "Why Vantheon",
+    description:
+      "<p>Vantheon is not a standalone tech vendor. It is the technology execution layer of KPI Group, purpose‑built to support organisations where systems, compliance, and scale are inseparable.</p>",
+    items: [
+      {
+        id: 1,
+        media: {
+          path: "/images/technology-howwork-1.svg",
+          alt: "Backed by KPI Group’s audit, tax, and regulatory expertise",
+        },
+        title: "Backed by KPI Group’s audit, tax, and regulatory expertise",
+        description:
+          "",
+      },
+      {
+        id: 2,
+        media: {
+          path: "/images/technology-howwork-2.svg",
+          alt: "Proven experience across ERP, HRMS, and compliance‑led systems",
+        },
+        title: "Proven experience across ERP, HRMS, and compliance‑led systems",
+        description:
+          "",
+      },
+      {
+        id: 3,
+        media: {
+          path: "/images/technology-howwork-3.svg",
+          alt: "Strong focus on governance, controls, and auditability",
+        },
+        title: "Strong focus on governance, controls, and auditability",
+        description:
+          "",
+      },
+      {
+        id: 4,
+        media: {
+          path: "/images/technology-howwork-4.svg",
+          alt: "Designed for organisations operating under UAE federal and free‑zone frameworks",
+        },
+        title: "Designed for organisations operating under UAE federal and free‑zone frameworks",
+        description: "",
+      },
+    ] satisfies ServiceItem[],
+  },
+  discussYourRisk: {
+    title: "Talk to Us",
+    description:
+      "<p>Whether you’re planning a NetSuite implementation, preparing for UAE e-Invoicing, or reassessing your HR or finance systems, KPI and Vantheon help you get it right the first time.</p>",
+    button: {
+      label: "Get in Touch",
+      link: "/#contact",
+    },
+    images: {
+      overlay: "/images/technology-overlay.svg",
+      overlayMobile: "/images/technology-overlay-mob.svg",
+    },
+  } satisfies DiscussYourRiskData,
+  insights: {
+    title: "Our Insights",
+    items: blogData.slice(0, 4).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      readTime: blog.readTime,
+      date_full: blog.date_full,
+      slug: `/blog/${blog.slug}`,
+    })),
   },
 };
 
@@ -252,12 +346,15 @@ export default function DwtcFreezone() {
         variant="technology"
         data={localData.setupOptions}
       />
-      <HomeCounter data={localData.counterList} />
-      <MeydanKeyBenefits data={localData.keyBenefits} />
+      <HomeCounter variant="technology" data={localData.counterList} />
+      <MeydanKeyBenefits variant="technology" data={localData.keyBenefits} />
       <CorporateServicesUaeWhyBuild
         variant="technology"
         data={localData.whyBuild}
       />
+      <CorporateServicesUaeServices variant="technology" data={localData.services} />
+      <DiscussYourRisk variant="technology" data={localData.discussYourRisk} />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

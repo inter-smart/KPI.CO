@@ -6,7 +6,7 @@ import type { CounterItem } from "@/app/page";
 
 type HomeCounterProps = {
   data: CounterItem[];
-  variant?: "default" | "risk" | "tax-advisory";
+  variant?: "default" | "risk" | "tax-advisory" | "technology" | "internal-audit";
 };
 
 export default function HomeCounter({ data, variant = "default", }: HomeCounterProps) {
@@ -17,6 +17,7 @@ export default function HomeCounter({ data, variant = "default", }: HomeCounterP
         variant === "default" && "bg-white shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
         variant === "risk" && "bg-[rgba(143,216,254,0.1)]",
         variant === "tax-advisory" && "shadow-[0_-26px_50px_#00000008]",
+        variant === "technology" && "shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)]",
       )}
     >
       <div className="container mx-auto">
@@ -26,7 +27,9 @@ export default function HomeCounter({ data, variant = "default", }: HomeCounterP
               key={item.id}
               className="flex flex-col items-center text-center group"
             >
-              <div className="text-[32px] md:text-[40px] lg:text-[45px] xl:text-[55px] 2xl:text-[65px] 3xl:text-[80px] font-medium sm:font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none">
+              <div className={cn("text-[32px] md:text-[40px] lg:text-[45px] xl:text-[55px] 2xl:text-[65px] 3xl:text-[80px] font-medium sm:font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none",
+                variant === "internal-audit" && "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]"
+              )}>
                 {item.value.toLocaleString()}
                 {item.symbol || "+"}
               </div>

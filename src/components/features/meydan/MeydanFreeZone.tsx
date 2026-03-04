@@ -33,7 +33,7 @@ interface MeydanFreeZoneProps {
   | "ADGM-Foundation"
   | "default"
   | "ifza"
-  | "audit"; 
+  | "audit";
 }
 
 export default function MeydanFreeZone({
@@ -102,6 +102,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] mb-[15px] max-sm:!mb-[40px]",
                     variant === "ADGM-Foundation" && "xl:mb-[25px]",
+                    variant === "ifza" && "hidden",
                   )}
                 >{parse(item?.description ?? "")}
                 </div>
@@ -113,7 +114,9 @@ export default function MeydanFreeZone({
                 >
                   {item?.highlightsText}
                 </div>
-                <ul className="space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[20px]">
+                <ul className={cn("space-y-[10px] xl:space-y-[15px] 3xl:space-y-[25px] mb-[20px]",
+                  variant === "ifza" && "mb-0"
+                )}>
                   {item?.zone_list?.map((zone, i) => (
                     <li
                       key={i}
@@ -158,7 +161,7 @@ export default function MeydanFreeZone({
                       className={cn(
                         "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
                         variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                        "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "audit" && " text-[#1C5396]",
                       )}
                     >

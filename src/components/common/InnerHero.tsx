@@ -35,7 +35,8 @@ export type InnerHeroProps = {
   | "ifza"
   | "e-invoicing"
   | "ADGM-Foundations"
-    | "technology"
+  | "technology"
+  | "internal-audit"
   | "meydan";
 };
 
@@ -61,7 +62,7 @@ export default function InnerHero({
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
-        variant === "technology"  &&  "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] " ,
+        variant === "technology" && "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -86,13 +87,18 @@ export default function InnerHero({
             "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
-            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]"
+            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "technology" && "!max-w-full",
+            variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
           )}
         >
           <Heading
             as="h1"
             size="h1"
-            className="font-bold text-white mb-[15px] xl:mb-[20px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden"
+            className={cn("font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+
+              variant === "technology" && "max-w-[850px]",
+            )}
           >
             {parse(data?.title)}
           </Heading>
@@ -111,6 +117,7 @@ export default function InnerHero({
                 variant === "Mainland" && "lg:max-w-[75%]",
                 variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
                 variant === "ifza" && "lg:max-w-[100%]",
+                variant === "internal-audit" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}

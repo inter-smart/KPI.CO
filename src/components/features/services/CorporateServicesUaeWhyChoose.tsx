@@ -30,6 +30,7 @@ export type CorporateServicesUaeWhyChooseProps = {
   | "advisory"
   | "freezone-business"
   | "risk"
+  | "internal-audit"
   | "ADGM-Foundation"
   | "tax-advisory"
   | "SOP"
@@ -54,6 +55,7 @@ type ServiceCardProps = {
   | "tax-advisory"
   | "SOP"
   | "holding"
+  | "internal-audit"
   | "regulatory"
   | "spv";
 };
@@ -88,6 +90,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "advisory" ||
               variant === "risk" ||
               variant === "holding" ||
+              variant === "internal-audit" ||
               variant === "spv" ||
               variant === "SOP" ||
               variant === "AuditServicesUae" ||
@@ -109,6 +112,7 @@ export default function CorporateServicesUaeWhyChoose({
               "text-[#1C5396] mb-5 sm:mb-6.25 2xl:mb-7.5 3xl:mb-10",
               variant === "default" && "text-center",
               variant === "risk" && "text-left",
+              variant === "internal-audit" && "text-left ",
               variant === "holding" && "text-left",
               variant === "ADGM-Foundation" && "text-left",
               variant === "freezone-business" && "text-left",
@@ -122,11 +126,11 @@ export default function CorporateServicesUaeWhyChoose({
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]", variant === "SOP" && "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]")}>
+            <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]", variant === "SOP" && "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]", variant === "internal-audit" && "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ")}>
               {parse(data?.description)}
             </div>
           )}
-          <div className="text-[18px] lg:text-[20px] xl:text-[16px] 2xl:text-[24px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
+          <div className="text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
             {data?.sub_title}
           </div>
         </div>
@@ -204,6 +208,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         "before:bg-gradient-to-t before:to-[#3EB0EA] before:from-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" ||
           variant === "tax-advisory" ||
+          variant === "internal-audit" ||
           variant === "ADGM-Foundation") &&
         "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "spv" &&
@@ -232,6 +237,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             (variant === "regulatory" && "text-[#1C5396]"),
             variant === "default" && "text-black",
             variant === "SOP" && "text-[#1C5396]",
+            variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
           )}
         >
           {item?.title}
@@ -245,6 +251,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
                 variant === "ADGM-Foundation" &&
                 "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
                 variant === "CorporateServicesUae" && "xl:text-[14px]",
+                variant === "internal-audit" && "leading-relaxed xl:max-w-[92%]",
               )}
             >
               {parse(item?.description)}
