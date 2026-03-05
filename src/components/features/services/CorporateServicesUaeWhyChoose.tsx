@@ -25,6 +25,7 @@ export type CorporateServicesUaeWhyChooseProps = {
   variant?:
   | "default"
   | "CorporateServicesUae"
+  | "Formation-DIFC"
   | "AuditServicesUae"
   | "Formation-ADGM"
   | "mainland"
@@ -55,6 +56,7 @@ type ServiceCardProps = {
   | "ADGM-Foundation"
   | "freezone-business"
   | "tax-advisory"
+  | "Formation-DIFC"
   | "SOP"
   | "holding"
   | "internal-audit"
@@ -83,6 +85,7 @@ export default function CorporateServicesUaeWhyChoose({
         "max-sm:py-[45px_15px] xl:py-[55px_75px]",
         variant === "CorporateServicesUae" && "xl:py-[50px_90px]",
         variant === "Formation-ADGM" && "xl:py-[60px_80px]",
+        variant === "Formation-DIFC" && "xl:py-[50px_70px]",
       )}
     >
       <div className="container">
@@ -96,6 +99,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "internal-audit" ||
               variant === "spv" ||
               variant === "SOP" ||
+              variant === "Formation-DIFC" ||
               variant === "AuditServicesUae" ||
               variant === "freezone-business" ||
               variant === "regulatory" ||
@@ -123,6 +127,8 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "spv" && "text-left",
               variant === "tax-advisory" && "text-left",
               variant === "CorporateServicesUae" &&
+              "max-xl:!mb-[20px] xl:mb-[30px]",
+              variant === "Formation-DIFC" &&
               "max-xl:!mb-[20px] xl:mb-[30px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               titleClassName,
@@ -186,6 +192,8 @@ export default function CorporateServicesUaeWhyChoose({
             "max-sm:!gap-[18px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
             variant === "SOP" &&
             "xl:!gap-[25px_30px]",
+            variant === "Formation-DIFC" &&
+            "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_30px]",
             variant === "regulatory" &&
             "xl:!gap-[25px_30px]",
@@ -227,6 +235,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%]",
         variant === "SOP" &&
         "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
+        variant === "Formation-DIFC" &&
+        "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "Formation-ADGM" &&
         "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
       )}
@@ -247,6 +257,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             (variant === "regulatory" && "text-[#1C5396]"),
             variant === "default" && "text-black",
             variant === "SOP" && "text-[#1C5396]",
+            variant === "Formation-DIFC" && "text-[#1C5396] !font-medium",
             variant === "Formation-ADGM" && "text-[#1C5396]",
             variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
           )}
