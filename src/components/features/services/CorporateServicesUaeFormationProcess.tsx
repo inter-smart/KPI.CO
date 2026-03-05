@@ -134,7 +134,7 @@ export default function CorporateServicesUaeFormationProcess({
               <Text
                 as="div"
                 size="p5"
-                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[18px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
+                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
               >
                 {parse(data?.description)}
               </Text>
@@ -144,7 +144,7 @@ export default function CorporateServicesUaeFormationProcess({
             <Heading
               as="div"
               size="h4"
-              className="xl:text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
+              className="xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
             >
               {data.sub_title}
             </Heading>
@@ -288,7 +288,7 @@ export default function CorporateServicesUaeFormationProcess({
                       <Text
                         as="div"
                         size="p3"
-                        className={cn("text-black max-md:[&_br]:hidden xl:text-[18px] ",
+                        className={cn("text-black max-md:[&_br]:hidden xl:text-[18px] capitalize",
                           variant === "internal-audit" && "leading-relaxed" 
                         )}
                       >

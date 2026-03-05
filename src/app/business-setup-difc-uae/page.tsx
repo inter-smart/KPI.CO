@@ -177,7 +177,7 @@ const localData = {
     items: [
       {
         id: 1,
-        title: "Company Limited by Shares(LTD)",
+        title: "Company Limited by Shares (LTD)",
         type: "image",
         image: "/images/mainlandBusiness-1.jpg",
         description: "Ideal for standard corporate operations.",
