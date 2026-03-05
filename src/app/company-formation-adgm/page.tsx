@@ -119,15 +119,16 @@ const localData = {
       "<p>Set up your business in Abu Dhabi Global Market (ADGM) with a firm that understands the regulatory, structural, and commercial realities of the jurisdiction. We work with these realities day to day. KPI provides end-to-end ADGM company formation services delivered with clarity, precision, and local expertise.</p>",
   } satisfies HeroData,
   mainlandBusiness: {
-    title: "How KPI Approaches ADGM Foundations",
+    title: "Start a Business in ADGM",
     description:
-      "<p>We don't just file paperwork. We focus on whether the structure will hold up over time. Our goal is simple: a foundation that is defensible, functional, and future-ready. We are deliberate about structure naming, purpose alignment, and regulatory positioning - because how a Foundation is framed matters as much as how it is formed.</p>",
-    highlightsTitle: "KPI supports clients through:",
+      "<p>Abu Dhabi Global Market (ADGM) is an international financial centre with its own independent legal and regulatory framework based on English common law. It is designed for businesses that require regulatory certainty, sophisticated structuring, and international credibility.</p>",
+    highlightsTitle: "ADGM company formation is commonly used by:",
     highlights: [
-      "Structuring advice aligned with the intended purpose of the foundation",
-      "Guidance on founders, council members, guardians, and beneficiaries",
-      "Governance design that balances control, independence, and flexibility",
-      "Regulatory alignment with ADGM Registration Authority requirements",
+      "Investment and holding companies",
+      "Financial services and asset management firms",
+      "Family offices and private wealth structures",
+      "Professional and advisory businesses",
+      "SPVs for asset ownership and ring-fencing",
     ],
     footerDescription: "",
     image: {
@@ -136,7 +137,7 @@ const localData = {
     },
   } satisfies MainlandBusinessData,
   whyBuild: {
-    title: "Benefits of Setting Up a Business in ADGM",
+    title: "Benefits Of Setting Up A Business In ADGM",
     description: "",
     items: [
       {
@@ -147,7 +148,7 @@ const localData = {
         },
         title: "Independent Legal Framework",
         description:
-          "<p>Decisions are guided by structured risk insights instead of assumptions, enabling leadership to act with confidence.</p>",
+          "<p>Operates under English common law, providing predictability and global investor confidence.</p>",
       },
       {
         id: 2,
@@ -157,7 +158,7 @@ const localData = {
         },
         title: "100% Foreign Ownership",
         description:
-          "<p>Provides a clear view of risks across functions, business units, and entities. </p>",
+          "<p>No local sponsor or partner required.</p>",
       },
       {
         id: 3,
@@ -167,7 +168,7 @@ const localData = {
         },
         title: "Global Credibility",
         description:
-          "<p>Early identification of threats help prevent operational or strategic disruptions. </p>",
+          "<p>Recognised internationally by regulators, banks, and institutional counterparties.</p>",
       },
       {
         id: 4,
@@ -177,7 +178,7 @@ const localData = {
         },
         title: "Flexible Structuring",
         description:
-          "<p>ERM frameworks that satisfy governance standards and regulatory expectations. </p>",
+          "<p>Supports complex ownership, investment, and holding structures.</p>",
       },
       {
         id: 5,
@@ -187,7 +188,7 @@ const localData = {
         },
         title: "Strong Regulatory Oversight",
         description:
-          "<p>Focused attention on risks that could materially impact financial performance</p>",
+          "<p>Clear rules around governance, substance, and compliance without unnecessary bureaucracy.</p>",
       },
       {
         id: 6,
@@ -197,12 +198,12 @@ const localData = {
         },
         title: "Banking Acceptance",
         description:
-          "<p>Demonstrable risk oversight for boards, investors, and regulators.</p>",
+          "<p>ADGM entities are generally well-received by UAE and international banks when properly structured.</p>",
       },
     ] satisfies WhyBuildItem[],
   },
   whyChoose: {
-    title: "Why Choose KPI for ADGM Company Formation",
+    title: "Why Choose KPI For ADGM Company Formation",
     description: "",
     sub_title: "",
     items: [
@@ -232,9 +233,8 @@ const localData = {
       },
     ] satisfies WhyChooseItem[],
   },
-
   riskAssurance: {
-    title: "Types of ADGM Company Licenses",
+    title: "Types Of ADGM Company Licenses",
     description:
       "KPI Group helps you identify the appropriate licence based on your activity and regulatory exposure.",
     items: [
@@ -245,7 +245,7 @@ const localData = {
           alt: "Commercial License",
         },
         title: "Commercial License",
-        description: "For trading, holding, and general commercial activities.",
+        description: "For Trading, Holding, And General Commercial Activities.",
       },
       {
         id: 2,
@@ -254,7 +254,7 @@ const localData = {
           alt: "Professional Services Licence",
         },
         title: "Professional Services Licence",
-        description: "For advisory, consulting, and service-based businesses.",
+        description: "For Advisory, Consulting, And Service-Based Businesses.",
       },
       {
         id: 3,
@@ -264,15 +264,15 @@ const localData = {
         },
         title: "Financial Services Licence (FSRA Regulated)",
         description:
-          "For asset management, investment advisory, fintech, and other regulated financial activities (subject to FSRA approval).",
+          "For Asset Management, Investment Advisory, Fintech, And Other Regulated Financial Activities (Subject To FSRA Approval).",
       },
     ] satisfies RiskAssuranceData[],
   },
 
   businessLocation: {
-    title: "Mainland Business Locations In The UAE",
+    title: "Types of ADGM Company Structures",
     description:
-      "Each of the UAE's seven Emirates offers unique opportunities for mainland business setup. Choosing the right location depends on your sector, scale, and long-term goals.",
+      "",
     items: [
       {
         id: 1,
@@ -365,7 +365,7 @@ const localData = {
     ] satisfies ProcessStep[],
   },
   banking: {
-    title: "Banking Support for ADGM Companies",
+    title: "Banking Support For ADGM Companies",
     description:
       "<p>ADGM banking involves enhanced due diligence and structure-specific reviews. We support clients with bank selection, documentation readiness, and application coordination through UAE and international banks.</p>",
     partners: [
@@ -413,7 +413,6 @@ const localData = {
       },
     ] satisfies BankingPartner[],
   },
-
   contactUs: {
     title: "Setting Up in ADGM?",
     description:
@@ -493,18 +492,18 @@ export const metadata: Metadata = {
 export default function InternalAudit() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <InnerHero data={localData.hero} variant="Formation-ADGM" />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="Formation-ADGM" />
       <CorporateServicesUaeWhyBuild
         variant="formation"
         data={localData.whyBuild}
       />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="risk"
+        variant="Formation-ADGM"
       />
-      <RiskAssuranceServices data={localData.riskAssurance} />
-      <BusinessLocation data={localData.businessLocation} />
+      <RiskAssuranceServices data={localData.riskAssurance} variant="Formation-ADGM" />
+      <BusinessLocation data={localData.businessLocation} variant="Formation-ADGM"/>
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}

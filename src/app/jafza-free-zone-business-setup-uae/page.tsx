@@ -75,7 +75,7 @@ const localData = {
     },
     title: "Company Formation in JAFZA, <br/> UAE ",
     description:
-      "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
+      "<p>Build your presence in Dubai’s premier trading and industrial hub. JAFZA offers full ownership, strategic logistics access, and office or warehouse solutions to help startups, SMEs, and global companies scale efficiently.</p>",
   } satisfies HeroData,
   freezoneBusiness: {
     title: "Start a Business in Jabel Ali Free Zone",

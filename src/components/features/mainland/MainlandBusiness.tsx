@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 type Variant =
   | "Mainland"
   | "AuditServicesUae"
+  | "Formation-ADGM"
   | "SAIFZ"
   | "spv"
   | "hamriya"
@@ -42,6 +43,7 @@ export default function MainlandBusiness({
       className={cn(
         "w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",
         variant === "dafza" && "max-2xl:!pb-[20px]",
+        variant === "Formation-ADGM" && "xl:pb-[70px]",
       )}
     >
       <div className="container">
@@ -145,7 +147,8 @@ export default function MainlandBusiness({
                       "flex flex-col mb-[25px]",
                       variant === "Mainland" && "mb-[25px]",
                       variant === "dafza" && "mb-0",
-                    )}
+                      variant === "Formation-ADGM" && "mb-0",
+                  )}
                   >
                     {data.highlights.map((item, index) => (
                       <div

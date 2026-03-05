@@ -107,6 +107,7 @@ function WhyBuildCard({
           hasVariant(variant, "dafz") && "font-semibold",
           hasVariant(variant, "CorporateServicesUae") &&
           "xl:text-[20px] text-black mb-[15px]",
+          hasVariant(variant, "formation") && "xl:text-[20px] xl:mb-[15px]",
         )}
       >
         {item.title}
@@ -153,7 +154,7 @@ export default function CorporateServicesUaeWhyBuild({
             : hasVariant(variant, "saifz") &&
             "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dsoa") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dwtc") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "ifza") &&
@@ -169,10 +170,10 @@ export default function CorporateServicesUaeWhyBuild({
         hasVariant(variant, "saifz") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dafz") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "erm") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
-        hasVariant(variant, "formation") && "bg-[#f9fafb]",
+        hasVariant(variant, "formation") && "bg-[#f9fafb] xl:pb-[70px]",
         hasVariant(variant, "technology") && "bg-linear-to-t from-[#f1fafe] via-white to-white xl:pb-[80px]",
       )}
     >
@@ -181,7 +182,7 @@ export default function CorporateServicesUaeWhyBuild({
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
             hasVariant(variant, "freezone") ||
-            hasVariant(variant, "dwtc") ||
+              hasVariant(variant, "dwtc") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
               hasVariant(variant, "offshore") ||
@@ -195,6 +196,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "freeZone") && "sm:text-left !max-w-full",
             hasVariant(variant, "CorporateServicesUae") && "xl:mb-[50px]",
             hasVariant(variant, "mainland") &&
+            "sm:text-left !max-w-full xl:mb-[50px]",
+            hasVariant(variant, "formation") &&
             "sm:text-left !max-w-full xl:mb-[50px]",
           )}
         >
@@ -238,11 +241,13 @@ export default function CorporateServicesUaeWhyBuild({
             "lg:!gap-[35px_20px] xl:!gap-[40px_20px] 2xl:!gap-[50px_25px] 3xl:!gap-[60px_30px]",
             hasVariant(variant, "CorporateServicesUae") &&
             "sm:gap-[25px] xl:gap-[40px]",
+            hasVariant(variant, "formation") &&
+            "xl:gap-[25px_40px]",
             hasVariant(variant, "mainland") &&
             "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
-              hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
-              hasVariant(variant, "technology") &&
-                "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
+            hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
+            hasVariant(variant, "technology") &&
+            "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
           )}
         >
           {data.items.map((item) => (
