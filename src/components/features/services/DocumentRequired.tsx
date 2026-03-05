@@ -32,6 +32,7 @@ type DocumentRequiredProps = {
   | "default"
   | "saifz"
   | "dfza"
+  | "CorporateTaxUae"
   | "aup"
   | "spv"
   | "tax-advisory"
@@ -95,6 +96,7 @@ export default function DocumentRequired({
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "AuditServicesUae" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "CorporateTaxUae" && "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
             {(data?.title || data?.description) && (
@@ -132,7 +134,7 @@ export default function DocumentRequired({
                       key={item.id}
                       className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] last-of-type:mb-0 relative"
                     >
-                      <span className="absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto">
+                      <span className={cn("absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto",variant === "CorporateTaxUae" && "xl:top-[4px]",)}>
                         {(variant === "hamriya" || variant === "aup") && (
                           <>
                             <div className="hidden sm:block">
@@ -205,6 +207,7 @@ export default function DocumentRequired({
                           variant === "tax-advisory" ||
                           variant === "freezone-business" ||
                           variant === "AuditServicesUae" ||
+                          variant === "CorporateTaxUae" ||
                           variant === "mainland") && (
                             <svg
                               width="100%"
@@ -243,6 +246,7 @@ export default function DocumentRequired({
                 variant === "saifz" && "xl:w-[475px]",
                 variant === "dfza" && "xl:w-[475px]",
                 variant === "AuditServicesUae" && "xl:w-[475px]",
+                variant === "CorporateTaxUae" && "xl:w-[520px]",
               )}
             >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">

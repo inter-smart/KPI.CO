@@ -2,18 +2,14 @@ import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
-import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import VatGuidance, { VatGuidanceData } from "@/components/features/vat-services/VatGuidance";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
-import VatGuidance, {
-  VatGuidanceData,
-} from "@/components/features/vat-services/VatGuidance";
-import CorporateTaxUae, {
-  CorporateTaxUaeData,
-} from "@/components/features/corporate-tax-services/CorporateTaxUae";
+import CorporateTaxUae, { CorporateTaxUaeData } from "@/components/features/corporate-tax-services/CorporateTaxUae";
 
 export type HeroData = {
   id: number;
@@ -111,12 +107,12 @@ const localData = {
       mobilePath: "/images/corporateTax-inner-hero-mobile.svg",
       alt: "Financial Statement Audits Built for Accountability",
     },
-    title: "Financial Statement Audits Built for Accountability",
+    title: "Corporate Tax, Addressed Before It Becomes a Risk",
     description:
-      "<p>Financial statement audits are relied upon by regulators, banks, investors, and shareholders. Accuracy, independence, and documentation matter - not just for compliance, but for credibility. KPI delivers independent financial statement audits designed to meet statutory requirements and withstand external scrutiny across the UAE.</p>",
+      "<p>Corporate tax in the UAE is no longer a future consideration. It now directly affects how businesses are structured, assessed, and reviewed by regulatory authorities. KPI advises organisations on corporate tax with a focus on clarity, regulatory alignment, and positions that stand up over time, and not just filings that meet deadlines.</p>",
   } satisfies HeroData,
   vatGuidance: {
-    title: "What Corporate Tax Means for UAE Businesses",
+    title: "What Corporate Tax Means For UAE Businesses",
     description:
       "Corporate Tax in the UAE applies to taxable profits earned by UAE-based entities and certain foreign businesses with a UAE presence.",
     highlighted_text:
@@ -134,7 +130,7 @@ const localData = {
     },
   } satisfies VatGuidanceData,
   document_required_data: {
-    title: "Scope of Corporate Tax",
+    title: "Scope Of Corporate Tax",
     description:
       "<p>Determining whether corporate tax applies, and how it applies depends on legal form, activity, income type, and group structure. Each case requires assessment - assumptions based on legacy tax-free status no longer hold. </p><p>Corporate Tax in the UAE may apply to:</p>",
     items: [
@@ -171,7 +167,7 @@ const localData = {
   riskAdvisory: {
     title: "Corporate Tax Exemptions and Reliefs",
     description:
-      " <p>Certain entities and income streams may be exempt from UAE corporate tax, including →</p> <p>Eligibility for these must be assessed carefully. Incorrect assumptions around exemptions are among the most common causes of corporate tax exposure.</p>",
+      " <p>Certain entities and income streams may be exempt from UAE corporate tax, including <span>→</span></p> <div>Eligibility for these must be assessed carefully. Incorrect assumptions around exemptions are among the most common causes of corporate tax exposure.</div>",
     highlightsText: "",
     advisoryItems: [
       {
@@ -299,7 +295,7 @@ const localData = {
     },
   } satisfies MainlandBusinessData,
   whyChoose: {
-    title: "Why Leading Organisations Work with KPI Group",
+    title: "Why Leading Organisations Work With KPI Group",
     sub_title: "",
     description: "",
     items: [
@@ -406,14 +402,14 @@ export const metadata: Metadata = {
 export default function CorporateTaxUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="saifz" />
+      <InnerHero data={localData.hero} variant="CorporateTaxUae" />
       <VatGuidance
         data={localData.vatGuidance}
         variant="Financial-Statement-Audit"
       />
       <CorporateTaxUae data={localData.tax_uae} variant="blue" />
-      <DocumentRequired data={localData.document_required_data} />
-      <RiskAdvisory data={localData.riskAdvisory} />
+      <DocumentRequired data={localData.document_required_data} variant="CorporateTaxUae" />
+      <RiskAdvisory data={localData.riskAdvisory} variant="CorporateTaxUae" />
       <CorporateTaxUae data={localData.tax_uae_2} variant="yellow" />
       <DocumentRequired
         data={localData?.document_required_data_2}
@@ -421,9 +417,9 @@ export default function CorporateTaxUaePage() {
       />
       <CorporateServicesUaeServices
         data={localData?.services}
-        variant="saifz"
+        variant="CorporateTaxUae"
       />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="CorporateTaxUae" />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
         variant="mainland"

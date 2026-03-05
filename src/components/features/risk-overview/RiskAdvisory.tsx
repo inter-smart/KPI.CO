@@ -4,7 +4,7 @@ import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "difc" | "center" | "AuditServicesUae";
+type Variant = "default" | "difc" | "center" | "AuditServicesUae" | "CorporateTaxUae";
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
@@ -63,7 +63,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5">
+            <div className={cn("text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5", variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]",)}>
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
@@ -85,7 +85,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                     <div
                       key={`item-${item.id ?? index}`}
                       className={cn(
-                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
+                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px] [&>*]:p-[1px]",
                         hasVariant(variant, "difc")
                           ? cn(
                             "border-[#DEDEDE]",

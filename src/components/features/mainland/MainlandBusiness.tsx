@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 type Variant =
   | "Mainland"
   | "AuditServicesUae"
+  | "CorporateTaxUae"
   | "Formation-ADGM"
   | "SAIFZ"
   | "spv"
@@ -44,6 +45,7 @@ export default function MainlandBusiness({
         "w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",
         variant === "dafza" && "max-2xl:!pb-[20px]",
         variant === "Formation-ADGM" && "xl:pb-[70px]",
+        variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
       )}
     >
       <div className="container">
@@ -60,7 +62,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
               hasVariant(variant, "spv") ||
-              hasVariant(variant, "dwtc") ||
+                hasVariant(variant, "dwtc") ||
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
@@ -70,7 +72,7 @@ export default function MainlandBusiness({
               hasVariant(variant, "ifza") &&
               "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
-                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
               "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
