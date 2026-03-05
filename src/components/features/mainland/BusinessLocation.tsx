@@ -25,7 +25,7 @@ export type BusinessLocationData = {
 
 type BusinessLocationProps = {
   data: BusinessLocationData;
-  variant?: "dsoa" | "default" | "Mainland";
+  variant?: "dsoa" | "default" | "Mainland" | "difc-formation";
 };
 
 export default function BusinessLocation({
@@ -57,7 +57,7 @@ export default function BusinessLocation({
           {data.items.map((item) => (
             <div
               key={item.id}
-              className="group relative min-h-[210px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md"
+              className="group relative min-h-[210px] xl:min-h-[245px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md"
             >
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[rgba(78,78,78,0)] via-[rgba(78,78,78,0)] to-[rgba(0,0,0,0.8)] group-hover:opacity-0 aspect-[500/312]"/>
               <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">
@@ -68,7 +68,9 @@ export default function BusinessLocation({
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-0 left-0 p-[40px_30px]">
+                <div className={cn("absolute bottom-0 left-0 p-[40px_30px]",
+                  variant === "difc-formation" && "xl:p-[40px_24px]"
+                )}>
                   <Heading
                     as="h3"
                     className="text-white text-[24px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
@@ -91,7 +93,7 @@ export default function BusinessLocation({
                     >
                       {parse(item.title)}
                     </Heading>
-                    <div className="w-[32px] h-[32px] xl:h-[26px] xl:w-[26px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
+                    <div className="w-[32px] h-[32px] lg:h-[26px] lg:w-[26px] xl:w-[30px] 3xl:w-[35px] xl:h-[30px] 3xl:h-[35px] flex items-center justify-center">
                       <svg
                         viewBox="0 0 27 27"
                         fill="none"
