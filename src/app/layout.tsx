@@ -28,9 +28,9 @@ export default function RootLayout({
         <ReactLenis
           root
           options={{
-            lerp: 0.07,
-            wheelMultiplier: 0.8,
-            touchMultiplier: 1.5,
+            lerp: 0.1,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
             smoothWheel: true,
           }}
         >

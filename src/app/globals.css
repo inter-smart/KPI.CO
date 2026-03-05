@@ -94,14 +94,12 @@
     font-feature-settings: normal;
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
-    scroll-behavior: smooth;
   }
 
   body {
     height: auto;
     overscroll-behavior: none;
     @apply bg-background text-foreground;
-    scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
