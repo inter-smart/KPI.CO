@@ -25,6 +25,7 @@ export type InnerHeroProps = {
   variant?:
   | "default"
   | "Mainland"
+  | "CorporateTaxUae"
   | "CorporateServicesUae"
   | "AuditServicesUae"
   | "Formation-ADGM"
@@ -92,6 +93,7 @@ export default function InnerHero({
             variant === "technology" && "!max-w-full",
             variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
+            variant === "CorporateTaxUae" && "xl:max-w-[770px]",
           )}
         >
           <Heading
@@ -121,6 +123,7 @@ export default function InnerHero({
                 variant === "ifza" && "lg:max-w-[100%]",
                 variant === "internal-audit" && "xl:text-[20px]",
                 variant === "Formation-ADGM" && "xl:text-[20px]",
+                variant === "CorporateTaxUae" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}

@@ -1,12 +1,8 @@
 {
     "folder-color.pathColors": [
         {
-            "folderPath": "KPI.CO\\src\\app\\standard-operating-procedures-uae\\page.tsx\\",
-            "color": "foldercolorizer.color_00ff00"
-        },
-        {
-            "folderPath": "KPI.CO\\src\\app\\company-formation-adgm\\page.tsx\\",
-            "color": "foldercolorizer.color_66ff66"
+            "folderPath": "KPI.CO\\src\\app\\corporate-tax-services-uae\\page.tsx\\",
+            "color": "foldercolorizer.color_00ee00"
         }
     ]
 }
