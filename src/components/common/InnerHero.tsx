@@ -23,23 +23,24 @@ export type InnerHeroData = {
 export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
-  | "default"
-  | "Mainland"
+    | "default"
+    | "Mainland"
   | "CorporateTaxUae"
-  | "CorporateServicesUae"
-  | "AuditServicesUae"
+    | "CorporateServicesUae"
+    | "AuditServicesUae"
   | "Formation-ADGM"
-  | "SOP"
-  | "saifz"
-  | "advisory"
-  | "dwtc"
-  | "erm"
-  | "ifza"
-  | "e-invoicing"
-  | "ADGM-Foundations"
-  | "technology"
-  | "internal-audit"
-  | "meydan";
+    | "SOP"
+    | "saifz"
+    | "advisory"
+    | "dwtc"
+    | "erm"
+    | "ifza"
+    | "e-invoicing"
+    | "ADGM-Foundations"
+    | "technology"
+    | "internal-audit"
+    | "regulatory"
+    | "meydan";
 };
 
 export default function InnerHero({
@@ -57,6 +58,9 @@ export default function InnerHero({
         variant === "saifz"
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
+        variant === "regulatory"
+          ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
+          : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
         variant === "dwtc" || variant === "e-invoicing"
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
@@ -64,7 +68,8 @@ export default function InnerHero({
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px]"
           : "",
-        variant === "technology" && "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+        variant === "technology" &&
+          "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -84,24 +89,30 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-            "md:max-w-[500px] xl:max-w-[750px]",
+              "md:max-w-[500px] xl:max-w-[750px]",
             variant === "saifz" &&
-            "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
-            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+              "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" &&
+              "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
-            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "ifza" &&
+              "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "technology" && "!max-w-full",
-            variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "internal-audit" &&
+              "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
             variant === "CorporateTaxUae" && "xl:max-w-[770px]",
+            variant === "regulatory" && "!max-w-full",
           )}
         >
           <Heading
             as="h1"
             size="h1"
-            className={cn("font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+            className={cn(
+              "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
 
               variant === "technology" && "max-w-[850px]",
+              variant === "regulatory" && "max-w-[850px]",
             )}
           >
             {parse(data?.title)}
@@ -112,11 +123,12 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
-                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
+                variant === "dwtc" &&
+                  "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
-                "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
+                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
-                "xl:text-[16px] lg:max-w-[83%]",
+                  "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
                 variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
@@ -124,6 +136,7 @@ export default function InnerHero({
                 variant === "internal-audit" && "xl:text-[20px]",
                 variant === "Formation-ADGM" && "xl:text-[20px]",
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
+                variant === "regulatory" && "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
               )}
             >
               {parse(data?.description)}
@@ -139,7 +152,7 @@ export default function InnerHero({
                   className={cn(
                     "font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",
                     variant === "CorporateServicesUae" &&
-                    "text-[14px] xl:text-[16px]",
+                      "text-[14px] xl:text-[16px]",
                   )}
                 >
                   <Image
@@ -157,10 +170,12 @@ export default function InnerHero({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3"
+            className={cn("text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-3",
+              variant === "regulatory" && ""
+            )}
             asChild
           >
-            <Link href={"/"}>Get in Touch</Link>
+            <Link href={"/"}>Get In Touch</Link>
           </Button>
         </div>
       </div>

@@ -171,7 +171,7 @@ const localData = {
     ],
   } satisfies VatAdvisoryData,
   businessLocation: {
-    title: "Types of Legal Entities in DIFC",
+    title: "Types Of Legal Entities In DIFC",
     description:
       "Choosing the right legal structure sets your company up for success. In DIFC, you can:",
     items: [
@@ -482,11 +482,11 @@ export default function CompanyFormationDIFC() {
     <>
       <InnerHero data={localData.hero} />
       <CorporateServicesUaeWhyBuild
-        variant="freezone"
+        variant="difc-formation"
         data={localData.whyBuild}
       />
-      <VatAdvisory data={localData.vatAdvisory} />
-      <BusinessLocation data={localData.businessLocation} />
+      <VatAdvisory variant="difc-formation" data={localData.vatAdvisory} />
+      <BusinessLocation   data={localData.businessLocation} />
       <CorporateServicesUaeServices data={localData.services} variant="saifz" />
       <CorporateServicesUaeFormationProcess
         variant="mainland"

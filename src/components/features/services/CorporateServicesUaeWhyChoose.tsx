@@ -78,7 +78,7 @@ export default function CorporateServicesUaeWhyChoose({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block",
+        "w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_70px] xl:py-[50px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block",
         variant === "ADGM-Foundation" &&
         "max-sm:py-[45px_15px] xl:py-[55px_75px]",
         variant === "CorporateServicesUae" && "xl:py-[50px_90px]",
@@ -131,7 +131,7 @@ export default function CorporateServicesUaeWhyChoose({
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]", variant === "SOP" && "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]", variant === "internal-audit" && "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ")}>
+            <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]", variant === "SOP" && "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]", variant === "internal-audit" && "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ")}>
               {parse(data?.description)}
             </div>
           )}
@@ -187,6 +187,8 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "SOP" &&
             "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_30px]",
+            variant === "regulatory" &&
+            "xl:!gap-[25px_30px]",
           )}
         >
           {data?.items?.map((item) => (
@@ -261,6 +263,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
                 "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
                 variant === "CorporateServicesUae" && "xl:text-[14px]",
                 variant === "internal-audit" && "leading-relaxed xl:max-w-[92%]",
+                variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",
               )}
             >
               {parse(item?.description)}

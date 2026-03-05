@@ -4,7 +4,8 @@ import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "difc" | "center" | "AuditServicesUae" | "CorporateTaxUae";
+type Variant = "default" | "difc" | "center" | "AuditServicesUae" | "CorporateTaxUae" | "regulatory";
+
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
@@ -47,7 +48,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
     );
 
   return (
-    <section className="w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[50px_70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]">
+    <section className={cn("w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[50px_70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]",
+      variant === "regulatory" && "xl:!py-[95px_60px]"
+    )}>
       <div className="container">
         <div
           className={cn(
@@ -55,7 +58,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             hasVariant(variant, "center") && "items-center",
           )}
         >
-          <div className="w-full lg:w-[49%] xl:w-[calc(100%-590px)] xl:pr-[50px]">
+          <div className={cn("w-full lg:w-[49%] xl:w-[calc(100%-590px)] xl:pr-[50px]",
+            variant === "regulatory" && "xl:pr-0"
+          )}>
             <Heading
               as="h3"
               size="h3"
@@ -63,11 +68,13 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               {parse(data.title)}
             </Heading>
-            <div className={cn("text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5", variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]",)}>
+            <div className={cn("text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5", variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]", 
+              variant === "regulatory" && "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px]"
+            )}>
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
-                  ' <span class="text-[#5280CA] text-[18px] font-bold">→</span></p>',
+                  ' <span class="!text-[#5280CA] text-[18px] font-bold">→</span></p>',
                 ) || "",
               )}
             </div>
@@ -78,7 +85,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
           </div>
           <div className="w-full lg:w-[51%] xl:w-[590px]">
-            <div className="h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]">
+            <div className={cn("h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
+              // variant === "regulatory" && "bg-[rgba(143,216,254,10%)]"
+            )}>
               <div className="overflow-hidden">
                 <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
                   {advisoryItems.map((item, index) => (
@@ -101,15 +110,18 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                     >
                       <div
                         className={cn(
-                          "w-full text-[16px] md:text-[18px] xl:text-[25px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
+                          "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
                           hasVariant(variant, "difc")
+                            ? "text-[#5280CA]"
+                            : "text-[#5280CA]",
+                          hasVariant(variant, "regulatory")
                             ? "text-[#5280CA]"
                             : "text-[#5280CA]",
                         )}
                       >
                         {`${formatNo(item.slNo ?? index + 1)}.`}
                       </div>
-                      <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] font-normal leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item.description)}
                       </div>
                     </div>

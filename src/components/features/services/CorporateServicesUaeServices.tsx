@@ -24,6 +24,7 @@ type CorporateServicesUaeServicesProps = {
   | "regulatory"
   | "dsoa"
   | "technology"
+    | "difc-formation"
   | "CorporateServicesUae";
 };
 
@@ -40,6 +41,7 @@ export default function CorporateServicesUaeServices({
             variant === "regulatory" && "sm:text-left",
             variant === "saifz" && "sm:text-left",
             variant === "CorporateTaxUae" && "sm:text-left",
+            variant === "difc-formation" && "sm:text-left",
             variant === "SOP" && "sm:text-left",
             variant === "ifza" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
@@ -72,11 +74,13 @@ export default function CorporateServicesUaeServices({
             "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
             variant === "CorporateTaxUae" && "!max-w-full",
+            variant === "difc-formation" && "!max-w-full",
             variant === "SOP" && "!max-w-full xl:gap-[40px]",
             variant === "dafza" && "!max-w-full",
             variant === "dwtc" && "xl:max-w-full",
             variant === "ifza" && "xl:max-w-full",
-            variant === "technology" && "xl:max-w-full"
+            variant === "technology" && "xl:max-w-full",
+            variant === "regulatory" && "!max-w-full xl:gap-[40px]",
           )}
         >
           {data.items.map((item) => (
@@ -91,6 +95,7 @@ export default function CorporateServicesUaeServices({
                   "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                   variant === "saifz" && "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "CorporateTaxUae" && "max-sm:min-h-[140px] border-[#E2E2E2]",
+                  variant === "difc-formation" && "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "SOP" && "max-sm:min-h-[140px]",
                 )}
               >
@@ -106,12 +111,15 @@ export default function CorporateServicesUaeServices({
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
                   <div className={cn("text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75",
                     variant === "technology" && "mb-0",
-                    variant === "CorporateTaxUae" && "!mb-0"
+                    variant === "CorporateTaxUae" && "!mb-0",
+                    variant === "regulatory" && "capitalize"
                   )}>
                     {item?.title}
                   </div>
                   {item?.description && (
-                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.6] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
+                    <p className={cn("text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.6] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
+                      variant === "regulatory" && "leading-relaxed xl:max-w-[92%]"
+                    )}>
                       {parse(item?.description)}
                     </p>
                   )}
