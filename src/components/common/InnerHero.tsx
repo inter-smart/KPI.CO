@@ -27,6 +27,7 @@ export type InnerHeroProps = {
   | "Mainland"
   | "CorporateServicesUae"
   | "AuditServicesUae"
+  | "Formation-ADGM"
   | "SOP"
   | "saifz"
   | "advisory"
@@ -90,6 +91,7 @@ export default function InnerHero({
             variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "technology" && "!max-w-full",
             variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "Formation-ADGM" && "xl:max-w-[790px]",
           )}
         >
           <Heading
@@ -118,6 +120,7 @@ export default function InnerHero({
                 variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
                 variant === "ifza" && "lg:max-w-[100%]",
                 variant === "internal-audit" && "xl:text-[20px]",
+                variant === "Formation-ADGM" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}
