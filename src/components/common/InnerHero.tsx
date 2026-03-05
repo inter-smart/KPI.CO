@@ -60,7 +60,7 @@ export default function InnerHero({
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing"
-          ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
+          ? "min-h-[640px] xl:min-h-[720px]"
           : "",
         variant === "technology" && "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
       )}

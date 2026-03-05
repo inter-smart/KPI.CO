@@ -48,7 +48,7 @@ export default function MainlandBusiness({
         <Heading
           as="h2"
           size="h2"
-          className="text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
+          className="text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
         >
           {parse(data.title)}
         </Heading>
@@ -58,7 +58,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[calc(100%-365px)] md:pr-[45px]",
               hasVariant(variant, "spv") ||
-              hasVariant(variant, "dwtc") ||
+                hasVariant(variant, "dwtc") ||
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
@@ -68,7 +68,7 @@ export default function MainlandBusiness({
               hasVariant(variant, "ifza") &&
               "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
-                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
               "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
@@ -101,7 +101,7 @@ export default function MainlandBusiness({
                 as="h2"
                 size="h2"
                 className={cn(
-                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] leading-normal text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-lg:hidden",
+                  "lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px]  text-[#1C5396] capitalize !mb-[20px] xl:!mb-[20px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-lg:hidden",
                   variant === "ADGM-Foundations" && "xl:!mb-[30px]",
                   variant === "SAIFZ" && "xl:max-w-[590px]",
                   variant === "dafza" && "xl:max-w-full",
@@ -113,74 +113,76 @@ export default function MainlandBusiness({
               </Heading>
               <div
                 className={cn(
-                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
+                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
                   hasVariant(variant, "hamriya") && "mb-0",
                   hasVariant(variant, "AuditServicesUae") && "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                 )}
               >
                 {parse(data.description)}
               </div>
-              <div
-                className={cn(
-                  "w-full max-md:mb-[30px]",
-                  hasVariant(variant, "hamriya") && "mb-0",
-                  hasVariant(variant, "dafza") && "mb-0",
-                )}
-              >
-                {data.highlightsTitle && (
-                  <Text
-                    size="p2"
-                    className={cn(
-                      "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]",
-                      variant === "ADGM-Foundations" &&
-                      "mb-[20px] sm:mb-[25px]",
-                    )}
-                  >
-                    {data.highlightsTitle}
-                  </Text>
-                )}
+              {(data.highlightsTitle || data.highlights.length > 0) && (
                 <div
                   className={cn(
-                    "flex flex-col mb-[25px]",
-                    variant === "Mainland" && "mb-[25px]",
-                    variant === "dafza" && "mb-0",
+                    "w-full max-md:mb-[30px]",
+                    hasVariant(variant, "hamriya") && "mb-0",
+                    hasVariant(variant, "dafza") && "mb-0",
                   )}
                 >
-                  {data.highlights.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex mb-[15px] last-of-type:mb-0"
+                  {data.highlightsTitle && (
+                    <Text
+                      size="p2"
+                      className={cn(
+                        "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[15px]",
+                        variant === "ADGM-Foundations" &&
+                        "mb-[20px] sm:mb-[25px]",
+                      )}
                     >
-                      <div className="max-sm:w-full flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
-                        <div
-                          className={cn(
-                            "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
-                            hasVariant(variant, "dsoa") &&
-                            "max-sm:min-h-[378px]",
-                            hasVariant(variant, "ADGM-Foundations") &&
-                            "xl:w-[16px]",
-                            hasVariant(variant, "Mainland") && "xl:w-[16px]",
-                            hasVariant(variant, "ifza") && "xl:w-[16px]",
-                            hasVariant(variant, "SAIFZ") && "xl:w-[16px]",
-                            hasVariant(variant, "dafza") && "xl:w-[16px]",
-                          )}
-                        >
-                          <Image
-                            src="/images/tickMark.svg"
-                            width="22"
-                            height="22"
-                            className="w-full h-full object-contain"
-                            alt="tickMark"
-                          />
+                      {data.highlightsTitle}
+                    </Text>
+                  )}
+                  <div
+                    className={cn(
+                      "flex flex-col mb-[25px]",
+                      variant === "Mainland" && "mb-[25px]",
+                      variant === "dafza" && "mb-0",
+                    )}
+                  >
+                    {data.highlights.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex mb-[15px] last-of-type:mb-0"
+                      >
+                        <div className="max-sm:w-full flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
+                          <div
+                            className={cn(
+                              "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
+                              hasVariant(variant, "dsoa") &&
+                              "max-sm:min-h-[378px]",
+                              hasVariant(variant, "ADGM-Foundations") &&
+                              "xl:w-[16px]",
+                              hasVariant(variant, "Mainland") && "xl:w-[16px]",
+                              hasVariant(variant, "ifza") && "xl:w-[16px]",
+                              hasVariant(variant, "SAIFZ") && "xl:w-[16px]",
+                              hasVariant(variant, "dafza") && "xl:w-[16px]",
+                            )}
+                          >
+                            <Image
+                              src="/images/tickMark.svg"
+                              width="22"
+                              height="22"
+                              className="w-full h-full object-contain"
+                              alt="tickMark"
+                            />
+                          </div>
+                          <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]">
+                            {item}
+                          </span>
                         </div>
-                        <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]">
-                          {item}
-                        </span>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
                 {data.footerDescription && parse(data.footerDescription)}
               </div>

@@ -57,7 +57,7 @@ export default function BusinessLocation({
           {data.items.map((item) => (
             <div
               key={item.id}
-              className="group relative min-h-[210px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md"
+              className="group relative min-h-[210px] xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md"
             >
               <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">
                 <Image

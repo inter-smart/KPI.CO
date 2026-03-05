@@ -229,7 +229,7 @@ export default function CorporateServicesUaeFormationProcess({
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
                             ? "text-[#4e4e4e80]"
-                            : "text-[#a7a7a7]",
+                            : "text-[rgba(78,78,78,0.5)]",
                       )}
                     >
                       {parse(step.title)}

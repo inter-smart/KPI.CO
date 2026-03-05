@@ -104,7 +104,7 @@ export default function DocumentRequired({
                     <Heading
                       as="h2"
                       size="h2"
-                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",)}
+                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",)}
                     >
                       {parse(data.title)}
                     </Heading>

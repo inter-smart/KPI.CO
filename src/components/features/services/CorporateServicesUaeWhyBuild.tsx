@@ -187,7 +187,8 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "offshore") ||
               hasVariant(variant, "technology") ||
               hasVariant(variant, "ifza") ||
-              hasVariant(variant, "AuditServicesUae")
+              hasVariant(variant, "AuditServicesUae")||
+              hasVariant(variant, "rakez")
               ? "text-start "
               : "sm:text-center sm:max-w-[576px] xl:max-w-[860px] 2xl:max-w-[1060px] 3xl:max-w-[1280px] mx-auto",
             hasVariant(variant, "dafz") && "sm:text-left !max-w-full",
@@ -200,7 +201,7 @@ export default function CorporateServicesUaeWhyBuild({
           <Heading
             as="h2"
             size="h2"
-            className={cn("text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7",
+            className={cn("text-[#1C5396] mb-3 sm:mb-5 xl:mb-[30px] capitalize",
               variant === "technology" && "xl:mb-[28px]"
             )}
           >
