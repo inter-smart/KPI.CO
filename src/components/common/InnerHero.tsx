@@ -169,7 +169,7 @@ export default function InnerHero({
             )}
             asChild
           >
-            <Link href={"/"}>Get in Touch</Link>
+            <Link href={"/"}>Get In Touch</Link>
           </Button>
         </div>
       </div>
