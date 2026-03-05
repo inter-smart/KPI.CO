@@ -13,6 +13,7 @@ type Variant =
   | "ADGM-Foundation"
   | "holding"
   | "ifza"
+  | "regulatory"
   | "dwtc-doc";
 
 export type RiskOrganisationProps = {
@@ -96,6 +97,7 @@ export default function RiskOrganisation({
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                       variant === "SOP" && "[&_div]:my-[15px] sm:[&_div]:my-[20px] xl:[&_div]:my-[30px]",
                       variant === "ifza" && "[&_p]:mb-[20px] xl:[&_p]:mb-[30px] leading-relaxed",
+                      variant === "regulatory" && "[&_p]:!mb-[20px] xl:[&_p]:!mb-[30px] leading-relaxed",
                     )}
                   >
                     {parse(data.description)}
@@ -106,7 +108,7 @@ export default function RiskOrganisation({
             {items.length > 0 && (
               <ul
                 className={cn(
-                  "space-y-5 lg:space-y-5 xl:space-y-3.5 2xl:space-y-6",
+                  "space-y-5 lg:space-y-5 xl:space-y-4 2xl:space-y-6",
                   variant === "ADGM-Foundation" && "xl:space-y-[20px]",
                   variant === "SOP" && "xl:space-y-[20px]",
                 )}
@@ -115,7 +117,7 @@ export default function RiskOrganisation({
                   <li
                     key={item.id}
                     className={cn(
-                      "relative pl-[25px] xl:pl-[30px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E]",
+                      "relative pl-[25px] xl:pl-[30px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[135%] text-[#4E4E4E]",
                       variant === "ADGM-Foundation" && "xl:text-[18px]",
                     )}
                   >
@@ -154,7 +156,9 @@ export default function RiskOrganisation({
               </ul>
             )}
             {data?.ftr_description && (
-              <div className="text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]">
+              <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]",
+                variant === "regulatory" && "max-w-[100%]"
+              )}>
                 {parse(data.ftr_description)}
               </div>
             )}
