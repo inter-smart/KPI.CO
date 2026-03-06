@@ -3,18 +3,18 @@ import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import VatGuidance, {
   VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
 import VatAdvisory, {
   VatAdvisoryData,
 } from "@/components/features/vat-services/VatAdvisory";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatHealth, {
   VatHealthData,
 } from "@/components/features/vat-services/VatHealth";
@@ -478,35 +478,36 @@ const localData = {
         id: 1,
         title: "Who must register for VAT in the UAE?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>Businesses must register mandatorily when taxable supplies exceed AED 375,000 in the past 12 months or are expected to exceed this threshold in the next 30 days. Voluntary registration is available for businesses exceeding AED 187,500.</p>
                     `,
       },
       {
         id: 2,
         title: "How often do I need to file VAT returns?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>Most businesses file quarterly VAT returns. Businesses with annual turnover above AED 150 million are required to file monthly. All returns must be submitted within 28 days from the end of the tax period. </p>
                     `,
       },
       {
         id: 3,
         title: "What happens if I miss the VAT filing deadline?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Late filing penalties start at AED 1,000 and increase based on the length of delay. Late payment incurs additional penalties and potential interest charges. Repeated non-compliance can lead to fines up to AED 50,000. </p>
                     `,
       },
       {
         id: 4,
         title: "Can I claim VAT on all business expenses?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>No. Input VAT is recoverable only on expenses directly linked to taxable supplies. VAT on entertainment, personal use, and certain blocked categories cannot be claimed. Proper documentation is required for all claims.</p>
                     `,
       },
       {
         id: 5,
-        title: "Do free zone companies need to register for VAT?",
+        title:
+          "What is the difference between zero-rated and exempt supplies? ",
         description: `
-                    <p>Yes. Free zone companies must register if they exceed the mandatory registration threshold and make taxable supplies within the UAE or to other GCC countries. Different rules may apply for designated zones.</p>
+                    <p>Zero-rated supplies (0% VAT) allow businesses to recover input tax on related costs. Exempt supplies do not charge VAT and do not allow input tax recovery, which can increase costs for businesses making exempt supplies. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -599,11 +600,14 @@ export default function VatServicesUaePage() {
       <VatHealth data={localData.vatHealth} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="VatServicesUae"
       />
       <VatRelatedTax data={localData.vatRelatedTax} />
-      <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeCta data={localData.cta} variant="VatServicesUae" />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="side-arrow"
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

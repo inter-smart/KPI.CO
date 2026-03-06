@@ -145,6 +145,7 @@ export default function InnerHero({
                 variant === "regulatory" && "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
                 variant === "Financial-Statement-Audit" && "xl:text-[20px]",
                 variant === "VatServicesUae" && "xl:text-[20px]",
+                variant === "ADGM-Foundations" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}

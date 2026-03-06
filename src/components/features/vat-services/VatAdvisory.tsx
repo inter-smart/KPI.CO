@@ -33,7 +33,7 @@ export default function VatAdvisory({ data, variant="default" }: VatAdvisoryProp
     [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
-    <section className="w-full h-auto py-[45px_20px] sm:py-[35px_50px] xl:py-[40px_70px] 2xl:py-[50px_70px] 3xl:py-[60px_90px] bg-[#F9FAFB] max-sm:rounded-[20px] overflow-hidden block">
+    <section className="w-full h-auto py-[45px_40px] sm:py-[35px_50px] xl:py-[40px_70px] 2xl:py-[50px_70px] 3xl:py-[60px_90px] bg-[#F9FAFB] max-sm:rounded-[20px] overflow-hidden block">
       <div className="container">
         <div className="w-full h-auto mb-[30px] xl:mb-[40px] 3xl:mb-[50px]">
           <Heading

@@ -28,7 +28,11 @@ export type CorporateServicesUaeFaqData = {
 
 export type CorporateServicesUaeFaqProps = {
   data: CorporateServicesUaeFaqData;
-  variant?: "side-arrow" | "holding" | "Financial-Statement-Audit" | "difc-regulated";
+  variant?:
+    | "side-arrow"
+    | "holding"
+    | "Financial-Statement-Audit" | "difc-regulated"
+    | "ADGM-Spv-Formation";
 };
 
 export default function CorporateServicesUaeFaq({
@@ -41,6 +45,7 @@ export default function CorporateServicesUaeFaq({
         "w-full h-auto py-[40px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
         variant === "holding" &&
           "py-[40px_20px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
+        variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px]",
       )}
     >
       <div className="container">
@@ -65,7 +70,8 @@ export default function CorporateServicesUaeFaq({
                 key={item.id}
                 className={cn(
                   "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
-                  variant === "holding" && "sm:last:border-b-0 max-sm:!border-b"
+                  variant === "holding" && "sm:last:border-b-0 max-sm:!border-b" ||
+                  variant === "ADGM-Spv-Formation" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -75,6 +81,8 @@ export default function CorporateServicesUaeFaq({
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                     variant === "difc-regulated" &&
                       "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "ADGM-Spv-Formation" &&
+                      "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                   )}
                 >
                   <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">

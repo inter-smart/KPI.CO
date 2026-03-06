@@ -26,6 +26,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "default"
     | "CorporateServicesUae"
     | "Financial-Statement-Audit"
+    | "VatServicesUae"
     | "Formation-DIFC"
     | "AuditServicesUae"
     | "Formation-ADGM"
@@ -53,6 +54,7 @@ type ServiceCardProps = {
     | "CorporateServicesUae"
     | "Financial-Statement-Audit"
     | "AuditServicesUae"
+    | "VatServicesUae"
     | "Formation-ADGM"
     | "mainland"
     | "advisory"
@@ -102,6 +104,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "advisory" ||
               variant === "risk" ||
               variant === "Financial-Statement-Audit" ||
+              variant === "VatServicesUae" ||
               variant === "holding" ||
               variant === "internal-audit" ||
               variant === "spv" ||
@@ -211,10 +214,11 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "regulatory" &&
             "xl:!gap-[25px_30px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
+            variant === "VatServicesUae" && "xl:gap-[25px_30px]",
           )}
         >
           {data?.items?.map((item) => (
-            <div key={item?.id} className="w-full h-auto  ">
+            <div key={item?.id} className={cn("w-full h-auto  ",variant === "ADGM-Foundation" && "max-sm:mb-0")}>
               <ServiceCard key={item.id} item={item} variant={variant} />
             </div>
           ))}
@@ -232,6 +236,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "difc-regulated" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "VatServicesUae" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "freezone-business" &&
         "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "aup" &&
@@ -279,6 +284,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             variant === "SOP" && "text-[#1C5396]",
             variant === "Formation-DIFC" && "text-[#1C5396] !font-medium",
             variant === "Formation-ADGM" && "text-[#1C5396]",
+            variant === "VatServicesUae" && "text-[#1C5396]",
             variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
           )}
         >
