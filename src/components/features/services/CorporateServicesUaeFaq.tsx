@@ -28,7 +28,7 @@ export type CorporateServicesUaeFaqData = {
 
 export type CorporateServicesUaeFaqProps = {
   data: CorporateServicesUaeFaqData;
-  variant?: "side-arrow" | "holding";
+  variant?: "side-arrow" | "holding" | "Financial-Statement-Audit";
 };
 
 export default function CorporateServicesUaeFaq({
@@ -48,7 +48,10 @@ export default function CorporateServicesUaeFaq({
           <Heading
             as="h2"
             size="h2"
-            className="text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
+            className={cn(
+              "text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
+              variant === "Financial-Statement-Audit" && "xl:text-[48px]",
+            )}
           >
             {data?.title}
           </Heading>
@@ -77,7 +80,7 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
+                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>

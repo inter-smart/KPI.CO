@@ -1,10 +1,11 @@
+import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
-import { blogData } from "@/data/blogData";
 import VatGuidance, {
   VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
@@ -273,7 +274,7 @@ const localData = {
   whyBuild: {
     title: "Common VAT Challenges We Help Solve ",
     description:
-      "<p>Businesses across the UAE face recurring VAT issues that create risk, inefficiency, and financial exposure. We identify these issues early and implement practical solutions before they escalate</p>",
+      "<p>Businesses across the UAE face recurring VAT issues that create risk, inefficiency, and financial exposure. We identify these issues early and implement practical solutions before they escalate.</p>",
     items: [
       {
         id: 1,
@@ -344,31 +345,35 @@ const localData = {
     steps: [
       {
         id: 1,
-        title: "Risk identification with business context",
-        sub_title: "Control assessment and gap analysis",
+        title: "Business-led assessment ",
+        inner_title: "Business-led assessment ",
+        sub_title: "Business-led assessment ",
         description:
-          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
+          "<p>Understandhow VAT applies to real transactions, not just accounting entries</p>",
       },
       {
         id: 2,
-        title: "Control assessment and gap analysis",
-        sub_title: "Control assessment and gap analysis",
+        title: "Practical interpretation",
+        inner_title: "Practical interpretation",
+        sub_title: "Practical interpretation",
         description:
-          "<p>Evaluating whether controls exist, appropriately designed, operate effectively, and are properly documented.</p>",
+          "<p>Apply VAT rules in a way that supports commercial objectives while remaining fully compliant.</p>",
       },
       {
         id: 3,
-        title: "Clear prioritisation",
-        sub_title: "Clear prioritisation",
+        title: "Process alignment",
+        inner_title: "Process alignment",
+        sub_title: "Process alignment",
         description:
-          "<p>Focusing on risks that carry regulatory, financial, or reputational consequences. </p>",
+          "<p>Ensure VAT treatment is consistent across systems, contracts, and reporting. </p>",
       },
       {
         id: 4,
-        title: "Actionable recommendations",
-        sub_title: "Actionable recommendations",
+        title: "Ongoing clarity",
+        inner_title: "Ongoing clarity",
+        sub_title: "Ongoing clarity",
         description:
-          "<p>Suggest practical suggestion that management can implement, rather than an abstract observation.</p>",
+          "<p>Minimize recurring questions, rework, and uncertainty over time.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -415,7 +420,7 @@ const localData = {
       "Documentation and record-keeping improvements",
     ],
     button: {
-      label: "Book Your Free VAT Health Check",
+      label: "Get In Touch",
       link: "/contact",
     },
     media: {
@@ -569,11 +574,17 @@ const localData = {
   } satisfies VatRelatedTaxData,
 };
 
+export const metadata: Metadata = {
+  title: "VAT Advisory & Compliance Services in the UAE | KPI",
+  description:
+    "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations. ",
+};
+
 export default function VatServicesUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="saifz" />
-      <VatGuidance data={localData.vatGuidance} />
+      <InnerHero data={localData.hero} variant="VatServicesUae" />
+      <VatGuidance data={localData.vatGuidance} variant="VatServicesUae" />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
       <VatAdvisory data={localData.vatAdvisory} />
       <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="dafz" />
@@ -583,14 +594,14 @@ export default function VatServicesUaePage() {
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="dfza"
+        variant="VatServicesUae"
       />
       <VatHealth data={localData.vatHealth} />
-      <VatRelatedTax data={localData.vatRelatedTax} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
         variant="mainland"
       />
+      <VatRelatedTax data={localData.vatRelatedTax} />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <HomeOurInsights data={localData.insights} />

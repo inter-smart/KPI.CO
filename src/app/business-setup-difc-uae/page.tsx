@@ -484,7 +484,7 @@ export default function CompanyFormationDIFC() {
       <CorporateServicesUaeWhyBuild
         variant="freezone"
         data={localData.whyBuild}
-      />
+      /> 
       <VatAdvisory data={localData.vatAdvisory} />
       <BusinessLocation data={localData.businessLocation} />
       <CorporateServicesUaeServices data={localData.services} variant="saifz" />

@@ -1,14 +1,14 @@
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
-import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
-import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
-import { blogData } from "@/data/blogData";
 
 export type MainlandBusinessData = {
   title: string;
@@ -254,42 +254,42 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 5,
         media: {
-          path: "/images/banking-partner-5.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 6,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -315,35 +315,35 @@ const localData = {
         id: 1,
         title: "What is a Meydan Free Zone company?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>A Meydan Free Zone company is a legal entity established in Dubai Free Zone, offering foreign ownership and flexible setup options. </p>
                     `,
       },
       {
         id: 2,
-        title: "Can I set up remotely from outside the UAE?",
+        title: "Can I set up remotely from outside the UAE? ",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>Yes, the entire company registration process is digital and can be completed from anywhere. </p>
                     `,
       },
       {
         id: 3,
         title: "Is 100% foreign ownership allowed?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Yes, Meydan Free Zone allows full foreign ownership with no local sponsor.</p>
                     `,
       },
       {
         id: 4,
         title: "How long does setup take?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>Trade licenses can be issued in as little as under 60 minutes; visas and banking usually take 5–7 business days.</p>
                     `,
       },
       {
         id: 5,
         title: "How much does a Meydan Free Zone license cost?",
         description: `
-                    <p>Packages start from approximately AED 12,500; costs vary by visa package and services required.</p>
+                    <p>Packages start from approximately AED 12,500; costs vary by visa package and services required. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -415,11 +415,10 @@ const localData = {
         id: 2,
         title: "Cost-Effective Setup",
         items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
+          "Fast licensing (often instant to 1–3 days) ",
+          "License packages start from AED ~12,500 ",
+          "Flexi‑desk included with most packages ",
+          "No mandatory office lease required initially ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -430,10 +429,10 @@ const localData = {
         id: 3,
         title: "Flexible Visa Options",
         items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
+          "Choose visa packages from 0 to 6 visas ",
+          "Visa allocation optional based on package ",
+          "Family and employee visas available",
+          "Visa sponsorship support services ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -444,10 +443,10 @@ const localData = {
         id: 4,
         title: "Tax & Banking Advantages",
         items: [
-          "100% repatriation of capital and profits",
-          "No customs duties on import/export",
-          "Assistance with corporate bank account opening",
-          "Access to global trade networks",
+          "No UAE corporate tax on qualifying free zone income ",
+          "100% profit repatriation",
+          "No currency restrictions ",
+          "MOFA‑recognized license for global credibility ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -463,16 +462,16 @@ export default function MainlandCompanyFormationUaePage() {
     <>
       <InnerHero data={localData.hero} variant="meydan" />
       <MainlandBusiness data={localData.mainlandBusiness} />
-      <MeydanFreeZone data={localData.meydanFreeZone} variant="default" />
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="MeydanFreeZone" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <BusinessLocation data={localData.businessLocation} />
-      <DocumentRequired data={localData.document_required_data} />
+      <DocumentRequired data={localData.document_required_data} variant="MeydanFreeZone" />
       <CorporateServicesUaeBanking
         data={localData.banking}
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow"/>
       <HomeOurInsights data={localData.insights} variant="saifz" />
     </>
   );
