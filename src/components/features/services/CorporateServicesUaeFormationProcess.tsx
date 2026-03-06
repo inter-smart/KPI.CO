@@ -44,6 +44,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "risk"
     | "internal-audit"
     | "difc-regulated"
+    | "adgm-regulated"
     | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
@@ -113,6 +114,7 @@ export default function CorporateServicesUaeFormationProcess({
               variant === "mainland" ||
                 variant === "aup" ||
                 "tax-advisory" ||
+                "adgm-regulated" ||
                 "difc-regulated" ||
                 "internal-audit"
                 ? "text-start "
@@ -211,6 +213,8 @@ export default function CorporateServicesUaeFormationProcess({
                                       "sm:hidden",
                           variant === "difc-regulated" &&
                                       "max-sm:!block sm:!hidden",
+                          variant === "adgm-regulated" &&
+                                      "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -227,6 +231,7 @@ export default function CorporateServicesUaeFormationProcess({
                         "max-sm:text-[16px] xl:text-[24px] font-semibold transition-colors duration-300 capitalize max-w-[80%]",
                         variant == "tax-advisory" && "text-nowrap",
                         variant == "aup" && "max-w-full",
+                        variant == "adgm-regulated" && "max-w-full",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
                         index <= activeStep
@@ -262,6 +267,8 @@ export default function CorporateServicesUaeFormationProcess({
                             "font-normal text-[#3eb0ea] capitalize mb-1",
                             variant === "risk" && "sm:hidden",
                             variant === "difc-regulated" &&
+                              "max-sm:!block sm:!hidden",
+                            variant === "adgm-regulated" &&
                               "max-sm:!block sm:!hidden",
                           )}
                         >
