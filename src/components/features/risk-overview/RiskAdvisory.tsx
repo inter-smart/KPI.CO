@@ -10,6 +10,7 @@ type Variant =
   | "center"
   | "AuditServicesUae"
   | "difc-regulated"
+  | "adgm-regulated"
   | "regulatory";
 
 export type RiskAdvisoryProps = {
@@ -96,7 +97,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
             <div className="flex flex-row gap-3">
               <div className={cn("text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
-                variant === "difc-regulated" && "max-sm:hidden"
+                variant === "difc-regulated" && "max-sm:hidden",
+                variant === "adgm-regulated" && "max-sm:hidden"
               )}>
                 {parse(data.highlightsText)}
               </div>
@@ -116,7 +118,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                       key={`item-${item.id ?? index}`}
                       className={cn(
                         "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
-                        hasVariant(variant, "difc")
+                        hasVariant(variant, "difc")  || hasVariant(variant, "adgm-regulated")
                           ? cn(
                               "border-[#DEDEDE]",
                               index === advisoryItems.length - 1
@@ -133,6 +135,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         className={cn(
                           "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
                           hasVariant(variant, "difc")
+                            ? "text-[#5280CA]"
+                            : "text-[#5280CA]",
+                          hasVariant(variant, "adgm-regulated")
                             ? "text-[#5280CA]"
                             : "text-[#5280CA]",
                           hasVariant(variant, "difc-regulated")
@@ -154,8 +159,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               </div>
             </div>
             <div className="flex flex-row gap-3">
-              <div className={cn("",
-                variant === "difc-regulated" && "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden"
+              <div className={cn("hidden",
+                variant === "difc-regulated" && "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                variant === "adgm-regulated" && "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden"
               )}>
                 {parse(data.highlightsText)}
               </div>

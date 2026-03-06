@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
 };
 
 export default function RiskExploreService({
@@ -95,6 +95,8 @@ export default function RiskExploreService({
                     variant === "ADGM-Foundations" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "difc-regulated" &&
+                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "adgm-regulated" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
