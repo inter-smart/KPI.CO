@@ -184,7 +184,7 @@ const localData = {
         inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
-          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+          "<p>Focus is aligned to risks most relevant to FSRA supervision, including governance, capital adequacy, valuation, and regulatory reporting. </p>",
       },
       {
         id: 3,
@@ -192,7 +192,7 @@ const localData = {
         inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>The procedures are primarily designed around professional judgment and risk severity, rather than standard checklists. </p>",
       },
       {
         id: 4,
@@ -200,7 +200,7 @@ const localData = {
         inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
-          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+          "<p>The effort is focused on material balances, complex transactions, and high-risk processes. </p>",
       },
       {
         id: 5,
@@ -208,7 +208,7 @@ const localData = {
         inner_title: "Documentation",
         sub_title: "Documentation",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>Working papers are aligned to risk assessment, audit response, and conclusions. </p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -395,7 +395,7 @@ export default function DwtcFreezone() {
         variant="mainland"
       />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeCta variant="adgm-regulated" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>

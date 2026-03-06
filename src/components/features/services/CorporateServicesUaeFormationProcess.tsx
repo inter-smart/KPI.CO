@@ -43,6 +43,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "tax-advisory"
     | "risk"
     | "internal-audit"
+    | "difc-regulated"
     | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
@@ -112,6 +113,7 @@ export default function CorporateServicesUaeFormationProcess({
               variant === "mainland" ||
                 variant === "aup" ||
                 "tax-advisory" ||
+                "difc-regulated" ||
                 "internal-audit"
                 ? "text-start "
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
@@ -207,6 +209,8 @@ export default function CorporateServicesUaeFormationProcess({
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" &&
                                       "sm:hidden",
+                          variant === "difc-regulated" &&
+                                      "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -257,6 +261,8 @@ export default function CorporateServicesUaeFormationProcess({
                           className={cn(
                             "font-normal text-[#3eb0ea] capitalize mb-1",
                             variant === "risk" && "sm:hidden",
+                            variant === "difc-regulated" &&
+                              "max-sm:!block sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -289,7 +295,8 @@ export default function CorporateServicesUaeFormationProcess({
                         as="div"
                         size="p3"
                         className={cn("text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
-                          variant === "internal-audit" && "leading-relaxed" 
+                          variant === "internal-audit" && "leading-relaxed" ,
+                          
                         )}
                       >
                         {parse(data.steps[activeStep].description)}

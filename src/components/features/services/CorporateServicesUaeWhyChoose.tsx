@@ -40,7 +40,8 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "holding"
     | "regulatory"
   | "aup"
-    | "spv";
+    | "difc-regulated"
+  | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
@@ -65,7 +66,8 @@ type ServiceCardProps = {
     | "internal-audit"
     | "regulatory"
   | "aup"
-    | "spv";
+    | "difc-regulated"
+  | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -196,6 +198,7 @@ export default function CorporateServicesUaeWhyChoose({
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:gap-[20px] xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
+            variant === "difc-regulated" && "hidden sm:grid",
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[25px_30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
             variant === "ADGM-Foundation" &&
@@ -228,6 +231,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "difc-regulated" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "freezone-business" &&
         "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "aup" &&
@@ -259,6 +263,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         <div
           className={cn(
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",
+            variant === "difc-regulated" && "text-[#1C5396]",
             variant === "mainland" && "text-[#1C5396]",
             variant === "aup" && "text-[#1C5396]",
             variant === "risk" && "text-[#1C5396]",

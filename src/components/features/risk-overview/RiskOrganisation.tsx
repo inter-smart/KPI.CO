@@ -14,6 +14,7 @@ type Variant =
   | "holding"
   | "ifza"
   | "regulatory"
+  | "difc-regulated"
   | "dwtc-doc";
 
 export type RiskOrganisationProps = {
@@ -38,12 +39,12 @@ export default function RiskOrganisation({
         variant === "holding" && "max-sm:!py-[0px_35px] xl:!py-[0px_75px]",
         variant === "SOP" && "bg-white",
         variant === "dwtc-bg" && "bg-[#F9FAFB]",
+        variant === "difc-regulated" && "xl:pt-[50px]",
       )}
     >
       <div className="container">
         <div
           className={cn(
-            "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
             "flex max-md:flex-col-reverse md:gap-[30px] lg:gap-[40px] xl:gap-[45px] 2xl:gap-[57px] 3xl:gap-[75px]",
             variant === "freezone" || (variant === "dwtc" && "items-end"),
             variant === "ADGM-Foundation" && "xl:gap-0",
@@ -61,6 +62,7 @@ export default function RiskOrganisation({
               variant === "ifza" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
               variant === "SOP" && "xl:w-[calc(100%-475px)] xl:pr-[55px]",
               variant === "holding" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "difc-regulated" && "xl:w-[calc(100%-495px)] xl:pr-[0px]",
             )}
           >
             {(data?.title || data?.description) && (
@@ -122,7 +124,7 @@ export default function RiskOrganisation({
                     )}
                   >
                     <span className="absolute left-0 top-[4px] xl:top-[5.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
-                      {variant === "dwtc-doc" ? (
+                      {variant === "dwtc-doc" || variant === "difc-regulated" ? (
                         <svg
                           width="17"
                           height="17"
@@ -157,7 +159,8 @@ export default function RiskOrganisation({
             )}
             {data?.ftr_description && (
               <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]",
-                variant === "regulatory" && "max-w-[100%]"
+                variant === "regulatory" && "max-w-[100%]",
+                variant === "difc-regulated" && "max-w-[100%]"
               )}>
                 {parse(data.ftr_description)}
               </div>
@@ -172,6 +175,7 @@ export default function RiskOrganisation({
               variant === "SOP" && "xl:w-[475px]",
               variant === "ifza" && "xl:w-[475px]",
               variant === "holding" && "xl:w-[475px]",
+              variant === "difc-regulated" && "xl:w-[495px]",
             )}
           >
             <div className="block md:hidden mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10">
@@ -199,6 +203,38 @@ export default function RiskOrganisation({
                   priority={false}
                 />
               )}
+
+              {/* {data?.media?.path &&
+                (variant === "difc-regulated" && mobileImagePath ? (
+                  <>
+                    <Image
+                      src={data.media.mobileImagePath}
+                      alt={data.media.alt || data?.title || "image"}
+                      width={615}
+                      height={636}
+                      className="w-full h-full object-cover !block sm:hidden"
+                      priority={false}
+                    />
+                    <Image
+                      src={data.media.path}
+                      alt={data.media.alt || data?.title || "image"}
+                      width={615}
+                      height={636}
+                      className="w-full h-full object-cover max-sm:!hidden"
+                      priority={false}
+                    />
+                  </>
+                ) : (
+                  <Image
+                    src={data.media.path}
+                    alt={data.media.alt || data?.title || "image"}
+                    width={615}
+                    height={636}
+                    className="w-full h-full object-cover"
+                    priority={false}
+                  />
+                ))
+                } */}
             </div>
           </div>
         </div>

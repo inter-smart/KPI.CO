@@ -51,6 +51,7 @@ export type RiskAdvisoryDta = {
 export type ProcessStep = {
   id: number;
   title: string;
+  step: string;
   inner_title: string;
   sub_title: string;
   description: string;
@@ -65,6 +66,7 @@ export type RiskOrganisationData = {
   }[];
   ftr_description?: string;
   media?: {
+    mobileImagePath?: string;
     path?: string;
     alt?: string;
   };
@@ -187,43 +189,48 @@ const localData = {
     steps: [
       {
         id: 1,
+        step: "Step One",
         title: "Entity-specific risk assessment",
         inner_title: "Entity-specific risk assessment",
         sub_title: "Entity-specific risk assessment",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk. </p>",
       },
       {
         id: 2,
+        step: "Step Two",
         title: "Regulatory focused risk <br/> prioritisation",
         inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>Audit focus aligned to areas of DFSA supervisory interest, including governance, capital adequacy, valuation, and regulatory reporting</p>",
       },
       {
         id: 3,
+        step: "Step Three",
         title: "Judgement-driven audit execution",
         inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Procedures designed around professional judgement and risk severity, not standardised checklists.</p>",
       },
       {
         id: 4,
+        step: "Step Four",
         title: "Testing of key controls and <br/> balances",
         inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>Focused effort on material balances, complex transactions, and high-risk processes.</p>",
       },
       {
         id: 5,
+        step: "Step Five",
         title: "Documentation",
         inner_title: "Documentation",
         sub_title: "Documentation",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>Working papers aligned clearly to risk assessment, audit response, and conclusions.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -248,6 +255,7 @@ const localData = {
 
     media: {
       path: "/images/why-audit.jpg", // <-- your image path
+      // mobileImagePath: "/images/why-mobile-audit.jpg", // <-- your mobile Image Path
       alt: "Required documents",
     },
     ftr_description:
@@ -258,8 +266,7 @@ const localData = {
     free_zone_list: [
       {
         id: 1,
-        title:
-          "Audit Support During DIFC Liquidation & Regulatory <br/> Closure",
+        title: "Audit Support During DIFC Liquidation & Regulatory Closure",
         description:
           "Audits are often required during DIFC liquidation, restructuring, or regulatory closure processes.",
         highlightsText:
@@ -322,7 +329,7 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/overlay-difc.png",
+      overlay: "/images/overlay-difc.svg",
       overlayMobile: "/images/overlay-difc-mobile.png",
     },
   } satisfies CtaData,
@@ -351,33 +358,44 @@ const localData = {
   },
   difc_faq_data: {
     title: "FAQs",
+    button: {
+      label: "Learn More",
+      link: "/contact",
+      target: "_blank",
+    },
     faq_list: [
       {
         id: 1,
         title: "What is a DIFC regulated audit?",
         description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+          <p>A DIFC regulated audit is an independent examination of financial statements for entities registered in the Dubai International Financial Centre, conducted in accordance with ISA, DIFC laws, and DFSA Rulebooks. These audits are designed to meet statutory filing requirements and withstand DFSA regulatory review. </p>
                         `,
       },
       {
         id: 2,
         title: "Who requires a DIFC audit?",
         description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
+          <p>DIFC audits are required for: </p>
+          <ul>
+          <li>DFSA-regulated financial institutions and financial services firms</li>
+          <li>DIFC-registered entities including holding companies and SPVs </li>
+          <li>Investment funds operating within DIFC </li>
+          <li>Any entity subject to DIFC Companies Law audit requirements </li>
+          </ul>
                         `,
       },
       {
         id: 3,
         title: "What makes DIFC audits different?",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>DIFC audits operate under heightened regulatory scrutiny where audit judgements are challengeable, documentation standards are high, and regulatory consequences may arise from governance or reporting weaknesses. </p>
                         `,
       },
       {
         id: 4,
         title: "Is KPI an approved DIFC audit firm?",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>Yes. KPI is registered as an approved audit firm in DIFC and provides audit services to DIFC-registered and DFSA-regulated entities. </p>
                         `,
       },
       {
@@ -391,7 +409,7 @@ const localData = {
         id: 6,
         title: "How long does a DIFC audit take?",
         description: `
-          <p>Some jurisdictions and business activities require a physical office or flexi-desk. KPI Group helps you select compliant office solutions that meet licensing and visa requirements.</p>
+          <p>Typically 4–8 weeks depending on size, complexity, and regulatory classification. Timelines are confirmed during engagement scoping. </p>
                         `,
       },
       {
@@ -410,7 +428,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -428,25 +446,37 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero variant="difc-regulated" data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
-      <RiskAdvisory
-        variant={["difc", "center"]}
-        data={localData.riskAdvisory}
-      />
+      <RiskAdvisory variant="difc-regulated" data={localData.riskAdvisory} />
       <CorporateServicesUaeFormationProcess
-        variant="aup"
+        variant="difc-regulated"
         data={localData.ProcessStep}
       />
-      <RiskOrganisation data={localData.riskOrganisation} />
-      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
+      <RiskOrganisation
+        variant="difc-regulated"
+        data={localData.riskOrganisation}
+      />
+      <MeydanFreeZone
+        variant="difc-regulated"
+        data={localData.meydanFreeZone}
+      />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="difc-regulated"
       />
-      <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} />
+      <RiskExploreService
+        variant="difc-regulated"
+        data={localData.explore_service}
+      />
+      <CorporateServicesUaeCta
+        variant="difc-regulated"
+        data={localData.contactUs}
+      />
+      <CorporateServicesUaeFaq
+        variant="difc-regulated"
+        data={localData.difc_faq_data}
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

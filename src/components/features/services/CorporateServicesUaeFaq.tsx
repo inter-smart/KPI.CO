@@ -28,7 +28,7 @@ export type CorporateServicesUaeFaqData = {
 
 export type CorporateServicesUaeFaqProps = {
   data: CorporateServicesUaeFaqData;
-  variant?: "side-arrow" | "holding" | "Financial-Statement-Audit";
+  variant?: "side-arrow" | "holding" | "Financial-Statement-Audit" | "difc-regulated";
 };
 
 export default function CorporateServicesUaeFaq({
@@ -73,6 +73,8 @@ export default function CorporateServicesUaeFaq({
                     "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "difc-regulated" &&
+                      "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
                   )}
                 >
                   <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">
