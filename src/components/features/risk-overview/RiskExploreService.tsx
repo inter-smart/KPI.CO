@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated";
 };
 
 export default function RiskExploreService({
@@ -94,6 +94,8 @@ export default function RiskExploreService({
                       "flex-[0_0_82%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "ADGM-Foundations" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "difc-regulated" &&
+                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
                   <Service data={item} variant="risk" />
@@ -131,7 +133,7 @@ function Service({ data, variant }: ServiceProps) {
       href={data.slug ?? "#"}
       className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
     >
-      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
+      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}

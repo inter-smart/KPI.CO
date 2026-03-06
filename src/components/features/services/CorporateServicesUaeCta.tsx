@@ -29,8 +29,10 @@ export type CorporateServicesUaeCtaProps = {
   | "rakez"
   | "ADGM-Foundations"
   | "holding"
-    | "ifza"
-  | "dwtc";
+  | "ifza"
+  | "dwtc"
+  | "adgm-regulated"
+  | "difc-regulated";
 };
 
 export default function CorporateServicesUaeCta({
@@ -121,6 +123,7 @@ export default function CorporateServicesUaeCta({
               variant === "CorporateServicesUae" && "xl:w-[37%]",
               variant === "saifz" && "xl:w-[45%]",
               variant === "ifza" ? "lg:w-[35%]" : "",
+              
             )}
           >
             <Button
@@ -140,6 +143,10 @@ export default function CorporateServicesUaeCta({
 
                 variant === "dwtc" &&
                 "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                variant === "difc-regulated" &&
+                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                variant === "adgm-regulated" &&
+                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >
