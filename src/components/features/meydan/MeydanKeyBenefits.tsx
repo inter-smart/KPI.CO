@@ -60,13 +60,8 @@ export default function MeydanKeyBenefits({
             </Text>
           )}
         </div>
-<<<<<<< HEAD
-        <div className="w-full h-auto py-[20px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] 2xl:rounded-[15px] overflow-x-clip overflow-y-visible block">
-          <div className="w-full h-auto sm:px-[25px] xl:px-[30px] 3xl:px-[40px] mb-[30px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px]">
-=======
         <div className="w-full h-auto py-[20px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block">
           <div className="w-full h-auto sm:pl-[25px] xl:pl-[30px] 3xl:pl-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
->>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
             <Swiper
               slidesPerView="auto"
               spaceBetween={40}
@@ -90,12 +85,7 @@ export default function MeydanKeyBenefits({
                   slidesOffsetAfter: 40,
                 },
                 1920: {
-<<<<<<< HEAD
-                  spaceBetween: 55,
-                  slidesOffsetAfter: 40,
-=======
                   spaceBetween: 40,
->>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
                 },
               }}
               className="ThumbSlider !overflow-visible"
@@ -166,10 +156,6 @@ export default function MeydanKeyBenefits({
                           >
                             {typeof item === "string" ? (
                               <span className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden",
-<<<<<<< HEAD
-=======
-
->>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
                                 variant === "technology" && "text-[#4E4E4E] font-normal"
                               )}>
                                 {parse(item)}

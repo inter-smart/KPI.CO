@@ -89,15 +89,10 @@ export default function DocumentRequired({
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "AuditServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
-<<<<<<< HEAD
-        variant === "dmcc" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-[#F9FAFB]",
-=======
         variant === "Financial-Statement-Audit" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "VatServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
->>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
       )}
     >
       <div className="container relative">

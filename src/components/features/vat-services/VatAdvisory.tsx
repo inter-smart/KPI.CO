@@ -15,12 +15,11 @@ export type VatAdvisoryData = {
   }[];
 };
 
+type VatAdvisoryVariant = "default" | "difc-formation" | "VatServicesUae";
+
 interface VatAdvisoryProps {
   data: VatAdvisoryData;
-  variant ?: 
-  | "default"
-  | "difc-formation";
-  variant?: "default" | "VatServicesUae";
+  variant?: VatAdvisoryVariant;
 }
 
 export default function VatAdvisory({ data, variant="default" }: VatAdvisoryProps) {

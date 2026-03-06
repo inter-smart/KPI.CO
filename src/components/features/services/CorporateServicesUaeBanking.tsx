@@ -124,11 +124,7 @@ export default function CorporateServicesUaeBanking({
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(
-<<<<<<< HEAD
-                  "flex-[0_0_125px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
-=======
                   "flex-[0_0_40%] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
->>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
                 )}
               >
                 <div
