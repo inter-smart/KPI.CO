@@ -3,6 +3,7 @@ import { blogData } from "@/data/blogData";
 import type { InsightItem } from "@/app/page";
 import BlogHero, { BlogHeroData } from "@/components/features/blogs/BlogHero";
 import BlogList from "@/components/features/blogs/BlogList";
+import { getCategoryTree } from "@/lib/blog-api";
 
 type BlogPageData = {
   hero: BlogHeroData;
@@ -15,8 +16,7 @@ type BlogPageData = {
 const localData: BlogPageData = {
   hero: {
     title: "Our Blogs",
-    description:
-      "Stay informed with expert insights and the latest trends in audit, accounting and compliance in the UAE.",
+    description: "Stay informed with expert insights and the latest trends in audit, accounting and compliance in the UAE.",
   },
   blogs: {
     title: "Latest Reads",
@@ -26,7 +26,7 @@ const localData: BlogPageData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -37,15 +37,18 @@ const localData: BlogPageData = {
 
 export const metadata: Metadata = {
   title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
-  description:
-    "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
+  description: "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const categories = await getCategoryTree();
+
+  console.log(categories);
+
   return (
     <>
       <BlogHero data={localData.hero} />
-      <BlogList data={localData.blogs} />
+      <BlogList data={localData.blogs} categories={categories} />
     </>
   );
 }
