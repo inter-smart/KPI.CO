@@ -302,37 +302,39 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is an ADGM Foundation?",
+        title: "Who should consider setting up an ADGM SPV?",
         description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+          <p>ADGM SPVs are commonly used by investment groups, family offices, holding structures, joint ventures, and corporates seeking clean ownership separation, liability containment, or 
+structured asset holding without operational activity.
+</p>
                         `,
       },
       {
         id: 2,
-        title: "When should I consider setting up an ADGM Foundation?",
+        title: "Is an ADGM SPV subject to UAE Corporate Tax? ",
         description: `
-          <p>Yes. ADGM Foundations are currently tax-neutral, meaning no income tax, no capital gains tax, and no inheritance tax. That said, you'll still need to meet ADGM's Economic Substance requirements and comply with Anti-Money Laundering regulations.</p>
+          <p>Corporate tax treatment depends on the SPV’s activities, income sources, and eligibility under UAE Corporate Tax regulations. While many SPVs may qualify for exemptions or fall outside the taxable scope, this must be assessed on a case-by-case basis. Proper structuring and advisory at formation stage is critical.</p>
                         `,
       },
       {
         id: 3,
-        title: "How is an ADGM Foundation different from a trust?",
+        title: "Can an ADGM SPV open a UAE bank account? ",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>Yes. ADGM SPVs are eligible to open UAE corporate bank accounts. Banking approval depends on factors such as ownership structure, asset profile, jurisdiction of shareholders, and the underlying purpose of the SPV. Proper documentation and regulatory alignment significantly improve approval outcomes.</p>
                         `,
       },
       {
         id: 4,
-        title: "Who controls an ADGM Foundation?",
+        title: "What documents are required to set up an ADGM SPV? ",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>Typical requirements include shareholder and beneficial owner information, constitutional documents, and supporting KYC materials. The exact documentation depends on ownership complexity, jurisdictional exposure, and intended use of the SPV.</p>
                         `,
       },
       {
         id: 5,
-        title: "Are there tax benefits to an ADGM Foundation?",
+        title: "How much does it cost to set up an ADGM SPV? ",
         description: `
-          <p>Yes. ADGM Foundations are currently tax-neutral, meaning no income tax, no capital gains tax, and no inheritance tax. That said, you'll still need to meet ADGM's Economic Substance requirements and comply with Anti-Money Laundering regulations.</p>
+          <p>Costs depend on the nature of the structure, number of shareholders, documentation requirements, and ongoing compliance needs. ADGM SPVs are designed to be cost-efficient, but pricing should always be assessed relative to the intended use and longevity of the structure.</p>
                         `,
       },
     ] satisfies FaqItem[],
@@ -386,7 +388,10 @@ export default function DwtcFreezone() {
         data={localData.contactUs}
         variant="ADGM-Foundations"
       />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} />
+      <CorporateServicesUaeFaq
+        data={localData.difc_faq_data}
+        variant="ADGM-Spv-Formation"
+      />
       <HomeOurInsights data={localData.insights} variant="ADGM-Foundations" />
     </>
   );

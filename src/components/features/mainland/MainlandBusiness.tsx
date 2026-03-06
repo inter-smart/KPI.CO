@@ -68,19 +68,19 @@ export default function MainlandBusiness({
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
                 : "xl:w-[calc(100%-520px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[20px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[20px]",
               hasVariant(variant, "dafza") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "AuditServicesUae") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
             <div
@@ -119,7 +119,8 @@ export default function MainlandBusiness({
                 className={cn(
                   "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px] [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
                   hasVariant(variant, "hamriya") && "mb-0",
-                  hasVariant(variant, "AuditServicesUae") && "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
+                  hasVariant(variant, "AuditServicesUae") &&
+                    "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                 )}
               >
                 {parse(data.description)}
@@ -137,7 +138,7 @@ export default function MainlandBusiness({
                     className={cn(
                       "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[25px]",
                       variant === "ADGM-Foundations" &&
-                      "mb-[20px] sm:mb-[25px]",
+                        "mb-[20px] sm:mb-[25px]",
                     )}
                   >
                     {data.highlightsTitle}
@@ -161,9 +162,9 @@ export default function MainlandBusiness({
                           className={cn(
                             "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
                             hasVariant(variant, "dsoa") &&
-                            "max-sm:min-h-[378px]",
+                              "max-sm:min-h-[378px]",
                             hasVariant(variant, "ADGM-Foundations") &&
-                            "xl:w-[16px]",
+                              "xl:w-[16px]",
                             hasVariant(variant, "Mainland") && "xl:w-[16px]",
                             hasVariant(variant, "ifza") && "xl:w-[16px]",
                             hasVariant(variant, "SAIFZ") && "xl:w-[16px]",

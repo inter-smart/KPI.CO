@@ -130,6 +130,7 @@ export default function InnerHero({
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "Financial-Statement-Audit" && "xl:text-[20px]",
                 variant === "VatServicesUae" && "xl:text-[20px]",
+                variant === "ADGM-Foundations" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}
