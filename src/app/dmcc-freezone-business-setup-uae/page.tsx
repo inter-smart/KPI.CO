@@ -286,44 +286,38 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is a DMCC Free Zone company?",
+        title: "What is a DMCC Free Zone company? ",
         description: `
-                        <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                        <p>A company in DMCC Free Zone is a legal entity in Dubai offering 100% foreign ownership, flexible licenses, and a business-friendly environment. </p>
                         `,
       },
       {
         id: 2,
-        title: "Can I set up remotely from outside the UAE?",
+        title: "Can I set up remotely from outside the UAE? ",
         description: `
-                        <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                        <p>Yes, the entire company registration process can be completed online from anywhere. </p>
                         `,
       },
       {
         id: 3,
-        title: "Is 100% foreign ownership allowed?",
+        title: "Is 100% foreign ownership allowed? ",
         description: `
-                        <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                        <p>Yes, DMCC Free Zone allows full foreign ownership with no local sponsor.  </p>
                         `,
       },
       {
         id: 4,
         title: "How long does DMCC business setup take?",
         description: `
-                        <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                        <p>Trade licenses can often be issued within 1–3 business days; visa processing and banking usually take 5–7 business days. </p>
                         `,
       },
+      
       {
         id: 5,
-        title: "How long does mainland company setup take? ",
+        title: "How much does a DMCC Free Zone license cost? ",
         description: `
-                        <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
-                        `,
-      },
-      {
-        id: 6,
-        title: "How long does DMCC business setup take?",
-        description: `
-                        <p>Costs depend on the business activity, license type, office requirements, and visas needed. Our team provides a clear breakdown before starting. </p>
+                        <p>Packages start from approximately AED 15,000; costs vary depending on visa package and services required. </p>
                         `,
       },
     ] satisfies FaqItem[],
@@ -364,11 +358,11 @@ const localData = {
         id: 2,
         title: "Cost-Effective Setup",
         items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
+          "Fast licensing (often within to 1–3 days)",
+          "License packages start from AED ~15,000 ",
+          "Flexi‑desk options included in most packages",
+          "No mandatory office lease required initially ",
+          "Transparent setup costs with no hidden fees ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -379,10 +373,11 @@ const localData = {
         id: 3,
         title: "Flexible Visa Options",
         items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
+          "Visa packages available from 0 to 6 visas",
+          "Family and employee visas can be sponsored ",
+          "Visa allocation optional based on package",
+          "Support for visa applications and renewals ",
+          "Flexibility to scale visas as your team grows",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -393,10 +388,11 @@ const localData = {
         id: 4,
         title: "Tax & Banking Advantages",
         items: [
-          "100% repatriation of capital and profits",
-          "No customs duties on import/export",
-          "Assistance with corporate bank account opening",
-          "Access to global trade networks",
+          "No UAE corporate tax on qualifying free zone income ",
+          "100% profit repatriation to any country",
+          "No currency restrictions or capital controls ",
+          "Internationally recognized DMCC license for credibility ",
+          "Assistance with opening UAE and international bank accounts ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -437,7 +433,7 @@ const localData = {
         id: 1,
         title: "Choosing the Right Structure",
         description:
-          "If your business requires Mainland or other Free Zone options, our expert team will guide you to the best setup for your goals.",
+          "If your business needs a Mainland or different Free Zone setup, our experts can help you choose the right option based on your business needs.",
       },
     ],
   } satisfies MeydanFreeZoneData,

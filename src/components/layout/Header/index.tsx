@@ -143,8 +143,8 @@ export default function Header() {
 
   return (
     <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[4] shadow-sm flex items-center">
-      <div className="container">
-        <div className="flex items-center">
+      <div className="container xl:h-full">
+        <div className="flex items-center xl:h-full">
           {/* Logo Section */}
           <div className="w-[120px] lg:w-[100px] xl:w-[130px] 2xl:w-[150px] 3xl:w-[180px]">
             <Link href="/" className="flex items-center w-full">
@@ -171,7 +171,7 @@ export default function Header() {
               </Link>
 
               {/* Mega Menu Container - Fixed Alignment Point */}
-              <div className="flex items-center gap-6 xl:gap-8 2xl:gap-10 relative h-full group/nav">
+              <div className="flex items-center gap-6 xl:gap-[35px] 2xl:gap-10 relative h-full group/nav">
                 {navItems.slice(1).map((item, index) => (
                   <div
                     key={index}
@@ -183,7 +183,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4"
+                      className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4 xl:py-[29px]"
                     >
                       {item.label}
                       {item.isMega && (
@@ -208,8 +208,8 @@ export default function Header() {
               <div className="hidden lg:block">
                 <Link
                   href="/contact"
-                  className="text-[14px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916]  flex items-center
-                   justify-center font-semibold px-7 py-2.5 rounded-[8px] transition-all duration-300 shadow-none  hover:scale-105 active:scale-95 "
+                  className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916] min-w-[150px] flex items-center
+                   justify-center font-semibold px-7 py-2.5 rounded-[8px] transition-all duration-300 shadow-none  hover:scale-100 active:scale-95 "
                 >
                   Get in Touch
                 </Link>
@@ -248,13 +248,13 @@ export default function Header() {
                   >
                     <SheetHeader className="p-4">
                       <div className="flex items-center justify-between">
-                        <SheetTitle className="text-left">
+                        <SheetTitle className="text-left w-[120px]">
                           <Image
                             src={site_settings.header_logo_value}
                             alt={site_settings.header_logo_alt_text_value}
                             width={100}
                             height={30}
-                            className="w-auto h-8"
+                            className="w-full h-full"
                           />
                         </SheetTitle>
                       </div>
@@ -308,10 +308,10 @@ export default function Header() {
                                           >
                                             <div className="flex items-center gap-3">
                                               {mega.icon && (
-                                                <div className="w-8 h-8 rounded-[6px] flex items-center justify-center bg-gradient-to-b from-[#6A9FE0] to-[#053269]">
+                                                <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
                                                   {typeof mega.icon ===
                                                   "string" ? (
-                                                    <div className="relative w-5 h-5">
+                                                    <div className="relative w-[14px] h-[14px]">
                                                       <Image
                                                         src={
                                                           mega.icon.endsWith(
@@ -369,7 +369,7 @@ export default function Header() {
                           <div className="pt-8">
                             <Link
                               href="/contact"
-                              className="text-[16px] w-full h-12 bg-[#FFC916] text-black font-semibold flex items-center justify-center rounded-[8px]"
+                              className="text-[16px] w-full h-12 bg-[#FFC916] text-black font-semibold flex items-center justify-center rounded-[8px] "
                               onClick={() => setMenuSheetOpen(false)}
                             >
                               Get in Touch

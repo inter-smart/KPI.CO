@@ -57,7 +57,7 @@ export default function BusinessLocation({
           {data.items.map((item) => (
             <div
               key={item.id}
-              className={cn("group relative min-h-[210px] xl:min-h-[245px] xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md",variant === "Formation-ADGM" && "xl:min-h-[230px]")}
+              className={cn("group relative min-h-[235px] md:min-h-[210px] xl:min-h-[245px] xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md",variant === "Formation-ADGM" && "xl:min-h-[230px]")}
             >
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[rgba(78,78,78,0)] via-[rgba(78,78,78,0)] to-[rgba(0,0,0,0.8)] group-hover:opacity-0 aspect-[500/312]"/>
               <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">
@@ -68,7 +68,7 @@ export default function BusinessLocation({
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-                <div className={cn("absolute bottom-0 left-0 p-[40px_30px]",
+                <div className={cn("absolute bottom-0 left-0 p-[32px_24px] md:p-[40px_30px]",
                   variant === "difc-formation" && "xl:p-[40px_24px]"
                 )}>
                   <Heading

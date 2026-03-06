@@ -184,11 +184,11 @@ const localData = {
         id: 2,
         title: "Financial & Operational Verifications",
         items: [
-          "One of the most competitive license costs in Dubai",
-          "No paid-up share capital required",
-          "Reasonable visa allocation costs",
-          "Zero personal income tax",
-          "Zero corporate tax for qualifying companies",
+          "Review of Accounts Receivable and Accounts Payable",
+          "Verification of cash and bank balances ",
+          "Review of loans and advances ",
+          "Assessment of tax provisions ",
+          "Observation and reporting of inventory stock counts ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -199,10 +199,9 @@ const localData = {
         id: 3,
         title: "Transaction & Compliance Support",
         items: [
-          "Choose 0 to 6 visa allocations",
-          "Visas for owners, employees, and dependents",
-          "Efficient visa processing through digital portal",
-          "Option to upgrade visa package as you grow",
+          "Due diligence for mergers, acquisitions, or partnerships",
+          "Verification of compliance with licensing and regulatory requirements ",
+          "Review of HR and payroll-related processes ", 
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -224,7 +223,7 @@ const localData = {
         sub_title: "",
                 inner_title: "Clear Scoping",
         description:
-          "<p>Procedures are agreed upfront to ensure clarity and alignment.</p>",
+          "<p>Procedures are agreed upfront to ensure clarity and alignment. </p>",
       },
       {
         id: 2,
@@ -232,7 +231,7 @@ const localData = {
         sub_title: "",
                 inner_title: "Precise Execution",
         description:
-          "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
+          "<p>Work is performed strictly as defined, without scope expansion. </p>",
       },
       {
         id: 3,
@@ -240,7 +239,7 @@ const localData = {
         sub_title: "",
                 inner_title: "Structured Reporting",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Findings are documented clearly for stakeholder use.</p>",
       },
       {
         id: 4,
@@ -248,7 +247,7 @@ const localData = {
         sub_title: "",
                 inner_title: "Timely Delivery",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>Engagements are completed efficiently to meet regulatory or commercial timelines.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -342,7 +341,7 @@ const localData = {
   ] satisfies CounterItem[],
 
   explore_service: {
-    title: "Explore Related Audit Services",
+    title: "<span>Explore</span> Related Audit Services",
     items: [
       {
         id: 1,
@@ -375,7 +374,7 @@ const localData = {
     },
     images: {
       overlay: "/images/aupCta-desk.png",
-      overlayMobile: "/images/aupCta-desk.png",
+      overlayMobile: "/images/ctaAgreed.png",
     },
   } satisfies CtaData,
 
@@ -386,44 +385,38 @@ const localData = {
         id: 1,
         title: "What's the difference between an AUP and an audit?",
         description: `
-                        <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+                        <p>An audit provides an opinion on whether financial statements are free from material misstatement. An AUP engagement performs specific agreed procedures and reports factual findings only - no opinion or assurance is provided. </p>
                         `,
       },
       {
         id: 2,
-        title: "Who decides what procedures are performed?",
+        title: "Can I rely on an AUP report for decision-making? ",
         description: `
-                        <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                        <p>AUP reports present factual findings based on procedures performed. Users must evaluate the findings and draw their own conclusions based on their specific needs.</p>
                         `,
       },
       {
         id: 3,
-        title: "Can I rely on an AUP report for decisio",
+        title: "Is an AUP report suitable for regulatory submissions? ",
         description: `
-                        <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                        <p>Yes, many UAE regulators (including DFSA and FSRA) specifically require AUP reports for certain regulatory returns and compliance verifications.</p>
                         `,
       },
       {
         id: 4,
-        title: "WIs an AUP report suitable for regulatory submissions?",
+        title: "How much does an AUP engagement cost?",
         description: `
-                        <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                        <p>Fees depend on the scope, complexity, and number of procedures agreed. We provide transparent fee estimates after understanding your specific requirements. </p>
                         `,
       },
       {
         id: 5,
-        title: "How much does an AUP engagement cost?",
+        title: "How long does an AUP engagement take? ",
         description: `
-                        <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
+                        <p>Typical engagements are completed within 2-4 weeks, though timelines vary based on scope and information availability.</p>
                         `,
       },
-      {
-        id: 6,
-        title: "How long does an AUP engagement take?",
-        description: `
-                        <p>Typical engagements are completed within 2-4 weeks, though timelines vary based on scope and information availability. </p>
-                        `,
-      },
+     
     ] satisfies FaqItem[],
   },
 
@@ -461,9 +454,9 @@ export default function page() {
       <DocumentRequired data={localData.document_required_data} variant="aup" />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="aup"
       />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter data={localData.counterList} variant="aup"/>
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />

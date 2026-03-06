@@ -38,9 +38,9 @@ export default function CorporateServicesUaeFaq({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[40px_70px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
+        "w-full h-auto py-[40px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
         variant === "holding" &&
-          "py-[40px_70px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
+          "py-[40px_20px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
       )}
     >
       <div className="container">
@@ -62,12 +62,12 @@ export default function CorporateServicesUaeFaq({
                 key={item.id}
                 className={cn(
                   "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
-                  variant === "holding" && "last:border-b-0",
+                  variant === "holding" && "sm:last:border-b-0 max-sm:!border-b"
                 )}
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                   )}

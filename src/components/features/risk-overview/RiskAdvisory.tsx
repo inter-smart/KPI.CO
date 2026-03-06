@@ -78,7 +78,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 ) || "",
               )}
             </div>
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row gap-3 max-sm:hidden">
               <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
                 {parse(data.highlightsText)}
               </div>
@@ -130,6 +130,11 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               </div>
             </div>
           </div>
+           <div className="flex flex-row gap-3 sm:hidden">
+              <div className="text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]">
+                {parse(data.highlightsText)}
+              </div>
+            </div>
         </div>
         {data?.structure_list && (
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">

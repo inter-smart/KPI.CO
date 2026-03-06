@@ -46,7 +46,7 @@ export default function CorporateServicesUaeBanking({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[40px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
+        "w-full h-auto py-[40px_45px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
         variant === "dsoa" || variant === "dmcc"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
@@ -58,6 +58,7 @@ export default function CorporateServicesUaeBanking({
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
+        variant === "dmcc" && "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
       )}
     >
       <div className="container">
@@ -123,7 +124,7 @@ export default function CorporateServicesUaeBanking({
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(
-                  "flex-[0_0_115px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
+                  "flex-[0_0_125px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
                 )}
               >
                 <div

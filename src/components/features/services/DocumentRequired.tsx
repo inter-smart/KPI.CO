@@ -74,7 +74,7 @@ export default function DocumentRequired({
         "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "internal-audit" &&
         "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
-        variant === "aup" && "bg-white",
+        variant === "aup" && "g-linear-to-t from-[rgba(62,176,234,0.8)] via-white to-white sm:bg-white",
         variant === "advisory" && "bg-white",
         variant === "hamriya" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
@@ -84,6 +84,8 @@ export default function DocumentRequired({
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "AuditServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "dmcc" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-[#F9FAFB]",
       )}
     >
       <div className="container relative">
@@ -106,7 +108,7 @@ export default function DocumentRequired({
                     <Heading
                       as="h2"
                       size="h2"
-                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",)}
+                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",)}
                     >
                       {parse(data.title)}
                     </Heading>

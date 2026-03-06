@@ -67,9 +67,12 @@ export default function RiskExploreService({
         <Heading
           as="h2"
           size="h2"
-          className="text-[#1c5396] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className={cn("text-[#1c5396] mb-[15px] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:[&>span]:hidden" ,
+              variant === "holding" &&
+                  "max-sm:text-[26px]",
+              )}
         >
-          {data.title}
+          {parse(data.title)}
         </Heading>
         <div className="-mx-[10px]">
           <div
@@ -131,7 +134,7 @@ function Service({ data, variant }: ServiceProps) {
       href={data.slug ?? "#"}
       className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
     >
-      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
+      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]  ">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}

@@ -81,7 +81,7 @@ export default function RiskOrganisation({
                     as="h2"
                     size="h2"
                     className={cn(
-                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
+                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] max-sm:text-[26px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
                       variant === "SOP" && "mb-[20px] xl:mb-[25px]",
                       variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
@@ -180,7 +180,8 @@ export default function RiskOrganisation({
                   as="h2"
                   size="h2"
                   className={cn("text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
-                    variant === "dwtc-doc" && "max-sm:text-[26px]"
+                    variant === "dwtc-doc" && "max-sm:text-[26px]" ||
+                    variant === "holding" && "max-sm:text-[26px]"
                   )}
                 >
                   {parse(data.title)}

@@ -72,7 +72,7 @@ export default function HomeOurInsights({
           as="h2"
           size="h2"
           className={cn("text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
-            variant === "holding" && "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]"
+            variant === "holding" && "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]"
           )}
         >
           {data.title}
@@ -136,7 +136,7 @@ function InsightCard({ data }: InsightCardProps) {
       <div className="w-full h-full p-[22px_18px] md:p-[18px] xl:p-[25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col">
         <Text
           size="p1"
-          className=" lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[14px] 2xl:mb-[12px] 3xl:mb-[15px]"
+          className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[14px] 2xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
         </Text>
@@ -149,7 +149,7 @@ function InsightCard({ data }: InsightCardProps) {
         <Text
           as="div"
           size="p1"
-          className="text-[16px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-relaxed   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
+          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-relaxed   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>

@@ -164,29 +164,29 @@ const localData = {
         id: 1,
         text: "100% foreign ownership - no local partner or sponsor required ",
       },
-      { id: 2, text: "Incorporation and registration with ADGM " },
+      
       {
-        id: 3,
+        id: 2,
         text: "0% corporate tax for Qualifying Free Zone Persons (QFZP) on eligible income",
       },
       {
-        id: 4,
+        id: 3,
         text: "0% withholding tax on dividends, interest, and royalties ",
       },
-      { id: 5, text: "0% capital gains tax on sale of shares or assets " },
+      { id: 4, text: "0% capital gains tax on sale of shares or assets " },
       {
-        id: 6,
+        id: 5,
         text: "English common law jurisdiction with independent ADGM Courts ",
       },
       {
-        id: 7,
+        id: 6,
         text: "Access to 68+ double taxation treaties for cross-border efficiency ",
       },
       {
-        id: 8,
+        id: 7,
         text: "No restrictions on profit repatriation or capital movement ",
       },
-      { id: 9, text: "Strategic MENA gateway with global connectivity " },
+      { id: 8, text: "Strategic MENA gateway with global connectivity " },
     ],
 
     media: {
@@ -347,37 +347,37 @@ const localData = {
       {
         id: 1,
         title:
-          "What is the difference between an ADGM holding company and an SPV?",
+          "Do I need a physical office in ADGM for a holding company? ",
         description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+          <p>Yes, holding companies must maintain a physical office presence in ADGM. You can choose between a business center/flexi-desk or a fitted office. This is mandatory for holding companies, unlike SPVs which can use a Company Service Provider without physical office.</p>
                         `,
       },
       {
         id: 2,
-        title: "Do I need a physical office in ADGM for a holding company?",
+        title: "Can I get 100% foreign ownership in an ADGM holding company? ",
         description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
+          <p>Yes, ADGM allows 100% foreign ownership with no requirement for a local sponsor or UAE national partner. Foreign investors have complete control over the entity, full ownership rights, and unrestricted profit repatriation. This is a key advantage over UAE mainland structures.</p>
                         `,
       },
       {
         id: 3,
-        title: "Can I get 100% foreign ownership in an ADGM holding company?",
+        title: "Do I need to pay tax on my ADGM holding company?",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>ADGM holding companies that qualify as Qualifying Free Zone Persons (QFZP) benefit from 0% corporate tax on eligible income, 0% withholding tax on dividends/interest/royalties, and 0% capital gains tax. However, you must register with UAE Federal Tax Authority and file annual tax returns even when no tax is payable. Maintaining QFZP status requires meeting financial substance requirements. </p>
                         `,
       },
       {
         id: 4,
-        title: "What are the ongoing compliance requirements?",
+        title: "Can I sponsor employee visas through an ADGM holding company?",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>Yes, holding companies can sponsor employee and director visas. The number of visas depends on your office size (number of desks) and business activities.</p>
                         `,
       },
       {
         id: 5,
-        title: "Do I need to pay tax on my ADGM holding company?",
+        title: "Can I use my ADGM holding company for family wealth succession planning? ",
         description: `
-          <p>ADGM holding companies that qualify as Qualifying Free Zone Persons (QFZP) benefit from 0% corporate tax on eligible income, 0% withholding tax on dividends/interest/royalties, and 0% capital gains tax. However, you must register with UAE Federal Tax Authority and file annual tax returns even when no tax is payable. Maintaining QFZP status requires meeting financial substance requirements.</p>
+          <p>Yes, ADGM holding companies are widely used for family wealth management and succession planning. Benefits include: centralized ownership of family assets across jurisdictions, tax-efficient intergenerational wealth transfer (0% capital gains, no inheritance tax in UAE), clear governance framework for family decision-making, asset protection through legal separation, professional management structure, and access to ADGM's family office ecosystem. Many families combine holding companies with ADGM Foundations for comprehensive succession planning..</p>
                         `,
       },
     ] satisfies FaqItem[],
