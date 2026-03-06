@@ -33,7 +33,7 @@ export default function BusinessLocation({
   variant = "default",
 }: BusinessLocationProps) {
   return (
-    <section className={cn("w-full py-[35px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[110px] bg-white",variant === "Formation-ADGM" && "xl:pb-[60px]")}>
+    <section className={cn("w-full py-[35px] xl:py-[50px] 2xl:py-[70px] 3xl:py-[110px] bg-white", variant === "Formation-ADGM" && "xl:pb-[60px]")}>
       <div className="container">
         {/* Header Section */}
         <div
@@ -57,7 +57,11 @@ export default function BusinessLocation({
           {data.items.map((item) => (
             <div
               key={item.id}
+<<<<<<< HEAD
               className={cn("group relative min-h-[235px] md:min-h-[210px] xl:min-h-[245px] xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md",variant === "Formation-ADGM" && "xl:min-h-[230px]")}
+=======
+              className={cn("group relative min-h-[235px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md", variant === "Formation-ADGM" && "xl:min-h-[230px]")}
+>>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
             >
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[rgba(78,78,78,0)] via-[rgba(78,78,78,0)] to-[rgba(0,0,0,0.8)] group-hover:opacity-0 aspect-[500/312]"/>
               <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">

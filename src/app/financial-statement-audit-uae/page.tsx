@@ -1,21 +1,21 @@
 import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
+import type { CounterItem } from "@/app/page";
 import InnerHero from "@/components/common/InnerHero";
+import HomeCounter from "@/components/features/home/HomeCounter";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import { blogData } from "@/data/blogData";
 import VatGuidance, {
   VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
-import HomeCounter from "@/components/features/home/HomeCounter";
-import type { CounterItem } from "@/app/page";
-import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type InsightItem = {
   id: number;
@@ -177,30 +177,34 @@ const localData = {
       {
         id: 1,
         title: "Planning & Risk Assessment",
+        inner_title: "Planning & Risk Assessment",
         sub_title: "Planning & Risk Assessment",
         description:
-          "<p>Understanding the business, its environment, and areas of higher audit risk.</p>",
+          "<p>Understanding the business, its environment, and areas of higher audit risk. </p>",
       },
       {
         id: 2,
         title: "Audit Execution",
+        inner_title: "Audit Execution",
         sub_title: "Audit Execution",
         description:
-          "<p>Evaluating whether controls exist, appropriately designed, operate effectively, and are properly documented.</p>",
+          "<p>Focused testing of financial information based on materiality and risk.</p>",
       },
       {
         id: 3,
         title: "Audit Reporting",
+        inner_title: "Audit Reporting",
         sub_title: "Audit Reporting",
         description:
-          "<p>Focusing on risks that carry regulatory, financial, or reputational consequences. </p>",
+          "<p>Clear conclusions and observations aligned with professional standards. </p>",
       },
       {
         id: 4,
-        title: "Completion & Sign-off",
+        title: "Completion & Sign-off ",
+        inner_title: "Completion & Sign-off ",
         sub_title: "Completion & Sign-off",
         description:
-          "<p>Suggest practical suggestion that management can implement, rather than an abstract observation.</p>",
+          "<p>Timely issuance of audit reports ready for regulatory or stakeholder use.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -230,7 +234,7 @@ const localData = {
     },
   } satisfies DocumentRequiredData,
   whyChoose: {
-    title: "Why Organisations Choose KPI for Financial Statement Audits",
+    title: "Why Organisations Choose KPI",
     sub_title: "",
     items: [
       {
@@ -338,17 +342,12 @@ const localData = {
   } satisfies CtaData,
   corporate_faq_data: {
     title: "FAQs",
-    button: {
-      label: "Learn More",
-      link: "/contact",
-      target: "_blank",
-    },
     faq_list: [
       {
         id: 1,
         title: "What is a financial statement audit?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>A financial statement audit is an independent examination of an entity’s financial statements to determine whether they are prepared, in all material respects, in accordance with applicable accounting standards and regulatory requirements. The audit results in an audit opinion relied upon by regulators, banks, investors, and other stakeholders.</p>
                     `,
       },
       {
@@ -356,7 +355,7 @@ const localData = {
         title:
           "Who is required to have a financial statement audit in the UAE?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>Financial statement audits are commonly required for: Companies subject to UAE statutory audit requirements Free zone entities (including DIFC and ADGM, where applicable) Companies seeking bank facilities or external funding Businesses with shareholder or investor reporting obligations Specific requirements depend on the jurisdiction, licence type, and regulatory framework.</p>
                     `,
       },
       {
@@ -364,22 +363,35 @@ const localData = {
         title:
           "What standards are used for financial statement audits in the UAE?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
-                    `,
+                    <p>Financial statement audits in the UAE are typically conducted in accordance with: </p> 
+                    <ul>
+                    <li>International Standards on Auditing (ISA) </li>
+                    <li>International Financial Reporting Standards (IFRS)</li>
+                    <li>Applicable UAE laws, free zone regulations, and authority requirements</li>
+                    </ul>
+                    <p>The exact standards applied depend on the entity’s regulatory environment.</p>
+`,
       },
       {
         id: 4,
         title: "How long does a financial statement audit take?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>Audit timelines vary based on the size, complexity, and preparedness of the organisation. Most financial statement audits are completed within 4–8 weeks, assuming timely availability of records and management responses. More complex entities or first-time audits may require additional time.</p>
                     `,
       },
       {
         id: 5,
-        title:
-          "Is a financial statement audit different from an internal audit?",
+        title: "What documents are required for a financial statement audit? ",
         description: `
-                    <p>Yes. A financial statement audit is an independent, statutory or externally relied-upon engagement focused on expressing an audit opinion on financial statements. An internal audit focuses on evaluating internal controls, risk management, and governance processes and is typically conducted for management and board assurance rather than statutory reporting.</p>
+                    <p>Typical audit documentation includes: </p> 
+                    <ul>
+                    <li>Trial balance and general ledger</li>
+                    <li>Financial statements and disclosures</li>
+                    <li>Supporting schedules for key balances</li>
+                    <li>Contracts, agreements, and confirmations</li>
+                    <li>Access to management and accounting personnel</li>
+                    </ul>
+                    <p>Requirements may vary depending on the entity’s operations and risk profile.</p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -391,7 +403,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -400,15 +412,15 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Corporate Tax Advisory Services in the UAE | KPI Group ",
+  title: "Financial Statement Audit Services in the UAE | KPI Group",
   description:
-    "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime. ",
+    "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders.",
 };
 
 export default function VatServicesUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="saifz" />
+      <InnerHero data={localData.hero} variant="Financial-Statement-Audit" />
       <VatGuidance
         data={localData.vatGuidance}
         variant="Financial-Statement-Audit"
@@ -420,16 +432,25 @@ export default function VatServicesUaePage() {
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="dfza"
+        variant="Financial-Statement-Audit"
       />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="Financial-Statement-Audit"
       />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter
+        data={localData.counterList}
+        variant="Financial-Statement-Audit"
+      />
       <VatRelatedTax data={localData.vatRelatedTax} />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeCta
+        data={localData.cta}
+        variant="Financial-Statement-Audit"
+      />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="Financial-Statement-Audit"
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

@@ -22,6 +22,7 @@ export type CorporateServicesUaeCtaProps = {
   variant?:
   | "default"
   | "CorporateServicesUae"
+  | "Financial-Statement-Audit"
   | "AuditServicesUae"
   | "mainland"
   | "saifz"
@@ -29,7 +30,7 @@ export type CorporateServicesUaeCtaProps = {
   | "rakez"
   | "ADGM-Foundations"
   | "holding"
-    | "ifza"
+  | "ifza"
   | "dwtc";
 };
 
@@ -88,6 +89,7 @@ export default function CorporateServicesUaeCta({
               variant === "CorporateServicesUae" && "xl:w-[63%]",
               variant === "saifz" && "xl:w-[55%]",
               variant === "ifza" ? "lg:w-[65%]" : "",
+              variant === "Financial-Statement-Audit" && "lg:w-[60%]",
             )}
           >
             <Heading
@@ -106,7 +108,7 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
                 variant === "blogdetail" && "font-medium [&_p]:font-medium",
-              variant === "AuditServicesUae" && "xl:max-w-[75%]",
+                variant === "AuditServicesUae" && "xl:max-w-[75%]",
               )}
             >
               {parse(data?.description)}
@@ -121,6 +123,7 @@ export default function CorporateServicesUaeCta({
               variant === "CorporateServicesUae" && "xl:w-[37%]",
               variant === "saifz" && "xl:w-[45%]",
               variant === "ifza" ? "lg:w-[35%]" : "",
+              variant === "Financial-Statement-Audit" && "lg:w-[40%]",
             )}
           >
             <Button
@@ -136,10 +139,12 @@ export default function CorporateServicesUaeCta({
                 "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
 
                 variant === "ifza" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
 
                 variant === "dwtc" &&
                 "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                variant === "Financial-Statement-Audit" &&
+                "max-sm:!min-w-[120px]",
               )}
               asChild
             >

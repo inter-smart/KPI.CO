@@ -33,6 +33,9 @@ type DocumentRequiredProps = {
   | "saifz"
   | "dfza"
   | "CorporateTaxUae"
+  | "VatServicesUae"
+  | "MeydanFreeZone"
+  | "Financial-Statement-Audit"
   | "aup"
   | "spv"
   | "tax-advisory"
@@ -82,10 +85,19 @@ export default function DocumentRequired({
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "sop" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
+        variant === "MeydanFreeZone" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "AuditServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+<<<<<<< HEAD
         variant === "dmcc" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-[#F9FAFB]",
+=======
+        variant === "Financial-Statement-Audit" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "VatServicesUae" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+>>>>>>> e0fd84558b0d12323fbf4fea9c557211513414b9
       )}
     >
       <div className="container relative">
@@ -98,6 +110,8 @@ export default function DocumentRequired({
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "AuditServicesUae" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "Financial-Statement-Audit" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "VatServicesUae" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "CorporateTaxUae" && "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
@@ -136,7 +150,7 @@ export default function DocumentRequired({
                       key={item.id}
                       className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] last-of-type:mb-0 relative"
                     >
-                      <span className={cn("absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto",variant === "CorporateTaxUae" && "xl:top-[4px]",)}>
+                      <span className={cn("absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto", variant === "CorporateTaxUae" && "xl:top-[4px]",)}>
                         {(variant === "hamriya" || variant === "aup") && (
                           <>
                             <div className="hidden sm:block">
@@ -203,12 +217,15 @@ export default function DocumentRequired({
                         )}
                         {(variant === "default" ||
                           variant === "dfza" ||
+                          variant === "MeydanFreeZone" ||
+                          variant === "Financial-Statement-Audit" ||
                           variant === "sop" ||
                           variant === "advisory" ||
                           variant === "dmcc" ||
                           variant === "tax-advisory" ||
                           variant === "freezone-business" ||
                           variant === "AuditServicesUae" ||
+                          variant === "VatServicesUae" ||
                           variant === "CorporateTaxUae" ||
                           variant === "mainland") && (
                             <svg
@@ -248,6 +265,8 @@ export default function DocumentRequired({
                 variant === "saifz" && "xl:w-[475px]",
                 variant === "dfza" && "xl:w-[475px]",
                 variant === "AuditServicesUae" && "xl:w-[475px]",
+                variant === "Financial-Statement-Audit" && "xl:w-[475px]",
+                variant === "VatServicesUae" && "xl:w-[475px]",
                 variant === "CorporateTaxUae" && "xl:w-[520px]",
               )}
             >
@@ -262,7 +281,7 @@ export default function DocumentRequired({
                   </Heading>
                 )}
               </div>
-              <div className="w-full h-[380px] sm:h-full rounded-[12px] overflow-hidden max-md:mb-6">
+              <div className="w-full h-[380px] sm:h-full rounded-[12px] overflow-hidden">
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "Document required"}
