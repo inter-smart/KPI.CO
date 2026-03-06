@@ -171,7 +171,7 @@ export default function CorporateServicesUaeWhyChoose({
                 </div>
               ))}
             </div>
-            <div className="flex justify-center items-center mt-6 gap-[20px] md:gap-[5px] sm:hidden">
+            <div className="flex justify-center items-center mt-6 gap-[20px] md:gap-[5px] xl:gap-[30px] sm:hidden">
               {scrollSnaps.map((_, index) => {
                 const distance = Math.abs(index - selectedIndex);
                 return (
@@ -196,18 +196,18 @@ export default function CorporateServicesUaeWhyChoose({
         )}
         <div
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:gap-[20px] xl:gap-[30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:gap-[20px] xl:gap-[30px] xl:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
             variant === "difc-regulated" && "hidden sm:grid",
             "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gap-[25px_30px] lg:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
             variant === "ADGM-Foundation" &&
-              "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
+              "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_40px]",
             variant === "holding" &&
               "max-sm:!gap-[18px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
             variant === "SOP" && "xl:!gap-[25px_30px]",
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
-            variant === "Formation-ADGM" && "xl:gap-[25px_30px]",
+            variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
             variant === "regulatory" &&
             "xl:!gap-[25px_30px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
@@ -244,7 +244,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           variant === "tax-advisory" ||
           variant === "internal-audit" ||
           variant === "ADGM-Foundation") &&
-          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:min-h-[156px]",
         variant === "spv" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
         variant === "holding" &&
@@ -289,7 +289,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           <>
             <div
               className={cn(
-                "text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] relative z-1 leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+                "text-[14px] lg:text-[16px] xl:!text-[16px] 2xl:text-[18px] 3xl:text-[21px] relative z-1 leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
                 variant === "ADGM-Foundation" &&
                   "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
                 variant === "CorporateServicesUae" && "xl:text-[14px]",

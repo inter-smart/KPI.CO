@@ -48,8 +48,9 @@ export default function MeydanFreeZone({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        "w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "audit" && "!pt-0 !pb-4",
+        variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
       )}
     >
       <div className="container">
@@ -68,10 +69,10 @@ export default function MeydanFreeZone({
         <div
           className={cn(
             "grid grid-cols-1 md:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-            (variant === "difc" || variant === "holding" || "difc-regulated") && "md:grid-cols-1",
+            (variant === "difc" || variant === "holding" || "difc-regulated" ) && "md:grid-cols-1",
             variant === "regulatory"  && "md:grid-cols-1",
             variant === "ADGM-Foundation" &&
-            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px]",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 ",
             variant === "ifza" &&
             "sm:gap-[15px] lg:gap-[20px] xl:gap-[40px] 2xl:gap-[35px] 3xl:gap-[40px]",
             variant === "MeydanFreeZone" &&
@@ -102,7 +103,7 @@ export default function MeydanFreeZone({
                     variant === "holding" &&
                     "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
                     variant === "ADGM-Foundation" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
+                    "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
                     "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
                   )}

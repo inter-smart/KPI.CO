@@ -304,35 +304,50 @@ const localData = {
         id: 1,
         title: "What is an ADGM Foundation?",
         description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+          <p>An ADGM Foundation is a legal structure with its own legal identity, but without shareholders. You can use it to hold assets, plan succession, and set up governance that works independently of any one person.
+</p>
                         `,
       },
       {
         id: 2,
         title: "When should I consider setting up an ADGM Foundation?",
         description: `
-          <p>Yes. ADGM Foundations are currently tax-neutral, meaning no income tax, no capital gains tax, and no inheritance tax. That said, you'll still need to meet ADGM's Economic Substance requirements and comply with Anti-Money Laundering regulations.</p>
+          <p>You might want to think about an ADGM Foundation if you're looking to: </p>
+          <ul>
+            <li>Plan for family succession without transferring shares directly </li>
+            <li>Protect significant assets from business or personal risks</li>
+            <li>Create ownership structures that outlast individuals </li>
+            <li>Separate legal ownership from economic benefit  </li>
+            <li>Establish governance independent of shareholders </li>
+          </ul>
                         `,
       },
       {
         id: 3,
-        title: "How is an ADGM Foundation different from a trust?",
+        title: "How is an ADGM Foundation different from a trust? ",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>A trust is a contractual arrangement where someone (the trustee) holds assets for beneficiaries. An ADGM Foundation is different. It's its own legal entity that actually owns the assets. Foundations tend to give you more flexibility and clearer governance, and they're fully recognized under UAE law </p>
                         `,
       },
       {
         id: 4,
-        title: "Who controls an ADGM Foundation?",
+        title: "Are there tax benefits to an ADGM Foundation?",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>Yes. ADGM Foundations are currently tax-neutral, meaning no income tax, no capital gains tax, and no inheritance tax. That said, you'll still need to meet ADGM's Economic Substance requirements and comply with Anti-Money Laundering regulations.</p>
                         `,
       },
       {
         id: 5,
-        title: "Are there tax benefits to an ADGM Foundation?",
+        title: "What are the ongoing requirements for an ADGM Foundation? ",
         description: `
-          <p>Yes. ADGM Foundations are currently tax-neutral, meaning no income tax, no capital gains tax, and no inheritance tax. That said, you'll still need to meet ADGM's Economic Substance requirements and comply with Anti-Money Laundering regulations.</p>
+          <p>Once your Foundation is set up, you'll need to: </p>
+           <ul>
+            <li>File an annual confirmation statement with ADGM  </li>
+            <li>Maintain financial records (IFRS standards) </li>
+            <li>Keep a registered office and registered agent in ADGM </li>
+            <li>Report any changes to the Council, Guardian, or charter  </li>
+            <li>Comply with AML and regulatory requirements</li>
+          </ul>
                         `,
       },
     ] satisfies FaqItem[],

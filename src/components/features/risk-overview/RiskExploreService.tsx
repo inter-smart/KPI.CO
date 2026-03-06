@@ -135,6 +135,8 @@ function Service({ data, variant }: ServiceProps) {
     <Link
       href={data.slug ?? "#"}
       className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
+      
+      
     >
       <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
         <Image
@@ -146,7 +148,8 @@ function Service({ data, variant }: ServiceProps) {
         />
       </div>
 
-      <div className="w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between">
+      <div className={cn("w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between" ,
+         variant === "ADGM-Foundations" && "xl:p-[50px_30px_85px] ",)}>
         <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">
           <Image
             src="/images/linkIcon.svg"
