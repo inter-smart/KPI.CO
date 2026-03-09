@@ -87,6 +87,7 @@ function WhyBuildCard({
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" && "shadow-none",
+        variant === "offshore" && "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -172,7 +173,7 @@ export default function CorporateServicesUaeWhyBuild({
         hasVariant(variant, "difc-formation") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "offshore") &&
-        "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-[#f9fafb]",
         hasVariant(variant, "CorporateServicesUae") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "saifz") &&
@@ -261,6 +262,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
             hasVariant(variant, "technology") &&
             "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
+            hasVariant(variant, "offshore") &&
+            "xl:gap-[25px]",
           )}
         >
           {data.items.map((item) => (

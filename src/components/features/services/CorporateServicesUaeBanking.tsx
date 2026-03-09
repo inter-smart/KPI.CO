@@ -15,19 +15,20 @@ type CorporateServicesUaeBankingProps = {
   };
 
   variant?:
-  | "default"
-  | "CorporateServicesUae"
-  | "mainland"
-  | "dwtc"
-  | "dsoa"
-  | "saifz"
-  | "dmcc"
-  | "ifza"
-  | "company"
-  | "freezone-business"
-  | "downshadow"
-  | "internal-audit"
-  | "audit";
+    | "default"
+    | "CorporateServicesUae"
+    | "mainland"
+    | "offshore"
+    | "dwtc"
+    | "dsoa"
+    | "saifz"
+    | "dmcc"
+    | "ifza"
+    | "company"
+    | "freezone-business"
+    | "downshadow"
+    | "internal-audit"
+    | "audit";
 };
 
 export default function CorporateServicesUaeBanking({
@@ -66,6 +67,7 @@ export default function CorporateServicesUaeBanking({
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
+            variant === "offshore" ||
               variant === "dwtc" ||
               variant === "saifz" ||
               variant === "dsoa" ||
@@ -88,6 +90,7 @@ export default function CorporateServicesUaeBanking({
               "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25 capitalize",
               variant === "ifza" && "!mb-[30px]",
               variant === "downshadow" && "!mb-[20px]",
+              variant === "offshore" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -98,9 +101,9 @@ export default function CorporateServicesUaeBanking({
               variant === "mainland"
                 ? ""
                 : variant === "dwtc" ||
-                  variant === "dsoa" ||
-                  variant === "freezone-business" ||
-                  variant === "dmcc"
+                    variant === "dsoa" ||
+                    variant === "freezone-business" ||
+                    variant === "dmcc"
                   ? "text-left"
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "saifz" && "text-left !max-w-full",
@@ -118,7 +121,7 @@ export default function CorporateServicesUaeBanking({
             className={cn(
               "flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 xl:[&>*]:p-[25px] 3xl:[&>*]:p-8.75",
               variant === "downshadow" &&
-              "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
+                "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
             )}
           >
             {data?.partners?.map((item) => (
@@ -132,9 +135,9 @@ export default function CorporateServicesUaeBanking({
                   className={cn(
                     "w-full h-[60px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
                     variant === "ifza" &&
-                    "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
+                      "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
                     variant === "internal-audit" &&
-                    "shadow-[0_13px_19px_#00000012]",
+                      "shadow-[0_13px_19px_#00000012]",
                   )}
                 >
                   <div

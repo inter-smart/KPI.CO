@@ -1,22 +1,22 @@
 import { Metadata } from "next";
+import { MediaItem } from "../page";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
-import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import { MainlandBusinessData } from "../mainland-company-formation-uae/page";
+import BlogRelated from "@/components/features/blogs/BlogRelated";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { MainlandBusinessData } from "../mainland-company-formation-uae/page";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import { MeydanFreeZoneData } from "../meydan-freezone-business-setup-uae/page";
-import MeydanKeyBenefits, {
-  MeydanKeyBenefitsData,
-} from "@/components/features/meydan/MeydanKeyBenefits";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
-import BusinessLocation, {
-  type BusinessLocationData,
-} from "@/components/features/mainland/BusinessLocation";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import BlogRelated from "@/components/features/blogs/BlogRelated";
-import { MediaItem } from "../page";
-import { blogData } from "@/data/blogData";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import MeydanKeyBenefits, {
+  MeydanKeyBenefitsData,
+} from "@/components/features/meydan/MeydanKeyBenefits";
+import BusinessLocation, {
+  type BusinessLocationData,
+} from "@/components/features/mainland/BusinessLocation";
 
 export type HeroData = {
   id: number;
@@ -78,7 +78,7 @@ const localData = {
       "<p>Set up a RAK ICC offshore company, part of Ras Al Khaimah Economic Zone (RAKEZ), in the UAE with 100% foreign ownership. A cost-effective offshore structure for international business, holding companies, and asset protection.</p>",
   } satisfies HeroData,
   freezoneBusiness: {
-    title: "Start a Business in Ras Al Khaimah, UAE",
+    title: "Start A Business In Ras Al Khaimah, UAE",
     description:
       "<p>Looking to start a business in the UAE without relocating? RAK ICC Offshore Company Formation provides a flexible, compliant solution for international entrepreneurs and businesses.</p>",
     highlightsTitle: "Common uses include:",
@@ -97,7 +97,7 @@ const localData = {
     },
   } satisfies MainlandBusinessData,
   jafzaFreeZone: {
-    title: "Is RAK ICC Right for You?",
+    title: "Is RAK ICC Right For You?",
     free_zone_list: [
       {
         id: 1,
@@ -132,9 +132,8 @@ const localData = {
       },
     ],
   } satisfies MeydanFreeZoneData,
-
   keyBenefits: {
-    title: "Key Benefits of RAK ICC Setup",
+    title: "Key Benefits Of RAK ICC Setup",
     slides: [
       {
         id: 1,
@@ -153,7 +152,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Easy Setup Process",
+        title: "Cost-Effective Setup",
         items: [
           "One of the most competitive license costs in Dubai",
           "No paid-up share capital required",
@@ -168,7 +167,7 @@ const localData = {
       },
       {
         id: 3,
-        title: "Flexible Visa Options",
+        title: "Flexible Legal Framework",
         items: [
           "Choose 0 to 6 visa allocations",
           "Visas for owners, employees, and dependents",
@@ -328,7 +327,8 @@ const localData = {
       { id: 4, text: "Risk assessment and advisory" },
       { id: 5, text: "Ongoing post‑setup service" },
     ],
-    ftr_description: "Our approach ensures that your RAK ICC company is structured for growth, compliant, and aligned with your business strategy.",
+    ftr_description:
+      "Our approach ensures that your RAK ICC company is structured for growth, compliant, and aligned with your business strategy.",
 
     media: {
       path: "/images/whywork-rak.jpg", // <-- your image path
@@ -395,7 +395,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -404,18 +404,21 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "JAFZA Free Zone Company Setup | Expert UAE Business Services  ",
+  title: "RAK ICC Offshore Company (RAKEZ) | UAE Business Setup Services",
   description:
-    "Set up your company in JAFZA Free Zone, Dubai. Flexible business licenses, 100% ownership, and tailored visa options for entrepreneurs and startups in the UAE. ",
+    "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch!",
 };
 
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.freezoneBusiness} />
-      <MeydanFreeZone data={localData.jafzaFreeZone} variant="ifza" />
-      <MeydanKeyBenefits data={localData.keyBenefits} />
+      <InnerHero data={localData.hero} variant="RAK-Offshore" />
+      <MainlandBusiness
+        data={localData.freezoneBusiness}
+        variant="RAK-Offshore"
+      />
+      <MeydanFreeZone data={localData.jafzaFreeZone} variant="RAK-Offshore" />
+      <MeydanKeyBenefits data={localData.keyBenefits} variant="RAK-Offshore" />
       <CorporateServicesUaeBanking
         data={localData.banking}
         variant="downshadow"

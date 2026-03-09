@@ -29,7 +29,7 @@ export type MeydanKeyBenefitsData = {
 
 export type MeydanKeyBenefitsProps = {
   data: MeydanKeyBenefitsData;
-  variant?: "default" | "Vat-Services" | "technology";
+  variant?: "default" | "Vat-Services" | "technology" | "RAK-Offshore";
 };
 
 export default function MeydanKeyBenefits({
@@ -62,8 +62,13 @@ export default function MeydanKeyBenefits({
         </div>
       </div>
       <div className="container max-sm:bg-[#f2fafe] max-sm:rounded-[12px]">
-        <div className="w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block">
-          <div className="w-full h-auto sm:pl-[25px] xl:pl-[42px] 3xl:px-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
+        <div
+          className={cn(
+            "w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
+            variant === "RAK-Offshore" && "xl:!py-[65px]",
+          )}
+        >
+          <div className={cn("w-full h-auto sm:pl-[25px] xl:pl-[42px] 3xl:px-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]",variant === "RAK-Offshore" && "xl:pl-[40px] xl:mb-[40px]")}>
             <Swiper
               slidesPerView="auto"
               spaceBetween={40}
@@ -108,7 +113,7 @@ export default function MeydanKeyBenefits({
               ))}
             </Swiper>
           </div>
-          <div className="w-full h-auto sm:px-[25px] xl:px-[40px] 3xl:px-[40px]">
+          <div className={cn("w-full h-auto sm:px-[25px] xl:px-[40px] 3xl:px-[40px]",variant === "RAK-Offshore" && "xl:px-[40px]")}>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
