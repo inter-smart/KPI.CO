@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { MediaItem } from "../page";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
-import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import OffshoreCompaniesUae from "@/components/offshore/OffshoreCompaniesUae";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 
 export type HeroData = {
   id: number;
@@ -98,7 +98,7 @@ const localData = {
       "<p>Set up an offshore company in the UAE to manage international business, protect assets, and structure global investments efficiently. Ideal for businesses and individuals operating outside the UAE and do not require a physical presence. </p>",
   } satisfies HeroData,
   mainlandBusiness: {
-    title: "Start an Offshore Company in the UAE",
+    title: "Start An Offshore Company In The UAE",
     description:
       "<p>An offshore company is a legal entity registered in the UAE for ownership and holding purposes without operating locally. It is commonly used to hold assets, manage investments, or structure group ownership, with no requirement for offices or residence visas. </p>",
     highlightsTitle: "Offshore companies are commonly used for: ",
@@ -116,7 +116,7 @@ const localData = {
     },
   } satisfies MainlandBusinessData,
   whyBuild: {
-    title: "Why Choose a Mainland Company Setup?   ",
+    title: "Why Choose A Mainland Company Setup?",
     description: "",
     items: [
       {
@@ -302,7 +302,7 @@ const localData = {
     ] satisfies BankingPartner[],
   },
   whyChoose: {
-    title: "Why Work with KPI Group? ",
+    title: "Why Work With KPI Group? ",
     description:
       "<p>KPI Group advises offshore structures with a focus on ownership clarity, jurisdiction suitability, and banking readiness – fully aligned with your long-term business goals. Our team supports you with: </p>",
     sub_title: "",
@@ -429,20 +429,23 @@ export const metadata: Metadata = {
 export default function CompanyFormationOffshoreUaePage() {
   return (
     <>
-      <InnerHero data={localData?.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <InnerHero data={localData?.hero} variant="Offshore" />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="Offshore" />
       <CorporateServicesUaeWhyBuild
-        variant="mainland"
+        variant="offshore"
         data={localData.whyBuild}
       />
-      <OffshoreCompaniesUae data={localData.offshoreCompanies} />
+      <OffshoreCompaniesUae
+        data={localData.offshoreCompanies}
+        variant="offshore"
+      />
+        <CorporateServicesUaeBanking
+          data={localData.banking}
+          variant="offshore"
+        />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="SOP"
-      />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
-        variant="mainland"
+        variant="offshore"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />

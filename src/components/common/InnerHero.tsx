@@ -23,25 +23,27 @@ export type InnerHeroData = {
 export type InnerHeroProps = {
   data: InnerHeroData;
   variant?:
-  | "default"
-  | "Mainland"
-  | "Financial-Statement-Audit"
-  | "CorporateTaxUae"
-  | "VatServicesUae"
-  | "CorporateServicesUae"
-  | "AuditServicesUae"
-  | "Formation-ADGM"
-  | "SOP"
-  | "saifz"
-  | "advisory"
-  | "dwtc"
-  | "erm"
-  | "ifza"
-  | "e-invoicing"
-  | "ADGM-Foundations"
-  | "technology"
-  | "internal-audit"
-  | "meydan";
+    | "default"
+    | "Mainland"
+    | "Financial-Statement-Audit"
+    | "CorporateTaxUae"
+    | "VatServicesUae"
+    | "CorporateServicesUae"
+    | "AuditServicesUae"
+    | "Offshore"
+    | "RAK-Offshore"
+    | "Formation-ADGM"
+    | "SOP"
+    | "saifz"
+    | "advisory"
+    | "dwtc"
+    | "erm"
+    | "ifza"
+    | "e-invoicing"
+    | "ADGM-Foundations"
+    | "technology"
+    | "internal-audit"
+    | "meydan";
 };
 
 export default function InnerHero({
@@ -66,7 +68,8 @@ export default function InnerHero({
         variant === "e-invoicing"
           ? "min-h-[640px] xl:min-h-[720px] 2xl:min-h-[770px] "
           : "",
-        variant === "technology" && "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+        variant === "technology" &&
+          "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -86,24 +89,30 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-            "md:max-w-[500px] xl:max-w-[750px]",
+              "md:max-w-[500px] xl:max-w-[750px]",
             variant === "saifz" &&
-            "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
-            variant === "dwtc" && "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+              "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "dwtc" &&
+              "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
-            variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+            variant === "ifza" &&
+              "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "technology" && "!max-w-full",
-            variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+            variant === "internal-audit" &&
+              "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
             variant === "CorporateTaxUae" && "xl:max-w-[770px]",
             variant === "Financial-Statement-Audit" && "xl:max-w-[770px]",
             variant === "VatServicesUae" && "xl:max-w-[790px]",
+            variant === "Offshore" && "xl:max-w-[780px]",
+            variant === "RAK-Offshore" && "xl:max-w-[775px]",
           )}
         >
           <Heading
             as="h1"
             size="h1"
-            className={cn("font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+            className={cn(
+              "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
 
               variant === "technology" && "max-w-[850px]",
             )}
@@ -116,17 +125,20 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
-                variant === "dwtc" && "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
+                variant === "dwtc" &&
+                  "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
-                "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
+                  "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
-                "xl:text-[16px] lg:max-w-[83%]",
+                  "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
-                variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
+                variant === "SOP" &&
+                  "lg:max-w-[90%] xl:mb-[30px] xl:text-[20px]",
                 variant === "ifza" && "lg:max-w-[100%]",
                 variant === "internal-audit" && "xl:text-[20px]",
                 variant === "Formation-ADGM" && "xl:text-[20px]",
+                variant === "Offshore" && "xl:text-[20px]",
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "Financial-Statement-Audit" && "xl:text-[20px]",
                 variant === "VatServicesUae" && "xl:text-[20px]",
@@ -146,7 +158,7 @@ export default function InnerHero({
                   className={cn(
                     "font-semibold text-white mb-2 sm:mb-4 xl:mb-6 2xl:mb-8",
                     variant === "CorporateServicesUae" &&
-                    "text-[14px] xl:text-[16px]",
+                      "text-[14px] xl:text-[16px]",
                   )}
                 >
                   <Image

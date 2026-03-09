@@ -12,6 +12,8 @@ type Variant =
   | "AuditServicesUae"
   | "CorporateTaxUae"
   | "Formation-ADGM"
+  | "RAK-Offshore"
+  | "Offshore"
   | "SAIFZ"
   | "spv"
   | "hamriya"
@@ -46,6 +48,8 @@ export default function MainlandBusiness({
         variant === "dafza" && "max-2xl:!pb-[20px]",
         variant === "Formation-ADGM" && "xl:pb-[70px]",
         variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
+        variant === "Offshore" && "xl:py-[70px]",
+        variant === "RAK-Offshore" && "xl:py-[90px_70px]",
       )}
     >
       <div className="container">
