@@ -1,19 +1,20 @@
+import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
-import { blogData } from "@/data/blogData";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import VatGuidance, {
   VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
 import VatAdvisory, {
   VatAdvisoryData,
 } from "@/components/features/vat-services/VatAdvisory";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatHealth, {
   VatHealthData,
 } from "@/components/features/vat-services/VatHealth";
@@ -273,7 +274,7 @@ const localData = {
   whyBuild: {
     title: "Common VAT Challenges We Help Solve ",
     description:
-      "<p>Businesses across the UAE face recurring VAT issues that create risk, inefficiency, and financial exposure. We identify these issues early and implement practical solutions before they escalate</p>",
+      "<p>Businesses across the UAE face recurring VAT issues that create risk, inefficiency, and financial exposure. We identify these issues early and implement practical solutions before they escalate.</p>",
     items: [
       {
         id: 1,
@@ -344,31 +345,35 @@ const localData = {
     steps: [
       {
         id: 1,
-        title: "Risk identification with business context",
-        sub_title: "Control assessment and gap analysis",
+        title: "Business-led assessment ",
+        inner_title: "Business-led assessment ",
+        sub_title: "Business-led assessment ",
         description:
-          "<p>Understanding how risks arise within day-to-day operations, decision making, organizations structures and not just within policy.</p>",
+          "<p>Understandhow VAT applies to real transactions, not just accounting entries</p>",
       },
       {
         id: 2,
-        title: "Control assessment and gap analysis",
-        sub_title: "Control assessment and gap analysis",
+        title: "Practical interpretation",
+        inner_title: "Practical interpretation",
+        sub_title: "Practical interpretation",
         description:
-          "<p>Evaluating whether controls exist, appropriately designed, operate effectively, and are properly documented.</p>",
+          "<p>Apply VAT rules in a way that supports commercial objectives while remaining fully compliant.</p>",
       },
       {
         id: 3,
-        title: "Clear prioritisation",
-        sub_title: "Clear prioritisation",
+        title: "Process alignment",
+        inner_title: "Process alignment",
+        sub_title: "Process alignment",
         description:
-          "<p>Focusing on risks that carry regulatory, financial, or reputational consequences. </p>",
+          "<p>Ensure VAT treatment is consistent across systems, contracts, and reporting. </p>",
       },
       {
         id: 4,
-        title: "Actionable recommendations",
-        sub_title: "Actionable recommendations",
+        title: "Ongoing clarity",
+        inner_title: "Ongoing clarity",
+        sub_title: "Ongoing clarity",
         description:
-          "<p>Suggest practical suggestion that management can implement, rather than an abstract observation.</p>",
+          "<p>Minimize recurring questions, rework, and uncertainty over time.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -415,7 +420,7 @@ const localData = {
       "Documentation and record-keeping improvements",
     ],
     button: {
-      label: "Book Your Free VAT Health Check",
+      label: "Get In Touch",
       link: "/contact",
     },
     media: {
@@ -473,35 +478,36 @@ const localData = {
         id: 1,
         title: "Who must register for VAT in the UAE?",
         description: `
-                    <p>You can register an FZE, FZC, or a branch of a UAE or foreign company in SAIF Free Zone. KPI handles the process from start to finish, ensuring fast approval and compliance.</p>
+                    <p>Businesses must register mandatorily when taxable supplies exceed AED 375,000 in the past 12 months or are expected to exceed this threshold in the next 30 days. Voluntary registration is available for businesses exceeding AED 187,500.</p>
                     `,
       },
       {
         id: 2,
         title: "How often do I need to file VAT returns?",
         description: `
-                    <p>Yes, mainland companies can be registered in different Emirates, including Dubai and Abu Dhabi.</p>
+                    <p>Most businesses file quarterly VAT returns. Businesses with annual turnover above AED 150 million are required to file monthly. All returns must be submitted within 28 days from the end of the tax period. </p>
                     `,
       },
       {
         id: 3,
         title: "What happens if I miss the VAT filing deadline?",
         description: `
-                    <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+                    <p>Late filing penalties start at AED 1,000 and increase based on the length of delay. Late payment incurs additional penalties and potential interest charges. Repeated non-compliance can lead to fines up to AED 50,000. </p>
                     `,
       },
       {
         id: 4,
         title: "Can I claim VAT on all business expenses?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+                    <p>No. Input VAT is recoverable only on expenses directly linked to taxable supplies. VAT on entertainment, personal use, and certain blocked categories cannot be claimed. Proper documentation is required for all claims.</p>
                     `,
       },
       {
         id: 5,
-        title: "Do free zone companies need to register for VAT?",
+        title:
+          "What is the difference between zero-rated and exempt supplies? ",
         description: `
-                    <p>Yes. Free zone companies must register if they exceed the mandatory registration threshold and make taxable supplies within the UAE or to other GCC countries. Different rules may apply for designated zones.</p>
+                    <p>Zero-rated supplies (0% VAT) allow businesses to recover input tax on related costs. Exempt supplies do not charge VAT and do not allow input tax recovery, which can increase costs for businesses making exempt supplies. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -569,11 +575,17 @@ const localData = {
   } satisfies VatRelatedTaxData,
 };
 
+export const metadata: Metadata = {
+  title: "VAT Advisory & Compliance Services in the UAE | KPI",
+  description:
+    "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations. ",
+};
+
 export default function VatServicesUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="saifz" />
-      <VatGuidance data={localData.vatGuidance} />
+      <InnerHero data={localData.hero} variant="VatServicesUae" />
+      <VatGuidance data={localData.vatGuidance} variant="VatServicesUae" />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
       <VatAdvisory data={localData.vatAdvisory} />
       <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="dafz" />
@@ -583,16 +595,19 @@ export default function VatServicesUaePage() {
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="dfza"
+        variant="VatServicesUae"
       />
       <VatHealth data={localData.vatHealth} />
-      <VatRelatedTax data={localData.vatRelatedTax} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="VatServicesUae"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <VatRelatedTax data={localData.vatRelatedTax} />
+      <CorporateServicesUaeCta data={localData.cta} variant="VatServicesUae" />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="side-arrow"
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

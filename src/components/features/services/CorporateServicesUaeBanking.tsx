@@ -18,6 +18,7 @@ type CorporateServicesUaeBankingProps = {
     | "default"
     | "CorporateServicesUae"
     | "mainland"
+    | "offshore"
     | "dwtc"
     | "dsoa"
     | "saifz"
@@ -67,6 +68,7 @@ export default function CorporateServicesUaeBanking({
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
+            variant === "offshore" ||
               variant === "dwtc" ||
               variant === "saifz" ||
               variant === "dsoa" ||
@@ -89,6 +91,7 @@ export default function CorporateServicesUaeBanking({
             className={cn(
               "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25",
               variant === "ifza" && "!mb-[30px]",
+              variant === "offshore" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -127,7 +130,7 @@ export default function CorporateServicesUaeBanking({
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(
-                  "flex-[0_0_115px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
+                  "flex-[0_0_40%] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
                 )}
               >
                 <div

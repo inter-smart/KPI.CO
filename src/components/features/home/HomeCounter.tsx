@@ -6,7 +6,7 @@ import type { CounterItem } from "@/app/page";
 
 type HomeCounterProps = {
   data: CounterItem[];
-  variant?: "default" | "risk" | "tax-advisory" | "technology" | "internal-audit";
+  variant?: "default" | "risk" | "tax-advisory" | "technology" | "internal-audit" | "Financial-Statement-Audit";
 };
 
 export default function HomeCounter({ data, variant = "default", }: HomeCounterProps) {
@@ -18,6 +18,7 @@ export default function HomeCounter({ data, variant = "default", }: HomeCounterP
         variant === "risk" && "bg-[rgba(143,216,254,0.1)]",
         variant === "tax-advisory" && "shadow-[0_-26px_50px_#00000008]",
         variant === "technology" && "shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)] xl:pt-[35px]",
+        variant === "Financial-Statement-Audit" && "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
       )}
     >
       <div className="container mx-auto">

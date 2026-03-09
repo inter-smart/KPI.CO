@@ -363,7 +363,7 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
       />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="sop"
+        variant="SOP"
       />
       <HomeCounter data={localData.counterList} />
       <VatRelatedTax data={localData.vatRelatedTax} />

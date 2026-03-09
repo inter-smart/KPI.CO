@@ -8,7 +8,8 @@ type Variant =
   | "default"
   | "difc"
   | "center"
-  | "AuditServicesUae"
+  | "AuditServicesUae" 
+  | "CorporateTaxUae"
   | "difc-regulated"
   | "adgm-regulated"
   | "regulatory";
@@ -83,7 +84,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </Heading>
             <div
               className={cn(
-                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5",
+                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5", 
+                variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "regulatory" &&
                   "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px]",
               )}
@@ -91,7 +93,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
-                  ' <span class="!text-[#5280CA] text-[18px] font-bold">→</span></p>',
+                  ' <span class="!text-[#5280CA] text-[13px] font-bold">→</span></p>',
                 ) || "",
               )}
             </div>
@@ -117,7 +119,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                     <div
                       key={`item-${item.id ?? index}`}
                       className={cn(
-                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
+                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px] [&>*]:p-[1px]",
                         hasVariant(variant, "difc")  || hasVariant(variant, "adgm-regulated")
                           ? cn(
                               "border-[#DEDEDE]",

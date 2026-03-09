@@ -5,7 +5,7 @@ import CorporateServicesUaeWhyBuild from "@/components/features/services/Corpora
 import VatAdvisory, {
   VatAdvisoryData,
 } from "@/components/features/vat-services/VatAdvisory";
-import BusinessLocation, {
+import BusinessLocation, { 
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
@@ -385,7 +385,7 @@ const localData = {
     ] satisfies BankingPartner[],
   },
   whyChoose: {
-    title: "Why Work with KPI ",
+    title: "Why Work With KPI ",
     description:
       "<p>We’re more than a company formation agent. Our audit, risk, and corporate services expertise ensure your DIFC company is compliant, strategically structured, and ready for growth. Ongoing support is included post-incorporation.</p>",
     sub_title: "",
@@ -498,7 +498,7 @@ export default function CompanyFormationDIFC() {
       />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
-        variant="SOP"
+        variant="Formation-DIFC"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />

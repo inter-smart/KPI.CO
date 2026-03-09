@@ -27,6 +27,14 @@ export type InnerHeroProps = {
     | "Mainland"
     | "CorporateServicesUae"
     | "AuditServicesUae"
+    | "Financial-Statement-Audit"
+    | "CorporateTaxUae"
+    | "VatServicesUae"
+    | "CorporateServicesUae"
+    | "AuditServicesUae"
+    | "Offshore"
+    | "RAK-Offshore"
+    | "Formation-ADGM"
     | "SOP"
     | "saifz"
     | "advisory"
@@ -100,6 +108,12 @@ export default function InnerHero({
             variant === "internal-audit" &&
               "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "regulatory" && "!max-w-full",
+            variant === "Formation-ADGM" && "xl:max-w-[790px]",
+            variant === "CorporateTaxUae" && "xl:max-w-[770px]",
+            variant === "Financial-Statement-Audit" && "xl:max-w-[770px]",
+            variant === "VatServicesUae" && "xl:max-w-[790px]",
+            variant === "Offshore" && "xl:max-w-[780px]",
+            variant === "RAK-Offshore" && "xl:max-w-[775px]",
           )}
         >
           <Heading
@@ -121,6 +135,7 @@ export default function InnerHero({
               className={cn(
                 "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "technology" && "xl:!text-[20px]",
+                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "dwtc" &&
                   "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&
@@ -129,10 +144,17 @@ export default function InnerHero({
                   "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" && "lg:max-w-[75%]",
-                variant === "SOP" && "lg:max-w-[73%] xl:mb-[30px]",
+                variant === "SOP" &&
+                  "lg:max-w-[90%] xl:mb-[30px] xl:text-[20px]",
                 variant === "ifza" && "lg:max-w-[100%]",
                 variant === "internal-audit" && "xl:text-[20px]",
                 variant === "regulatory" && "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
+                variant === "Formation-ADGM" && "xl:text-[20px]",
+                variant === "Offshore" && "xl:text-[20px]",
+                variant === "CorporateTaxUae" && "xl:text-[20px]",
+                variant === "Financial-Statement-Audit" && "xl:text-[20px]",
+                variant === "VatServicesUae" && "xl:text-[20px]",
+                variant === "ADGM-Foundations" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}

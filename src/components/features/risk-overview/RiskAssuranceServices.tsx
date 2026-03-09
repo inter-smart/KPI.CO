@@ -15,7 +15,7 @@ type RiskAssuranceProps = {
     description: string;
     items: RiskAssuranceData[];
   };
-  variant?: "internal-audit" | "company-freezone";
+  variant?: "internal-audit" | "Formation-ADGM" | "company-freezone";
 };
 
 export default function RiskAssuranceServices({
@@ -58,13 +58,14 @@ export default function RiskAssuranceServices({
   return (
     <section className="w-full py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]">
       <div className="container">
-        <div className="w-full">
+        <div className={cn("w-full", variant === "Formation-ADGM" && "xl:mb-[35px]",)}>
           <Heading
             as="h2"
             size="h2"
             className={cn(
               "text-[#1C5396] mb-25px] xl:mb-[25px]",
               variant === "internal-audit" && "leading-[125%] xl:mb-[38px]",
+              variant === "Formation-ADGM" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -73,7 +74,6 @@ export default function RiskAssuranceServices({
             {parse(data?.description)}
           </div>
         </div>
-
         <div className={cn("hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[30px] 2xl:gap-7.5 3xl:gap-9",
           variant === "internal-audit" && "xl:gap-y-[36px]"
         )}>

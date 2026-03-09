@@ -28,7 +28,11 @@ export type CorporateServicesUaeFaqData = {
 
 export type CorporateServicesUaeFaqProps = {
   data: CorporateServicesUaeFaqData;
-  variant?: "side-arrow" | "holding" | "difc-regulated";
+  variant?:
+    | "side-arrow"
+    | "holding"
+    | "Financial-Statement-Audit"
+    | "ADGM-Spv-Formation" | "difc-regulated";
 };
 
 export default function CorporateServicesUaeFaq({
@@ -41,6 +45,7 @@ export default function CorporateServicesUaeFaq({
         "w-full h-auto py-[40px_70px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
         variant === "holding" &&
           "py-[40px_70px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
+        variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px]",
       )}
     >
       <div className="container">
@@ -48,7 +53,10 @@ export default function CorporateServicesUaeFaq({
           <Heading
             as="h2"
             size="h2"
-            className="text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10"
+            className={cn(
+              "text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
+              variant === "Financial-Statement-Audit" && "xl:text-[48px]",
+            )}
           >
             {data?.title}
           </Heading>
@@ -63,12 +71,15 @@ export default function CorporateServicesUaeFaq({
                 className={cn(
                   "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
                   variant === "holding" && "last:border-b-0",
+                  variant === "ADGM-Spv-Formation" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
                   className={cn(
                     "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] [&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
                     variant === "side-arrow" &&
+                      "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "ADGM-Spv-Formation" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                     variant === "difc-regulated" &&
                       "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
@@ -79,7 +90,7 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
+                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>
