@@ -127,15 +127,15 @@ const localData = {
       mobilePath: "/images/tax-banner-mob.png",
       alt: "Practical Tax Advisory for UAE Businesses",
     },
-    title: "Practical Tax Advisory for UAE <br/> Businesses",
+    title: "Practical Tax Advisory for UAE Businesses",
     description:
-      "<p>In the UAE, tax is no longer just a number, its about interpretation and <br/>  application. Corporate tax, VAT, cross-border transaction require practical <br/>  judgement aligned with both regulation and business reality. KPI provides <br/>  clear, practical tax advice that help UAE businesses to make appropriate tax <br/>  decisions, manage risk, and remail compliant without compromising <br/>  commercial objectives.</p>",
+      "<p>In the UAE, tax is no longer just a number, its about interpretation and application. Corporate tax, VAT, cross-border transaction require practical  judgement aligned with both regulation and business reality. KPI provides  clear, practical tax advice that help UAE businesses to make appropriate tax  decisions, manage risk, and remail compliant without compromising  commercial objectives.</p>",
   } satisfies HeroData,
 
   whyRisk: {
-    title: "<p>What Makes Tax Decisions <br/> Hard Today </p>",
+    title: "What Makes Tax Decisions Hard Today ",
     highlightsTitle:
-      "<p>Tax risk rarely arises from numbers. It arises from ambiguity. In <br/> these circumstances, the challenge is not compliance, it is making <br/> tax choices without structure. Most organisations struggle when:</p>",
+      "<p>Tax risk rarely arises from numbers. It arises from ambiguity. In these circumstances, the challenge is not compliance, it is making tax choices without structure. Most organisations struggle when:</p>",
     highlights: [
       "Regulations allow multiple interpretations",
       "Transactions don't align with existing guidance",
@@ -192,7 +192,7 @@ const localData = {
         sub_title: "",
                 inner_title: "Establish the commercial reality",
         description:
-          "<p>We begin by understanding what is actually happening commercially and not just legally.</p>",
+          "<p>We begin by understanding what is actually happening commercially and not just legally. </p>",
       },
       {
         id: 2,
@@ -200,7 +200,7 @@ const localData = {
                 inner_title: "Interpret the applicable tax framewrok",
         sub_title: "",
         description:
-          "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
+          "<p>We analyse how UAE tax regulations apply in practice, including grey areas. </p>",
       },
       {
         id: 3,
@@ -208,7 +208,7 @@ const localData = {
                 inner_title: "Evaluate viable tax positions",
         sub_title: "",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Assess risk, defensibility, and downstream implications. </p>",
       },
       {
         id: 4,
@@ -216,7 +216,7 @@ const localData = {
                 inner_title: "Document and support the rationale",
         sub_title: "",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>We ensure final position is clearly articulated and documented. </p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -257,7 +257,7 @@ const localData = {
       {
         id: 1,
         media: { path: "/images/explore-01.jpg", alt: "Tax Advisory" },
-        title: "Corporate Tax Advisory <br/> UAE",
+        title: "Corporate Tax Advisory UAE",
         slug: "#",
       },
       {
@@ -269,7 +269,7 @@ const localData = {
       {
         id: 3,
         media: { path: "/images/explore-01.jpg", alt: "Audit Firm Guide" },
-        title: "eInvoicing <br/> Solution",
+        title: "eInvoicing Solution",
         slug: "#",
       },
     ] satisfies ServiceItem[],

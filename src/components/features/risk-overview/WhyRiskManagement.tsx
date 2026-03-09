@@ -20,7 +20,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
               <Heading
                 as="div"
                 size="h3"
-                className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize [&>span]:lowercase max-w-full !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
+                className="text-[28px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] capitalize [&>span]:lowercase max-w-full !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] hidden sm:block"
               >
                 {parse(data.title)}
               </Heading>
@@ -35,7 +35,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                 </Text>
                 <div className="flex flex-col">
                   {data.highlights?.map((item, index) => (
-                    <div key={index} className="flex py-3 lg:py-4 xl:py-5 3xl:py-7 border-0 border-b border-[#DEDEDE] last-of-type:border-0 last-of-type:pb-0">
+                    <div key={index} className="flex py-3 lg:py-4 xl:py-5 3xl:py-7 border-0 border-b border-[#DEDEDE] sm:last-of-type:border-0 sm:last-of-type:pb-0">
                       <div className="w-full flex gap-4 xl:gap-4 2xl:gap-6 ">
                         <div className="w-[25px] h-[27px] xl:w-[32px] xl:h-[32px] 2xl:w-[34px] 2xl:h-[34px] 3xl:w-[42px] 3xl:h-[42px] rounded-full flex items-center">
                           <Image

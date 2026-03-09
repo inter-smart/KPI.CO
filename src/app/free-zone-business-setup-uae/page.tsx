@@ -133,7 +133,7 @@ const localData = {
   } satisfies HeroData,
 
   mainlandBusiness: {
-    title: "Start a Free Zone Business in the UAE",
+    title: "Start A Free Zone Business In The UAE",
     description:
       "<p>Starting a free zone business in the UAE offers a fast and practical way to enter the market with clarity and control. Designed to support efficient company setup and long-term growth, free zones provide structured environments, simplified registration, and a wide choice of business activities. Whether you are launching a new venture, expanding an existing business, or establishing a regional base, free zone company formation allows you to operate within a regulated and business-friendly framework aligned with your commercial goals.</p>",
     highlightsTitle:
@@ -153,7 +153,7 @@ const localData = {
   } satisfies MainlandBusinessData,
 
   whyBuild: {
-    title: "Why Choose a Free Zone Company Setup?",
+    title: "Why Choose A Free Zone Company Setup?",
     description: "",
     items: [
       {
@@ -240,7 +240,7 @@ const localData = {
   },
 
   riskAssurance: {
-    title: "Types of Free Zone Licenses ",
+    title: "Types Of Free Zone Licenses ",
     description:
       "Each license supports specific business activities. KPI Group helps you choose the right type based on your goals and ensures compliance with Free Zone rules.",
     items: [
@@ -410,14 +410,14 @@ const localData = {
   } satisfies DocumentRequiredData,
 
   banking: {
-    title: "Banking Support for Free Zone Companies",
+    title: "Banking Support For Free Zone Companies",
     description:
       "<p>We help Free Zone businesses open corporate bank accounts with trusted UAE and international banks, guiding you to the right bank based on your license type, business activity, and operational needs.</p>",
     partners: [
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-6.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
@@ -431,36 +431,23 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-2.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-5.svg",
           alt: "Emirates NBD",
         },
       },
-      {
-        id: 5,
-        media: {
-          path: "/images/banking-partner-4.svg",
-          alt: "Emirates NBD",
-        },
-      },
-      {
-        id: 6,
-        media: {
-          path: "/images/banking-partner-7.svg",
-          alt: "Emirates NBD",
-        },
-      },
+     
     ] satisfies BankingPartner[],
   },
 
   whyChoose: {
-    title: "Why Work with KPI ",
+    title: "Why Work With KPI ",
     description:
       "KPI Group is more than a company setup service. We guide businesses through every step of Free Zone formation and beyond, helping you build a compliant, growth-ready company in the UAE. Our team supports you with:",
     sub_title: "",
@@ -583,23 +570,23 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="erm" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness variant="company-freezone" data={localData.mainlandBusiness} />
       <CorporateServicesUaeWhyBuild
-        variant="freeZone"
+        variant="company-freezone"
         data={localData.whyBuild}
       />
-      <RiskAssuranceServices data={localData.riskAssurance} />
+      <RiskAssuranceServices variant="company-freezone" data={localData.riskAssurance} />
       <CorporateServicesUaeFormationProcess
-        variant="mainland"
+        variant="company-freezone"
         data={localData.formationProcess}
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="freezone-business"
+        variant="company-freezone"
       />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="freezone-business"
+        variant="company-freezone"
       />
       <CorporateServicesUaeWhyChoose
         variant="freezone-business"

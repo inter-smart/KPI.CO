@@ -132,10 +132,10 @@ const localData = {
       "<p>Regulatory compliance is not just about filing requirements. It is about demonstrating control, governance, and accountability when regulators, auditors, or stakeholders ask questions. KPI Group supports organisations in meeting regulatory and compliance obligations across UAE jurisdictions with structured, defensible, and practical advisory support.</p>",
   } satisfies HeroData,
   riskAdvisory: {
-    title: "Why Regulatory & <br> Compliance Advisory Matters",
+    title: "Why Regulatory & Compliance Advisory Matters",
     description:
-      " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations →</p><div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
-    highlightsText: "",
+      " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations </p>",
+    highlightsText: "<div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
     advisoryItems: [
       {
         id: 1,
@@ -416,18 +416,18 @@ export const metadata: Metadata = {
 export default function RegulatoryComplianceAdvisoryUaePage() {
   return (
     <>
-      <InnerHero data={localData?.hero} variant="saifz" />
-      <RiskAdvisory data={localData.riskAdvisory} variant="difc" />
+      <InnerHero data={localData?.hero} variant="regulatory" />
+      <RiskAdvisory data={localData.riskAdvisory} variant="regulatory" />
       {/* <DocumentRequired
         data={localData?.document_required_data}
         variant="regulatory"
       /> */}
-      <RiskOrganisation data={localData?.document_required_data} />
+      <RiskOrganisation variant="regulatory" data={localData?.document_required_data} />
       <CorporateServicesUaeServices
         data={localData?.services}
         variant="regulatory"
       />
-      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
+      <MeydanFreeZone variant="regulatory" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
         variant="regulatory"

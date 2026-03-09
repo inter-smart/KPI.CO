@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
 };
 
 export default function RiskExploreService({
@@ -67,9 +67,12 @@ export default function RiskExploreService({
         <Heading
           as="h2"
           size="h2"
-          className="text-[#1c5396] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className={cn("text-[#1c5396] mb-[15px] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:[&>span]:hidden" ,
+              variant === "holding" &&
+                  "max-sm:text-[26px]",
+              )}
         >
-          {data.title}
+          {parse(data.title)}
         </Heading>
         <div className="-mx-[10px]">
           <div
@@ -93,6 +96,10 @@ export default function RiskExploreService({
                     variant === "holding" &&
                       "flex-[0_0_82%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "ADGM-Foundations" &&
+                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "difc-regulated" &&
+                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "adgm-regulated" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
@@ -130,8 +137,10 @@ function Service({ data, variant }: ServiceProps) {
     <Link
       href={data.slug ?? "#"}
       className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
+      
+      
     >
-      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px] max-sm:mb-[15px]">
+      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}
@@ -141,7 +150,8 @@ function Service({ data, variant }: ServiceProps) {
         />
       </div>
 
-      <div className="w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between">
+      <div className={cn("w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between" ,
+         variant === "ADGM-Foundations" && "xl:p-[50px_30px_85px] ",)}>
         <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">
           <Image
             src="/images/linkIcon.svg"

@@ -468,7 +468,7 @@ export default function MainlandCompanyFormationUaePage() {
       <DocumentRequired data={localData.document_required_data} variant="MeydanFreeZone" />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="mainland"
+        variant="Meydan"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow"/>

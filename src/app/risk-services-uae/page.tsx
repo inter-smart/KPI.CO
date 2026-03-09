@@ -65,6 +65,7 @@ export type RiskOrganisationData = {
   ftr_description?: string;
   media?: {
     path?: string;
+    mobileImagePath?: string;
     alt?: string;
   };
 };

@@ -24,6 +24,7 @@ type CorporateServicesUaeServicesProps = {
   | "regulatory"
   | "dsoa"
   | "technology"
+    | "difc-formation"
   | "CorporateServicesUae";
 };
 
@@ -32,7 +33,7 @@ export default function CorporateServicesUaeServices({
   variant = "default",
 }: CorporateServicesUaeServicesProps) {
   return (
-    <section className="w-full h-auto py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
+    <section className="w-full h-auto py-[40px_60px] xl:py-[60px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
       <div className="container">
         <div
           className={cn(
@@ -40,6 +41,7 @@ export default function CorporateServicesUaeServices({
             variant === "regulatory" && "sm:text-left",
             variant === "saifz" && "sm:text-left",
             variant === "CorporateTaxUae" && "sm:text-left",
+            variant === "difc-formation" && "sm:text-left",
             variant === "SOP" && "sm:text-left",
             variant === "ifza" && "sm:text-left",
             variant === "dafza" && "sm:text-left",
@@ -69,27 +71,31 @@ export default function CorporateServicesUaeServices({
         </div>
         <div
           className={cn(
-            "xl:max-w-[1120px] xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
             variant === "saifz" && "!max-w-full",
             variant === "CorporateTaxUae" && "!max-w-full",
+            variant === "difc-formation" && "!max-w-full",
             variant === "SOP" && "!max-w-full xl:gap-[40px]",
             variant === "dafza" && "!max-w-full",
             variant === "dwtc" && "xl:max-w-full",
             variant === "ifza" && "xl:max-w-full",
-            variant === "technology" && "xl:max-w-full"
+            variant === "technology" && "xl:max-w-full",
+            variant === "regulatory" && "!max-w-full xl:gap-[40px]",
           )}
         >
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
               <div
                 className={cn(
-                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-1 border-[#E2E2E2] flex transition-all duration-500 hover:border-[#1C5396]",
+                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px]  border-[1.6px] border-[#E2E2E2] flex transition-all duration-500",
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "ifza" && "max-sm:min-h-[160px]",
+                  variant === "rakez" && "min-h-[130px]",
                   variant === "regulatory" &&
                   "min-h-[180px] sm:min-h-[130px] xl:min-h-[160px] 2xl:min-h-[190px] 3xl:min-h-[240px]",
                   variant === "saifz" && "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "CorporateTaxUae" && "max-sm:min-h-[140px] border-[#E2E2E2]",
+                  variant === "difc-formation" && "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "SOP" && "max-sm:min-h-[140px]",
                 )}
               >
@@ -105,12 +111,15 @@ export default function CorporateServicesUaeServices({
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
                   <div className={cn("text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75",
                     variant === "technology" && "mb-0",
-                    variant === "CorporateTaxUae" && "!mb-0"
+                    variant === "CorporateTaxUae" && "!mb-0",
+                    variant === "regulatory" && "capitalize"
                   )}>
                     {item?.title}
                   </div>
                   {item?.description && (
-                    <p className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.6] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full">
+                    <p className={cn("text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[1.6] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
+                      variant === "regulatory" && "leading-relaxed xl:max-w-[92%]"
+                    )}>
                       {parse(item?.description)}
                     </p>
                   )}

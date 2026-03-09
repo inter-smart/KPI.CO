@@ -50,6 +50,7 @@ type DocumentRequiredProps = {
   | "difc"
   | "AuditServicesUae"
   | "internal-audit"
+  | "company-freezone"
   | "audit";
 };
 
@@ -62,9 +63,9 @@ export default function DocumentRequired({
   return (
     <section
       className={cn(
-        "w-full py-[40px] lg:py-[60px] xl:py-[70px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible relative",
+        "w-full py-[40px] lg:py-[60px] xl:py-[70px]  bg-[#F9FAFB] !overflow-visible relative",
         variant === "regulatory" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white xl:py-[94px_48px]",
         variant === "saifz" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
@@ -77,18 +78,20 @@ export default function DocumentRequired({
         "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "internal-audit" &&
         "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
-        variant === "aup" && "bg-white",
+        variant === "aup" && "g-linear-to-t from-[rgba(62,176,234,0.8)] via-white to-white sm:bg-white",
         variant === "advisory" && "bg-white",
         variant === "hamriya" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "freezone-business" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "company-freezone" &&
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "sop" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "MeydanFreeZone" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
+        "bg-[#F9FAFB]",
         variant === "AuditServicesUae" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[rgba(62,176,234,0.05)] via-white to-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "VatServicesUae" &&
@@ -102,6 +105,7 @@ export default function DocumentRequired({
             className={cn(
               "w-full md:w-[57%] xl:w-[60%] md:pr-[40px] xl:pr-[60px]",
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
+              variant === "company-freezone" && "xl:pr-[100px]",
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "AuditServicesUae" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
@@ -112,12 +116,16 @@ export default function DocumentRequired({
           >
             {(data?.title || data?.description) && (
               <div className={cn("mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10", variant === "dfza" && "xl:mb-[50px]", variant === "internal-audit" && "md:pr-[30px] xl:pr-[40px]",)}>
-                <div className="mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10">
+                <div className={cn("mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10",
+                  variant === "company-freezone" && "max-w-[100%]",
+                )}>
                   {data?.title && (
                     <Heading
                       as="h2"
                       size="h2"
-                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] hidden md:block", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",)}
+                      className={cn("text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]", variant === "dfza" && "xl:mb-[35px]", variant === "internal-audit" && "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                        
+                      )}
                     >
                       {parse(data.title)}
                     </Heading>
@@ -125,7 +133,7 @@ export default function DocumentRequired({
                 </div>
                 {data?.description && (
                   <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]", variant === "AuditServicesUae" && "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold", variant === "internal-audit" && "leading-relaxed xl:[&_p]:mb-[30px] [&_p:last-of-type]:mb-0")}>
-                    {parse(data.description)}
+                    {parse(data.description)} 
                   </div>
                 )}
               </div>
@@ -136,14 +144,14 @@ export default function DocumentRequired({
                   item.type === "heading" ? (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[10px] last-of-type:mb-0 first:mt-0"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] font-medium   mb-[18px] xl:mb-[13px] 3xl:mb-[23px] list-none mt-[25px] last-of-type:mb-0 first:mt-0"
                     >
                       {parse(item.text)}
                     </li>
                   ) : (
                     <li
                       key={item.id}
-                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[13px] 3xl:mb-[23px] last-of-type:mb-0 relative"
+                      className="text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] pl-[25px] xl:pl-[30px] 3xl:pl-[35px] mb-[18px] xl:mb-[15px] 3xl:mb-[23px] last-of-type:mb-0 relative"
                     >
                       <span className={cn("absolute inset-0 w-[16px] xl:w-[20px] xl:h-[20px] 3xl:w-[23px] h-[16px] 3xl:h-[23px] top-[3.5px] xl:top-[4.5px] bottom-0 left-0 right-auto", variant === "CorporateTaxUae" && "xl:top-[4px]",)}>
                         {(variant === "hamriya" || variant === "aup") && (
@@ -219,6 +227,7 @@ export default function DocumentRequired({
                           variant === "dmcc" ||
                           variant === "tax-advisory" ||
                           variant === "freezone-business" ||
+                          variant === "company-freezone" ||
                           variant === "AuditServicesUae" ||
                           variant === "VatServicesUae" ||
                           variant === "CorporateTaxUae" ||

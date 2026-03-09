@@ -58,7 +58,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                       alt={item.media.alt || "Home Apart"}
                       width={34}
                       height={34}
-                      className="w-[32px] md:w-[22px] xl:w-[28px] 2xl:w-[34px] 3xl:w-[42px] transition"
+                      className="w-[32px] md:w-[22px] xl:w-[32px] 2xl:w-[34px] 3xl:w-[42px] transition"
                     />
                     {parse(item.title ?? "title")}
                   </div>

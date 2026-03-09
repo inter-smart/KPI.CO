@@ -51,6 +51,7 @@ export type RiskAdvisoryDta = {
 export type ProcessStep = {
   id: number;
   title: string;
+  step: string;
   inner_title: string;
   sub_title: string;
   description: string;
@@ -172,43 +173,48 @@ const localData = {
     steps: [
       {
         id: 1,
+        step: "Step One",
         title: "Entity specific risk assessment",
         inner_title: "Entity specific risk assessment",
         sub_title: "Entity specific risk assessment",
         description:
-          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+        "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
       },
       {
         id: 2,
+        step: "Step Two",
         title: "Regulatory focused risk <br/> prioritisation",
         inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
-          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+        "<p>Focus is aligned to risks most relevant to FSRA supervision, including governance, capital adequacy, valuation, and regulatory reporting. </p>",
       },
       {
         id: 3,
+        step: "Step Three",
         title: "Judgement-driven audit execution",
         inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+        "<p>The procedures are primarily designed around professional judgment and risk severity, rather than standard checklists. </p>",
       },
       {
         id: 4,
+        step: "Step Four",
         title: "Testing of key controls and <br/> balances",
         inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
-          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+        "<p>The effort is focused on material balances, complex transactions, and high-risk processes. </p>",
       },
       {
         id: 5,
+        step: "Step Five",
         title: "Documentation",
         inner_title: "Documentation",
         sub_title: "Documentation",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>Working papers are aligned to risk assessment, audit response, and conclusions. </p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -319,39 +325,35 @@ const localData = {
         id: 1,
         title: "What is an ADGM regulated audit?",
         description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
+          <p>An ADGM regulated audit is an independent examination of financial statements for entities registered in Abu Dhabi Global Market (ADGM), conducted in accordance with International Standards on Auditing (ISA), ADGM Companies Regulations, and FSRA Rulebooks. These audits are designed to meet statutory filing requirements and withstand regulatory review by the Financial Services Regulatory Authority (FSRA).</p>
                         `,
       },
       {
         id: 2,
         title: "Who needs an ADGM audit?",
         description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
+          <p>ADGM audits are required for: FSRA-regulated financial institutions and financial services firms ADGM-registered entities including holding companies, SPVs, and foundations Investment funds operating within ADGM Any entity subject to ADGM Companies Regulations audit requirements </p>
                         `,
       },
       {
         id: 3,
         title: "What makes ADGM audits different from other audits?",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>ADGM audits operate under heightened regulatory scrutiny where financial reporting is subject to rigorous FSRA review, audit judgements are open to challenge, and inadequate documentation can lead to regulatory consequences. These audits require robust documentation, strong professional judgement, and are designed to withstand board, investor, and regulator scrutiny.</p>
                         `,
       },
       {
         id: 4,
-        title: "Is KPI registered as an ADGM audit firm?",
+        title: "How long does an ADGM audit take? ",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>The timeline varies based on the entity's size, complexity, regulatory classification, and business activities. Typical ADGM audits range from 4-8 weeks, though more complex regulated entities may require longer. We provide a detailed timeline during the engagement scoping phase.</p>
                         `,
       },
       {
         id: 5,
-        title: "What standards do you follow for ADGM audits?",
+        title: "How do you ensure audit quality for ADGM engagements? ",
         description: `
-          <p>We conduct ADGM audits in accordance with:  </p> 
-          <p>· International Standards on Auditing (ISA)</p>
-          <p>· ADGM Companies Regulations (as amended)</p>
-          <p>· FSRA Rulebooks and prescribed reporting requirements</p>
-          <p>· International Financial Reporting Standards (IFRS)</p>
+          <p>Audit quality is maintained through documented processes, consistent application of professional judgement, engagement-level quality control procedures, regulatory-focused risk assessment, independent partner review, and adherence to professional standards and ethical requirements.</p>
           
                         `,
       },
@@ -383,19 +385,19 @@ export default function DwtcFreezone() {
     <>
       <InnerHero data={localData.hero} />
       <WhyRiskManagement data={localData.whyRisk} />
-      <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
+      <RiskAdvisory variant="adgm-regulated" data={localData.riskAdvisory} />
       {/* <RiskApproach variant="mainland" data={localData.approachProcess} /> */}
       <CorporateServicesUaeFormationProcess
-        variant="aup"
+        variant="adgm-regulated"
         data={localData.approachProcess}
       />
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="adgm-regulated"
       />
-      <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <RiskExploreService variant="adgm-regulated" data={localData.explore_service} />
+      <CorporateServicesUaeCta variant="adgm-regulated" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
       <HomeOurInsights data={localData.insights} />
     </>

@@ -75,7 +75,7 @@ const localData = {
     },
     title: "Company Formation in JAFZA, <br/> UAE ",
     description:
-      "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
+      "<p>Build your presence in Dubai’s premier trading and industrial hub. JAFZA offers full ownership, strategic logistics access, and office or warehouse solutions to help startups, SMEs, and global companies scale efficiently.</p>",
   } satisfies HeroData,
   freezoneBusiness: {
     title: "Start a Business in Jabel Ali Free Zone",
@@ -126,7 +126,7 @@ const localData = {
   } satisfies MeydanFreeZoneData,
 
   keyBenefits: {
-    title: "Key Benefits of Company Formation in DMCC",
+    title: "Key Benefits of JAFZA Business Setup",
     slides: [
       {
         id: 1,
@@ -231,7 +231,7 @@ const localData = {
         id: 1,
         title: "Mainland",
         type: "image",
-        image: "/images/bussnes-setup-1.jpg",
+        image: "/images/meydan-business-1.jpg",
         description:
           "Used for asset holding, ring-fencing risk, or structured finance arrangements.",
         link: "#",
@@ -240,7 +240,7 @@ const localData = {
         id: 2,
         title: "Other Freezones",
         type: "image",
-        image: "/images/bussnes-setup-2.jpg",
+        image: "/images/meydan-business-2.jpg",
         description:
           "Used for asset holding, ring-fencing risk, or structured finance arrangements.",
         link: "#",
@@ -249,7 +249,7 @@ const localData = {
         id: 3,
         title: "ADGM",
         type: "image",
-        image: "/images/bussnes-setup-3.png",
+        image: "/images/meydan-business-3.jpg",
         description:
           "Ajman provides an affordable setup experience with fast approvals and a central location near key ports. Ideal for smaller companies and service providers looking for simplicity and convenience.",
         link: "#",
@@ -258,7 +258,7 @@ const localData = {
         id: 4,
         title: "DIFC",
         type: "image",
-        image: "/images/bussnes-setup-4.jpg",
+        image: "/images/meydan-business-4.jpg",
         description:
           "Sharjah offers a cost-effective environment with a growing SME ecosystem. It is known for supporting creative, educational, and industrial initiatives while maintaining close access to Dubai's markets.",
         link: "#",
@@ -306,17 +306,17 @@ const localData = {
     items: [
       {
         id: 1,
-        text: "Strategic business setup advice ",
+        text: "Strategic Business Setup Advice ",
       },
       {
         id: 2,
-        text: "Compliance and regulatory guidance",
+        text: "Compliance And Regulatory Guidance",
       },
       {
         id: 3,
-        text: "Compliance and regulatory guidance",
+        text: "Compliance and Regulatory Guidance",
       },
-      { id: 4, text: "Ongoing support to ensure your JAFZA company thrives" },
+      { id: 4, text: "Ongoing Support To Ensure Your JAFZA Company Thrives" },
     ],
 
     media: {

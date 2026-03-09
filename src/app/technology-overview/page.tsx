@@ -108,7 +108,7 @@ const localData = {
       "<p>KPI Group supports organisations operating in complex regulatory environments across audit, tax, and compliance. As regulatory frameworks become increasingly digital - from ERP-driven finance to e-invoicing and real-time reporting, compliance today is as much a technology challenge as it is a regulatory one. Vantheon is the technology division of KPI Group, where our regulatory understanding meets deep systems expertise. Vantheon was established in 2014 to design, implement, and govern enterprise technology systems that support regulatory compliance, financial control, and operational scale.</p>",
   } satisfies HeroData,
   setupOptions: {
-    title: "Vantheon: The Technology Arm of KPI ",
+    title: "Vantheon: The Technology Arm Of KPI ",
     description: "",
     items: [
       {

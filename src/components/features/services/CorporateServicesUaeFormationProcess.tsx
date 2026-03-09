@@ -43,6 +43,9 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "tax-advisory"
     | "risk"
     | "internal-audit"
+    | "difc-regulated"
+    | "adgm-regulated"
+    | "company-freezone"
     | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
@@ -110,8 +113,11 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
+              variant === "company-freezone" ||
                 variant === "aup" ||
                 "tax-advisory" ||
+                "adgm-regulated" ||
+                "difc-regulated" ||
                 "internal-audit"
                 ? "text-start "
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
@@ -134,7 +140,7 @@ export default function CorporateServicesUaeFormationProcess({
               <Text
                 as="div"
                 size="p5"
-                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[18px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
+                className="text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col"
               >
                 {parse(data?.description)}
               </Text>
@@ -144,7 +150,7 @@ export default function CorporateServicesUaeFormationProcess({
             <Heading
               as="div"
               size="h4"
-              className="xl:text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
+              className="xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
             >
               {data.sub_title}
             </Heading>
@@ -153,6 +159,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
               variant === "Vat-Services" && "items-center",
+              variant === "company-freezone" && "items-center",
             )}
           >
             <div className="flex items-center">
@@ -161,9 +168,9 @@ export default function CorporateServicesUaeFormationProcess({
                   <div
                     key={step.id}
                     className={cn(
-                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 ",
+                      "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 cursor-pointer",
                       variant === "tax-advisory" && "min-w-[330px]",
-                      isDesktop ? "cursor-default" : "cursor-pointer",
+                      // isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
                         : "opacity-90 hover:opacity-100",
@@ -178,6 +185,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
+                        variant === "company-freezone" && "lg:h-[200%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
@@ -187,14 +195,14 @@ export default function CorporateServicesUaeFormationProcess({
 
                     <div
                       className={cn(
-                        "w-5 lg:w-4 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 transition-all duration-300",
+                        "w-5 lg:w-4 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 flex items-center justify-center transition-all duration-300",
                         "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                         variant === "internal-audit" && "p-[1px]",
                       )}
                     >
                       {index > activeStep && (
                         <div
-                          className="w-full h-full rounded-full bg-white scale-[0.9]"
+                          className="w-[20px] h-[21px] rounded-full bg-white"
 
                         />
                       )}
@@ -207,6 +215,10 @@ export default function CorporateServicesUaeFormationProcess({
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" &&
                                       "sm:hidden",
+                          variant === "difc-regulated" &&
+                                      "max-sm:!block sm:!hidden",
+                          variant === "adgm-regulated" &&
+                                      "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -223,13 +235,15 @@ export default function CorporateServicesUaeFormationProcess({
                         "max-sm:text-[16px] xl:text-[24px] font-semibold transition-colors duration-300 capitalize max-w-[80%]",
                         variant == "tax-advisory" && "text-nowrap",
                         variant == "aup" && "max-w-full",
+                        variant == "adgm-regulated" && "max-w-full",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
+                        variant == "company-freezone" && "max-w-[90%]",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
                             ? "text-[#4e4e4e80]"
-                            : "text-[#a7a7a7]",
+                            : "text-[rgba(78,78,78,0.5)]",
                       )}
                     >
                       {parse(step.title)}
@@ -239,7 +253,7 @@ export default function CorporateServicesUaeFormationProcess({
               </div>
             </div>
             <div className="relative">
-              <div className="w-full min-h-[320px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
+              <div className="w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"
@@ -257,6 +271,10 @@ export default function CorporateServicesUaeFormationProcess({
                           className={cn(
                             "font-normal text-[#3eb0ea] capitalize mb-1",
                             variant === "risk" && "sm:hidden",
+                            variant === "difc-regulated" &&
+                              "max-sm:!block sm:!hidden",
+                            variant === "adgm-regulated" &&
+                              "max-sm:!block sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -288,8 +306,9 @@ export default function CorporateServicesUaeFormationProcess({
                       <Text
                         as="div"
                         size="p3"
-                        className={cn("text-black max-md:[&_br]:hidden xl:text-[18px] ",
-                          variant === "internal-audit" && "leading-relaxed" 
+                        className={cn("text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
+                          variant === "internal-audit" && "leading-relaxed" ,
+                          
                         )}
                       >
                         {parse(data.steps[activeStep].description)}

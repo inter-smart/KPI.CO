@@ -290,7 +290,7 @@ const localData = {
           alt: "General Trading License",
         },
         title: "General Trading License",
-        description: "General Trading License",
+        description: "Ideal for businesses dealing in multiple products under a single licence for simplified operations.",
       },
       {
         id: 3,
@@ -364,7 +364,7 @@ const localData = {
         id: 1,
         title: "FZE",
         type: "image",
-        image: "/images/dsoa_location1.jpg",
+        image: "/images/rakz-location1.jpg",
         description:
           "Dubai is a global business hub with a vibrant commercial ecosystem, advanced infrastructure, and access to international markets. It's ideal for companies that want a high-profile presence and exposure to global clients.",
         link: "#",
@@ -373,7 +373,7 @@ const localData = {
         id: 2,
         title: "Branch of Foreign Company",
         type: "image",
-        image: "/images/dsoa_location4.jpg",
+        image: "/images/rakz-location2.jpg",
         description:
           "Abu Dhabi combines strong government support with strategic industry clusters. Its focus on energy, technology, and innovation provides a solid base for businesses working on large-scale or specialized projects.",
         link: "#",
@@ -382,7 +382,7 @@ const localData = {
         id: 3,
         title: "Branch of a UAE Company",
         type: "image",
-        image: "/images/dsoa_location3.jpg",
+        image: "/images/rakz-location3.jpg",
         description:
           "Ajman provides an affordable setup experience with fast approvals and a central location near key ports. Ideal for smaller companies and service providers looking for simplicity and convenience.",
         link: "#",

@@ -28,7 +28,9 @@ type CorporateServicesUaeBankingProps = {
     | "company"
     | "freezone-business"
     | "downshadow"
+    | "Meydan"
     | "internal-audit"
+    | "company-freezone"
     | "audit";
 };
 
@@ -48,7 +50,7 @@ export default function CorporateServicesUaeBanking({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[40px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
+        "w-full h-auto py-[40px_45px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
         variant === "dsoa" || variant === "dmcc"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
@@ -56,10 +58,12 @@ export default function CorporateServicesUaeBanking({
         variant === "audit" && "!pt-1 shadow-none",
         variant === "internal-audit" && "!pt-1 shadow-none",
         variant === "freezone-business" && "shadow-none",
+        variant === "company-freezone" && "shadow-none",
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
+        variant === "dmcc" && "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
       )}
     >
       <div className="container">
@@ -76,8 +80,10 @@ export default function CorporateServicesUaeBanking({
               variant === "ifza" ||
               variant === "freezone-business" ||
               variant === "RAK-Offshore" ||
+              variant === "company-freezone" ||
               variant === "audit" ||
               variant === "internal-audit" ||
+              variant === "Meydan" ||
               variant === "downshadow"
               ? "text-left"
               : "sm:text-center",
@@ -89,10 +95,12 @@ export default function CorporateServicesUaeBanking({
             as="h2"
             size="h2"
             className={cn(
-              "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25",
+              "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25 capitalize",
               variant === "ifza" && "!mb-[30px]",
+              variant === "downshadow" && "!mb-[20px]",
               variant === "offshore" && "xl:mb-[30px]",
               variant === "RAK-Offshore" && "xl:mb-[30px]",
+              variant === "Meydan" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -108,11 +116,13 @@ export default function CorporateServicesUaeBanking({
                     variant === "dmcc"
                   ? "text-left"
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
+              variant === "company-freezone" && "text-left capitalize ",
               variant === "saifz" && "text-left !max-w-full",
               variant === "company" && "text-left !max-w-full ",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
               variant === "RAK-Offshore" && "text-left !max-w-full ",
+              variant === "Meydan" && "text-left !max-w-full ",
               variant === "CorporateServicesUae" && "xl:max-w-[880px]",
             )}
           >
@@ -139,6 +149,8 @@ export default function CorporateServicesUaeBanking({
                     "w-full h-[60px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
+                    variant === "company-freezone" &&
+                      "shadow-[0px_13px_19px_0px_#00000012]",
                     variant === "internal-audit" &&
                       "shadow-[0_13px_19px_#00000012]",
                   )}

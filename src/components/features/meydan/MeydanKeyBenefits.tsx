@@ -68,15 +68,11 @@ export default function MeydanKeyBenefits({
             variant === "RAK-Offshore" && "xl:!py-[65px]",
           )}
         >
-          <div
-            className={cn(
-              "w-full h-auto sm:pl-[25px] xl:pl-[30px] 3xl:pl-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]",
-              variant === "RAK-Offshore" && "xl:pl-[40px] xl:mb-[40px]",
-            )}
-          >
+          <div className={cn("w-full h-auto sm:pl-[25px] xl:pl-[42px] 3xl:px-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]",variant === "RAK-Offshore" && "xl:pl-[40px] xl:mb-[40px]")}>
             <Swiper
               slidesPerView="auto"
               spaceBetween={40}
+              slidesOffsetAfter={20}
               freeMode={true}
               slideToClickedSlide={true}
               modules={[Thumbs]}
@@ -85,12 +81,15 @@ export default function MeydanKeyBenefits({
               breakpoints={{
                 640: {
                   spaceBetween: 25,
+                  slidesOffsetAfter: 25,
                 },
                 1280: {
                   spaceBetween: 35,
+                  slidesOffsetAfter: 30,
                 },
                 1536: {
                   spaceBetween: 40,
+                  slidesOffsetAfter: 40,
                 },
                 1920: {
                   spaceBetween: 40,
@@ -114,12 +113,7 @@ export default function MeydanKeyBenefits({
               ))}
             </Swiper>
           </div>
-          <div
-            className={cn(
-              "w-full h-auto sm:px-[25px] xl:px-[30px] 3xl:px-[40px]",
-              variant === "RAK-Offshore" && "xl:px-[40px]",
-            )}
-          >
+          <div className={cn("w-full h-auto sm:px-[25px] xl:px-[40px] 3xl:px-[40px]",variant === "RAK-Offshore" && "xl:px-[40px]")}>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
@@ -171,7 +165,6 @@ export default function MeydanKeyBenefits({
                               <span
                                 className={cn(
                                   "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden",
-
                                   variant === "technology" &&
                                     "text-[#4E4E4E] font-normal",
                                 )}
@@ -199,7 +192,7 @@ export default function MeydanKeyBenefits({
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <div className="w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] max-md:mb-[35px] rounded-[12px] overflow-hidden block">
+                      <div className="w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block">
                         <Image
                           src={item?.media?.path}
                           alt={item?.media?.alt}
