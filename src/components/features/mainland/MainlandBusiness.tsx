@@ -22,6 +22,7 @@ type Variant =
   | "rakez"
   | "ifza"
   | "dwtc"
+  | "company-freezone"
   | "ADGM-Foundations";
 
 type MainlandBusinessProps = {
@@ -116,6 +117,7 @@ export default function MainlandBusiness({
                   variant === "dafza" && "xl:max-w-full",
                   variant === "dwtc" && "xl:max-w-full",
                   variant === "dsoa" && "xl:max-w-[80%]",
+                  variant === "company-freezone" && "xl:max-w-[90%]",
                 )}
               >
                 {parse(data.title)}

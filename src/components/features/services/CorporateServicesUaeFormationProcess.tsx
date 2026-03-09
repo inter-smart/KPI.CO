@@ -45,6 +45,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "internal-audit"
     | "difc-regulated"
     | "adgm-regulated"
+    | "company-freezone"
     | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
@@ -112,6 +113,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
+              variant === "company-freezone" ||
                 variant === "aup" ||
                 "tax-advisory" ||
                 "adgm-regulated" ||
@@ -157,6 +159,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
               variant === "Vat-Services" && "items-center",
+              variant === "company-freezone" && "items-center",
             )}
           >
             <div className="flex items-center">
@@ -182,6 +185,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
+                        variant === "company-freezone" && "lg:h-[200%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
@@ -234,6 +238,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "adgm-regulated" && "max-w-full",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
+                        variant == "company-freezone" && "max-w-[90%]",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
