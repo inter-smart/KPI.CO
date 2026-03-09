@@ -19,6 +19,7 @@ type CorporateServicesUaeBankingProps = {
     | "CorporateServicesUae"
     | "mainland"
     | "offshore"
+    | "RAK-Offshore"
     | "dwtc"
     | "dsoa"
     | "saifz"
@@ -66,7 +67,7 @@ export default function CorporateServicesUaeBanking({
           className={cn(
             "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
             variant === "mainland" ||
-            variant === "offshore" ||
+              variant === "offshore" ||
               variant === "dwtc" ||
               variant === "saifz" ||
               variant === "dsoa" ||
@@ -74,12 +75,14 @@ export default function CorporateServicesUaeBanking({
               variant === "company" ||
               variant === "ifza" ||
               variant === "freezone-business" ||
+              variant === "RAK-Offshore" ||
               variant === "audit" ||
               variant === "internal-audit" ||
               variant === "downshadow"
               ? "text-left"
               : "sm:text-center",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
+            variant === "RAK-Offshore" && "xl:mb-[40px]",
           )}
         >
           <Heading
@@ -89,6 +92,7 @@ export default function CorporateServicesUaeBanking({
               "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25",
               variant === "ifza" && "!mb-[30px]",
               variant === "offshore" && "xl:mb-[30px]",
+              variant === "RAK-Offshore" && "xl:mb-[30px]",
             )}
           >
             {data?.title}
@@ -108,6 +112,7 @@ export default function CorporateServicesUaeBanking({
               variant === "company" && "text-left !max-w-full ",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
+              variant === "RAK-Offshore" && "text-left !max-w-full ",
               variant === "CorporateServicesUae" && "xl:max-w-[880px]",
             )}
           >

@@ -196,14 +196,14 @@ const localData = {
     ],
   } satisfies MeydanKeyBenefitsData,
   banking: {
-    title: "Banking Support for Your UAE Business",
+    title: "Banking Support For Your UAE Business",
     description:
       "<p>We support clients with bank account opening through trusted UAE and international banking partners.</p>",
     partners: [
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
@@ -217,14 +217,28 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-05.svg",
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/banking-partner-4.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -246,7 +260,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Other Freezones",
+        title: "Freezones",
         type: "image",
         image: "/images/bussnes-setup-2.jpg",
         description:
@@ -280,19 +294,26 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-01.svg",
+          path: "/images/banking-partner-00.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-02.svg",
+          path: "/images/banking-partner-01.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
+        media: {
+          path: "/images/banking-partner-02.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 4,
         media: {
           path: "/images/banking-partner-03.svg",
           alt: "Emirates NBD",
@@ -302,6 +323,13 @@ const localData = {
         id: 4,
         media: {
           path: "/images/banking-partner-04.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/banking-partner-005.svg",
           alt: "Emirates NBD",
         },
       },
@@ -421,9 +449,9 @@ export default function DwtcFreezone() {
       <MeydanKeyBenefits data={localData.keyBenefits} variant="RAK-Offshore" />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="downshadow"
+        variant="RAK-Offshore"
       />
-      <BusinessLocation data={localData.businessLocation} />
+      <BusinessLocation data={localData.businessLocation} variant="RAK-Offshore" />
       <CorporateServicesUaeBanking
         data={localData.logoimage}
         variant="downshadow"
