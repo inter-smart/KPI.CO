@@ -137,12 +137,12 @@ const localData = {
       mobilePath: "/images/regulated-audit-mobile-bg.png",
       alt: "Mainland Company Formation & Licensing in the UAE",
     },
-    title: "DIFC Audits Built To  Withstand <br/>Regulatory Scrutiny ",
+    title: "DIFC Audits Built To  Withstand Regulatory Scrutiny ",
     description:
       "<p>In the DIFC ecosystem, financial reports are scrutinised by boards and audit committees, relied upon by investors, and subject to regulatory review by the Dubai Financial Services Authority (DFSA). As a DIFC-registered audit firm, KPI delivers DFSA-compliant audit services, designed to meet statutory filing requirements, to regulated entities and other DIFC entities where professional judgement, regulatory alignment, and robust documentation are essential.</p>",
   } satisfies HeroData,
   whyRisk: {
-    title: "Why DIFC Audits Are Different <br/> And Demand More",
+    title: "Why DIFC Audits Are Different  And Demand More",
     highlightsTitle:
       "In DIFC, audit quality is assessed not only on compliance, but on defensibility. It operates with a regulatory environment where:",
     highlights: [
@@ -158,7 +158,7 @@ const localData = {
     },
   } satisfies WhyRiskData,
   riskAdvisory: {
-    title: "DIFC & DFSA Regulated<br/> Audit  Services",
+    title: "DIFC & DFSA Regulated Audit  Services",
     description:
       "<p>KPI provides audit services to DIFC-registered and DFSA-regulated entities in line with</p> ",
     highlightsText:
@@ -167,13 +167,13 @@ const localData = {
       {
         id: 1,
         slNo: 1,
-        description: "DIFC Companies Law and  <br/> Regulations (as amended)",
+        description: "DIFC Companies Law and   Regulations (as amended)",
       },
       {
         id: 2,
         slNo: 2,
         description:
-          "DFSA Rulebooks and  <br/> prescribed reporting  <br/> requirements",
+          "DFSA Rulebooks and   prescribed reporting   requirements",
       },
       {
         id: 3,
