@@ -35,8 +35,8 @@ interface MeydanFreeZoneProps {
     | "MeydanFreeZone"
     | "default"
     | "ifza"
-  | "regulatory"
-  | "difc-regulated"
+    | "regulatory"
+    | "difc-regulated"
     | "audit";
 }
 
@@ -91,6 +91,8 @@ export default function MeydanFreeZone({
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[48px_34px_35px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   variant === "difc-regulated" && "xl:pr-[15px]",
+                  // variant === "difc-regulated" && "xl:pr-[15px]",
+                  variant === "ifza" && "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[80px_35px]",
                   variant === "ifza" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",

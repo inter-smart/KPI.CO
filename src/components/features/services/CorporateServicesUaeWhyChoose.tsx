@@ -109,6 +109,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "adgm-regulated" ||
               variant === "offshore" ||
               variant === "risk" ||
+              variant === "difc-regulated" ||
               variant === "Financial-Statement-Audit" ||
               variant === "VatServicesUae" ||
               variant === "holding" ||
