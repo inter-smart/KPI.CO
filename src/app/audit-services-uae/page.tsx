@@ -133,8 +133,8 @@ const localData = {
     hero: {
         id: 1,
         media: {
-            desktopPath: "/images/regulatory-innerbanner-desktop.svg",
-            mobilePath: "/images/regulatory-innerbanner-mobile.svg",
+            desktopPath: "/images/audit-banner.svg",
+            mobilePath: "/images/audit-banner-mob.svg",
             alt: "Audit That Stands up to Regulatory Scrutiny ",
         },
         title: "Audit That Stands up to Regulatory Scrutiny ",

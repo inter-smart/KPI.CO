@@ -50,7 +50,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               <div className="text-[12px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] leading-normal font-semibold text-[#4E4E4E] w-auto h-auto pb-1.25 2xl:pb-2 mb-[10px]  relative z-0 inline-flex before:content-[''] before:w-full before:h-[2px] before:bg-linear-to-t before:from-[#3EB0EA] before:to-[#1C5396] before:absolute before:z-1 before:inset-[auto_0_0_0]">
                 Certified
               </div>
-              <div className="text-[11.5px] lg:text-[12px] xl:text-[13px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] max-sm:max-w-[87%] max-sm:m-auto p-[20px_15px] lg:p-[15px_25px] xl:p-[16px_24px] 3xl:p-[25px_30px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">
+              <div className="text-[11.5px] lg:text-[12px] xl:text-[13.51px] 3xl:text-[18px] leading-normal font-medium text-[#4E4E4E] max-sm:max-w-[87%] max-sm:m-auto p-[20px_15px] lg:p-[15px_25px] xl:p-[16px_24px] 3xl:p-[25px_30px] bg-[#F8F9FB] rounded-[10px] overflow-hidden">
                  {parse(data.isoInfo.description)}
               </div>
             </div>

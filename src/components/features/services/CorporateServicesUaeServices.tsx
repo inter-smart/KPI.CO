@@ -33,7 +33,7 @@ export default function CorporateServicesUaeServices({
   variant = "default",
 }: CorporateServicesUaeServicesProps) {
   return (
-    <section className="w-full h-auto py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
+    <section className="w-full h-auto py-[40px_60px] xl:py-[60px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
       <div className="container">
         <div
           className={cn(

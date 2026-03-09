@@ -62,9 +62,9 @@ export default function DocumentRequired({
   return (
     <section
       className={cn(
-        "w-full py-[40px] lg:py-[60px] xl:py-[70px] 3xl:py-[105px] bg-[#F9FAFB] !overflow-visible relative",
+        "w-full py-[40px] lg:py-[60px] xl:py-[70px]  bg-[#F9FAFB] !overflow-visible relative",
         variant === "regulatory" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white xl:py-[94px_48px]",
         variant === "saifz" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "dfza" &&
@@ -88,7 +88,7 @@ export default function DocumentRequired({
         variant === "MeydanFreeZone" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "AuditServicesUae" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[rgba(62,176,234,0.05)] via-white to-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "VatServicesUae" &&
@@ -125,7 +125,7 @@ export default function DocumentRequired({
                 </div>
                 {data?.description && (
                   <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]", variant === "AuditServicesUae" && "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold", variant === "internal-audit" && "leading-relaxed xl:[&_p]:mb-[30px] [&_p:last-of-type]:mb-0")}>
-                    {parse(data.description)}
+                    {parse(data.description)} 
                   </div>
                 )}
               </div>

@@ -63,7 +63,7 @@ export default function MeydanKeyBenefits({
       </div>
       <div className="container max-sm:bg-[#f2fafe] max-sm:rounded-[12px]">
         <div className="w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block">
-          <div className="w-full h-auto sm:pl-[25px] xl:pl-[30px] 3xl:pl-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
+          <div className="w-full h-auto sm:pl-[25px] xl:pl-[42px] 3xl:px-[40px] mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
             <Swiper
               slidesPerView="auto"
               spaceBetween={40}
@@ -108,7 +108,7 @@ export default function MeydanKeyBenefits({
               ))}
             </Swiper>
           </div>
-          <div className="w-full h-auto sm:px-[25px] xl:px-[30px] 3xl:px-[40px]">
+          <div className="w-full h-auto sm:px-[25px] xl:px-[40px] 3xl:px-[40px]">
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
@@ -187,7 +187,7 @@ export default function MeydanKeyBenefits({
                       </ul>
                     </div>
                     <div className="w-full lg:w-1/2">
-                      <div className="w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[10px] 2xl:rounded-[15px] overflow-hidden block">
+                      <div className="w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block">
                         <Image
                           src={item?.media?.path}
                           alt={item?.media?.alt}

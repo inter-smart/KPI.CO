@@ -76,7 +76,7 @@ function WhyBuildCard({
   return (
     <div
       className={cn(
-        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[23px_18px_45px] 2xl:py-7.5 2xl:px-5.5  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border-[0.8px] border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[23px_18px_45px] 2xl:py-7.5 2xl:px-5.5 shadow-[0px_1px_3px_rgba(0,0,0,0.1)]  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
@@ -102,7 +102,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "max-xl:!text-[18px] xl:text-[18px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
+          "max-xl:!text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
           (hasVariant(variant, "saifz") || hasVariant(variant, "freezone")) || hasVariant(variant, "regulatory") &&
           "text-[#1C5396]",
           "font-semibold text-[#1C5396] mb-2 2xl:mb-2.5",
@@ -243,8 +243,8 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "rakez") ||
               hasVariant(variant, "dwtc") ||
               hasVariant(variant, "freeZone")
-              ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
-              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+              ? "xl:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
+              : "lg:grid-cols-3 gap-4 xl:gap-10 2xl:gap-10",
               hasVariant(variant, "difc-formation")
               ? "lg:grid-cols-4 gap-3 xl:gap-[25px] 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",

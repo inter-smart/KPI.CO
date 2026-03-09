@@ -58,10 +58,10 @@ export default function BusinessLocation({
             <div
               key={item.id}
               
-              className={cn("group relative min-h-[235px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md", variant === "Formation-ADGM" && "xl:min-h-[230px]")}
+              className={cn("group relative min-h-[235px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md", variant === "Formation-ADGM" && "xl:min-h-[230px]")}
             >
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[rgba(78,78,78,0)] via-[rgba(78,78,78,0)] to-[rgba(0,0,0,0.8)] group-hover:opacity-0 aspect-[500/312]"/>
-              <div className="absolute top-0 left-0 h-full w-full group-hover:opacity-0 aspect-[500/312]">
+              <div className="relative  h-full w-full group-hover:opacity-0 aspect-[500/312]">
                 <Image
                   src={item.image || "/images/placeholder.png"}
                   alt={item.title}
