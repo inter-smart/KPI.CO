@@ -161,7 +161,7 @@ export default function CorporateServicesUaeWhyChoose({
                 variant === "SOP" &&
                   "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
                 variant === "internal-audit" &&
-                  "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
+                  "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
               )}
             >
               {parse(data?.description)}
@@ -325,6 +325,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
                 variant === "CorporateServicesUae" && "xl:text-[14px]",
                 variant === "internal-audit" &&
                   "leading-relaxed xl:max-w-[92%]",
+                variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",
                 variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",
               )}
             >

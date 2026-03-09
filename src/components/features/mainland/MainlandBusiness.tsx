@@ -47,6 +47,7 @@ export default function MainlandBusiness({
       className={cn(
         "w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",
         variant === "dafza" && "max-2xl:!pb-[20px]",
+        variant === "dwtc" && "xl:!pb-[70px]",
         variant === "Formation-ADGM" && "pb-[10px] xl:pb-[70px]",
         variant === "ADGM-Foundations" && "max-sm:pb-[10px]  ",
         variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
@@ -86,6 +87,9 @@ export default function MainlandBusiness({
               hasVariant(variant, "dafza") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "AuditServicesUae") &&
+              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "dwtc") &&
+              "xl:pr-[40px]",
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
