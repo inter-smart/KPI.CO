@@ -49,6 +49,7 @@ export type Variant =
   | "dwtc"
   | "regulatory"
   | "difc-formation"
+  | "company-freezone"
   | "default";
 
 export type CorporateServicesUaeWhyBuildProps = {
@@ -80,6 +81,9 @@ function WhyBuildCard({
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
+        variant === "company-freezone"
+          ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] xl:!p-[23px_5px_45px_18px] bg-[rgba(226,226,226,8%)]"
+          : "",
         variant === "regulatory"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_#0000001A] "
           : "",
@@ -87,6 +91,7 @@ function WhyBuildCard({
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" && "shadow-none",
+        variant === "company-freezone" && "rounded-[10px]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -123,6 +128,7 @@ function WhyBuildCard({
           "text-[14px] xl:text-[16px] font-normal text-[#2E2E2E] ",
           hasVariant(variant, "mainland") ||
             hasVariant(variant, "freezone") ||
+            hasVariant(variant, "company-freezone") ||
             hasVariant(variant, "regulatory") ||
             hasVariant(variant, "dsoa") ||
             hasVariant(variant, "ifza")
@@ -177,11 +183,13 @@ export default function CorporateServicesUaeWhyBuild({
         hasVariant(variant, "saifz") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "dafz") &&
-          "bg-linear-to-t from-[#f1fafe] via-white to-white",
+        "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "erm") &&
         "bg-linear-to-t from-[#f1fafe] via-white to-white",
         hasVariant(variant, "formation") && "bg-[#f9fafb]",
         hasVariant(variant, "technology") && "bg-linear-to-t from-[#f1fafe] via-white to-white xl:pb-[80px]",
+        hasVariant(variant, "company-freezone") &&
+        "bg-linear-to-t from-[#f1fafe] via-white to-white !xl:py-[70px_70px]" ,
       )}
     >
       <div className="container">
@@ -189,6 +197,7 @@ export default function CorporateServicesUaeWhyBuild({
           className={cn(
             "w-full mb-6 xl:mb-10 2xl:mb-12",
             hasVariant(variant, "freezone") ||
+            hasVariant(variant, "company-freezone") ||
             hasVariant(variant, "dwtc") ||
               hasVariant(variant, "dsoa") ||
               hasVariant(variant, "erm") ||
@@ -233,17 +242,21 @@ export default function CorporateServicesUaeWhyBuild({
           className={cn(
             "hidden sm:grid grid-cols-2 md:grid-cols-2 ",
             hasVariant(variant, "freezone") ||
-              hasVariant(variant, "offshore") ||
-              hasVariant(variant, "dsoa") ||
-              hasVariant(variant, "ifza") ||
-              hasVariant(variant, "rakez") ||
-              hasVariant(variant, "dwtc") ||
-              hasVariant(variant, "freeZone")
-              ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
-              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
-              hasVariant(variant, "difc-formation")
-              ? "lg:grid-cols-4 gap-3 xl:gap-[25px] 2xl:gap-6"
-              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            hasVariant(variant, "company-freezone") ||
+            hasVariant(variant, "offshore") ||
+            hasVariant(variant, "dsoa") ||
+            hasVariant(variant, "ifza") ||
+            hasVariant(variant, "rakez") ||
+            hasVariant(variant, "dwtc") ||
+            hasVariant(variant, "freeZone")
+            ? "lg:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
+            : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            hasVariant(variant, "company-freezone") 
+            ? "lg:!grid-cols-4 gap-3 xl:!gap-[25px] 2xl:gap-6"
+            : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            hasVariant(variant, "difc-formation")
+            ? "lg:grid-cols-4 gap-3 xl:gap-[25px] 2xl:gap-6"
+            : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
             hasVariant(variant, "dafz") &&
             "lg:!gap-[20px_30px] xl:!gap-[25px_35px] 2xl:!gap-[25px_40px] 3xl:!gap-[35px_50px]",
             hasVariant(variant, "hamriya") &&

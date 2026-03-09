@@ -92,7 +92,7 @@ export default function InnerHero({
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" &&
-              "md:max-w-[600px] xl:max-w-[790px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
+              "md:max-w-[600px] xl:max-w-[760px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
             variant === "ifza" &&
               "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
@@ -119,7 +119,8 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[40px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                variant === "technology" && "xl:!text-[20px]",
                 variant === "dwtc" &&
                   "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&

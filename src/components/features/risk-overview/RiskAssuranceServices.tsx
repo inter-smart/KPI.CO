@@ -15,7 +15,7 @@ type RiskAssuranceProps = {
     description: string;
     items: RiskAssuranceData[];
   };
-  variant?: "internal-audit";
+  variant?: "internal-audit" | "company-freezone";
 };
 
 export default function RiskAssuranceServices({
@@ -94,7 +94,8 @@ export default function RiskAssuranceServices({
                     {item?.title}
                   </div>
                   <p className={cn("text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-rlaxed font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]",
-                    variant === "internal-audit" && "capitalize"
+                    variant === "internal-audit" && "capitalize",
+                    variant === "company-freezone" && "capitalize"
                   )}>
                     {parse(item?.description)}
                   </p>
