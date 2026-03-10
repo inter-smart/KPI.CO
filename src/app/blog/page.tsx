@@ -43,8 +43,6 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   const categories = await getCategoryTree();
 
-  console.log(categories);
-
   return (
     <>
       <BlogHero data={localData.hero} />
