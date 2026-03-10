@@ -69,7 +69,7 @@ export default function CorporateServicesUaeBanking({
       <div className="container">
         <div
           className={cn(
-            "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5",
+            "w-full h-auto mb-7.5 sm:mb-8 lg:mb-8.75 xl:mb-[40px]",
             variant === "mainland" ||
               variant === "offshore" ||
               variant === "dwtc" ||

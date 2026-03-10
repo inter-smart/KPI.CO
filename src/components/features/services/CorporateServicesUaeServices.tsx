@@ -71,7 +71,7 @@ export default function CorporateServicesUaeServices({
         </div>
         <div
           className={cn(
-            "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10",
+            "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10 xl:max-w-[1124px]",
             variant === "saifz" && "!max-w-full",
             variant === "CorporateTaxUae" && "!max-w-full",
             variant === "difc-formation" && "!max-w-full",

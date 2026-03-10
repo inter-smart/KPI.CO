@@ -104,8 +104,7 @@ export default function CorporateServicesUaeFormationProcess({
       <section
         ref={sectionRef}
         className={cn(
-          "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white",
-          "overflow-hidden",
+          "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white "
         )}
       >
         <div className="container">
@@ -130,8 +129,7 @@ export default function CorporateServicesUaeFormationProcess({
               as="div"
               size="h2"
               className={cn(
-                "text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7",
-                variant === "internal-audit" && "leading-[125%]",
+                "text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7", 
               )}
             >
               {data.title}
@@ -239,6 +237,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",
+                        variant == "CorporateServicesUae" && "max-w-full",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
@@ -253,7 +252,7 @@ export default function CorporateServicesUaeFormationProcess({
               </div>
             </div>
             <div className="relative">
-              <div className="w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center">
+              <div className={cn("w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center", variant==="CorporateServicesUae" && "!min-h-[555px]" )}>
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"
