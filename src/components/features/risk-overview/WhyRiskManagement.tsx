@@ -7,7 +7,7 @@ import type { WhyRiskData } from "@/app/risk-services-uae/page";
 
 type WhyRiskProps = {
   data: WhyRiskData;
-  variant?: "default" | "DIFC-Regulated";
+  variant?: "default" | "DIFC-Regulated" | "risk";
 };
 
 export default function WhyRiskManagement({
