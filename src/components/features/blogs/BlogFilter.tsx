@@ -10,25 +10,26 @@ import { FilterItem } from "./BlogList";
 type BlogFilterProps = {
   categories: CategoryTree[];
   activeFilters: FilterItem[];
-  onFilterChange: (filters: FilterItem[]) => void;
+  onFilterChange: (filters: FilterItem[], sort: string) => void;
   onApply: () => void;
   onClear: () => void;
   selectedSort: string;
-  onSortChange: (sort: string) => void;
 };
 const sortOptions = ["Newest to Oldest", "Oldest to Newest"];
 
-export default function BlogFilter({ categories, activeFilters, onFilterChange, onApply, onClear, selectedSort, onSortChange }: BlogFilterProps) {
+export default function BlogFilter({ categories, activeFilters, onFilterChange, onApply, onClear, selectedSort }: BlogFilterProps) {
   const [tempFilters, setTempFilters] = React.useState<FilterItem[]>(activeFilters);
+  const [tempSort, setTempSort] = React.useState<string>(selectedSort);
   const [isOpen, setIsOpen] = React.useState(false);
   const [isSortOpen, setIsSortOpen] = React.useState(false);
 
-  // Update temp filters when activeFilters changes or modal opens
+  // Update temp filters and sort when they change in parent or modal opens
   React.useEffect(() => {
     if (isOpen) {
       setTempFilters(activeFilters);
+      setTempSort(selectedSort);
     }
-  }, [activeFilters, isOpen]);
+  }, [activeFilters, selectedSort, isOpen]);
 
   const toggleFilter = (category: FilterItem) => {
     if (tempFilters.includes(category)) {
@@ -39,9 +40,7 @@ export default function BlogFilter({ categories, activeFilters, onFilterChange, 
   };
 
   const handleApply = () => {
-    console.log("Applying filters:", tempFilters);
-
-    onFilterChange(tempFilters);
+    onFilterChange(tempFilters, tempSort);
     onApply();
     setIsOpen(false);
   };
@@ -85,7 +84,7 @@ export default function BlogFilter({ categories, activeFilters, onFilterChange, 
               )}
             >
               <span>
-                Sort by <span className="text-[#1C5396] ml-1">{selectedSort}</span>
+                Sort by <span className="text-[#1C5396] ml-1">{tempSort}</span>
               </span>
               <ChevronDown size={18} className={cn("text-gray-400 transition-transform duration-200", isSortOpen && "rotate-180")} />
             </button>
@@ -97,7 +96,7 @@ export default function BlogFilter({ categories, activeFilters, onFilterChange, 
                   <button
                     key={option}
                     onClick={() => {
-                      onSortChange(option);
+                      setTempSort(option);
                       setIsSortOpen(false);
                     }}
                     className={cn(
