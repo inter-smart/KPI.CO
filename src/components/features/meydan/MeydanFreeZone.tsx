@@ -44,6 +44,7 @@ export default function MeydanFreeZone({
   data,
   variant = "default",
 }: MeydanFreeZoneProps) {
+
   if (!data) return null;
 
   return (
@@ -73,8 +74,9 @@ export default function MeydanFreeZone({
         <div
           className={cn(
             "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-            (variant === "difc" || variant === "holding" || "difc-regulated" ) && "md:grid-cols-1",
+            (variant === "difc" || variant === "holding" || "difc-regulated" ) && "md:!grid-cols-1",
             variant === "regulatory"  && "md:grid-cols-1",
+            variant === "difc-regulated"  && "md:!grid-cols-1",
             variant === "ADGM-Foundation" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 ",
             variant === "ifza" &&
@@ -90,8 +92,6 @@ export default function MeydanFreeZone({
                 className={cn(
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[48px_34px_35px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
-                  variant === "difc-regulated" && "xl:pr-[15px]",
-                  // variant === "difc-regulated" && "xl:pr-[15px]",
                   variant === "ifza" && "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[80px_35px]",
                   variant === "ifza" &&
@@ -108,7 +108,7 @@ export default function MeydanFreeZone({
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "difc-regulated" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold xl:max-w-full ",
                     variant === "holding" &&
                       "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
                     variant === "RAK-Offshore" &&
