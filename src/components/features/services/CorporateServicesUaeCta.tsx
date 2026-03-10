@@ -61,6 +61,8 @@ export default function CorporateServicesUaeCta({
               "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
             variant === "ADGM-Foundations" &&
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
+            variant === "Financial-Statement-Audit" &&
+              "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
           )}
         >
           <div

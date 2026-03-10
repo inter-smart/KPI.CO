@@ -31,7 +31,8 @@ export type CorporateServicesUaeFaqProps = {
   variant?:
     | "side-arrow"
     | "holding"
-    | "Financial-Statement-Audit" | "difc-regulated"
+    | "Financial-Statement-Audit"
+    | "difc-regulated"
     | "ADGM-Spv-Formation";
 };
 
@@ -70,8 +71,10 @@ export default function CorporateServicesUaeFaq({
                 key={item.id}
                 className={cn(
                   "w-full h-auto bg-transparent border-b border-[#DEDEDE] overflow-hidden relative z-0",
-                  variant === "holding" && "sm:last:border-b-0 max-sm:!border-b" ||
-                  variant === "ADGM-Spv-Formation" && "last:border-b-1",
+                  (variant === "holding" &&
+                    "sm:last:border-b-0 max-sm:!border-b") ||
+                    (variant === "ADGM-Spv-Formation" && "last:border-b-1"),
+                  variant === "Financial-Statement-Audit" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
