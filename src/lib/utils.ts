@@ -49,14 +49,17 @@ export async function transformWpPostToBlogItem(
   let categoryName = "";
 
   if (post.categories?.length) {
-    const catId = post.categories[0];
 
-    if (categoryCache.has(catId)) {
-      categoryName = categoryCache.get(catId)!;
-    } else {
-      categoryName = await getCategoryName(catId);
-      categoryCache.set(catId, categoryName);
+    for(const cat of post.categories){
+      if (categoryCache.has(cat)) {
+        categoryName += ", " + categoryCache.get(cat)!;
+      } else {
+        categoryName += ", " + await getCategoryName(cat);
+        categoryCache.set(cat, categoryName);
+      }
     }
+
+    
   }
 
   const dateObj = new Date(post.date);

@@ -175,9 +175,13 @@ export default function BlogList({ data, categories }: BlogListProps) {
 
             const categoryFetcher = getCategoryNameFromEmbedded(post);
 
+
             return transformWpPostToBlogItem(post, mediaFetcher, categoryFetcher);
           }),
         );
+
+
+        console.log("tr",transformed)
 
         setItems(transformed as InsightItem[]);
       } catch (err) {
