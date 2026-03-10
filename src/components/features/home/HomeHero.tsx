@@ -76,15 +76,15 @@ export default function HomeHero({ data }: HomeHeroProps) {
                 <Heading
                   as="h1"
                   size="h1"
-                  className="font-bold text-white mb-[30px] lg:max-w-[740px] xl:max-w-[920px] 2xl:max-w-[1110px] 3xl:max-w-[1360px]"
+                  className="font-bold text-white mb-[30px] lg:max-w-[740px] xl:max-w-[1040px] xl:text-[48.83px] "
                 >
                   {slide.title}
                 </Heading>
-                <p className="text-[16px] lg:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] text-white/90  lg:max-w-[1000px] 2xl:max-w-[1230px] 3xl:max-w-[1530px] font-normal  mb-[30px]">
+                <p className="text-[16px] lg:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] text-white/90  lg:max-w-[1000px] xl:max-w-[1170px] font-normal  mb-[30px]">
                   {slide.description}
                 </p>
                 <Button
-                  className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 
+                  className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 w-[150px]
                   h-[35px] sm:h-[45px] xl:h-[45px]  bg-base2 hover:bg-base2 rounded-[8px] transition-all transform !scale-100 "
                   asChild
                 >

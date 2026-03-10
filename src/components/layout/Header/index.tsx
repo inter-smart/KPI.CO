@@ -208,8 +208,8 @@ export default function Header() {
               <div className="hidden lg:block">
                 <Link
                   href="/contact"
-                  className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916] min-w-[150px] flex items-center
-                   justify-center font-semibold px-7 py-2.5 rounded-[8px] transition-all duration-300 shadow-none  hover:scale-100 active:scale-95 "
+                  className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916] min-w-[150px] xl:h-[45px]  flex items-center
+                   justify-center font-semibold px-1 py-2.5 rounded-[8px] transition-all duration-300 shadow-none hover:none "
                 >
                   Get in Touch
                 </Link>

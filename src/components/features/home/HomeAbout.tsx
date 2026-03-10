@@ -40,7 +40,7 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         </div>
 
         <Button
-          className="text-[14px] xl:text-[19.2px] 2xl:text-[20px] leading-none font-medium max-sm:rounded-[6px] text-black min-w-[120px] xl:min-w-[180px] 2xl:min-w-[190px] h-[30px] md:h-[42px] xl:h-[48px] bg-[#ffc916]"
+          className="text-[14px] xl:text-[19.2px] 2xl:text-[20px] leading-none font-medium max-sm:rounded-[6px] !text-[#212121] min-w-[120px] xl:min-w-[178px] 2xl:min-w-[190px] h-[30px] md:h-[42px] xl:h-[48px] bg-[#ffc916]"
           asChild
         >
           <Link href={data.button.link}>{data.button.label}</Link>

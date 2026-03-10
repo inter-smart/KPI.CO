@@ -27,7 +27,7 @@ export default function BlogTrustedLeader({ data }: BlogTrustedLeaderProps) {
         [Autoplay({ delay: 2500, stopOnInteraction: true })],
     )
     return (
-        <section className="w-full h-auto py-[40px] lg:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
+        <section className="w-full h-auto py-[40px] lg:py-[40px_60px] xl:py-[65px_40px] 2xl:py-[50px_75px] 3xl:py-[65px_100px]">
             <div className="container">
                 <div className="w-full h-auto mb-[35px] sm:mb-8 lg:mb-8.75 2xl:mb-10 3xl:mb-12.5">
                     <Heading
@@ -48,7 +48,7 @@ export default function BlogTrustedLeader({ data }: BlogTrustedLeaderProps) {
                                     'flex-[0_0_33.3333%] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none',
                                 )}
                             >
-                                <div className="w-full h-[65px] md:h-[100px] xl:h-[130px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] 2xl:rounded-[13px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition">
+                                <div className="w-full h-[65px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] 2xl:rounded-[13px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition">
                                     <div className="w-[65px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
                                         <Image
                                             src={item?.media?.path || '/images/placeholder-image.png'}

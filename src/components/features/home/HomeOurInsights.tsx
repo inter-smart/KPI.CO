@@ -80,7 +80,7 @@ export default function HomeOurInsights({
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[15px] xl:[&>*]:p-[15px]")}>
+          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]")}>
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}
@@ -97,7 +97,7 @@ export default function HomeOurInsights({
         </div>
         <div
           className={cn(
-            "flex justify-center gap-1 xl:gap-2 mt-6 xl:mt-6 ",
+            "flex justify-center gap-1 xl:gap-[18px*:] mt-6 xl:mt-6 ",
             variant === "saifz" && "hidden",
           )}
         >
@@ -106,7 +106,7 @@ export default function HomeOurInsights({
               key={index}
               onClick={() => scrollTo(index)}
               className={cn(
-                "w-2 xl:w-3 aspect-square rounded-full transition",
+                "w-2 xl:w-[18px] aspect-square rounded-full transition",
                 index === selectedIndex ? "bg-[#ffc916]" : "bg-[#dedede]",
               )}
             />
