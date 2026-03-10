@@ -106,7 +106,9 @@ export default function CorporateServicesUaeFaq({
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex relative z-2"
+            className={cn("text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex relative z-2",
+              variant === "difc-regulated" && "hidden"
+            )}
             asChild
           >
             <Link

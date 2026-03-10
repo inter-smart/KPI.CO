@@ -181,9 +181,10 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <div
                       className={cn(
-                        "w-[100%] lg:w-[2px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
+                        "w-[100%] lg:w-[2px] h-[1px] lg:h-[200%] xl:h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
+                        variant === "difc-regulated" && "xl:h-[185%]",
                         variant === "mainland" && "lg:h-[200%]",
                         variant === "company-freezone" && "lg:h-[200%]",
                         index <= activeStep
@@ -236,6 +237,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "tax-advisory" && "text-nowrap",
                         variant == "aup" && "max-w-full",
                         variant == "adgm-regulated" && "max-w-full",
+                        variant == "difc-regulated" && "max-w-[94%]",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",

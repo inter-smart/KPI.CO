@@ -92,6 +92,8 @@ export default function InnerHero({
         <div
           className={cn(
             "w-full max-w-[850px]",
+            variant === "difc-regulated" &&
+            "md:max-w-[500px] xl:max-w-[750px]",
             variant === "ADGM-Foundations" &&
             "md:max-w-[500px] xl:max-w-[750px]",
             variant === "saifz" &&
@@ -128,6 +130,7 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                variant === "difc-regulated" && "!max-w-[88%]",
                 variant === "technology" && "xl:!text-[20px]",
                 variant === "dwtc" &&
                  

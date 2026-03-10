@@ -96,6 +96,7 @@ export default function CorporateServicesUaeCta({
               variant === "ifza" ? "lg:w-[65%]" : "",
               variant === "Financial-Statement-Audit" && "lg:w-[60%]",
               variant === "VatServicesUae" && "lg:w-[61%]",
+              variant === "difc-regulated" && "xl:w-[52%]",
             )}
           >
             <Heading
@@ -130,6 +131,7 @@ export default function CorporateServicesUaeCta({
               variant === "saifz" && "xl:w-[45%]",
               variant === "ifza" ? "lg:w-[35%]" : "",
               variant === "Financial-Statement-Audit" && "lg:w-[40%]",
+              variant === "difc-regulated" && "xl:w-[47%]",
               
               variant === "VatServicesUae" && "lg:w-[39%]",
             )}

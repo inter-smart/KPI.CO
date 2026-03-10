@@ -253,17 +253,17 @@ const localData = {
     items: [
       {
         id: 1,
-        text: "Passport copies of shareholders ",
+        text: "Passport Copies Of shareholders ",
       },
       {
         id: 2,
-        text: "UAE entry stamp or residence visa copy (if applicable) ",
+        text: "UAE Entry Stamp Or Residence Visa Copy (If Applicable) ",
       },
       {
         id: 3,
-        text: "Trade name and business activity selection",
+        text: "Trade Name And Business Activity Selection",
       },
-      { id: 4, text: "Office or workspace confirmation" },
+      { id: 4, text: "Office Or Workspace Confirmation" },
     ],
 
     media: {
