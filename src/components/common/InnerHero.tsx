@@ -97,7 +97,7 @@ export default function InnerHero({
             variant === "saifz" &&
             "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" && "md:max-w-[600px] xl:max-w-[760px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
-            variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[620px]",
+            variant === "AuditServicesUae" && "max-w-[500px] xl:max-w-[770px]",
             variant === "ifza" && "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "technology" && "!max-w-full",
             variant === "internal-audit" && "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
@@ -149,6 +149,7 @@ export default function InnerHero({
                 variant === "Financial-Statement-Audit" && "xl:text-[20px]",
                 variant === "VatServicesUae" && "xl:text-[20px]",
                 variant === "ADGM-Foundations" && "xl:text-[20px]",
+                variant === "AuditServicesUae" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}
