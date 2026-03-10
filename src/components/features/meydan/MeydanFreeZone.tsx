@@ -44,7 +44,6 @@ export default function MeydanFreeZone({
   data,
   variant = "default",
 }: MeydanFreeZoneProps) {
-
   if (!data) return null;
 
   return (
@@ -74,15 +73,17 @@ export default function MeydanFreeZone({
         <div
           className={cn(
             "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-            (variant === "difc" || variant === "holding" || "difc-regulated" ) && "md:!grid-cols-1",
-            variant === "regulatory"  && "md:grid-cols-1",
-            variant === "difc-regulated"  && "md:!grid-cols-1",
+            (variant === "difc" || variant === "holding" || "difc-regulated") &&
+              "xl:grid-cols-1",
+            variant === "regulatory" && "xl:grid-cols-1",
+
             variant === "ADGM-Foundation" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 ",
+              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] xl:grid-cols-2 ",
+
             variant === "ifza" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
             variant === "MeydanFreeZone" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
+              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px] xl:grid-cols-2",
             variant === "RAK-Offshore" && "xl:gap-[30px]",
           )}
         >
@@ -92,7 +93,8 @@ export default function MeydanFreeZone({
                 className={cn(
                   "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[48px_34px_35px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
-                  variant === "ifza" && "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                  variant === "ifza" &&
+                    "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[80px_35px]",
                   variant === "ifza" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
@@ -108,7 +110,7 @@ export default function MeydanFreeZone({
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                     variant === "difc-regulated" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold xl:max-w-full ",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold xl:max-w-full ",
                     variant === "holding" &&
                       "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
                     variant === "RAK-Offshore" &&
@@ -116,7 +118,7 @@ export default function MeydanFreeZone({
                     variant === "ADGM-Foundation" &&
                       "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
                   )}
                 >
                   {parse(item?.title)}
@@ -143,12 +145,7 @@ export default function MeydanFreeZone({
                     {item?.highlightsText}
                   </div>
                 )}
-                <ul
-                  className={cn(
-                    "mb-[20px]",
-                    variant === "ifza" && "mb-0",
-                  )}
-                >
+                <ul className={cn("mb-[20px]", variant === "ifza" && "mb-0")}>
                   {item?.zone_list?.map((zone, i) => (
                     <li
                       key={i}
@@ -184,9 +181,12 @@ export default function MeydanFreeZone({
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px]">
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
-                <div className={cn("w-full h-full rounded-[15px]   overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[15px] sm:after:rounded-[12px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]",
-                  variant === "ifza" && "after:xl:translate-x-[3px]"
-                )}>
+                <div
+                  className={cn(
+                    "w-full h-full rounded-[15px]   overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[15px] sm:after:rounded-[12px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]",
+                    variant === "ifza" && "after:xl:translate-x-[3px]",
+                  )}
+                >
                   <div className="relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0">
                     <div
                       className={cn(
@@ -194,10 +194,10 @@ export default function MeydanFreeZone({
                         variant === "difc" &&
                           "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "difc-regulated" &&
-                        "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "regulatory" &&
-                        "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
-                        
+                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+
                         variant === "audit" && " text-[#1C5396]",
                         variant === "RAK-Offshore" &&
                           " text-[#1C5396] mb-[10px]",
