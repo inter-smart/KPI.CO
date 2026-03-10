@@ -401,7 +401,7 @@ export default function HomePage() {
       <HomeSecurityInfo data={localData.securityInfo} />
       <HomeAbout data={localData.about} className="max-sm:hidden" />
       <HomeProfessionalAffiliations data={localData.professionalAffiliations} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }
