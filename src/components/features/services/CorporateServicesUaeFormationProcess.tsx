@@ -40,6 +40,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "mainland"
     | "aup"
     | "default"
+    | "Financial-Statement-Audit"
     | "tax-advisory"
     | "risk"
     | "internal-audit"
@@ -239,6 +240,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",
+                        variant == "Financial-Statement-Audit" && "max-w-full",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"

@@ -368,7 +368,7 @@ const localData = {
       title: blog.title,
       description: blog.description,
       readTime: blog.readTime,
-      date: blog.date, 
+      date: blog.date,  
       date_full: blog.date_full,
       slug: `/blog/${blog.slug}`,
     })),
@@ -385,15 +385,15 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <MainlandBusiness variant="spv" data={localData.mainlandBusiness} />
+      <InnerHero data={localData.hero} variant="ADGM-SPV-Formation" />
+      <MainlandBusiness variant="ADGM-SPV-Formation" data={localData.mainlandBusiness} />
       <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <CorporateServicesUaeWhyChoose variant="spv" data={localData.whyChoose} />
       {/* <DocumentRequired variant="spv" data={localData.document_required_data} /> */}
       <RiskOrganisation data={localData.document_required_data} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeCta data={localData.contactUs} variant="ADGM-SPV-Formation" />
       <CorporateServicesUaeFaq
         variant="side-arrow"
         data={localData.difc_faq_data}

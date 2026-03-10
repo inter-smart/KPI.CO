@@ -20,7 +20,7 @@ export type HeroData = {
   description: string;
   media?: {
     desktopPath: string;
-    mobilePath: string;
+    mobilePath: string; 
     alt: string;
   };
   additionalContent?: string[];
@@ -447,7 +447,7 @@ export default function DwtcFreezone() {
   return (
     <>
       <InnerHero variant="difc-regulated" data={localData.hero} />
-      <WhyRiskManagement data={localData.whyRisk} />
+      <WhyRiskManagement data={localData.whyRisk} variant="DIFC-Regulated" />
       <RiskAdvisory variant="difc-regulated" data={localData.riskAdvisory} />
       <CorporateServicesUaeFormationProcess
         variant="difc-regulated"

@@ -1,22 +1,22 @@
 import { Metadata } from "next";
+import { MediaItem } from "../page";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
-import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import { MainlandBusinessData } from "../mainland-company-formation-uae/page";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import { MainlandBusinessData } from "../mainland-company-formation-uae/page";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import { MeydanFreeZoneData } from "../meydan-freezone-business-setup-uae/page";
-import MeydanKeyBenefits, {
-  MeydanKeyBenefitsData,
-} from "@/components/features/meydan/MeydanKeyBenefits";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
-import BusinessLocation, {
-  type BusinessLocationData,
-} from "@/components/features/mainland/BusinessLocation";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import { MediaItem } from "../page";
-import { blogData } from "@/data/blogData";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import MeydanKeyBenefits, {
+  MeydanKeyBenefitsData,
+} from "@/components/features/meydan/MeydanKeyBenefits";
+import BusinessLocation, {
+  type BusinessLocationData,
+} from "@/components/features/mainland/BusinessLocation";
 
 export type HeroData = {
   id: number;
@@ -385,7 +385,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -402,8 +402,11 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.freezoneBusiness} />
+      <InnerHero data={localData.hero} variant="JAFZA-Freezone" />
+      <MainlandBusiness
+        data={localData.freezoneBusiness}
+        variant="JAFZA-Freezone"
+      />
       <MeydanFreeZone data={localData.jafzaFreeZone} variant="ifza" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <CorporateServicesUaeBanking
@@ -415,10 +418,10 @@ export default function DwtcFreezone() {
         data={localData.logoimage}
         variant="downshadow"
       />
-      <RiskOrganisation variant="dwtc" data={localData.whyWorkWith} />
+      <RiskOrganisation data={localData.whyWorkWith} variant="JAFZA-Freezone" />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq
-        variant="side-arrow"
+        variant="JAFZA-Freezone"
         data={localData.corporate_faq_data}
       />
       <HomeOurInsights data={localData.related_blog} />

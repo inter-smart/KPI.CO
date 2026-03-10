@@ -42,7 +42,7 @@ export type RiskAdvisoryDta = {
   description: string;
   highlightsText: string;
   advisoryItems: {
-    id: number;
+    id: number; 
     slNo: number;
     description: string;
   }[];
@@ -383,8 +383,8 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <WhyRiskManagement data={localData.whyRisk} />
+      <InnerHero data={localData.hero} variant="ADGM-Regulated-Audit"/>
+      <WhyRiskManagement data={localData.whyRisk} variant="DIFC-Regulated" />
       <RiskAdvisory variant="adgm-regulated" data={localData.riskAdvisory} />
       {/* <RiskApproach variant="mainland" data={localData.approachProcess} /> */}
       <CorporateServicesUaeFormationProcess

@@ -1,15 +1,15 @@
+import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
+import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import BusinessLocation from "@/components/features/mainland/BusinessLocation";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
-import { blogData } from "@/data/blogData";
-import { Metadata } from "next";
 
 export type HeroData = {
   id: number;
@@ -290,7 +290,8 @@ const localData = {
           alt: "General Trading License",
         },
         title: "General Trading License",
-        description: "Ideal for businesses dealing in multiple products under a single licence for simplified operations.",
+        description:
+          "Ideal for businesses dealing in multiple products under a single licence for simplified operations.",
       },
       {
         id: 3,
@@ -530,11 +531,9 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="rakez" />
       <MainlandBusiness data={localData.mainlandBusiness} variant="rakez" />
-
       <CorporateServicesUaeWhyBuild variant="rakez" data={localData.whyBuild} />
-
       <CorporateServicesUaeServices
         data={localData?.services}
         variant="rakez"

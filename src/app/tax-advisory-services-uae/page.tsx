@@ -13,7 +13,7 @@ import { Metadata } from "next";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
-  id: number;
+  id: number; 
   title: string;
   description: string;
   media?: {
@@ -372,9 +372,9 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="Tax-Advisory"/>
       <WhyRiskManagement data={localData.whyRisk} />
-      <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
+      <MeydanFreeZone variant="Tax-Advisory" data={localData.meydanFreeZone} />
       <CorporateServicesUaeFormationProcess
         variant="tax-advisory"
         data={localData.formationProcess}

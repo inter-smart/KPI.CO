@@ -1,7 +1,11 @@
 {
     "folder-color.pathColors": [
         {
-            "folderPath": "KPI.CO\\src\\app\\audit-services-uae\\page.tsx\\",
+            "folderPath": "KPI.CO\\src\\app\\jafza-free-zone-business-setup-uae\\page.tsx\\",
+            "color": "foldercolorizer.color_00ee00"
+        },
+        {
+            "folderPath": "KPI.CO\\src\\app\\company-formation-rakez-free-zone\\page.tsx\\",
             "color": "foldercolorizer.color_00ee00"
         }
     ]

@@ -63,7 +63,8 @@ export default function CorporateServicesUaeBanking({
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
-        variant === "dmcc" && "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
+        variant === "dmcc" &&
+          "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
       )}
     >
       <div className="container">

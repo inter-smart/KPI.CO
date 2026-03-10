@@ -35,6 +35,7 @@ type DocumentRequiredProps = {
     | "CorporateTaxUae"
     | "VatServicesUae"
     | "MeydanFreeZone"
+    | "Formation-JAFZA"
     | "Financial-Statement-Audit"
     | "aup"
     | "spv"
@@ -91,11 +92,13 @@ export default function DocumentRequired({
           "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "MeydanFreeZone" && "bg-[#F9FAFB]",
         variant === "AuditServicesUae" &&
-          "bg-linear-to-t from-[rgba(62,176,234,0.05)] via-white to-white xl:py-[50px]",
+          "bg-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "VatServicesUae" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "Formation-JAFZA" &&
+          "bg-[#F9FAFB] ",
       )}
     >
       <div className="container relative">
@@ -114,7 +117,11 @@ export default function DocumentRequired({
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "VatServicesUae" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "Formation-JAFZA" &&
+                "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "CorporateTaxUae" &&
+                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              variant === "AuditServicesUae" &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
@@ -259,6 +266,7 @@ export default function DocumentRequired({
                           variant === "company-freezone" ||
                           variant === "AuditServicesUae" ||
                           variant === "VatServicesUae" ||
+                          variant === "Formation-JAFZA" ||
                           variant === "CorporateTaxUae" ||
                           variant === "mainland") && (
                           <svg
@@ -281,7 +289,6 @@ export default function DocumentRequired({
                 )}
               </ul>
             )}
-
             {data?.ftr_description && (
               <div
                 className={cn(
@@ -304,9 +311,11 @@ export default function DocumentRequired({
                 variant === "saifz" && "xl:w-[475px]",
                 variant === "dfza" && "xl:w-[475px]",
                 variant === "AuditServicesUae" && "xl:w-[475px]",
+                variant === "Formation-JAFZA" && "xl:w-[475px]",
                 variant === "Financial-Statement-Audit" && "xl:w-[475px]",
                 variant === "VatServicesUae" && "xl:w-[475px]",
                 variant === "CorporateTaxUae" && "xl:w-[520px]",
+                variant === "AuditServicesUae" && "xl:w-[520px]",
               )}
             >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">
@@ -332,7 +341,6 @@ export default function DocumentRequired({
             </div>
           )}
         </div>
-
         {data?.structure_list && (
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px]">
             {data.structure_list.map((item) => (

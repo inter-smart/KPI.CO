@@ -411,7 +411,7 @@ const localData = {
   },
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   title: "Financial Statement Audit Services in the UAE | KPI Group",
   description:
     "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders.",
@@ -427,7 +427,7 @@ export default function VatServicesUaePage() {
       />
       <RiskAdvisory data={localData.riskAdvisory} />
       <CorporateServicesUaeFormationProcess
-        variant="Vat-Services"
+        variant="Financial-Statement-Audit"
         data={localData.formationProcess}
       />
       <DocumentRequired

@@ -1,16 +1,16 @@
+import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
+import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
-import { blogData } from "@/data/blogData";
-import { Metadata } from "next";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -131,7 +131,6 @@ const localData = {
     description:
       "<p>Set up your free zone company in the UAE with a streamlined registration process and flexible <br/> business options. Ideal for businesses seeking a cost-effective setup, simplified compliance and <br/> access to purpose-built commercial zones across the Emirates. </p>",
   } satisfies HeroData,
-
   mainlandBusiness: {
     title: "Start A Free Zone Business In The UAE",
     description:
@@ -151,7 +150,6 @@ const localData = {
       alt: "Mainland Business Setup UAE",
     },
   } satisfies MainlandBusinessData,
-
   whyBuild: {
     title: "Why Choose A Free Zone Company Setup?",
     description: "",
@@ -238,7 +236,6 @@ const localData = {
       },
     ] satisfies WhyBuildItem[],
   },
-
   riskAssurance: {
     title: "Types Of Free Zone Licenses ",
     description:
@@ -303,7 +300,6 @@ const localData = {
       },
     ] satisfies RiskAssuranceData[],
   },
-
   formationProcess: {
     title: "Steps to Get a Free Zone License",
     sub_title: "",
@@ -383,7 +379,6 @@ const localData = {
       },
     ] satisfies ProcessStep[],
   },
-
   document_required_data: {
     title: "Documents Required For Free Zone Company Formation",
     description:
@@ -408,7 +403,6 @@ const localData = {
     ftr_description:
       "<p>Some Free Zones may require additional or industry-specific documents depending on your business activity. At KPI Group, we'll personally review your paperwork, make sure everything meets the Free Zone requirements, and handle the submission, so your registration is quick and hassle-free.</p>",
   } satisfies DocumentRequiredData,
-
   banking: {
     title: "Banking Support For Free Zone Companies",
     description:
@@ -417,35 +411,47 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 2,
         media: {
-          path: "/images/banking-partner-1.svg",
+          path: "/images/banking-partner-4.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-1.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-5.svg",
+          path: "/images/banking-partner-3.svg",
           alt: "Emirates NBD",
         },
       },
-     
+      {
+        id: 6,
+        media: {
+          path: "/images/banking-partner-9.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 7,
+        media: {
+          path: "/images/banking-partner-8.svg",
+          alt: "Emirates NBD",
+        },
+      },
     ] satisfies BankingPartner[],
   },
-
   whyChoose: {
     title: "Why Work With KPI ",
     description:
@@ -490,7 +496,6 @@ const localData = {
       },
     ],
   },
-
   cta: {
     title: "Ready to Start Your Free Zone <br/> Company in the UAE?",
     description:
@@ -504,7 +509,6 @@ const localData = {
       overlayMobile: "/images/freeCtaDesk.svg",
     },
   } satisfies CtaData,
-
   corporate_faq_data: {
     title: "FAQs",
     faq_list: [
@@ -545,7 +549,6 @@ const localData = {
       },
     ] satisfies FaqItem[],
   },
-
   insights: {
     title: "Our Insights",
     items: blogData.slice(0, 7).map((blog) => ({
@@ -570,12 +573,18 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="erm" />
-      <MainlandBusiness variant="company-freezone" data={localData.mainlandBusiness} />
+      <MainlandBusiness
+        variant="company-freezone"
+        data={localData.mainlandBusiness}
+      />
       <CorporateServicesUaeWhyBuild
         variant="company-freezone"
         data={localData.whyBuild}
       />
-      <RiskAssuranceServices variant="company-freezone" data={localData.riskAssurance} />
+      <RiskAssuranceServices
+        variant="company-freezone"
+        data={localData.riskAssurance}
+      />
       <CorporateServicesUaeFormationProcess
         variant="company-freezone"
         data={localData.formationProcess}
@@ -592,8 +601,14 @@ export default function page() {
         variant="freezone-business"
         data={localData.whyChoose}
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="rakez" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeCta
+        data={localData.cta}
+        variant="company-freezone"
+      />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="company-freezone"
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

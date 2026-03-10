@@ -10,7 +10,7 @@ import CorporateServicesUaeWhyBuild from "@/components/features/services/Corpora
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import VatGuidance, {
-  VatGuidanceData,
+  VatGuidanceData, 
 } from "@/components/features/vat-services/VatGuidance";
 import VatAdvisory, {
   VatAdvisoryData,
@@ -588,7 +588,7 @@ export default function VatServicesUaePage() {
       <VatGuidance data={localData.vatGuidance} variant="VatServicesUae" />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
       <VatAdvisory data={localData.vatAdvisory} />
-      <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="dafz" />
+      <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="Vat-Services" />
       <CorporateServicesUaeFormationProcess
         variant="Vat-Services"
         data={localData.formationProcess}

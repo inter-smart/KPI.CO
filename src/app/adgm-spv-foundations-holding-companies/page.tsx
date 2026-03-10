@@ -103,7 +103,7 @@ export type InsightItem = {
   slug: string;
 };
 
-const localData = {
+const localData = { 
   hero: {
     id: 1,
     media: {
@@ -117,7 +117,7 @@ const localData = {
   } satisfies HeroData,
 
   riskAdvisory: {
-    title: "What a Holding Company Is <br/> Designed to Do",
+    title: "What a Holding Company Is Designed to Do",
     description:
       "<p>Holding companies sit above operating entities, acting <br/> as the legal and governance anchor for a group.</p> <p>They are used to</p>",
     highlightsText:
