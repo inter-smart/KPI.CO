@@ -46,21 +46,23 @@ export async function transformWpPostToBlogItem(
     }
   }
 
-  let categoryName = "";
+ let categoryName = "";
 
-  if (post.categories?.length) {
+if (post.categories?.length) {
+  const names: string[] = [];
 
-    for(const cat of post.categories){
-      if (categoryCache.has(cat)) {
-        categoryName += ", " + categoryCache.get(cat)!;
-      } else {
-        categoryName += ", " + await getCategoryName(cat);
-        categoryCache.set(cat, categoryName);
-      }
+  for (const cat of post.categories) {
+    if (categoryCache.has(cat)) {
+      names.push(categoryCache.get(cat)!);
+    } else {
+      const name = await getCategoryName(cat);
+      categoryCache.set(cat, name);
+      names.push(name);
     }
-
-    
   }
+
+  categoryName = names.join(", ");
+}
 
   const dateObj = new Date(post.date);
 

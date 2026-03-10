@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation";
-import BlogDetail from "@/components/features/blogs/BlogDetail";
 import BlogGetInTouch from "@/components/features/blogs/BlogGetInTouch";
-import BlogInternalAudit from "@/components/features/blogs/BlogInternalAudit";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
 import BlogTrustedLeader from "@/components/features/blogs/BlogTrustedLeader";
-import { blogData } from "@/data/blogData";
 import BlogReadingProgress from "@/components/features/blogs/BlogReadingProgress";
-import BlogDetails from "@/components/features/blogs/BlogDetails";
+import BlogDetails, { generateBlogMetadata, fetchPost } from "@/components/features/blogs/BlogDetails";
+import { Metadata } from "next";
+import { getRelatedPosts, USE_MOCK } from "@/lib/blog-api";
+import { transformWpPostToBlogItem } from "@/lib/utils";
+import { MOCK_CATEGORIES } from "@/lib/blog-mock-data";
+
+const BASE_WP_URL = "https://blogadmin.kpi.co/wp-json/wp/v2";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -67,62 +70,64 @@ const staticSections: {
   },
 };
 
-export const dynamic = "force-dynamic";
-
-export async function generateStaticParams() {
-  return blogData.map((post) => ({
-    slug: post.slug,
-  }));
+export async function generateMetadata({ params }:  { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  return generateBlogMetadata(slug);
 }
 
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
- 
+  
+  const { rawPost } = await fetchPost(slug);
+  
+  if (!rawPost) {
+    notFound();
+  }
 
-  // const pageData = {
-  //   audit_data: {
-  //     media: {
-  //       media_type: "image",
-  //       mobile_path: blogPost.media.path,
-  //       desktop_path: blogPost.media.path,
-  //       media_alt: blogPost.media.alt,
-  //     },
-  //     sub_title: blogPost.sub_title || blogPost.category,
-  //     title: blogPost.title,
-  //     date: blogPost.date,
-  //     readTime: blogPost.readTime,
-  //     date_full: blogPost.date_full,
-  //   },
-  //   blog_detail: {
-  //     media: {
-  //       media_type: "image",
-  //       mobile_path: blogPost.media.path,
-  //       desktop_path: blogPost.media.path,
-  //       media_alt: blogPost.media.alt,
-  //     },
-  //     sidebar_title: "Table Of Contents",
-  //     item: blogPost.sidebarItems || [],
-  //     sponsored: {
-  //       label: "Sponsored",
-  //       title: "Master Web Development in 30 Days",
-  //       description: "Learn the skills you need to become a professional web developer with our comprehensive course.",
-  //       ctaText: "Learn More",
-  //       ctaHref: "/course",
-  //       duration: "2:34",
-  //       media: {
-  //         desktop_path: "/images/sponsor01.jpg",
-  //         media_alt: "Course preview",
-  //       },
-  //     },
-  //     description: blogPost.content || blogPost.description,
+  const primaryCategory = rawPost.categories?.[0];
+  let relatedPosts: any[] = [];
+  
+  if (primaryCategory) {
+    relatedPosts = await getRelatedPosts(primaryCategory, 6, [rawPost.id]);
+  }
 
-  //   },
-  //   related_blog: {
-  //     title: "Related Blogs",
-  //     items: relatedBlogs,
-  //   },
-  // };
+  const transformedRelated = await Promise.all(
+    relatedPosts.map((post) => {
+      const mediaFetcher = (_: string) => {
+        const embedded = post._embedded?.["wp:featuredmedia"]?.[0];
+        return Promise.resolve(embedded ?? null);
+      };
+
+      const categoryFetcher = (id: number) => {
+        if (USE_MOCK) {
+          const cat = MOCK_CATEGORIES.find((c) => c.id === id);
+          return Promise.resolve(cat?.name || "");
+        }
+        const terms = post._embedded?.["wp:term"];
+        if (terms) {
+          for (const group of terms) {
+            for (const term of group) {
+              if (term.id === id) return Promise.resolve(term.name);
+            }
+          }
+        }
+        return fetch(`${BASE_WP_URL}/categories/${id}`)
+          .then((r) => r.json())
+          .then((data) => data.name || "")
+          .catch(() => "");
+      };
+
+      return transformWpPostToBlogItem(post, mediaFetcher, categoryFetcher);
+    })
+  );
+
+  const pageData = {
+    related_blog: {
+      title: "Related Blogs",
+      items: transformedRelated as any,
+    },
+  };
 
   return (
     <>
@@ -130,7 +135,11 @@ export default async function BlogDetailPage({ params }: Props) {
         <BlogReadingProgress >
          <BlogDetails slug={slug} />
         </BlogReadingProgress>
-        {/* <BlogRelated data={pageData.related_blog} /> */}
+        
+        {transformedRelated.length > 0 && (
+          <BlogRelated data={pageData.related_blog} />
+        )}
+        
         <BlogTrustedLeader data={staticSections.BlogTrustedLeaders} />
         <BlogGetInTouch data={staticSections.GetInTouch} />
       </article>
