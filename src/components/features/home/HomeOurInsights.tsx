@@ -97,8 +97,8 @@ export default function HomeOurInsights({
         </div>
         <div
           className={cn(
-            "flex justify-center gap-1 xl:gap-[18px*:] mt-6 xl:mt-6 ",
-            variant === "saifz" && "hidden",
+            "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 ",
+            variant === "saifz" && "hidden"
           )}
         >
           {scrollSnaps.map((_, index) => (
@@ -134,7 +134,7 @@ function InsightCard({ data , variant}: InsightCardProps) {
         />
       </div>
 
-      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]",)}>
+      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]")}>
         <Text
           size="p1"
           className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"

@@ -41,10 +41,10 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "SOP"
     | "holding"
     | "regulatory"
-  | "aup"
+    | "aup"
     | "difc-regulated"
-  | "adgm-regulated"
-  | "spv";
+    | "adgm-regulated"
+    | "spv";
   titleClassName?: string;
   data: CorporateServicesUaeWhyChooseData;
 };
@@ -70,10 +70,10 @@ type ServiceCardProps = {
     | "holding"
     | "internal-audit"
     | "regulatory"
-  | "aup"
+    | "aup"
     | "difc-regulated"
-  | "adgm-regulated"
-  | "spv";
+    | "adgm-regulated"
+    | "spv";
 };
 
 export default function CorporateServicesUaeWhyChoose({
@@ -128,8 +128,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "ADGM-Foundation" && "max-xl:!mb-[25px] xl:mb-[30px]",
             variant === "CorporateServicesUae" &&
               "max-xl:!mb-[25px] xl:mb-[50px]",
-            variant === "offshore" &&
-              "xl:mb-[25px]",
+            variant === "offshore" && "xl:mb-[25px]",
           )}
         >
           <Heading
@@ -162,7 +161,9 @@ export default function CorporateServicesUaeWhyChoose({
                 variant === "SOP" &&
                   "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
                 variant === "internal-audit" &&
-                  "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ", variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
+                  "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ",
+                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
+                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
               )}
             >
               {parse(data?.description)}
@@ -222,8 +223,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "SOP" && "xl:!gap-[25px_30px]",
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
-            variant === "regulatory" &&
-            "xl:!gap-[25px_30px]",
+            variant === "regulatory" && "xl:!gap-[25px_30px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
             variant === "VatServicesUae" && "xl:gap-[25px_30px]",
             variant === "offshore" && "xl:gap-[25px_30px]",
@@ -254,14 +254,15 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
-        variant === "adgm-regulated" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
-        variant === "difc-regulated" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "adgm-regulated" &&
+          "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "difc-regulated" &&
+          "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "VatServicesUae" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "freezone-business" &&
-        "before:bg-[#FFC916] after:bg-[#f9fafb]",
-        variant === "aup" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "aup" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "regulatory" &&
           "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
         (variant === "default" || variant === "advisory") &&
@@ -310,6 +311,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             variant === "Formation-ADGM" && "text-[#1C5396]",
             variant === "VatServicesUae" && "text-[#1C5396]",
             variant === "offshore" && "text-[#1C5396]",
+            variant === "Financial-Statement-Audit" && "text-[#1C5396]",
             variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
            
           )}
