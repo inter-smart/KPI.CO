@@ -39,7 +39,7 @@ export default function AdvisorySerice({ data }: AdvisorySericeProps) {
     if (!data || !data.cards) return null;
 
     return (
-        <section className="py-12 lg:py-20 2xl:py-24 3xl:py-32 bg-white">
+        <section className="py-12 lg:py-20 xl:py-[60px_85px] 3xl:py-32 bg-white">
             <div className="container">
                 <div className="flex flex-col gap-8 lg:gap-12">
                     {data.cards.map((card, index) => (

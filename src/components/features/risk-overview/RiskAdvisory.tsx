@@ -58,7 +58,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
   return (
     <section
       className={cn(
-        "w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[50px_70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]",
+        "w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]",
         variant === "regulatory" && "xl:!py-[95px_60px]",
       )}
     >

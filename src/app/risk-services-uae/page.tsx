@@ -527,7 +527,7 @@ export default function RiskOverviewPage() {
   return (
     <>
       <InnerHero data={localData.hero} />
-      <WhyRiskManagement data={localData.whyRisk} />
+      <WhyRiskManagement data={localData.whyRisk} variant="risk"/>
       <RiskAdvisory data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
@@ -543,7 +543,7 @@ export default function RiskOverviewPage() {
       />
       <DiscussYourRisk data={localData.discussYourRisk} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }

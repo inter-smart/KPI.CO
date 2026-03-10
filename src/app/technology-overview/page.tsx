@@ -354,7 +354,7 @@ export default function DwtcFreezone() {
       />
       <CorporateServicesUaeServices variant="technology" data={localData.services} />
       <DiscussYourRisk variant="technology" data={localData.discussYourRisk} />
-      <HomeOurInsights data={localData.insights} />
+         <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }

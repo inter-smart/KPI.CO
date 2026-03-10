@@ -608,7 +608,7 @@ export default function VatServicesUaePage() {
         data={localData.corporate_faq_data}
         variant="side-arrow"
       />
-      <HomeOurInsights data={localData.insights} />
+       <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }

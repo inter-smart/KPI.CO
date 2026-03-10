@@ -400,7 +400,7 @@ export default function page() {
       />
       <CorporateServicesUaeCta data={localData.cta} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }

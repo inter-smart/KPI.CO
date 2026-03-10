@@ -449,7 +449,7 @@ export default function CompanyFormationOffshoreUaePage() {
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+          <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }

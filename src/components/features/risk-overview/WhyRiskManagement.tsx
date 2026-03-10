@@ -3,13 +3,15 @@
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
+import { cn } from "@/lib/utils";
 import type { WhyRiskData } from "@/app/risk-services-uae/page";
 
 type WhyRiskProps = {
   data: WhyRiskData;
+   variant?: "risk" ;
 };
 
-export default function WhyRiskManagement({ data }: WhyRiskProps) {
+export default function WhyRiskManagement({ data,variant }: WhyRiskProps) {
   return (
     <section className="w-full py-[45px_0] md:py-[45px_55px] xl:py-[100px_85px] 3xl:py-[125px_50px] bg-white overflow-hidden">
       <div className="container">
@@ -35,7 +37,7 @@ export default function WhyRiskManagement({ data }: WhyRiskProps) {
                 </Text>
                 <div className="flex flex-col">
                   {data.highlights?.map((item, index) => (
-                    <div key={index} className="flex py-3 lg:py-4 xl:py-5 3xl:py-7 border-0 border-b border-[#DEDEDE] sm:last-of-type:border-0 sm:last-of-type:pb-0">
+                    <div key={index} className={cn("flex py-3 lg:py-4 xl:py-5 3xl:py-7 border-0 border-b border-[#DEDEDE] sm:last-of-type:border-0 sm:last-of-type:pb-0", variant==="risk" && "sm:last-of-type:border-b sm:last-of-type:xl:py-5 " )}>
                       <div className="w-full flex gap-4 xl:gap-4 2xl:gap-6 ">
                         <div className="w-[25px] h-[27px] xl:w-[32px] xl:h-[32px] 2xl:w-[34px] 2xl:h-[34px] 3xl:w-[42px] 3xl:h-[42px] rounded-full flex items-center">
                           <Image

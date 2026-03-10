@@ -28,16 +28,16 @@ export type MeydanFreeZoneData = {
 interface MeydanFreeZoneProps {
   data: MeydanFreeZoneData;
   variant:
-    | "difc"
-    | "holding"
-    | "RAK-Offshore"
-    | "ADGM-Foundation"
-    | "MeydanFreeZone"
-    | "default"
-    | "ifza"
-    | "regulatory"
-    | "difc-regulated"
-    | "audit";
+  | "difc"
+  | "holding"
+  | "RAK-Offshore"
+  | "ADGM-Foundation"
+  | "MeydanFreeZone"
+  | "default"
+  | "ifza"
+  | "regulatory"
+  | "difc-regulated"
+  | "audit";
 }
 
 export default function MeydanFreeZone({
@@ -73,16 +73,22 @@ export default function MeydanFreeZone({
         <div
           className={cn(
             "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-            (variant === "difc" || variant === "holding" || "difc-regulated") &&
-              "md:grid-cols-1 xl:grid-cols-1",
+
+            ["difc", "holding", "difc-regulated"].includes(variant) &&
+            "md:grid-cols-1 xl:grid-cols-1",
+
             variant === "regulatory" && "md:grid-cols-1 xl:grid-cols-1",
+
             variant === "ADGM-Foundation" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 xl:grid-cols-2 ",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 xl:grid-cols-2",
+
             variant === "ifza" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
+
             variant === "MeydanFreeZone" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
-            variant === "RAK-Offshore" && "xl:gap-[30px]",
+            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
+
+            variant === "RAK-Offshore" && "xl:gap-[30px]"
           )}
         >
           {data?.free_zone_list?.map((item, index) => (
@@ -94,10 +100,10 @@ export default function MeydanFreeZone({
                   variant === "difc-regulated" && "xl:pr-[15px]",
                   // variant === "difc-regulated" && "xl:pr-[15px]",
                   variant === "ifza" &&
-                    "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                  "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[80px_35px]",
                   variant === "ifza" &&
-                    "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                  "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
 
                   index % 2 !== 0
                     ? "to-[#FEFCE8] border-[#FFCB18]"
@@ -108,17 +114,17 @@ export default function MeydanFreeZone({
                   className={cn(
                     "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] leading-normal text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[18px] 2xl:mb-[20px]",
                     variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
+                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
                     variant === "difc-regulated" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
                     variant === "holding" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
                     variant === "RAK-Offshore" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium xl:mb-[25px]",
+                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium xl:mb-[25px]",
                     variant === "ADGM-Foundation" &&
-                      "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
+                    "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
                   )}
                 >
                   {parse(item?.title)}
@@ -160,7 +166,7 @@ export default function MeydanFreeZone({
                         className={cn(
                           "text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "ADGM-Foundation" &&
-                            "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
+                          "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
                         )}
                       >
                         {parse(zone)}
@@ -192,15 +198,15 @@ export default function MeydanFreeZone({
                       className={cn(
                         "leading-normal font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
                         variant === "difc" &&
-                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                        "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "difc-regulated" &&
-                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                        "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "regulatory" &&
-                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
+                        "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
 
                         variant === "audit" && " text-[#1C5396]",
                         variant === "RAK-Offshore" &&
-                          " text-[#1C5396] mb-[10px]",
+                        " text-[#1C5396] mb-[10px]",
                         variant === "MeydanFreeZone" && "max-sm:mb-[5px]",
                       )}
                     >

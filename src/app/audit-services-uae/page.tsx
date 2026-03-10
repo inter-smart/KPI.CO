@@ -530,7 +530,7 @@ export default function AuditOverviewUaePage() {
         variant="AuditServicesUae"
       />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+          <HomeOurInsights data={localData.insights} variant="home"/>
     </>
   );
 }
