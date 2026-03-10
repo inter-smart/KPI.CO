@@ -17,11 +17,14 @@ type Variant =
   | "SAIFZ"
   | "spv"
   | "hamriya"
+  | "ADGM-SPV-Formation"
   | "dsoa"
   | "dafza"
   | "rakez"
   | "ifza"
   | "dwtc"
+  | "Formation-JAFZA"
+  | "JAFZA-Freezone"
   | "company-freezone"
   | "ADGM-Foundations";
 
@@ -53,6 +56,7 @@ export default function MainlandBusiness({
         variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
         variant === "Offshore" && "xl:py-[70px]",
         variant === "RAK-Offshore" && "xl:py-[90px_70px]",
+        variant === "rakez" && "xl:py-[90px_30px]",
       )}
     >
       <div className="container">
@@ -88,6 +92,16 @@ export default function MainlandBusiness({
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "AuditServicesUae") &&
               "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "JAFZA-Freezone") &&
+              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "Formation-JAFZA") &&
+              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              hasVariant(variant, "company-freezone") &&
+              "xl:w-[calc(100%-520px)] xl:!pr-[48px]",
+              hasVariant(variant, "rakez") &&
+              "xl:w-[calc(100%-520px)] xl:!pr-[48px]",
+              hasVariant(variant, "ADGM-SPV-Formation") &&
+              "xl:w-[calc(100%-520px)] xl:!pr-[42px]",
               hasVariant(variant, "dwtc") &&
               "xl:pr-[40px]",
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
@@ -100,7 +114,7 @@ export default function MainlandBusiness({
                 hasVariant(variant, "Mainland") && "!max-w-full",
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
                 hasVariant(variant, "dafza") && "!max-w-full",
-                hasVariant(variant, "spv") || hasVariant(variant, "rakez")
+                hasVariant(variant, "spv") || hasVariant(variant, "rakez") || hasVariant(variant, "ADGM-SPV-Formation")
                   ? "max-w-[93%] 3xl:max-w-[100%]"
                   : "lg:max-w-[100%] xl:max-w-full 2xl:max-w-[670px] 3xl:max-w-[850px]",
                 hasVariant(variant, "ADGM-Foundations") && "!max-w-full",
@@ -218,6 +232,7 @@ export default function MainlandBusiness({
             className={cn(
               "w-full lg:w-[365px] xl:w-[500px] 2xl:w-[520px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
+              variant === "ADGM-SPV-Formation" && "xl:w-[520px]",
               variant === "ADGM-Foundations" && "xl:w-[520px]",
               variant === "Mainland" && "xl:w-[520px]",
               variant === "dsoa" && "xl:w-[520px]",
@@ -225,6 +240,10 @@ export default function MainlandBusiness({
               variant === "dafza" && "xl:w-[520px]",
               variant === "ifza" && "xl:w-[520px]",
               variant === "AuditServicesUae" && "xl:w-[520px]",
+              variant === "Formation-JAFZA" && "xl:w-[520px]",
+              variant === "company-freezone" && "xl:w-[520px]",
+              variant === "JAFZA-Freezone" && "xl:w-[520px]",
+              variant === "rakez" && "xl:w-[520px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">

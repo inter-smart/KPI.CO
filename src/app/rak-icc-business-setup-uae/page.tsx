@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { MediaItem } from "../page";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
-import BlogRelated from "@/components/features/blogs/BlogRelated";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import { MainlandBusinessData } from "../mainland-company-formation-uae/page";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
@@ -17,6 +16,7 @@ import MeydanKeyBenefits, {
 import BusinessLocation, {
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -429,6 +429,19 @@ const localData = {
       slug: `/blog/${blog.slug}`,
     })),
   },
+  insights: {
+    title: "Our Insights",
+    items: blogData.slice(0, 7).map((blog) => ({
+      id: blog.id,
+      media: blog.media,
+      title: blog.title,
+      description: blog.description,
+      date: blog.date,
+      date_full: blog.date_full,
+      readTime: blog.readTime,
+      slug: `/blog/${blog.slug}`,
+    })),
+  },
 };
 
 export const metadata: Metadata = {
@@ -451,7 +464,10 @@ export default function DwtcFreezone() {
         data={localData.banking}
         variant="RAK-Offshore"
       />
-      <BusinessLocation data={localData.businessLocation} variant="RAK-Offshore" />
+      <BusinessLocation
+        data={localData.businessLocation}
+        variant="RAK-Offshore"
+      />
       <CorporateServicesUaeBanking
         data={localData.logoimage}
         variant="downshadow"
@@ -459,10 +475,10 @@ export default function DwtcFreezone() {
       <RiskOrganisation data={localData.whyWorkWith} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq
-        variant="side-arrow"
+        variant="RAK-Offshore"
         data={localData.corporate_faq_data}
       />
-      <BlogRelated data={localData.related_blog} />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

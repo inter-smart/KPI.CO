@@ -28,16 +28,17 @@ export type MeydanFreeZoneData = {
 interface MeydanFreeZoneProps {
   data: MeydanFreeZoneData;
   variant:
-  | "difc"
-  | "holding"
-  | "RAK-Offshore"
-  | "ADGM-Foundation"
-  | "MeydanFreeZone"
-  | "default"
-  | "ifza"
-  | "regulatory"
-  | "difc-regulated"
-  | "audit";
+    | "difc"
+    | "holding"
+    | "RAK-Offshore"
+    | "ADGM-Foundation"
+    | "MeydanFreeZone"
+    | "Tax-Advisory"
+    | "default"
+    | "ifza"
+    | "regulatory"
+    | "difc-regulated"
+    | "audit";
 }
 
 export default function MeydanFreeZone({
@@ -73,12 +74,10 @@ export default function MeydanFreeZone({
         <div
           className={cn(
             "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-
-            ["difc", "holding", "difc-regulated"].includes(variant) &&
-            "md:grid-cols-1 xl:grid-cols-1",
-
-            variant === "regulatory" && "md:grid-cols-1 xl:grid-cols-1",
-
+            (variant === "difc" || variant === "holding" || variant === "Tax-Advisory" || "difc-regulated") &&
+              "md:grid-cols-1",
+            variant === "regulatory" && "md:grid-cols-1",
+            variant === "Tax-Advisory" && "xl:grid-cols-1",
             variant === "ADGM-Foundation" &&
             "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 xl:grid-cols-2",
 
@@ -212,7 +211,7 @@ export default function MeydanFreeZone({
                     >
                       {item.title}
                     </div>
-                    <div className="text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]">
+                    <div className={cn("text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",variant === "Tax-Advisory" && "sm:max-w-[97%]")}>
                       {/* {item.description} */}
                       {parse(item?.description)}
                     </div>

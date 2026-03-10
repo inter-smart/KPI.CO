@@ -1,13 +1,13 @@
 import { Metadata } from "next";
-import InnerHero from "@/components/common/InnerHero";
-import CorporateServicesUaeSetupOptions from "@/components/features/services/CorporateServicesUaeSetupOptions";
-import HomeCounter from "@/components/features/home/HomeCounter";
-import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
-import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
+import HomeCounter from "@/components/features/home/HomeCounter";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import MeydanKeyBenefits from "@/components/features/meydan/MeydanKeyBenefits";
+import DiscussYourRisk from "@/components/features/risk-overview/DiscussYourRisk";
+import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeSetupOptions from "@/components/features/services/CorporateServicesUaeSetupOptions";
 
 export type HeroData = {
   id: number;
@@ -178,7 +178,8 @@ const localData = {
       {
         id: 1,
         title: "ERP & Finance Systems",
-        data_description: "Vantheon is a NetSuite implementation and advisory partner, supporting organisations with complex finance, multi‑entity structures, and cross‑border operations. We focus on building finance systems that support control, transparency, and scale, not just transactional processing.",
+        data_description:
+          "Vantheon is a NetSuite implementation and advisory partner, supporting organisations with complex finance, multi‑entity structures, and cross‑border operations. We focus on building finance systems that support control, transparency, and scale, not just transactional processing.",
         items: [
           "NetSuite implementation and optimisation",
           "Multi‑entity and multi‑subsidiary architecture",
@@ -193,7 +194,8 @@ const localData = {
       {
         id: 2,
         title: "HR & Workforce Systems",
-        data_description: "Through infithra, KPI Group’s HRMS platform, Vantheon supports organisations with distributed, high‑movement, and operationally complex workforces. infithra is designed for businesses where people, roles, and locations don’t stay static.",
+        data_description:
+          "Through infithra, KPI Group’s HRMS platform, Vantheon supports organisations with distributed, high‑movement, and operationally complex workforces. infithra is designed for businesses where people, roles, and locations don’t stay static.",
         items: [
           "Employee lifecycle management",
           "Attendance, payroll, and statutory alignment",
@@ -208,7 +210,8 @@ const localData = {
       {
         id: 3,
         title: "Compliance‑Driven Technology Initiatives",
-        data_description: "Vantheon plays a central role in system‑led compliance initiatives. This capability is critical as regulatory frameworks increasingly rely on real‑time, system‑generated data rather than post‑fact reporting.",
+        data_description:
+          "Vantheon plays a central role in system‑led compliance initiatives. This capability is critical as regulatory frameworks increasingly rely on real‑time, system‑generated data rather than post‑fact reporting.",
         items: [
           "E‑invoicing and transaction reporting readiness",
           "System alignment for VAT, corporate tax, and regulatory audits",
@@ -270,8 +273,7 @@ const localData = {
           alt: "Backed by KPI Group’s audit, tax, and regulatory expertise",
         },
         title: "Backed by KPI Group’s audit, tax, and regulatory expertise",
-        description:
-          "",
+        description: "",
       },
       {
         id: 2,
@@ -280,8 +282,7 @@ const localData = {
           alt: "Proven experience across ERP, HRMS, and compliance‑led systems",
         },
         title: "Proven experience across ERP, HRMS, and compliance‑led systems",
-        description:
-          "",
+        description: "",
       },
       {
         id: 3,
@@ -290,8 +291,7 @@ const localData = {
           alt: "Strong focus on governance, controls, and auditability",
         },
         title: "Strong focus on governance, controls, and auditability",
-        description:
-          "",
+        description: "",
       },
       {
         id: 4,
@@ -299,7 +299,8 @@ const localData = {
           path: "/images/technology-howwork-4.svg",
           alt: "Designed for organisations operating under UAE federal and free‑zone frameworks",
         },
-        title: "Designed for organisations operating under UAE federal and free‑zone frameworks",
+        title:
+          "Designed for organisations operating under UAE federal and free‑zone frameworks",
         description: "",
       },
     ] satisfies ServiceItem[],
@@ -352,7 +353,10 @@ export default function DwtcFreezone() {
         variant="technology"
         data={localData.whyBuild}
       />
-      <CorporateServicesUaeServices variant="technology" data={localData.services} />
+      <CorporateServicesUaeServices
+        variant="technology"
+        data={localData.services}
+      />
       <DiscussYourRisk variant="technology" data={localData.discussYourRisk} />
          <HomeOurInsights data={localData.insights} />
     </>

@@ -2,18 +2,18 @@ import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeCounter from "@/components/features/home/HomeCounter";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
-import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
+import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -500,7 +500,7 @@ export default function AuditOverviewUaePage() {
       <InnerHero data={localData?.hero} variant="AuditServicesUae" />
       <DocumentRequired
         data={localData?.document_required_data}
-        variant="regulatory"
+        variant="AuditServicesUae"
       />
       <RiskAdvisory data={localData.riskAdvisory} variant="AuditServicesUae" />
       <DocumentRequired
@@ -529,7 +529,10 @@ export default function AuditOverviewUaePage() {
         data={localData.cta}
         variant="AuditServicesUae"
       />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="AuditServicesUae"
+      />
       <HomeOurInsights data={localData.insights} />
     </>
   );

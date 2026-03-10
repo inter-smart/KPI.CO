@@ -1,13 +1,12 @@
+import { Metadata } from "next";
+import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-
-import { Metadata } from "next";
-import DocumentRequired from "@/components/features/services/DocumentRequired";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
-import { blogData } from "@/data/blogData";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 
 export type MainlandBusinessData = {
   title: string;
@@ -196,15 +195,15 @@ const localData = {
   document_required_data: {
     title: "Why Work with KPI ",
     description:
-      "<p>KPI Group is more than a company formation agent. We’re your <br/>partner in business growth, providing end-to-end support <br/>across corporate, regulatory, and business advisory services. <br/>We help JAFZA Offshore companies with:</p>",
+      "<p>KPI Group is more than a company formation agent. We’re your partner in business growth, providing end-to-end support across corporate, regulatory, and business advisory services. We help JAFZA Offshore companies with:</p>",
     items: [
       {
         id: 1,
-        text: "Strategic company structuring for tax efficiency and <br/>international operations",
+        text: "Strategic company structuring for tax efficiency and international operations",
       },
       {
         id: 2,
-        text: "Regulatory and compliance guidance tailored to JAFZA <br/>Offshore requirements",
+        text: "Regulatory and compliance guidance tailored to JAFZA Offshore requirements",
       },
       { id: 3, text: "Corporate governance support to streamline operations" },
       {
@@ -213,7 +212,7 @@ const localData = {
       },
       {
         id: 5,
-        text: "Ongoing post‑setup services including licenses, visas, and<br/> approvals",
+        text: "Ongoing post‑setup services including licenses, visas, and approvals",
       },
     ],
 
@@ -222,7 +221,7 @@ const localData = {
       alt: "Required documents",
     },
     ftr_description:
-      "<p>Our approach ensures that your JAFZA Offshore company is <br/>structured for growth, fully compliant, and aligned with your <br/>business strategy - giving you the freedom to focus on<br/> expanding and managing your global business.</p>",
+      "<p>Our approach ensures that your JAFZA Offshore company is structured for growth, fully compliant, and aligned with your business strategy - giving you the freedom to focus on expanding and managing your global business.</p>",
   } satisfies DocumentRequiredData,
   cta: {
     title: "Launch Your JAFZA Offshore Company Today",
@@ -285,7 +284,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -302,19 +301,25 @@ export const metadata: Metadata = {
 export default function MainlandCompanyFormationUaePage() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <InnerHero data={localData.hero} variant="Formation-JAFZA" />
+      <MainlandBusiness
+        data={localData.mainlandBusiness}
+        variant="Formation-JAFZA"
+      />
       <CorporateServicesUaeWhyBuild
-        variant="offshore"
+        variant="Formation-JAFZA"
         data={localData.whyBuild}
       />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="sop"
+        variant="Formation-JAFZA"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq variant="side-arrow" data={localData.corporate_faq_data} />
-         <HomeOurInsights data={localData.insights} />
+      <CorporateServicesUaeCta data={localData.cta} variant="Formation-JAFZA" />
+      <CorporateServicesUaeFaq
+        variant="Formation-JAFZA"
+        data={localData.corporate_faq_data}
+      />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

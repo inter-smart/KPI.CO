@@ -118,6 +118,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "SOP" ||
               variant === "Formation-DIFC" ||
               variant === "AuditServicesUae" ||
+              variant === "aup" ||
               variant === "freezone-business" ||
               variant === "regulatory" ||
               variant === "Formation-ADGM" ||

@@ -25,16 +25,20 @@ export type CorporateServicesUaeCtaProps = {
     | "Financial-Statement-Audit"
     | "AuditServicesUae"
     | "VatServicesUae"
+    | "Formation-JAFZA"
     | "mainland"
     | "saifz"
     | "blogdetail"
+    | "company-freezone"
+    | "DMCC-Freezone"
     | "rakez"
     | "ADGM-Foundations"
     | "holding"
+    | "ADGM-SPV-Formation"
     | "ifza"
     | "dwtc"
-  | "adgm-regulated"
-  | "difc-regulated";
+    | "adgm-regulated"
+    | "difc-regulated";
 };
 
 export default function CorporateServicesUaeCta({
@@ -63,6 +67,8 @@ export default function CorporateServicesUaeCta({
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
             variant === "Financial-Statement-Audit" &&
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
+            variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
+            variant === "company-freezone" && "xl:p-[55px_50px]",
           )}
         >
           <div
@@ -85,7 +91,7 @@ export default function CorporateServicesUaeCta({
               className={cn("w-full h-full object-cover max-md:block hidden")}
             />
           </div>
-          <div
+          <div 
             className={cn(
               "w-full max-lg:mb-3.75",
               variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
@@ -95,7 +101,10 @@ export default function CorporateServicesUaeCta({
               variant === "saifz" && "xl:w-[55%]",
               variant === "ifza" ? "lg:w-[65%]" : "",
               variant === "Financial-Statement-Audit" && "lg:w-[60%]",
-              variant === "VatServicesUae" && "lg:w-[61%]",
+              variant === "VatServicesUae" && "lg:w-[62%]",
+              variant === "Formation-JAFZA" && "lg:w-[58%]",
+              variant === "DMCC-Freezone" && "lg:w-[65%]",
+              variant === "ADGM-SPV-Formation" && "lg:w-[60%]",
             )}
           >
             <Heading
@@ -115,6 +124,7 @@ export default function CorporateServicesUaeCta({
                 "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
                 variant === "blogdetail" && "font-medium [&_p]:font-medium",
                 variant === "AuditServicesUae" && "xl:max-w-[75%]",
+                variant === "DMCC-Freezone" && "xl:max-w-[92%]",
               )}
             >
               {parse(data?.description)}
@@ -130,8 +140,10 @@ export default function CorporateServicesUaeCta({
               variant === "saifz" && "xl:w-[45%]",
               variant === "ifza" ? "lg:w-[35%]" : "",
               variant === "Financial-Statement-Audit" && "lg:w-[40%]",
-              
-              variant === "VatServicesUae" && "lg:w-[39%]",
+              variant === "Formation-JAFZA" && "lg:w-[42%]",
+              variant === "VatServicesUae" && "lg:w-[38%]",
+              variant === "DMCC-Freezone" && "lg:w-[35%]",
+              variant === "ADGM-SPV-Formation" && "lg:w-[40%]",
             )}
           >
             <Button
@@ -154,9 +166,9 @@ export default function CorporateServicesUaeCta({
                 variant === "Financial-Statement-Audit" &&
                   "max-sm:!min-w-[120px]",
                 variant === "difc-regulated" &&
-                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&
-                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >

@@ -448,7 +448,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="DMCC-Freezone" />
       <MainlandBusiness data={localData.mainlandBusiness} />
       <MeydanFreeZone data={localData.meydanFreeZone} variant="default" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
@@ -459,7 +459,7 @@ export default function page() {
         data={localData.banking}
         variant="dmcc"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeCta data={localData.cta} variant="DMCC-Freezone" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
          <HomeOurInsights data={localData.insights} />
     </>

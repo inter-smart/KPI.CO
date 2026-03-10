@@ -31,10 +31,15 @@ export type CorporateServicesUaeFaqProps = {
   variant?:
     | "side-arrow"
     | "holding"
-    | "CorporateServicesUae"
-    | "mainland"
+    | "company-freezone"
     | "Financial-Statement-Audit"
+    | "RAK-Offshore"
+    | "JAFZA-Freezone"
+    | "mainland"
+    | "CorporateServicesUae"
+    | "Formation-JAFZA"
     | "difc-regulated"
+    | "AuditServicesUae"
     | "ADGM-Spv-Formation";
 };
 
@@ -49,6 +54,7 @@ export default function CorporateServicesUaeFaq({
         variant === "holding" &&
           "py-[40px_20px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
         variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px]",
+        variant === "JAFZA-Freezone" && "xl:py-[30px_40px]",
       )}
     >
       <div className="container">
@@ -77,6 +83,10 @@ export default function CorporateServicesUaeFaq({
                     "sm:last:border-b-0 max-sm:!border-b") ||
                     (variant === "ADGM-Spv-Formation" && "last:border-b-1"),
                   variant === "Financial-Statement-Audit" && "last:border-b-1",
+                  variant === "AuditServicesUae" && "last:border-b-1",
+                  variant === "Formation-JAFZA" && "last:border-b-1",
+                  variant === "company-freezone" && "last:border-b-1",
+                  variant === "JAFZA-Freezone" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -92,6 +102,14 @@ export default function CorporateServicesUaeFaq({
                       "sm:[&>svg]:rotate-0 sm:[&[data-state=open]>svg]:!rotate-[540deg]",
                     variant === "ADGM-Spv-Formation" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "Formation-JAFZA" &&
+                      "[&>svg]:!rotate-[360deg] [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "RAK-Offshore" &&
+                      "[&>svg]:!rotate-[360deg] [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "company-freezone" &&
+                      "[&>svg]:!rotate-[360deg] [&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "JAFZA-Freezone" &&
+                      "[&>svg]:!rotate-[360deg] [&[data-state=open]>svg]:!rotate-[180deg]",
                   )}
                 >
                   <div className="text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-[1.4] font-medium text-[#212121] max-w-[92%]">

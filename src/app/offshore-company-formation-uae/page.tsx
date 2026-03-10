@@ -439,17 +439,20 @@ export default function CompanyFormationOffshoreUaePage() {
         data={localData.offshoreCompanies}
         variant="offshore"
       />
-        <CorporateServicesUaeBanking
-          data={localData.banking}
-          variant="offshore"
-        />
+      <CorporateServicesUaeBanking
+        data={localData.banking}
+        variant="offshore"
+      />
       <CorporateServicesUaeWhyChoose
         data={localData?.whyChoose}
         variant="offshore"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-          <HomeOurInsights data={localData.insights} />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="RAK-Offshore"
+      />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

@@ -8,12 +8,12 @@ type Variant =
   | "default"
   | "difc"
   | "center"
-  | "AuditServicesUae" | "CorporateTaxUae" 
+  | "AuditServicesUae"
+  | "CorporateTaxUae"
   | "CorporateTaxUae"
   | "difc-regulated"
   | "adgm-regulated"
   | "regulatory";
-
 
 export type RiskAdvisoryProps = {
   variant?: Variant | Variant[];
@@ -85,8 +85,11 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </Heading>
             <div
               className={cn(
-                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5", variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]",  
-                variant === "CorporateTaxUae" && "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5",
+                variant === "CorporateTaxUae" &&
+                  "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                variant === "CorporateTaxUae" &&
+                  "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "regulatory" &&
                   "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px]",
               )}
@@ -94,15 +97,18 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               {parse(
                 data?.description?.replace(
                   /<\/p>\s*$/,
-                  ' <span class="!text-[#5280CA] text-[13px] font-bold">→</span></p>', 
+                  ' <span class="!text-[#5280CA] text-[13px] font-bold top-[-3px] xl:top-[-4px] relative z-0">→</span></p>',
                 ) || "",
               )}
             </div>
             <div className="flex flex-row gap-3 max-sm:hidden">
-              <div className={cn("text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
-                variant === "difc-regulated" && "max-sm:hidden",
-                variant === "adgm-regulated" && "max-sm:hidden"
-              )}>
+              <div
+                className={cn(
+                  "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
+                  variant === "difc-regulated" && "max-sm:hidden",
+                  variant === "adgm-regulated" && "max-sm:hidden",
+                )}
+              >
                 {parse(data.highlightsText)}
               </div>
             </div>
@@ -121,7 +127,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                       key={`item-${item.id ?? index}`}
                       className={cn(
                         "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
-                        hasVariant(variant, "difc")  || hasVariant(variant, "adgm-regulated")
+                        hasVariant(variant, "difc") ||
+                          hasVariant(variant, "adgm-regulated")
                           ? cn(
                               "border-[#DEDEDE]",
                               index === advisoryItems.length - 1
@@ -132,6 +139,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                                   ),
                             )
                           : "w-1/2 border-b border-r border-[#DEDEDE]",
+                          hasVariant(variant, "difc-regulated") && "last:w-full",
                       )}
                     >
                       <div
@@ -162,10 +170,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               </div>
             </div>
             <div className="flex flex-row gap-3">
-              <div className={cn("hidden",
-                variant === "difc-regulated" && "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
-                variant === "adgm-regulated" && "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden"
-              )}>
+              <div
+                className={cn(
+                  "hidden",
+                  variant === "difc-regulated" &&
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                  variant === "adgm-regulated" &&
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                )}
+              >
                 {parse(data.highlightsText)}
               </div>
             </div>

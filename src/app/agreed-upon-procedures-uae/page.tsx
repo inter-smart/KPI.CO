@@ -416,7 +416,6 @@ const localData = {
                         <p>Typical engagements are completed within 2-4 weeks, though timelines vary based on scope and information availability.</p>
                         `,
       },
-
     ] satisfies FaqItem[],
   },
 
@@ -444,19 +443,16 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <WhyRiskManagement data={localData.whyRisk} />
+      <InnerHero data={localData.hero} variant="Agreed-Procedure" />
+      <WhyRiskManagement data={localData.whyRisk} variant="DIFC-Regulated" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <CorporateServicesUaeFormationProcess
         variant="aup"
         data={localData.formationProcess}
       />
       <DocumentRequired data={localData.document_required_data} variant="aup" />
-      <CorporateServicesUaeWhyChoose
-        data={localData.whyChoose}
-        variant="aup"
-      />
-      <HomeCounter data={localData.counterList} variant="aup" />
+      <CorporateServicesUaeWhyChoose data={localData.whyChoose} variant="aup" />
+      <HomeCounter data={localData.counterList} variant="Agreed-Procedure" />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
