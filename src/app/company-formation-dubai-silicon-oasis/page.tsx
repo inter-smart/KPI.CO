@@ -467,7 +467,7 @@ export default function page() {
         variant="dsoa"
         data={localData.whyBuild}
       />
-      <CorporateServicesUaeServices data={localData.services} variant="saifz" />
+      <CorporateServicesUaeServices data={localData.services} variant="dsoa" />
       <BusinessLocation data={localData.businessLocation} variant="dsoa" />
       <DocumentRequired data={localData.document_required_data} variant="dsoa"  />
       <CorporateServicesUaeBanking

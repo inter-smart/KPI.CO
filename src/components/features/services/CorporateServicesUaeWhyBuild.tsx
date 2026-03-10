@@ -159,7 +159,7 @@ export default function CorporateServicesUaeWhyBuild({
   return (
     <section
       className={cn(
-        "w-full block py-8 sm:py-10 !xl:py-[70px_50px] 2xl:py-[85px_65px]",
+        "w-full block py-8 sm:py-10 xl:py-[40px_50px] 2xl:py-[85px_65px]",
         hasVariant(variant, "formation")
           ? "bg-[#f9fafb]"
           : hasVariant(variant, "mainland")
