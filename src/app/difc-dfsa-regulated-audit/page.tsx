@@ -199,8 +199,8 @@ const localData = {
       {
         id: 2,
         step: "Step Two",
-        title: "Regulatory focused risk <br/> prioritisation",
-        inner_title: "Regulatory focused risk <br/> prioritisation",
+        title: "Regulatory focused risk  prioritisation",
+        inner_title: "Regulatory focused risk  prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
           "<p>Audit focus aligned to areas of DFSA supervisory interest, including governance, capital adequacy, valuation, and regulatory reporting</p>",
@@ -217,8 +217,8 @@ const localData = {
       {
         id: 4,
         step: "Step Four",
-        title: "Testing of key controls and <br/> balances",
-        inner_title: "Testing of key controls and <br/> balances",
+        title: "Testing of key controls and  balances",
+        inner_title: "Testing of key controls and  balances",
         sub_title: "Testing of key controls and balances",
         description:
           "<p>Focused effort on material balances, complex transactions, and high-risk processes.</p>",
@@ -285,7 +285,7 @@ const localData = {
         id: 1,
         title: "DIFC Experience Built Over Time",
         description:
-          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cycles<br/>This experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved <br/> across DIFC entities.</p>",
+          "<p>KPI has been auditing DIFC-registered and DFSA-regulated entities across multiple regulatory cyclesThis experience provides us with practical insight into DFSA expectations, regulatory review trends, and how audit scrutiny has evolved  across DIFC entities.</p>",
       },
     ],
   } satisfies MeydanFreeZoneData,
@@ -298,32 +298,32 @@ const localData = {
         id: 1,
         title: "Regulatory familiarity",
         description:
-          "<p>Strong understanding of DFSA expectations without <br/> unnecessary complexity.</p>",
+          "<p>Strong understanding of DFSA expectations without  unnecessary complexity.</p>",
       },
       {
         id: 2,
         title: "Independent judgement",
         description:
-          "<p>Balanced, objective audit opinions that withstand regulatory <br/> and stakeholder challenge.</p>",
+          "<p>Balanced, objective audit opinions that withstand regulatory  and stakeholder challenge.</p>",
       },
       {
         id: 3,
         title: "Clear communication",
         description:
-          "<p>Audit findings communicated clearly to management, boards, <br/>and key stakeholders.</p>",
+          "<p>Audit findings communicated clearly to management, boards, and key stakeholders.</p>",
       },
       {
         id: 4,
         title: "Professional accountability",
         description:
-          "<p>Consistently high standards of confidentiality, discipline, and<br/> audit integrity.</p>",
+          "<p>Consistently high standards of confidentiality, discipline, and audit integrity.</p>",
       },
     ] satisfies WhyChooseItem[],
   },
   contactUs: {
     title: "Discuss Your DIFC Audit Requirements",
     description:
-      "<p>Your audit must satisfy DFSA expectations, board scrutiny, and <br/> stakeholder confidence - not just statutory compliance. <br/> If you have questions regarding audits of DIFC-registered or DFSA- <br/>regulated entities, let’s talk.</p>",
+      "<p>Your audit must satisfy DFSA expectations, board scrutiny, and  stakeholder confidence - not just statutory compliance.  If you have questions regarding audits of DIFC-registered or DFSA- regulated entities, let’s talk.</p>",
     button: {
       label: "Get In Touch",
       link: "/contact",
