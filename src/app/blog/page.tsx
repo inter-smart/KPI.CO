@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Metadata } from "next";
 import BlogHero, { BlogHeroData } from "@/components/features/blogs/BlogHero";
 import BlogList from "@/components/features/blogs/BlogList";
@@ -31,7 +32,13 @@ export default async function BlogPage() {
   return (
     <>
       <BlogHero data={localData.hero} />
-      <BlogList data={localData.blogs} categories={categories} />
+      <Suspense fallback={
+        <div className="container py-20 text-center text-gray-400">
+          Loading Insights...
+        </div>
+      }>
+        <BlogList data={localData.blogs} categories={categories} />
+      </Suspense>
     </>
   );
 }

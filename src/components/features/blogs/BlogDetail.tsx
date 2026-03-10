@@ -41,8 +41,15 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   const [sidebarStyle, setSidebarStyle] = useState<React.CSSProperties>({});
   const [activeId, setActiveId] = useState<string>("");
 
-  const { toc, htmlWithIds } = useMemo(() => {
-    if (!data?.description) return { toc: [] as TocItem[], htmlWithIds: "" };
+  const [toc, setToc] = useState<TocItem[]>([]);
+  const [htmlWithIds, setHtmlWithIds] = useState<string>("");
+
+  useEffect(() => {
+    if (!data?.description) {
+      setToc([]);
+      setHtmlWithIds("");
+      return;
+    }
 
     const doc = new DOMParser().parseFromString(data.description, "text/html");
     const headings = Array.from(
@@ -54,7 +61,8 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       return { id: heading.id, text: heading.textContent?.trim() || "" };
     });
 
-    return { toc: tocList, htmlWithIds: doc.body.innerHTML };
+    setToc(tocList);
+    setHtmlWithIds(doc.body.innerHTML);
   }, [data?.description]);
 
   const scrollToHeading = useCallback((id: string) => {
