@@ -86,8 +86,10 @@ export default function HomeOurInsights({
                 key={`insight-${item.id}`}
                 className={cn(
                   "flex-[0_0_75%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
-                  variant === "saifz" &&
+                  variant === "saifz" && 
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
+                  variant === "default" && 
+                    "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -98,7 +100,7 @@ export default function HomeOurInsights({
         <div
           className={cn(
             "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 ",
-            variant === "saifz" && "hidden"
+            variant === "default" && "hidden"
           )}
         >
           {scrollSnaps.map((_, index) => (

@@ -472,7 +472,7 @@ export default function MainlandCompanyFormationUaePage() {
       />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow"/> 
-          <HomeOurInsights data={localData.insights} variant="home"/>
+          <HomeOurInsights data={localData.insights} />
     </>
   );
 }

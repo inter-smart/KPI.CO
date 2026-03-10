@@ -420,7 +420,7 @@ export default function DwtcFreezone() {
       <RiskExploreService variant="holding" data={localData.explore_service} />
       <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
       <CorporateServicesUaeFaq variant="holding" data={localData.difc_faq_data} />
-       <HomeOurInsights data={localData.insights} variant="home"/>
+       <HomeOurInsights data={localData.insights} />
     </>
   );
 }

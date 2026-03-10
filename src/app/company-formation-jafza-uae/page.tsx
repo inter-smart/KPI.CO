@@ -314,7 +314,7 @@ export default function MainlandCompanyFormationUaePage() {
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq variant="side-arrow" data={localData.corporate_faq_data} />
-         <HomeOurInsights data={localData.insights} variant="home"/>
+         <HomeOurInsights data={localData.insights} />
     </>
   );
 }

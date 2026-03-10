@@ -398,7 +398,7 @@ export default function DwtcFreezone() {
         variant="side-arrow"
         data={localData.difc_faq_data}
       />
-       <HomeOurInsights data={localData.insights} variant="home"/>
+       <HomeOurInsights data={localData.insights} />
     </>
   );
 }

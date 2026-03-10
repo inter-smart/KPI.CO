@@ -53,7 +53,7 @@ export type ProcessStep = {
   id: number;
   title: string;
   sub_title: string;
-    inner_title: string;
+  inner_title: string;
   description: string;
 };
 
@@ -201,7 +201,7 @@ const localData = {
         items: [
           "Due diligence for mergers, acquisitions, or partnerships",
           "Verification of compliance with licensing and regulatory requirements ",
-          "Review of HR and payroll-related processes ", 
+          "Review of HR and payroll-related processes ",
         ],
         media: {
           path: "/images/mayden-benefit-1.jpg",
@@ -221,7 +221,7 @@ const localData = {
         id: 1,
         title: "Clear Scoping",
         sub_title: "",
-                inner_title: "Clear Scoping",
+        inner_title: "Clear Scoping",
         description:
           "<p>Procedures are agreed upfront to ensure clarity and alignment. </p>",
       },
@@ -229,7 +229,7 @@ const localData = {
         id: 2,
         title: "Precise Execution",
         sub_title: "",
-                inner_title: "Precise Execution",
+        inner_title: "Precise Execution",
         description:
           "<p>Work is performed strictly as defined, without scope expansion. </p>",
       },
@@ -237,7 +237,7 @@ const localData = {
         id: 3,
         title: "Structured Reporting",
         sub_title: "",
-                inner_title: "Structured Reporting",
+        inner_title: "Structured Reporting",
         description:
           "<p>Findings are documented clearly for stakeholder use.</p>",
       },
@@ -245,7 +245,7 @@ const localData = {
         id: 4,
         title: "Timely Delivery",
         sub_title: "",
-                inner_title: "Timely Delivery",
+        inner_title: "Timely Delivery",
         description:
           "<p>Engagements are completed efficiently to meet regulatory or commercial timelines.</p>",
       },
@@ -416,7 +416,7 @@ const localData = {
                         <p>Typical engagements are completed within 2-4 weeks, though timelines vary based on scope and information availability.</p>
                         `,
       },
-     
+
     ] satisfies FaqItem[],
   },
 
@@ -427,7 +427,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -456,11 +456,11 @@ export default function page() {
         data={localData.whyChoose}
         variant="aup"
       />
-      <HomeCounter data={localData.counterList} variant="aup"/>
+      <HomeCounter data={localData.counterList} variant="aup" />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-          <HomeOurInsights data={localData.insights} variant="home"/>
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

@@ -493,7 +493,7 @@ export const metadata: Metadata = {
   description:
     "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
 };
- 
+
 export default function AuditOverviewUaePage() {
   return (
     <>
@@ -530,7 +530,7 @@ export default function AuditOverviewUaePage() {
         variant="AuditServicesUae"
       />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-          <HomeOurInsights data={localData.insights} variant="home"/>
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }

@@ -93,6 +93,7 @@ function WhyBuildCard({
         variant === "AuditServicesUae" && "shadow-none",
         variant === "offshore" && "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
         variant === "company-freezone" && "rounded-[10px]",
+        variant === "dafz" && "xl:min-h-[220px]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -254,8 +255,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "rakez") ||
             hasVariant(variant, "dwtc") ||
             hasVariant(variant, "freeZone")
-            ? "xl:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
-            : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+            ? "xl:grid-cols-4 gap-3 xl:gap-[25px] 2xl:gap-6"
+            : "lg:grid-cols-3 gap-4 xl:gap-[25px] 2xl:gap-10",
             hasVariant(variant, "company-freezone") 
             ? "lg:!grid-cols-4 gap-3 xl:!gap-[25px] 2xl:gap-6"
             : "lg:grid-cols-3 gap-4 xl:gap-10 2xl:gap-10",
