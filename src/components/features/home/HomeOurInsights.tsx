@@ -15,11 +15,12 @@ type HomeOurInsightsProps = {
     title: string;
     items: InsightItem[];
   };
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding";
+  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home";
 };
 
 type InsightCardProps = {
   data: InsightItem;
+  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home";
 };
 
 export default function HomeOurInsights({
@@ -79,17 +80,17 @@ export default function HomeOurInsights({
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]")}>
+          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[15px] xl:[&>*]:p-[15px]")}>
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_75%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0 select-none",
+                  "flex-[0_0_75%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
                   variant === "saifz" &&
-                    "flex-[0_0_90%] sm:flex-[0_0_40%] lg:flex-[0_0_33.5%]",
+                    "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                 )}
               >
-                <InsightCard data={item} />
+                <InsightCard data={item} variant={variant} />
               </div>
             ))}
           </div>
@@ -120,10 +121,10 @@ export default function HomeOurInsights({
 /* CARD                                                               */
 /* ------------------------------------------------------------------ */
 
-function InsightCard({ data }: InsightCardProps) {
+function InsightCard({ data , variant}: InsightCardProps) {
   return (
-    <div className="group flex flex-col  w-full h-full bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
-      <div className="relative aspect-[440/268] overflow-hidden">
+    <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+      <div className="relative aspect-[375/202] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}
@@ -133,16 +134,16 @@ function InsightCard({ data }: InsightCardProps) {
         />
       </div>
 
-      <div className="w-full h-full p-[22px_18px] md:p-[18px] xl:p-[25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col">
+      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]",)}>
         <Text
           size="p1"
-          className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px]  leading-none font-medium text-[#5280CA] mb-[14px] 2xl:mb-[12px] 3xl:mb-[15px]"
+          className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
         </Text>
         
 
-        <div className="text-[16px] sm:text-[15px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-normal font-semibold line-clamp-2 text-black mb-[10px] xl:mb-[12px] 2xl:mb-[15px]">
+        <div className="text-[16px] sm:text-[15px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-normal font-semibold text-black mb-[10px] xl:mb-[12px] 2xl:mb-[15px]">
           {parse(data.title ?? "title")}
         </div>
 
@@ -156,7 +157,7 @@ function InsightCard({ data }: InsightCardProps) {
 
         <Link
           href={data.slug ?? "#"}
-          className="text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-medium text-[#1c5396] inline-flex items-center gap-1 mt-auto  transition-colors duration-300"
+          className={cn("text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-1 mt-auto  transition-colors duration-300", variant === "home" && "font-medium" )}
         >
           Read More<span className="text-[11px] font-semibold">→</span>
         </Link>

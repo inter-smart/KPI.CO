@@ -95,7 +95,7 @@ export default function CorporateServicesUaeBanking({
             as="h2"
             size="h2"
             className={cn(
-              "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[50px] 3xl:mb-6.25 capitalize",
+              "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[20px] 3xl:mb-6.25 capitalize",
               variant === "ifza" && "!mb-[30px]",
               variant === "downshadow" && "!mb-[20px]",
               variant === "offshore" && "xl:mb-[30px]",
