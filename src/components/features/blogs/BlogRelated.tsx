@@ -76,7 +76,7 @@ export default function BlogRelated({ data }: BlogrelatedProps) {
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "flex-[0_0_75%] sm:flex-[0_0_45%] lg:flex-[0_0_33.33%] min-w-0 select-none",
+                    "flex-[0_0_90%] sm:flex-[0_0_45%] lg:flex-[0_0_33.33%] min-w-0 select-none",
                   )}
                 >
                   <InsightCard data={item} />
@@ -110,8 +110,8 @@ export default function BlogRelated({ data }: BlogrelatedProps) {
 
 function InsightCard({ data }: InsightCardProps) {
   return (
-   <div className="group flex flex-col w-full h-full max-sm:min-h-[477px] bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
-      <div className="relative aspect-[440/268] overflow-hidden">
+   <div className="group flex flex-col w-full h-full max-sm:min-h-[477px] xl:min-h-[527px] bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+      <div className="relative aspect-[375/202] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || data.title}
@@ -131,7 +131,7 @@ function InsightCard({ data }: InsightCardProps) {
         <h3 className="text-[16px] md:text-[20px] xl:text-[20px] 3xl:text-[26px] font-semibold text-black  mb-[15px] xl:mb-[12px] leading-relaxed transition-colors">
           {parse(data.title)}
         </h3>
-        <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-relaxed mb-[23px]">
+        <div className="text-[14px] md:text-[15px] xl:text-[16px] 3xl:text-[21px] text-[#4e4e4e] leading-normal mb-[23px]">
           {parse(data.description)}
         </div>
         <Link

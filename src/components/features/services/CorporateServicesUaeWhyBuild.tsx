@@ -98,6 +98,7 @@ function WhyBuildCard({
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
         variant === "company-freezone" && "rounded-[10px]",
         variant === "Vat-Services" && "xl:!pr-[40px]",
+        variant === "dafz" && "xl:min-h-[220px]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -165,7 +166,7 @@ export default function CorporateServicesUaeWhyBuild({
   return (
     <section
       className={cn(
-        "w-full block py-8 sm:py-10 !xl:py-[70px_50px] 2xl:py-[85px_65px]",
+        "w-full block py-8 sm:py-10 xl:py-[40px_50px] 2xl:py-[85px_65px]",
         hasVariant(variant, "formation")
           ? "bg-[#f9fafb]"
           : hasVariant(variant, "mainland")

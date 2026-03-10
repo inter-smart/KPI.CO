@@ -441,7 +441,7 @@ export default function page() {
       <HomeCounter data={localData.counterList} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <HomeOurInsights data={localData.insights} />
+          <HomeOurInsights data={localData.insights} />
     </>
   )
 }

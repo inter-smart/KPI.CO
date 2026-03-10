@@ -435,7 +435,7 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
       <HomeCounter data={localData.counterList} />
       <VatRelatedTax data={localData.vatRelatedTax} />
       <CorporateServicesUaeCta data={localData.cta} />
-      <HomeOurInsights data={localData.insights} />
+         <HomeOurInsights data={localData.insights} />
     </>
   );
 }

@@ -289,7 +289,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
       )}
     >
-      <div className="relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ">
+      <div className={cn("relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",  variant === "CorporateServicesUae" && "after:bg-[rgba(106,159,224,0.08)]",)}>
         <div
           className={cn(
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",
@@ -314,6 +314,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             variant === "offshore" && "text-[#1C5396]",
             variant === "Financial-Statement-Audit" && "text-[#1C5396]",
             variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
+           
           )}
         >
           {item?.title}

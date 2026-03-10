@@ -19,9 +19,9 @@ type BlogInternalAuditProps = {
 };
 export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
   return (
-    <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[60px] bg-white relative z-0">
+    <section className="w-full h-auto block pt-[30px] sm:pt-[40px] xl:pt-[58px] bg-white relative z-0">
       <div className="container">
-        <div className="w-full md:max-w-[65%] xl:max-w-[49%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-12">
+        <div className="w-full md:max-w-[65%] xl:max-w-[49%] 2xl:max-w-[50%] md:m-auto mb-7 md:mb-10 xl:mb-[48px]">
           <Text
             as="p"
             size="p4"
@@ -53,7 +53,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
             {data?.description}
           </div>
         </div>
-        <div className="w-full !overflow-hidden !rounded-[10px] relative aspect-[1280/360]">
+        <div className="w-full !overflow-hidden !rounded-[10px] relative aspect-[1200/340]">
           <Image
             src={data?.media?.desktop_path || "/images/icon-placeholder.svg"}
             alt={data?.media?.media_alt}

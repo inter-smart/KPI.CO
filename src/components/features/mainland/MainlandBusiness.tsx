@@ -87,7 +87,7 @@ export default function MainlandBusiness({
               hasVariant(variant, "dsoa") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
-                "xl:w-[calc(100%-520px)] xl:pr-[20px]",
+                "xl:w-[calc(100%-520px)] xl:!pr-[20px]",
               hasVariant(variant, "dafza") &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "AuditServicesUae") &&

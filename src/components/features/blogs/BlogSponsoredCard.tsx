@@ -23,11 +23,11 @@ type SponsoredCardProps = {
 export default function BlogSponsoredCard({ data }: SponsoredCardProps) {
   return (
     <div className="w-full rounded-[16px] bg-white  border border-[#e6edf5] shadow-[0_12px_30px_rgba(16,24,40,0.12)] overflow-hidden">
-      <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] font-normal text-white uppercase px-[16px] lg:px-[20px] 2xl:px-[25px] 3xl:px-[30px] py-[7px] 2xl:py-[10px] bg-gradient-to-r from-[#3EB0EA] to-[#1768AB] ">
+      <div className="text-[12px] 2xl:text-[14px] 3xl:text-[16px] font-normal text-white uppercase px-[16px] lg:px-[20px] xl:px-[15px] 3xl:px-[30px] py-[7px] 2xl:py-[10px] bg-gradient-to-r from-[#3EB0EA] to-[#1768AB] ">
         {data?.label || "Sponsored"}
       </div>
 
-      <div className="p-[15px] lg:p-[15px] 2xl:p-[25px] 3xl:p-[30px]">
+      <div className="p-[15px] lg:p-[15px] xl:p-[15px] 3xl:p-[30px]">
         <Link
           href={data?.ctaHref || "#"}
           className="relative w-full aspect-[16/9] rounded-[12px] overflow-hidden bg-[#0b1220] block"
@@ -67,12 +67,12 @@ export default function BlogSponsoredCard({ data }: SponsoredCardProps) {
             {data?.title}
           </Heading>
 
-          <Text as="p" size="p4" className="text-[#45556C] leading-relaxed">
+          <Text as="p" size="p4" className="text-[#45556C] !text-[14px] leading-relaxed">
             {data?.description}
           </Text>
 
           <Button
-            className="text-[14px] xl:text-[16px] 2xl:text-[20px] leading-none font-medium text-[#212121] w-full h-[35px] xl:h-[42px] 2xl:h-[50px] bg-[#ffc916] rounded-[10px] mt-[20px]"
+            className="text-[14px] xl:text-[16px] 2xl:text-[20px] leading-none font-medium !text-[#212121] w-full h-[35px] xl:h-[40px] 2xl:h-[50px] bg-[#ffc916] rounded-[10px] mt-[20px]"
             asChild
           >
             <Link href={data?.ctaHref || "#"}>

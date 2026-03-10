@@ -35,6 +35,8 @@ export type CorporateServicesUaeFaqProps = {
     | "Financial-Statement-Audit"
     | "RAK-Offshore"
     | "JAFZA-Freezone"
+    | "mainland"
+    | "CorporateServicesUae"
     | "Formation-JAFZA"
     | "difc-regulated"
     | "AuditServicesUae"
@@ -89,11 +91,15 @@ export default function CorporateServicesUaeFaq({
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[269deg] [&[data-state=open]>svg]:rotate-0 [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-5 xl:[&>svg]:w-[25px] [&>svg]:h-5 xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
                     variant === "side-arrow" &&
-                      "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
+                      "[&>svg]:!rotate-[269deg] [&[data-state=open]>svg]:!rotate-[360deg]",
                     variant === "difc-regulated" &&
                       "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
+                    variant === "CorporateServicesUae" &&
+                      "sm:[&>svg]:rotate-0 sm:[&[data-state=open]>svg]:!rotate-[540deg]",
+                    variant === "mainland" &&
+                      "sm:[&>svg]:rotate-0 sm:[&[data-state=open]>svg]:!rotate-[540deg]",
                     variant === "ADGM-Spv-Formation" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
                     variant === "Formation-JAFZA" &&

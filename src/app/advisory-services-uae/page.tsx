@@ -186,7 +186,7 @@ const localData = {
         },
         theme: {
           border: "border-[#FFC916]",
-          bg: "bg-[#FFFDF2]",
+          bg: "bg-gradient-to-br from-white to-[#FEFCE8]",
           iconBg: "bg-[#FFC916]",
           buttonBg: "bg-[#FFC916]",
           titleColor: "text-[#1C5396]",

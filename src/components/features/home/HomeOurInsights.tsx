@@ -80,14 +80,16 @@ export default function HomeOurInsights({
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[15px] xl:[&>*]:p-[15px]")}>
+          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]")}>
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}
                 className={cn(
                   "flex-[0_0_75%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
-                  variant === "saifz" &&
+                  variant === "saifz" && 
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
+                  variant === "default" && 
+                    "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -97,8 +99,8 @@ export default function HomeOurInsights({
         </div>
         <div
           className={cn(
-            "flex justify-center gap-1 xl:gap-2 mt-6 xl:mt-6 ",
-            variant === "saifz" && "hidden",
+            "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 ",
+            variant === "default" && "hidden"
           )}
         >
           {scrollSnaps.map((_, index) => (
@@ -106,7 +108,7 @@ export default function HomeOurInsights({
               key={index}
               onClick={() => scrollTo(index)}
               className={cn(
-                "w-2 xl:w-3 aspect-square rounded-full transition",
+                "w-2 xl:w-[18px] aspect-square rounded-full transition",
                 index === selectedIndex ? "bg-[#ffc916]" : "bg-[#dedede]",
               )}
             />
@@ -134,7 +136,7 @@ function InsightCard({ data , variant}: InsightCardProps) {
         />
       </div>
 
-      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]",)}>
+      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]")}>
         <Text
           size="p1"
           className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"

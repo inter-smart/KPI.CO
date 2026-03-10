@@ -178,7 +178,7 @@ const localData = {
         inner_title: "Entity specific risk assessment",
         sub_title: "Entity specific risk assessment",
         description:
-        "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
+          "<p>We begin with a detailed assessment of the entity’s regulatory classification, business model, and control environment to identify areas of highest risk.</p>",
       },
       {
         id: 2,
@@ -187,7 +187,7 @@ const localData = {
         inner_title: "Regulatory focused risk <br/> prioritisation",
         sub_title: "Regulatory focused risk prioritisation",
         description:
-        "<p>Focus is aligned to risks most relevant to FSRA supervision, including governance, capital adequacy, valuation, and regulatory reporting. </p>",
+          "<p>Focus is aligned to risks most relevant to FSRA supervision, including governance, capital adequacy, valuation, and regulatory reporting. </p>",
       },
       {
         id: 3,
@@ -196,7 +196,7 @@ const localData = {
         inner_title: "Judgement-driven audit execution",
         sub_title: "Judgement-driven audit execution",
         description:
-        "<p>The procedures are primarily designed around professional judgment and risk severity, rather than standard checklists. </p>",
+          "<p>The procedures are primarily designed around professional judgment and risk severity, rather than standard checklists. </p>",
       },
       {
         id: 4,
@@ -205,7 +205,7 @@ const localData = {
         inner_title: "Testing of key controls and <br/> balances",
         sub_title: "Testing of key controls and balances",
         description:
-        "<p>The effort is focused on material balances, complex transactions, and high-risk processes. </p>",
+          "<p>The effort is focused on material balances, complex transactions, and high-risk processes. </p>",
       },
       {
         id: 5,

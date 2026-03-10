@@ -50,18 +50,18 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-[#053269]">
       <div className="container">
-        <div className="pt-[40px] pb-[40px] xl:pb-[50px] 2xl:pb-[70px] 3xl:pb-[100px]">
-          <div className="flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] xl:pb-[50px] -m-[10px] mb-[30px] 3xl:mb-[40px]">
+        <div className="pt-[40px] xl:pt-[33px] pb-[40px] xl:pb-[30px] 2xl:pb-[70px] 3xl:pb-[100px]">
+          <div className="flex flex-wrap items-center lg:border-b lg:border-white/20 lg:pb-[30px] xl:pb-[40px] -m-[10px] mb-[30px] 3xl:mb-[40px]">
             <div className="w-full lg:w-3/12 mb-8 lg:mb-0 p-[10px]">
               <Link
                 href="/"
-                className="flex items-center w-full h-[70px] max-w-[180px] 2xl:max-w-[190px] 3xl:max-w-[240px]"
+                className="flex items-center w-full h-[53px] max-w-[152px]"
                 aria-label="kpi_logo"
               >
                 <Image
                   src="/images/KPI-logo-white.png"
-                  width="240"
-                  height="70"
+                  width="152"
+                  height="53"
                   className="w-full h-full object-contain"
                   alt="kpi_logo"
                 />
@@ -73,7 +73,7 @@ export default function Footer() {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="relative group lg:max-w-[90%] ml-auto "
                 >
-                  <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] 2xl:h-[42px] 3xl:h-[55px]  focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                  <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] focus-within:ring-1 focus-within:ring-white/20 transition-all">
                     <div className="flex-1 overflow-hidden">
                       <FormField
                         control={form.control}
@@ -132,8 +132,8 @@ export default function Footer() {
               </Form>
             </div>
             <div className="w-full lg:w-4/12  lg:p-[10px]">
-              <ul className="flex items-center justify-baseline lg:justify-end w-full lg:w-fit -m-[10px] 2xl:-m-[15px] 3xl:-m-[20px] !ml-auto ">
-                <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
+              <ul className="flex items-center justify-baseline lg:justify-end w-full lg:w-fit -m-[10px] xl:-m-[12.5px] 3xl:-m-[20px] !ml-auto ">
+                <li className="p-[10px] xl:p-[12.5px] 3xl:p-[20px]">
                   <Link
                     href="/"
                     className={SOCIAL_LINKS}
@@ -166,7 +166,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
+                <li className="p-[10px] xl:p-[12.5px] 3xl:p-[20px]">
                   <Link href="/" className={SOCIAL_LINKS} aria-label="twitter">
                     <div className="w-full h-full flex">
                       <svg
@@ -182,7 +182,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
+                <li className="p-[10px] xl:p-[12.5px] 3xl:p-[20px]">
                   <Link
                     href="/"
                     className={SOCIAL_LINKS}
@@ -221,7 +221,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
+                <li className="p-[10px] xl:p-[12.5px] 3xl:p-[20px]">
                   <Link href="/" className={SOCIAL_LINKS} aria-label="facebook">
                     <div className="w-full h-full hidden sm:flex">
                       <svg
@@ -269,7 +269,7 @@ export default function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li className="p-[10px] 2xl:p-[15px] 3xl:p-[20px]">
+                <li className="p-[10px] xl:p-[12.5px] 3xl:p-[20px]">
                   <Link
                     href="/"
                     className={`${SOCIAL_LINKS} !w-[42px] md:!w-[28px] xl:!w-[38px] 2xl:!w-[45px] 3xl:!h-[45px] 3xl:!w-[60px]`}
@@ -296,7 +296,7 @@ export default function Footer() {
           {/* Desktop Links View */}
           <div className="hidden lg:flex flex-wrap -m-[10px] lg:-m-[20px]">
             {/* Audit & Assurance */}
-            <div className="w-4/12 p-[10px] lg:p-[20px] ">
+            <div className="w-4/12 p-[10px] lg:p-[20px]">
               <div className={FOOTER_MAINLINKS}>Audit & Assurance</div>
               <ul className="space-y-[12px] xl:space-y-[15px]">
                 <li>

@@ -61,8 +61,8 @@ const staticSections: {
       link: "/contact",
     },
     images: {
-      overlay: "/images/get-touch-overlay.svg",
-      overlayMobile: "/images/get-touch-overlay-mobile.svg",
+      overlay: "/images/blogCtaBanner.png",
+      overlayMobile: "/images/blogCtaBanner-mob.svg",
     },
   },
 };

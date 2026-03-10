@@ -126,13 +126,13 @@ export default function BlogList({ data }: BlogListProps) {
         <Heading
           as="h1"
           size="h1"
-          className="xl:text-[40px] text-[#1C5396] mb-[25px] xl:mb-[30px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold"
+          className="xl:text-[40px] text-[#1C5396] mb-[25px] xl:mb-[38px] 2xl:mb-[40px] 3xl:mb-[50px] font-semibold"
         >
           {data.title}
         </Heading>
 
         {/* Filter and Search Bar */}
-        <div className="flex flex-row  gap-2 xl:gap-[10px] mb-6 max-w-[500px] xl:max-w-[700px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[50px] 3xl:h-[65px]">
+        <div className="flex flex-row  gap-2 xl:gap-[10px] mb-[38px] max-w-[500px] xl:max-w-[700px] 2xl:max-w-[745px] 3xl:max-w-[940px] h-[38px] xl:h-[50px] 3xl:h-[65px]">
           <BlogFilter
             activeFilters={activeFilters}
             onFilterChange={setActiveFilters}
@@ -173,36 +173,36 @@ export default function BlogList({ data }: BlogListProps) {
             </div>
           </div>
         </div>
-        {/* Active Filters */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 md:mb-12">
-          {activeFilters.map((filter) => (
-            <div
-              key={filter}
-              className={cn(
-                "text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] flex items-center gap-1 sm:gap-2 px-3 py-1.5 bg-[rgba(143,216,254,0.15)] border border-[#d6e5f5] rounded-md text-[#4E4E4E] text-sm font-medium",
-                activeFilters.includes(filter)
-                  ? "border-transparent"
-                  : "border-[#d6e5f5]",
-              )}
-            >
-              {filter}
-              <button
-                onClick={() => removeFilter(filter)}
-                className="transition-colors cursor-pointer hover:scale-115"
+        {/* Active Filters - only shown when filters are active */}
+        {activeFilters.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 md:mb-12">
+            {activeFilters.map((filter) => (
+              <div
+                key={filter}
+                className={cn(
+                  "text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] flex items-center gap-1 sm:gap-2 px-3 py-1.5 bg-[rgba(143,216,254,0.15)] border border-[#d6e5f5] rounded-md text-[#4E4E4E] text-sm font-medium",
+                  activeFilters.includes(filter)
+                    ? "border-transparent"
+                    : "border-[#d6e5f5]",
+                )}
               >
-                <X size={14} />
-              </button>
-            </div>
-          ))}
-          {activeFilters.length > 0 && (
+                {filter}
+                <button
+                  onClick={() => removeFilter(filter)}
+                  className="transition-colors cursor-pointer hover:scale-115"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            ))}
             <button
               onClick={clearAll}
               className="text-[14px] md:text-[12px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-[#212121] text-sm font-medium rounded-[8px] xl:rounded-[10px] 3xl:rounded-[13px] border border-[#DDDCDE] px-3 py-1.5 cursor-pointer hover:scale-105 transition-colors "
             >
               Clear All
             </button>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Blog Grid */}
         {filteredItems.length === 0 ? (
@@ -369,8 +369,8 @@ export default function BlogList({ data }: BlogListProps) {
 
 function BlogCard({ data }: BlogCardProps) {
   return (
-    <div className="group flex flex-col w-full h-full max-sm:min-h-[477px] bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
-      <div className="relative aspect-[440/268] overflow-hidden">
+    <div className="group flex flex-col w-full h-full max-sm:min-h-[477px] xl:min-h-[527px] bg-white rounded-[13px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+      <div className="relative aspect-[375/202] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || data.title}
@@ -378,7 +378,7 @@ function BlogCard({ data }: BlogCardProps) {
           className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
         />
       </div>
-      <div className="p-6 md:p-7 xl:p-[25px_48px] 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1 ">
+      <div className="p-6 md:p-7 xl:p-[25px_46px] 2xl:p-[25px_40px] 3xl:p-[34px_60px] flex flex-col flex-1 ">
         <div className="text-[14px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[20px] font-medium text-[#5280ca] mb-[15px] xl:mb-[12px] uppercase tracking-wide">
           {data.date} • {data.readTime}
         </div>
