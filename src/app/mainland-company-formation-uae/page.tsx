@@ -625,7 +625,7 @@ export default function MainlandCompanyFormationUaePage() {
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="mainland" />
     </>
   );
 }

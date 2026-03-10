@@ -32,6 +32,7 @@ export type CorporateServicesUaeFaqProps = {
     | "side-arrow"
     | "holding"
     | "CorporateServicesUae"
+    | "mainland"
     | "Financial-Statement-Audit" | "difc-regulated"
     | "ADGM-Spv-Formation";
 };
@@ -83,6 +84,8 @@ export default function CorporateServicesUaeFaq({
                     variant === "difc-regulated" &&
                       "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
                     variant === "CorporateServicesUae" &&
+                      "sm:[&>svg]:rotate-0 sm:[&[data-state=open]>svg]:!rotate-[360deg]",
+                    variant === "mainland" &&
                       "sm:[&>svg]:rotate-0 sm:[&[data-state=open]>svg]:!rotate-[360deg]",
                     variant === "ADGM-Spv-Formation" &&
                       "[&>svg]:rotate-0 [&[data-state=open]>svg]:!rotate-[180deg]",
