@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import { blogData } from "@/data/blogData";
-import type { InsightItem } from "@/app/page";
 import BlogHero, { BlogHeroData } from "@/components/features/blogs/BlogHero";
 import BlogList from "@/components/features/blogs/BlogList";
 import { getCategoryTree } from "@/lib/blog-api";
@@ -9,7 +7,6 @@ type BlogPageData = {
   hero: BlogHeroData;
   blogs: {
     title: string;
-    items: InsightItem[];
   };
 };
 
@@ -20,18 +17,6 @@ const localData: BlogPageData = {
   },
   blogs: {
     title: "Latest Reads",
-    items: blogData.map((blog) => ({
-      ...blog,
-      id: blog.id,
-      media: blog.media,
-      title: blog.title,
-      description: blog.description,
-      date: blog.date,
-      date_full: blog.date_full,
-      readTime: blog.readTime,
-      slug: `/blog/${blog.slug}`,
-      category: blog.category,
-    })),
   },
 };
 
