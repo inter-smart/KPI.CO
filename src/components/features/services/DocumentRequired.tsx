@@ -111,11 +111,11 @@ export default function DocumentRequired({
             className={cn(
               "w-full md:w-[57%] xl:w-[60%] md:pr-[40px] xl:pr-[60px]",
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
-              variant === "company-freezone" && "xl:pr-[100px]",
+              variant === "company-freezone" && "xl:pr-[90px]",
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "AuditServicesUae" &&
-                "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-475px)] xl:pr-[48px]",
               variant === "Financial-Statement-Audit" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "VatServicesUae" &&
@@ -123,8 +123,6 @@ export default function DocumentRequired({
               variant === "Formation-JAFZA" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "CorporateTaxUae" &&
-                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
-              variant === "AuditServicesUae" &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
@@ -151,6 +149,8 @@ export default function DocumentRequired({
                         variant === "dfza" && "xl:mb-[35px]",
                         variant === "internal-audit" &&
                           "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                        variant === "company-freezone" &&
+                          "xl:mb-[30px]",
                       )}
                     >
                       {parse(data.title)}
@@ -319,7 +319,6 @@ export default function DocumentRequired({
                 variant === "Financial-Statement-Audit" && "xl:w-[475px]",
                 variant === "VatServicesUae" && "xl:w-[475px]",
                 variant === "CorporateTaxUae" && "xl:w-[520px]",
-                variant === "AuditServicesUae" && "xl:w-[520px]",
               )}
             >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">

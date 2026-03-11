@@ -97,14 +97,14 @@ export default function MainlandBusiness({
               hasVariant(variant, "Formation-JAFZA") &&
               "xl:w-[calc(100%-520px)] xl:pr-[50px]",
               hasVariant(variant, "company-freezone") &&
-              "xl:w-[calc(100%-520px)] xl:!pr-[48px]",
+              "xl:w-[calc(100%-520px)] xl:!pr-[45px]",
               hasVariant(variant, "rakez") &&
               "xl:w-[calc(100%-520px)] xl:!pr-[48px]",
               hasVariant(variant, "ADGM-SPV-Formation") &&
               "xl:w-[calc(100%-520px)] xl:!pr-[42px]",
               hasVariant(variant, "dwtc") &&
               "xl:pr-[40px]",
-                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-520px)] xl:pr-[41px]",
             )}
           >
             <div

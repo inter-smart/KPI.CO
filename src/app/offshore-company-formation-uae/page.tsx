@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { MediaItem } from "../page";
+import { MediaItem } from "../page"; 
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
@@ -167,7 +167,7 @@ const localData = {
         },
         title: "Confidentiality Safeguards ",
         description:
-          "<p>Benefit from structured privacy for shareholders and directors, in line with regulatory requirements.</p>",
+          "<p>Benefit from structured <br> privacy for shareholders and directors, in line with regulatory requirements.</p>",
       },
       {
         id: 6,
@@ -255,7 +255,7 @@ const localData = {
   banking: {
     title: "Banking Support for Offshore Companies",
     description:
-      "<p>Offshore banking involves enhanced due diligence and jurisdiction-specific requirements. We assist with bank selection, documentation preparation, and application coordination through UAE and international banks. We support clients with bank account opening through trusted UAE and international banking partners.</p>",
+      "<p>Offshore banking involves enhanced due diligence and jurisdiction-specific requirements. We assist with bank selection, documentation preparation, and application coordination through UAE and international banks. </p>",
     partners: [
       {
         id: 1,

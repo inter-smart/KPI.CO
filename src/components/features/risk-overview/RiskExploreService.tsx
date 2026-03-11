@@ -150,7 +150,7 @@ function Service({ data, variant }: ServiceProps) {
 
   <div
     className={cn(
-      "w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
+      "w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[30px_35px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
 
       (variant === "ADGM-Foundations" || variant === "difc-regulated" || variant === "difc") &&
         "xl:p-[50px_30px_85px]"

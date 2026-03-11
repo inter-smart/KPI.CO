@@ -380,7 +380,7 @@ const localData = {
     ] satisfies ProcessStep[],
   },
   document_required_data: {
-    title: "Documents Required For Free Zone Company Formation",
+    title: "Documents Required For <br> Free Zone Company Formation",
     description:
       "<p>To complete your Free Zone company registration, you'll typically need the following:</p>",
 

@@ -92,13 +92,15 @@ function WhyBuildCard({
         variant === "rakez"
           ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
-        variant === "AuditServicesUae" && "shadow-none",
+        variant === "AuditServicesUae" && "xl:!p-[20px_15px_15px_15px] shadow-none",
         variant === "technology" && "shadow-none",
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
-        variant === "company-freezone" && "rounded-[10px]",
+        variant === "company-freezone" && "rounded-[10px] xl:!pr-[10px]",
         variant === "Vat-Services" && "xl:!pr-[40px]",
         variant === "dafz" && "xl:min-h-[220px]",
+        variant === "Formation-JAFZA" && "xl:!px-[15px]",
+        variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -126,6 +128,9 @@ function WhyBuildCard({
           hasVariant(variant, "CorporateServicesUae") &&
             "xl:text-[20px] text-black mb-[15px]",
           hasVariant(variant, "formation") && "xl:text-[20px] xl:mb-[15px]",
+          hasVariant(variant, "offshore") && "xl:text-[18px]",
+          hasVariant(variant, "Formation-JAFZA") && "xl:text-[18px]",
+          hasVariant(variant, "dwtc") && "xl:text-[18px]",
         )}
       >
         {item.title}
@@ -145,6 +150,9 @@ function WhyBuildCard({
             ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
+          hasVariant(variant, "offshore") && "xl:text-[14px]",
+          hasVariant(variant, "Formation-JAFZA") && "xl:text-[14px]",
+          hasVariant(variant, "dwtc") && "xl:text-[14px]",
         )}
       >
         {parse(item?.description)}
@@ -323,7 +331,7 @@ export default function CorporateServicesUaeWhyBuild({
                   <div
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
-                      variant === "AuditServicesUae" && " text-[#1C5396]",
+                      variant === "AuditServicesUae" && " text-[#1C5396] xl:mb-[10px]",
                     )}
                   >
                     {item.title}

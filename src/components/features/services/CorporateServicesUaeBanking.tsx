@@ -151,7 +151,7 @@ export default function CorporateServicesUaeBanking({
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
                     variant === "company-freezone" &&
-                      "shadow-[0px_13px_19px_0px_#00000012]",
+                      "shadow-[0px_13px_19px_0px_#00000012] [clip-path:inset(0_-100%_0_-100%)]",
                     variant === "internal-audit" &&
                       "shadow-[0_13px_19px_#00000012]",
                   )}

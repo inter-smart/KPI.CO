@@ -36,7 +36,7 @@ export type InnerHeroProps = {
     | "rakez"
     | "saifz"
     | "DMCC-Freezone"
-    | "advisory"
+    | "advisory" 
     | "dwtc"
     | "erm"
     | "ifza"
@@ -136,6 +136,9 @@ export default function InnerHero({
 
               variant === "technology" && "max-w-[850px]",
               variant === "regulatory" && "max-w-[850px]",
+              variant === "Offshore" && "normal-case",
+              variant === "Formation-JAFZA" && "normal-case",
+              variant === "dwtc" && "normal-case",
             )}
           >
             {parse(data?.title)}

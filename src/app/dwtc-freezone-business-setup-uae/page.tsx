@@ -144,7 +144,7 @@ const localData = {
         },
         title: "Global Reputation",
         description:
-          "<p>Part of Dubai World Tra de Centre, offering strong international credibility and brand recognition.</p>",
+          "<p>Part of Dubai World Trade Centre, offering strong international credibility and brand recognition.</p>",
       },
      
       {
@@ -155,7 +155,7 @@ const localData = {
         },
         title: "Flexible Offices",
         description:
-          "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
+          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
       },
 
        {
@@ -166,7 +166,7 @@ const localData = {
         },
         title: "Client Focused",
         description:
-          "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
+          "<p>Well suited for professional, consulting, and client-facing businesses operating in Dubai.</p>",
       },
     ] satisfies WhyBuildItem[],
   },
@@ -331,7 +331,7 @@ const localData = {
     ],
 
     media: {
-      path: "/images/work-kpi.jpg", // <-- your image path
+      path: "/images/work-kpi-2.jpg", // <-- your image path
       alt: "Required documents",
     },
     ftr_description: "",

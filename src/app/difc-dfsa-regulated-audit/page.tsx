@@ -20,7 +20,7 @@ export type HeroData = {
   description: string;
   media?: {
     desktopPath: string;
-    mobilePath: string; 
+    mobilePath: string;
     alt: string;
   };
   additionalContent?: string[];
@@ -172,8 +172,7 @@ const localData = {
       {
         id: 2,
         slNo: 2,
-        description:
-          "DFSA Rulebooks and   prescribed reporting   requirements",
+        description: "DFSA Rulebooks and   prescribed reporting   requirements",
       },
       {
         id: 3,
@@ -477,7 +476,7 @@ export default function DwtcFreezone() {
         variant="difc-regulated"
         data={localData.difc_faq_data}
       />
-       <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} />
     </>
   );
 }
