@@ -181,7 +181,8 @@ export default function CorporateServicesUaeFormationProcess({
                         variant === "Vat-Services" && "lg:h-[250%]",
                         variant === "CorporateServicesUae" && "lg:h-[150%]",
                         variant === "mainland" && "lg:h-[200%]",
-                        variant === "company-freezone" && "lg:h-[200%]",
+                        variant === "company-freezone" && "lg:h-[175%]",
+                        variant === "difc-regulated" && "lg:h-[175%]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",

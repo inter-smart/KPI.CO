@@ -135,41 +135,46 @@ export default function RiskExploreService({
 function Service({ data, variant }: ServiceProps) {
   return (
     <Link
-      href={data.slug ?? "#"}
-      className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
-      
-      
-    >
-      <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
-        <Image
-          src={data.media.path || "/images/placeholder-image.png"}
-          alt={data.media.alt || "Insight Image"}
-          width={440}
-          height={268}
-          className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-120"
-        />
-      </div>
+  href={data?.slug ?? "#"}
+  className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
+>
+  <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
+    <Image
+      src={data?.media?.path || "/images/placeholder-image.png"}
+      alt={data?.media?.alt || "Insight Image"}
+      width={440}
+      height={268}
+      className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-120"
+    />
+  </div>
 
-      <div className={cn("w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute bottom-0 inset-0 flex flex-col justify-between" ,
-         variant === "ADGM-Foundations" && "xl:p-[50px_30px_85px] ",)}>
-        <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">
-          <Image
-            src="/images/linkIcon.svg"
-            alt="link icon"
-            width={32}
-            height={32}
-            className="w-full h-full block mt-1 transition-transform duration-300"
-          />
-        </div>
-        <div
-          className={cn(
-            "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
-            variant === "risk" && " min-h-[52px] !min-h-fit ",
-          )}
-        >
-          {parse(data.title ?? "title")}
-        </div>
-      </div>
-    </Link>
+  <div
+    className={cn(
+      "w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[50px_30px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
+
+      (variant === "ADGM-Foundations" || variant === "difc-regulated") &&
+        "xl:p-[50px_30px_85px]"
+    )}
+  >
+    <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">
+      <Image
+        src="/images/linkIcon.svg"
+        alt="link icon"
+        width={32}
+        height={32}
+        className="w-full h-full block mt-1 transition-transform duration-300"
+      />
+    </div>
+
+    <div
+      className={cn(
+        "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
+        variant === "risk" && "min-h-fit"
+      )}
+    >
+      {parse(data?.title ?? "title")}
+    </div>
+  </div>
+</Link>
   );
 }
