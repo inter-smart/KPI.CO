@@ -51,7 +51,7 @@ export default function CorporateServicesUaeBanking({
     <section
       className={cn(
         "w-full h-auto py-[40px_45px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
-        variant === "dsoa" || variant === "dmcc"
+        variant === "dsoa" || variant === "dmcc" || variant === "mainland"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 

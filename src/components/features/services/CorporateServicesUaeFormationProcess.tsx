@@ -154,7 +154,7 @@ export default function CorporateServicesUaeFormationProcess({
           )}
           <div
             className={cn(
-              "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-12 2xl:gap-14",
+              "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-3 2xl:gap-14",
               variant === "Vat-Services" && "items-center",
               variant === "company-freezone" && "items-center",
             )}
@@ -246,7 +246,8 @@ export default function CorporateServicesUaeFormationProcess({
               <div
                 className={cn(
                   "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
-                  variant === "CorporateServicesUae" && "!min-h-[555px]",
+                  variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
+                  variant === "mainland" && "xl:!min-h-[555px]",
                 )}
               >
                 <Image
@@ -264,7 +265,7 @@ export default function CorporateServicesUaeFormationProcess({
                           as="h4"
                           size="h6"
                           className={cn(
-                            "font-normal text-[#3eb0ea] capitalize mb-1",
+                            "font-normal text-[#3eb0ea] capitalize mb-1 xl:text-[24px]",
                             variant === "risk" && "sm:hidden",
                             variant === "difc-regulated" &&
                               "max-sm:!block sm:!hidden",
@@ -288,7 +289,7 @@ export default function CorporateServicesUaeFormationProcess({
                         <Heading
                           as="h4"
                           size="h6"
-                          className="xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden"
+                          className="text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden"
                         >
                           {parse(data.steps[activeStep].inner_title)}
                         </Heading>
@@ -321,14 +322,14 @@ export default function CorporateServicesUaeFormationProcess({
               {data?.process_list?.map((item) => (
                 <div
                   key={item?.id}
-                  className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px]"
+                  className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px] max-sm:hidden"
                 >
-                  <div className="w-full h-full p-6 lg:p-5 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
-                    <div className="text-[18px] lg:text-[20px] 2xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium text-[#1C5396] mb-2 lg:mb-1.25 2xl:mb-2.5">
+                  <div className="w-full h-full p-6 lg:p-5 xl:p-[32px_36px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
+                    <div className="text-[18px] lg:text-[20px] xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium text-[#1C5396] mb-2 lg:mb-1.25 2xl:mb-2.5">
                       {item?.title}
                     </div>
                     {item?.description && (
-                      <div className="text-[14px] lg:text-[16px] xl:text-[18px]  2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[16px] xl:text-[16px]  2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item?.description)}
                       </div>
                     )}
