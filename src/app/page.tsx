@@ -9,6 +9,8 @@ import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 import HomeService from "@/components/features/home/HomeService";
 import { blogData } from "@/data/blogData";
 import { Metadata } from "next";
+import { getPosts } from "@/lib/blog-api";
+import { transformWpPostToBlogItem } from "@/lib/utils";
 
 /* ------------------------------------------------------------------ */
 /* Types                                                              */
@@ -389,7 +391,38 @@ export const metadata: Metadata = {
 /* Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await getPosts({ perPage: 4, _embed: true });
+  
+  const transformedInsights = await Promise.all(
+    posts.map((post) => {
+      const mediaFetcher = (mediaUrl: string) => {
+        const embedded = post._embedded?.["wp:featuredmedia"]?.[0];
+        if (embedded) return Promise.resolve(embedded);
+        return fetch(mediaUrl).then((r) => r.json());
+      };
+
+      const categoryFetcher = (id: number) => {
+        const terms = post._embedded?.["wp:term"];
+        if (terms) {
+          for (const group of terms) {
+            for (const term of group) {
+              if (term.id === id) return Promise.resolve(term.name);
+            }
+          }
+        }
+        return Promise.resolve("");
+      };
+
+      return transformWpPostToBlogItem(post, mediaFetcher, categoryFetcher);
+    })
+  );
+
+  const insightsData = {
+    title: "Our Insights",
+    items: transformedInsights as InsightItem[],
+  };
+
   return (
     <>
       <HomeHero data={localData.hero} />
@@ -401,7 +434,11 @@ export default function HomePage() {
       <HomeSecurityInfo data={localData.securityInfo} />
       <HomeAbout data={localData.about} className="max-sm:hidden" />
       <HomeProfessionalAffiliations data={localData.professionalAffiliations} />
-      <HomeOurInsights data={localData.insights} variant="home"/>
+      {
+        insightsData.items.length > 0 && (
+          <HomeOurInsights data={insightsData} variant="home"/>
+        )
+      }
     </>
   );
 }

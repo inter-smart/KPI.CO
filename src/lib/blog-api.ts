@@ -47,6 +47,10 @@ export type WPPost = {
   sticky: boolean;
   link: string;
   status: string;
+  _embedded?: {
+    "wp:featuredmedia"?: any[];
+    "wp:term"?: any[][];
+  };
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -126,6 +130,7 @@ export type GetPostsOptions = {
   search?: string;
   sticky?: boolean;
   exclude?: number[];
+  _embed?: boolean;
 };
 
 /** Get blog posts with optional category filter, search, and pagination. */
@@ -158,7 +163,7 @@ export async function getPosts(options: GetPostsOptions = {}): Promise<WPPost[]>
     return filtered.slice(start, start + perPage);
   }
 
-  const { categoryId, page = 1, perPage = 12, search, sticky, exclude } = options;
+  const { categoryId, page = 1, perPage = 12, search, sticky, exclude, _embed } = options;
 
   const params = new URLSearchParams();
   params.set("per_page", String(perPage));
@@ -167,6 +172,7 @@ export async function getPosts(options: GetPostsOptions = {}): Promise<WPPost[]>
   if (search) params.set("search", search);
   if (sticky !== undefined) params.set("sticky", String(sticky));
   if (exclude && exclude.length > 0) params.set("exclude", exclude.join(","));
+  if (_embed) params.set("_embed", "1");
 
   return fetchWP<WPPost[]>(`/posts?${params.toString()}`);
 }
