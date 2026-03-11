@@ -132,11 +132,11 @@ function InsightCard({ data , variant}: InsightCardProps) {
           alt={data.media.alt || "Insight Image"}
           width={440}
           height={268}
-          className="w-full h-full object-cover transition"
+          className="w-full h-full object-cover transition scale-110 transition-all duration-200 group-hover:translate-y-2"
         />
       </div>
 
-      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_48px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]")}>
+      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]")}>
         <Text
           size="p1"
           className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"

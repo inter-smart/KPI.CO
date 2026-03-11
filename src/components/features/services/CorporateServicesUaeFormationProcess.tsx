@@ -180,16 +180,11 @@ export default function CorporateServicesUaeFormationProcess({
                   >
                     <div
                       className={cn(
-                        "w-[100%] lg:w-[2px] h-[1px] lg:h-[200%] xl::h-[250%] absolute -z-1 top-2.5 lg:top-3.5 2xl:top-4 left-0 lg:left-6 xl:left-8.5 2xl:left-10.5 3xl:left-11",
-                        variant === "Vat-Services" && "lg:h-[250%]",
-                        variant === "CorporateServicesUae" && "lg:h-[150%]",
-                        variant === "mainland" && "lg:h-[200%]",
-                        variant === "company-freezone" && "lg:h-[175%]",
-                        variant === "difc-regulated" && "lg:h-[175%]",
+                        "w-[100%] lg:w-[2px] h-[1px] lg:h-[calc(100%_+_12px)] xl:h-[calc(100%_+_22px)] 2xl:h-[calc(100%_+_28px)] 3xl:h-[calc(100%_+_40px)] absolute -z-10 top-2.5 lg:top-[18px] xl:top-[24px] 2xl:top-[28px] left-0 lg:left-[23px] xl:left-[34px] 2xl:left-[43px] 3xl:left-[43px]",
                         index <= activeStep
                           ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
-                        data.steps.length === index + 1 && "lg:hidden",
+                        data.steps.length === index + 1 && "hidden",
                       )}
                     />
 
