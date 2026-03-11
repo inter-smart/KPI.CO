@@ -451,7 +451,7 @@ export default function VatServicesUaePage() {
         data={localData.corporate_faq_data}
         variant="Financial-Statement-Audit"
       />
-       <HomeOurInsights data={localData.insights}/>
+       <HomeOurInsights />
     </>
   );
 }

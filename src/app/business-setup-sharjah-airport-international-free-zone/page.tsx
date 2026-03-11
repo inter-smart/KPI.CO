@@ -856,7 +856,7 @@ export default function SaifzUaePage() {
       <CorporateServicesUaeBanking data={localData.banking} variant="saifz" />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-        <HomeOurInsights data={localData.insights} />
+        <HomeOurInsights />
     </>
   );
 }

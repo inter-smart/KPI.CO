@@ -390,7 +390,7 @@ export default function page() {
         variant="tax-advisory"
       />
       <TaxDecision data={localData.cta} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }

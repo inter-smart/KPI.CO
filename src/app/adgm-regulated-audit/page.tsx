@@ -399,7 +399,7 @@ export default function DwtcFreezone() {
       <RiskExploreService variant="adgm-regulated" data={localData.explore_service} />
       <CorporateServicesUaeCta variant="adgm-regulated" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }

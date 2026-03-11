@@ -306,7 +306,7 @@ export default function page() {
       <HomeCounter data={localData.counterList} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
 
-         <HomeOurInsights data={localData.insights} />
+         <HomeOurInsights />
     </>
   );
 }

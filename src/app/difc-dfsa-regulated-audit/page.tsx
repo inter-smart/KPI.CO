@@ -476,7 +476,7 @@ export default function DwtcFreezone() {
         variant="difc-regulated"
         data={localData.difc_faq_data}
       />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }
