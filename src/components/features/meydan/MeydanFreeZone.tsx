@@ -71,25 +71,25 @@ export default function MeydanFreeZone({
             {data?.main_description}
           </p>
         </div>
-        <div
-          className={cn(
-            "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
-            (variant === "difc" || variant === "holding" || variant === "Tax-Advisory" || "difc-regulated") &&
-              "md:grid-cols-1",
-            variant === "regulatory" && "md:grid-cols-1",
-            variant === "Tax-Advisory" && "xl:grid-cols-1",
-            variant === "ADGM-Foundation" &&
-            "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 xl:grid-cols-2",
+      <div
+  className={cn(
+    "grid grid-cols-1 xl:grid-cols-2 gap-[30px] sm:gap-[25px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[80px] mb-[30px] sm:mb-[20px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[40px]",
 
-            variant === "ifza" &&
-            "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
+    ["difc", "holding", "Tax-Advisory", "difc-regulated", "regulatory"].includes(variant) &&
+      "md:grid-cols-1 xl:grid-cols-1",
 
-            variant === "MeydanFreeZone" &&
-            "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
+    variant === "ADGM-Foundation" &&
+      "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px] md:grid-cols-2 xl:grid-cols-2",
 
-            variant === "RAK-Offshore" && "xl:gap-[30px]"
-          )}
-        >
+    variant === "ifza" &&
+      "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
+
+    variant === "MeydanFreeZone" &&
+      "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
+
+    variant === "RAK-Offshore" && "xl:gap-[30px]"
+  )}
+>
           {data?.free_zone_list?.map((item, index) => (
             <div key={item?.id} className="w-full h-auto">
               <div
