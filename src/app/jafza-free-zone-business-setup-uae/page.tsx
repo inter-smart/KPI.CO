@@ -424,7 +424,7 @@ export default function DwtcFreezone() {
         variant="JAFZA-Freezone"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights data={localData.related_blog} />
+      <HomeOurInsights />
     </>
   );
 }

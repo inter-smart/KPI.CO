@@ -425,7 +425,7 @@ export default function CorporateTaxUaePage() {
         variant="mainland"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-        <HomeOurInsights data={localData.insights} />
+        <HomeOurInsights />
     </>
   );
 }

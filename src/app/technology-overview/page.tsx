@@ -358,7 +358,7 @@ export default function DwtcFreezone() {
         data={localData.services}
       />
       <DiscussYourRisk variant="technology" data={localData.discussYourRisk} />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }

@@ -319,7 +319,7 @@ export default function MainlandCompanyFormationUaePage() {
         variant="Formation-JAFZA"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }
