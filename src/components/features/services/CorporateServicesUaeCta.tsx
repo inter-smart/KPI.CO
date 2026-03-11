@@ -105,6 +105,7 @@ export default function CorporateServicesUaeCta({
               variant === "Formation-JAFZA" && "lg:w-[58%]",
               variant === "DMCC-Freezone" && "lg:w-[65%]",
               variant === "ADGM-SPV-Formation" && "lg:w-[60%]",
+              variant === "AuditServicesUae" && "lg:w-[75%]",
             )}
           >
             <Heading
@@ -144,6 +145,7 @@ export default function CorporateServicesUaeCta({
               variant === "VatServicesUae" && "lg:w-[38%]",
               variant === "DMCC-Freezone" && "lg:w-[35%]",
               variant === "ADGM-SPV-Formation" && "lg:w-[40%]",
+              variant === "AuditServicesUae" && "lg:w-[25%]",
             )}
           >
             <Button

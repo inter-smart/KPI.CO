@@ -211,7 +211,7 @@ export default function CorporateServicesUaeWhyChoose({
         )}
         <div
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:gap-[20px] xl:gap-[30px] xl:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[18px] sm:gap-[20px] xl:gap-[30px] xl:gap-[25px_40px] 2xl:gap-[30px_50px] 3xl:gap-[65px_40px]",
             variant === "mainland" && "hidden sm:grid",
             variant === "adgm-regulated" && "hidden sm:grid",
             variant === "difc-regulated" && "hidden sm:grid",
@@ -278,7 +278,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "holding" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%]",
         variant === "AuditServicesUae" &&
-          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f3f7fd] before:to-[110%] xl:min-h-[160px]",
         variant === "SOP" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "Formation-DIFC" &&
@@ -286,10 +286,10 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "Formation-ADGM" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "offshore" &&
-          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:pr-[40px]",
       )}
     >
-      <div className={cn("relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",  variant === "CorporateServicesUae" && "after:bg-[rgba(106,159,224,0.08)]",)}>
+      <div className={cn("relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",  variant === "CorporateServicesUae" && "after:bg-[rgba(106,159,224,0.08)]",variant === "AuditServicesUae" && "h-full xl:pr-[42px]")}>
         <div
           className={cn(
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",

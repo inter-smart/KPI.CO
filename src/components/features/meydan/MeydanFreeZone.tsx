@@ -211,7 +211,7 @@ export default function MeydanFreeZone({
                     >
                       {item.title}
                     </div>
-                    <div className={cn("text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",variant === "Tax-Advisory" && "sm:max-w-[97%]")}>
+                    <div className={cn("text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",variant === "Tax-Advisory" && "sm:max-w-[97%]" ,variant === "RAK-Offshore" && "sm:max-w-full")}>
                       {/* {item.description} */}
                       {parse(item?.description)}
                     </div>

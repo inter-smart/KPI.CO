@@ -147,6 +147,7 @@ export default function MeydanKeyBenefits({
                       "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row items-center",
                       variant === "Vat-Services" &&
                         "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
+                      variant === "RAK-Offshore" && "xl:gap-[0px]"  
                     )}
                   >
                     <div
@@ -160,8 +161,7 @@ export default function MeydanKeyBenefits({
                           {item?.data_description}
                         </div>
                       )}
-
-                      <ul className="space-y-[20px] sm:space-y-[15px] xl:space-y-[20px] 2xl:space-y-[25px] 3xl:space-y-[30px]">
+                      <ul className={cn("space-y-[20px] sm:space-y-[15px] xl:space-y-[20px] 2xl:space-y-[25px] 3xl:space-y-[30px]",variant === "technology" && "xl:space-y-[15px]")}>
                         {item?.items?.map((item, index) => (
                           <li
                             key={index}
@@ -206,6 +206,7 @@ export default function MeydanKeyBenefits({
                         className={cn(
                           "w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
                           variant === "technology" && "xl:aspect-[550/335]",
+                          variant === "RAK-Offshore" && "xl:h-[286px]",
                         )}
                       >
                         <Image
