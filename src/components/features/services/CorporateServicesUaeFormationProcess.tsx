@@ -105,7 +105,7 @@ export default function CorporateServicesUaeFormationProcess({
       <section
         ref={sectionRef}
         className={cn(
-          "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white "
+          "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
         )}
       >
         <div className="container">
@@ -113,7 +113,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
-              variant === "company-freezone" ||
+                variant === "company-freezone" ||
                 variant === "aup" ||
                 "tax-advisory" ||
                 "adgm-regulated" ||
@@ -123,15 +123,13 @@ export default function CorporateServicesUaeFormationProcess({
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
               variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
               variant === "CorporateServicesUae" &&
-              "sm:text-center xl:mb-[30px]",
+                "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
               as="div"
               size="h2"
-              className={cn(
-                "text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7", 
-              )}
+              className={cn("text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7")}
             >
               {data.title}
             </Heading>
@@ -176,7 +174,6 @@ export default function CorporateServicesUaeFormationProcess({
                     )}
                     // onClick={() => !isDesktop && setActiveStep(index)}
                     onClick={() => setActiveStep(index)}
-
                   >
                     <div
                       className={cn(
@@ -200,10 +197,7 @@ export default function CorporateServicesUaeFormationProcess({
                       )}
                     >
                       {index > activeStep && (
-                        <div
-                          className="w-[20px] h-[21px] rounded-full bg-white"
-
-                        />
+                        <div className="w-[20px] h-[21px] rounded-full bg-white" />
                       )}
                     </div>
                     {step.step && (
@@ -212,16 +206,15 @@ export default function CorporateServicesUaeFormationProcess({
                         size="p3"
                         className={cn(
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
-                          variant === "risk" &&
-                                      "sm:hidden",
+                          variant === "risk" && "sm:hidden",
                           variant === "difc-regulated" &&
-                                      "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           variant === "adgm-regulated" &&
-                                      "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
-                          variant === "CorporateServicesUae" && "mt-0"
+                          variant === "CorporateServicesUae" && "mt-0",
                         )}
                       >
                         {step.step}
@@ -254,7 +247,12 @@ export default function CorporateServicesUaeFormationProcess({
               </div>
             </div>
             <div className="relative">
-              <div className={cn("w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center", variant==="CorporateServicesUae" && "!min-h-[555px]" )}>
+              <div
+                className={cn(
+                  "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
+                  variant === "CorporateServicesUae" && "!min-h-[555px]",
+                )}
+              >
                 <Image
                   src="/images/corporate-services-formationProcess-bg.png"
                   alt="background decoration"
@@ -282,8 +280,7 @@ export default function CorporateServicesUaeFormationProcess({
                         </Heading>
                       </div>
                     )}
-                    <div
-                    >
+                    <div>
                       {/* <Heading
                         as="h4"
                         size="h6"
@@ -301,15 +298,18 @@ export default function CorporateServicesUaeFormationProcess({
                         </Heading>
                       )}
                     </div>
-                    <div className={cn("",
-                      variant === "internal-audit" && "xl:max-w-[85%]"
-                    )}>
+                    <div
+                      className={cn(
+                        "",
+                        variant === "internal-audit" && "xl:max-w-[85%]",
+                      )}
+                    >
                       <Text
                         as="div"
                         size="p3"
-                        className={cn("text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
-                          variant === "internal-audit" && "leading-relaxed" ,
-                          
+                        className={cn(
+                          "text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
+                          variant === "internal-audit" && "leading-relaxed",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}
