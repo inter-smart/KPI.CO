@@ -140,6 +140,7 @@ function WhyBuildCard({
             hasVariant(variant, "company-freezone") ||
             hasVariant(variant, "regulatory") ||
             hasVariant(variant, "dsoa") ||
+            hasVariant(variant, "rakez") ||
             hasVariant(variant, "ifza")
             ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
             : "",

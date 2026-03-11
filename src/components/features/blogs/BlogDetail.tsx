@@ -41,8 +41,15 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   const [sidebarStyle, setSidebarStyle] = useState<React.CSSProperties>({});
   const [activeId, setActiveId] = useState<string>("");
 
-  const { toc, htmlWithIds } = useMemo(() => {
-    if (!data?.description) return { toc: [] as TocItem[], htmlWithIds: "" };
+  const [toc, setToc] = useState<TocItem[]>([]);
+  const [htmlWithIds, setHtmlWithIds] = useState<string>("");
+
+  useEffect(() => {
+    if (!data?.description) {
+      setToc([]);
+      setHtmlWithIds("");
+      return;
+    }
 
     const doc = new DOMParser().parseFromString(data.description, "text/html");
     const headings = Array.from(
@@ -54,7 +61,8 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       return { id: heading.id, text: heading.textContent?.trim() || "" };
     });
 
-    return { toc: tocList, htmlWithIds: doc.body.innerHTML };
+    setToc(tocList);
+    setHtmlWithIds(doc.body.innerHTML);
   }, [data?.description]);
 
   const scrollToHeading = useCallback((id: string) => {
@@ -235,7 +243,8 @@ export default function BlogDetail({ data }: BlogDetailProps) {
 
           {/* Main Content */}
           <div className="md:w-[70%] lg:w-[75%] 2xl:w-[76%] lg:pb-[750px] relative z-0">
-            <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto">
+            <div className="typography [&_p]:text-[#4E4E4E] [&_p]:mb-[16px] [&_li]:text-[#4E4E4E] [&_a]:text-[#4E4E4E] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:text-[#1C5396] [&_h1,&_h2]:xl:text-[24px] [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:font-semibold [&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[30px_12px] xl:[&_h1,&_h2,&_h3,&_h4,&_h5,&_h6]:my-[35px_16px] [&_h1:first-child,&_h2:first-child,&_h3:first-child,&_h4:first-child,&_h5:first-child,&_h6:first-child]:mt-0 [&_img]:w-full [&_img]:h-auto [&_h1_strong,&_h2_strong,&_h3_strong,&_h4_strong,&_h5_strong,&_h6_strong]:font-semibold
+                [&_h1_span,&_h2_span,&_h3_span,&_h4_span,&_h5_span,&_h6_span]:font-semibold">
               {htmlWithIds &&
                 parse(htmlWithIds, {
                   replace: (node: DOMNode) => {
