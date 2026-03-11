@@ -89,8 +89,8 @@ function WhyBuildCard({
         variant === "regulatory"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_#0000001A] "
           : "",
-        variant === "ifza"
-          ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
+        variant === "rakez"
+          ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" && "shadow-none",
         variant === "technology" && "shadow-none",
@@ -142,7 +142,7 @@ function WhyBuildCard({
             hasVariant(variant, "dsoa") ||
             hasVariant(variant, "rakez") ||
             hasVariant(variant, "ifza")
-            ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
+            ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
         )}
@@ -271,8 +271,8 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "rakez") ||
               hasVariant(variant, "dwtc") ||
               hasVariant(variant, "freeZone")
-              ? "xl:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
-              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+              ? "xl:grid-cols-4 gap-3 xl:!gap-[26.50px] 2xl:gap-6"
+              : "lg:grid-cols-3 gap-4 xl:gap-[25px] 2xl:gap-10",
             hasVariant(variant, "company-freezone")
               ? "lg:!grid-cols-4 gap-3 xl:!gap-[25px] 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-10 2xl:gap-10",
