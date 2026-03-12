@@ -1,14 +1,14 @@
-import InnerHero from "@/components/common/InnerHero";
-import HomeCounter from "@/components/features/home/HomeCounter";
-import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
-import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
+import HomeCounter from "@/components/features/home/HomeCounter";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -33,8 +33,6 @@ export type MediaItem = {
   path: string;
   alt: string;
 };
-
-
 
 export type ProcessStep = {
   id: number;
@@ -85,7 +83,6 @@ export type CtaData = {
   };
 };
 
-
 const localData = {
   hero: {
     id: 1,
@@ -98,7 +95,6 @@ const localData = {
     description:
       "<p>Enterprise Risk Management is not about producing risk registers that sit unused. It is about  giving leadership a clear, structured view of the risks that could materially affect strategy objectives, operations, and regulatory compliance. KPI helps organisations design and implement ERM frameworks that support informed decision-making, clear accountability, and regulatory readiness. </p>",
   } satisfies HeroData,
-
 
   whyBuild: {
     title: "Why Organisations Implement ERM ",
@@ -165,15 +161,14 @@ const localData = {
         description:
           "<p>Demonstrable risk oversight for boards, investors, and regulators.</p>",
       },
-
     ] satisfies WhyBuildItem[],
   },
-
 
   formationProcess: {
     title: "How KPI Supports ERM ",
     sub_title: "Our ERM engagements typically cover:",
-    description: "KPI provides both advisory and implementation support across the ERM lifecycle. Our approach is proportionate, practical, and tailored to how organisations actually operate.",
+    description:
+      "KPI provides both advisory and implementation support across the ERM lifecycle. Our approach is proportionate, practical, and tailored to how organisations actually operate.",
     steps: [
       {
         id: 1,
@@ -220,15 +215,13 @@ const localData = {
         description:
           "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
       },
-
     ] satisfies ProcessStep[],
-
-
   },
 
   riskAssurance: {
     title: "Our ERM Methodology ",
-    description: "A structured approach designed to provide clarity, consistency and actionable insights across organization. ",
+    description:
+      "A structured approach designed to provide clarity, consistency and actionable insights across organization. ",
     items: [
       {
         id: 1,
@@ -247,8 +240,7 @@ const localData = {
           alt: "Risk assessment and prioritisation",
         },
         title: "Risk assessment and prioritisation",
-        description:
-          "Evaluate risk based on impact, likelihood, and velocity.",
+        description: "Evaluate risk based on impact, likelihood, and velocity.",
       },
       {
         id: 3,
@@ -335,7 +327,6 @@ const localData = {
     ] satisfies WhyChooseItem[],
   },
 
-
   counterList: [
     {
       id: 1,
@@ -408,40 +399,38 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
   },
-
-}
-
-export const metadata: Metadata = {
-  title: "Enterprise Risk Management Advisory UAE | KPI Group  ",
-  description:
-    "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment. ",
 };
 
+export const metadata: Metadata = {
+  title: "Enterprise Risk Management (ERM) Services UAE | KPI Group",
+  description:
+    "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment.",
+};
 
 export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="erm" />
-      <CorporateServicesUaeWhyBuild
-        variant="erm"
-        data={localData.whyBuild}
-      />
+      <CorporateServicesUaeWhyBuild variant="erm" data={localData.whyBuild} />
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
       />
       <RiskAssuranceServices data={localData.riskAssurance} />
-      <CorporateServicesUaeWhyChoose variant="advisory" data={localData.whyChoose} />
+      <CorporateServicesUaeWhyChoose
+        variant="advisory"
+        data={localData.whyChoose}
+      />
       <HomeCounter data={localData.counterList} />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-          <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights data={localData.insights} />
     </>
-  )
+  );
 }
