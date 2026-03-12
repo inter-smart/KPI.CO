@@ -3,7 +3,7 @@
 import BlogDetail from "./BlogDetail";
 import BlogInternalAudit from "./BlogInternalAudit";
 import { transformWpPostToBlogItem } from "@/lib/utils";
-import { USE_MOCK } from "@/lib/blog-api";
+import { USE_MOCK, getMediaById } from "@/lib/blog-api";
 import { MOCK_POSTS, MOCK_CATEGORIES } from "@/lib/blog-mock-data";
 import type { Metadata } from "next";
 import { generatePostSEO, getSchemaScript } from "@/lib/meta-api";
@@ -21,7 +21,7 @@ export async function fetchPost(slug: string) {
     const rawPost = MOCK_POSTS.find((p) => p.slug === slug) ?? null;
     if (!rawPost) return { rawPost: null, transformed: null };
 
-    const mediaFetcher = (_: string) => Promise.resolve(null);
+    const mediaFetcher = (id: number) => Promise.resolve(null);
     const categoryFetcher = (id: number) => {
       const cat = MOCK_CATEGORIES.find((c) => c.id === id);
       return Promise.resolve(cat?.name || "");
@@ -41,9 +41,13 @@ export async function fetchPost(slug: string) {
 
     const rawPost = posts[0];
 
-    const mediaFetcher = (_: string) => {
-      const embedded = rawPost._embedded?.["wp:featuredmedia"]?.[0];
-      return Promise.resolve(embedded ?? null);
+    const mediaFetcher = (id: number) => {
+      const embedded = rawPost._embedded?.["wp:featuredmedia"];
+      if (embedded) {
+        const media = embedded.find((m: any) => m.id === id);
+        if (media) return Promise.resolve(media);
+      }
+      return getMediaById(id);
     };
 
     const categoryFetcher = (id: number) => {

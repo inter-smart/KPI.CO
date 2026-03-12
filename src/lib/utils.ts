@@ -26,16 +26,16 @@ const categoryCache = new Map<number, string>();
 
 export async function transformWpPostToBlogItem(
   post: WPPost,
-  getMedia: (url: string) => Promise<any>,
+  getMedia: (id: number) => Promise<any>,
   getCategoryName: (id: number) => Promise<string>,
 ) {
-  const mediaUrl = post._links?.["wp:featuredmedia"]?.[0]?.href;
+  const mediaId = post.featured_media;
 
   let media = { path: "", alt: "" };
 
-  if (mediaUrl) {
+  if (mediaId) {
     try {
-      const mediaData = await getMedia(mediaUrl);
+      const mediaData = await getMedia(mediaId);
 
       media = {
         path: mediaData?.source_url || "",
