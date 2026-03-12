@@ -82,6 +82,8 @@ export default function InnerHero({
         variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
         variant === "technology" &&
           "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+        variant === "erm" &&
+          "max-sm:!min-h-[715px] lg:!min-h-[630px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -178,6 +180,7 @@ export default function InnerHero({
                 variant === "Tax-Advisory" && "xl:text-[20px]",
                 variant === "e-invoicing" && "xl:text-[20px]",
                 variant === "difc" && "xl:text-[20px]",
+                variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
               )}
             >
               {parse(data?.description)}
@@ -215,6 +218,8 @@ export default function InnerHero({
               "text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-1",
               variant === "difc-regulated" &&
                 "min-w-[125px] xl:min-w-[150px] max-sm:!h-[35px]",
+              variant === "erm" &&
+                "max-sm:min-w-[118px] max-sm:h-[30px]",
             )}
             asChild
           >

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export const headingVariants = cva("leading-tight font-semibold", {
   variants: {
     size: {
-      h1: "text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] leading-[1.4] capitalize",
+      h1: "text-[28px] lg:text-[32px] lg:text-[34px] xl:text-[48.83px] 2xl:text-[52px] 3xl:text-[65px] leading-[1.4] capitalize",
       h2: "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] leading-[1.4] capitalize",
       h3: "text-[28px] sm:text-[28px] lg:text-[34px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[48px] capitalize",
       h4: "text-[16px] sm:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] 3xl:text-[30px] capitalize",

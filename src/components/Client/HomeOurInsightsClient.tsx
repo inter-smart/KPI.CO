@@ -72,23 +72,32 @@ export default function HomeOurInsightsClient({
         <Heading
           as="h2"
           size="h2"
-          className={cn("text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
-            variant === "holding" && "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]"
+          className={cn(
+            "text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
+            variant === "holding" &&
+              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
           )}
         >
           {data.title}
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
-          <div className={cn("flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]", variant === "ADGM-Foundations" && "xl:-mx-[20px] xl:[&>*]:p-[20px]", variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]")}>
+          <div
+            className={cn(
+              "flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",
+              variant === "ADGM-Foundations" &&
+                "xl:-mx-[20px] xl:[&>*]:p-[20px]",
+              variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
+            )}
+          >
             {data.items.map((item) => (
               <div
                 key={`insight-${item.id}`}
                 className={cn(
                   "flex-[0_0_75%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
-                  variant === "saifz" && 
+                  variant === "saifz" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
-                  variant === "default" && 
+                  variant === "default" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                 )}
               >
@@ -100,7 +109,7 @@ export default function HomeOurInsightsClient({
         <div
           className={cn(
             "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 ",
-            variant === "default" && "hidden"
+            variant === "default" && "hidden",
           )}
         >
           {scrollSnaps.map((_, index) => (
@@ -123,7 +132,7 @@ export default function HomeOurInsightsClient({
 /* CARD                                                               */
 /* ------------------------------------------------------------------ */
 
-function InsightCard({ data , variant}: InsightCardProps) {
+function InsightCard({ data, variant }: InsightCardProps) {
   return (
     <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
       <div className="relative aspect-[375/202] overflow-hidden">
@@ -136,14 +145,18 @@ function InsightCard({ data , variant}: InsightCardProps) {
         />
       </div>
 
-      <div className={cn("w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col", variant === "home" && "xl:p-[26px_25px]")}>
+      <div
+        className={cn(
+          "w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col",
+          variant === "home" && "xl:p-[26px_25px]",
+        )}
+      >
         <Text
           size="p1"
           className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
         </Text>
-        
 
         <div className="text-[16px] sm:text-[15px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] leading-normal font-semibold text-black mb-[10px] xl:mb-[12px] 2xl:mb-[15px]">
           {parse(data.title ?? "title")}
@@ -159,7 +172,10 @@ function InsightCard({ data , variant}: InsightCardProps) {
 
         <Link
           href={data.slug ? `/blog/${data.slug}` : "#"}
-          className={cn("text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-1 mt-auto  transition-colors duration-300", variant === "home" && "font-medium" )}
+          className={cn(
+            "text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-1 mt-auto  transition-colors duration-300",
+            variant === "home" && "font-medium",
+          )}
         >
           Read More<span className="text-[11px] font-semibold">→</span>
         </Link>
