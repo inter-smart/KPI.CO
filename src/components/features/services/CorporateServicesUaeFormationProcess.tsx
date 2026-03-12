@@ -202,7 +202,7 @@ export default function CorporateServicesUaeFormationProcess({
                       )}
                     >
                       {index > activeStep && (
-                        <div className="w-[20px] h-[21px] rounded-full bg-white" />
+                        <div className="w-[20px] h-[20px] !rounded-full bg-white" />
                       )}
                     </div>
                     {step.step && (
