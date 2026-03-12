@@ -1,14 +1,14 @@
-import InnerHero from "@/components/common/InnerHero";
-import HomeCounter from "@/components/features/home/HomeCounter";
-import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
-import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
-import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
-import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
+import HomeCounter from "@/components/features/home/HomeCounter";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import RiskExploreService from "@/components/features/risk-overview/RiskExploreService";
+import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
+import RiskAssuranceServices from "@/components/features/risk-overview/RiskAssuranceServices";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
+import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 
 export type HeroData = {
   id: number;
@@ -33,8 +33,6 @@ export type MediaItem = {
   path: string;
   alt: string;
 };
-
-
 
 export type ProcessStep = {
   id: number;
@@ -85,7 +83,6 @@ export type CtaData = {
   };
 };
 
-
 const localData = {
   hero: {
     id: 1,
@@ -98,7 +95,6 @@ const localData = {
     description:
       "<p>Enterprise Risk Management is not about producing risk registers that sit unused. It is about  giving leadership a clear, structured view of the risks that could materially affect strategy objectives, operations, and regulatory compliance. KPI helps organisations design and implement ERM frameworks that support informed decision-making, clear accountability, and regulatory readiness. </p>",
   } satisfies HeroData,
-
 
   whyBuild: {
     title: "Why Organisations Implement ERM ",
@@ -165,15 +161,14 @@ const localData = {
         description:
           "<p>Demonstrable risk oversight for boards, investors, and regulators.</p>",
       },
-
     ] satisfies WhyBuildItem[],
   },
-
 
   formationProcess: {
     title: "How KPI Supports ERM ",
     sub_title: "Our ERM engagements typically cover:",
-    description: "KPI provides both advisory and implementation support across the ERM lifecycle. Our approach is proportionate, practical, and tailored to how organisations actually operate.",
+    description:
+      "KPI provides both advisory and implementation support across the ERM lifecycle. Our approach is proportionate, practical, and tailored to how organisations actually operate.",
     steps: [
       {
         id: 1,
@@ -182,7 +177,7 @@ const localData = {
         sub_title: "Enterprise risk identification",
         inner_title: "Enterprise risk identification",
         description:
-          "<p>Identification of strategic, operational,financial, and compliance risks affect business objectives.</p>",
+          "<p>Identification of strategic, operational,-financial, and compliance risks affect business objectives.</p>",
       },
       {
         id: 2,
@@ -191,7 +186,7 @@ const localData = {
         sub_title: "Risk assessment and prioritisation",
         inner_title: "Risk assessment and prioritisation",
         description:
-          "<p>Pick the right business activity and legal structure. KPI Group ensures your choices meet DED regulations. </p>",
+          "<p>Evaluation of risks based on impact, likelihood, and velocity to focus on what matters the most.</p>",
       },
       {
         id: 3,
@@ -200,7 +195,7 @@ const localData = {
         sub_title: "Risk appetite definition",
         inner_title: "Risk appetite definition",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Support in defining acceptable risk thresholds aligned with strategy and governance expectations.</p>",
       },
       {
         id: 4,
@@ -209,7 +204,7 @@ const localData = {
         sub_title: "Risk mitigation and control design",
         inner_title: "Risk mitigation and control design",
         description:
-          "<p>Secure a physical office or coworking space. We’ll guide you through tenancy agreements, Ejari, and necessary approvals.</p>",
+          "<p>Develop response strategies and controls for high priority risks.</p>",
       },
       {
         id: 5,
@@ -218,17 +213,24 @@ const localData = {
         sub_title: "Risk monitoring and reporting",
         inner_title: "Risk monitoring and reporting",
         description:
-          "<p>Obtain visas for owners, employees, and dependents. KPI Group manages the full visa process. </p>",
+          "<p>Design reporting structures that provide clear visibility to management and boards.</p>",
       },
-
+      {
+        id: 6,
+        step: "Step Six",
+        title: "ERM framework implementation",
+        sub_title: "ERM framework implementation",
+        inner_title: "ERM framework implementation",
+        description:
+          "<p>Embed ERM into governance, decision-making, and reporting processes.</p>",
+      },
     ] satisfies ProcessStep[],
-
-
   },
 
   riskAssurance: {
     title: "Our ERM Methodology ",
-    description: "A structured approach designed to provide clarity, consistency and actionable insights across organization. ",
+    description:
+      "A structured approach designed to provide clarity, consistency and actionable insights across organization. ",
     items: [
       {
         id: 1,
@@ -248,7 +250,7 @@ const localData = {
         },
         title: "Risk assessment and prioritisation",
         description:
-          "Evaluate risk based on impact, likelihood, and velocity.",
+          "Evaluate risk based on impact, likelihood, and <br> velocity.",
       },
       {
         id: 3,
@@ -268,7 +270,7 @@ const localData = {
         },
         title: "Risk mitigation planning",
         description:
-          "Design of controls and response strategies for high priority risks.",
+          "Design of controls and response strategies <br> for high priority risks.",
       },
       {
         id: 5,
@@ -334,7 +336,6 @@ const localData = {
       },
     ] satisfies WhyChooseItem[],
   },
-
 
   counterList: [
     {
@@ -408,40 +409,35 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
   },
-
-}
-
-export const metadata: Metadata = {
-  title: "Enterprise Risk Management Advisory UAE | KPI Group  ",
-  description:
-    "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment. ",
 };
 
+export const metadata: Metadata = {
+  title: "Enterprise Risk Management (ERM) Services UAE | KPI Group",
+  description:
+    "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment.",
+};
 
 export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="erm" />
-      <CorporateServicesUaeWhyBuild
-        variant="erm"
-        data={localData.whyBuild}
-      />
+      <CorporateServicesUaeWhyBuild variant="erm" data={localData.whyBuild} />
       <CorporateServicesUaeFormationProcess
-        variant="mainland"
+        variant="erm"
         data={localData.formationProcess}
       />
-      <RiskAssuranceServices data={localData.riskAssurance} />
-      <CorporateServicesUaeWhyChoose variant="advisory" data={localData.whyChoose} />
-      <HomeCounter data={localData.counterList} />
-      <RiskExploreService variant="difc" data={localData.explore_service} />
+      <RiskAssuranceServices data={localData.riskAssurance} variant="erm" />
+      <CorporateServicesUaeWhyChoose variant="erm" data={localData.whyChoose} />
+      <HomeCounter data={localData.counterList} variant="erm" />
+      <RiskExploreService variant="erm" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-          <HomeOurInsights />
+      <HomeOurInsights />
     </>
-  )
+  );
 }

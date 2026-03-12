@@ -92,7 +92,8 @@ function WhyBuildCard({
         variant === "rakez"
           ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
-        variant === "AuditServicesUae" && "xl:!p-[20px_15px_15px_15px] shadow-none",
+        variant === "AuditServicesUae" &&
+          "xl:!p-[20px_15px_15px_15px] shadow-none",
         variant === "technology" && "shadow-none",
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
@@ -102,6 +103,7 @@ function WhyBuildCard({
         variant === "difc-formation" && "xl:min-h-[220px]",
         variant === "Formation-JAFZA" && "xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
+        variant === "erm" && "max-sm:p-[20px_15px]",
       )}
     >
       <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
@@ -132,6 +134,7 @@ function WhyBuildCard({
           hasVariant(variant, "offshore") && "xl:text-[18px]",
           hasVariant(variant, "Formation-JAFZA") && "xl:text-[18px]",
           hasVariant(variant, "dwtc") && "xl:text-[18px]",
+          hasVariant(variant, "erm") && "max-sm:!text-[16px]",
         )}
       >
         {item.title}
@@ -150,7 +153,7 @@ function WhyBuildCard({
             hasVariant(variant, "ifza")
             ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
-            hasVariant(variant, "difc-formation")
+          hasVariant(variant, "difc-formation")
             ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
@@ -265,6 +268,7 @@ export default function CorporateServicesUaeWhyBuild({
                 hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
                 variant === "difc-formation" &&
                   "leading-relaxed xl:[&_b]:text-[24px] [&_b]:font-semibold [&_b]:mb-[28px]",
+                variant === "erm" && "max-sm:text-[18px]",
               )}
             >
               {parse(data?.description)}
@@ -335,7 +339,8 @@ export default function CorporateServicesUaeWhyBuild({
                   <div
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
-                      variant === "AuditServicesUae" && " text-[#1C5396] xl:mb-[10px]",
+                      variant === "AuditServicesUae" &&
+                        " text-[#1C5396] xl:mb-[10px]",
                     )}
                   >
                     {item.title}

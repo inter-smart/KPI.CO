@@ -43,6 +43,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "default"
     | "Financial-Statement-Audit"
     | "tax-advisory"
+    | "erm"
     | "risk"
     | "internal-audit"
     | "difc-regulated"
@@ -142,7 +143,8 @@ export default function CorporateServicesUaeFormationProcess({
                 as="div"
                 size="p5"
                 className={cn("text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
-                  variant==="sop" && "max-sm:hidden"
+                  variant==="sop" && "max-sm:hidden",
+                  variant === "erm" && "max-sm:text-[18px]",
                 )}
               >
                 {parse(data?.description)}
@@ -153,7 +155,7 @@ export default function CorporateServicesUaeFormationProcess({
             <Heading
               as="div"
               size="h4"
-              className="xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10"
+              className={cn("xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10",variant === "erm" && "max-sm:text-[18px]")}
             >
               {data.sub_title}
             </Heading>

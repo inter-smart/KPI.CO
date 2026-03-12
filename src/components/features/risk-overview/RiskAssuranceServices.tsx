@@ -15,7 +15,7 @@ type RiskAssuranceProps = {
     description: string;
     items: RiskAssuranceData[];
   };
-  variant?: "internal-audit" | "Formation-ADGM" | "company-freezone";
+  variant?: "internal-audit" | "Formation-ADGM" | "company-freezone" | "erm";
 };
 
 export default function RiskAssuranceServices({
@@ -58,7 +58,12 @@ export default function RiskAssuranceServices({
   return (
     <section className="w-full py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]">
       <div className="container">
-        <div className={cn("w-full", variant === "Formation-ADGM" && "xl:mb-[35px]",)}>
+        <div
+          className={cn(
+            "w-full",
+            variant === "Formation-ADGM" && "xl:mb-[35px]",
+          )}
+        >
           <Heading
             as="h2"
             size="h2"
@@ -66,6 +71,7 @@ export default function RiskAssuranceServices({
               "text-[#1C5396] mb-25px] xl:mb-[25px]",
               variant === "internal-audit" && "leading-[125%] mb-[30px] xl:mb-[38px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
+              variant === "erm" && "max-sm:mb-[20px]",
             )}
           >
             {data?.title}
@@ -74,12 +80,24 @@ export default function RiskAssuranceServices({
             {parse(data?.description)}
           </div>
         </div>
-        <div className={cn("hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[29px] 2xl:gap-7.5 3xl:gap-9",
-          variant === "internal-audit" && "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]"
-        )}>
+        <div
+          className={cn(
+            "hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[29px] 2xl:gap-7.5 3xl:gap-9",
+            variant === "internal-audit" && "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]",
+            variant === "erm" && "max-sm:grid max-sm:gap-[14px]",
+          )}
+        >
           {data.items.map((item) => (
             <div key={item?.id} className="w-full h-auto block">
-              <div className={cn("group [--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 2xl:[--icon-size:45px] 3xl:[--icon-size:58px] w-full h-full p-6.25 lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[10px] border-1 border-[#E2E2E2] flex",variant === "company-freezone" && "xl:min-h-[130px] xl:max-h-[130px]")}>
+              <div
+                className={cn(
+                  "group [--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 2xl:[--icon-size:45px] 3xl:[--icon-size:58px] w-full h-full max-sm:p-[20px] p-6.25 lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[10px] border-1 border-[#E2E2E2] flex",
+                  variant === "company-freezone" &&
+                    "xl:min-h-[130px] xl:max-h-[130px]",
+                  variant === "erm" &&
+                    "max-sm:min-h-[164px]",
+                )}
+              >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
                   <Image
                     src={item?.media?.path}
@@ -90,13 +108,21 @@ export default function RiskAssuranceServices({
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 xl:pl-[20px] 2xl:pl-3.75 3xl:pl-5">
-                  <div className={cn("text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-relaxed font-medium text-[#1C5396] capitalize mb-[10px]",variant === "company-freezone" && "xl:mb-[5px]")}>
+                  <div
+                    className={cn(
+                      "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-relaxed font-medium text-[#1C5396] capitalize mb-[10px]",
+                      variant === "company-freezone" && "xl:mb-[5px]",
+                    )}
+                  >
                     {item?.title}
                   </div>
-                  <p className={cn("text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-rlaxed font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]",
-                    variant === "internal-audit" && "capitalize",
-                    variant === "company-freezone" && "capitalize"
-                  )}>
+                  <p
+                    className={cn(
+                      "text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-rlaxed font-normal text-[#4E4E4E] max-w-[93%] 2xl:max-w-[100%]",
+                      variant === "internal-audit" && "capitalize",
+                      variant === "company-freezone" && "capitalize",
+                    )}
+                  >
                     {parse(item?.description)}
                   </p>
                 </div>
@@ -104,7 +130,7 @@ export default function RiskAssuranceServices({
             </div>
           ))}
         </div>
-        <div className={cn("w-full block sm:hidden" , variant === "internal-audit" && "hidden" )}>
+        <div className="w-full block sm:hidden">
           <div
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"

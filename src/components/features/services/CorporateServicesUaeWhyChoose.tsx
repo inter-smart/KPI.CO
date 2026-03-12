@@ -41,6 +41,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "tax-advisory"
     | "e-invoicing"
     | "SOP"
+    | "erm"
     | "holding"
     | "regulatory"
     | "aup"
@@ -70,6 +71,7 @@ type ServiceCardProps = {
     | "tax-advisory"
     | "Formation-DIFC"
     | "SOP"
+    | "erm"
     | "holding"
     | "internal-audit"
     | "e-invoicing"
@@ -103,6 +105,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "CorporateServicesUae" && "xl:py-[50px_90px]",
         variant === "Formation-ADGM" && "xl:py-[60px_80px]",
         variant === "Formation-DIFC" && "xl:py-[50px_70px]",
+        variant === "erm" && "xl:py-[50px_80px]",
         variant === "regulatory" && "max-sm:py-[20px_40px]",
       )}
     >
@@ -124,6 +127,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "internal-audit" ||
               variant === "spv" ||
               variant === "SOP" ||
+              variant === "erm" ||
               variant === "Formation-DIFC" ||
               variant === "AuditServicesUae" ||
               variant === "aup" ||
@@ -174,7 +178,7 @@ export default function CorporateServicesUaeWhyChoose({
                   "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
                 variant === "internal-audit" &&
                   "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ",
-                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ", 
+                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
               )}
             >
               {parse(data?.description)}
@@ -299,9 +303,18 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%]",
         variant === "offshore" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:pr-[40px]",
+        variant === "erm" && "after:bg-[#f3f7fd] max-sm:min-h-[150px]",
       )}
     >
-      <div className={cn("relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",  variant === "CorporateServicesUae" && "after:bg-[rgba(106,159,224,0.08)]",variant === "AuditServicesUae" && "h-full xl:pr-[42px]")}>
+      <div
+        className={cn(
+          "relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",
+          variant === "CorporateServicesUae" &&
+            "after:bg-[rgba(106,159,224,0.08)]",
+          variant === "AuditServicesUae" && "h-full xl:pr-[42px]",
+          variant === "erm" && "after:bg-[#f3f7fd]",
+        )}
+      >
         <div
           className={cn(
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",
@@ -327,8 +340,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             variant === "VatServicesUae" && "text-[#1C5396]",
             variant === "offshore" && "text-[#1C5396]",
             variant === "Financial-Statement-Audit" && "text-[#1C5396]",
+            variant === "erm" && "text-[#1C5396]",
             variant === "internal-audit" && "text-[#1C5396] leading-relaxed",
-           
           )}
         >
           {item?.title}
@@ -342,6 +355,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
                 variant === "ADGM-Foundation" &&
                   "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
                 variant === "CorporateServicesUae" && "xl:text-[14px]",
+                variant === "erm" && "lg:text-[14px] xl:text-[14px]",
                 variant === "internal-audit" &&
                   "leading-relaxed xl:max-w-[92%]",
                 variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",

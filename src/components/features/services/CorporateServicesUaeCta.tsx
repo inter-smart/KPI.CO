@@ -93,7 +93,7 @@ export default function CorporateServicesUaeCta({
               className={cn("w-full h-full object-cover max-md:block hidden")}
             />
           </div>
-          <div 
+          <div
             className={cn(
               "w-full max-lg:mb-3.75",
               variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
@@ -180,7 +180,7 @@ export default function CorporateServicesUaeCta({
                 variant === "difc-regulated" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                  "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >
