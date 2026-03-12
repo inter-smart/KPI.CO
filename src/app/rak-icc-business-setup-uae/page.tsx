@@ -478,7 +478,7 @@ export default function DwtcFreezone() {
         variant="RAK-Offshore"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }

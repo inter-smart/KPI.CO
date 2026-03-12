@@ -55,7 +55,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
         </div>
         <div className="w-full !overflow-hidden !rounded-[10px] relative aspect-[1200/340]">
           <Image
-            src={data?.media?.desktop_path || "/images/icon-placeholder.svg"}
+            src={data?.media?.desktop_path || "/images/placeholder-image.png"}
             alt={data?.media?.media_alt}
             width={1200}
             height={340}

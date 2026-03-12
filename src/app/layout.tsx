@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReactLenis from "lenis/react";
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased font-poppins`}>
+        <NuqsAdapter> 
+
         <ReactLenis
           root
           options={{
@@ -40,6 +43,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </ReactLenis>
+          </NuqsAdapter>
       </body>
     </html>
   );

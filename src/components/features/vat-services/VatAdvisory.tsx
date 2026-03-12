@@ -64,7 +64,7 @@ export default function VatAdvisory({ data, variant="default" }: VatAdvisoryProp
                   )}>
                     {parse(item?.title)}
                   </div>
-                  <div className={cn("text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]",
+                  <div className={cn("text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E]",
                     variant === "difc-formation" && "leading-relaxed",
                   )}>
                     {parse(item?.description)}

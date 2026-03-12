@@ -25,6 +25,7 @@ type Variant =
   | "dwtc"
   | "Formation-JAFZA"
   | "JAFZA-Freezone"
+  | "e-invoicing"
   | "company-freezone"
   | "ADGM-Foundations";
 
@@ -57,6 +58,7 @@ export default function MainlandBusiness({
         variant === "Offshore" && "xl:py-[70px]",
         variant === "RAK-Offshore" && "xl:py-[90px_70px]",
         variant === "rakez" && "xl:py-[90px_30px]",
+        variant === "e-invoicing" && "bg-linear-to-t from-[#f5fbfe] via-white to-white ",
       )}
     >
       <div className="container">

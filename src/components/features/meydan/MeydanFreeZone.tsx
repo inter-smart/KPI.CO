@@ -36,6 +36,7 @@ interface MeydanFreeZoneProps {
     | "Tax-Advisory"
     | "default"
     | "ifza"
+    | "e-invoice"
     | "regulatory"
     | "difc-regulated"
     | "audit";
@@ -50,7 +51,7 @@ export default function MeydanFreeZone({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        "w-full h-auto py-[10px_25px] sm:py-[35px_50px] xl:py-[30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
       )}
@@ -164,8 +165,10 @@ export default function MeydanFreeZone({
                       <span
                         className={cn(
                           "text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
-                          variant === "ADGM-Foundation" &&
+                          variant === "ADGM-Foundation" && 
                           "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
+                           variant === "difc" && 
+                          "text-[14px] xl:text-[16px] ",
                         )}
                       >
                         {parse(zone)}

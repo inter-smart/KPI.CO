@@ -31,6 +31,7 @@ type DocumentRequiredProps = {
   variant?:
     | "default"
     | "saifz"
+    | "rakez"
     | "dfza"
     | "CorporateTaxUae"
     | "VatServicesUae"
@@ -95,6 +96,8 @@ export default function DocumentRequired({
           "bg-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "rakez" &&
+          "bg-linear-to-t from-[#eff8fc] via-white to-white",
         variant === "VatServicesUae" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "Formation-JAFZA" &&
@@ -261,6 +264,7 @@ export default function DocumentRequired({
                           variant === "sop" ||
                           variant === "advisory" ||
                           variant === "dmcc" ||
+                          variant === "rakez" ||
                           variant === "tax-advisory" ||
                           variant === "freezone-business" ||
                           variant === "company-freezone" ||

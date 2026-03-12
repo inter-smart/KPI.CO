@@ -85,6 +85,7 @@ export default function CorporateServicesUaeServices({
             variant === "dwtc" && "xl:max-w-full",
             variant === "ifza" && "xl:max-w-full",
             variant === "technology" && "xl:max-w-full",
+            variant === "rakez" && "xl:max-w-full",
             variant === "regulatory" && "!max-w-full xl:gap-[40px]",
           )}
         >
@@ -92,7 +93,7 @@ export default function CorporateServicesUaeServices({
             <div key={item?.id} className="w-full h-auto block">
               <div
                 className={cn(
-                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[24px] bg-white rounded-[10px]  border-[1.6px] border-[#E2E2E2] flex transition-all duration-500",
+                  "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:45px] 3xl:[--icon-size:60px] w-full h-full max-sm:min-h-[200px] p-6.25 lg:p-5 xl:p-[22px_24px_19px] bg-white rounded-[10px]  border-[1.6px] border-[#E2E2E2] flex transition-all duration-500",
                   variant === "dafza" && "max-sm:min-h-[150px]",
                   variant === "ifza" && "max-sm:min-h-[160px]",
                   variant === "rakez" && "min-h-[130px]",
@@ -123,7 +124,7 @@ export default function CorporateServicesUaeServices({
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
                   <div
                     className={cn(
-                      "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-1.75",
+                      "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-[5px]",
                       variant === "technology" && "mb-0",
                       variant === "CorporateTaxUae" && "!mb-0",
                       variant === "regulatory" && "capitalize",
@@ -137,7 +138,8 @@ export default function CorporateServicesUaeServices({
                         "text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
                         variant === "regulatory" &&
                           "leading-relaxed xl:max-w-[92%]",
-                        variant === "saifz" && "max-w-full",
+                        variant === "saifz" && "xl:max-w-full" ,
+                      variant === "rakez" && "xl:max-w-full",
                         variant === "AuditServicesUae" && "xl:max-w-full",
                       )}
                     >

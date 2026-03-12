@@ -79,7 +79,7 @@ function WhyBuildCard({
   return (
     <div
       className={cn(
-        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border-[0.8px] border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[23px_18px_45px] 2xl:py-7.5 2xl:px-5.5 shadow-[0px_1px_3px_rgba(0,0,0,0.1)]  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border-[0.8px] border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[23px_18px_25px] 2xl:py-7.5 2xl:px-5.5 shadow-[0px_1px_3px_rgba(0,0,0,0.1)]  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
@@ -89,8 +89,8 @@ function WhyBuildCard({
         variant === "regulatory"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_#0000001A] "
           : "",
-        variant === "ifza"
-          ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
+        variant === "rakez"
+          ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" && "xl:!p-[20px_15px_15px_15px] shadow-none",
         variant === "technology" && "shadow-none",
@@ -99,6 +99,7 @@ function WhyBuildCard({
         variant === "company-freezone" && "rounded-[10px] xl:!pr-[10px]",
         variant === "Vat-Services" && "xl:!pr-[40px]",
         variant === "dafz" && "xl:min-h-[220px]",
+        variant === "difc-formation" && "xl:min-h-[220px]",
         variant === "Formation-JAFZA" && "xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
       )}
@@ -145,8 +146,12 @@ function WhyBuildCard({
             hasVariant(variant, "company-freezone") ||
             hasVariant(variant, "regulatory") ||
             hasVariant(variant, "dsoa") ||
+            hasVariant(variant, "rakez") ||
             hasVariant(variant, "ifza")
-            ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
+            ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
+            : "",
+            hasVariant(variant, "difc-formation")
+            ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
           hasVariant(variant, "offshore") && "xl:text-[14px]",
@@ -278,8 +283,8 @@ export default function CorporateServicesUaeWhyBuild({
               hasVariant(variant, "rakez") ||
               hasVariant(variant, "dwtc") ||
               hasVariant(variant, "freeZone")
-              ? "xl:grid-cols-4 gap-3 xl:gap-5 2xl:gap-6"
-              : "lg:grid-cols-3 gap-4 xl:gap-8 2xl:gap-10",
+              ? "xl:grid-cols-4 gap-3 xl:!gap-[26.50px] 2xl:gap-6"
+              : "lg:grid-cols-3 gap-4 xl:gap-[25px] 2xl:gap-10",
             hasVariant(variant, "company-freezone")
               ? "lg:!grid-cols-4 gap-3 xl:!gap-[25px] 2xl:gap-6"
               : "lg:grid-cols-3 gap-4 xl:gap-10 2xl:gap-10",

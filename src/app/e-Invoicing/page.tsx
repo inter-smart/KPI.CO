@@ -293,7 +293,7 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="e-invoicing" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="e-invoicing" />
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
@@ -301,12 +301,12 @@ export default function page() {
       <MeydanFreeZone variant="difc" data={localData.meydanFreeZone} />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="e-invoicing"
       />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter data={localData.counterList} variant="e-invoice"/>
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
 
-         <HomeOurInsights data={localData.insights} />
+         <HomeOurInsights />
     </>
   );
 }

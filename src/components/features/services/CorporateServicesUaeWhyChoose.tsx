@@ -38,6 +38,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "internal-audit"
     | "ADGM-Foundation"
     | "tax-advisory"
+    | "e-invoicing"
     | "SOP"
     | "holding"
     | "regulatory"
@@ -69,6 +70,7 @@ type ServiceCardProps = {
     | "SOP"
     | "holding"
     | "internal-audit"
+    | "e-invoicing"
     | "regulatory"
     | "aup"
     | "difc-regulated"
@@ -105,6 +107,7 @@ export default function CorporateServicesUaeWhyChoose({
           className={cn(
             "w-full h-auto mb-[25px]",
             variant === "mainland" ||
+            variant === "e-invoicing" ||
               variant === "advisory" ||
               variant === "adgm-regulated" ||
               variant === "offshore" ||
@@ -150,6 +153,8 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "Formation-DIFC" && "max-xl:!mb-[20px] xl:mb-[30px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               variant === "offshore" && "xl:mb-[30px]",
+              variant === "mainland" && "max-sm:text-[28px]",
+              variant === "e-invoicing" && "max-sm:text-[28px]",
               titleClassName,
             )}
           >
@@ -163,8 +168,7 @@ export default function CorporateServicesUaeWhyChoose({
                   "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
                 variant === "internal-audit" &&
                   "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ",
-                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
-                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
+                variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ", 
               )}
             >
               {parse(data?.description)}
@@ -253,6 +257,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
       className={cn(
         "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "e-invoicing" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "adgm-regulated" &&
@@ -295,6 +300,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",
             variant === "difc-regulated" && "text-[#1C5396]",
             variant === "mainland" && "text-[#1C5396]",
+            variant === "e-invoicing" && "text-[#1C5396]",
             variant === "aup" && "text-[#1C5396]",
             variant === "adgm-regulated" && "text-[#1C5396]",
             variant === "risk" && "text-[#1C5396]",

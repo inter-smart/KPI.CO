@@ -480,7 +480,7 @@ export const metadata: Metadata = {
 export default function CompanyFormationDIFC() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="difc"/>
       <CorporateServicesUaeWhyBuild
         variant="difc-formation"
         data={localData.whyBuild}

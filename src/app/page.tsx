@@ -389,7 +389,9 @@ export const metadata: Metadata = {
 /* Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function HomePage() {
+export default async function HomePage() {
+ 
+
   return (
     <>
       <HomeHero data={localData.hero} />
@@ -401,7 +403,8 @@ export default function HomePage() {
       <HomeSecurityInfo data={localData.securityInfo} />
       <HomeAbout data={localData.about} className="max-sm:hidden" />
       <HomeProfessionalAffiliations data={localData.professionalAffiliations} />
-      <HomeOurInsights data={localData.insights} variant="home"/>
+      <HomeOurInsights  variant="home"/>
+       
     </>
   );
 }

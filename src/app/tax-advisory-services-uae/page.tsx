@@ -13,7 +13,7 @@ import { Metadata } from "next";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 
 export type HeroData = {
-  id: number; 
+  id: number;
   title: string;
   description: string;
   media?: {
@@ -60,7 +60,7 @@ export type MeydanFreeZoneData = {
 export type ProcessStep = {
   id: number;
   title: string;
-    inner_title: string;
+  inner_title: string;
   sub_title: string;
   description: string;
 };
@@ -190,14 +190,14 @@ const localData = {
         id: 1,
         title: "Establish the commercial reality",
         sub_title: "",
-                inner_title: "Establish the commercial reality",
+        inner_title: "Establish the commercial reality",
         description:
           "<p>We begin by understanding what is actually happening commercially and not just legally. </p>",
       },
       {
         id: 2,
         title: "Interpret the applicable tax framewrok",
-                inner_title: "Interpret the applicable tax framewrok",
+        inner_title: "Interpret the applicable tax framewrok",
         sub_title: "",
         description:
           "<p>We analyse how UAE tax regulations apply in practice, including grey areas. </p>",
@@ -205,7 +205,7 @@ const localData = {
       {
         id: 3,
         title: "Evaluate viable tax positions",
-                inner_title: "Evaluate viable tax positions",
+        inner_title: "Evaluate viable tax positions",
         sub_title: "",
         description:
           "<p>Assess risk, defensibility, and downstream implications. </p>",
@@ -213,7 +213,7 @@ const localData = {
       {
         id: 4,
         title: "Document and support the rationale",
-                inner_title: "Document and support the rationale",
+        inner_title: "Document and support the rationale",
         sub_title: "",
         description:
           "<p>We ensure final position is clearly articulated and documented. </p>",
@@ -355,7 +355,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -372,7 +372,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="Tax-Advisory"/>
+      <InnerHero data={localData.hero} variant="Tax-Advisory" />
       <WhyRiskManagement data={localData.whyRisk} />
       <MeydanFreeZone variant="Tax-Advisory" data={localData.meydanFreeZone} />
       <CorporateServicesUaeFormationProcess
@@ -390,7 +390,7 @@ export default function page() {
         variant="tax-advisory"
       />
       <TaxDecision data={localData.cta} />
-         <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }

@@ -50,7 +50,7 @@ export default function CorporateServicesUaeCta({
       className={cn(
         "w-full h-auto block",
         variant === "mainland"
-          ? "py-[45px] lg:py-[65px_45px] xl:py-[50px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
+          ? "py-[45px] lg:py-[65px_45px] xl:py-[65px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
           : "py-[40px] lg:py-13 xl:py-[50px] 2xl:py-17 3xl:py-22",
       )}
     >
@@ -116,6 +116,7 @@ export default function CorporateServicesUaeCta({
                 variant === "holding" && "font-bold leading-relaxed",
                 variant === "blogdetail" && "max-sm:text-[22px]",
                 variant === "ifza" && "font-bold",
+                variant === "rakez" && "xl:max-w-full",
               )}
             >
               {parse(data?.title)}
@@ -150,9 +151,11 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black min-w-[120px] xl:min-w-[180px] 2xl:min-w-[190px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
+                "text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black min-w-[120px] xl:min-w-[178px] 2xl:min-w-[190px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                variant === "rakez" &&
+                  "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
 
                 variant === "ADGM-Foundations" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] xl:h-[50px]",

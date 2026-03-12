@@ -452,7 +452,7 @@ export default function CompanyFormationOffshoreUaePage() {
         data={localData.corporate_faq_data}
         variant="RAK-Offshore"
       />
-      <HomeOurInsights data={localData.insights} />
+      <HomeOurInsights />
     </>
   );
 }
