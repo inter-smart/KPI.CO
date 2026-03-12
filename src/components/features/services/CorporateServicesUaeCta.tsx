@@ -50,7 +50,7 @@ export default function CorporateServicesUaeCta({
       className={cn(
         "w-full h-auto block",
         variant === "mainland"
-          ? "py-[45px] lg:py-[65px_45px] xl:py-[50px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
+          ? "py-[45px] lg:py-[65px_45px] xl:py-[65px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
           : "py-[40px] lg:py-13 xl:py-[50px] 2xl:py-17 3xl:py-22",
       )}
     >

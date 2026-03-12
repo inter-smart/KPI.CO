@@ -52,7 +52,8 @@ export type InnerHeroProps = {
     | "Offshore"
     | "Tax-Advisory"
     | "Agreed-Procedure"
-    | "difc-regulated"
+    | "difc-regulated" 
+    | "difc" 
     | "meydan";
 };
 
@@ -148,7 +149,7 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                "xl:text-[16px] leading-[1.6] text-white  mb-[30px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "technology" && "xl:!text-[20px]",
                 variant === "dwtc" &&
                   "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
@@ -175,6 +176,8 @@ export default function InnerHero({
                 variant === "ADGM-Regulated-Audit" && "xl:text-[20px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
+                variant === "e-invoicing" && "xl:text-[20px]",
+                variant === "difc" && "xl:text-[20px]",
               )}
             >
               {parse(data?.description)}

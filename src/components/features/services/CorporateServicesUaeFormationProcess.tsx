@@ -106,6 +106,7 @@ export default function CorporateServicesUaeFormationProcess({
         ref={sectionRef}
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
+          variant==="mainland" && "max-sm:pb-3"
         )}
       >
         <div className="container">
@@ -307,6 +308,7 @@ export default function CorporateServicesUaeFormationProcess({
                         className={cn(
                           "text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
                           variant === "internal-audit" && "leading-relaxed",
+                          variant === "mainland" && "xl:text-[20px]",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}
