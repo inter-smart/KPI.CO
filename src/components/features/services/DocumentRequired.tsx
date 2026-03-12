@@ -148,7 +148,7 @@ export default function DocumentRequired({
                         "text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]",
                         variant === "dfza" && "xl:mb-[35px]",
                         variant === "internal-audit" &&
-                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] max-sm:text-[26px]",
+                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] max-sm:!text-[26px]",
                         variant === "company-freezone" &&
                           "xl:mb-[30px]",
                       )}
@@ -326,7 +326,7 @@ export default function DocumentRequired({
                   <Heading
                     as="h2"
                     size="h2"
-                    className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className={cn("text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]" , variant==="internal-audit" && "max-sm:text-[26px]")}
                   >
                     {data.title}
                   </Heading>

@@ -133,7 +133,7 @@ const localData = {
   } satisfies DocumentRequiredData,
   riskAssurance: {
     title: "Why Internal Audits Matter",
-    description: "",
+    description: "A structured approach designed to provide clarity, consistency and actionable insights across the organization.",
     items: [
       {
         id: 1,
@@ -437,7 +437,7 @@ export default function InternalAudit() {
         variant="internal-audit"
       />
       <HomeCounter variant="internal-audit" data={localData.counterList} />
-      <RiskExploreService data={localData.explore_service} />
+      <RiskExploreService data={localData.explore_service} variant="internal-audit" />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <HomeOurInsights variant="home" />

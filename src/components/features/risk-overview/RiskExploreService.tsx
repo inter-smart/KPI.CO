@@ -15,12 +15,12 @@ type RiskExploreServiceProps = {
     title: string;
     items: ServiceItem[];
   };
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated" | "internal-audit";
 };
 
 type ServiceProps = {
   data: ServiceItem;
-  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated";
+  variant?: "difc" | "default" | "ADGM-Foundations" | "risk" | "holding" | "difc-regulated" | "adgm-regulated" | "internal-audit";
 };
 
 export default function RiskExploreService({
@@ -70,6 +70,8 @@ export default function RiskExploreService({
           className={cn("text-[#1c5396] mb-[15px] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:[&>span]:hidden" ,
               variant === "holding" &&
                   "max-sm:text-[26px]",
+              variant === "internal-audit" &&
+                  "max-sm:text-[26px]",
               )}
         >
           {parse(data.title)}
@@ -101,6 +103,8 @@ export default function RiskExploreService({
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "adgm-regulated" &&
                       "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                    variant === "internal-audit" &&
+                      "flex-[0_0_80%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
                   <Service data={item} variant="risk" />
@@ -152,7 +156,7 @@ function Service({ data, variant }: ServiceProps) {
     className={cn(
       "w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[30px_35px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
 
-      (variant === "ADGM-Foundations" || variant === "difc-regulated" || variant === "difc") &&
+      (variant === "ADGM-Foundations" || variant === "difc-regulated" || variant === "difc" || variant === "internal-audit") &&
         "xl:p-[50px_30px_85px]"
     )}
   >
@@ -168,7 +172,7 @@ function Service({ data, variant }: ServiceProps) {
 
     <div
       className={cn(
-        "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium line-clamp-3 text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
+        "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
         variant === "risk" && "min-h-fit"
       )}
     >
