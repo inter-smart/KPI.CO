@@ -51,7 +51,7 @@ export default function MeydanFreeZone({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[10px_25px] sm:py-[35px_50px] xl:py-[30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        "w-full h-auto py-[10px_25px] sm:py-[35px_50px] xl:py-[48px_30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
       )}
@@ -124,7 +124,7 @@ export default function MeydanFreeZone({
                     variant === "ADGM-Foundation" &&
                     "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold  !max-w-full",
                   )}
                 >
                   {parse(item?.title)}
@@ -146,6 +146,7 @@ export default function MeydanFreeZone({
                       "text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                       variant === "ADGM-Foundation" && "xl:mb-[20px]",
                       variant === "RAK-Offshore" && "xl:mb-[15px]",
+                      variant === "regulatory" && "max-sm:text-[14px]",
                     )}
                   >
                     {item?.highlightsText}

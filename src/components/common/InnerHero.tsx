@@ -129,6 +129,7 @@ export default function InnerHero({
             variant === "ADGM-Regulated-Audit" && "xl:max-w-[775px]",
             variant === "ADGM-SPV-Formation" && "xl:max-w-[785px]",
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
+            variant === "difc" && "xl:max-w-[785px]",
           )}
         >
           <Heading
@@ -179,8 +180,8 @@ export default function InnerHero({
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
                 variant === "e-invoicing" && "xl:text-[20px]",
-                variant === "difc" && "xl:text-[20px]",
                 variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
+                variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
               )}
             >
               {parse(data?.description)}

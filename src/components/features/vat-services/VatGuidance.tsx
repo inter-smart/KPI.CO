@@ -28,7 +28,7 @@ export default function VatGuidance({
   variant = "default",
 }: VatGuidanceProps) {
   return (
-    <section className="w-full h-auto py-[40px_50px] sm:py-[70px_50px] xl:py-[80px_60px] 2xl:py-[100px_70px] 3xl:py-[120px_80px] block">
+    <section className="w-full h-auto py-[20px] sm:py-[70px_50px] xl:py-[80px_60px] 2xl:py-[100px_70px] 3xl:py-[120px_80px] block">
       <div className="container">
         <div
           className={cn(

@@ -124,7 +124,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/regulatory-innerbanner-desktop.svg",
-      mobilePath: "/images/regulatory-innerbanner-mobile.svg",
+      mobilePath: "/images/regulatory-mob.svg",
       alt: "Expert SOP Consulting & Development in UAE",
     },
     title: "Regulatory Compliance That Stands Up To Review",
@@ -150,12 +150,12 @@ const localData = {
       {
         id: 3,
         slNo: 3,
-        description: "Rely on informal or undocumented compliance <br> processes",
+        description: "Rely on informal or undocumented compliance processes",
       },
       {
         id: 4,
         slNo: 4,
-        description: "Experience repeated regulatory queries or audit <br> findings",
+        description: "Experience repeated regulatory queries or audit  findings",
       },
       {
         id: 5,
@@ -432,9 +432,9 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
         data={localData?.whyChoose}
         variant="regulatory"
       />
-      <HomeCounter data={localData.counterList} />
-      <VatRelatedTax data={localData.vatRelatedTax} />
-      <CorporateServicesUaeCta data={localData.cta} />
+      <HomeCounter data={localData.counterList} variant="regulatory"/>
+      <VatRelatedTax data={localData.vatRelatedTax} variant="regulatory" />
+      <CorporateServicesUaeCta data={localData.cta}  variant="regulatory"/>
          <HomeOurInsights />
     </>
   );

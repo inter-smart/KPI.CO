@@ -39,6 +39,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "Vat-Services"
     | "mainland"
     | "aup"
+    | "sop"
     | "default"
     | "Financial-Statement-Audit"
     | "tax-advisory"
@@ -107,7 +108,8 @@ export default function CorporateServicesUaeFormationProcess({
         ref={sectionRef}
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
-          variant === "mainland" && "max-sm:pb-3",
+          variant==="mainland" && "max-sm:pb-3" ||
+          variant==="sop" && "max-sm:pb-3"
         )}
       >
         <div className="container">
@@ -115,6 +117,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
+              variant === "sop" ||
                 variant === "company-freezone" ||
                 variant === "aup" ||
                 "tax-advisory" ||
@@ -139,8 +142,8 @@ export default function CorporateServicesUaeFormationProcess({
               <Text
                 as="div"
                 size="p5"
-                className={cn(
-                  "text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
+                className={cn("text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
+                  variant==="sop" && "max-sm:hidden",
                   variant === "erm" && "max-sm:text-[18px]",
                 )}
               >
@@ -172,6 +175,7 @@ export default function CorporateServicesUaeFormationProcess({
                     className={cn(
                       "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 cursor-pointer",
                       variant === "tax-advisory" && "min-w-[330px]",
+                      
                       // isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
                         ? "opacity-100"
@@ -232,6 +236,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",
+                        variant == "sop" && "max-w-[90%]",
                         variant == "Financial-Statement-Audit" && "max-w-full",
                         variant == "CorporateServicesUae" && "max-w-full",
                         index <= activeStep

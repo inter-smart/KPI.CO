@@ -13,9 +13,10 @@ type HomeCounterProps = {
     | "internal-audit"
     | "Financial-Statement-Audit"
     | "aup"
-    | "erm"
     | "Agreed-Procedure"
-    | "e-invoice";
+    | "e-invoice"
+    | "regulatory"
+    | "erm";
 };
 
 export default function HomeCounter({
@@ -38,6 +39,7 @@ export default function HomeCounter({
           "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
         variant === "e-invoice" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
+        variant === "regulatory" && "max-sm:shadow-none",
       )}
     >
       <div className="container mx-auto">
@@ -53,13 +55,19 @@ export default function HomeCounter({
                   variant === "internal-audit" &&
                     "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
                   variant === "e-invoice" && "font-semibold",
+                  variant === "regulatory" && "font-semibold",
                   variant === "erm" && "font-semibold",
                 )}
               >
                 {item.value.toLocaleString()}
                 {item.symbol || "+"}
               </div>
-              <div className={cn("text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] font-normal text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]",variant === "erm" && "max-sm:max-w-[100px]")}>
+              <div
+                className={cn(
+                  "text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] font-normal text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]",
+                  variant === "erm" && "max-sm:max-w-[100px]",
+                )}
+              >
                 {parse(item.label)}
               </div>
             </div>

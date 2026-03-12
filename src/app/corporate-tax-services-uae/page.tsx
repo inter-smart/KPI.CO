@@ -167,7 +167,7 @@ const localData = {
   riskAdvisory: {
     title: "Corporate Tax Exemptions and Reliefs",
     description:
-      " <p>Certain entities and income streams may be exempt from UAE corporate tax, including <span>→</span></p> <div>Eligibility for these must be assessed carefully. Incorrect assumptions around exemptions are among the most common causes of corporate tax exposure.</div>",
+      " <p>Certain entities and income streams may be exempt from UAE corporate tax, including <span>→</span></p> <p>Eligibility for these must be assessed carefully. Incorrect assumptions around exemptions are among the most common causes of corporate tax exposure.</p>",
     highlightsText: "",
     advisoryItems: [
       {
@@ -228,7 +228,7 @@ const localData = {
           path: "/images/corporate-tax-servive-1.svg",
           alt: "Industrial License",
         },
-        title: "Maintain accurate financial records",
+        title: "Maintain accurate financial <br/> records",
       },
       {
         id: 2,
@@ -236,7 +236,7 @@ const localData = {
           path: "/images/corporate-tax-servive-2.svg",
           alt: "Commercial License",
         },
-        title: "Determine taxable income correctly",
+        title: "Determine taxable income <br/>  correctly",
       },
       {
         id: 3,
@@ -422,7 +422,7 @@ export default function CorporateTaxUaePage() {
       <MainlandBusiness data={localData.mainlandBusiness} variant="CorporateTaxUae" />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
-        variant="mainland"
+        variant="CorporateTaxUae"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
         <HomeOurInsights />

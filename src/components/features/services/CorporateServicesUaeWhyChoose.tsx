@@ -31,6 +31,7 @@ export type CorporateServicesUaeWhyChooseProps = {
     | "AuditServicesUae"
     | "Formation-ADGM"
     | "mainland"
+    | "CorporateTaxUae"
     | "offshore"
     | "advisory"
     | "freezone-business"
@@ -61,6 +62,7 @@ type ServiceCardProps = {
     | "VatServicesUae"
     | "Formation-ADGM"
     | "mainland"
+    | "CorporateTaxUae"
     | "offshore"
     | "advisory"
     | "risk"
@@ -76,6 +78,7 @@ type ServiceCardProps = {
     | "regulatory"
     | "aup"
     | "difc-regulated"
+    | "CorporateTaxUae"
     | "adgm-regulated"
     | "spv";
 };
@@ -103,6 +106,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "Formation-ADGM" && "xl:py-[60px_80px]",
         variant === "Formation-DIFC" && "xl:py-[50px_70px]",
         variant === "erm" && "xl:py-[50px_80px]",
+        variant === "regulatory" && "max-sm:py-[20px_40px]",
       )}
     >
       <div className="container">
@@ -110,7 +114,8 @@ export default function CorporateServicesUaeWhyChoose({
           className={cn(
             "w-full h-auto mb-[25px]",
             variant === "mainland" ||
-              variant === "e-invoicing" ||
+            variant === "CorporateTaxUae" ||
+            variant === "e-invoicing" ||
               variant === "advisory" ||
               variant === "adgm-regulated" ||
               variant === "offshore" ||
@@ -158,6 +163,7 @@ export default function CorporateServicesUaeWhyChoose({
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               variant === "offshore" && "xl:mb-[30px]",
               variant === "mainland" && "max-sm:text-[28px]",
+              variant === "CorporateTaxUae" && "max-sm:text-[28px]",
               variant === "e-invoicing" && "max-sm:text-[28px]",
               titleClassName,
             )}
@@ -178,7 +184,7 @@ export default function CorporateServicesUaeWhyChoose({
               {parse(data?.description)}
             </div>
           )}
-          <div className="text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
+          <div className="text-[20px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
             {data?.sub_title}
           </div>
         </div>
@@ -261,6 +267,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
       className={cn(
         "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
+        variant === "CorporateTaxUae" && "before:bg-[#FFC916] after:bg-[#f9fafb] xl:min-h-[160px]",
         variant === "e-invoicing" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
@@ -313,6 +320,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             "text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] relative z-1 leading-normal capitalize font-medium mb-1 lg:mb-1.25 2xl:mb-2.5 ",
             variant === "difc-regulated" && "text-[#1C5396]",
             variant === "mainland" && "text-[#1C5396]",
+            variant === "CorporateTaxUae" && "text-[#1C5396] xl:mb-[5px]",
             variant === "e-invoicing" && "text-[#1C5396]",
             variant === "aup" && "text-[#1C5396]",
             variant === "adgm-regulated" && "text-[#1C5396]",
@@ -343,7 +351,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           <>
             <div
               className={cn(
-                "text-[14px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] relative z-1 leading-[1.6] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+                "text-[14px] lg:text-[16px] xl:!text-[16px] 2xl:text-[18px] 3xl:text-[21px] relative z-1   font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
                 variant === "ADGM-Foundation" &&
                   "text-[14px] sm:!text-[15px] xl:text-[16px] [&_P]:leading-[1.6]",
                 variant === "CorporateServicesUae" && "xl:text-[14px]",

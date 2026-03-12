@@ -35,6 +35,10 @@ export default function RiskOrganisation({
         "w-full bg-gradient-to-b from-[#fff] via-[#fff] to-[rgba(130,176,199,0.05)] md:to-[rgba(146,199,227,0.1)] pt-[30px] lg:pt-[60px] xl:pt-[90px] 2xl:pt-[100px] 3xl:pt-[125px] pb-[55px] lg:pb-[60px] xl:pb-[70px] 2xl:pb-[85px] 3xl:pb-[105px]",
         variant === "dwtc" &&
           "bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB]",
+        variant === "SOP" &&
+          "max-sm:bg-gradient-to-b from-[#FFFFFF] via-[#edf0f1] to-[rgba(62,176,234,0.05)] sm:bg-[#F9FAFB]",
+        variant === "regulatory" &&
+          "bg-gradient-to-b from-[#FFFFFF] via-[#edf5f8] to-[rgba(62,176,234,0.1)] sm:bg-[#F9FAFB]",
         variant === "dwtc-doc" &&
           "bg-[#F9FAFB] max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "ADGM-Foundation" &&
@@ -95,10 +99,11 @@ export default function RiskOrganisation({
                     as="h2"
                     size="h2"
                     className={cn(
-                      "hidden md:block leading-[1.6] font-semibold text-[#1C5396] mb-[25px] max-sm:text-[26px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
+                      "hidden md:block font-semibold text-[#1C5396] mb-[25px] max-sm:text-[26px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
-                      variant === "SOP" && "mb-[20px] xl:mb-[25px]",
+                      variant === "SOP" && "mb-[20px] xl:mb-[25px] max-sm:!text-[26px]",
                       variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
+                      variant === "regulatory" && "max-sm:!text-[26px]",
                     )}
                   >
                     {parse(data.title)}
@@ -213,6 +218,8 @@ export default function RiskOrganisation({
                     "text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
                     (variant === "dwtc-doc" && "max-sm:text-[26px]") ||
                       (variant === "holding" && "max-sm:text-[26px]"),
+                      (variant === "regulatory" && "max-sm:text-[26px]"),
+                      (variant === "SOP" && "max-sm:text-[26px]"),
                   )}
                 >
                   {parse(data.title)}
