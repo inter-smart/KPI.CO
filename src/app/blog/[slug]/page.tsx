@@ -94,9 +94,13 @@ export default async function BlogDetailPage({ params }: Props) {
 
   const transformedRelated = await Promise.all(
     relatedPosts.map((post) => {
-      const mediaFetcher = (_: string) => {
-        const embedded = post._embedded?.["wp:featuredmedia"]?.[0];
-        return Promise.resolve(embedded ?? null);
+      const mediaFetcher = (id: number) => {
+        const embedded = post._embedded?.["wp:featuredmedia"];
+        if (embedded) {
+          const media = embedded.find((m: any) => m.id === id);
+          if (media) return Promise.resolve(media);
+        }
+        return Promise.resolve(null);
       };
 
       const categoryFetcher = (id: number) => {

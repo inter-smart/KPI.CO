@@ -191,7 +191,7 @@ export default function BlogList({ data, categories }: BlogListProps) {
 
         const transformed = await Promise.all(
           pagePosts.map((post) => {
-            const mediaFetcher = (mediaUrl: string) => Promise.resolve(null);
+            const mediaFetcher = (id: number) => Promise.resolve(null);
             const categoryFetcher = (id: number) => {
               const cat = categories.flatMap((c) => c.children).find((c) => c.id === id);
               return Promise.resolve(cat?.name || "");
@@ -221,11 +221,14 @@ export default function BlogList({ data, categories }: BlogListProps) {
         // Use the response formatter from utils
         const transformed = await Promise.all(
           posts.map((post) => {
-            const mediaFetcher = (mediaUrl: string) => {
+            const mediaFetcher = (id: number) => {
               // Prefer _embedded data to avoid extra requests
-              const embedded = post._embedded?.["wp:featuredmedia"]?.[0];
-              if (embedded) return Promise.resolve(embedded);
-              return fetch(mediaUrl).then((r) => r.json());
+              const embedded = post._embedded?.["wp:featuredmedia"];
+              if (embedded) {
+                const media = embedded.find((m: any) => m.id === id);
+                if (media) return Promise.resolve(media);
+              }
+              return fetch(`${BASE_WP_URL}/media/${id}`).then((r) => r.json());
             };
 
             const categoryFetcher = getCategoryNameFromEmbedded(post);

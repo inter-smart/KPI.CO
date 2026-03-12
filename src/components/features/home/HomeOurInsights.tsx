@@ -13,10 +13,13 @@ export default async function HomeOurInsights({
   
   const transformedInsights = await Promise.all(
     posts.map((post) => {
-      const mediaFetcher = (mediaUrl: string) => {
-        const embedded = post._embedded?.["wp:featuredmedia"]?.[0];
-        if (embedded) return Promise.resolve(embedded);
-        return fetch(mediaUrl).then((r) => r.json());
+      const mediaFetcher = (id: number) => {
+        const embedded = post._embedded?.["wp:featuredmedia"];
+        if (embedded) {
+          const media = embedded.find((m: any) => m.id === id);
+          if (media) return Promise.resolve(media);
+        }
+        return fetch(`https://blogadmin.kpi.co/wp-json/wp/v2/media/${id}`).then((r) => r.json());
       };
 
       const categoryFetcher = (id: number) => {
