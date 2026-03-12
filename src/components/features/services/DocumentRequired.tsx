@@ -130,7 +130,7 @@ export default function DocumentRequired({
               <div
                 className={cn(
                   "mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10",
-                  variant === "dfza" && "xl:mb-[50px]",
+                  variant === "dfza" && "xl:mb-[30px]",
                   variant === "internal-audit" && "md:pr-[30px] xl:pr-[40px]",
                 )}
               >
@@ -148,7 +148,7 @@ export default function DocumentRequired({
                         "text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]",
                         variant === "dfza" && "xl:mb-[35px]",
                         variant === "internal-audit" &&
-                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] max-sm:text-[26px]",
                         variant === "company-freezone" &&
                           "xl:mb-[30px]",
                       )}
@@ -160,7 +160,7 @@ export default function DocumentRequired({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]",
+                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[25px] 3xl:[&_p]:mb-[20px]",
                       variant === "AuditServicesUae" &&
                         "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                       variant === "internal-audit" &&

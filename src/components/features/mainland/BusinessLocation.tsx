@@ -75,7 +75,7 @@ export default function BusinessLocation({
               )}
             >
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[rgba(78,78,78,0)] via-[rgba(78,78,78,0)] to-[rgba(0,0,0,0.8)] group-hover:opacity-0 aspect-[500/312]" />
-              <div className="relative  h-full w-full group-hover:opacity-0 aspect-[380/234]">
+              <div className="relative h-full w-full group-hover:opacity-0 aspect-[380/234]">
                 <Image
                   src={item.image || "/images/placeholder.png"}
                   alt={item.title}

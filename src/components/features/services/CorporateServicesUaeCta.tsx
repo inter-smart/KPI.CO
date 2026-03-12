@@ -28,6 +28,7 @@ export type CorporateServicesUaeCtaProps = {
     | "Formation-JAFZA"
     | "mainland"
     | "saifz"
+    | "sop"
     | "blogdetail"
     | "company-freezone"
     | "DMCC-Freezone"
@@ -37,6 +38,7 @@ export type CorporateServicesUaeCtaProps = {
     | "ADGM-SPV-Formation"
     | "ifza"
     | "dwtc"
+    | "regulatory"
     | "adgm-regulated"
     | "difc-regulated";
 };
@@ -123,10 +125,11 @@ export default function CorporateServicesUaeCta({
             </Heading>
             <div
               className={cn(
-                "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
+                "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px]   max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden",
                 variant === "blogdetail" && "font-medium [&_p]:font-medium",
                 variant === "AuditServicesUae" && "xl:max-w-[75%]",
                 variant === "DMCC-Freezone" && "xl:max-w-[92%]",
+                variant === "regulatory" && "xl:max-w-[92%]",
               )}
             >
               {parse(data?.description)}
@@ -151,11 +154,13 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black min-w-[120px] xl:min-w-[178px] 2xl:min-w-[190px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
+                "text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "rakez" &&
                   "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
+                variant === "sop" &&
+                  "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
 
                 variant === "ADGM-Foundations" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] xl:h-[50px]",
@@ -170,6 +175,8 @@ export default function CorporateServicesUaeCta({
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "Financial-Statement-Audit" &&
                   "max-sm:!min-w-[120px]",
+                variant === "regulatory" &&
+                  "max-sm:!min-w-[118px]",
                 variant === "difc-regulated" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[178px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&

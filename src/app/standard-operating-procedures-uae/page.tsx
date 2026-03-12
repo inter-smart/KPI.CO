@@ -242,8 +242,8 @@ const localData = {
     steps: [
       {
         id: 1,
-        title: "Define Scope & Objectives",
-        inner_title: "Define Scope & Objectives",
+        title: " Define Scope & Objectives ",
+        inner_title: "Define Scope & Objectives ",
         description:
           "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
       },
@@ -252,35 +252,35 @@ const localData = {
         title: "Analyze Existing Processes",
         inner_title: "Analyze Existing Processes",
         description:
-          "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
+          "<p>Our expert business consultants will assess your current processes to identify inefficiencies and areas for improvement.</p>",
       },
       {
         id: 3,
         title: "Develop Standard Operating Procedures",
         inner_title: "Develop Standard Operating Procedures",
         description:
-          "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
+          "<p>We create clear and concise SOP documentation outlining key procedures including responsibilities and step-by-step processes.</p>",
       },
       {
         id: 4,
         title: "Review SOPs and Align",
         inner_title: "Review SOPs and Align",
         description:
-          "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
+          "<p>We will cross check the new SOPs meet your needs and objectives with detailed rationale behind the suggested processes.</p>",
       },
       {
         id: 5,
         title: "Implement and Train",
         inner_title: "Implement and Train",
         description:
-          "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
+          "<p>We ensure effective SOP implementation through targeted training programs for your stakeholders to adopt the new processes seamlessly. </p>",
       },
       {
         id: 6,
         title: "Monitor and Update",
         inner_title: "Monitor and Update",
         description:
-          "<p>We work closely with your team to define the SOP’s purpose, scope and desired outcomes, ensuring alignment with your business goals.</p>",
+          "<p>We conduct regular reviews to confirm your SOPs remain effective and comply with industry best practices as you grow your business.</p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -423,12 +423,12 @@ export default function StandardOperatingProceduresUaePage() {
         variant="SOP"
       />
       <CorporateServicesUaeFormationProcess
-        variant="mainland"
+        variant="sop"
         data={localData?.formationProcess}
       />
       <VatRelatedTax data={localData.vatRelatedTax} variant="sop" />
-      <CorporateServicesUaeCta data={localData.cta} />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeCta data={localData.cta} variant="sop"/>
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="sop"/>
        <HomeOurInsights  variant="home"/>
     </>
   );

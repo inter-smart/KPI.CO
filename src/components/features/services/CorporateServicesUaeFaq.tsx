@@ -37,6 +37,7 @@ export type CorporateServicesUaeFaqProps = {
     | "JAFZA-Freezone"
     | "mainland"
     | "rakez"
+    | "sop"
     | "CorporateServicesUae"
     | "Formation-JAFZA"
     | "difc-regulated"
@@ -89,11 +90,12 @@ export default function CorporateServicesUaeFaq({
                   variant === "company-freezone" && "last:border-b-1",
                   variant === "JAFZA-Freezone" && "last:border-b-1",
                   variant === "rakez" && "last:border-b-1",
+                  variant === "sop" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-[24px] xl:[&>svg]:w-[25px] [&>svg]:h-[24aqwpx] xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
+                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-[24px] xl:[&>svg]:w-[25px] [&>svg]:h-[24px] xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
                     variant === "side-arrow" &&
                       "[&>svg]:!rotate-[269deg] [&[data-state=open]>svg]:!rotate-[360deg]",
                     variant === "difc-regulated" &&

@@ -12,6 +12,7 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import BlogRelated from "@/components/features/blogs/BlogRelated";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import { blogData } from "@/data/blogData";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -110,7 +111,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/internal-audit-bg.svg",
-      mobilePath: "/images/reinternal-audit-mobile-bg.png",
+      mobilePath: "/images/internal-audit-mobile-bg.svg",
       alt: "Trusted Internal Audit Services In The UAE",
     },
     title: "Trusted Internal Audit Services In The UAE ",
@@ -187,7 +188,7 @@ const localData = {
         inner_title: "Risk Assessment & Audit <br/> Planning",
         sub_title: "Risk Assessment & Audit Planning",
         description:
-          "<p>Identifying and prioritize key risk areas aligned with your business objectives, regulatory requirements, and operational environment.</p>",
+          "<p>Identifying and prioritize key risk areas aligned with your business objectives, regulatory requirements, and operational environment. </p>",
       },
       {
         id: 2,
@@ -195,7 +196,7 @@ const localData = {
         inner_title: "Audit Execution & Review",
         sub_title: "Audit Execution & Review",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>Evaluate processes, internal controls and transactions using a structured, risk-based methodology.</p>",
       },
       {
         id: 3,
@@ -203,7 +204,7 @@ const localData = {
         inner_title: "Reporting & Recommendations",
         sub_title: "Reporting & Recommendations",
         description:
-          "<p>We handle company name reservation and trade license application, including all required approvals and documents.</p>",
+          "<p>Provide clear, practical findings with recommendations prioritized based on risk severity and potential business impact. </p>",
       },
       {
         id: 4,
@@ -211,7 +212,7 @@ const localData = {
         inner_title: "Follow-Up Support",
         sub_title: "Follow-Up Support",
         description:
-          "<p>Assessment of the entity’s regulatory classification, business model, and control environment to identify areas of heightened risk.</p>",
+          "<p>Support management in strengthening controls, addressing identified gaps, and monitoring the effectiveness of corrective actions over time </p>",
       },
     ] satisfies ProcessStep[],
   },
@@ -357,35 +358,35 @@ const localData = {
         id: 1,
         title: "What is an internal audit?",
         description: `
-                    <p>Yes. Internal audit findings help strengthen processes, reduce inefficiencies, and support sustainable business growth.</p>
+                    <p>An internal audit is an independent review of an organization’s operations, controls and risk management processes to improve efficiency, compliance, and governance. </p>
                     `,
       },
       {
         id: 2,
         title: "What are the benefits of internal audit?",
         description: `
-                    <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Get in touch with our team for a tailored estimate for your business setup.</p>
+                    <p>Internal audits help identify risks, enhance internal controls, ensure regulatory compliance and support better decision-making.</p>
                     `,
       },
       {
         id: 3,
         title: "How long does an internal audit take?",
         description: `
-                    <p>Timelines depend on your chosen jurisdiction and business activity. With proper preparation, many businesses can be fully registered within a few weeks.</p>
+                    <p>The duration depends on the size, complexity and scope of the audit, typically ranging from a few weeks to several months.</p>
                     `,
       },
       {
         id: 4,
         title: "Is internal audit mandatory in the UAE?",
         description: `
-                    <p>Yes. Internal audit findings help strengthen processes, reduce inefficiencies, and support sustainable business growth.</p>
+                    <p>Internal audit requirements depend on company structure, industry sector, and regulatory requirements. Certain regulated entities are required to maintain an internal audit function, like entities in DIFC and ADGM. </p>
                     `,
       },
       {
         id: 5,
         title: "Can internal audit findings help improve business performance?",
         description: `
-                    <p>Yes. Internal audit findings help strengthen processes, reduce inefficiencies, and support sustainable business growth.</p>
+                    <p>Yes. Internal audit findings help strengthen processes, reduce inefficiencies, and support sustainable business growth. </p>
                     `,
       },
     ] satisfies FaqItem[],
@@ -439,7 +440,7 @@ export default function InternalAudit() {
       <RiskExploreService data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <BlogRelated data={localData.related_blog} />
+      <HomeOurInsights variant="home" />
     </>
   );
 }
