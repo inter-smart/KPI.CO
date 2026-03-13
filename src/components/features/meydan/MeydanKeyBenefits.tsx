@@ -65,7 +65,7 @@ export default function MeydanKeyBenefits({
         <div
           className={cn(
             "w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
-            variant === "RAK-Offshore" && "xl:!py-[65px]",
+            variant === "RAK-Offshore" && "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[65px]",
           )}
         >
           <div
@@ -204,9 +204,9 @@ export default function MeydanKeyBenefits({
                     <div className="w-full lg:w-1/2">
                       <div
                         className={cn(
-                          "w-full max-sm:h-[220px] sm:h-full max-sm:aspect-[340/315] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
+                          "w-full max-sm:h-[216px] sm:h-full max-sm:aspect-[340/316] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
                           variant === "technology" && "xl:aspect-[550/335]",
-                          variant === "RAK-Offshore" && "xl:h-[286px]",
+                          variant === "RAK-Offshore" && "max-sm:h-[316px] xl:h-[286px]",
                         )}
                       >
                         <Image

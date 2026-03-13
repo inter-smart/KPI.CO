@@ -56,7 +56,7 @@ export default function MainlandBusiness({
         variant === "ADGM-Foundations" && "max-sm:pb-[10px]  ",
         variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
         variant === "Offshore" && "xl:py-[70px]",
-        variant === "RAK-Offshore" && "xl:py-[90px_70px]",
+        variant === "RAK-Offshore" && "max-sm:pb-[50px] xl:py-[90px_70px]",
         variant === "rakez" && "xl:py-[90px_30px]",
         variant === "e-invoicing" && "bg-linear-to-t from-[#f5fbfe] via-white to-white ",
       )}
@@ -117,6 +117,9 @@ export default function MainlandBusiness({
               hasVariant(variant, "dwtc") &&
               "xl:pr-[40px]",
               "xl:w-[calc(100%-517px)] xl:pr-[41px]",
+              hasVariant(variant, "RAK-Offshore") &&
+              "xl:pr-[40px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
             )}
           >
             <div
@@ -257,6 +260,7 @@ export default function MainlandBusiness({
               variant === "company-freezone" && "xl:w-[517px]",
               variant === "JAFZA-Freezone" && "xl:w-[517px]",
               variant === "rakez" && "xl:w-[517px]",
+              variant === "RAK-Offshore" && "xl:w-[517px]",
             )}
           >
             <div className={cn("relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden" , variant==="AuditServicesUae" && "max-sm:h-[437px]")}>

@@ -68,13 +68,20 @@ export default function CorporateServicesUaeFaq({
               "text-[28px] lg:text-[32px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
               variant === "Financial-Statement-Audit" && "xl:text-[48px]",
               variant === "AuditServicesUae" && "xl:text-[48px] max-sm:!mb-[0px]",
+              variant === "RAK-Offshore" && "xl:text-[38px] max-sm:!mb-[0px]",
             )}
           >
             {data?.title}
           </Heading>
         </div>
 
-      <div className="w-full lg:max-w-178 xl:w-[792px] h-auto mx-auto relative after:absolute after:bottom-0 after:left-0 after:hidden after:w-full after:h-[30%] after:content-[''] after:bg-gradient-to-b after:from-[rgba(255,255,255,0.3)]   after:to-white after:pointer-events-none has-[button]:after:block">  <Accordion type="single" collapsible>
+    <div
+  className={cn(
+    "w-full lg:max-w-178 xl:w-[792px] h-auto mx-auto relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:content-[''] after:bg-gradient-to-b after:from-[rgba(255,255,255,0.3)] after:to-white after:pointer-events-none after:opacity-0",
+    data?.button && "after:opacity-100"
+  )}
+>
+   <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem
                 value={`item-${item.id}`}
@@ -91,6 +98,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "JAFZA-Freezone" && "last:border-b-1",
                   variant === "rakez" && "last:border-b-1",
                   variant === "sop" && "last:border-b-1",
+                  variant === "RAK-Offshore" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -121,7 +129,7 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className={cn("typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
+                  <div className={cn("typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
                        variant === "AuditServicesUae" &&
                       "max-w-full",
                    )}>

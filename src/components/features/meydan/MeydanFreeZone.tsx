@@ -63,7 +63,7 @@ export default function MeydanFreeZone({
             size="h2"
             className={cn(
               "text-[#1C5396] capitalize text-[28px] xl:!text-[38px] mb-[20px] lg:mb-[25px] xl:mb-[25px] 3xl:mb-[40px]",
-              variant === "RAK-Offshore" && "xl:mb-[30px]",
+              variant === "RAK-Offshore" && "xl:!text-[30px] xl:mb-[25px]",
             )}
           >
             {data?.title}
@@ -120,7 +120,7 @@ export default function MeydanFreeZone({
                     variant === "holding" &&
                     "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
                     variant === "RAK-Offshore" &&
-                    "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium xl:mb-[25px]",
+                    "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium xl:mb-[25px] max-sm:max-w-[240px]",
                     variant === "ADGM-Foundation" &&
                     "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
@@ -157,7 +157,7 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[12px] relative z-0 tracking-[-0.5px] before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[5px] xl:before:top-[4px]",
+                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[12px] relative z-0 tracking-[-0.5px] before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[4px]",
                         index % 2 !== 0
                           ? "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3333%2024.4444C19.4698%2024.4444%2024.4444%2019.4698%2024.4444%2013.3333C24.4444%207.19678%2019.4698%202.22217%2013.3333%202.22217C7.19678%202.22217%202.22217%207.19678%202.22217%2013.3333C2.22217%2019.4698%207.19678%2024.4444%2013.3333%2024.4444Z%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]"
                           : "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3328%2024.4444C19.4693%2024.4444%2024.4439%2019.4698%2024.4439%2013.3333C24.4439%207.19678%2019.4693%202.22217%2013.3328%202.22217C7.19629%202.22217%202.22168%207.19678%202.22168%2013.3333C2.22168%2019.4698%207.19629%2024.4444%2013.3328%2024.4444Z%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]",
@@ -165,7 +165,7 @@ export default function MeydanFreeZone({
                     >
                       <span
                         className={cn(
-                          "text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
+                          "text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "ADGM-Foundation" && 
                           "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
                            variant === "difc" && 

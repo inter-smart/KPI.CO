@@ -368,7 +368,7 @@ const localData = {
     description:
       "<p>Our team will help you choose the right setup, jurisdiction, and structure <br/> based on your goals, risk profile, and budget. Talk to our experts today!</p>",
     button: {
-      label: "Contact Us",
+      label: "Get in Touch",
       link: "/contact",
     },
     images: {

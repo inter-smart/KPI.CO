@@ -29,6 +29,7 @@ export type CorporateServicesUaeCtaProps = {
     | "mainland"
     | "saifz"
     | "sop"
+    | "Offshore"
     | "blogdetail"
     | "company-freezone"
     | "DMCC-Freezone"
@@ -71,8 +72,10 @@ export default function CorporateServicesUaeCta({
             variant === "Financial-Statement-Audit" &&
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
             variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
+            variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
+             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
           )}
         >

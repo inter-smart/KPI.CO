@@ -74,7 +74,7 @@ export default function OffshoreCompaniesUae({
                   {parse(item?.title)}
                 </div>
                 <div className="gap-[20px] xl:gap-[30px] flex flex-col">
-                  <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#364153] xl:pr-[75px]">
+                  <div className="text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#364153] xl:pr-[50px]">
                     {parse(item?.description)}
                   </div>
                   <div className="text-[18px] lg:text-[16px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-normal text-[#4A5565] flex items-center gap-1">
@@ -106,10 +106,10 @@ export default function OffshoreCompaniesUae({
                   <Button
                     size="lg"
                     className={cn(
-                      "text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal xl:!font-medium w-fit sm:w-full h-11! sm:!h-[40px] xl:!h-[50px] 3xl:!h-[65px] sm:rounded-[10px] !scale-100",
+                      "text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal xl:!font-medium w-fit max-sm:min-w-[225px] sm:w-full h-[45px] sm:!h-[40px] xl:!h-[50px] 3xl:!h-[65px] sm:rounded-[10px] !scale-100",
                       index % 2 !== 0
                         ? "text-black bg-[#FFC916]"
-                        : "text-white bg-[#053269]",
+                        : "text-white bg-[#1C5396] sm:bg-[#053269]",
                     )}
                     asChild
                   >

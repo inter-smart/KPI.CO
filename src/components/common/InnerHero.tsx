@@ -130,6 +130,7 @@ export default function InnerHero({
             variant === "ADGM-SPV-Formation" && "xl:max-w-[785px]",
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
             variant === "difc" && "xl:max-w-[785px]",
+            variant === "RAK-Offshore" && "max-sm:max-w-[330px]",
           )}
         >
           <Heading

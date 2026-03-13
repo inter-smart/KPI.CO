@@ -116,7 +116,7 @@ const localData = {
     },
   } satisfies MainlandBusinessData,
   whyBuild: {
-    title: "Why Choose A Mainland Company Setup?",
+    title: "Why Choose an Offshore Company Setup?",
     description: "",
     items: [
       {
@@ -447,7 +447,7 @@ export default function CompanyFormationOffshoreUaePage() {
         data={localData?.whyChoose}
         variant="offshore"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeCta data={localData.cta} variant="Offshore" />
       <CorporateServicesUaeFaq
         data={localData.corporate_faq_data}
         variant="RAK-Offshore"

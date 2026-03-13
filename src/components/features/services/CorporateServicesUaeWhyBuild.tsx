@@ -219,6 +219,8 @@ export default function CorporateServicesUaeWhyBuild({
           "bg-linear-to-t from-[#f1fafe] via-white to-white xl:pb-[80px]",
         hasVariant(variant, "company-freezone") &&
           "bg-linear-to-t from-[#f1fafe] via-white to-white !xl:py-[70px_70px]",
+        hasVariant(variant, "offshore") &&
+          "max-sm:bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white ",
       )}
     >
       <div className="container">

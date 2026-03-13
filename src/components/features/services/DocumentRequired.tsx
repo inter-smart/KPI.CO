@@ -82,7 +82,7 @@ export default function DocumentRequired({
         variant === "internal-audit" &&
         "bg-[#fff] before:content-[''] before:absolute before:inset-0 before:top-auto before:z-0 before:w-full before:h-[20%] before:bg-gradient-to-b before:from-[#ffffff] before:via-[#d1eaf746] before:to-[rgba(204,232,247,0.2)]",
         variant === "aup" &&
-        "g-linear-to-t from-[rgba(62,176,234,0.8)] via-white to-white sm:bg-white",
+        "bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white sm:bg-white",
         variant === "advisory" && "bg-white",
         variant === "hamriya" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
