@@ -40,6 +40,7 @@ export default function HomeCounter({
         variant === "e-invoice" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "regulatory" && "max-sm:shadow-none",
+        variant === "internal-audit" && "max-sm:shadow-none",
       )}
     >
       <div className="container mx-auto">
@@ -56,6 +57,7 @@ export default function HomeCounter({
                     "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
                   variant === "e-invoice" && "font-semibold",
                   variant === "regulatory" && "font-semibold",
+                variant === "internal-audit" && "font-semibold",
                   variant === "erm" && "font-semibold",
                 )}
               >

@@ -184,7 +184,7 @@ export default function CorporateServicesUaeWhyChoose({
               {parse(data?.description)}
             </div>
           )}
-          <div className="text-[20px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-2 lg:mt-2 2xl:mytt-3">
+          <div className="text-[20px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[32px] leading-normal capitalize font-semibold text-black mt-[20px] max-sm:mb-[25px] lg:mt-2 2xl:mytt-3">
             {data?.sub_title}
           </div>
         </div>

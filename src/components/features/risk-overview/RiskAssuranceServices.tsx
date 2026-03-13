@@ -69,21 +69,21 @@ export default function RiskAssuranceServices({
             size="h2"
             className={cn(
               "text-[#1C5396] mb-25px] xl:mb-[25px]",
-              variant === "internal-audit" && "leading-[125%] xl:mb-[38px]",
+              variant === "internal-audit" && "leading-[125%] mb-[30px] xl:mb-[38px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               variant === "erm" && "max-sm:mb-[20px]",
             )}
           >
             {data?.title}
           </Heading>
-          <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]">
+          <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]", variant==="internal-audit" && "sm:hidden")}>
             {parse(data?.description)}
           </div>
         </div>
         <div
           className={cn(
             "hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[29px] 2xl:gap-7.5 3xl:gap-9",
-            variant === "internal-audit" && "xl:gap-y-[36px]",
+            variant === "internal-audit" && "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]",
             variant === "erm" && "max-sm:grid max-sm:gap-[14px]",
           )}
         >
@@ -130,12 +130,7 @@ export default function RiskAssuranceServices({
             </div>
           ))}
         </div>
-        <div
-          className={cn(
-            "w-full block sm:hidden",
-            variant === "erm" && "max-sm:hidden",
-          )}
-        >
+        <div className="w-full block sm:hidden">
           <div
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"

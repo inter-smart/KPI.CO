@@ -196,13 +196,13 @@ export default function CorporateServicesUaeFormationProcess({
 
                     <div
                       className={cn(
-                        "w-5 lg:w-4 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-4 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 flex items-center justify-center transition-all duration-300",
+                        "w-5 lg:w-5 xl:w-[22px] 2xl:w-6 aspect-square rounded-full absolute z-0 left-0 lg:left-3.5 xl:left-6 2xl:left-8 top-0 lg:top-0.5 2xl:top-1 flex items-center justify-center transition-all duration-300",
                         "bg-linear-to-b from-[#053269] to-[#6a9fe0]",
                         variant === "internal-audit" && "p-[1px]",
                       )}
                     >
                       {index > activeStep && (
-                        <div className="w-[20px] h-[21px] rounded-full bg-white" />
+                        <div className="w-[92%] h-[92%] rounded-full bg-white" />
                       )}
                     </div>
                     {step.step && (
