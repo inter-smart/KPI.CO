@@ -67,6 +67,7 @@ export default function CorporateServicesUaeFaq({
             className={cn(
               "text-[28px] lg:text-[32px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
               variant === "Financial-Statement-Audit" && "xl:text-[48px]",
+              variant === "AuditServicesUae" && "xl:text-[48px]",
             )}
           >
             {data?.title}

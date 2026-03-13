@@ -170,7 +170,7 @@ const localData = {
       {
         id: 3,
         slNo: 3,
-        description: "Stakeholders expect transparency and consistency",
+        description: "Stakeholders expect transparency and <br/> consistency",
       },
       {
         id: 4,
