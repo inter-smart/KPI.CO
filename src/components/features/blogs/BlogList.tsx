@@ -558,6 +558,7 @@ function BlogCard({ data }: BlogCardProps) {
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || data.title}
+          unoptimized={true}
           fill
           className="object-cover scale-110 group-hover:translate-y-2 transition-transform duration-500"
         />

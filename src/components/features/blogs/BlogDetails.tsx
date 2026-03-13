@@ -91,6 +91,7 @@ export default async function BlogDetails({ slug }: BlogDetailsProps) {
     );
   }
 
+
   const auditData = {
     media: {
       media_type: "image",

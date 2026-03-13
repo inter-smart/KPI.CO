@@ -57,6 +57,7 @@ export default function BlogInternalAudit({ data }: BlogInternalAuditProps) {
           <Image
             src={data?.media?.desktop_path || "/images/placeholder-image.png"}
             alt={data?.media?.media_alt}
+            unoptimized={true}
             width={1200}
             height={340}
             className="h-full w-full object-cover !rounded-[10px] min-h-[220px]"
