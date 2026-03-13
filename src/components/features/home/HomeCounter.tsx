@@ -1,6 +1,7 @@
 "use client";
 import parse from "html-react-parser";
 import { cn } from "@/lib/utils";
+import CountUp from "react-countup";
 import type { CounterItem } from "@/app/page";
 
 type HomeCounterProps = {
@@ -63,7 +64,13 @@ export default function HomeCounter({
                   variant === "erm" && "font-semibold",
                 )}
               >
-                {item.value.toLocaleString()}
+                <CountUp
+                  end={item.value}
+                  duration={2.5}
+                  separator=","
+                  enableScrollSpy={true}
+                  scrollSpyOnce={true}
+                />
                 {item.symbol || "+"}
               </div>
               <div

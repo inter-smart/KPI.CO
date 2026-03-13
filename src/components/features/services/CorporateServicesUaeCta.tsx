@@ -73,7 +73,7 @@ export default function CorporateServicesUaeCta({
             variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
-             variant === "AuditServicesUae" && "max-sm:py-[40px_40px]",
+             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
           )}
         >
           <div
@@ -158,7 +158,7 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
+                "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "rakez" &&

@@ -67,15 +67,14 @@ export default function CorporateServicesUaeFaq({
             className={cn(
               "text-[28px] lg:text-[32px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
               variant === "Financial-Statement-Audit" && "xl:text-[48px]",
-              variant === "AuditServicesUae" && "xl:text-[48px]",
+              variant === "AuditServicesUae" && "xl:text-[48px] max-sm:!mb-[0px]",
             )}
           >
             {data?.title}
           </Heading>
         </div>
 
-        <div className="w-full lg:max-w-178 xl:w-[70%] 2xl:max-w-210 3xl:max-w-264 h-auto mx-auto">
-          <Accordion type="single" collapsible>
+      <div className="w-full lg:max-w-178 xl:w-[792px] h-auto mx-auto relative after:absolute after:bottom-0 after:left-0 after:hidden after:w-full after:h-[30%] after:content-[''] after:bg-gradient-to-b after:from-[rgba(255,255,255,0.3)]   after:to-white after:pointer-events-none has-[button]:after:block">  <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem
                 value={`item-${item.id}`}
@@ -122,20 +121,23 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
+                  <div className={cn("typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
+                       variant === "AuditServicesUae" &&
+                      "max-w-full",
+                   )}>
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+       
 
         {data?.button && (
           <Button
             variant="yellow"
             size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-10! 2xl:h-12! 3xl:h-15! mt-[15px] mx-auto flex relative z-2"
+            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[138px] 2xl:min-w-[160px] 3xl:min-w-[200px]  h-[45px]  mt-[15px] mx-auto flex relative z-2"
             asChild
           >
             <Link
@@ -146,6 +148,7 @@ export default function CorporateServicesUaeFaq({
             </Link>
           </Button>
         )}
+         </div>
       </div>
     </section>
   );

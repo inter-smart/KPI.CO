@@ -49,7 +49,7 @@ export default function MainlandBusiness({
   return (
     <section
       className={cn(
-        "w-full py-[25px] sm:py-[45px] lg:py-20 2xl:py-24 bg-white overflow-hidden",
+        "w-full py-[25px] sm:py-[45px] lg:py-20 xl:py-[70px_40px] 2xl:py-24 bg-white overflow-hidden",
         variant === "dafza" && "max-2xl:!pb-[20px]",
         variant === "dwtc" && "xl:!pb-[70px]",
         variant === "Formation-ADGM" && "pb-[10px] xl:pb-[70px]",

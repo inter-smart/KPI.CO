@@ -11,7 +11,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import VatRelatedTax, { 
+import VatRelatedTax, {
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
 
@@ -435,6 +435,11 @@ const localData = {
   } satisfies CtaData,
   corporate_faq_data: {
     title: "FAQs",
+    button: {
+      label: "Learn More",
+      link: "/contact",
+      target: "_blank",
+    },
     faq_list: [
       {
         id: 1,
