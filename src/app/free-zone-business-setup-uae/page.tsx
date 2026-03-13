@@ -380,7 +380,7 @@ const localData = {
     ] satisfies ProcessStep[],
   },
   document_required_data: {
-    title: "Documents Required For <br> Free Zone Company Formation",
+    title: "Documents Required For Free Zone Company Formation",
     description:
       "<p>To complete your Free Zone company registration, you'll typically need the following:</p>",
 
@@ -501,7 +501,7 @@ const localData = {
     description:
       "<p>KPI Group helps you select the right Free Zone, license, and setup <br/> tailored to your business goals and growth plans. Speak to our experts <br/> today.</p>",
     button: {
-      label: "Get in Touch",
+      label: "Contact Us",
       link: "/contact",
     },
     images: {
@@ -572,7 +572,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="erm" />
+      <InnerHero data={localData.hero} variant="company-freezone" />
       <MainlandBusiness
         variant="company-freezone"
         data={localData.mainlandBusiness}

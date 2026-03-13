@@ -94,19 +94,25 @@ function WhyBuildCard({
           : "",
         variant === "AuditServicesUae" &&
           "max-sm:p-[20px_15px] xl:!p-[23px_15px_23px_15px] shadow-none",
-        variant === "technology" && "shadow-none",
+        variant === "technology" && "max-sm:min-h-[240px] shadow-none",
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
         variant === "company-freezone" && "rounded-[10px] xl:!pr-[10px]",
         variant === "Vat-Services" && "xl:!pr-[40px]",
         variant === "dafz" && "xl:min-h-[220px]",
         variant === "difc-formation" && "xl:min-h-[220px]",
-        variant === "Formation-JAFZA" && "xl:!px-[15px]",
+        variant === "Formation-JAFZA" &&
+          "max-sm:min-h-[210px] xl:min-h-[230px] xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
       )}
     >
-      <div className="w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform">
+      <div
+        className={cn(
+          "w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform",
+          variant === "Formation-JAFZA" && "max-sm:w-[52.49px]",
+        )}
+      >
         <Image
           src={item.media.path}
           alt={item.media.alt}
@@ -119,7 +125,7 @@ function WhyBuildCard({
         as="div"
         size="h5"
         className={cn(
-          "max-xl:!text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
+          "max-xl:text-[18px] xl:text-[20px] font-semibold text-black mb-2 2xl:mb-2.5 capitalize",
           hasVariant(variant, "saifz") ||
             hasVariant(variant, "freezone") ||
             (hasVariant(variant, "regulatory") && "text-[#1C5396]"),
@@ -132,9 +138,11 @@ function WhyBuildCard({
             "xl:text-[20px] text-black mb-[15px]",
           hasVariant(variant, "formation") && "xl:text-[20px] xl:mb-[15px]",
           hasVariant(variant, "offshore") && "xl:text-[18px]",
-          hasVariant(variant, "Formation-JAFZA") && "xl:text-[18px]",
-          hasVariant(variant, "dwtc") && "xl:text-[18px]",
+          hasVariant(variant, "Formation-JAFZA") &&
+            "max-sm:!text-[16px] xl:text-[18px]",
+          hasVariant(variant, "dwtc") && "max-sm:text-[16px] xl:text-[18px]",
           hasVariant(variant, "erm") && "max-sm:!text-[16px]",
+          hasVariant(variant, "company-freezone") && "max-sm:text-[16px] xl:text-[18px]",
         )}
       >
         {item.title}
@@ -160,6 +168,7 @@ function WhyBuildCard({
           hasVariant(variant, "offshore") && "xl:text-[14px]",
           hasVariant(variant, "Formation-JAFZA") && "xl:text-[14px]",
           hasVariant(variant, "dwtc") && "xl:text-[14px]",
+          hasVariant(variant, "company-freezone") && "max-sm:text-[14px]",
         )}
       >
         {parse(item?.description)}
@@ -310,9 +319,9 @@ export default function CorporateServicesUaeWhyBuild({
               "lg:grid-cols-4 sm:gap-[25px] xl:gap-[25px]",
             hasVariant(variant, "dafz") && "xl:gap-[25px_40px]",
             hasVariant(variant, "technology") &&
-              "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
+              "max-sm:grid max-sm:grid-cols-1 lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
             hasVariant(variant, "offshore") && "xl:gap-[25px]",
-            hasVariant(variant, "Formation-JAFZA") && "xl:gap-[25px]",
+            hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
             hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
           )}
         >
@@ -322,7 +331,13 @@ export default function CorporateServicesUaeWhyBuild({
             </div>
           ))}
         </div>
-        <div ref={emblaRef} className="w-full max-w-full sm:hidden">
+        <div
+          ref={emblaRef}
+          className={cn(
+            "w-full max-w-full sm:hidden",
+            variant === "technology" && "max-sm:hidden",
+          )}
+        >
           <div className="flex touch-pan-y touch-pinch-zoom -mx-2.5">
             {data.items.map((item) => (
               <div

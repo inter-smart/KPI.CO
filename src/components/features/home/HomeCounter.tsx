@@ -33,7 +33,7 @@ export default function HomeCounter({
         variant === "risk" && "bg-[rgba(143,216,254,0.1)]",
         variant === "tax-advisory" && "shadow-[0_-26px_50px_#00000008]",
         variant === "technology" &&
-          "shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)] xl:pt-[35px]",
+          "max-sm:shadow-none shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)] xl:pt-[35px]",
         variant === "aup" && "shadow-none",
         variant === "Financial-Statement-Audit" &&
           "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
@@ -60,7 +60,7 @@ export default function HomeCounter({
                     "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
                   variant === "e-invoice" && "font-semibold",
                   variant === "regulatory" && "font-semibold",
-                variant === "internal-audit" && "font-semibold",
+                  variant === "internal-audit" && "font-semibold",
                   variant === "erm" && "font-semibold",
                 )}
               >

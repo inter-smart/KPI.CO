@@ -104,7 +104,7 @@ export default function DocumentRequired({
         variant === "VatServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "Formation-JAFZA" &&
-        "bg-[#F9FAFB] ",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
       )}
     >
       <div className="container relative">

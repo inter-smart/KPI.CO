@@ -45,9 +45,9 @@ export default function RiskOrganisation({
           "max-sm:!py-[45px_35px] xl:!py-[90px_75px]",
         variant === "holding" && "max-sm:!py-[0px_35px] xl:!py-[0px_75px]",
         variant === "SOP" && "bg-white",
-        variant === "dwtc-bg" && "bg-[#F9FAFB]",
+        variant === "dwtc-bg" && "sm:bg-[#F9FAFB] xl:!py-[48px_70px]",
         variant === "difc-regulated" && "xl:pt-[50px]",
-        variant === "JAFZA-Freezone" && "xl:!py-[70px]",
+        variant === "JAFZA-Freezone" && "xl:!py-[70px] bg-gradient-to-b from-[#FFFFFF] via-[#edf5f8] to-[rgba(62,176,234,0.1)]",
       )}
     >
       <div className="container">
@@ -73,10 +73,13 @@ export default function RiskOrganisation({
               variant === "ifza" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
               variant === "SOP" && "xl:w-[calc(100%-473px)] xl:pr-[45px]",
               variant === "holding" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
-              variant === "RAK-Offshore" && "xl:w-[calc(100%-475px)] xl:pr-[100px]",
-              variant === "dwtc" && "xl:w-[calc(100%-475px)] xl:pr-[145px] xl:pb-[40px]",
+              variant === "RAK-Offshore" &&
+                "xl:w-[calc(100%-475px)] xl:pr-[100px]",
+              variant === "dwtc" &&
+                "xl:w-[calc(100%-475px)] xl:pr-[145px] xl:pb-[40px]",
               variant === "holding" && "xl:w-[calc(100%-460px)] xl:pr-[60px]",
-              variant === "JAFZA-Freezone" && "xl:w-[calc(100%-460px)] xl:pr-[60px]",
+              variant === "JAFZA-Freezone" &&
+                "xl:w-[calc(100%-460px)] xl:pr-[60px]",
               variant === "dwtc-bg" && "xl:w-[calc(100%-480px)] xl:pr-[100px]",
               variant === "difc-regulated" &&
                 "xl:w-[calc(100%-495px)] xl:pr-[0px]",
@@ -101,8 +104,10 @@ export default function RiskOrganisation({
                     className={cn(
                       "hidden md:block font-semibold text-[#1C5396] mb-[25px] max-sm:text-[26px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
                       variant === "ADGM-Foundation" && "mb-[20px] xl:mb-[30px]",
-                      variant === "SOP" && "mb-[20px] xl:mb-[25px] max-sm:!text-[26px]",
+                      variant === "SOP" &&
+                        "mb-[20px] xl:mb-[25px] max-sm:!text-[26px]",
                       variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
+                      variant === "dwtc-bg" && "leading-[1.3]",
                       variant === "regulatory" && "max-sm:!text-[26px]",
                     )}
                   >
@@ -218,8 +223,8 @@ export default function RiskOrganisation({
                     "text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
                     (variant === "dwtc-doc" && "max-sm:text-[26px]") ||
                       (variant === "holding" && "max-sm:text-[26px]"),
-                      (variant === "regulatory" && "max-sm:text-[26px]"),
-                      (variant === "SOP" && "max-sm:text-[26px]"),
+                    variant === "regulatory" && "max-sm:text-[26px]",
+                    variant === "SOP" && "max-sm:text-[26px]",
                   )}
                 >
                   {parse(data.title)}
@@ -229,7 +234,8 @@ export default function RiskOrganisation({
             <div
               className={cn(
                 "w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[370px] min-h-[370px] sm:min-h-auto max-md:mb-6 block",
-                variant === "dwtc-bg" && "xl:max-h-[380px] xl:mt-auto",
+                variant === "dwtc-bg" && "max-sm:min-h-[378px] xl:max-h-[380px] xl:mt-auto",
+                variant === "dwtc" && "max-sm:min-h-[378px]",
               )}
             >
               {data?.media?.path && (

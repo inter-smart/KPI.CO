@@ -1,28 +1,27 @@
-import InnerHero from "@/components/common/InnerHero";
-import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import { Metadata } from "next";
 import { MediaItem } from "../page";
-import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
-import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
+import { blogData } from "@/data/blogData";
+import InnerHero from "@/components/common/InnerHero";
 import { RiskOrganisationData } from "../risk-services-uae/page";
-import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import BlogRelated from "@/components/features/blogs/BlogRelated";
+import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
+import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
-import BlogRelated from "@/components/features/blogs/BlogRelated";
-import { blogData } from "@/data/blogData";
-import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
-import { Metadata } from "next";
+import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
+import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
+import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 
 export type HeroData = {
-    id: number;
-    title: string;
-    description: string;
-    media?: {
-        desktopPath: string;
-        mobilePath: string;
-        alt: string;
-    };
-    additionalContent?: string[];
+  id: number;
+  title: string;
+  description: string;
+  media?: {
+    desktopPath: string;
+    mobilePath: string;
+    alt: string;
+  };
+  additionalContent?: string[];
 };
 export type MainlandBusinessData = {
   title: string;
@@ -87,16 +86,14 @@ export type InsightItem = {
   slug: string;
 };
 
-
-
 const localData = {
   hero: {
     id: 1,
     media: {
-            desktopPath: "/images/dwtc-desk.svg",
-            mobilePath: "/images/ddwtc-mob.svg",
-            alt: "Company Formation in DMCC Free Zone, UAE",
-        },
+      desktopPath: "/images/dwtc-desk.svg",
+      mobilePath: "/images/ddwtc-mob.svg",
+      alt: "Company Formation in DMCC Free Zone, UAE",
+    },
     title: "Company Formation in DWTC, UAE ",
     description:
       "<p>Establish your business in Dubai World Trade Centre, a central and globally recognised  business district. DWTC offers flexible office solutions and a streamlined setup ideal for  founders, startups, and growing businesses.</p>",
@@ -146,7 +143,7 @@ const localData = {
         description:
           "<p>Part of Dubai World Trade Centre, offering strong international credibility and brand recognition.</p>",
       },
-     
+
       {
         id: 3,
         media: {
@@ -158,7 +155,7 @@ const localData = {
           "<p>Access to flexi desks, serviced offices, and scalable workspace solutions to match different business needs.</p>",
       },
 
-       {
+      {
         id: 4,
         media: {
           path: "/images/busness-freezone-3.svg",
@@ -273,7 +270,7 @@ const localData = {
     ftr_description:
       "<p>Additional documents may be required depending on the business structure.</p>",
   } satisfies RiskOrganisationData,
-  
+
   banking: {
     title: "Banking Support for DWTC Companies",
     description:
@@ -307,7 +304,6 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-      
     ] satisfies BankingPartner[],
   },
   workWithKpi: {
@@ -389,7 +385,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -408,20 +404,16 @@ export default function DwtcFreezone() {
     <>
       <InnerHero variant="dwtc" data={localData.hero} />
       <MainlandBusiness variant="dwtc" data={localData.mainlandBusiness} />
-      <CorporateServicesUaeWhyBuild
-        variant="dwtc"
-        data={localData.whyBuild}
-      />
+      <CorporateServicesUaeWhyBuild variant="dwtc" data={localData.whyBuild} />
       <CorporateServicesUaeServices variant="dwtc" data={localData.services} />
       <RiskOrganisation variant="dwtc-bg" data={localData.riskOrganisation} />
-      
-      <CorporateServicesUaeBanking
-        variant="dwtc"
-        data={localData.banking}
-      />
+      <CorporateServicesUaeBanking variant="dwtc" data={localData.banking} />
       <RiskOrganisation variant="dwtc" data={localData.workWithKpi} />
       <CorporateServicesUaeCta variant="dwtc" data={localData.contactUs} />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="dwtc"
+      />
       <BlogRelated data={localData.related_blog} />
     </>
   );

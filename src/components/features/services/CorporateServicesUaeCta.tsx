@@ -61,7 +61,7 @@ export default function CorporateServicesUaeCta({
       <div className="container">
         <div
           className={cn(
-            "w-full md:max-w-[1070px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
+            "w-full md:max-w-[1069px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
             variant === "mainland"
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
               : "p-[50px_30px] lg:p-[60px_45px] xl:p-[55px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
@@ -71,8 +71,11 @@ export default function CorporateServicesUaeCta({
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
             variant === "Financial-Statement-Audit" &&
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
-            variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
+            variant === "Formation-JAFZA" &&
+              "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
             variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
+            variant === "dwtc" &&
+              "max-sm:p-[28px_20px_22px_31px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
@@ -127,6 +130,7 @@ export default function CorporateServicesUaeCta({
                 variant === "ifza" && "font-bold",
                 variant === "rakez" && "xl:max-w-full",
                 
+                variant === "dwtc" && "max-sm:max-w-[80%]",
               )}
             >
               {parse(data?.title)}
@@ -166,26 +170,24 @@ export default function CorporateServicesUaeCta({
                 "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
-                variant === "rakez" &&
-                  "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
-                variant === "sop" &&
-                  "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
+                variant === "rakez" && "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
+                variant === "sop" && "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
 
                 variant === "ADGM-Foundations" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] xl:h-[50px]",
 
                 variant === "holding" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+                variant === "Formation-JAFZA" && "xl:h-[48.02px]",
 
                 variant === "ifza" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
 
                 variant === "dwtc" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                  "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "Financial-Statement-Audit" &&
                   "max-sm:!min-w-[120px]",
-                variant === "regulatory" &&
-                  "max-sm:!min-w-[118px]",
+                variant === "regulatory" && "max-sm:!min-w-[118px]",
                 variant === "difc-regulated" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&

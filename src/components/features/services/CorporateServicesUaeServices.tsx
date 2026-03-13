@@ -34,7 +34,7 @@ export default function CorporateServicesUaeServices({
   variant = "default",
 }: CorporateServicesUaeServicesProps) {
   return (
-    <section className="w-full h-auto py-[40px_60px] xl:py-[70px_48px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
+    <section className={cn("w-full h-auto py-[40px_60px] xl:py-[70px_48px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block",variant === "dwtc" && "xl:py-[48px_66px]")}>
       <div className="container">
         <div
           className={cn(
@@ -110,6 +110,7 @@ export default function CorporateServicesUaeServices({
                   variant === "difc-formation" &&
                     "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "SOP" && "min-h-[180px]",
+                  variant === "dwtc" && "max-sm:min-h-[162px]",
                   variant === "technology" && "xl:min-h-[150px]",
                 )}
               >
@@ -127,11 +128,12 @@ export default function CorporateServicesUaeServices({
                     className={cn(
                       "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-[5px]",
                       variant === "technology" && "mb-0",
-                      variant === "CorporateTaxUae" && "!mb-0 xl:max-w-[400px] tracking-[-0.5px]",
+                      variant === "CorporateTaxUae" &&
+                        "!mb-0 xl:max-w-[400px] tracking-[-0.5px]",
                       variant === "regulatory" && "capitalize",
                     )}
                   >
-                      {parse(item?.title)}
+                    {parse(item?.title)}
                   </div>
                   {item?.description && (
                     <p
@@ -139,9 +141,9 @@ export default function CorporateServicesUaeServices({
                         "text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
                         variant === "regulatory" &&
                           "leading-relaxed xl:max-w-[92%]",
-                        variant === "saifz" && "xl:max-w-full" ,
-                      variant === "rakez" && "xl:max-w-full",
-                        variant === "AuditServicesUae" && "xl:max-w-full", 
+                        variant === "saifz" && "xl:max-w-full",
+                        variant === "rakez" && "xl:max-w-full",
+                        variant === "AuditServicesUae" && "xl:max-w-full",
                       )}
                     >
                       {parse(item?.description)}
@@ -153,7 +155,12 @@ export default function CorporateServicesUaeServices({
           ))}
         </div>
         {data?.footer_description && (
-          <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[25px] sm:mt-[30px] xl:mt-[40px]" , variant==="CorporateTaxUae" && "max-sm:text-[18px]")}>
+          <div
+            className={cn(
+              "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mt-[25px] sm:mt-[30px] xl:mt-[40px]",
+              variant === "CorporateTaxUae" && "max-sm:text-[18px]",
+            )}
+          >
             {data?.footer_description}
           </div>
         )}

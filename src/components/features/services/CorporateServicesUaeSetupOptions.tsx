@@ -63,7 +63,9 @@ function SetupOptionCard({
         >
           <Heading
             as="div"
-            className="text-[24px] sm:text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white"
+            className={cn(
+              "text-[24px] sm:text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[34px] 3xl:text-[42px] text-center font-semibold text-white",
+            )}
           >
             {item.title}
             <span className="w-12 xl:w-10 2xl:w-12 h-[2px] bg-base2 block mx-auto mt-2" />
@@ -180,7 +182,12 @@ export default function CorporateServicesUaeSetupOptions({
   });
 
   return (
-    <section className="w-full block py-11.5 sm:py-10 xl:py-[50px_70px] 2xl:py-[65px_80px]">
+    <section
+      className={cn(
+        "w-full block py-11.5 sm:py-10 xl:py-[50px_70px] 2xl:py-[65px_80px]",
+        variant === "technology" && "xl:py-[125px_64px]",
+      )}
+    >
       <div className="container">
         <div
           className={cn(
@@ -193,7 +200,10 @@ export default function CorporateServicesUaeSetupOptions({
           <Heading
             as="h2"
             size="h2"
-            className="text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7"
+            className={cn(
+              "text-[#1C5396] mb-3 sm:mb-5 2xl:mb-7",
+              variant === "technology" && "max-sm:text-center",
+            )}
           >
             {data.title}
           </Heading>
