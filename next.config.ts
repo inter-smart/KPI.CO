@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "blogadmin.kpi.co",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
