@@ -101,7 +101,7 @@ function WhyBuildCard({
         variant === "Vat-Services" && "xl:!pr-[40px]",
         variant === "dafz" && "xl:min-h-[220px]",
         variant === "difc-formation" && "xl:min-h-[220px]",
-        variant === "Formation-JAFZA" && "xl:!px-[15px]",
+        variant === "Formation-JAFZA" && "xl:min-h-[230px] xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
       )}
@@ -310,7 +310,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "technology") &&
               "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
             hasVariant(variant, "offshore") && "xl:gap-[25px]",
-            hasVariant(variant, "Formation-JAFZA") && "xl:gap-[25px]",
+            hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
           )}
         >
           {data.items.map((item) => (

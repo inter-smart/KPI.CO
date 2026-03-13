@@ -92,16 +92,14 @@ export default function DocumentRequired({
         variant === "sop" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
         variant === "MeydanFreeZone" && "bg-[#F9FAFB]",
-        variant === "AuditServicesUae" &&
-          "bg-white xl:py-[50px]",
+        variant === "AuditServicesUae" && "bg-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "rakez" &&
           "bg-linear-to-t from-[#eff8fc] via-white to-white",
         variant === "VatServicesUae" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
-        variant === "Formation-JAFZA" &&
-          "bg-[#F9FAFB] ",
+        variant === "Formation-JAFZA" && "bg-linear-to-t from-[#f5fbfe] via-white to-white",
       )}
     >
       <div className="container relative">
@@ -149,8 +147,7 @@ export default function DocumentRequired({
                         variant === "dfza" && "xl:mb-[35px]",
                         variant === "internal-audit" &&
                           "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] max-sm:text-[26px]",
-                        variant === "company-freezone" &&
-                          "xl:mb-[30px]",
+                        variant === "company-freezone" && "xl:mb-[30px]",
                       )}
                     >
                       {parse(data.title)}

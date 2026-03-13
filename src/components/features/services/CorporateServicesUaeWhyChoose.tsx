@@ -114,8 +114,8 @@ export default function CorporateServicesUaeWhyChoose({
           className={cn(
             "w-full h-auto mb-[25px]",
             variant === "mainland" ||
-            variant === "CorporateTaxUae" ||
-            variant === "e-invoicing" ||
+              variant === "CorporateTaxUae" ||
+              variant === "e-invoicing" ||
               variant === "advisory" ||
               variant === "adgm-regulated" ||
               variant === "offshore" ||
@@ -267,7 +267,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
       className={cn(
         "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
-        variant === "CorporateTaxUae" && "before:bg-[#FFC916] after:bg-[#f9fafb] xl:min-h-[160px]",
+        variant === "CorporateTaxUae" &&
+          "before:bg-[#FFC916] after:bg-[#f9fafb] xl:min-h-[160px]",
         variant === "e-invoicing" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "Financial-Statement-Audit" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
