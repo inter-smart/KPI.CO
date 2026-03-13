@@ -79,7 +79,7 @@ function WhyBuildCard({
   return (
     <div
       className={cn(
-        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border-[0.8px] border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[23px_18px_25px] 2xl:py-7.5 2xl:px-5.5 shadow-[0px_1px_3px_rgba(0,0,0,0.1)]  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
+        "group w-full h-full xl:min-h-[250px] 2xl:min-h-[276px] 3xl:min-h-[340px] bg-white border-[0.8px] border-[#E2E2E2] rounded-[10px] p-5 sm:p-4 xl:!p-[25px_18px_25px] 2xl:py-7.5 2xl:px-5.5 shadow-[0px_1px_3px_rgba(0,0,0,0.1)]  hover:shadow-[0px_10px_30px_rgba(28,83,150,0.1)] transition-all duration-300",
         variant === "freezone"
           ? "xl:min-h-[205px] 2xl:min-h-[265px] 3xl:min-h-[300px]"
           : "",
@@ -93,7 +93,7 @@ function WhyBuildCard({
           ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" &&
-          "xl:!p-[20px_15px_15px_15px] shadow-none",
+          "xl:!p-[23px_15px_23px_15px] shadow-none",
         variant === "technology" && "shadow-none",
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
@@ -311,6 +311,7 @@ export default function CorporateServicesUaeWhyBuild({
               "lg:grid-cols-3 gap-[22px] sm:gap-30px] xl:gap-[40px]",
             hasVariant(variant, "offshore") && "xl:gap-[25px]",
             hasVariant(variant, "Formation-JAFZA") && "xl:gap-[25px]",
+            hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
           )}
         >
           {data.items.map((item) => (
@@ -332,7 +333,7 @@ export default function CorporateServicesUaeWhyBuild({
           </div>
         </div>
         {data?.structure_list && (
-          <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">
+          <div className={cn("w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]" , variant==="AuditServicesUae" && "min-h-[133px]")}>
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
                 <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
@@ -340,7 +341,7 @@ export default function CorporateServicesUaeWhyBuild({
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "AuditServicesUae" &&
-                        " text-[#1C5396] xl:mb-[10px]",
+                        " text-[#1C5396] xl:mb-[10px] ",
                     )}
                   >
                     {item.title}

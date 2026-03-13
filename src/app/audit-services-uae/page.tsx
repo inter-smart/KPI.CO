@@ -500,7 +500,7 @@ export default function AuditOverviewUaePage() {
       <InnerHero data={localData?.hero} variant="AuditServicesUae" />
       <DocumentRequired
         data={localData?.document_required_data}
-        variant="AuditServicesUae"
+        variant="AuditServicesUaes"
       />
       <RiskAdvisory data={localData.riskAdvisory} variant="AuditServicesUae" />
       <DocumentRequired

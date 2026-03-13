@@ -254,7 +254,7 @@ const localData = {
   whyChoose: {
     title: "Leading Internal Audit Firm In The UAE",
     description:
-      "<p>As a trusted internal audit firm in the UAE, we help organizations strengthen governance, enhance operational controls, and effectively manage risk and compliance. Our experienced professionals deliver tailored, value-driven internal audit solutions aligned with your business objectives and regulatory environment. By combining technical expertise with a practical, business-focused approach, we support informed decision-making and improve efficiency for long-term growth.</p>",
+      "<p>As a trusted internal audit firm in the UAE, we help organizations strengthen governance, enhance operational controls, and effectively manage risk and compliance. Our experienced professionals deliver tailored, value-driven internal audit solutions aligned with your business objectives and regulatory environment. <br/>By combining technical expertise with a practical, business-focused approach, we support informed decision-making and improve efficiency for long-term growth.</p>",
     sub_title: "Why Businesses Choose KPI",
     items: [
       {

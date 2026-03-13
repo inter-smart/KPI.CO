@@ -115,11 +115,11 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-[51%] xl:w-[590px]">
+          <div className="w-full lg:w-[51%] xl:w-[615px]">
             <div className="w-full">
               <div
                 className={cn(
-                  "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
+                  "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[37px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
                   // variant === "regulatory" && "bg-[rgba(143,216,254,10%)]"
                 )}
               >
@@ -219,7 +219,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
                   <div
                     className={cn(
-                      "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
+                      "leading-normal font-medium text-[#003268] mb-[10px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "AuditServicesUae" && " text-[#1C5396]",
                     )}
                   >

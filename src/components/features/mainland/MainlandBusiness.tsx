@@ -89,34 +89,34 @@ export default function MainlandBusiness({
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
                 ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
-                : "xl:w-[calc(100%-500px)] 2xl:w-[calc(100%-520px)] 3xl:w-[calc(100%-660px)]",
+                : "xl:w-[calc(100%-500px)] 2xl:w-[calc(100%-517px)] 3xl:w-[calc(100%-660px)]",
               hasVariant(variant, "ADGM-Foundations") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[40px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[40px]",
               hasVariant(variant, "Mainland") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "SAIFZ") &&
-              "xl:w-[calc(100%-520px)] xl:!pr-[20px]",
+              "xl:w-[calc(100%-517px)] xl:!pr-[20px]",
               hasVariant(variant, "dafza") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "AuditServicesUae") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "JAFZA-Freezone") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "Formation-JAFZA") &&
-              "xl:w-[calc(100%-520px)] xl:pr-[50px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "company-freezone") &&
-              "xl:w-[calc(100%-520px)] xl:!pr-[45px]",
+              "xl:w-[calc(100%-517px)] xl:!pr-[45px]",
               hasVariant(variant, "rakez") &&
-              "xl:w-[calc(100%-520px)] xl:!pr-[48px]",
+              "xl:w-[calc(100%-517px)] xl:!pr-[48px]",
               hasVariant(variant, "ADGM-SPV-Formation") &&
-              "xl:w-[calc(100%-520px)] xl:!pr-[42px]",
+              "xl:w-[calc(100%-517px)] xl:!pr-[42px]",
               hasVariant(variant, "dwtc") &&
               "xl:pr-[40px]",
-              "xl:w-[calc(100%-520px)] xl:pr-[41px]",
+              "xl:w-[calc(100%-517px)] xl:pr-[41px]",
             )}
           >
             <div
@@ -243,20 +243,20 @@ export default function MainlandBusiness({
           > */}
           <div
             className={cn(
-              "w-full lg:w-[365px] xl:w-[500px] 2xl:w-[520px] 3xl:w-[660px]",
+              "w-full lg:w-[365px] xl:w-[500px] 2xl:w-[517px] 3xl:w-[660px]",
               variant === "spv" && "xl:w-[517px] 2xl:w-[550px] 3xl:w-[690px]",
-              variant === "ADGM-SPV-Formation" && "xl:w-[520px]",
-              variant === "ADGM-Foundations" && "xl:w-[520px]",
-              variant === "Mainland" && "xl:w-[520px]",
-              variant === "dsoa" && "xl:w-[520px]",
-              variant === "SAIFZ" && "xl:w-[520px]",
-              variant === "dafza" && "xl:w-[520px]",
-              variant === "ifza" && "xl:w-[520px]",
-              variant === "AuditServicesUae" && "xl:w-[520px]",
-              variant === "Formation-JAFZA" && "xl:w-[520px]",
-              variant === "company-freezone" && "xl:w-[520px]",
-              variant === "JAFZA-Freezone" && "xl:w-[520px]",
-              variant === "rakez" && "xl:w-[520px]",
+              variant === "ADGM-SPV-Formation" && "xl:w-[517px]",
+              variant === "ADGM-Foundations" && "xl:w-[517px]",
+              variant === "Mainland" && "xl:w-[517px]",
+              variant === "dsoa" && "xl:w-[517px]",
+              variant === "SAIFZ" && "xl:w-[517px]",
+              variant === "dafza" && "xl:w-[517px]",
+              variant === "ifza" && "xl:w-[517px]",
+              variant === "AuditServicesUae" && "xl:w-[517px]",
+              variant === "Formation-JAFZA" && "xl:w-[517px]",
+              variant === "company-freezone" && "xl:w-[517px]",
+              variant === "JAFZA-Freezone" && "xl:w-[517px]",
+              variant === "rakez" && "xl:w-[517px]",
             )}
           >
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">

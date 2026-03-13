@@ -26,7 +26,7 @@ export default function HomeCounter({
   return (
     <section
       className={cn(
-        "w-full py-12 lg:py-[60px] ",
+        "w-full py-12 lg:py-[60px] xl:py-[37px]",
         variant === "default" && "bg-white shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
         variant === "risk" && "bg-[rgba(143,216,254,0.1)]",
         variant === "tax-advisory" && "shadow-[0_-26px_50px_#00000008]",
@@ -52,7 +52,7 @@ export default function HomeCounter({
             >
               <div
                 className={cn(
-                  "text-[32px] md:text-[40px] lg:text-[45px] xl:text-[55px] 2xl:text-[65px] 3xl:text-[80px] font-medium sm:font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none",
+                  "text-[32px] md:text-[40px] lg:text-[45px] xl:text-[61.04px] 2xl:text-[65px] 3xl:text-[80px] font-medium sm:font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none",
                   variant === "internal-audit" &&
                     "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
                   variant === "e-invoice" && "font-semibold",
@@ -66,7 +66,7 @@ export default function HomeCounter({
               </div>
               <div
                 className={cn(
-                  "text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px] font-normal text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]",
+                  "text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px]  text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]",
                   variant === "erm" && "max-sm:max-w-[100px]",
                 )}
               >
