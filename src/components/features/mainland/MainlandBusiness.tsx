@@ -196,7 +196,7 @@ export default function MainlandBusiness({
                         key={index}
                         className="flex mb-[15px] last-of-type:mb-0"
                       >
-                        <div className="max-sm:w-full flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
+                        <div className="  flex sm:items-center gap-2 px-[15px] py-[5px]  bg-[#E2F5FF] rounded-[12px]">
                           <div
                             className={cn(
                               "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
@@ -218,7 +218,7 @@ export default function MainlandBusiness({
                               alt="tickMark"
                             />
                           </div>
-                          <span className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]">
+                          <span className={cn ("text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]" , variant==="AuditServicesUae" && "max-sm:text-[16px]")}>
                             {item}
                           </span>
                         </div>
@@ -259,7 +259,7 @@ export default function MainlandBusiness({
               variant === "rakez" && "xl:w-[517px]",
             )}
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
+            <div className={cn("relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden" , variant==="AuditServicesUae" && "max-sm:h-[437px]")}>
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

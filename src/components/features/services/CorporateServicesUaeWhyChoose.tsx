@@ -305,6 +305,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "offshore" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:pr-[40px]",
         variant === "erm" && "after:bg-[#f3f7fd] max-sm:min-h-[150px]",
+        variant === "AuditServicesUae" && "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
       )}
     >
       <div

@@ -93,7 +93,7 @@ function WhyBuildCard({
           ? "xl:min-h-[228px]  xl:!p-[23px_18px_25px]  shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]"
           : "",
         variant === "AuditServicesUae" &&
-          "xl:!p-[23px_15px_23px_15px] shadow-none",
+          "max-sm:p-[20px_15px] xl:!p-[23px_15px_23px_15px] shadow-none",
         variant === "technology" && "shadow-none",
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
@@ -325,7 +325,7 @@ export default function CorporateServicesUaeWhyBuild({
             {data.items.map((item) => (
               <div
                 key={`why-build-${item.id}`}
-                className="flex-[0_0_290px] min-w-0 select-none px-2.5"
+                className="flex-[0_0_300px] min-w-0 select-none px-2.5"
               >
                 <WhyBuildCard item={item} variant={variant} />
               </div>

@@ -92,6 +92,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "regulatory" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] max-sm:[&_p]:last-of-type:!block",
+                variant === "AuditServicesUae" &&
+                "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] [&_p]:last-of-type:!block",
               )}
             >
               {parse(
@@ -101,7 +103,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 ) || "",
               )}
             </div>
-            <div className="flex flex-row gap-3 max-sm:hidden">
+            <div className={cn("flex flex-row gap-3 max-sm:hidden" , variant==="AuditServicesUae" && "!block")}>
               <div
                 className={cn(
                   "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
@@ -202,6 +204,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "regulatory" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
+                variant === "AuditServicesUae" &&
+                "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
               )}
             >
               {parse(
@@ -216,7 +220,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
-                <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
+                <div className="w-full h-full p-[20px_8px_22px_24px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
                   <div
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[10px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",

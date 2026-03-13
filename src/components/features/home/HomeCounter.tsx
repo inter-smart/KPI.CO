@@ -14,6 +14,7 @@ type HomeCounterProps = {
     | "Financial-Statement-Audit"
     | "aup"
     | "Agreed-Procedure"
+    | "AuditServicesUae"
     | "e-invoice"
     | "regulatory"
     | "erm";
@@ -41,6 +42,7 @@ export default function HomeCounter({
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "regulatory" && "max-sm:shadow-none",
         variant === "internal-audit" && "max-sm:shadow-none",
+        variant === "AuditServicesUae" && "max-sm:shadow-none",
       )}
     >
       <div className="container mx-auto">
@@ -66,7 +68,7 @@ export default function HomeCounter({
               </div>
               <div
                 className={cn(
-                  "text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px]  text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[110px]",
+                  "text-[14px] sm:text-[15px] md:text-[14px] xl:text-[20px] 2xl:text-[21px] 3xl:text-[26px]  text-[#4E4E4E] leading-relaxed mx-auto max-sm:max-w-[100px]",
                   variant === "erm" && "max-sm:max-w-[100px]",
                 )}
               >

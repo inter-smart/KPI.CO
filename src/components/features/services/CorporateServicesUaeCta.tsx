@@ -73,6 +73,7 @@ export default function CorporateServicesUaeCta({
             variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
+             variant === "AuditServicesUae" && "max-sm:py-[40px_40px]",
           )}
         >
           <div
@@ -92,7 +93,7 @@ export default function CorporateServicesUaeCta({
               alt="overlay"
               width={500}
               height={500}
-              className={cn("w-full h-full object-cover max-md:block hidden")}
+              className={cn("w-full h-full object-cover object-right max-md:block hidden")}
             />
           </div>
           <div

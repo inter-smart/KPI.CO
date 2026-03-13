@@ -167,7 +167,7 @@ export default function DocumentRequired({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[25px] 3xl:[&_p]:mb-[20px]",
+                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[25px] xl:[&_p]:mb-[25px] 3xl:[&_p]:mb-[20px]",
                       variant === "AuditServicesUae" &&
                       "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                       variant === "AuditServicesUaes" &&
@@ -344,7 +344,7 @@ export default function DocumentRequired({
                   </Heading>
                 )}
               </div>
-              <div className={cn("w-full h-[380px] sm:h-full rounded-[12px] overflow-hidden", variant === "AuditServicesUaes" && "!h-[314px]")}>
+              <div className={cn("w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden", variant === "AuditServicesUaes" && "!h-[314px]")}>
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "Document required"}

@@ -94,7 +94,7 @@ export default function InnerHero({
             alt={data?.media?.alt || "Hero background"}
             width={1920}
             height={800}
-            className="w-full h-full object-cover absolute -z-1 inset-0 pointer-events-none"
+            className="w-full h-full object-cover object-right absolute -z-1 inset-0 pointer-events-none"
           />
         </picture>
       )}
