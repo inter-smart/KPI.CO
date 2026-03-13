@@ -160,7 +160,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-1 flex items-center justify-end lg:justify-between lg:pl-[60px] xl:pl-[80px] 2xl:pl-[100px]">
+          <div className="flex-1 flex items-center justify-end lg:justify-between lg:pl-[60px] xl:pl-[100px] 2xl:pl-[100px]">
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-10">
               {/* Home Link (No Dropdown) */}
               <Link
@@ -294,16 +294,16 @@ export default function Header() {
                                       collapsible
                                       className="w-full space-y-2"
                                     >
-                                      {item.megaCategories.map((mega, mIdx) => (
-                                        <AccordionItem
-                                          key={mIdx}
-                                          value={`mega-${idx}-${mIdx}`}
-                                          className="border-none"
-                                        >
-                                          <AccordionTrigger
-                                            className="hover:no-underline py-2"
-                                            hideIcon={
-                                              mega.subItems.length === 0
+                                      {item.megaCategories.map((mega, mIdx) => {
+                                        const hasSubItems =
+                                          mega.subItems.length > 0;
+                                        return !hasSubItems ? (
+                                          <Link
+                                            key={mIdx}
+                                            href={mega.href || "#"}
+                                            className="flex items-center justify-between py-2 transition-all hover:bg-[rgba(143,216,254,0.15)] rounded-md px-1"
+                                            onClick={() =>
+                                              setMenuSheetOpen(false)
                                             }
                                           >
                                             <div className="flex items-center gap-3">
@@ -337,27 +337,67 @@ export default function Header() {
                                                 {mega.label}
                                               </span>
                                             </div>
-                                          </AccordionTrigger>
-                                          <AccordionContent className="pl-11 pt-1">
-                                            <div className="flex flex-col space-y-1">
-                                              {mega.subItems.map(
-                                                (sub, sIdx) => (
-                                                  <Link
-                                                    key={sIdx}
-                                                    href={sub.href}
-                                                    className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
-                                                    onClick={() =>
-                                                      setMenuSheetOpen(false)
-                                                    }
-                                                  >
-                                                    {sub.name}
-                                                  </Link>
-                                                ),
-                                              )}
-                                            </div>
-                                          </AccordionContent>
-                                        </AccordionItem>
-                                      ))}
+                                          </Link>
+                                        ) : (
+                                          <AccordionItem
+                                            key={mIdx}
+                                            value={`mega-${idx}-${mIdx}`}
+                                            className="border-none"
+                                          >
+                                            <AccordionTrigger className="hover:no-underline py-2">
+                                              <div className="flex items-center gap-3">
+                                                {mega.icon && (
+                                                  <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
+                                                    {typeof mega.icon ===
+                                                    "string" ? (
+                                                      <div className="relative w-[14px] h-[14px]">
+                                                        <Image
+                                                          src={
+                                                            mega.icon.endsWith(
+                                                              ".svg",
+                                                          ) ||
+                                                            mega.icon.includes(
+                                                              ".",
+                                                            )
+                                                              ? mega.icon
+                                                              : `${mega.icon}.svg`
+                                                          }
+                                                          alt={mega.label}
+                                                          fill
+                                                          className="object-contain brightness-0 invert"
+                                                        />
+                                                      </div>
+                                                    ) : (
+                                                      mega.icon
+                                                    )}
+                                                  </div>
+                                                )}
+                                                <span className="text-[15px] font-normal text-[#1C5396] !font-medium">
+                                                  {mega.label}
+                                                </span>
+                                              </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="pl-11 pt-1">
+                                              <div className="flex flex-col space-y-1">
+                                                {mega.subItems.map(
+                                                  (sub, sIdx) => (
+                                                    <Link
+                                                      key={sIdx}
+                                                      href={sub.href}
+                                                      className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
+                                                      onClick={() =>
+                                                        setMenuSheetOpen(false)
+                                                      }
+                                                    >
+                                                      {sub.name}
+                                                    </Link>
+                                                  ),
+                                                )}
+                                              </div>
+                                            </AccordionContent>
+                                          </AccordionItem>
+                                        );
+                                      })}
                                     </Accordion>
                                   ) : null}
                                 </AccordionContent>
