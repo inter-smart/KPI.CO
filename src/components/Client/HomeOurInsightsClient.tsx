@@ -139,6 +139,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}
+          unoptimized={true}
           width={440}
           height={268}
           className="w-full h-full object-cover transition scale-110 transition-all duration-200 group-hover:translate-y-2"
