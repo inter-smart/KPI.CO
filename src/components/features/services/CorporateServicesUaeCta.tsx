@@ -126,6 +126,7 @@ export default function CorporateServicesUaeCta({
                 variant === "blogdetail" && "max-sm:text-[22px]",
                 variant === "ifza" && "font-bold",
                 variant === "rakez" && "xl:max-w-full",
+                
               )}
             >
               {parse(data?.title)}
@@ -137,6 +138,7 @@ export default function CorporateServicesUaeCta({
                 variant === "AuditServicesUae" && "xl:max-w-[75%]",
                 variant === "DMCC-Freezone" && "xl:max-w-[92%]",
                 variant === "regulatory" && "xl:max-w-[92%]",
+                
               )}
             >
               {parse(data?.description)}
