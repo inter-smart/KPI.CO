@@ -50,6 +50,7 @@ export type InnerHeroProps = {
     | "RAK-Offshore"
     | "ADGM-Regulated-Audit"
     | "Offshore"
+    | "company-freezone"
     | "Tax-Advisory"
     | "Agreed-Procedure"
     | "difc-regulated"
@@ -80,8 +81,9 @@ export default function InnerHero({
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
+        variant === "company-freezone" && "max-sm:min-h-[630px]",
         variant === "technology" &&
-          "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+          "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
       )}
     >
@@ -121,7 +123,8 @@ export default function InnerHero({
             variant === "Offshore" && "xl:max-w-[780px]",
             variant === "RAK-Offshore" && "xl:max-w-[775px]",
             variant === "Formation-JAFZA" && "xl:max-w-[780px]",
-            variant === "JAFZA-Freezone" && "xl:max-w-[810px]",
+            variant === "JAFZA-Freezone" &&
+              "xl:max-w-[810px] max-sm:mt-[-80px]",
             variant === "rakez" && "xl:max-w-[780px]",
             variant === "DMCC-Freezone" && "xl:max-w-[780px]",
             variant === "Agreed-Procedure" && "xl:max-w-[780px]",
@@ -137,8 +140,9 @@ export default function InnerHero({
             className={cn(
               "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
 
-              variant === "technology" && "max-w-[850px]",
+              variant === "technology" && "max-w-[850px] xl:mb-[30px]",
               variant === "regulatory" && "max-w-[850px]",
+              variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
               variant === "Formation-JAFZA" && "normal-case",
               variant === "dwtc" && "normal-case",
@@ -152,7 +156,7 @@ export default function InnerHero({
               size="p3"
               className={cn(
                 "xl:text-[16px] leading-[1.6] text-white  mb-[30px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
-                variant === "technology" && "xl:!text-[20px]",
+                variant === "technology" && "xl:!text-[20px] xl:mb-[30px]",
                 variant === "dwtc" &&
                   "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
                 variant === "ADGM-Foundations" &&

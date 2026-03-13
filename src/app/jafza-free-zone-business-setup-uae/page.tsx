@@ -195,7 +195,7 @@ const localData = {
       {
         id: 1,
         media: {
-          path: "/images/banking-partner-4.svg",
+          path: "/images/banking-partner-6.svg",
           alt: "Emirates NBD",
         },
       },
@@ -209,14 +209,28 @@ const localData = {
       {
         id: 3,
         media: {
-          path: "/images/banking-partner-3.svg",
+          path: "/images/banking-partner-2.svg",
           alt: "Emirates NBD",
         },
       },
       {
         id: 4,
         media: {
-          path: "/images/banking-partner-05.svg",
+          path: "/images/banking-partner-3.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 5,
+        media: {
+          path: "/images/banking-partner-4.svg",
+          alt: "Emirates NBD",
+        },
+      },
+      {
+        id: 6,
+        media: {
+          path: "/images/banking-partner-7.svg",
           alt: "Emirates NBD",
         },
       },
@@ -302,7 +316,7 @@ const localData = {
   whyWorkWith: {
     title: "Why Work with KPI ",
     description:
-      "<p>KPI is more than a formation agent - we’re your growth partner. From registration to operations, we provide full end to end support for your business success:</p>",
+      "<p>KPI Group is more than a formation agent - we’re your growth partner. From registration to operations, we provide full end to end support for your business success:</p>",
     items: [
       {
         id: 1,
@@ -330,7 +344,7 @@ const localData = {
     description:
       "<p>Our team helps you select the ideal license, setup, and structure based <br/> on your growth goals and business model. Speak with our experts <br/>today!</p>",
     button: {
-      label: "Contact Us",
+      label: "Get in Touch",
       link: "/contact",
     },
     images: {
@@ -407,16 +421,19 @@ export default function DwtcFreezone() {
         data={localData.freezoneBusiness}
         variant="JAFZA-Freezone"
       />
-      <MeydanFreeZone data={localData.jafzaFreeZone} variant="ifza" />
-      <MeydanKeyBenefits data={localData.keyBenefits} />
+      <MeydanFreeZone data={localData.jafzaFreeZone} variant="JAFZA-Freezone" />
+      <MeydanKeyBenefits
+        data={localData.keyBenefits}
+        variant="JAFZA-Freezone"
+      />
       <CorporateServicesUaeBanking
         data={localData.banking}
-        variant="downshadow"
+        variant="JAFZA-Freezone"
       />
       <BusinessLocation data={localData.businessLocation} />
       <CorporateServicesUaeBanking
         data={localData.logoimage}
-        variant="downshadow"
+        variant="JAFZA-Freezone"
       />
       <RiskOrganisation data={localData.whyWorkWith} variant="JAFZA-Freezone" />
       <CorporateServicesUaeCta data={localData.contactUs} />

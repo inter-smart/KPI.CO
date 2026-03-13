@@ -69,22 +69,30 @@ export default function RiskAssuranceServices({
             size="h2"
             className={cn(
               "text-[#1C5396] mb-25px] xl:mb-[25px]",
-              variant === "internal-audit" && "leading-[125%] mb-[30px] xl:mb-[38px]",
+              variant === "internal-audit" &&
+                "leading-[125%] mb-[30px] xl:mb-[38px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               variant === "erm" && "max-sm:mb-[20px]",
             )}
           >
             {data?.title}
           </Heading>
-          <div className={cn("text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]", variant==="internal-audit" && "sm:hidden")}>
+          <div
+            className={cn(
+              "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]",
+              variant === "internal-audit" && "sm:hidden",
+            )}
+          >
             {parse(data?.description)}
           </div>
         </div>
         <div
           className={cn(
             "hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5.5 lg:gap-6.25 xl:gap-[29px] 2xl:gap-7.5 3xl:gap-9",
-            variant === "internal-audit" && "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]",
+            variant === "internal-audit" &&
+              "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]",
             variant === "erm" && "max-sm:grid max-sm:gap-[14px]",
+            variant === "company-freezone" && "max-sm:grid max-sm:gap-[14px]",
           )}
         >
           {data.items.map((item) => (
@@ -94,8 +102,7 @@ export default function RiskAssuranceServices({
                   "group [--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 2xl:[--icon-size:45px] 3xl:[--icon-size:58px] w-full h-full max-sm:p-[20px] p-6.25 lg:p-5 xl:p-[25px] 2xl:p-6.25 3xl:p-7.5 max-sm:pr-[10px] bg-white rounded-[10px] sm:rounded-[8px] 2xl:rounded-[10px] border-1 border-[#E2E2E2] flex",
                   variant === "company-freezone" &&
                     "xl:min-h-[130px] xl:max-h-[130px]",
-                  variant === "erm" &&
-                    "max-sm:min-h-[164px]",
+                  variant === "erm" && "max-sm:min-h-[164px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
@@ -130,7 +137,7 @@ export default function RiskAssuranceServices({
             </div>
           ))}
         </div>
-        <div className="w-full block sm:hidden">
+        <div className={cn("w-full block sm:hidden",variant === "company-freezone" && "max-sm:hidden",)}>
           <div
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"

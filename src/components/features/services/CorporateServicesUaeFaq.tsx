@@ -37,6 +37,7 @@ export type CorporateServicesUaeFaqProps = {
     | "JAFZA-Freezone"
     | "mainland"
     | "rakez"
+    | "dwtc"
     | "sop"
     | "CorporateServicesUae"
     | "Formation-JAFZA"
@@ -67,6 +68,7 @@ export default function CorporateServicesUaeFaq({
             className={cn(
               "text-[28px] lg:text-[32px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
               variant === "Financial-Statement-Audit" && "xl:text-[48px]",
+              variant === "JAFZA-Freezone" && "max-sm:mb-0",
             )}
           >
             {data?.title}
@@ -91,6 +93,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "JAFZA-Freezone" && "last:border-b-1",
                   variant === "rakez" && "last:border-b-1",
                   variant === "sop" && "last:border-b-1",
+                  variant === "dwtc" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -121,7 +124,13 @@ export default function CorporateServicesUaeFaq({
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
-                  <div className="typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]">
+                  <div
+                    className={cn(
+                      "typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
+                      variant === "JAFZA-Freezone" && "[&_p]:leading-[1.5]",
+                      variant === "company-freezone" && "[&_p]:leading-[1.5]",
+                    )}
+                  >
                     {parse(item?.description || "")}
                   </div>
                 </AccordionContent>

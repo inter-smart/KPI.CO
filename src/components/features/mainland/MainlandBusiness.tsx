@@ -57,7 +57,9 @@ export default function MainlandBusiness({
         variant === "CorporateTaxUae" && "bg-[#F9FAFB] xl:py-[70px_50px]",
         variant === "Offshore" && "xl:py-[70px]",
         variant === "RAK-Offshore" && "xl:py-[90px_70px]",
+        variant === "JAFZA-Freezone" && "max-sm:py-[46px_21px]",
         variant === "rakez" && "xl:py-[90px_30px]",
+        variant === "company-freezone" && "max-sm:py-[46px_28px]",
         variant === "Formation-JAFZA" && "xl:py-[94px_70px]",
         variant === "e-invoicing" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white ",
@@ -266,7 +268,12 @@ export default function MainlandBusiness({
               variant === "rakez" && "xl:w-[520px]",
             )}
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[380px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden">
+            <div
+              className={cn(
+                "relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden",
+                variant === "Formation-JAFZA" && "max-sm:min-h-[378px]",
+              )}
+            >
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

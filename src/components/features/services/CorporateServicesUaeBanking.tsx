@@ -26,6 +26,7 @@ type CorporateServicesUaeBankingProps = {
     | "dmcc"
     | "ifza"
     | "company"
+    | "JAFZA-Freezone"
     | "freezone-business"
     | "downshadow"
     | "Meydan"
@@ -51,7 +52,10 @@ export default function CorporateServicesUaeBanking({
     <section
       className={cn(
         "w-full h-auto py-[40px_45px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
-        variant === "dsoa" || variant === "dmcc" || variant === "mainland" || variant === "internal-audit"
+        variant === "dsoa" ||
+          variant === "dmcc" ||
+          variant === "mainland" ||
+          variant === "internal-audit"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 
@@ -62,6 +66,7 @@ export default function CorporateServicesUaeBanking({
         variant === "company" && "!pt-1 shadow-none",
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
+        variant === "JAFZA-Freezone" && "!pt-5 max-sm:shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
         variant === "dmcc" &&
           "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
@@ -82,6 +87,7 @@ export default function CorporateServicesUaeBanking({
               variant === "freezone-business" ||
               variant === "RAK-Offshore" ||
               variant === "company-freezone" ||
+              variant === "JAFZA-Freezone" ||
               variant === "audit" ||
               variant === "internal-audit" ||
               variant === "Meydan" ||
@@ -99,6 +105,7 @@ export default function CorporateServicesUaeBanking({
               "text-[#1C5396] mb-7.5 sm:mb-4 xl:mb-[20px] 3xl:mb-6.25 capitalize",
               variant === "ifza" && "!mb-[30px]",
               variant === "downshadow" && "!mb-[20px]",
+              variant === "JAFZA-Freezone" && "!mb-[20px]",
               variant === "offshore" && "xl:mb-[30px]",
               variant === "RAK-Offshore" && "xl:mb-[30px]",
               variant === "Meydan" && "xl:mb-[30px]",
@@ -122,6 +129,7 @@ export default function CorporateServicesUaeBanking({
               variant === "company" && "text-left !max-w-full ",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
+              variant === "JAFZA-Freezone" && "text-left !max-w-full ",
               variant === "RAK-Offshore" && "text-left !max-w-full ",
               variant === "Meydan" && "text-left !max-w-full ",
               variant === "CorporateServicesUae" && "xl:max-w-[880px]",
@@ -135,6 +143,8 @@ export default function CorporateServicesUaeBanking({
             className={cn(
               "flex touch-pan-y touch-pinch-zoom -mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:p-6.25 xl:[&>*]:p-[25px] 3xl:[&>*]:p-8.75",
               variant === "downshadow" &&
+                "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
+              variant === "JAFZA-Freezone" &&
                 "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
             )}
           >
@@ -151,7 +161,7 @@ export default function CorporateServicesUaeBanking({
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
                     variant === "company-freezone" &&
-                      "shadow-[0px_13px_19px_0px_#00000012] [clip-path:inset(0_-100%_0_-100%)]",
+                      "shadow-[0px_13px_19px_0px_#00000012]",
                     variant === "internal-audit" &&
                       "shadow-[0_13px_19px_#00000012]",
                   )}
@@ -161,6 +171,8 @@ export default function CorporateServicesUaeBanking({
                       "w-[80px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
                       // variant === "ifza" &&
                       //   "w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px]",
+                      variant === "JAFZA-Freezone" &&
+                        "xl:w-[174px] xl:h-[81px]",
                     )}
                   >
                     <Image

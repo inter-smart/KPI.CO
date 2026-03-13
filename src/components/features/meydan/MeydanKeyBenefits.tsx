@@ -29,7 +29,12 @@ export type MeydanKeyBenefitsData = {
 
 export type MeydanKeyBenefitsProps = {
   data: MeydanKeyBenefitsData;
-  variant?: "default" | "Vat-Services" | "technology" | "RAK-Offshore";
+  variant?:
+    | "default"
+    | "Vat-Services"
+    | "technology"
+    | "RAK-Offshore"
+    | "JAFZA-Freezone";
 };
 
 export default function MeydanKeyBenefits({
@@ -40,7 +45,13 @@ export default function MeydanKeyBenefits({
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full h-auto py-[45px_60px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block">
+    <section
+      className={cn(
+        "w-full h-auto py-[45px_60px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        variant === "technology" && "max-sm:py-[46px_5px]",
+        variant === "JAFZA-Freezone" && "max-sm:pb-0",
+      )}
+    >
       <div className="container">
         <div className="typography">
           <Heading
@@ -147,21 +158,26 @@ export default function MeydanKeyBenefits({
                       "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row items-center",
                       variant === "Vat-Services" &&
                         "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
-                      variant === "RAK-Offshore" && "xl:gap-[0px]"  
+                      variant === "RAK-Offshore" && "xl:gap-[0px]",
                     )}
                   >
                     <div
                       className={cn(
                         "w-full lg:w-1/2",
-                        variant === "technology" && "pr-[40px]",
+                        variant === "technology" && "lg:pr-[40px]",
                       )}
                     >
                       {variant === "technology" && (
-                        <div className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[28px]">
+                        <div className="text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] mb-[28px]">
                           {item?.data_description}
                         </div>
                       )}
-                      <ul className={cn("space-y-[20px] sm:space-y-[15px] xl:space-y-[20px] 2xl:space-y-[25px] 3xl:space-y-[30px]",variant === "technology" && "xl:space-y-[15px]")}>
+                      <ul
+                        className={cn(
+                          "space-y-[20px] sm:space-y-[15px] xl:space-y-[20px] 2xl:space-y-[25px] 3xl:space-y-[30px]",
+                          variant === "technology" && "xl:space-y-[15px]",
+                        )}
+                      >
                         {item?.items?.map((item, index) => (
                           <li
                             key={index}
@@ -176,7 +192,7 @@ export default function MeydanKeyBenefits({
                                 className={cn(
                                   "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden",
                                   variant === "technology" &&
-                                    "text-[#4E4E4E] font-normal",
+                                    "max-sm:text-[14px] text-[#4E4E4E] font-normal",
                                 )}
                               >
                                 {parse(item)}

@@ -333,7 +333,7 @@ export default function DocumentRequired({
                   </Heading>
                 )}
               </div>
-              <div className="w-full h-[380px] sm:h-full rounded-[12px] overflow-hidden">
+              <div className="w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden">
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "Document required"}
