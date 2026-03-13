@@ -40,7 +40,8 @@ export type CorporateServicesUaeCtaProps = {
     | "dwtc"
     | "regulatory"
     | "adgm-regulated"
-    | "difc-regulated";
+    | "difc-regulated"
+    | "internal-audit";
 };
 
 export default function CorporateServicesUaeCta({
@@ -71,6 +72,7 @@ export default function CorporateServicesUaeCta({
               "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
             variant === "Formation-JAFZA" && "xl:p-[45px_50px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
+             variant === "internal-audit" && "xl:min-h-[289px]",
           )}
         >
           <div
@@ -108,6 +110,7 @@ export default function CorporateServicesUaeCta({
               variant === "DMCC-Freezone" && "lg:w-[65%]",
               variant === "ADGM-SPV-Formation" && "lg:w-[60%]",
               variant === "AuditServicesUae" && "lg:w-[75%]",
+             
             )}
           >
             <Heading
