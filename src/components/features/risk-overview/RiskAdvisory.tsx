@@ -65,7 +65,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
       <div className="container">
         <div
           className={cn(
-            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[40px] 2xl:gap-[80px] 3xl:gap-[80px]",
+            "flex flex-col lg:flex-row gap-[20px] lg:gap-[40px] xl:gap-[20px] 2xl:gap-[80px] 3xl:gap-[80px]",
             hasVariant(variant, "center") && "items-center",
             hasVariant(variant, "difc-regulated") && "items-center",
           )}
@@ -79,19 +79,19 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             <Heading
               as="h3"
               size="h3"
-              className="text-[26px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
+              className={cn("text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] font-semibold text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]", variant==="regulatory" && "max-w-[98%]" )}
             >
               {parse(data.title)}
             </Heading>
             <div
               className={cn(
-                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5",
+                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5 max-sm:[&_p]:last-of-type:hidden",
                 variant === "CorporateTaxUae" &&
-                  "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "CorporateTaxUae" &&
-                  "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                "[&_span]:font-bold [&_span]:text-[#5280CA]",
                 variant === "regulatory" &&
-                  "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px]",
+                "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] max-sm:[&_p]:last-of-type:!block",
               )}
             >
               {parse(
@@ -107,6 +107,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                   "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
                   variant === "difc-regulated" && "max-sm:hidden",
                   variant === "adgm-regulated" && "max-sm:hidden",
+                  variant === "regulatory" && "md:max-w-[82%]",
+                  
                 )}
               >
                 {parse(data.highlightsText)}
@@ -114,58 +116,61 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             </div>
           </div>
           <div className="w-full lg:w-[51%] xl:w-[590px]">
-            <div
-              className={cn(
-                "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
-                // variant === "regulatory" && "bg-[rgba(143,216,254,10%)]"
-              )}
-            >
-              <div className="overflow-hidden">
-                <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
-                  {advisoryItems.map((item, index) => (
-                    <div
-                      key={`item-${item.id ?? index}`}
-                      className={cn(
-                        "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_20px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
-                        hasVariant(variant, "difc") ||
-                          hasVariant(variant, "adgm-regulated")
-                          ? cn(
+            <div className="w-full">
+              <div
+                className={cn(
+                  "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[35px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
+                  // variant === "regulatory" && "bg-[rgba(143,216,254,10%)]"
+                )}
+              >
+                <div className="overflow-hidden">
+                  <div className="flex flex-wrap m-[-11px_-11px_-11px_-21px] md:m-[-11px_-11px_-11px_-31px] xl:m-[-11px_-11px_-21px_-41px] 3xl:m-[-11px_-11px_-31px_-41px]">
+                    {advisoryItems.map((item, index) => (
+                      <div
+                        key={`item-${item.id ?? index}`}
+                        className={cn(
+                          "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_25px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
+                          hasVariant(variant, "difc") ||
+                          hasVariant(variant, "regulatory") ||
+                            hasVariant(variant, "adgm-regulated")
+                            ? cn(
                               "border-[#DEDEDE]",
                               index === advisoryItems.length - 1
                                 ? "w-full border-b-0 border-r-0" // last item full
                                 : cn(
-                                    "w-1/2 border-b",
-                                    index % 2 === 0 ? "border-r" : "border-r-0",
-                                  ),
+                                  "w-1/2 border-b",
+                                  index % 2 === 0 ? "border-r" : "border-r-0",
+                                ),
                             )
-                          : "w-1/2 border-b border-r border-[#DEDEDE]",
+                            : "w-1/2 border-b border-r border-[#DEDEDE]",
                           hasVariant(variant, "difc-regulated") && "last:w-full",
-                      )}
-                    >
-                      <div
-                        className={cn(
-                          "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
-                          hasVariant(variant, "difc")
-                            ? "text-[#5280CA]"
-                            : "text-[#5280CA]",
-                          hasVariant(variant, "adgm-regulated")
-                            ? "text-[#5280CA]"
-                            : "text-[#5280CA]",
-                          hasVariant(variant, "difc-regulated")
-                            ? "text-[#5280CA]"
-                            : "text-[#5280CA]",
-                          hasVariant(variant, "regulatory")
-                            ? "text-[#5280CA]"
-                            : "text-[#5280CA]",
                         )}
                       >
-                        {`${formatNo(item.slNo ?? index + 1)}.`}
+                        <div
+                          className={cn(
+                            "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
+                            hasVariant(variant, "difc")
+                              ? "text-[#5280CA]"
+                              : "text-[#5280CA]",
+                            hasVariant(variant, "adgm-regulated")
+                              ? "text-[#5280CA]"
+                              : "text-[#5280CA]",
+                            hasVariant(variant, "difc-regulated")
+                              ? "text-[#5280CA]"
+                              : "text-[#5280CA]",
+                            hasVariant(variant, "regulatory")
+                              ? "text-[#5280CA]"
+                              : "text-[#5280CA]",
+                          )}
+                        >
+                          {`${formatNo(item.slNo ?? index + 1)}.`}
+                        </div>
+                        <div className="text-[14px] lg:text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[21px] font-normal leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
+                          {parse(item.description)}
+                        </div>
                       </div>
-                      <div className="text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] font-normal leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
-                        {parse(item.description)}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,15 +179,38 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 className={cn(
                   "hidden",
                   variant === "difc-regulated" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                  "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
                   variant === "adgm-regulated" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                  "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                  variant === "CorporateTaxUae" &&
+                  "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                  variant === "regulatory" &&
+                  "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
                 )}
               >
                 {parse(data.highlightsText)}
               </div>
             </div>
           </div>
+
+           <div
+              className={cn(
+                "text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mb-[20px] max-md:[&_br]:hidden [&_p]:mb-3 xl:[&_p]:mb-5 max-sm:[&_p]:first-of-type:hidden sm:hidden",
+                variant === "CorporateTaxUae" &&
+                "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                variant === "CorporateTaxUae" &&
+                "[&_span]:font-bold [&_span]:text-[#5280CA]",
+                variant === "regulatory" &&
+                "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
+              )}
+            >
+              {parse(
+                data?.description?.replace(
+                  /<\/p>\s*$/,
+                  ' <span class="!text-[#5280CA] text-[13px] font-bold top-[-3px] xl:top-[-4px] relative z-0"></span></p>',
+                ) || "",
+              )}
+            </div>
         </div>
         {data?.structure_list && (
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">

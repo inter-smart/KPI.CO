@@ -470,9 +470,9 @@ export default function DwtcFreezone() {
       />
       <CorporateServicesUaeBanking
         data={localData.logoimage}
-        variant="downshadow"
+        variant="downshadow" 
       />
-      <RiskOrganisation data={localData.whyWorkWith} />
+      <RiskOrganisation data={localData.whyWorkWith} variant="RAK-Offshore" />
       <CorporateServicesUaeCta data={localData.contactUs} />
       <CorporateServicesUaeFaq
         variant="RAK-Offshore"

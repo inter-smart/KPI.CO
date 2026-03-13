@@ -51,7 +51,7 @@ export default function CorporateServicesUaeBanking({
     <section
       className={cn(
         "w-full h-auto py-[40px_45px] lg:py-[40px_60px] xl:py-[50px_40px] 3xl:py-[65px_100px] overflow-visible relative z-0 block ",
-        variant === "dsoa" || variant === "dmcc"
+        variant === "dsoa" || variant === "dmcc" || variant === "mainland" || variant === "internal-audit"
           ? "shadow-none"
           : "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
 
@@ -151,14 +151,14 @@ export default function CorporateServicesUaeBanking({
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
                     variant === "company-freezone" &&
-                      "shadow-[0px_13px_19px_0px_#00000012]",
+                      "shadow-[0px_13px_19px_0px_#00000012] [clip-path:inset(0_-100%_0_-100%)]",
                     variant === "internal-audit" &&
                       "shadow-[0_13px_19px_#00000012]",
                   )}
                 >
                   <div
                     className={cn(
-                      "w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
+                      "w-[80px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
                       // variant === "ifza" &&
                       //   "w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px]",
                     )}

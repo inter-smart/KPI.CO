@@ -11,7 +11,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import VatRelatedTax, {
+import VatRelatedTax, { 
   VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
 
@@ -197,7 +197,7 @@ const localData = {
       { id: 3, text: "Clear, defensible reporting without ambiguity" },
     ],
     media: {
-      path: "/images/mainland-document-required.jpg",
+      path: "/images/auditservices-document-required.jpg",
       alt: "Required documents",
     },
     ftr_description:
@@ -509,7 +509,7 @@ export default function AuditOverviewUaePage() {
       />
       <CorporateServicesUaeServices
         data={localData?.services}
-        variant="saifz"
+        variant="AuditServicesUae"
       />
       <MainlandBusiness
         data={localData.mainlandBusiness}

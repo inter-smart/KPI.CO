@@ -24,7 +24,7 @@ export type VatRelatedTaxData = {
 
 interface VatRelatedTaxProps {
   data: VatRelatedTaxData;
-  variant?: "sop" | "default";
+  variant?: "sop" | "default" | "regulatory";
 }
 
 export default function VatRelatedTax({
@@ -44,7 +44,7 @@ export default function VatRelatedTax({
     <section className="w-full h-auto py-[45px] sm:py-[30px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
       <div className="container">
         <div className="w-full h-auto mb-[25px] sm:mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
-          <Heading as="h2" size="h2" className="text-[#1C5396]">
+          <Heading as="h2" size="h2" className={cn("text-[#1C5396]" , variant==="sop" && "max-sm:text-[26px]")}>
             {data?.title}
           </Heading>
         </div>
@@ -70,7 +70,7 @@ export default function VatRelatedTax({
                     height={630}
                     className="w-full h-full object-cover absolute -z-1 inset-0"
                   />
-                  <div className="text-[24px] sm:text-[18px] xl:text-[22px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end">
+                  <div className={cn("text-[24px] sm:text-[18px] xl:text-[22px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end", variant==="regulatory" && "max-sm:text-[26px]" )}>
                     {item?.title}
                   </div>
                 </Link>

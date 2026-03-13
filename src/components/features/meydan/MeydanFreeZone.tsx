@@ -36,6 +36,7 @@ interface MeydanFreeZoneProps {
     | "Tax-Advisory"
     | "default"
     | "ifza"
+    | "e-invoice"
     | "regulatory"
     | "difc-regulated"
     | "audit";
@@ -50,7 +51,7 @@ export default function MeydanFreeZone({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[45px] sm:py-[35px_50px] xl:py-[30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        "w-full h-auto py-[10px_25px] sm:py-[35px_50px] xl:py-[48px_30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
       )}
@@ -123,7 +124,7 @@ export default function MeydanFreeZone({
                     variant === "ADGM-Foundation" &&
                     "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
                     variant === "regulatory" &&
-                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold",
+                    "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold  !max-w-full",
                   )}
                 >
                   {parse(item?.title)}
@@ -145,6 +146,7 @@ export default function MeydanFreeZone({
                       "text-[16px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[21px] leading-normal font-medium text-[#053269] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                       variant === "ADGM-Foundation" && "xl:mb-[20px]",
                       variant === "RAK-Offshore" && "xl:mb-[15px]",
+                      variant === "regulatory" && "max-sm:text-[14px]",
                     )}
                   >
                     {item?.highlightsText}
@@ -164,8 +166,10 @@ export default function MeydanFreeZone({
                       <span
                         className={cn(
                           "text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
-                          variant === "ADGM-Foundation" &&
+                          variant === "ADGM-Foundation" && 
                           "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
+                           variant === "difc" && 
+                          "text-[14px] xl:text-[16px] ",
                         )}
                       >
                         {parse(zone)}
@@ -211,7 +215,7 @@ export default function MeydanFreeZone({
                     >
                       {item.title}
                     </div>
-                    <div className={cn("text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",variant === "Tax-Advisory" && "sm:max-w-[97%]")}>
+                    <div className={cn("text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",variant === "Tax-Advisory" && "sm:max-w-[97%]" ,variant === "RAK-Offshore" && "sm:max-w-full")}>
                       {/* {item.description} */}
                       {parse(item?.description)}
                     </div>

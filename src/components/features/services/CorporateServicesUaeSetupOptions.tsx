@@ -21,7 +21,6 @@ type CorporateServicesUaeSetupOptionsProps = {
   variant?: "hamriyah" | "default" | "CorporateServicesUae" | "technology";
 };
 
-
 type VariantType =
   | "hamriyah"
   | "default"
@@ -85,7 +84,7 @@ function SetupOptionCard({
         />
 
         <motion.div
-          className="w-full h-full bg-linear-to-t from-[#6a9fe0] to-[#053269] p-6 xl:p-9 2xl:p-11 flex items-center justify-center absolute z-20 inset-0"
+          className="w-full h-full bg-linear-to-t from-[#6a9fe0] to-[#053269] p-6 xl:p-10 2xl:p-11 flex items-center justify-center absolute z-20 inset-0"
           initial={{ y: "0%", opacity: 0, visibility: "hidden" }}
           animate={{
             y: isHovered ? "0%" : "0%",

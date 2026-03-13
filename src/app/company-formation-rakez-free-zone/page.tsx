@@ -346,7 +346,7 @@ const localData = {
       {
         id: 8,
         media: {
-          path: "/images/license_icon8.svg",
+          path: "/images/ml_icon.svg",
           alt: "Media License",
         },
         title: "Media License",
@@ -542,10 +542,10 @@ export default function page() {
       <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
       <DocumentRequired
         data={localData.document_required_data}
-        variant="dmcc"
+        variant="rakez"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="rakez" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="rakez" />
         <HomeOurInsights />
     </>
   );

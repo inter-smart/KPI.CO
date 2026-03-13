@@ -31,6 +31,7 @@ type DocumentRequiredProps = {
   variant?:
     | "default"
     | "saifz"
+    | "rakez"
     | "dfza"
     | "CorporateTaxUae"
     | "VatServicesUae"
@@ -95,6 +96,8 @@ export default function DocumentRequired({
           "bg-white xl:py-[50px]",
         variant === "Financial-Statement-Audit" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        variant === "rakez" &&
+          "bg-linear-to-t from-[#eff8fc] via-white to-white",
         variant === "VatServicesUae" &&
           "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "Formation-JAFZA" &&
@@ -108,11 +111,11 @@ export default function DocumentRequired({
             className={cn(
               "w-full md:w-[57%] xl:w-[60%] md:pr-[40px] xl:pr-[60px]",
               variant === "mainland" && "xl:w-[calc(100%-460px)]",
-              variant === "company-freezone" && "xl:pr-[100px]",
+              variant === "company-freezone" && "xl:pr-[90px]",
               variant === "saifz" && "xl:w-[calc(100%-475px)] xl:pr-[140px]",
               variant === "dfza" && "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "AuditServicesUae" &&
-                "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-475px)] xl:pr-[48px]",
               variant === "Financial-Statement-Audit" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "VatServicesUae" &&
@@ -121,15 +124,13 @@ export default function DocumentRequired({
                 "xl:w-[calc(100%-475px)] xl:pr-[150px]",
               variant === "CorporateTaxUae" &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
-              variant === "AuditServicesUae" &&
-                "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
           >
             {(data?.title || data?.description) && (
               <div
                 className={cn(
                   "mb-6.25 lg:mb-4 xl:mb-[20px] 2xl:mb-9 3xl:mb-10",
-                  variant === "dfza" && "xl:mb-[50px]",
+                  variant === "dfza" && "xl:mb-[30px]",
                   variant === "internal-audit" && "md:pr-[30px] xl:pr-[40px]",
                 )}
               >
@@ -147,7 +148,9 @@ export default function DocumentRequired({
                         "text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]",
                         variant === "dfza" && "xl:mb-[35px]",
                         variant === "internal-audit" &&
-                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]",
+                          "leading-relaxed xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px] max-sm:!text-[26px]",
+                        variant === "company-freezone" &&
+                          "xl:mb-[30px]",
                       )}
                     >
                       {parse(data.title)}
@@ -157,7 +160,7 @@ export default function DocumentRequired({
                 {data?.description && (
                   <div
                     className={cn(
-                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[15px] 3xl:[&_p]:mb-[20px]",
+                      "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E] [&_b]:font-medium [&_p]:mb-[10px] xl:[&_p]:mb-[25px] 3xl:[&_p]:mb-[20px]",
                       variant === "AuditServicesUae" &&
                         "[&_b]:text-[16px] sm:[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px] [&_b]:font-semibold",
                       variant === "internal-audit" &&
@@ -261,6 +264,7 @@ export default function DocumentRequired({
                           variant === "sop" ||
                           variant === "advisory" ||
                           variant === "dmcc" ||
+                          variant === "rakez" ||
                           variant === "tax-advisory" ||
                           variant === "freezone-business" ||
                           variant === "company-freezone" ||
@@ -315,7 +319,6 @@ export default function DocumentRequired({
                 variant === "Financial-Statement-Audit" && "xl:w-[475px]",
                 variant === "VatServicesUae" && "xl:w-[475px]",
                 variant === "CorporateTaxUae" && "xl:w-[520px]",
-                variant === "AuditServicesUae" && "xl:w-[520px]",
               )}
             >
               <div className="mb-6.25 lg:mb-4 2xl:mb-9 3xl:mb-10 block md:hidden">
@@ -323,7 +326,7 @@ export default function DocumentRequired({
                   <Heading
                     as="h2"
                     size="h2"
-                    className="text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]"
+                    className={cn("text-[#1C5396] mb-[25px] 2xl:mb-[30px] 3xl:mb-[35px]" , variant==="internal-audit" && "max-sm:text-[26px]")}
                   >
                     {data.title}
                   </Heading>

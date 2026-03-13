@@ -36,7 +36,7 @@ export type InnerHeroProps = {
     | "rakez"
     | "saifz"
     | "DMCC-Freezone"
-    | "advisory"
+    | "advisory" 
     | "dwtc"
     | "erm"
     | "ifza"
@@ -52,7 +52,8 @@ export type InnerHeroProps = {
     | "Offshore"
     | "Tax-Advisory"
     | "Agreed-Procedure"
-    | "difc-regulated"
+    | "difc-regulated" 
+    | "difc" 
     | "meydan";
 };
 
@@ -81,6 +82,8 @@ export default function InnerHero({
         variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
         variant === "technology" &&
           "!min-h-[730px] sm:!min-h-[640px] xl:!min-h-[600px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+        variant === "erm" &&
+          "max-sm:!min-h-[715px] lg:!min-h-[630px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -126,6 +129,7 @@ export default function InnerHero({
             variant === "ADGM-Regulated-Audit" && "xl:max-w-[775px]",
             variant === "ADGM-SPV-Formation" && "xl:max-w-[785px]",
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
+            variant === "difc" && "xl:max-w-[785px]",
           )}
         >
           <Heading
@@ -136,6 +140,9 @@ export default function InnerHero({
 
               variant === "technology" && "max-w-[850px]",
               variant === "regulatory" && "max-w-[850px]",
+              variant === "Offshore" && "normal-case",
+              variant === "Formation-JAFZA" && "normal-case",
+              variant === "dwtc" && "normal-case",
             )}
           >
             {parse(data?.title)}
@@ -145,7 +152,7 @@ export default function InnerHero({
               as="div"
               size="p3"
               className={cn(
-                "xl:text-[16px] leading-[1.6] text-white  mb-[35px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
+                "xl:text-[16px] leading-[1.6] text-white  mb-[30px] xl:mb-[45px] 2xl:mb-[50px] max-md:[&_br]:hidden",
                 variant === "technology" && "xl:!text-[20px]",
                 variant === "dwtc" &&
                   "xl:max-w-[100%] 3xl:max-w-[100%] !leading-relaxed [&_p]:!leading-relaxed",
@@ -172,6 +179,9 @@ export default function InnerHero({
                 variant === "ADGM-Regulated-Audit" && "xl:text-[20px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
+                variant === "e-invoicing" && "xl:text-[20px]",
+                variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
+                variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
               )}
             >
               {parse(data?.description)}
@@ -209,6 +219,8 @@ export default function InnerHero({
               "text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-1",
               variant === "difc-regulated" &&
                 "min-w-[125px] xl:min-w-[150px] max-sm:!h-[35px]",
+              variant === "erm" &&
+                "max-sm:min-w-[118px] max-sm:h-[30px]",
             )}
             asChild
           >
