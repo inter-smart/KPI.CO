@@ -380,9 +380,26 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-    title: "Audit & Advisory Services UAE | 30+ Years of Expertise | KPI ",
+    title: "Audit & Advisory Services UAE | 30+ Years of Expertise | KPI",
     description:
-        "KPI is a leading UAE firm providing Audit, Accounting, Advisory, and Business Consulting services. Get in touch for your business needs. ",
+        "KPI is a leading UAE firm providing Audit, Accounting, Advisory, and Business Consulting services. Get in touch for your business needs.",
+
+    openGraph: {
+        title: "Audit & Advisory Services UAE | 30+ Years of Expertise | KPI",
+        description:
+            "KPI is a leading UAE firm providing Audit, Accounting, Advisory, and Business Consulting services. Get in touch for your business needs.",
+        url: "https://kpi.co/",
+        siteName: "KPI.CO",
+        type: "website",
+        images: [
+            {
+                url: "/images/KPI-logo-og.png",
+                width: 1200,
+                height: 630,
+                alt: "KPI Logo",
+            },
+        ],
+    },
 };
 
 /* ------------------------------------------------------------------ */

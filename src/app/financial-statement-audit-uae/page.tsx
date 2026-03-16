@@ -422,10 +422,17 @@ export const metadata = {
     title: "Financial Statement Audit Firm in Dubai | KPI Group ",
     description:
       "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders. ",
-    url: " ",
+    url: "https://kpi.co/financial-statement-audit-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

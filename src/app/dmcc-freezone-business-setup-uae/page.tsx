@@ -448,10 +448,17 @@ export const metadata: Metadata = {
     title: "DMCC Free Zone Company Setup | Start Your Business in Dubai",
     description:
       "Launch your business in DMCC Free Zone, Dubai. Compare company setup costs, license types, and UAE visa options. 100% company ownership. No hidden fees.",
-    url: " ",
+    url: "https://kpi.co/dmcc-freezone-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

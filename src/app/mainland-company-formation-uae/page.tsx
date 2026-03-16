@@ -606,10 +606,17 @@ export const metadata: Metadata = {
     title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group",
     description:
       "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
-    url: " ",
+    url: "https://kpi.co/mainland-company-formation-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

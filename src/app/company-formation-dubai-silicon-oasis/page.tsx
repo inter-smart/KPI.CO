@@ -460,10 +460,17 @@ export const metadata: Metadata = {
     title: "Dubai Silicon Oasis Business Setup | Company Formation in UAE",
     description:
       "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!",
-    url: " ",
+    url: "https://kpi.co/company-formation-dubai-silicon-oasis",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

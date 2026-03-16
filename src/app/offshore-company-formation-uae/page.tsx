@@ -429,10 +429,17 @@ export const metadata: Metadata = {
     title: "Offshore Company Setup | Offshore Company Registration UAE",
     description:
       "Offshore business setup in the UAE with trusted advisors. KPI Group helps you register RAK ICC & JAFZA offshore companies with expert structuring and guidance.",
-    url: " ",
+    url: "https://kpi.co/offshore-company-formation-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

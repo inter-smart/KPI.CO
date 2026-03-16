@@ -421,10 +421,17 @@ export const metadata: Metadata = {
     title: "IFZA Free Zone Business Setup | Start Your Business in Dubai",
     description:
       "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses.",
-    url: " ",
+    url: "https://kpi.co/company-setup-ifza-dubai",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 export default function DwtcFreezone() {

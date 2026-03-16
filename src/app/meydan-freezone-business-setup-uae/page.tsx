@@ -467,10 +467,17 @@ export const metadata: Metadata = {
     title: "Meydan Free Zone Company Setup | Start Your Business in Dubai",
     description:
       "Start your UAE business in Meydan Free Zone. Compare setup costs, license types and UAE visa options. 100% company ownership. No hidden fees.",
-    url: " ",
+    url: "https://kpi.co/meydan-freezone-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

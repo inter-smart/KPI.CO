@@ -372,10 +372,17 @@ export const metadata: Metadata = {
     title: "Tax Advisory Services in the UAE | KPI Group",
     description:
       "KPI provides independent tax advisory services for UAE businesses. Get practical guidance on corporate tax, structuring, and compliance delivered with regulatory clarity.",
-    url: " ",
+    url: "https://kpi.co/tax-advisory-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

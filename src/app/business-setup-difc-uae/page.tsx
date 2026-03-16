@@ -480,10 +480,17 @@ export const metadata: Metadata = {
     title: "DIFC Free Zone Company Setup | Start Your Business in Dubai",
     description:
       "Start your business in DIFC, Dubai’s global financial free zone. Expert end to end support for company setup, licensing, and regulatory compliance. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/business-setup-difc-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

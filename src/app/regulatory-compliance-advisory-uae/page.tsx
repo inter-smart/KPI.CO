@@ -416,10 +416,17 @@ export const metadata: Metadata = {
     title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group",
     description:
       "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk.",
-    url: " ",
+    url: "https://kpi.co/regulatory-compliance-advisory-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

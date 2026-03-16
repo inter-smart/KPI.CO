@@ -1,3 +1,28 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "UAE Audit, Advisory & Tax Glossary | KPI",
+  description:
+    "A comprehensive UAE-focused glossary covering audit, advisory, risk, tax, and business terms to help organizations navigate regulations and best practices.",
+
+  openGraph: {
+    title: "UAE Audit, Advisory & Tax Glossary | KPI",
+    description:
+      "A comprehensive UAE-focused glossary covering audit, advisory, risk, tax, and business terms to help organizations navigate regulations and best practices.",
+    url: "https://kpi.co/glossary",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
+  },
+};
+
 export default function GlossaryPage() {
   return (
     <div className="bg-gray-100 min-h-screen">

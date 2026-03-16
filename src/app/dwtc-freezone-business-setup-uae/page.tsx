@@ -402,10 +402,17 @@ export const metadata: Metadata = {
     title: "DWTC Free Zone Business Setup | Start Your Business in Dubai",
     description:
       "Start your business in Dubai World Trade Centre with KPI. Benefit from a central location, flexible office solutions,and a simplified company setup process.",
-    url: " ",
+    url: "https://kpi.co/dwtc-freezone-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -376,10 +376,17 @@ export const metadata: Metadata = {
     title: "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group",
     description:
       "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.",
-    url: " ",
+    url: "https://kpi.co/adgm-spv-foundation-setup",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -416,10 +416,17 @@ export const metadata: Metadata = {
     title: "JAFZA Free Zone Company Setup | Launch Your Dubai Business",
     description:
       "Set up your company in JAFZA Free Zone, Dubai. Flexible business licenses, 100% ownership, and tailored visa options for entrepreneurs and startups in the UAE.",
-    url: " ",
+    url: "https://kpi.co/jafza-free-zone-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

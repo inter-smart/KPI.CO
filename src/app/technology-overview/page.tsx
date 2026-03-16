@@ -337,6 +337,22 @@ export const metadata: Metadata = {
   title: "Where Advisory Meets Enterprise Technology",
   description:
     "KPI Group supports organisations operating in complex regulatory environments across audit, tax, and compliance",
+  openGraph: {
+    title: "Where Advisory Meets Enterprise Technology",
+    description:
+      "KPI Group supports organisations operating in complete regulatory environments across audit, tax, and compliance",
+    url: "https://kpi.co/technology-overview",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
+  },
 };
 
 export default function DwtcFreezone() {

@@ -503,10 +503,17 @@ export const metadata = {
     title: "Audit Firms in Dubai | External & Regulatory Audit Services UAE",
     description:
       "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
-    url: " ",
+    url: "https://kpi.co/audit-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

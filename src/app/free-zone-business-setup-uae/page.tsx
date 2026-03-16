@@ -572,10 +572,17 @@ export const metadata: Metadata = {
     title: "Free Zone Company Registration | Easy Business Setup in UAE",
     description:
       "Set up a free zone company in the UAE with expert support. Compare free zones, license types, setup costs, and visa options. Fast process. Clear pricing.",
-    url: " ",
+    url: "https://kpi.co/free-zone-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

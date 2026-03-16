@@ -841,10 +841,17 @@ export const metadata: Metadata = {
     title: "SAIF Free Zone Company Formation | UAE Business Setup Services",
     description:
       "Start your business in Sharjah in SAIF Free Zone. 100% foreign ownership, zero tax, full profit repatriation & flexible facilities. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/business-setup-sharjah-airport-international-free-zone",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

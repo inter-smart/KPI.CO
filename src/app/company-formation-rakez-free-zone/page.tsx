@@ -531,10 +531,17 @@ export const metadata: Metadata = {
     title: "Ras Al Khaimah Economic Zone | Flexible Business Setup UAE",
     description:
       "Set up your business in Ras Al Khaimah Economic Zone (RAKEZ), UAE. Cost-effective licenses, fast approvals & full company setup support. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/company-formation-rakez-free-zone",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -444,10 +444,17 @@ export const metadata = {
     title: "AUP Audit Services in UAE | DFSA & Regulatory Compliance | KPI  ",
     description:
       "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities..",
-    url: " ",
+    url: "https://kpi.co/agreed-upon-procedures-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 export default function page() {

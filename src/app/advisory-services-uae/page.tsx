@@ -386,10 +386,17 @@ export const metadata: Metadata = {
       "Advisory Services in the UAE | Corporate, Tax & Regulatory Support | KPI Group",
     description:
       "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus.",
-    url: " ",
+    url: "https://kpi.co/advisory-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

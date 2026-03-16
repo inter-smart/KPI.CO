@@ -584,10 +584,17 @@ export const metadata: Metadata = {
     title: "VAT Advisory & Compliance Services in the UAE | KPI Group",
     description:
       "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations.",
-    url: " ",
+    url: "https://kpi.co/vat-advisory-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

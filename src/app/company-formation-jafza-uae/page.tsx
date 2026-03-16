@@ -301,10 +301,17 @@ export const metadata: Metadata = {
     title: "JAFZA Offshore Company Formation | UAE Business Setup Services",
     description:
       "Start your business in Dubai in Jebel Ali Free Zone. 100% foreign ownership, zero tax, full profit repatriation & asset protection. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/company-formation-jafza-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -479,10 +479,17 @@ export const metadata: Metadata = {
     title: "UAE Corporate Services | Business Setup & Company Formation",
     description:
       "Start your business in the UAE today. Our experts handle company setup, banking, tax, visas and ongoing compliance - so you can focus on growth. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/corporate-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

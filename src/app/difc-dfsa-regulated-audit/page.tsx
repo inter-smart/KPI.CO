@@ -446,10 +446,17 @@ export const metadata: Metadata = {
       "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI",
     description:
       "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA.",
-    url: " ",
+    url: "https://kpi.co/difc-dfsa-regulated-audit",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

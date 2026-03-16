@@ -488,10 +488,17 @@ export const metadata: Metadata = {
     title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
     description:
       "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion.",
-    url: " ",
+    url: "https://kpi.co/business-setup-dubai-airport-free-zone",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -385,10 +385,17 @@ export const metadata = {
     title: "ADGM Approved Audit Firm | FSRA Regulated Audits UAE ",
     description:
       "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA",
-    url: " ",
+    url: "https://kpi.co/adgm-regulated-audit",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

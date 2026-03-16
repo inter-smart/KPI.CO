@@ -384,10 +384,17 @@ export const metadata: Metadata = {
     title: "Special Purpose Vehicles (SPVs) in ADGM | Structuring & Formation | KPI Group",
     description:
       "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support.",
-    url: " ",
+    url: "https://kpi.co/adgm-spv-formation",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

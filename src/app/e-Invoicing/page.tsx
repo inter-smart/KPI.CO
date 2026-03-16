@@ -292,10 +292,17 @@ export const metadata: Metadata = {
     title: "E-Invoicing Advisory & Readiness Support | KPI",
     description:
       "Advisory and readiness support for UAE e-invoicing mandates. Align tax, systems, and controls with regulatory requirements and business efficiency.",
-    url: " ",
+    url: "https://kpi.co/e-Invoicing",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -528,10 +528,17 @@ export const metadata: Metadata = {
     title: "Hamriyah Free Zone Company Formation | Start a Business UAE",
     description:
       "Start your business in Hamriyah Free Zone from AED 12,000. 100% foreign ownership, zero customs duty, industrial facilities & fast licensing. Contact KPI today.",
-    url: " ",
+    url: "https://kpi.co/company-setup-hamriyah-free-zone",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

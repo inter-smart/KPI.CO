@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
     description:
       "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE.",
-    url: " ",
+    url: "https://kpi.co/blog",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: ["/images/KPI-logo-og.png"],
   },
 };
 

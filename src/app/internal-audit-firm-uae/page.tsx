@@ -415,10 +415,17 @@ export const metadata: Metadata = {
     title: "Internal Audit Services UAE | Internal Auditing | KPI Group",
     description:
       "Looking for a trusted internal audit firm in the UAE? KPI Group provides tailored audits to strengthen controls, ensure compliance - get in touch!",
-    url: " ",
+    url: "https://kpi.co/internal-audit-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

@@ -453,10 +453,17 @@ export const metadata: Metadata = {
     title: "RAK ICC Offshore Company (RAKEZ) | UAE Business Setup Services",
     description:
       "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch!",
-    url: " ",
+    url: "https://kpi.co/rak-icc-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

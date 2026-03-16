@@ -526,10 +526,17 @@ export const metadata: Metadata = {
     title: "Risk Advisory Services in the UAE | KPI Group",
     description:
       "Independent risk and assurance services for UAE organisations. Strengthen governance, internal controls, and regulatory compliance with clarity and discipline.",
-    url: " ",
+    url: "https://kpi.co/risk-services-uae",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 

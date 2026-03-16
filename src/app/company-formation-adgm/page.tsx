@@ -492,10 +492,17 @@ export const metadata: Metadata = {
     title: "Company Formation in Abu Dhabi Global Market | KPI Group",
     description:
       "Set up your company in Abu Dhabi Global Market (ADGM) with expert regulatory and structure-led support. KPI Group delivers end-to-end ADGM company formation with clarity and precision.",
-    url: " ",
+    url: "https://kpi.co/company-formation-adgm",
     siteName: "KPI.CO",
     type: "website",
-    images: [" "],
+    images: [
+      {
+        url: "/images/KPI-logo-og.png",
+        width: 1200,
+        height: 630,
+        alt: "KPI Logo",
+      },
+    ],
   },
 };
 
