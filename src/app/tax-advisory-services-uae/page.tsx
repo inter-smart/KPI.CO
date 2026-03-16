@@ -364,9 +364,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "UAE Tax Advisory & Structuring Services | KPI Group  ",
+  title: "UAE Tax Advisory & Structuring Services | KPI Group",
   description:
-    "KPI provides independent tax advisory services for UAE businesses. Get practical guidance on corporate tax, structuring, and compliance delivered with regulatory clarity. ",
+    "KPI provides independent tax advisory services for UAE businesses. Get practical guidance on corporate tax, structuring, and compliance delivered with regulatory clarity.",
+
+  openGraph: {
+    title: "Tax Advisory Services in the UAE | KPI Group",
+    description:
+      "KPI provides independent tax advisory services for UAE businesses. Get practical guidance on corporate tax, structuring, and compliance delivered with regulatory clarity.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function page() {

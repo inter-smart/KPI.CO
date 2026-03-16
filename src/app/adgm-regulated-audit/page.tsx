@@ -374,10 +374,22 @@ const localData = {
   },
 };
 
-export const metadata: Metadata = {
-  title: "ADGM Approved Audit Firm | FSRA Regulated Audits UAE  ",
+ 
+
+export const metadata = {
+ title: "ADGM Regulated Audit Services | FSRA-Compliant Audits | KPI",
   description:
-    "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA ",
+    "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA  ",
+
+  openGraph: {
+    title: "ADGM Approved Audit Firm | FSRA Regulated Audits UAE ",
+    description:
+      "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function DwtcFreezone() {

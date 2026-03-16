@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
@@ -457,11 +458,27 @@ const localData = {
   } satisfies MeydanKeyBenefitsData,
 };
 
+export const metadata: Metadata = {
+  title: "Meydan Free Zone Company Setup | Fast & Easy Business Setup",
+  description:
+    "Start your UAE business in Meydan Free Zone. Compare setup costs, license types and UAE visa options. 100% company ownership. No hidden fees.",
+
+  openGraph: {
+    title: "Meydan Free Zone Company Setup | Start Your Business in Dubai",
+    description:
+      "Start your UAE business in Meydan Free Zone. Compare setup costs, license types and UAE visa options. 100% company ownership. No hidden fees.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
+};
+
 export default function MainlandCompanyFormationUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="meydan" />
-      <MainlandBusiness data={localData.mainlandBusiness} />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="meydan"  />
       <MeydanFreeZone data={localData.meydanFreeZone} variant="MeydanFreeZone" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <BusinessLocation data={localData.businessLocation} />

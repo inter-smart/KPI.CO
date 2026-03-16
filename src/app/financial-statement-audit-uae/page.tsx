@@ -411,10 +411,22 @@ const localData = {
   },
 };
 
-export const metadata: Metadata = { 
-  title: "Financial Statement Audit Services in the UAE | KPI Group",
+ 
+
+export const metadata = {
+ title: "Financial Statement Audit Services in the UAE | KPI Group",
   description:
-    "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders.",
+    "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders. ",
+
+  openGraph: {
+    title: "Financial Statement Audit Firm in Dubai | KPI Group ",
+    description:
+      "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders. ",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function VatServicesUaePage() {

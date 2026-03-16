@@ -377,16 +377,16 @@ const localData = {
       },
       {
         id: 2,
-        title: "Is IFZA Free Zone suitable for startups?",
+        title: "Can I apply for UAE residence visas through IFZA?  ",
         description: `
                   <p>Yes, IFZA companies are eligible to apply for UAE residence visas, subject to licence type and package selection.  </p>
                   `,
       },
       {
         id: 3,
-        title: "Is IFZA Free Zone suitable for startups?",
+        title: "Do I need a physical office in IFZA? ",
         description: `
-                  <p>IFZA offers flexible workspace solutions, including options that do not require a traditional physical office.  </p>
+                  <p>IFZA offers flexible workspace solutions, including options that do not require a traditional physical office. </p>
                   `,
       },
       {
@@ -413,9 +413,19 @@ const localData = {
   },
 };
 export const metadata: Metadata = {
-  title: "IFZA Company Setup Dubai | Fast & Affordable Free Zone Setup ",
+  title: "IFZA Company Setup Dubai | Fast & Affordable Free Zone Setup",
   description:
-    "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses. ",
+    "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses.",
+
+  openGraph: {
+    title: "IFZA Free Zone Business Setup | Start Your Business in Dubai",
+    description:
+      "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 export default function DwtcFreezone() {
   return (

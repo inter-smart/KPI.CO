@@ -75,7 +75,7 @@ export default function CorporateServicesUaeCta({
               "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
             variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
             variant === "dwtc" &&
-              "max-sm:p-[28px_20px_22px_31px]",
+              "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
@@ -188,6 +188,7 @@ export default function CorporateServicesUaeCta({
                 variant === "Financial-Statement-Audit" &&
                   "max-sm:!min-w-[120px]",
                 variant === "regulatory" && "max-sm:!min-w-[118px]",
+                variant === "CorporateServicesUae" && "!min-w-[118px] xl:!min-w-[233.6px] h-[30px] sm:h-[48.2px]",
                 variant === "difc-regulated" &&
                   "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&

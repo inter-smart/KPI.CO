@@ -493,11 +493,24 @@ const localData = {
   },
 };
 
-export const metadata: Metadata = {
-  title: "Audit Services in the UAE | Statutory & Regulated Audits | KPI",
+ 
+export const metadata = {
+ title: "Audit Services in the UAE | Statutory & Regulated Audits | KPI",
   description:
     "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
+
+  openGraph: {
+    title: "Audit Firms in Dubai | External & Regulatory Audit Services UAE",
+    description:
+      "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
+
+
 
 export default function AuditOverviewUaePage() {
   return (

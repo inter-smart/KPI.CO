@@ -408,9 +408,19 @@ const localData = {
 }; 
 
 export const metadata: Metadata = {
-  title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group ",
+  title: "Regulatory & Compliance Advisory Services UAE | KPI Group",
   description:
-    "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk. ",
+    "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk.",
+
+  openGraph: {
+    title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group",
+    description:
+      "KPI provides regulatory and compliance advisory services for UAE organisations. Practical support to meet authority requirements, strengthen controls, and reduce regulatory risk.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function RegulatoryComplianceAdvisoryUaePage() {

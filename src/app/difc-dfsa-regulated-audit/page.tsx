@@ -437,9 +437,20 @@ const localData = {
 
 export const metadata: Metadata = {
   title:
-    "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI ",
+    "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI",
   description:
-    "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA. ",
+    "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA.",
+
+  openGraph: {
+    title:
+      "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI",
+    description:
+      "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function DwtcFreezone() {

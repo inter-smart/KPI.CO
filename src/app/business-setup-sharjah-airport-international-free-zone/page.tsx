@@ -833,9 +833,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
+  title: "SAIF Free Zone Company Setup | Start Your Business in Sharjah",
   description:
-    "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion. ",
+    "Start your business in Sharjah in SAIF Free Zone. 100% foreign ownership, zero tax, full profit repatriation & flexible facilities. Get in touch!",
+
+  openGraph: {
+    title: "SAIF Free Zone Company Formation | UAE Business Setup Services",
+    description:
+      "Start your business in Sharjah in SAIF Free Zone. 100% foreign ownership, zero tax, full profit repatriation & flexible facilities. Get in touch!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function SaifzUaePage() {

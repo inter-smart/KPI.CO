@@ -175,6 +175,7 @@ export default function CorporateServicesUaeFormationProcess({
                     className={cn(
                       "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 cursor-pointer",
                       variant === "tax-advisory" && "min-w-[330px]",
+                     
                       
                       // isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
@@ -220,6 +221,8 @@ export default function CorporateServicesUaeFormationProcess({
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0",
+                          variant === "mainland" && "hidden",
+                          
                         )}
                       >
                         {step.step}
@@ -238,6 +241,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "company-freezone" && "max-w-[90%]",
                         variant == "sop" && "max-w-[90%]",
                         variant == "Financial-Statement-Audit" && "max-w-full",
+                        variant === "mainland" && "xl:max-w-[430px]",
                         variant == "CorporateServicesUae" && "max-w-full",
                         index <= activeStep
                           ? "!text-[#1c5396]"

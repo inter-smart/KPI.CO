@@ -21,6 +21,7 @@ type Variant =
   | "dsoa"
   | "dafza"
   | "rakez"
+  | "meydan"
   | "ifza"
   | "dwtc"
   | "Formation-JAFZA"
@@ -90,12 +91,13 @@ export default function MainlandBusiness({
                 hasVariant(variant, "dwtc") ||
                 hasVariant(variant, "rakez") ||
                 hasVariant(variant, "ifza")
-                ? "xl:w-[calc(100%-517px)] 2xl:w-[calc(100%-550px)] 3xl:w-[calc(100%-690px)]"
-                : "xl:w-[calc(100%-500px)] 2xl:w-[calc(100%-517px)] 3xl:w-[calc(100%-660px)]",
+                ? "xl:w-[calc(100%-517px)] "
+                : "xl:w-[calc(100%-500px)]",
               hasVariant(variant, "ADGM-Foundations") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[40px]",
+              
               hasVariant(variant, "Mainland") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
@@ -120,8 +122,9 @@ export default function MainlandBusiness({
               hasVariant(variant, "dwtc") && "xl:pr-[40px]",
               "xl:w-[calc(100%-517px)] xl:pr-[41px]",
               hasVariant(variant, "RAK-Offshore") &&
-              "xl:pr-[40px]",
               "xl:w-[calc(100%-517px)] xl:pr-[50px]",
+              hasVariant(variant, "meydan") &&
+                "xl:w-[calc(100%-517px)] xl:pr-[45px]",
             )}
           >
             <div
@@ -271,6 +274,7 @@ export default function MainlandBusiness({
               variant === "JAFZA-Freezone" && "xl:w-[517px]",
               variant === "rakez" && "xl:w-[517px]",
               variant === "RAK-Offshore" && "xl:w-[517px]",
+              variant === "meydan" && "xl:w-[517px]",
             )}
           >
             <div className={cn("relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden" , variant==="AuditServicesUae" && "max-sm:h-[437px]")}>

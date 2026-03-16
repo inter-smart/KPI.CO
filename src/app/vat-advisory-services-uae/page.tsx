@@ -576,9 +576,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "VAT Advisory & Compliance Services in the UAE | KPI",
+  title: "UAE VAT Advisory, Registration & Compliance | KPI",
   description:
-    "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations. ",
+    "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations.",
+
+  openGraph: {
+    title: "VAT Advisory & Compliance Services in the UAE | KPI Group",
+    description:
+      "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function VatServicesUaePage() {

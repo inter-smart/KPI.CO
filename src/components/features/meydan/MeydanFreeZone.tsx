@@ -105,7 +105,7 @@ export default function MeydanFreeZone({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[48px_34px_35px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[45px_34px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   variant === "difc-regulated" && "xl:pr-[15px]",
                   // variant === "difc-regulated" && "xl:pr-[15px]",
@@ -124,7 +124,7 @@ export default function MeydanFreeZone({
               >
                 <div
                   className={cn(
-                    "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] leading-normal text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px] leading-normal font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[18px] 2xl:mb-[20px]",
+                    "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]  leading-[1.4] text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px]  font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
                     variant === "difc-regulated" &&
@@ -186,7 +186,7 @@ export default function MeydanFreeZone({
                     >
                       <span
                         className={cn(
-                          "text-[14px] xl:text-[16px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
+                          "text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] text-[#364153]",
                           variant === "ADGM-Foundation" &&
                             "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
                           variant === "difc" && "text-[14px] xl:text-[16px] ",
@@ -232,6 +232,8 @@ export default function MeydanFreeZone({
                         variant === "audit" && " text-[#1C5396]",
                         variant === "RAK-Offshore" &&
                           " text-[#1C5396] mb-[10px]",
+                        variant === "ifza" &&
+                          " text-[#1C5396] xl:mb-[10px]",
                         variant === "MeydanFreeZone" && "max-sm:mb-[5px]",
                       )}
                     >

@@ -567,6 +567,16 @@ export const metadata: Metadata = {
   title: "Free Zone Company Setup in UAE | Company Formation | KPI",
   description:
     "Set up a free zone company in the UAE with expert support. Compare free zones, license types, setup costs, and visa options. Fast process. Clear pricing.",
+
+  openGraph: {
+    title: "Free Zone Company Registration | Easy Business Setup in UAE",
+    description:
+      "Set up a free zone company in the UAE with expert support. Compare free zones, license types, setup costs, and visa options. Fast process. Clear pricing.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function page() {

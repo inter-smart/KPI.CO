@@ -404,6 +404,16 @@ export const metadata: Metadata = {
   title: "SOP Consultants in UAE | Standard Operating Procedures | KPI",
   description:
     "Professional SOP consultants in the UAE offering standard operating procedures for businesses to improve compliance, efficiency, and performance. Get in touch!",
+
+  openGraph: {
+    title: "SOP Consultants in UAE | Standard Operating Procedures | KPI",
+    description:
+      "Professional SOP consultants in the UAE offering standard operating procedures for businesses to improve compliance, efficiency, and performance. Get in touch!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function StandardOperatingProceduresUaePage() {

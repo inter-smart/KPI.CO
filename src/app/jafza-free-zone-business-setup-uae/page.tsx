@@ -408,9 +408,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "JAFZA Free Zone Company Setup | Expert UAE Business Services  ",
+  title: "JAFZA Free Zone Company Setup | Expert UAE Business Services",
   description:
-    "Set up your company in JAFZA Free Zone, Dubai. Flexible business licenses, 100% ownership, and tailored visa options for entrepreneurs and startups in the UAE. ",
+    "Set up your company in JAFZA Free Zone, Dubai. Flexible business licenses, 100% ownership, and tailored visa options for entrepreneurs and startups in the UAE.",
+
+  openGraph: {
+    title: "JAFZA Free Zone Company Setup | Launch Your Dubai Business",
+    description:
+      "Set up your company in JAFZA Free Zone, Dubai. Flexible business licenses, 100% ownership, and tailored visa options for entrepreneurs and startups in the UAE.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function DwtcFreezone() {

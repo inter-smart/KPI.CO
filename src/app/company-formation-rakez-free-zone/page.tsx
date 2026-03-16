@@ -525,7 +525,17 @@ const localData = {
 export const metadata: Metadata = {
   title: "Start Your Business in UAE | RAK Economic Zone Business Setup",
   description:
-    "Set up your business in Ras Al Khaimah Economic Zone (RAKEZ), UAE. Cost-effective licenses, fast approvals & full company setup support. Get in touch! ",
+    "Set up your business in Ras Al Khaimah Economic Zone (RAKEZ), UAE. Cost-effective licenses, fast approvals & full company setup support. Get in touch!",
+
+  openGraph: {
+    title: "Ras Al Khaimah Economic Zone | Flexible Business Setup UAE",
+    description:
+      "Set up your business in Ras Al Khaimah Economic Zone (RAKEZ), UAE. Cost-effective licenses, fast approvals & full company setup support. Get in touch!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function page() {

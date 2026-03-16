@@ -165,7 +165,7 @@ export default function InnerHero({
                 variant === "CorporateServicesUae" &&
                   "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
-                variant === "Mainland" && "lg:max-w-[75%]",
+                variant === "Mainland" && "lg:max-w-[770px] xl:text-[20px]",
                 variant === "SOP" &&
                   "lg:max-w-[90%] xl:mb-[30px] xl:text-[20px]",
                 variant === "ifza" && "lg:max-w-[100%]",

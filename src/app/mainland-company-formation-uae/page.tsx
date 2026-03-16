@@ -314,6 +314,7 @@ const localData = {
     steps: [
       {
         id: 1,
+        step: "Step One" ,
         title: "Free Consultation with Our Experts",
         sub_title: "Choose Your Business Activity & Structure",
         inner_title: "Free Consultation with Our Experts",
@@ -322,6 +323,7 @@ const localData = {
       },
       {
         id: 2,
+        step: "Step Two" ,
         title: "Choose Your Business Activity & Structure",
         sub_title: "Choose Your Business Activity & Structure",
         inner_title: "Choose Your Business Activity & Structure",
@@ -330,6 +332,7 @@ const localData = {
       },
       {
         id: 3,
+        step: "Step Three" ,
         title: "Reserve Your Company Name & Apply for License",
         sub_title: "Reserve Your Company Name & Apply for License",
         inner_title: "Reserve Your Company Name & Apply for License",
@@ -338,6 +341,7 @@ const localData = {
       },
       {
         id: 4,
+        step: "Step Four" ,
         title: "Office & Workspace Setup",
         sub_title: "Office & Workspace Setup",
         inner_title: "Office & Workspace Setup",
@@ -346,6 +350,7 @@ const localData = {
       },
       {
         id: 5,
+        step: "Step Five" ,
         title: "UAE Residency & Visas",
         sub_title: "UAE Residency & Visas",
         inner_title: "UAE Residency & Visas",
@@ -354,6 +359,7 @@ const localData = {
       },
       {
         id: 6,
+        step: "Step Six" ,
         title: "Open Your Business Bank Account",
         sub_title: "Open Your Business Bank Account",
         inner_title: "Open Your Business Bank Account",
@@ -592,9 +598,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
+  title: "Mainland Business Setup UAE | Company Formation | KPI Group",
   description:
-    "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees. ",
+    "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
+
+  openGraph: {
+    title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group",
+    description:
+      "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function MainlandCompanyFormationUaePage() {

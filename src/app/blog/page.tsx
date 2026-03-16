@@ -23,7 +23,18 @@ const localData: BlogPageData = {
 
 export const metadata: Metadata = {
   title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
-  description: "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE. ",
+  description:
+    "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE.",
+
+  openGraph: {
+    title: "Blogs | Audit, Risk & Business Advisory Insights | KPI",
+    description:
+      "Expert insights on audit, risk and business advisory, delivered by trusted advisors with over 30 years of experience in the UAE.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default async function BlogPage() {

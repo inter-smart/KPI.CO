@@ -376,10 +376,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "ADGM SPV Formation Services | Special Purpose Vehicles UAE | KPI Group   ",
+  title: "ADGM SPV Formation Services | Special Purpose Vehicles UAE | KPI Group",
   description:
-    "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support. ",
+    "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support.",
+
+  openGraph: {
+    title: "Special Purpose Vehicles (SPVs) in ADGM | Structuring & Formation | KPI Group",
+    description:
+      "Structured ADGM SPV formation for asset holding, investments, and ring-fenced ownership. Clear structuring, regulator-aware execution, and end-to-end support.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function DwtcFreezone() {

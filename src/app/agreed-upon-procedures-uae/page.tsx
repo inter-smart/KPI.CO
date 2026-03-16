@@ -433,13 +433,23 @@ const localData = {
     })),
   },
 };
+ 
 
-export const metadata: Metadata = {
-  title: "AUP Audit Services in UAE | DFSA & Regulatory Compliance | KPI   ",
+export const metadata = {
+ title: "Agreed-Upon Procedures (AUP) Services in the UAE | KPI",
   description:
-    "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities.. ",
-};
+    "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities..  ",
 
+  openGraph: {
+    title: "AUP Audit Services in UAE | DFSA & Regulatory Compliance | KPI  ",
+    description:
+      "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities..",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
+};
 export default function page() {
   return (
     <>

@@ -472,9 +472,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "DIFC Free Zone Company Setup | Start Your Business in Dubai",
+  title: "DIFC Company Formation | Expert Business Setup Consultants",
   description:
     "Start your business in DIFC, Dubai’s global financial free zone. Expert end to end support for company setup, licensing, and regulatory compliance. Get in touch!",
+
+  openGraph: {
+    title: "DIFC Free Zone Company Setup | Start Your Business in Dubai",
+    description:
+      "Start your business in DIFC, Dubai’s global financial free zone. Expert end to end support for company setup, licensing, and regulatory compliance. Get in touch!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function CompanyFormationDIFC() {

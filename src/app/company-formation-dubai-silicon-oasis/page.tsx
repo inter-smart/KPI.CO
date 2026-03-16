@@ -132,7 +132,7 @@ const localData = {
     description:
       "<p>Dubai Silicon Oasis Authority (DSOA) is a vibrant, tech-focused free zone in Dubai that supports businesses of all sizes. With state-of-the-art infrastructure, flexible office options, and a supportive regulatory environment, it provides a strong foundation for startups, IT companies, and service providers to establish themselves in the UAE. DSOA fosters a thriving business ecosystem where companies can grow, explore regional and international opportunities, and turn innovative ideas into long-term success in one of the world’s most dynamic commercial hubs.</p>",
     highlightsTitle:
-      "DSO Free Zone is Well Suited For:",
+      "DSO Free Zone is well suited for:",
     highlights: [
       "Technology startups and IT companies",
       "International firms expanding into Dubai",
@@ -452,9 +452,19 @@ const localData = {
 
 
 export const metadata: Metadata = {
-  title: "Dubai Silicon Oasis Business Setup | Fast Company Formation  ",
+  title: "Dubai Silicon Oasis Business Setup | Fast Company Formation",
   description:
-    "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!  ",
+    "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!",
+
+  openGraph: {
+    title: "Dubai Silicon Oasis Business Setup | Company Formation in UAE",
+    description:
+      "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 

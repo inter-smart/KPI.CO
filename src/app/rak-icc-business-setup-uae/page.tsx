@@ -445,9 +445,19 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "RAK ICC Offshore Company (RAKEZ) | UAE Business Setup Services",
+  title: "RAK ICC Offshore Company Setup | Fast & Compliant UAE Registration",
   description:
     "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch!",
+
+  openGraph: {
+    title: "RAK ICC Offshore Company (RAKEZ) | UAE Business Setup Services",
+    description:
+      "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch!",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
+  },
 };
 
 export default function DwtcFreezone() {

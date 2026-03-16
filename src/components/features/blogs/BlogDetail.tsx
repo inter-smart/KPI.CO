@@ -251,11 +251,11 @@ export default function BlogDetail({ data }: BlogDetailProps) {
                     const el = node as any;
                     if (el.type === "tag" && el.name === "img") {
                       return (
-                        <span className="image-overlay relative block my-[25px] md:my-[30px] xl:my-[38px] !overflow-hidden !rounded-[10px]">
+                        <span className="image-overlay relative block my-[25px] md:my-[30px] xl:my-[38px] min-h-[220px] !overflow-hidden !rounded-[10px]">
                           <img
                             {...el.attribs}
                             alt={el.attribs?.alt || ""}
-                            className={cn("w-full h-auto block !rounded-[10px] !m-0", el.attribs?.class, el.attribs?.className)}
+                            className={cn("w-full h-full block !rounded-[10px] !m-0", el.attribs?.class, el.attribs?.className)}
                           />
                           <div className="absolute inset-0 bg-[#1C5396]/30 z-20 pointer-events-none !m-0 !rounded-[10px]"></div>
                         </span>

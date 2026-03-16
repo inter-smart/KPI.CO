@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import InnerHero from "@/components/common/InnerHero";
 import { blogData } from "@/data/blogData";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
@@ -515,6 +516,22 @@ const localData = {
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`, 
     })),
+  },
+};
+
+export const metadata: Metadata = {
+  title: "Hamriyah Free Zone | Start Your Business in Sharjah Today",
+  description:
+    "Start your business in Hamriyah Free Zone from AED 12,000. 100% foreign ownership, zero customs duty, industrial facilities & fast licensing. Contact KPI today.",
+
+  openGraph: {
+    title: "Hamriyah Free Zone Company Formation | Start a Business UAE",
+    description:
+      "Start your business in Hamriyah Free Zone from AED 12,000. 100% foreign ownership, zero customs duty, industrial facilities & fast licensing. Contact KPI today.",
+    url: " ",
+    siteName: "KPI.CO",
+    type: "website",
+    images: [" "],
   },
 };
 
