@@ -185,6 +185,7 @@ export default function InnerHero({
                 variant === "Tax-Advisory" && "xl:text-[20px]",
                 variant === "e-invoicing" && "xl:text-[20px]",
                 variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
+                variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
               )}
             >

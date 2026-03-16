@@ -96,7 +96,7 @@ export default function MeydanFreeZone({
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
 
             variant === "MeydanFreeZone" &&
-              "sm:gap-[15px] lg:gap-[20px] xl:gap-[30px]",
+              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px]",
 
             variant === "RAK-Offshore" && "xl:gap-[30px]",
           )}
@@ -105,7 +105,7 @@ export default function MeydanFreeZone({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[45px_34px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[35px_34px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   variant === "difc-regulated" && "xl:pr-[15px]",
                   // variant === "difc-regulated" && "xl:pr-[15px]",
@@ -177,7 +177,7 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[12px] relative z-0 tracking-[-0.5px] before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[4px]",
+                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[10px] relative z-0 tracking-[-0.5px] before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[4px]",
                         variant === "JAFZA-Freezone" && "max-sm:before:top-[2px]",
                         index % 2 !== 0
                           ? "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3333%2024.4444C19.4698%2024.4444%2024.4444%2019.4698%2024.4444%2013.3333C24.4444%207.19678%2019.4698%202.22217%2013.3333%202.22217C7.19678%202.22217%202.22217%207.19678%202.22217%2013.3333C2.22217%2019.4698%207.19678%2024.4444%2013.3333%2024.4444Z%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]"
@@ -234,7 +234,7 @@ export default function MeydanFreeZone({
                           " text-[#1C5396] mb-[10px]",
                         variant === "ifza" &&
                           " text-[#1C5396] xl:mb-[10px]",
-                        variant === "MeydanFreeZone" && "max-sm:mb-[5px]",
+                        variant === "MeydanFreeZone" && "max-sm:mb-[5px] xl:mb-[12px]",
                       )}
                     >
                       {item.title}
@@ -244,6 +244,7 @@ export default function MeydanFreeZone({
                         "text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",
                         variant === "Tax-Advisory" && "sm:max-w-[97%]",
                         variant === "RAK-Offshore" && "sm:max-w-full",
+                      
                       )}
                     >
                       {/* {item.description} */}
