@@ -3,7 +3,7 @@
 import { Heading } from "@/components/utils/typography";
 import Image from "next/image";
 import parse from "html-react-parser";
-import { RiskOrganisationData } from "@/app/risk-services-uae/page";
+import { RiskOrganisationData } from "@/app/risk-assurance/risk-services-uae/page";
 import { cn } from "@/lib/utils";
 
 type Variant =

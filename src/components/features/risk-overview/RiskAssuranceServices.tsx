@@ -3,7 +3,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaCarouselType } from "embla-carousel";
 import { useCallback, useEffect, useState } from "react";
-import { RiskAssuranceData } from "@/app/risk-services-uae/page";
+import { RiskAssuranceData } from "@/app/risk-assurance/risk-services-uae/page";
 import { Heading } from "@/components/utils/typography";
 import parse from "html-react-parser";
 import Image from "next/image";

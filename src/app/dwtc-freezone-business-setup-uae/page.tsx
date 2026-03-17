@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { MediaItem } from "../page";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
-import { RiskOrganisationData } from "../risk-services-uae/page";
+import { RiskOrganisationData } from "../risk-assurance/risk-services-uae/page";
 import BlogRelated from "@/components/features/blogs/BlogRelated";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";

@@ -34,17 +34,17 @@ const navItems = [
         subItems: [
           {
             name: "Financial Statement Audit",
-            href: "/financial-statement-audit-uae",
+            href: "/audit-assurance/financial-statement-audit-uae",
           },
           {
             name: "Agreed Upon Procedures",
-            href: "/agreed-upon-procedures-uae",
+            href: "/audit-assurance/agreed-upon-procedures-uae",
           },
           { name: "ADGM Regulated Audit", 
-            href: "/adgm-regulated-audit" },
+            href: "/audit-assurance/adgm-regulated-audit" },
           {
             name: "DIFC & DFSA Regulated Audit",
-            href: "/difc-dfsa-regulated-audit",
+            href: "/audit-assurance/difc-dfsa-regulated-audit",
           },
         ],
       },
@@ -56,7 +56,7 @@ const navItems = [
         subItems: [
           { name: "Corporate Services", href: "/corporate-services-uae" },
           { name: "Tax Advisory", href: "/tax-advisory-services-uae" },
-          { name: "e-invoicing Services", href: "/e-Invoicing" },
+          { name: "e-invoicing Services", href: "/advisory/tax-advisory/e-Invoicing" },
         ],
       },
       {
@@ -65,10 +65,10 @@ const navItems = [
         icon: "/images/risk_icon.svg",
         href: "#",
         subItems: [
-          { name: "Enterprise Risk Management", href: "enterprise-risk-management-services-uae" },
+          { name: "Enterprise Risk Management", href: "/risk-assurance/enterprise-risk-management-services-uae" },
           { name: "Internal Audit Services", href: "internal-audit-firm-uae" },
-          { name: "Standard Operating Procedures", href: "#" },
-          { name: "Regulatory & Compliance Advisory", href: "#" },
+          { name: "Standard Operating Procedures", href: "/standard-operating-procedures-uae" },
+          { name: "Regulatory & Compliance Advisory", href: "/regulatory-compliance-advisory-uae" },
         ],
       },
       {
@@ -94,7 +94,7 @@ const navItems = [
       {
         id: "glossary",
         label: "Glossary",
-        href: "#",
+        href: "/glossary",
         subItems: [],
       },
       {

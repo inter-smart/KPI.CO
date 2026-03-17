@@ -4,7 +4,7 @@ import CorporateServicesUaeWhyBuild from "@/components/features/services/Corpora
 import { MediaItem } from "../page";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
-import { RiskOrganisationData } from "../risk-services-uae/page";
+import { RiskOrganisationData } from "../risk-assurance/risk-services-uae/page";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";

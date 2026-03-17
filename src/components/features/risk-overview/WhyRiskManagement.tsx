@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
-import type { WhyRiskData } from "@/app/risk-services-uae/page";
+import type { WhyRiskData } from "@/app/risk-assurance/risk-services-uae/page";
 
 type WhyRiskProps = {
   data: WhyRiskData;

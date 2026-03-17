@@ -5,7 +5,7 @@ import RiskExploreService from "@/components/features/risk-overview/RiskExploreS
 import WhyRiskManagement from "@/components/features/risk-overview/WhyRiskManagement";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import { MediaItem } from "../page";
+import { MediaItem } from "../../page";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 import type { FaqItem } from "@/app/corporate-services-uae/page";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
