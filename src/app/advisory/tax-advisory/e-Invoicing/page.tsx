@@ -284,12 +284,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "UAE E-Invoicing Advisory & Compliance Support | KPI",
+  title: "E-Invoicing Advisory & Readiness Support | KPI ",
   description:
     "Advisory and readiness support for UAE e-invoicing mandates. Align tax, systems, and controls with regulatory requirements and business efficiency.",
 
   openGraph: {
-    title: "E-Invoicing Advisory & Readiness Support | KPI",
+    title: "UAE E-Invoicing Advisory & Compliance Support | KPI ",
     description:
       "Advisory and readiness support for UAE e-invoicing mandates. Align tax, systems, and controls with regulatory requirements and business efficiency.",
     url: "https://kpi.co/e-Invoicing",

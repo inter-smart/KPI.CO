@@ -833,12 +833,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "SAIF Free Zone Company Setup | Start Your Business in Sharjah",
+  title: "SAIF Free Zone Company Formation | UAE Business Setup Services ",
   description:
     "Start your business in Sharjah in SAIF Free Zone. 100% foreign ownership, zero tax, full profit repatriation & flexible facilities. Get in touch!",
 
   openGraph: {
-    title: "SAIF Free Zone Company Formation | UAE Business Setup Services",
+    title: "SAIF Free Zone Company Setup | Start Your Business in Sharjah ",
     description:
       "Start your business in Sharjah in SAIF Free Zone. 100% foreign ownership, zero tax, full profit repatriation & flexible facilities. Get in touch!",
     url: "https://kpi.co/business-setup-sharjah-airport-international-free-zone",

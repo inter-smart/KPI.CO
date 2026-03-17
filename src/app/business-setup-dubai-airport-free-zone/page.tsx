@@ -480,12 +480,12 @@ const localData = {
 };
  
 export const metadata: Metadata = {
-  title: "Dubai Airport Free Zone | Fast & Affordable Business Setup",
+  title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE ",
   description:
     "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion.",
 
   openGraph: {
-    title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE",
+    title: "Dubai Airport Free Zone | Fast & Affordable Business Setup ",
     description:
       "Start your business in Dubai Airport Free Zone with full ownership, strategic airport access, fast licensing, and expert support for international expansion.",
     url: "https://kpi.co/business-setup-dubai-airport-free-zone",

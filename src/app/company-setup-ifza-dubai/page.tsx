@@ -413,12 +413,12 @@ const localData = {
   },
 };
 export const metadata: Metadata = {
-  title: "IFZA Company Setup Dubai | Fast & Affordable Free Zone Setup",
+  title: "IFZA Free Zone Business Setup | Start Your Business in Dubai ",
   description:
     "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses.",
 
   openGraph: {
-    title: "IFZA Free Zone Business Setup | Start Your Business in Dubai",
+    title: "IFZA Company Setup Dubai | Fast & Affordable Free Zone Setup ",
     description:
       "Set up your company in IFZA Dubai with KPI. Cost-effective packages, multiple license options & fast company formation designed for growing businesses.",
     url: "https://kpi.co/company-setup-ifza-dubai",

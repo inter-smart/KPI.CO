@@ -394,12 +394,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "UAE Corporate Tax Advisory & Compliance | KPI Group",
+  title: "Corporate Tax Advisory Services in the UAE | KPI Group ",
   description:
     "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime.",
 
   openGraph: {
-    title: "Corporate Tax Advisory Services in the UAE | KPI Group",
+    title: "UAE Corporate Tax Advisory & Compliance | KPI Group ",
     description:
       "KPI offers independent corporate tax advisory and compliance support for UAE businesses. Structure, assess, and comply with confidence under the UAE Corporate Tax regime.",
     url: "https://kpi.co/corporate-tax-services-uae",

@@ -484,12 +484,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "ADGM Company Formation & Structuring Services | KPI Group",
+  title: "Company Formation in Abu Dhabi Global Market | KPI Group ",
   description:
     "Set up your company in Abu Dhabi Global Market (ADGM) with expert regulatory and structure-led support. KPI Group delivers end-to-end ADGM company formation with clarity and precision.",
 
   openGraph: {
-    title: "Company Formation in Abu Dhabi Global Market | KPI Group",
+    title: "ADGM Company Formation & Structuring Services | KPI Group ",
     description:
       "Set up your company in Abu Dhabi Global Market (ADGM) with expert regulatory and structure-led support. KPI Group delivers end-to-end ADGM company formation with clarity and precision.",
     url: "https://kpi.co/company-formation-adgm",

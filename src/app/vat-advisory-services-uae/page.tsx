@@ -576,12 +576,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "UAE VAT Advisory, Registration & Compliance | KPI",
+  title: "VAT Advisory & Compliance Services in the UAE | KPI  ",
   description:
     "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations.",
 
   openGraph: {
-    title: "VAT Advisory & Compliance Services in the UAE | KPI Group",
+    title: "UAE VAT Advisory, Registration & Compliance | KPI  ",
     description:
       "Independent VAT advisory for UAE businesses. Registration, compliance, risk reviews, and practical VAT positions aligned with UAE regulations.",
     url: "https://kpi.co/vat-advisory-services-uae",

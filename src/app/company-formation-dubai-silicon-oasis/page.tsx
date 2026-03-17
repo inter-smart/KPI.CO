@@ -452,12 +452,12 @@ const localData = {
 
 
 export const metadata: Metadata = {
-  title: "Dubai Silicon Oasis Business Setup | Fast Company Formation",
+  title: "Dubai Silicon Oasis Business Setup | Company Formation in UAE ",
   description:
     "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!",
 
   openGraph: {
-    title: "Dubai Silicon Oasis Business Setup | Company Formation in UAE",
+    title: "Dubai Silicon Oasis Business Setup | Fast Company Formation ",
     description:
       "Start your business in Dubai Silicon Oasis (DSOA). Flexible licenses, affordable packages & expert support. Get a free quote!",
     url: "https://kpi.co/company-formation-dubai-silicon-oasis",

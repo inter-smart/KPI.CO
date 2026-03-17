@@ -440,12 +440,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "DMCC Free Zone Company Setup | UAE Business Setup Experts",
+  title: "DMCC Free Zone Company Setup | Start Your Business in Dubai ",
   description:
     "Launch your business in DMCC Free Zone, Dubai. Compare company setup costs, license types, and UAE visa options. 100% company ownership. No hidden fees.",
 
   openGraph: {
-    title: "DMCC Free Zone Company Setup | Start Your Business in Dubai",
+    title: "DMCC Free Zone Company Setup | UAE Business Setup Experts ",
     description:
       "Launch your business in DMCC Free Zone, Dubai. Compare company setup costs, license types, and UAE visa options. 100% company ownership. No hidden fees.",
     url: "https://kpi.co/dmcc-freezone-business-setup-uae",

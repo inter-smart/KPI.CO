@@ -394,12 +394,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "DWTC Free Zone Company Setup | Start Your Business in UAE",
+  title: "DWTC Free Zone Business Setup | Start Your Business in Dubai ",
   description:
     "Start your business in Dubai World Trade Centre with KPI. Benefit from a central location, flexible office solutions,and a simplified company setup process.",
 
   openGraph: {
-    title: "DWTC Free Zone Business Setup | Start Your Business in Dubai",
+    title: "DWTC Free Zone Company Setup | Start Your Business in UAE ",
     description:
       "Start your business in Dubai World Trade Centre with KPI. Benefit from a central location, flexible office solutions,and a simplified company setup process.",
     url: "https://kpi.co/dwtc-freezone-business-setup-uae",

@@ -418,12 +418,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Enterprise Risk Management Advisory UAE | KPI Group",
+  title: "Enterprise Risk Management (ERM) Services UAE | KPI Group ",
   description:
     "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment.",
 
   openGraph: {
-    title: "Enterprise Risk Management (ERM) Services UAE | KPI Group",
+    title: "Enterprise Risk Management Advisory UAE | KPI Group ",
     description:
       "Enterprise Risk Management (ERM) services for UAE organisations. Identify, assess, and manage enterprise risks with governance clarity and regulatory alignment.",
     url: "https://kpi.co/enterprise-risk-management-services-uae",

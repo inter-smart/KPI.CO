@@ -368,12 +368,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "ADGM SPV Foundations Advisory & Setup | KPI Group",
+  title: "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group ",
   description:
     "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.",
 
   openGraph: {
-    title: "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group",
+    title: "ADGM SPV Foundations Advisory & Setup | KPI Group ",
     description:
       "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.",
     url: "https://kpi.co/adgm-spv-foundation-setup",

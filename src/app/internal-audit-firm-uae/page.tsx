@@ -407,12 +407,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Internal Auditor in Dubai | Internal Audit Firms in UAE",
+  title: "Internal Audit Services UAE | Internal Auditing | KPI Group ",
   description:
     "Looking for a trusted internal audit firm in the UAE? KPI Group provides tailored audits to strengthen controls, ensure compliance - get in touch!",
 
   openGraph: {
-    title: "Internal Audit Services UAE | Internal Auditing | KPI Group",
+    title: "Internal Auditor in Dubai | Internal Audit Firms in UAE ",
     description:
       "Looking for a trusted internal audit firm in the UAE? KPI Group provides tailored audits to strengthen controls, ensure compliance - get in touch!",
     url: "https://kpi.co/internal-audit-uae",

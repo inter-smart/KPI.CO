@@ -518,12 +518,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Risk Advisory & Governance Services UAE | KPI Group",
+  title: "Risk Advisory Services in the UAE | KPI Group ",
   description:
     "Independent risk and assurance services for UAE organisations. Strengthen governance, internal controls, and regulatory compliance with clarity and discipline.",
 
   openGraph: {
-    title: "Risk Advisory Services in the UAE | KPI Group",
+    title: "Risk Advisory & Governance Services UAE | KPI Group ",
     description:
       "Independent risk and assurance services for UAE organisations. Strengthen governance, internal controls, and regulatory compliance with clarity and discipline.",
     url: "https://kpi.co/risk-services-uae",
