@@ -56,11 +56,12 @@ export default function VatAdvisory({ data, variant="default" }: VatAdvisoryProp
             {data?.service_list?.map((item) => (
               <div
                 key={`advisory-${item?.id}`}
-                className="mr-[30px] sm:mr-[20px] xl:mr-[25px] 2xl:mr-[30px] 3xl:mr-[40px] flex-[0_0_90%] sm:flex-[0_0_35%] xl:flex-[0_0_28%] min-w-0 select-none"
+                className="mr-[30px] sm:mr-[20px] xl:mr-[25px] 2xl:mr-[30px] 3xl:mr-[40px] flex-[0_0_303px] sm:flex-[0_0_35%] xl:flex-[0_0_338px] min-w-0 select-none"
               >
-                <div className="w-full h-full gap-[25px] sm:gap-[20px] xl:gap-[30px] 2xl:gap-[25px] 3xl:gap-[40px] p-[30px_20px] sm:p-[25px_20px] xl:p-[30px_20px] 2xl:p-[35px_25px] 3xl:p-[40px_30px] bg-white rounded-[14px] xl:rounded-[12px] 2xl:rounded-[20px] border-1 border-black/10 overflow-hidden flex flex-col">
+                <div className={cn("w-full h-full  p-[30px_20px] sm:p-[25px_20px] xl:p-[30px_20px] 2xl:p-[35px_25px] 3xl:p-[40px_30px] bg-white rounded-[14px] xl:rounded-[12px] 2xl:rounded-[20px] border-1 border-black/10 overflow-hidden flex flex-col", variant === "VatServicesUae" && "xl:p-[31px_22px_40px]")}>
                   <div className={cn("text-[16px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-[#1C5396]",
-                    variant === "difc-formation" && "xl:text-[24px]"
+                    variant === "difc-formation" && "xl:text-[24px]",
+                    variant === "VatServicesUae" && "xl:text-[24px] mb-[24px]"
                   )}>
                     {parse(item?.title)}
                   </div>

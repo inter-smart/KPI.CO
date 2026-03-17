@@ -262,6 +262,7 @@ export default function CorporateServicesUaeFormationProcess({
                   "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
                   variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
                   variant === "mainland" && "xl:!min-h-[555px]",
+                  variant === "Financial-Statement-Audit" && "xl:!min-h-[415px]",
                 )}
               >
                 <Image

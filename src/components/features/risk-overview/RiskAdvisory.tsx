@@ -13,6 +13,7 @@ type Variant =
   | "CorporateTaxUae"
   | "difc-regulated"
   | "adgm-regulated"
+  | "Financial-Statement-Audit"
   | "regulatory";
 
 export type RiskAdvisoryProps = {
@@ -94,6 +95,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] max-sm:[&_p]:last-of-type:!block",
                 variant === "AuditServicesUae" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] [&_p]:last-of-type:!block",
+                variant === "Financial-Statement-Audit" &&
+                "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] max-sm:[&_p]:last-of-type:!block",
               )}
             >
               {parse(
@@ -188,6 +191,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                   "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
                   variant === "regulatory" &&
                   "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
+                  variant === "Financial-Statement-Audit" &&
+                  "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
                 )}
               >
                 {parse(data.highlightsText)}
@@ -206,6 +211,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
                 variant === "AuditServicesUae" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
+                 
               )}
             >
               {parse(

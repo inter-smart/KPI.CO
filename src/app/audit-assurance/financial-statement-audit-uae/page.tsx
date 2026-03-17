@@ -444,7 +444,7 @@ export default function VatServicesUaePage() {
         data={localData.vatGuidance}
         variant="Financial-Statement-Audit"
       />
-      <RiskAdvisory data={localData.riskAdvisory} />
+      <RiskAdvisory data={localData.riskAdvisory} variant="Financial-Statement-Audit"/>
       <CorporateServicesUaeFormationProcess
         variant="Financial-Statement-Audit"
         data={localData.formationProcess}

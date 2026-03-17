@@ -604,7 +604,7 @@ export default function VatServicesUaePage() {
       <InnerHero data={localData.hero} variant="VatServicesUae" />
       <VatGuidance data={localData.vatGuidance} variant="VatServicesUae" />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
-      <VatAdvisory data={localData.vatAdvisory} />
+      <VatAdvisory data={localData.vatAdvisory} variant="VatServicesUae"/>
       <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="Vat-Services" />
       <CorporateServicesUaeFormationProcess
         variant="Vat-Services"

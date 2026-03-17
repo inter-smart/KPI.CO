@@ -176,7 +176,7 @@ export default function InnerHero({
                 variant === "regulatory" &&
                   "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
                 variant === "Financial-Statement-Audit" && "xl:text-[20px]",
-                variant === "VatServicesUae" && "xl:text-[20px]",
+                variant === "VatServicesUae" && "mb-[19px] xl:text-[20px] xl:mb-[33px]",
                 variant === "ADGM-Foundations" && "xl:text-[20px]",
                 variant === "AuditServicesUae" && "xl:text-[20px]",
                 variant === "Agreed-Procedure" && "xl:text-[20px]",
@@ -223,7 +223,7 @@ export default function InnerHero({
             variant="yellow"
             size="lg"
             className={cn(
-              "text-[13px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[120px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-1",
+              "text-[12.58px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[118px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-1",
               variant === "difc-regulated" &&
                 "min-w-[125px] xl:min-w-[150px] max-sm:!h-[35px]",
               variant === "erm" && "max-sm:min-w-[118px] max-sm:h-[30px]",

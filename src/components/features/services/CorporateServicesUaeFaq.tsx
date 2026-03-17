@@ -108,7 +108,7 @@ export default function CorporateServicesUaeFaq({
                   className={cn(
                     "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-[24px] xl:[&>svg]:w-[25px] [&>svg]:h-[24px] xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
                     variant === "side-arrow" &&
-                      "sm:[&>svg]:!rotate-[269deg] [&[data-state=open]>svg]:!rotate-[360deg]",
+                      "sm:[&>svg]:!rotate-[269deg] max-sm:[&[data-state=open]>svg]:!rotate-[180deg] [&[data-state=open]>svg]:!rotate-[360deg]",
                     variant === "difc-regulated" &&
                       "max-sm:[&>svg]:rotate-0 max-sm:[&[data-state=open]>svg]:!rotate-[180deg]",
                     variant === "CorporateServicesUae" &&
