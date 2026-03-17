@@ -155,7 +155,7 @@ export default function MeydanKeyBenefits({
                 >
                   <div
                     className={cn(
-                      "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row items-center",
+                      "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row ",
                       variant === "Vat-Services" &&
                         "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
                       variant === "RAK-Offshore" && "xl:gap-[0px]",
@@ -163,7 +163,7 @@ export default function MeydanKeyBenefits({
                   >
                     <div
                       className={cn(
-                        "w-full lg:w-1/2",
+                        "w-full lg:w-1/2 xl:pt-[16px]",
                         variant === "technology" && "lg:pr-[40px]",
                       )}
                     >

@@ -69,7 +69,7 @@ export default function BusinessLocation({
             <div
               key={item.id}
               className={cn(
-                "group relative min-h-[235px] xl:min-h-[230px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md",
+                "group relative min-h-[234px] xl:min-h-[230px] 2xl:min-h-[260px] 3xl:min-h-[310px] rounded-[10px] shadow-[0px_4px_6px_rgba(0,0,0,0.1)] overflow-hidden shadow-md",
                 variant === "Formation-ADGM" && "xl:min-h-[230px]",
                 variant === "RAK-Offshore" && "xl:min-h-[230px]",
               )}

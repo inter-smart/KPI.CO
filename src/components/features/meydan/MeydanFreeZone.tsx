@@ -63,7 +63,7 @@ export default function MeydanFreeZone({
             as="div"
             size="h2"
             className={cn(
-              "text-[#1C5396] capitalize text-[28px] xl:!text-[38px] mb-[20px] lg:mb-[25px] xl:mb-[25px] 3xl:mb-[40px]",
+              "text-[#1C5396] capitalize text-[28px] xl:!text-[38px] mb-[20px] leading-tight lg:mb-[25px] xl:mb-[25px] 3xl:mb-[40px]",
               variant === "RAK-Offshore" && "xl:!text-[30px] xl:mb-[25px]",
             )}
           >
@@ -97,6 +97,8 @@ export default function MeydanFreeZone({
 
             variant === "MeydanFreeZone" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px]",
+            variant === "default" &&
+              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px]",
 
             variant === "RAK-Offshore" && "xl:gap-[30px]",
           )}
@@ -105,7 +107,7 @@ export default function MeydanFreeZone({
             <div key={item?.id} className="w-full h-auto">
               <div
                 className={cn(
-                  "w-full h-full p-[30px_15px_45px] sm:p-[35px_25px] xl:p-[35px_34px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
+                  "w-full h-full p-[30px_15px_35px] sm:p-[35px_25px] xl:p-[35px_34px_30px] 2xl:p-[50px_35px] 3xl:p-[65px_45px] bg-gradient-to-br from-white border-[2px] lg:border-2 rounded-[16px] sm:rounded-[10px] xl:rounded-[16px] 2xl:rounded-[20px] overflow-hidden",
                   variant === "holding" && "to-[#EFF6FF] border-[#1C5396]",
                   variant === "difc-regulated" && "xl:pr-[15px]",
                   // variant === "difc-regulated" && "xl:pr-[15px]",
@@ -124,7 +126,7 @@ export default function MeydanFreeZone({
               >
                 <div
                   className={cn(
-                    "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]  leading-[1.4] text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px]  font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
+                    "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] !leading-tight text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px]  font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
                       "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
                     variant === "difc-regulated" &&
@@ -168,7 +170,7 @@ export default function MeydanFreeZone({
                 )}
                 <ul
                   className={cn(
-                    "mb-[20px]",
+                    "sm:mb-[20px]",
                     variant === "ifza" && "mb-0",
                     variant === "JAFZA-Freezone" && "mb-0",
                   )}
@@ -177,7 +179,7 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-                        "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[10px] relative z-0 tracking-[-0.5px] before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[4px]",
+                        "w-full h-auto pl-[25px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[10px] xl:mb-[13px] last-of-type:!mb-0 relative z-0 tracking-[-0.5px] before:content-[''] before:w-[16.67px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[3px]",
                         variant === "JAFZA-Freezone" && "max-sm:before:top-[2px]",
                         index % 2 !== 0
                           ? "before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3333%2024.4444C19.4698%2024.4444%2024.4444%2019.4698%2024.4444%2013.3333C24.4444%207.19678%2019.4698%202.22217%2013.3333%202.22217C7.19678%202.22217%202.22217%207.19678%202.22217%2013.3333C2.22217%2019.4698%207.19678%2024.4444%2013.3333%2024.4444Z%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%23FFCB18%22%20stroke-width%3D%222.22222%22/%3E%3C/svg%3E')]"
@@ -218,7 +220,7 @@ export default function MeydanFreeZone({
                       "after:xl:translate-x-[3px]",
                   )}
                 >
-                  <div className="relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0">
+                  <div className="relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[32px_36px_28px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0">
                     <div
                       className={cn(
                         "leading-normal font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
@@ -235,13 +237,15 @@ export default function MeydanFreeZone({
                         variant === "ifza" &&
                           " text-[#1C5396] xl:mb-[10px]",
                         variant === "MeydanFreeZone" && "max-sm:mb-[5px] xl:mb-[12px]",
+                        variant === "difc-regulated" && "max-sm:!text-[#003268]",
+
                       )}
                     >
                       {item.title}
                     </div>
                     <div
                       className={cn(
-                        "text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 leading-normal font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",
+                        "text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 sm:leading-tight font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",
                         variant === "Tax-Advisory" && "sm:max-w-[97%]",
                         variant === "RAK-Offshore" && "sm:max-w-full",
                       

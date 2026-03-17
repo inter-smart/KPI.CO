@@ -69,7 +69,7 @@ export default function CorporateServicesUaeBanking({
         variant === "JAFZA-Freezone" && "!pt-5 max-sm:shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
         variant === "dmcc" &&
-          "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)]",
+          "max-sm:shadow-[0_-6px_12px_-4px_rgba(0,0,0,0.12),0_8px_16px_-6px_rgba(0,0,0,0.15)] shadow-none",
       )}
     >
       <div className="container">
@@ -152,12 +152,12 @@ export default function CorporateServicesUaeBanking({
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(
-                  "flex-[0_0_40%] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
+                  "flex-[0_0_133px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
                 )}
               >
                 <div
                   className={cn(
-                    "w-full h-[60px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
+                    "w-full h-[62px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition",
                     variant === "ifza" &&
                       "shadow-[0_13px_19px_0_rgba(0,0,0,0.07)]",
                     variant === "company-freezone" &&
@@ -168,7 +168,7 @@ export default function CorporateServicesUaeBanking({
                 >
                   <div
                     className={cn(
-                      "w-[80px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
+                      "w-[71px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
                       // variant === "ifza" &&
                       //   "w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px]",
                       variant === "JAFZA-Freezone" &&

@@ -92,7 +92,8 @@ export default function DocumentRequired({
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
         variant === "sop" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white sm:bg-white",
-        variant === "MeydanFreeZone" && "bg-[#F9FAFB]",
+        variant === "MeydanFreeZone" && "bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white sm:bg-[#F9FAFB]",
+        variant === "dmcc" && "bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white sm:bg-[#F9FAFB]",
         variant === "AuditServicesUae" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white xl:py-[90px_50px]",
         variant === "AuditServicesUaes" &&
@@ -306,7 +307,7 @@ export default function DocumentRequired({
             {data?.ftr_description && (
               <div
                 className={cn(
-                  "mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-tight font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+                  "mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[22px] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
                   ["AuditServicesUae", "AuditServicesUaes"].includes(variant) &&
                   "[&_p]:mb-[15px] lg:[&_p]:mb-[25px] [&>p:last-of-type]:mb-0"
                 )}
@@ -371,7 +372,7 @@ export default function DocumentRequired({
                   >
                     {item.title}
                   </div>
-                  <div className="text-[16px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#364153] [&_p]:mb-[20px] lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
+                  <div className="text-[16px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[22px] leading-[20px] font-normal text-[#364153] [&_p]:mb-[20px] lg:[&_p]:mb-[30px] 3xl:[&_p]:mb-[40px]">
                     {/* {item.description} */}
                     {parse(item?.description)}
                   </div>

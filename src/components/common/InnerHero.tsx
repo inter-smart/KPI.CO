@@ -146,7 +146,7 @@ export default function InnerHero({
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
               variant === "Formation-JAFZA" && "normal-case",
-              variant === "dwtc" && "normal-case",
+              variant === "dwtc" && "normal-case", 
             )}
           >
             {parse(data?.title)}
@@ -187,6 +187,7 @@ export default function InnerHero({
                 variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
                 variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
+                variant === "DMCC-Freezone" && "mb-[22px] xl:mb-[32px]",
               )}
             >
               {parse(data?.description)}

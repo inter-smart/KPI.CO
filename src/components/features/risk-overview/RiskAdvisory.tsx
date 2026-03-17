@@ -107,7 +107,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               <div
                 className={cn(
                   "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
-                  variant === "difc-regulated" && "max-sm:hidden",
+                  variant === "difc-regulated" && "max-sm:hidden md:max-w-[90%]",
                   variant === "adgm-regulated" && "max-sm:hidden",
                   variant === "regulatory" && "md:max-w-[82%]",
                   

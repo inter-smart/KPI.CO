@@ -77,7 +77,7 @@ export default function WhyRiskManagement({
             >
               {parse(data.title)}
             </Heading>
-            <div className="relative w-full lg:h-full min-h-[380px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
+            <div className="relative w-full lg:h-full min-h-[378px] sm:min-h-[300px] rounded-[12px] 3xl:rounded-[16px] overflow-hidden">
               <Image
                 src={data.image.path}
                 alt={data.image.alt}

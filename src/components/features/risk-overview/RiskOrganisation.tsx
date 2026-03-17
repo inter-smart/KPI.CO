@@ -109,6 +109,7 @@ export default function RiskOrganisation({
                       variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
                       variant === "dwtc-bg" && "leading-[1.3]",
                       variant === "regulatory" && "max-sm:!text-[26px]",
+                    
                     )}
                   >
                     {parse(data.title)}
@@ -225,6 +226,7 @@ export default function RiskOrganisation({
                     (variant === "holding" && "max-sm:text-[26px]"),
                     variant === "regulatory" && "max-sm:text-[26px]",
                     variant === "SOP" && "max-sm:text-[26px]",
+                      
                   )}
                 >
                   {parse(data.title)}
@@ -233,7 +235,7 @@ export default function RiskOrganisation({
             </div>
             <div
               className={cn(
-                "w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[370px] min-h-[370px] sm:min-h-auto max-md:mb-6 block",
+                "w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[378px] min-h-[370px] sm:min-h-auto max-md:mb-6 block",
                 variant === "dwtc-bg" && "max-sm:min-h-[378px] xl:max-h-[380px] xl:mt-auto",
                 variant === "dwtc" && "max-sm:min-h-[378px]",
               )}

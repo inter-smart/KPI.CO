@@ -372,7 +372,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Who requires a DIFC audit?",
+        title: "Who requires a DIFC audit? ",
         description: `
           <p>DIFC audits are required for: </p>
           <ul>
@@ -397,27 +397,15 @@ const localData = {
           <p>Yes. KPI is registered as an approved audit firm in DIFC and provides audit services to DIFC-registered and DFSA-regulated entities. </p>
                         `,
       },
+     
       {
         id: 5,
-        title: "What standards do you follow?",
-        description: `
-          <p>Timelines vary by activity and Emirate, but licensing is typically completed within a few working days once approvals are in place.</p>
-                        `,
-      },
-      {
-        id: 6,
         title: "How long does a DIFC audit take?",
         description: `
           <p>Typically 4–8 weeks depending on size, complexity, and regulatory classification. Timelines are confirmed during engagement scoping. </p>
                         `,
       },
-      {
-        id: 7,
-        title: "Do you audit DFSA-regulated financial institutions?",
-        description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
-                        `,
-      },
+      
     ] satisfies FaqItem[],
   },
   insights: {
