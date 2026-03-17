@@ -459,12 +459,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Meydan Free Zone Company Setup | Fast & Easy Business Setup",
+  title: "Meydan Free Zone Company Setup | Start Your Business in Dubai ",
   description:
     "Start your UAE business in Meydan Free Zone. Compare setup costs, license types and UAE visa options. 100% company ownership. No hidden fees.",
 
   openGraph: {
-    title: "Meydan Free Zone Company Setup | Start Your Business in Dubai",
+    title: "Meydan Free Zone Company Setup | Fast & Easy Business Setup ",
     description:
       "Start your UAE business in Meydan Free Zone. Compare setup costs, license types and UAE visa options. 100% company ownership. No hidden fees.",
     url: "https://kpi.co/meydan-freezone-business-setup-uae",

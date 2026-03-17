@@ -293,12 +293,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "JAFZA Offshore Company Setup | Start Your Business in Dubai",
+  title: "JAFZA Offshore Company Formation | UAE Business Setup Services",
   description:
     "Start your business in Dubai in Jebel Ali Free Zone. 100% foreign ownership, zero tax, full profit repatriation & asset protection. Get in touch!",
 
   openGraph: {
-    title: "JAFZA Offshore Company Formation | UAE Business Setup Services",
+    title: "JAFZA Offshore Company Setup | Start Your Business in Dubai ",
     description:
       "Start your business in Dubai in Jebel Ali Free Zone. 100% foreign ownership, zero tax, full profit repatriation & asset protection. Get in touch!",
     url: "https://kpi.co/company-formation-jafza-uae",

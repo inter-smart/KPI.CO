@@ -452,7 +452,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RAK ICC Offshore Company Setup | Fast & Compliant UAE Registration ",
     description:
-      "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch!",
+      "Start your RAK ICC offshore company in Ras Al Khaimah Economic Zone (RAKEZ) with full compliance, 100% ownership and zero corporate tax. Get in touch! ",
     url: "https://kpi.co/rak-icc-business-setup-uae",
     siteName: "KPI.CO",
     type: "website",

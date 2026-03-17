@@ -564,12 +564,12 @@ const localData = {
   },
 };
 export const metadata: Metadata = {
-  title: "Free Zone Company Setup in UAE | Company Formation | KPI",
+  title: "Free Zone Company Registration | Easy Business Setup in UAE ",
   description:
     "Set up a free zone company in the UAE with expert support. Compare free zones, license types, setup costs, and visa options. Fast process. Clear pricing.",
 
   openGraph: {
-    title: "Free Zone Company Registration | Easy Business Setup in UAE",
+    title: "Free Zone Company Setup in UAE | Company Formation | KPI ",
     description:
       "Set up a free zone company in the UAE with expert support. Compare free zones, license types, setup costs, and visa options. Fast process. Clear pricing.",
     url: "https://kpi.co/free-zone-business-setup-uae",
