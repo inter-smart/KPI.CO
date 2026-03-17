@@ -357,11 +357,11 @@ const localData = {
   },
   difc_faq_data: {
     title: "FAQs",
-    button: {
-      label: "Learn More",
-      link: "/contact",
-      target: "_blank",
-    },
+    // button: {
+    //   label: "Learn More",
+    //   link: "/contact",
+    //   target: "_blank",
+    // },
     faq_list: [
       {
         id: 1,
@@ -479,7 +479,7 @@ export default function DwtcFreezone() {
         data={localData.contactUs}
       />
       <CorporateServicesUaeFaq
-        variant="difc-regulated"
+        variant="side-arrow"
         data={localData.difc_faq_data}
       />
       <HomeOurInsights />

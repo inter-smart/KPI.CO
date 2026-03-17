@@ -140,6 +140,7 @@ export default function MeydanFreeZone({
                     variant === "regulatory" &&
                       "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold  !max-w-full",
                     variant === "JAFZA-Freezone" && "max-sm:text-[24px]",
+                    variant === "difc-regulated" && "sm:text-[#1C5396]",
                   )}
                 >
                   {parse(item?.title)}
@@ -239,7 +240,7 @@ export default function MeydanFreeZone({
                         variant === "ifza" &&
                           " text-[#1C5396] xl:mb-[10px]",
                         variant === "MeydanFreeZone" && "max-sm:mb-[5px] xl:mb-[12px]",
-                        variant === "difc-regulated" && "max-sm:!text-[#003268]",
+                        variant === "difc-regulated" && "max-sm:text-[#003268] sm:!text-[#1C5396]",
 
                       )}
                     >
