@@ -243,6 +243,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "Financial-Statement-Audit" && "max-w-full",
                         variant === "mainland" && "xl:max-w-[430px]",
                         variant == "CorporateServicesUae" && "max-w-full",
+                         variant === "Vat-Services" && "xl:max-w-full",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
@@ -263,6 +264,7 @@ export default function CorporateServicesUaeFormationProcess({
                   variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
                   variant === "mainland" && "xl:!min-h-[555px]",
                   variant === "Financial-Statement-Audit" && "xl:!min-h-[415px]",
+                  variant === "Vat-Services" && "xl:!min-h-[455px]",
                 )}
               >
                 <Image

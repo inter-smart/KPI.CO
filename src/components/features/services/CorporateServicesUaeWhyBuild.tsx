@@ -230,6 +230,8 @@ export default function CorporateServicesUaeWhyBuild({
           "bg-linear-to-t from-[#f1fafe] via-white to-white !xl:py-[70px_70px]",
         hasVariant(variant, "offshore") &&
           "max-sm:bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white ",
+        hasVariant(variant, "Vat-Services") &&
+          "xl:py-[80px_63px]",
       )}
     >
       <div className="container">
@@ -323,6 +325,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "offshore") && "xl:gap-[25px]",
             hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
             hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
+            hasVariant(variant, "Vat-Services") && "xl:!gap-[25px_40px]",
           )}
         >
           {data.items.map((item) => (

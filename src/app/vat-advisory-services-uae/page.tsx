@@ -412,7 +412,7 @@ const localData = {
   vatHealth: {
     title: "VAT Health Check",
     description:
-      "Not sure if your VAT processes are optimized? Request a complimentary VAT health check to identify: ",
+      "Not sure if your VAT processes are optimized? Request a complimentary VAT health check to identify: ",
     health_list: [
       "Potential input tax recovery opportunities",
       "Compliance gaps and penalty risks",
@@ -623,7 +623,7 @@ export default function VatServicesUaePage() {
       <CorporateServicesUaeCta data={localData.cta} variant="VatServicesUae" />
       <CorporateServicesUaeFaq
         data={localData.corporate_faq_data}
-        variant="side-arrow"
+        // variant="side-arrow"
       />
        <HomeOurInsights />
     </>

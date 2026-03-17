@@ -51,7 +51,7 @@ export default function VatGuidance({
               >
                 {data?.title}
               </Heading>
-              <div className="w-full h-auto max-sm:h-[380px] aspect-[330/375] mb-[25px] rounded-[10px] overflow-hidden block md:hidden">
+              <div className="w-full h-auto max-sm:h-[378px] aspect-[330/375] mb-[25px] rounded-[10px] overflow-hidden block md:hidden">
                 <Image
                   src={data?.media?.path || "images/placeholder.png"}
                   alt={data?.media?.alt || "Vat Guidance"}
