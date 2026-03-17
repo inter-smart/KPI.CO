@@ -502,7 +502,7 @@ export const metadata = {
   openGraph: {
     title: "Audit Firms in Dubai | External & Regulatory Audit Services UAE",
     description:
-      "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
+      "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS  ",
     url: "https://kpi.co/audit-services-uae",
     siteName: "KPI.CO",
     type: "website",

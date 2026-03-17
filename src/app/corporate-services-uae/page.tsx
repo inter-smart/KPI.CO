@@ -471,14 +471,14 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "#1 UAE Business Setup Consultants | Start Your Business in UAE",
+  title: "UAE Corporate Services | Business Setup & Company Formation ",
   description:
     "Start your business in the UAE today. Our experts handle company setup, banking, tax, visas and ongoing compliance - so you can focus on growth. Get in touch!",
 
   openGraph: {
-    title: "UAE Corporate Services | Business Setup & Company Formation",
+    title: "#1 UAE Business Setup Consultants | Start Your Business in UAE ",
     description:
-      "Start your business in the UAE today. Our experts handle company setup, banking, tax, visas and ongoing compliance - so you can focus on growth. Get in touch!",
+      "Start your business in the UAE today. Our experts handle company setup, banking, tax, visas and ongoing compliance - so you can focus on growth. Get in touch! ",
     url: "https://kpi.co/corporate-services-uae",
     siteName: "KPI.CO",
     type: "website",

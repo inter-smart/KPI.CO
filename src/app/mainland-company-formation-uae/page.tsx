@@ -598,12 +598,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Mainland Business Setup UAE | Company Formation | KPI Group",
+  title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group ",
   description:
     "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
 
   openGraph: {
-    title: "Mainland Business Setup UAE | UAE Company Formation | KPI Group",
+    title: "Mainland Business Setup UAE | Company Formation | KPI Group",
     description:
       "Set up a mainland company in the UAE with full market access. Compare license types, setup steps and visa options. Clear process. No hidden fees.",
     url: "https://kpi.co/mainland-company-formation-uae",

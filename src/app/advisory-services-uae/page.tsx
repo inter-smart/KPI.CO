@@ -377,15 +377,15 @@ const localData = {
 
 export const metadata: Metadata = {
   title:
-    "UAE Advisory Services for Business Structuring & Tax | KPI Group",
+    "Advisory Services in the UAE | Corporate, Tax & Regulatory Support | KPI Group",
   description:
     "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus.",
 
   openGraph: {
     title:
-      "Advisory Services in the UAE | Corporate, Tax & Regulatory Support | KPI Group",
+      "UAE Advisory Services for Business Structuring & Tax | KPI Group ",
     description:
-      "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus.",
+      "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus. ",
     url: "https://kpi.co/advisory-services-uae",
     siteName: "KPI.CO",
     type: "website",

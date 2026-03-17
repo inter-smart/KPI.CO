@@ -384,7 +384,7 @@ export const metadata = {
   openGraph: {
     title: "ADGM Approved Audit Firm | FSRA Regulated Audits UAE ",
     description:
-      "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA",
+      "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA ",
     url: "https://kpi.co/adgm-regulated-audit",
     siteName: "KPI.CO",
     type: "website",

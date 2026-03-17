@@ -421,12 +421,12 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "Offshore Company Formation | Business Setup UAE | KPI Group",
+  title: "Offshore Company Setup | Offshore Company Registration UAE ",
   description:
     "Offshore business setup in the UAE with trusted advisors. KPI Group helps you register RAK ICC & JAFZA offshore companies with expert structuring and guidance.",
 
   openGraph: {
-    title: "Offshore Company Setup | Offshore Company Registration UAE",
+    title: "Offshore Company Formation | Business Setup UAE | KPI Group ",
     description:
       "Offshore business setup in the UAE with trusted advisors. KPI Group helps you register RAK ICC & JAFZA offshore companies with expert structuring and guidance.",
     url: "https://kpi.co/offshore-company-formation-uae",
