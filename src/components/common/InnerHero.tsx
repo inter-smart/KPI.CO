@@ -128,7 +128,7 @@ export default function InnerHero({
             variant === "rakez" && "xl:max-w-[780px]",
             variant === "DMCC-Freezone" && "xl:max-w-[780px]",
             variant === "Agreed-Procedure" && "xl:max-w-[780px]",
-            variant === "ADGM-Regulated-Audit" && "xl:max-w-[775px]",
+            variant === "ADGM-Regulated-Audit" && "xl:max-w-[845px]",
             variant === "ADGM-SPV-Formation" && "xl:max-w-[785px]",
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
             variant === "difc" && "xl:max-w-[785px]",
@@ -188,6 +188,7 @@ export default function InnerHero({
                 variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
                 variant === "DMCC-Freezone" && "mb-[22px] xl:mb-[32px]",
+                 variant === "ADGM-Regulated-Audit" && "xl:max-w-[772px]",
               )}
             >
               {parse(data?.description)}

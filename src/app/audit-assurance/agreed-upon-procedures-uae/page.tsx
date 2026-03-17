@@ -374,7 +374,7 @@ const localData = {
     },
     images: {
       overlay: "/images/aupCta-desk.png",
-      overlayMobile: "/images/ctaAgreed.png",
+      overlayMobile: "/images/aupCta-mob.png",
     },
   } satisfies CtaData,
 

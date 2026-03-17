@@ -109,9 +109,9 @@ export default function RiskExploreService({
                 <div
                   key={`insight-${item.id}`}
                   className={cn(
-                    "min-w-0 select-none flex-[0_0_75%] sm:flex-[0_0_33.33%] lg:flex-[0_0_25%]",
+                    "min-w-0 select-none flex-[0_0_75%] sm:flex-[0_0_408px] lg:flex-[0_0_25%]",
                     variant === "difc" &&
-                      "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                      "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_414px]",
                     variant === "erm" &&
                       "flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "holding" &&
@@ -159,7 +159,7 @@ function Service({ data, variant }: ServiceProps) {
   return (
     <Link
       href={data?.slug ?? "#"}
-      className="group w-full h-[348px] xl:h-[475px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
+      className="group w-full h-[348px] xl:h-[476px] 2xl:h-[535px] 3xl:h-[635px] flex flex-col bg-white rounded-[10px] overflow-hidden relative"
     >
       <div className="w-full h-full aspect-375/635 overflow-hidden rounded-t-[8px]">
         <Image

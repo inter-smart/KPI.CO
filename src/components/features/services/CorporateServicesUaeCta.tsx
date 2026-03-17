@@ -167,7 +167,7 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
+                "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "rakez" && "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
