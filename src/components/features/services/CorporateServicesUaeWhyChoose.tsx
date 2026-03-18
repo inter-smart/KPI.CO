@@ -240,7 +240,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
             variant === "regulatory" && "xl:!gap-[25px_30px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
-            variant === "VatServicesUae" && "xl:gap-[25px_30px]",
+            variant === "VatServicesUae" && "xl:!gap-[25px_40px]",
             variant === "offshore" && "xl:gap-[25px_30px]",
             variant === "AuditServicesUae" && "xl:gap-[30px_39px]",
           )}

@@ -398,7 +398,7 @@ const localData = {
     },
     images: {
       overlay: "/images/ermCta-desk.svg",
-      overlayMobile: "/images/aupCta-desk.png",
+      overlayMobile: "/images/erm-mobile.png",
     },
   } satisfies CtaData,
 
@@ -454,7 +454,7 @@ export default function page() {
       <HomeCounter data={localData.counterList} variant="erm" />
       <RiskExploreService variant="erm" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="erm" />
-      <HomeOurInsights />
+      <HomeOurInsights variant="erm" />
     </>
   );
 }

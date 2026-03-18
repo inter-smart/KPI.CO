@@ -15,12 +15,12 @@ type HomeOurInsightsProps = {
     title: string;
     items: InsightItem[];
   };
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home";
+  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home" | "erm";
 };
 
 type InsightCardProps = {
   data: InsightItem;
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home";
+  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home"| "erm";
 };
 
 export default function HomeOurInsightsClient({
@@ -75,6 +75,8 @@ export default function HomeOurInsightsClient({
           className={cn(
             "text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
             variant === "holding" &&
+              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+            variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
           )}
         >
