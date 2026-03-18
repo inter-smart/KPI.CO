@@ -165,7 +165,7 @@ export default function BlogDetail({ data }: BlogDetailProps) {
   return (
     <section
       ref={sectionRef}
-      className="w-full pt-[32px] md:pt-[30px] pb-[30px] lg:pb-[50px] bg-white  !overflow-visible"
+      className="w-full md:pt-[30px] pb-[30px] lg:pb-[50px] bg-white  !overflow-visible"
     >
       <div className="container">
         <div className="flex md:gap-[30px] xl:gap-[40px] items-start">

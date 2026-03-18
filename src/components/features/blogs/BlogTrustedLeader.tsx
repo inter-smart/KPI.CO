@@ -45,7 +45,7 @@ export default function BlogTrustedLeader({ data }: BlogTrustedLeaderProps) {
                             <div
                                 key={`affiliation-${item?.id}`}
                                 className={cn(
-                                    'flex-[0_0_135px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none',
+                                    'flex-[0_0_133.25px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none',
                                 )}
                             >
                                 <div className="w-full h-[62px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[5px] sm:rounded-[8px] 2xl:rounded-[13px] flex items-center justify-center bg-white shadow-[0_12px_25px_0_rgba(0,0,0,0.09)] hover:shadow-xl transition">

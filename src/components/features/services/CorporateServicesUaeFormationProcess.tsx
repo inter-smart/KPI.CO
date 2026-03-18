@@ -109,7 +109,9 @@ export default function CorporateServicesUaeFormationProcess({
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
           variant==="mainland" && "max-sm:pb-3" ||
-          variant==="sop" && "max-sm:pb-3"
+          variant==="sop" && "max-sm:pb-3" ||
+          variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"
+
         )}
       >
         <div className="container">
@@ -244,6 +246,7 @@ export default function CorporateServicesUaeFormationProcess({
                         variant === "mainland" && "xl:max-w-[430px]",
                         variant == "CorporateServicesUae" && "max-w-full",
                          variant === "Vat-Services" && "xl:max-w-full",
+                         variant === "erm" && "xl:max-w-full",
                         index <= activeStep
                           ? "!text-[#1c5396]"
                           : variant === "internal-audit"
@@ -265,6 +268,7 @@ export default function CorporateServicesUaeFormationProcess({
                   variant === "mainland" && "xl:!min-h-[555px]",
                   variant === "Financial-Statement-Audit" && "xl:!min-h-[415px]",
                   variant === "Vat-Services" && "xl:!min-h-[455px]",
+                  variant === "erm" && "xl:!min-h-[690px]",
                 )}
               >
                 <Image

@@ -54,7 +54,7 @@ export default function BusinessLocation({
           )}
         >
           <Heading
-            as="h2"
+            as="div"
             size="h2"
             className="lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px]"
           >
@@ -90,7 +90,7 @@ export default function BusinessLocation({
                   )}
                 >
                   <Heading
-                    as="h3"
+                    as="div"
                     className="text-white text-[24px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] font-medium leading-tight"
                   >
                     {parse(item.title)}
@@ -106,7 +106,7 @@ export default function BusinessLocation({
                 <div className="w-full h-auto m-auto">
                   <div className="flex justify-between gap-4 mb-2 2xl:mb-3 3xl:mb-4">
                     <Heading
-                      as="h3"
+                      as="div"
                       className="text-[#1C5396] !text-[24px] sm:!text-[16px] lg:!text-[17px] xl:!text-[24px] 2xl:!text-[20px] 3xl:!text-[24px] font-medium leading-tight xl:w-[calc(100%-25px)]"
                     >
                       {parse(item.title)}

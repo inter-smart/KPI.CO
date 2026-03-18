@@ -76,7 +76,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                         <div className={cn(
                                             "w-[30px] xl:w-[32px] 3xl:w-[42px] h-[30px] xl:h-[32px] 3xl:h-[42px] rounded-[5px] xl:rounded-[6px] flex items-center justify-center transition-all bg-gradient-to-b from-[#053269] to-[#6A9FE0] ",
                                             activeCategoryId === category.id
-                                                ? "text-white shadow-md shadow-blue-200"
+                                                ? "text-white "
                                                 : "group-hover:bg-[#E9ECEF] text-[#1C5396]"
                                         )}>
                                             {typeof category.icon === 'string' ? (

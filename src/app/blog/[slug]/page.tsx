@@ -135,7 +135,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <>
-      <article style={{ width: "100%"}}>
+      <article className="w-full relative z-[1]">
         <BlogReadingProgress >
          <BlogDetails slug={slug} />
         </BlogReadingProgress>

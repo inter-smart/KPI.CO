@@ -23,7 +23,7 @@ interface VatHealthProps {
 
 export default function VatHealth({ data }: VatHealthProps) {
   return (
-    <section className="w-full h-auto py-[45px_40px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_70px] 3xl:py-[70px_100px] block">
+    <section className="w-full h-auto py-[45px_40px] sm:py-[35px_50px] xl:py-[48px_70px] 2xl:py-[50px_70px] 3xl:py-[70px_100px] block">
       <div className="container">
         <div className="[--image-size:100%] lg:[--image-size:360px] xl:[--image-size:513px] 2xl:[--image-size:550px] 3xl:[--image-size:680px] p-[30px_15px_50px_15px] sm:p-[15px_35px_15px_25px] xl:p-[20px_50px_20px_35px] 3xl:p-[30px_70px_30px_40px] bg-gradient-to-tl from-[#fefdf1] to-white rounded-[15px] sm:rounded-[10px] xl:rounded-[15px] 2xl:rounded-[20px] border-2 border-[#FFCB18] overflow-hidden flex flex-wrap">
           <div className="w-[var(--image-size)] lg:w-[calc(100%-var(--image-size))] lg:pr-[20px] xl:pr-[120px] 2xl:pr-[140px] 3xl:pr-[175px] max-lg:mb-[30px]">
@@ -73,7 +73,7 @@ export default function VatHealth({ data }: VatHealthProps) {
             </Button>
           </div>
           <div className="w-[var(--image-size)]">
-            <div className="w-full h-auto lg:h-full max-lg:aspect-[310/420] rounded-[10px] 2xl:rounded-[15px] overflow-hidden block">
+            <div className="w-full h-auto lg:h-full max-lg:aspect-[310/420] min-h-[424px] rounded-[10px] 2xl:rounded-[15px] overflow-hidden block">
               <Image
                 src={data?.media?.path}
                 alt={data?.media?.alt || "VAT Health Image"}

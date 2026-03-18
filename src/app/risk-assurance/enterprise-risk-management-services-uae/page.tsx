@@ -453,7 +453,7 @@ export default function page() {
       <CorporateServicesUaeWhyChoose variant="erm" data={localData.whyChoose} />
       <HomeCounter data={localData.counterList} variant="erm" />
       <RiskExploreService variant="erm" data={localData.explore_service} />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeCta data={localData.cta} variant="erm" />
       <HomeOurInsights />
     </>
   );

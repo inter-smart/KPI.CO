@@ -42,6 +42,7 @@ export type CorporateServicesUaeCtaProps = {
     | "regulatory"
     | "adgm-regulated"
     | "difc-regulated"
+    | "erm"
     | "internal-audit";
 };
 
@@ -79,7 +80,7 @@ export default function CorporateServicesUaeCta({
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
-             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
+             variant === "erm" && "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
         >
           <div

@@ -103,7 +103,7 @@ export default function DocumentRequired({
         variant === "rakez" &&
         "bg-linear-to-t from-[#eff8fc] via-white to-white",
         variant === "VatServicesUae" &&
-        "bg-linear-to-t from-[#f5fbfe] via-white to-white",
+        "bg-linear-to-t from-[#f5fbfe] via-white to-white xl:py-[94px_79px]",
         variant === "Formation-JAFZA" &&
         "bg-linear-to-t from-[#f5fbfe] via-white to-white",
       )}
@@ -150,7 +150,7 @@ export default function DocumentRequired({
                 >
                   {data?.title && (
                     <Heading
-                      as="h2"
+                      as="div"
                       size="h2"
                       className={cn(
                         "text-[#1C5396] mb-[25px] xl:mb-[20px] 2xl:mb-[30px] 3xl:mb-[35px] capitalize hidden md:block sm:max-w-[95%]",

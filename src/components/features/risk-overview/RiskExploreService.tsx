@@ -79,7 +79,7 @@ export default function RiskExploreService({
 
   return (
     <section className="w-full py-8 xl:py-[50px_90px] 2xl:py-[80px_110px] bg-[#F9F9F9] overflow-hidden">
-      <div className="container">
+      <div className="container max-sm:pr-0">
         <Heading
           as="h2"
           size="h2"

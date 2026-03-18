@@ -28,7 +28,9 @@ export default function VatGuidance({
   variant = "default",
 }: VatGuidanceProps) {
   return (
-    <section className="w-full h-auto py-[20px] sm:py-[70px_50px] xl:py-[80px_60px] 2xl:py-[100px_70px] 3xl:py-[120px_80px] block">
+    <section className={cn("w-full h-auto py-[20px] sm:py-[70px_50px] xl:py-[80px_60px] 2xl:py-[100px_70px] 3xl:py-[120px_80px] block" ,
+      variant === "VatServicesUae" && "py-[45px] xl:py-[94px_56px]"
+    )}>
       <div className="container">
         <div
           className={cn(

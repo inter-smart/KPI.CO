@@ -263,7 +263,7 @@ export default function CorporateServicesUaeWhyBuild({
           )}
         >
           <Heading
-            as="h2"
+            as="div"
             size="h2"
             className={cn(
               "text-[#1C5396] mb-3 sm:mb-5 xl:mb-[30px] capitalize",

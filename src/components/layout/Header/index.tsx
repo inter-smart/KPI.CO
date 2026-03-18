@@ -142,7 +142,7 @@ export default function Header() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   return (
-    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[4] shadow-sm flex items-center">
+    <header className="w-full h-[var(--header-y)] bg-white sticky top-0 z-[5] shadow-sm flex items-center">
       <div className="container xl:h-full">
         <div className="flex items-center xl:h-full">
           {/* Logo Section */}
@@ -284,7 +284,7 @@ export default function Header() {
                                 value={`item-${idx}`}
                                 className="border-0 shadow-none border-b border-[#DDDCDE]"
                               >
-                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4">
+                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4 [&[data-state=open]>svg]:!rotate-[180deg]">
                                   {item.label}
                                 </AccordionTrigger>
                                 <AccordionContent className="pb-4 pl-0">
@@ -301,7 +301,7 @@ export default function Header() {
                                           <Link
                                             key={mIdx}
                                             href={mega.href || "#"}
-                                            className="flex items-center justify-between py-2 transition-all hover:bg-[rgba(143,216,254,0.15)] rounded-md px-1"
+                                            className="flex items-center justify-between py-2 transition-all hover:bg-[rgba(143,216,254,0.15)] rounded-md "
                                             onClick={() =>
                                               setMenuSheetOpen(false)
                                             }
@@ -344,7 +344,7 @@ export default function Header() {
                                             value={`mega-${idx}-${mIdx}`}
                                             className="border-none"
                                           >
-                                            <AccordionTrigger className="hover:no-underline py-2">
+                                            <AccordionTrigger className="hover:no-underline py-2 [&[data-state=open]>svg]:!rotate-[180deg]">
                                               <div className="flex items-center gap-3">
                                                 {mega.icon && (
                                                   <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
@@ -384,7 +384,7 @@ export default function Header() {
                                                     <Link
                                                       key={sIdx}
                                                       href={sub.href}
-                                                      className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 px-1 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
+                                                      className="text-[12px] sm:text-[14px] font-normal text-[#1C5396] py-2 rounded-md hover:bg-[rgba(143,216,254,0.15)]"
                                                       onClick={() =>
                                                         setMenuSheetOpen(false)
                                                       }
