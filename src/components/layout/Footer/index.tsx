@@ -28,9 +28,9 @@ const formSchema = z.object({
   }),
 });
 const FOOTER_MAINLINKS =
-  "text-[20px] xl:text-[22px] 3xl:text-[26px] text-white font-semibold mb-[20px] 3xl:mb-[25px] max-md:border-b max-md:border-[rgba(255,255,255,0.2)]";
+  "text-[20px] xl:text-[20px] 3xl:text-[26px] text-white font-semibold xl:leading-[26px] mb-[20px] 3xl:mb-[25px] max-md:border-b max-md:border-[rgba(255,255,255,0.2)]";
 const FOOTER_LINK_STYLES =
-  "text-[16px] md:text-[11px] xl:text-[15px] 2xl:text-[17px] 3xl:text-[21px] text-white/80 font-normal hover:text-white transition-colors";
+  "text-[16px] md:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-white/80 font-normal leading-[36px] mb-[12px] xl:mb-[11px] block hover:text-white transition-colors";
 const SOCIAL_LINKS =
   "w-[32px] md:w-[24px] xl:w-[28px] h-[32px] md:h-[24px] xl:h-[28px] 2xl:w-[36px] 2xl:h-[36px] 3xl:w-[42px] 3xl:h-[42px] flex items-center hover:scale-110 transition-transform";
 
@@ -71,7 +71,7 @@ export default function Footer() {
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="relative group lg:max-w-[90%] ml-auto "
+                  className="relative group lg:max-w-[90%] ml-auto xl:max-w-[435px] "
                 >
                   <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] focus-within:ring-1 focus-within:ring-white/20 transition-all">
                     <div className="flex-1 overflow-hidden">
@@ -95,11 +95,11 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className="!w-[34px] xl:!w-[32px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-full flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
+                      className="!w-[34px] xl:!w-[32px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-[32px] flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
                     >
                       <svg
                         width="23"
-                        height="19"
+                        height="18"
                         viewBox="0 0 23 19"
                         fill="none"
                       >
@@ -298,7 +298,7 @@ export default function Footer() {
             {/* Audit & Assurance */}
             <div className="w-4/12 p-[10px] lg:p-[20px]">
               <div className={FOOTER_MAINLINKS}>Audit & Assurance</div>
-              <ul className="space-y-[12px] xl:space-y-[15px]">
+              <ul>
                 <li>
                   <Link
                     href="/financial-statement-audit-uae"
@@ -337,7 +337,7 @@ export default function Footer() {
             {/* Advisory Services */}
             <div className="w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] ">
               <div className={FOOTER_MAINLINKS}>Advisory Services</div>
-              <ul className="space-y-[12px] xl:space-y-[15px]">
+              <ul >
                 <li>
                   <Link
                     href="/corporate-services-uae"
@@ -376,7 +376,7 @@ export default function Footer() {
             {/* Risk & Compliance */}
             <div className="w-4/12 p-[10px] lg:p-[20px] lg:pl-[70px] 2xl:pl-[90px] 3xl:pl-[115px]">
               <div className={FOOTER_MAINLINKS}>Risk & Compliance</div>
-              <ul className="space-y-[12px] xl:space-y-[15px]">
+              <ul>
                 <li>
                   <Link href="/risk-overview" className={FOOTER_LINK_STYLES}>
                     Enterprise Risk Management
@@ -403,7 +403,7 @@ export default function Footer() {
             {/* Resources */}
             <div className="w-4/12 p-[10px] lg:p-[20px] ">
               <div className={FOOTER_MAINLINKS}>Resources</div>
-              <ul className="space-y-[12px] xl:space-y-[15px]">
+              <ul>
                 <li>
                   <Link href="/blog" className={FOOTER_LINK_STYLES}>
                     Blogs
@@ -508,7 +508,7 @@ export default function Footer() {
                   Audit & Assurance
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul className="space-y-4 ">
+                  <ul >
                     <li>
                       <Link
                         href="/financial-statement-audit-uae"
@@ -552,7 +552,7 @@ export default function Footer() {
                   Advisory Services
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul className="space-y-4">
+                  <ul >
                     <li>
                       <Link
                         href="/corporate-services-uae"
@@ -599,7 +599,7 @@ export default function Footer() {
                   Risk & Compliance
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul className="space-y-4 ">
+                  <ul  >
                     <li>
                       <Link
                         href="/risk-overview"
@@ -643,7 +643,7 @@ export default function Footer() {
                   Resources
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul className="space-y-4 ">
+                  <ul >
                     <li>
                       <Link href="/blog" className={FOOTER_LINK_STYLES}>
                         Blogs
@@ -670,7 +670,7 @@ export default function Footer() {
                   Company
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul className="space-y-4 ">
+                  <ul  >
                     <li>
                       <Link href="/#about" className={FOOTER_LINK_STYLES}>
                         About Us

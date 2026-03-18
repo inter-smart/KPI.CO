@@ -28,24 +28,24 @@ export default function HomeService({ data }: HomeServiceProps) {
           {data.serviceList.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-[10px]  xl:rounded-[12px] p-[30px] xl:p-[23px_20px_25px] border border-gray-100 shadow-[0px_0px_5px_rgba(0,0,0,0.1)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
+              className="bg-white rounded-[10px]  xl:rounded-[12px] p-[23px_18px] xl:p-[23px_20px_25px] border border-gray-100 shadow-[0px_0px_5px_rgba(0,0,0,0.1)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
             >
               {/* Icon Container */}
-              <div className="w-[35px] xl:w-[52px] 2xl:w-[55px] 3xl:w-[70px] h-[35px] xl:h-[52px] 2xl:h-[55px] 3xl:h-[70px] bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-[8px] flex items-center justify-center mb-[16px] transition-transform ">
+              <div className="w-[52.48px] xl:w-[52px] 2xl:w-[55px] 3xl:w-[70px] h-[52.48px] xl:h-[52px] 2xl:h-[55px] 3xl:h-[70px] bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-[8px] flex items-center justify-center mb-[16px] transition-transform ">
                 <Image
                   src={service.media.path}
                   width={32}
                   height={32}
                   alt={service.media.alt}
-                  className="max-w-[17px] xl:max-w-[21px] 2xl:max-w-[25px] 3xl:max-w-[32px]"
+                  className="max-w-[24px] xl:max-w-[21px] 2xl:max-w-[25px] 3xl:max-w-[32px]"
                 />
               </div>
 
               {/* Content */}
-              <h3 className="text-[17px] xl:text-[20px] font-semibold text-gray-900 mb-[15px]">
+              <h3 className="text-[18px] xl:text-[20px] font-semibold text-gray-900 mb-[12px] xl:mb-[15px]">
                 {service.title}
               </h3>
-              <p className="text-[16px] text-gray-600 leading-normal mb-[25px] xl:mb-[18px] flex-grow">
+              <p className="text-[14px] xl:text-[16px] text-gray-600 leading-normal mb-[25px] xl:mb-[18px] flex-grow">
                 {service.description}
               </p>
               <div>

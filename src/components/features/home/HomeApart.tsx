@@ -13,7 +13,7 @@ type HomeApartProps = {
 
 export default function HomeApart({ data }: HomeApartProps) {
   return (
-    <section className="w-full py-[50px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] bg-linear-to-t from-[#6a9fe0d6] to-[#053269] overflow-hidden relative z-0">
+    <section className="w-full py-[63px_58px] lg:py-[75px] xl:py-[90px] 2xl:py-[100px] 3xl:py-[140px] bg-linear-to-b xl:bg-linear-to-t from-[#053269] to-[#6A9FE0] xl:from-[#6a9fe0d6] xl:to-[#053269] overflow-hidden relative z-0">
       <Image
         src="/images/home-apart-delmt.png"
         alt="home-apart-delmt"
@@ -25,7 +25,7 @@ export default function HomeApart({ data }: HomeApartProps) {
         <Heading
           as="h2"
           size="h2"
-          className="text-white mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className="text-white mb-[5px] xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000"
         >
           {data.title}
         </Heading>
