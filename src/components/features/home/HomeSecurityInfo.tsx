@@ -34,7 +34,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
             >
               {data.title}
             </Heading>
-            <div className="text-center w-full h-auto p-[40.55px_20.74px_39.67px_40.97px] lg:p-[40px_30px] xl:p-[46px_36px_44.9px_34px]  rounded-[9.35px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
+            <div className="text-center w-full max-sm:h-[301px] h-auto p-[40.55px_20.74px_39.67px_40.97px] lg:p-[40px_30px] xl:p-[46px_36px_44.9px_34px]  rounded-[9.35px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
               <div className="w-[68.68px] h-[68.68px] lg:w-17.5 xl:w-[77.9px] h-auto aspect-square mx-auto mb-[17.17px] xl:mb-[19.48px]  overflow-hidden block">
                 <Image
                   src={data.isoInfo.media.url || '/images/placeholder.png'}
