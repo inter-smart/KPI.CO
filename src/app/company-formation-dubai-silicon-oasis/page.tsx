@@ -478,7 +478,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} />
+      <InnerHero data={localData.hero} variant="dsoa"/>
       <MainlandBusiness data={localData.mainlandBusiness} variant="dsoa"/>
       <CorporateServicesUaeWhyBuild
         variant="dsoa"

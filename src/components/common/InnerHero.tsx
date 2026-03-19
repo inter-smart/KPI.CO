@@ -55,7 +55,8 @@ export type InnerHeroProps = {
     | "Agreed-Procedure"
     | "difc-regulated"
     | "difc"
-    | "meydan";
+    | "meydan"
+    | "dsoa";
 };
 
 export default function InnerHero({
@@ -133,6 +134,7 @@ export default function InnerHero({
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
             variant === "difc" && "xl:max-w-[785px]",
             variant === "RAK-Offshore" && "max-sm:max-w-[330px]",
+          
           )}
         >
           <Heading
@@ -149,6 +151,7 @@ export default function InnerHero({
               variant === "dwtc" && "normal-case", 
               variant === "Mainland" && "mb-[22px] xl:mb-[29.5px]", 
               variant === "VatServicesUae" && "mb-[22px] xl:mb-[29.5px]", 
+              variant === "dsoa" && "mb-[22px] xl:leading-[150%]", 
             )}
           >
             {parse(data?.title)}
@@ -191,6 +194,7 @@ export default function InnerHero({
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
                 variant === "DMCC-Freezone" && "mb-[22px] xl:mb-[32px]",
                  variant === "ADGM-Regulated-Audit" && "xl:max-w-[772px]",
+                   variant === "dsoa" && "!max-w-[775px] xl:mb-[35px]",
                  variant === "VatServicesUae" && "xl:mb-[40.5px] xl:leading-[150%]",
               )}
             >

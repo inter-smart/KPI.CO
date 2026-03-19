@@ -216,8 +216,7 @@ export default function MainlandBusiness({
                           <div
                             className={cn(
                               "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
-                              hasVariant(variant, "dsoa") &&
-                                "max-sm:min-h-[378px]",
+                          
                               hasVariant(variant, "ADGM-Foundations") &&
                                 "xl:w-[16px]",
                               hasVariant(variant, "Mainland") && "xl:w-[16px]",
