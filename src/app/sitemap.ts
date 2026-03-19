@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://kpi.co";
+// const BASE_URL = "https://kpi.co";
+const BASE_URL = "https://development.kpi.co";
 const WP_API_URL = "https://blogadmin.kpi.co/wp-json/wp/v2";
 
 /**
