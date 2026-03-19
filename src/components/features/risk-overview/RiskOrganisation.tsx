@@ -99,7 +99,7 @@ export default function RiskOrganisation({
               >
                 {data?.title && (
                   <Heading
-                    as="h2"
+                    as="h4"
                     size="h2"
                     className={cn(
                       "hidden md:block font-semibold text-[#1C5396] mb-[25px] max-sm:text-[26px] xl:text-[38px]  2xl:mb-[30px] 3xl:mb-[35px]",
@@ -151,7 +151,7 @@ export default function RiskOrganisation({
                     )}
                   >
                     <span className="absolute left-0 top-[4px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]">
-                      {["dwtc-doc", "difc-regulated"].includes(variant) ? (
+                      {["dwtc", "difc-regulated"].includes(variant) ? (
                         <svg
                           width="100%"
                           height="100%"

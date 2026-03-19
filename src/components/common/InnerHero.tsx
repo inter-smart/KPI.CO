@@ -195,6 +195,7 @@ export default function InnerHero({
                 variant === "DMCC-Freezone" && "mb-[22px] xl:mb-[32px]",
                  variant === "ADGM-Regulated-Audit" && "xl:max-w-[772px]",
                    variant === "dsoa" && "!max-w-[775px] xl:mb-[35px]",
+                   variant === "dwtc" && "!max-w-[775px] xl:mb-[35px]",
                  variant === "VatServicesUae" && "xl:mb-[40.5px] xl:leading-[150%]",
               )}
             >
