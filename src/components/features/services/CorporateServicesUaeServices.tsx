@@ -75,7 +75,7 @@ export default function CorporateServicesUaeServices({
         </div>
         <div
           className={cn(
-            "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[30px] 3xl:gap-10 xl:max-w-[1124px]",
+            "xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[22px] lg:gap-6.25 xl:gap-[29px] 3xl:gap-10 xl:max-w-[1124px]",
             variant === "saifz" && "!max-w-full xl:gap-[28px]",
             variant === "AuditServicesUae" && "!max-w-full xl:gap-[15px]",
             variant === "dsoa" && "!max-w-full xl:gap-[28px]",
@@ -96,7 +96,7 @@ export default function CorporateServicesUaeServices({
                 className={cn(
                   "[--icon-size:45px] lg:[--icon-size:40px] xl:[--icon-size:44px] 3xl:[--icon-size:60px] w-full h-full p-[20px] lg:p-5 xl:p-[22px_10px_19px_24px] bg-white rounded-[10px]  border-[1.6px] border-[#E2E2E2] flex transition-all duration-500",
                   variant === "dafza" && "max-sm:min-h-[150px]",
-                  variant === "ifza" && "max-sm:min-h-[160px]",
+                  variant === "ifza" && "max-sm:min-h-[160px] xl:min-h-[153px]",
                   variant === "rakez" && "min-h-[130px]",
                   variant === "saifz" && "min-h-[150px]",
                   variant === "AuditServicesUae" && "min-h-[150px] xl:py-[24px_26px]",
@@ -126,7 +126,7 @@ export default function CorporateServicesUaeServices({
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
                   <div
                     className={cn(
-                      "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-medium text-[#1C5396] mb-1.5 lg:mb-[5px]",
+                      "text-[18px] lg:text-[20px] xl:text-[22px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-[150%] font-medium text-[#1C5396] mb-1.5 lg:mb-[5px]",
                       variant === "technology" && "mb-0",
                       variant === "CorporateTaxUae" &&
                         "!mb-0 xl:max-w-[400px] tracking-[-0.5px]",
@@ -138,7 +138,7 @@ export default function CorporateServicesUaeServices({
                   {item?.description && (
                     <p
                       className={cn(
-                        "text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-normal font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
+                        "text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] leading-[150%] font-normal text-[#4E4E4E] max-w-full xl:max-w-[450px] 2xl:max-w-full",
                         variant === "regulatory" &&
                           "leading-relaxed xl:max-w-[92%]",
                         variant === "saifz" && "xl:max-w-full",

@@ -223,10 +223,11 @@ export default function MeydanFreeZone({
                 >
                   <div className={cn("relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[32px_36px_28px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0",
                     variant === "difc" && " xl:p-[37px_36px_32px]",
+                    variant === "ifza" && " xl:p-[32px_36px_33px]",
                   )}>
                     <div
                       className={cn(
-                        "leading-normal font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
+                        "leading-normal font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] leading-[150%] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
                         variant === "difc" &&
                           "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold xl:mb-[24px]",
                         variant === "difc-regulated" &&
@@ -238,7 +239,7 @@ export default function MeydanFreeZone({
                         variant === "RAK-Offshore" &&
                           " text-[#1C5396] mb-[10px]",
                         variant === "ifza" &&
-                          " text-[#1C5396] xl:mb-[10px]",
+                          " text-[#1C5396] xl:mb-[8px]",
                         variant === "MeydanFreeZone" && "max-sm:mb-[5px] xl:mb-[12px]",
                         variant === "difc-regulated" && "max-sm:text-[#003268] sm:!text-[#1C5396]",
 
@@ -252,6 +253,7 @@ export default function MeydanFreeZone({
                         variant === "Tax-Advisory" && "sm:max-w-[97%]",
                         variant === "RAK-Offshore" && "sm:max-w-full",
                         variant === "difc" && "xl:leading-[1.5] sm:max-w-full [&_p]:last-of-type:mb-0",
+                        variant === "ifza" && "xl:leading-[150%]",
                       
                       )}
                     >

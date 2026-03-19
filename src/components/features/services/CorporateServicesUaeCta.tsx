@@ -79,6 +79,7 @@ export default function CorporateServicesUaeCta({
               "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
              variant === "internal-audit" && "xl:min-h-[289px]",
+             variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
              variant === "erm" && "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
@@ -128,8 +129,8 @@ export default function CorporateServicesUaeCta({
                 "max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] font-bold leading-[135%] text-white mb-3.75 lg:mb-2.5 max-w-[650px]",
                 variant === "holding" && "font-bold leading-relaxed",
                 variant === "blogdetail" && "max-sm:text-[22px]",
-                variant === "ifza" && "font-bold",
-                variant === "rakez" && "xl:max-w-full",
+                variant === "ifza" && "font-bold xl:mb-[8px]",
+                variant === "rakez" && "xl:max-w-full ",
                 
                 variant === "dwtc" && "max-sm:max-w-[80%]",
               )}
@@ -143,6 +144,7 @@ export default function CorporateServicesUaeCta({
                 variant === "AuditServicesUae" && "xl:max-w-[75%]",
                 variant === "DMCC-Freezone" && "xl:max-w-[92%]",
                 variant === "regulatory" && "xl:max-w-[92%]",
+                variant === "ifza" && "xl:max-w-[583px]",
                 
               )}
             >

@@ -152,6 +152,7 @@ export default function InnerHero({
               variant === "Mainland" && "mb-[22px] xl:mb-[29.5px]", 
               variant === "VatServicesUae" && "mb-[22px] xl:mb-[29.5px]", 
               variant === "dsoa" && "mb-[22px] xl:leading-[150%]", 
+              variant === "ifza" && "mb-[22px] xl:leading-[150%]", 
             )}
           >
             {parse(data?.title)}
@@ -173,7 +174,7 @@ export default function InnerHero({
                 variant === "Mainland" && "lg:max-w-[770px] xl:text-[20px] xl:leading-[150%] xl:mb-[37.5px]",
                 variant === "SOP" &&
                   "lg:max-w-[90%] xl:mb-[30px] xl:text-[20px]",
-                variant === "ifza" && "lg:max-w-[100%]",
+                variant === "ifza" && "lg:max-w-[100%] xl:mb-[39px]",
                 variant === "internal-audit" && "xl:text-[20px]",
                 variant === "Formation-ADGM" && "xl:text-[20px]",
                 variant === "Offshore" && "xl:text-[20px]",

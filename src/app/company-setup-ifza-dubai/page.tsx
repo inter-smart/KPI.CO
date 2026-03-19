@@ -12,6 +12,7 @@ import BlogRelated from "@/components/features/blogs/BlogRelated";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import { blogData } from "@/data/blogData";
 import { Metadata } from "next";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -200,7 +201,7 @@ const localData = {
         },
         title: "Commercial License",
         description:
-          "For companies involved in buying, selling, importing, exporting, and distributing specific goods.",
+          "For companies involved in trading, import/export, distribution, and sale of specific goods.",
       },
       {
         id: 2,
@@ -210,7 +211,7 @@ const localData = {
         },
         title: "General Trading License",
         description:
-          "Allows broader trading across multiple products and commodities under one licence.",
+          "Allows trading across a wider range of products under one licence, subject to IFZA guidelines.",
       },
       {
         id: 3,
@@ -229,7 +230,7 @@ const localData = {
           alt: "E-Commerce License",
         },
         title: "E-Commerce License",
-        description: "For digital businesses, online shops and marketplaces. ",
+        description: "For online businesses, digital platforms, and internet-based trading activities. ",
       },
       {
         id: 5,
@@ -239,7 +240,7 @@ const localData = {
         },
         title: "Industrial License",
         description:
-          "For online businesses, digital platforms, and internet-based trading activities.",
+          "For light manufacturing, processing, packaging, and industrial-related activities.",
       },
     ] satisfies ServiceItem[],
   },
@@ -446,7 +447,8 @@ export default function DwtcFreezone() {
       <CorporateServicesUaeBanking variant="ifza" data={localData.banking} />
       <CorporateServicesUaeCta variant="ifza" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <BlogRelated data={localData.related_blog} />
+       <HomeOurInsights />
+      {/* <BlogRelated data={localData.related_blog} /> */}
     </>
   );
 }
