@@ -11,7 +11,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
   return (
     <section className="w-full h-auto py-[40px] lg:py-17 2xl:py-20 3xl:py-25">
       <div className="container">
-        <div className="sm:[--width:260px] xl:[--width:361px] 2xl:[--width:390px] 3xl:[--width:480px] flex flex-wrap max-lg:gap-4 max-sm:flex-col-reverse">
+        <div className="sm:[--width:260px] xl:[--width:363px]  flex flex-wrap max-lg:gap-4 max-sm:flex-col-reverse">
           <div className="w-full xl:w-[calc(100%-var(--width))] xl:pr-25 2xl:pr-30 3xl:pr-30">
             <div className="typography">
               <Heading
@@ -34,7 +34,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
             >
               {data.title}
             </Heading>
-            <div className="text-center w-full h-auto p-[40px] lg:p-[40px_30px] xl:p-[45px_35px] 3xl:p-[60px_50px] rounded-[10px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
+            <div className="text-center w-full h-auto p-[40px] lg:p-[40px_30px] xl:p-[46px_36px_44.9px_34px]  rounded-[9.35px] shadow-[0px_2px_16px_0px_rgba(0,0,0,0.1)] overflow-hidden">
               <div className="w-[70px] h-[70px] lg:w-17.5 xl:w-[77.9px] h-auto aspect-square mx-auto mb-[19.48px] lg:mb-5 3xl:mb-6.25 overflow-hidden block">
                 <Image
                   src={data.isoInfo.media.url || '/images/placeholder.png'}

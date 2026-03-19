@@ -81,7 +81,7 @@ export default function CorporateServicesUaeCta({
              variant === "internal-audit" && "xl:min-h-[289px]",
              variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
              variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
-             variant === "erm" && "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
+             variant === "erm" && "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
         >
           <div

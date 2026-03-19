@@ -391,7 +391,7 @@ const localData = {
   cta: {
     title: "Discuss Your ERM Requirements ",
     description:
-      "<p>If your organisation needs clearer risk visibility, stronger governance, or a defensible approach to risk oversight, KPI can support you in designing and implementing an ERM framework that works in practice. </p>",
+      "<p>If your organisation needs clearer risk visibility, stronger governance, or a defensible approach to risk oversight,KPI can support you in designing and implementing an ERM framework that works in practice.</p>",
     button: {
       label: "Get in Touch",
       link: "/",

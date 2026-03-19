@@ -84,8 +84,8 @@ export default function HomeHero({ data }: HomeHeroProps) {
                   {slide.description}
                 </p>
                 <Button
-                  className="text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] text-black font-medium sm:font-semibold px-5 sm:px-10 w-[150px]
-                  h-[35px] sm:h-[45px] xl:h-[45px]  bg-base2 hover:bg-base2 rounded-[8px] transition-all transform !scale-100 "
+                  className="text-[12.58px] lg:text-[11px] xl:text-[16px]   text-black font-medium sm:font-semibold px-5 sm:px-10 w-[118px] md:w-[150px]
+                  h-[30px] sm:h-[45px] xl:h-[45px]  bg-base2 hover:bg-base2 rounded-[8px] transition-all transform !scale-100 "
                   asChild
                 >
                   <Link href={slide.buttonLink}>{slide.buttonText}</Link>

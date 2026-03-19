@@ -171,7 +171,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
         <Text
           as="div"
           size="p1"
-          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-relaxed   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
+          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-[150%]   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>
@@ -180,7 +180,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
           href={data.slug ? `/blog/${data.slug}` : "#"}
           className={cn(
             "text-[16px] xl:text-[16px] 2xl:text-[17px]  3xl:text-[21px] leading-relaxed font-semibold text-[#1c5396] inline-flex items-center gap-1 mt-auto  transition-colors duration-300",
-            variant === "home" && "font-medium",
+            variant === "home" && "sm:font-medium",
           )}
         >
           Read More<span className="text-[11px] font-semibold">→</span>

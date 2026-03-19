@@ -125,7 +125,7 @@ export default function RiskExploreService({
                     variant === "internal-audit" &&
                       "flex-[0_0_80%] sm:flex-[0_0_50%] lg:flex-[0_0_25%]",
                     variant === "erm" &&
-                      "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_25%]",
+                      "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
                   <Service data={item} variant="risk" />
