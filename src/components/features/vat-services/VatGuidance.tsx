@@ -37,6 +37,8 @@ export default function VatGuidance({
             "[--image-size:100%] md:[--image-size:320px] lg:[--image-size:370px] xl:[--image-size:520px] 2xl:[--image-size:550px] 3xl:[--image-size:680px] flex flex-wrap",
             variant === "Financial-Statement-Audit" &&
               "mb-[25px] xl:mb-[30px] 3xl:mb-[40px]",
+            variant === "VatServicesUae" &&
+              "xl:[--image-size:514px]",
           )}
         >
           <div
@@ -93,7 +95,7 @@ export default function VatGuidance({
                 alt={data?.media?.alt || "Vat Guidance"}
                 width={680}
                 height={1070}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover xl:h-[803px]"
               />
             </div>
           </div>
