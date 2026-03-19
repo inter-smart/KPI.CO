@@ -128,19 +128,19 @@ export default function MeydanFreeZone({
                   className={cn(
                     "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] !leading-tight text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px]  font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
+                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold !max-w-full",
                     variant === "difc-regulated" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold !max-w-full",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold !max-w-full",
                     variant === "holding" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] !max-w-full font-medium",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] !max-w-full font-medium",
                     variant === "RAK-Offshore" &&
-                      "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-medium xl:mb-[25px] max-sm:max-w-[240px]",
+                      "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[33px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-medium xl:mb-[25px] max-sm:max-w-[240px]",
                     variant === "ADGM-Foundation" &&
-                      "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#053269] font-medium",
+                      "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] !text-[#053269] font-medium",
                     variant === "regulatory" &&
-                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] text-[#1C5396] font-semibold  !max-w-full",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[40px] !text-[#1C5396] font-semibold  !max-w-full",
                     variant === "JAFZA-Freezone" && "max-sm:text-[24px]",
-                    variant === "difc-regulated" && "sm:text-[#1C5396]",
+                    variant === "difc-regulated" && "sm:!text-[#1C5396]",
                   )}
                 >
                   {parse(item?.title)}
@@ -227,9 +227,9 @@ export default function MeydanFreeZone({
                   )}>
                     <div
                       className={cn(
-                        "leading-normal font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] leading-[150%] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
+                        " font-medium text-[#003268] mb-[8px] sm:mb-[15px] text-[24px] leading-[150%] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] z-[99]",
                         variant === "difc" &&
-                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold xl:mb-[24px]",
+                          "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] leading-[150%] text-[#003268] md:text-[#1C5396] font-semibold xl:mb-[24px]",
                         variant === "difc-regulated" &&
                           "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] font-semibold",
                         variant === "regulatory" &&
@@ -252,7 +252,7 @@ export default function MeydanFreeZone({
                         "text-[14px] xl:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] z-10 sm:leading-tight font-normal text-[#364153] sm:max-w-[90%] [&_p]:mb-[20px] xl:[&_p]:mb-[20px] 3xl:[&_p]:mb-[40px]",
                         variant === "Tax-Advisory" && "sm:max-w-[97%]",
                         variant === "RAK-Offshore" && "sm:max-w-full",
-                        variant === "difc" && "xl:leading-[1.5] sm:max-w-full [&_p]:last-of-type:mb-0",
+                        variant === "difc" && "!leading-[150%] sm:max-w-full [&_p]:last-of-type:mb-0",
                         variant === "ifza" && "xl:leading-[150%]",
                       
                       )}

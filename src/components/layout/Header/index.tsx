@@ -146,7 +146,7 @@ export default function Header() {
       <div className="container xl:h-full">
         <div className="flex items-center xl:h-full">
           {/* Logo Section */}
-          <div className="w-[120px] lg:w-[100px] xl:w-[130px] 2xl:w-[150px] 3xl:w-[180px]">
+          <div className="w-[120px] lg:w-[100px] xl:w-[130px] ">
             <Link href="/" className="flex items-center w-full">
               <Image
                 src={site_settings.header_logo_value}
@@ -160,18 +160,18 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-1 flex items-center justify-end lg:justify-between lg:pl-[60px] xl:pl-[100px] 2xl:pl-[100px]">
+          <div className="flex-1 flex items-center justify-end lg:justify-between lg:pl-[60px] xl:pl-[100px] ">
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-10">
               {/* Home Link (No Dropdown) */}
               <Link
                 href={navItems[0].href}
-                className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium text-[#1C5396] whitespace-nowrap"
+                className="text-[14px] xl:text-[16px]  font-medium text-[#1C5396] whitespace-nowrap"
               >
                 {navItems[0].label}
               </Link>
 
               {/* Mega Menu Container - Fixed Alignment Point */}
-              <div className="flex items-center gap-6 xl:gap-[35px] 2xl:gap-10 relative h-full group/nav">
+              <div className="flex items-center gap-6 xl:gap-[35px]  relative h-full group/nav">
                 {navItems.slice(1).map((item, index) => (
                   <div
                     key={index}
@@ -183,7 +183,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4 xl:py-[29px]"
+                      className="text-[14px] xl:text-[16px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4 xl:py-[20px]"
                     >
                       {item.label}
                       {item.isMega && (
@@ -208,7 +208,7 @@ export default function Header() {
               <div className="hidden lg:block">
                 <Link
                   href="/contact"
-                  className="text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] text-[#1E1E1E] bg-[#FFC916] min-w-[150px] xl:h-[45px]  flex items-center
+                  className="text-[14px] xl:text-[16px]  text-[#1E1E1E] bg-[#FFC916] min-w-[150px] xl:h-[45px]  flex items-center
                    justify-center font-semibold px-1 py-2.5 rounded-[8px] transition-all duration-300 shadow-none hover:none "
                 >
                   Get in Touch

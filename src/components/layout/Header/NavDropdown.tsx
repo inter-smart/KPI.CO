@@ -24,7 +24,7 @@ type NavDropdownProps = {
     isVisible: boolean
 }
 
-const LINK_STYLES = "text-[16px] md:text-[12px] xl:text-[14px] 2xl:text-[17px] 3xl:text-[21px] text-[#1C5396] font-medium hover:text-[#1C5396] transition-colors"
+const LINK_STYLES = "text-[16px] md:text-[12px] xl:text-[14px] text-[#1C5396] font-medium hover:text-[#1C5396] transition-colors"
 
 export default function NavDropdown({ categories, isVisible }: NavDropdownProps) {
     const [activeCategoryId, setActiveCategoryId] = useState<string>(categories[0]?.id || '')
@@ -47,18 +47,18 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                 "absolute top-[calc(100%-1px)] left-0 bg-white shadow-[0_6px_6px_rgba(0,0,0,0.25)] p-[20px_0] xl:p-[25px_0] 3xl:p-[30px_0] rounded-b-[10px] overflow-hidden  origin-top",
                 // Dynamic width: only full width if there's right content
                 hasRightContent
-                    ? "w-[590px] xl:w-[740px] 2xl:w-[750px] 3xl:w-[1000px]"
-                    : "w-[300px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px]",
+                    ? "w-[590px] xl:w-[740px] "
+                    : "w-[300px] xl:w-[330px] ",
                 isVisible ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible translate-y-3 scale-[0.98] pointer-events-none"
             )}
         >
             <div className="flex">
                 {/* Left Column: Categories */}
                 <div className={cn(
-                    "w-[300px] xl:w-[330px] 2xl:w-[350px] 3xl:w-[410px] bg-white  ",
+                    "w-[300px] xl:w-[330px]  bg-white  ",
                     hasRightContent ? "border-r border-black/10" : "border-r-0"
                 )}>
-                    <div className="flex flex-col p-[0_15px] xl:p-[0_20px] 2xl:p-[0_25px] 3xl:p-[0_30px]">
+                    <div className="flex flex-col p-[0_15px] xl:p-[0_20px] ">
                         {categories.map((category) => (
                             <Link
                                 key={category.id}
@@ -80,7 +80,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                                 : "group-hover:bg-[#E9ECEF] text-[#1C5396]"
                                         )}>
                                             {typeof category.icon === 'string' ? (
-                                                <div className="relative w-[13px] xl:w-[16px] h-[13px] xl:h-[18px] 3xl:w-[22px] 3xl:h-[22px]">
+                                                <div className="relative w-[13px] xl:w-[16px] h-[13px] xl:h-[18px] ">
                                                     <Image
                                                         src={category.icon.endsWith('.svg') || category.icon.includes('.') ? category.icon : `${category.icon}.svg`}
                                                         alt={category.label}
@@ -109,7 +109,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
 
                 {/* Right Column: Sub-items or CTA Card */}
                 {hasRightContent && (
-                    <div className="flex-1 bg-white relative p-[0_15px] xl:p-[0_20px]  2xl:p-[0_25px] 3xl:p-[0_30px] overflow-y-auto">
+                    <div className="flex-1 bg-white relative p-[0_15px] xl:p-[0_20px]  overflow-y-auto">
                         {!showCTACard ? (
                             <div className={cn(
                                 "grid gap-1 xl:gap-2",
@@ -125,7 +125,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                             )}
                                         >
                                             <span className={cn(
-                                                "text-[13px] xl:text-[14px] 3xl:text-[18px] font-bold transition-colors",
+                                                "text-[13px] xl:text-[14px] font-bold transition-colors",
                                                 "text-[#1C5396] group-hover:text-[#1C5396]",
                                                 !item.subItems && "font-medium"
                                             )}>
@@ -139,7 +139,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                                     <Link
                                                         key={`${activeCategory.id}-${index}-${subIdx}`}
                                                         href={sub.href}
-                                                        className="text-[12px] 2xl:text-[13px] 3xl:text-[16px] text-[#4E4E4E] hover:text-[#1C5396] py-1 transition-colors"
+                                                        className="text-[12px] text-[#4E4E4E] hover:text-[#1C5396] py-1 transition-colors"
                                                     >
                                                         {sub.name}
                                                     </Link>
@@ -152,7 +152,7 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                         ) : (
                             <div className="h-full w-full flex flex-col justify-start">
                                 <div className={cn(
-                                    "relative w-full h-full lg:h-[100%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] xl:p-[33px_24px] 2xl:p-[20px] 3xl:p-[25px_35px] text-white group cursor-pointer shadow-lg",
+                                    "relative w-full h-full lg:h-[100%] min-h-[150px] rounded-[6px] overflow-hidden p-[20px] xl:p-[33px_24px]  text-white group cursor-pointer shadow-lg",
                                     activeCategoryId === 'digital' ? "bg-[linear-gradient(360deg,#3EB0EA_0%,#389FDB_18%,#1C5396_100%)]" :
                                         isResource ? "bg-[linear-gradient(360deg,#6A9FE0_0%,#5589CB_35%,#3570B8_100%)]" :
                                             "bg-[linear-gradient(360deg,#4A7DBF_0%,#2D5B94_40%,#1C5396_100%)]"
@@ -169,12 +169,12 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                     )}
 
                                     <div className="relative z-10 flex flex-col h-full justify-center">
-                                        <h4 className="text-[13px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[21px]  font-semibold text-white mb-[20px] 2xl:mb-[25px] leading-relaxed line-clamp-3 max-w-[80%]">
+                                        <h4 className="text-[13px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[21px]  font-semibold text-white mb-[20px]  leading-relaxed line-clamp-3 max-w-[80%]">
                                             {activeCategoryId === 'digital' ? 'Empowering Businesses with Innovative Technology Solutions' :
                                                 isResource ? 'Practical Insights for Your Business Success' :
                                                     '30+ Years of Expertise That Drives Real Results'}
                                         </h4>
-                                        <Link href={activeCategory?.href || '/'} className="flex items-center text-[12px] xl:text-[14px] 2xl:text-[16px] 3xl:text-[21px] font-semibold" aria-label="learn_more">
+                                        <Link href={activeCategory?.href || '/'} className="flex items-center text-[12px] xl:text-[14px] font-semibold" aria-label="learn_more">
                                             Learn more <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                         </Link>
                                     </div>

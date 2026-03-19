@@ -181,12 +181,12 @@ export default function InnerHero({
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "regulatory" &&
                   "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
-                variant === "Financial-Statement-Audit" && "xl:text-[20px]",
+                variant === "Financial-Statement-Audit" && "xl:text-[20px] mb-[21px] xl:mb-[41px]",
                 variant === "VatServicesUae" && "mb-[19px] xl:text-[20px] xl:mb-[40px]",
                 variant === "ADGM-Foundations" && "xl:text-[20px]",
                 variant === "AuditServicesUae" && "xl:text-[20px]",
-                variant === "Agreed-Procedure" && "xl:text-[20px]",
-                variant === "ADGM-Regulated-Audit" && "xl:text-[20px]",
+                variant === "Agreed-Procedure" && "xl:text-[20px] xl:mb-[41px]",
+                variant === "ADGM-Regulated-Audit" && "xl:text-[20px] xl:mb-[33px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
                 variant === "e-invoicing" && "xl:text-[20px]",
@@ -198,6 +198,7 @@ export default function InnerHero({
                    variant === "dsoa" && "!max-w-[775px] xl:mb-[35px]",
                    variant === "dwtc" && "!max-w-[775px] xl:mb-[35px]",
                  variant === "VatServicesUae" && "xl:mb-[40.5px] xl:leading-[150%]",
+                 variant === "difc-regulated" && "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
               )}
             >
               {parse(data?.description)}

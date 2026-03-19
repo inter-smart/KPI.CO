@@ -73,7 +73,7 @@ export default function Footer() {
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="relative group lg:max-w-[90%] ml-auto xl:max-w-[435px] "
                 >
-                  <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[30px] xl:h-[40px] focus-within:ring-1 focus-within:ring-white/20 transition-all">
+                  <div className="bg-white rounded-[5px] xl:rounded-[10px] 3xl:rounded-[13px] p-[5px_10px] overflow-hidden flex items-center w-full h-[36px] lg:h-[40px] xl:h-[40px] focus-within:ring-1 focus-within:ring-white/20 transition-all">
                     <div className="flex-1 overflow-hidden">
                       <FormField
                         control={form.control}
@@ -95,7 +95,7 @@ export default function Footer() {
                     <Button
                       type="submit"
                       variant="ghost"
-                      className="!w-[34px] xl:!w-[32px] 2xl:!w-[34px] 3xl:!w-[42px] max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-[32px] flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
+                      className="!w-[32px] xl:!w-[32px]  max-sm:!h-[32px] h-full  rounded-[8px] bg-gradient-to-b from-[#6A9FE0] to-[#053269] !h-[32px] flex items-center justify-center !p-0 cursor-pointer  hover:opacity-90 transition-all active:scale-95"
                     >
                       <svg
                         width="23"
@@ -456,7 +456,7 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="tel:+97144551010" className={FOOTER_LINK_STYLES}>
+                  <a href="tel:+97144551010" className={`${FOOTER_LINK_STYLES} !mb-0`}>
                     +971 4 455 10 10
                   </a>
                 </li>
@@ -469,7 +469,7 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="mailto:hello@kpi.co" className={FOOTER_LINK_STYLES}>
+                <a href="tel:+97144551010" className={`${FOOTER_LINK_STYLES} !mb-0`}>
                     hello@kpi.co
                   </a>
                 </li>
@@ -482,7 +482,7 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <span className={FOOTER_LINK_STYLES}>UAE, KSA, India</span>
+                  <span className={`${FOOTER_LINK_STYLES} !mb-0`}>UAE, KSA, India</span>
                 </li>
               </ul>
             </div>
@@ -503,7 +503,7 @@ export default function Footer() {
             >
               <AccordionItem value="audit" className="border-none">
                 <AccordionTrigger
-                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px]  hover:no-underline border-b rounded-none border-white/20`}
+                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] md:py-[5px_12px] hover:no-underline border-b rounded-none border-white/20 [&[data-state=open]>svg]:!rotate-[180deg] [&>svg]:!text-white`}
                 >
                   Audit & Assurance
                 </AccordionTrigger>
@@ -547,7 +547,7 @@ export default function Footer() {
 
               <AccordionItem value="advisory" className="border-none">
                 <AccordionTrigger
-                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}
+                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] md:py-[5px_12px]  hover:no-underline border-b rounded-none border-white/20 [&[data-state=open]>svg]:!rotate-[180deg] [&>svg]:!text-white`}
                 >
                   Advisory Services
                 </AccordionTrigger>
@@ -594,7 +594,7 @@ export default function Footer() {
 
               <AccordionItem value="risk" className="border-none">
                 <AccordionTrigger
-                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}
+                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] md:py-[5px_12px] hover:no-underline border-b rounded-none border-white/20 [&[data-state=open]>svg]:!rotate-[180deg] [&>svg]:!text-white`}
                 >
                   Risk & Compliance
                 </AccordionTrigger>
@@ -638,7 +638,7 @@ export default function Footer() {
 
               <AccordionItem value="resources" className="border-none">
                 <AccordionTrigger
-                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}
+                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] md:py-[5px_12px]  hover:no-underline border-b rounded-none border-white/20 [&[data-state=open]>svg]:!rotate-[180deg] [&>svg]:!text-white`}
                 >
                   Resources
                 </AccordionTrigger>
@@ -665,7 +665,7 @@ export default function Footer() {
 
               <AccordionItem value="company" className="border-none">
                 <AccordionTrigger
-                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] hover:no-underline border-b rounded-none border-white/20`}
+                  className={`${FOOTER_MAINLINKS} !mb-0 py-[30px_12px] md:py-[5px_12px] hover:no-underline border-b rounded-none border-white/20 [&[data-state=open]>svg]:!rotate-[180deg] [&>svg]:!text-white`}
                 >
                   Company
                 </AccordionTrigger>
@@ -693,7 +693,7 @@ export default function Footer() {
             {/* Contact Us */}
             <div className="w-full">
               <div
-                className={`${FOOTER_MAINLINKS} py-[30px_12px] border-b rounded-none border-white/20`}
+                className={`${FOOTER_MAINLINKS} py-[30px_12px] md:py-[5px_12px] border-b rounded-none border-white/20`}
               >
                 Contact Us
               </div>
