@@ -41,6 +41,7 @@ export default async function HomeOurInsights({
 
   const insightsData = {
     title: "Our Insights",
+    titles: "Related Blogs",
     items: transformedInsights as InsightItem[],
   };
 

@@ -13,6 +13,7 @@ import type { InsightItem } from "@/app/page";
 type HomeOurInsightsProps = {
   data: {
     title: string;
+    titles: string;
     items: InsightItem[];
   };
   variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home" | "erm";
@@ -65,7 +66,7 @@ export default function HomeOurInsightsClient({
     <section
       className={cn(
         "w-full py-[45px] xl:py-[70px_100px] 2xl:py-[80px_110px] overflow-hidden",
-        variant === "saifz" && "bg-[#F9F9F9]",
+        variant === "default" && "bg-[#F9F9F9]",
       )}
     >
       <div className="container overflow-hidden">
@@ -73,14 +74,16 @@ export default function HomeOurInsightsClient({
           as="h2"
           size="h2"
           className={cn(
-            "text-[#1c5396] mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
+            "text-[#1c5396] mb-4 xl:!mb-0 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
             variant === "holding" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+           
           )}
         >
-          {data.title}
+            {variant === "default" ? data.titles : data.title}
+          
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
@@ -110,8 +113,8 @@ export default function HomeOurInsightsClient({
         </div>
         <div
           className={cn(
-            "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 ",
-            variant === "default" && "hidden",
+            "flex justify-center gap-1 xl:gap-[18px] mt-6 xl:mt-6 hidden",
+            variant === "default" && "show",
           )}
         >
           {scrollSnaps.map((_, index) => (
