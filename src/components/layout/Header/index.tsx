@@ -284,7 +284,7 @@ export default function Header() {
                                 value={`item-${idx}`}
                                 className="border-0 shadow-none border-b border-[#DDDCDE]"
                               >
-                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] hover:no-underline px-0 py-4 [&[data-state=open]>svg]:!rotate-[180deg]">
+                                <AccordionTrigger className="text-[16px] font-semibold text-[#1C5396] flex items-center hover:no-underline px-0 py-4 [&[data-state=open]>svg]:!rotate-[180deg]">
                                   {item.label}
                                 </AccordionTrigger>
                                 <AccordionContent className="pb-4 pl-0">
@@ -344,7 +344,7 @@ export default function Header() {
                                             value={`mega-${idx}-${mIdx}`}
                                             className="border-none"
                                           >
-                                            <AccordionTrigger className="hover:no-underline py-2 [&[data-state=open]>svg]:!rotate-[180deg]">
+                                            <AccordionTrigger className="hover:no-underline flex items-center py-2 [&[data-state=open]>svg]:!rotate-[180deg]">
                                               <div className="flex items-center gap-3">
                                                 {mega.icon && (
                                                   <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
