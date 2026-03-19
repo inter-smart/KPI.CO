@@ -150,7 +150,7 @@ export default function InnerHero({
               variant === "Formation-JAFZA" && "normal-case",
               variant === "dwtc" && "normal-case", 
               variant === "Mainland" && "mb-[22px] xl:mb-[29.5px]", 
-              variant === "VatServicesUae" && "mb-[22px] xl:mb-[29.5px]", 
+              variant === "VatServicesUae" && "mb-[22px] xl:mb-[22px]", 
               variant === "dsoa" && "mb-[22px] xl:leading-[150%]", 
               variant === "ifza" && "mb-[22px] xl:leading-[150%]", 
             )}
