@@ -19,7 +19,7 @@ export default function WhyRiskManagement({
       <div className="container">
         <div className="flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[20px] 3xl:mb-[35px]">
           {/* Left Content */}
-          <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-515px)] 2xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
+          <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-514px)] 2xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
             <div className="w-full">
               <Heading
                 as="div"
@@ -69,7 +69,7 @@ export default function WhyRiskManagement({
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[395px] xl:w-[515px] 2xl:w-[510px] 3xl:w-[680px]">
+          <div className="w-full lg:w-[395px] xl:w-[514px] 2xl:w-[510px] 3xl:w-[680px]">
             <Heading
               as="div"
               size="h3"

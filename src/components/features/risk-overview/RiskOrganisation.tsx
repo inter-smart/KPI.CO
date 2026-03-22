@@ -62,6 +62,7 @@ export default function RiskOrganisation({
             variant === "RAK-Offshore" && "xl:gap-0",
             variant === "dwtc-bg" && "xl:gap-0",
             variant === "dwtc" && "xl:gap-0",
+            variant === "difc-regulated" && "xl:gap-0",
           )}
         >
           <div
@@ -82,7 +83,7 @@ export default function RiskOrganisation({
               "xl:w-[calc(100%-460px)] xl:pr-[60px]",
               variant === "dwtc-bg" && "xl:w-[calc(100%-480px)] xl:pr-[100px]",
               variant === "difc-regulated" &&
-              "xl:w-[calc(100%-495px)] xl:pr-[0px]",
+              "xl:w-[calc(100%-473px)] xl:pr-[28px]",
             )}
           >
             {(data?.title || data?.description) && (
@@ -109,6 +110,7 @@ export default function RiskOrganisation({
                       variant === "dwtc" && "mb-[20px] xl:mb-[30px]",
                       variant === "dwtc-bg" && "leading-[1.3]",
                       variant === "regulatory" && "max-sm:!text-[26px]",
+                      variant === "difc-regulated" && "xl:mb-[28px]",
                     
                     )}
                   >
@@ -190,7 +192,7 @@ export default function RiskOrganisation({
                 className={cn(
                   "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-relaxed text-[#4E4E4E] mt-6 lg:mt-8 2xl:mt-8 max-w-[90%]",
                   variant === "regulatory" && "max-w-[100%]",
-                  variant === "difc-regulated" && "max-w-[100%]",
+                  variant === "difc-regulated" && "max-w-[100%] xl:mt-[30px]",
                   variant === "RAK-Offshore" && "max-w-[100%]",
                   variant === "dwtc-bg" && "max-w-[100%]",
                 )}
@@ -210,7 +212,7 @@ export default function RiskOrganisation({
               variant === "holding" && "xl:w-[475px]",
               variant === "RAK-Offshore" && "xl:w-[475px]",
               variant === "dwtc" && "xl:w-[475px]",
-              variant === "difc-regulated" && "xl:w-[495px]",
+              variant === "difc-regulated" && "xl:w-[473px]",
               variant === "JAFZA-Freezone" && "xl:w-[460px]",
               variant === "dwtc-bg" && "xl:w-[480px] mt-auto",
             )}
@@ -238,6 +240,7 @@ export default function RiskOrganisation({
                 "w-full sm:h-full rounded-[12px] overflow-hidden max-sm:h-[378px] min-h-[370px] sm:min-h-auto max-md:mb-6 block",
                 variant === "dwtc-bg" && "max-sm:min-h-[378px] xl:max-h-[380px] xl:mt-auto",
                 variant === "dwtc" && "max-sm:min-h-[378px]",
+                variant === "difc-regulated" && "xl:!max-h-[357px]",
               )}
             >
               {data?.media?.path && (

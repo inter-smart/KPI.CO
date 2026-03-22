@@ -397,7 +397,7 @@ const localData = {
           <p>Yes. KPI is registered as an approved audit firm in DIFC and provides audit services to DIFC-registered and DFSA-regulated entities. </p>
                         `,
       },
-     
+
       {
         id: 5,
         title: "How long does a DIFC audit take?",
@@ -405,7 +405,6 @@ const localData = {
           <p>Typically 4–8 weeks depending on size, complexity, and regulatory classification. Timelines are confirmed during engagement scoping. </p>
                         `,
       },
-      
     ] satisfies FaqItem[],
   },
   insights: {
@@ -424,8 +423,7 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI",
+  title: "DIFC & DFSA Regulated Audit Services | Regulatory-Grade Audits | KPI",
   description:
     "Independent, DFSA-compliant audit services for DIFC-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA.",
 

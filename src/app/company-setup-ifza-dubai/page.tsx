@@ -230,7 +230,8 @@ const localData = {
           alt: "E-Commerce License",
         },
         title: "E-Commerce License",
-        description: "For online businesses, digital platforms, and internet-based trading activities. ",
+        description:
+          "For online businesses, digital platforms, and internet-based trading activities. ",
       },
       {
         id: 5,
@@ -274,7 +275,8 @@ const localData = {
       {
         id: 1,
         title: "Choosing the Right Structure",
-        description: "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
+        description:
+          "Additional documents may be required depending on the business activity, number of shareholders, or company structure.",
       },
     ],
   } satisfies MeydanFreeZoneData,
@@ -447,7 +449,7 @@ export default function DwtcFreezone() {
       <CorporateServicesUaeBanking variant="ifza" data={localData.banking} />
       <CorporateServicesUaeCta variant="ifza" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-       <HomeOurInsights />
+      <HomeOurInsights />
       {/* <BlogRelated data={localData.related_blog} /> */}
     </>
   );

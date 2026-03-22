@@ -1,6 +1,8 @@
 import InnerHero from "@/components/common/InnerHero";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
-import BusinessLocation, { type BusinessLocationData } from "@/components/features/mainland/BusinessLocation";
+import BusinessLocation, {
+  type BusinessLocationData,
+} from "@/components/features/mainland/BusinessLocation";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
 import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
@@ -37,7 +39,6 @@ export type MainlandBusinessData = {
 };
 
 // BusinessLocationData and LocationItem are imported from BusinessLocation component
-
 
 export type DocumentRequiredData = {
   id?: number;
@@ -312,7 +313,7 @@ const localData = {
                         <p>Trade licenses can often be issued within 1–3 business days; visa processing and banking usually take 5–7 business days. </p>
                         `,
       },
-      
+
       {
         id: 5,
         title: "How much does a DMCC Free Zone license cost? ",
@@ -467,18 +468,18 @@ export default function page() {
     <>
       <InnerHero data={localData.hero} variant="DMCC-Freezone" />
       <MainlandBusiness data={localData.mainlandBusiness} />
-      <MeydanFreeZone data={localData.meydanFreeZone} variant="default" />
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="DMCC-Freezone" />
       <MeydanKeyBenefits data={localData.keyBenefits} />
 
       <BusinessLocation data={localData.businessLocation} />
-      <DocumentRequired data={localData.document_required_data} variant="dmcc" />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
+      <DocumentRequired
+        data={localData.document_required_data}
         variant="dmcc"
       />
+      <CorporateServicesUaeBanking data={localData.banking} variant="dmcc" />
       <CorporateServicesUaeCta data={localData.cta} variant="DMCC-Freezone" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-         <HomeOurInsights />
+      <HomeOurInsights />
     </>
   );
 }

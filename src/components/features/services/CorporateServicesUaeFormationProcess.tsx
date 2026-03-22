@@ -36,20 +36,20 @@ export type ProcessListItem = {
 
 export type CorporateServicesUaeFormationProcessProps = {
   variant?:
-  | "Vat-Services"
-  | "mainland"
-  | "aup"
-  | "sop"
-  | "default"
-  | "Financial-Statement-Audit"
-  | "tax-advisory"
-  | "erm"
-  | "risk"
-  | "internal-audit"
-  | "difc-regulated"
-  | "adgm-regulated"
-  | "company-freezone"
-  | "CorporateServicesUae";
+    | "Vat-Services"
+    | "mainland"
+    | "aup"
+    | "sop"
+    | "default"
+    | "Financial-Statement-Audit"
+    | "tax-advisory"
+    | "erm"
+    | "risk"
+    | "internal-audit"
+    | "difc-regulated"
+    | "adgm-regulated"
+    | "company-freezone"
+    | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -108,10 +108,10 @@ export default function CorporateServicesUaeFormationProcess({
         ref={sectionRef}
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
-          variant === "mainland" && "max-sm:pb-3" ||
-          variant === "sop" && "max-sm:pb-3" ||
-          variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"
-
+          (variant === "mainland" && "max-sm:pb-3") ||
+            (variant === "sop" && "max-sm:pb-3") ||
+            (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
+            (variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]"),
         )}
       >
         <div className="container">
@@ -129,8 +129,10 @@ export default function CorporateServicesUaeFormationProcess({
                 ? "text-start "
                 : "sm:text-center sm:max-w-[576px] xl:max-w-[1020px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] mx-auto",
               variant === "Vat-Services" && "sm:text-start !max-w-[100%]",
+              variant === "aup" && "xl:mb-[32px]",
+              variant === "Financial-Statement-Audit" && "xl:mb-[32px]",
               variant === "CorporateServicesUae" &&
-              "sm:text-center xl:mb-[30px]",
+                "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
@@ -144,7 +146,8 @@ export default function CorporateServicesUaeFormationProcess({
               <Text
                 as="div"
                 size="p5"
-                className={cn("text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
+                className={cn(
+                  "text-[#4e4e4e] [&_b]:text-[18px] xl:[&_b]:text-[24px] 2xl:[&_b]:text-[25px] 3xl:[&_b]:text-[32px] [&_b]:text-black gap-[25px] xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px] flex flex-col",
                   variant === "sop" && "max-sm:hidden",
                   variant === "erm" && "max-sm:text-[18px]",
                 )}
@@ -157,7 +160,10 @@ export default function CorporateServicesUaeFormationProcess({
             <Heading
               as="div"
               size="h4"
-              className={cn("xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10", variant === "erm" && "max-sm:text-[18px]")}
+              className={cn(
+                "xl:!text-[24px] font-semibold text-black mb-6 xl:mb-8 2xl:mb-10",
+                variant === "erm" && "max-sm:text-[18px]",
+              )}
             >
               {data.sub_title}
             </Heading>
@@ -170,14 +176,19 @@ export default function CorporateServicesUaeFormationProcess({
             )}
           >
             <div className="flex items-center">
-              <div className="flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ">
+              <div
+                className={cn(
+                  "flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ",
+                  variant === "aup" && "xl:space-y-[54px]",
+                  variant === "Financial-Statement-Audit" && "xl:space-y-[54px]",
+                )}
+              >
                 {data.steps.map((step, index) => (
                   <div
                     key={step.id}
                     className={cn(
                       "min-w-[200px] sm:min-w-[240px] lg:min-w-full lg:w-full relative z-0 pt-6 lg:pt-0 lg:pl-[55px] xl:pl-[80px] 2xl:pl-[90px] 3xl:pl-[100px] transition-all duration-300 max-lg:pr-4 cursor-pointer",
                       variant === "tax-advisory" && "min-w-[330px]",
-
 
                       // isDesktop ? "cursor-default" : "cursor-pointer",
                       index <= activeStep
@@ -194,6 +205,9 @@ export default function CorporateServicesUaeFormationProcess({
                           ? "bg-linear-to-b from-[#6a9fe0] to-[#053269]"
                           : "bg-[#dcdcdc]",
                         data.steps.length === index + 1 && "hidden",
+                        variant === "aup" && "xl:bottom-[-60px]",
+                        variant === "Financial-Statement-Audit" &&
+                          "xl:bottom-[-60px]",
                       )}
                     />
 
@@ -216,15 +230,14 @@ export default function CorporateServicesUaeFormationProcess({
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" && "sm:hidden",
                           variant === "difc-regulated" &&
-                          "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           variant === "adgm-regulated" &&
-                          "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0",
                           variant === "mainland" && "hidden",
-
                         )}
                       >
                         {step.step}
@@ -266,9 +279,12 @@ export default function CorporateServicesUaeFormationProcess({
                   "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
                   variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
                   variant === "mainland" && "xl:!min-h-[555px]",
-                  variant === "Financial-Statement-Audit" && "xl:!min-h-[415px]",
+                  variant === "Financial-Statement-Audit" &&
+                    "xl:!min-h-[415px]",
                   variant === "Vat-Services" && "xl:!min-h-[455px]",
                   variant === "erm" && "xl:!min-h-[690px]",
+                  variant === "aup" && "xl:!min-h-[555px]",
+                  variant === "adgm-regulated" && " max-sm:!min-h-[316.08px]",
                 )}
               >
                 <Image
@@ -290,9 +306,9 @@ export default function CorporateServicesUaeFormationProcess({
                             variant === "risk" && "sm:hidden",
                             variant === "erm" && "max-sm:text-[14px]",
                             variant === "difc-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                              "max-sm:!block sm:!hidden",
                             variant === "adgm-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                              "max-sm:!block sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -311,7 +327,8 @@ export default function CorporateServicesUaeFormationProcess({
                         <Heading
                           as="h4"
                           size="h6"
-                          className={cn("text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
+                          className={cn(
+                            "text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
                             variant === "erm" && "max-sm:text-[16px]",
                           )}
                         >

@@ -86,6 +86,7 @@ export default function InnerHero({
         variant === "technology" &&
           "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
+        variant === "ADGM-SPV-Formation" && "xl:!min-h-[651px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -130,11 +131,10 @@ export default function InnerHero({
             variant === "DMCC-Freezone" && "xl:max-w-[780px]",
             variant === "Agreed-Procedure" && "xl:max-w-[780px]",
             variant === "ADGM-Regulated-Audit" && "xl:max-w-[845px]",
-            variant === "ADGM-SPV-Formation" && "xl:max-w-[785px]",
+            variant === "ADGM-SPV-Formation" && "xl:max-w-[790px]",
             variant === "Tax-Advisory" && "xl:max-w-[785px]",
             variant === "difc" && "xl:max-w-[785px]",
             variant === "RAK-Offshore" && "max-sm:max-w-[330px]",
-          
           )}
         >
           <Heading
@@ -148,11 +148,12 @@ export default function InnerHero({
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
               variant === "Formation-JAFZA" && "normal-case",
-              variant === "dwtc" && "normal-case", 
-              variant === "Mainland" && "mb-[22px] xl:mb-[29.5px]", 
-              variant === "VatServicesUae" && "mb-[22px] xl:mb-[22px]", 
-              variant === "dsoa" && "mb-[22px] xl:leading-[150%]", 
-              variant === "ifza" && "mb-[22px] xl:leading-[150%]", 
+              variant === "dwtc" && "normal-case",
+              variant === "Mainland" && "mb-[22px] xl:mb-[29.5px]",
+              variant === "VatServicesUae" && "mb-[22px] xl:mb-[22px]",
+              variant === "dsoa" && "mb-[22px] xl:leading-[150%]",
+              variant === "ifza" && "mb-[22px] xl:leading-[150%]",
+              variant === "meydan" && "mb-[22px] xl:leading-[150%]",
             )}
           >
             {parse(data?.title)}
@@ -171,7 +172,8 @@ export default function InnerHero({
                 variant === "CorporateServicesUae" &&
                   "xl:text-[16px] lg:max-w-[83%]",
                 variant === "saifz" && "!max-w-full",
-                variant === "Mainland" && "lg:max-w-[770px] xl:text-[20px] xl:leading-[150%] xl:mb-[37.5px]",
+                variant === "Mainland" &&
+                  "lg:max-w-[770px] xl:text-[20px] xl:leading-[150%] xl:mb-[37.5px]",
                 variant === "SOP" &&
                   "lg:max-w-[90%] xl:mb-[30px] xl:text-[20px]",
                 variant === "ifza" && "lg:max-w-[100%] xl:mb-[39px]",
@@ -181,12 +183,15 @@ export default function InnerHero({
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "regulatory" &&
                   "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
-                variant === "Financial-Statement-Audit" && "xl:text-[20px] mb-[21px] xl:mb-[41px]",
-                variant === "VatServicesUae" && "mb-[19px] xl:text-[20px] xl:mb-[40px]",
+                variant === "Financial-Statement-Audit" &&
+                  "xl:text-[20px] mb-[21px] xl:mb-[41px]",
+                variant === "VatServicesUae" &&
+                  "mb-[19px] xl:text-[20px] xl:mb-[40px]",
                 variant === "ADGM-Foundations" && "xl:text-[20px]",
                 variant === "AuditServicesUae" && "xl:text-[20px]",
                 variant === "Agreed-Procedure" && "xl:text-[20px] xl:mb-[41px]",
-                variant === "ADGM-Regulated-Audit" && "xl:text-[20px] xl:mb-[33px]",
+                variant === "ADGM-Regulated-Audit" &&
+                  "xl:text-[20px] xl:mb-[33px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
                 variant === "e-invoicing" && "xl:text-[20px]",
@@ -194,11 +199,13 @@ export default function InnerHero({
                 variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
                 variant === "DMCC-Freezone" && "mb-[22px] xl:mb-[32px]",
-                 variant === "ADGM-Regulated-Audit" && "xl:max-w-[772px]",
-                   variant === "dsoa" && "!max-w-[775px] xl:mb-[35px]",
-                   variant === "dwtc" && "!max-w-[775px] xl:mb-[35px]",
-                 variant === "VatServicesUae" && "xl:mb-[40.5px] xl:leading-[150%]",
-                 variant === "difc-regulated" && "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
+                variant === "ADGM-Regulated-Audit" && "xl:max-w-[772px]",
+                variant === "dsoa" && "!max-w-[775px] xl:mb-[35px]",
+                variant === "dwtc" && "!max-w-[775px] xl:mb-[35px]",
+                variant === "VatServicesUae" &&
+                  "xl:mb-[40.5px] xl:leading-[150%]",
+                variant === "difc-regulated" &&
+                  "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
               )}
             >
               {parse(data?.description)}

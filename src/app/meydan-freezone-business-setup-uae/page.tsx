@@ -485,18 +485,24 @@ export default function MainlandCompanyFormationUaePage() {
   return (
     <>
       <InnerHero data={localData.hero} variant="meydan" />
-      <MainlandBusiness data={localData.mainlandBusiness} variant="meydan"  />
-      <MeydanFreeZone data={localData.meydanFreeZone} variant="MeydanFreeZone" />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="meydan" />
+      <MeydanFreeZone
+        data={localData.meydanFreeZone}
+        variant="MeydanFreeZone"
+      />
       <MeydanKeyBenefits data={localData.keyBenefits} />
       <BusinessLocation data={localData.businessLocation} />
-      <DocumentRequired data={localData.document_required_data} variant="MeydanFreeZone" />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
-        variant="Meydan"
+      <DocumentRequired
+        data={localData.document_required_data}
+        variant="MeydanFreeZone"
       />
+      <CorporateServicesUaeBanking data={localData.banking} variant="Meydan" />
       <CorporateServicesUaeCta data={localData.cta} variant="saifz" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow"/> 
-          <HomeOurInsights />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="side-arrow"
+      />
+      <HomeOurInsights />
     </>
   );
 }

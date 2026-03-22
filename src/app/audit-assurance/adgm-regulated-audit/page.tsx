@@ -42,7 +42,7 @@ export type RiskAdvisoryDta = {
   description: string;
   highlightsText: string;
   advisoryItems: {
-    id: number; 
+    id: number;
     slNo: number;
     description: string;
   }[];
@@ -157,7 +157,7 @@ const localData = {
         id: 2,
         slNo: 2,
         description:
-          "FSRA Rulebooks and <br/> prescribed reporting <br/> requirements",
+          "FSRA Rulebooks and <br/> prescribed reporting requirements",
       },
       {
         id: 3,
@@ -374,10 +374,8 @@ const localData = {
   },
 };
 
- 
-
 export const metadata = {
- title: "ADGM Regulated Audit Services | FSRA-Compliant Audits | KPI",
+  title: "ADGM Regulated Audit Services | FSRA-Compliant Audits | KPI",
   description:
     "Independent, FSRA-compliant audit services for ADGM-registered entities. Delivered with regulatory discipline and clarity under IFRS and ISA  ",
 
@@ -402,7 +400,7 @@ export const metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="ADGM-Regulated-Audit"/>
+      <InnerHero data={localData.hero} variant="ADGM-Regulated-Audit" />
       <WhyRiskManagement data={localData.whyRisk} variant="DIFC-Regulated" />
       <RiskAdvisory variant="adgm-regulated" data={localData.riskAdvisory} />
       {/* <RiskApproach variant="mainland" data={localData.approachProcess} /> */}
@@ -415,8 +413,14 @@ export default function DwtcFreezone() {
         data={localData.whyChoose}
         variant="adgm-regulated"
       />
-      <RiskExploreService variant="adgm-regulated" data={localData.explore_service} />
-      <CorporateServicesUaeCta variant="adgm-regulated" data={localData.contactUs} />
+      <RiskExploreService
+        variant="adgm-regulated"
+        data={localData.explore_service}
+      />
+      <CorporateServicesUaeCta
+        variant="adgm-regulated"
+        data={localData.contactUs}
+      />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
       <HomeOurInsights />
     </>

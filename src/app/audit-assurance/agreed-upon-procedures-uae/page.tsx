@@ -433,10 +433,9 @@ const localData = {
     })),
   },
 };
- 
 
 export const metadata = {
- title: "Agreed-Upon Procedures (AUP) Services in the UAE | KPI",
+  title: "Agreed-Upon Procedures (AUP) Services in the UAE | KPI",
   description:
     "Expert Agreed-Upon Procedures (AUP) engagements for UAE  businesses. Factual findings, scope-aligned reporting for stakeholders and authorities..  ",
 
@@ -472,7 +471,7 @@ export default function page() {
       <HomeCounter data={localData.counterList} variant="Agreed-Procedure" />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow" />
       <HomeOurInsights />
     </>
   );

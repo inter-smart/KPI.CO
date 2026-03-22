@@ -78,10 +78,11 @@ export default function CorporateServicesUaeCta({
             variant === "dwtc" &&
               "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
-             variant === "internal-audit" && "xl:min-h-[289px]",
-             variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
-             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
-             variant === "erm" && "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
+            variant === "internal-audit" && "xl:min-h-[289px]",
+            variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
+            variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
+            variant === "erm" &&
+              "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
         >
           <div
@@ -101,7 +102,9 @@ export default function CorporateServicesUaeCta({
               alt="overlay"
               width={500}
               height={500}
-              className={cn("w-full h-full object-cover object-right max-md:block hidden")}
+              className={cn(
+                "w-full h-full object-cover object-right max-md:block hidden",
+              )}
             />
           </div>
           <div
@@ -119,7 +122,6 @@ export default function CorporateServicesUaeCta({
               variant === "DMCC-Freezone" && "lg:w-[65%]",
               variant === "ADGM-SPV-Formation" && "lg:w-[60%]",
               variant === "AuditServicesUae" && "lg:w-[75%]",
-             
             )}
           >
             <Heading
@@ -131,7 +133,7 @@ export default function CorporateServicesUaeCta({
                 variant === "blogdetail" && "max-sm:text-[22px]",
                 variant === "ifza" && "font-bold xl:mb-[8px]",
                 variant === "rakez" && "xl:max-w-full ",
-                
+
                 variant === "dwtc" && "max-sm:max-w-[80%]",
               )}
             >
@@ -145,7 +147,6 @@ export default function CorporateServicesUaeCta({
                 variant === "DMCC-Freezone" && "xl:max-w-[92%]",
                 variant === "regulatory" && "xl:max-w-[92%]",
                 variant === "ifza" && "xl:max-w-[583px]",
-                
               )}
             >
               {parse(data?.description)}
@@ -184,14 +185,15 @@ export default function CorporateServicesUaeCta({
                 variant === "Formation-JAFZA" && "xl:h-[48.02px]",
 
                 variant === "ifza" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
 
                 variant === "dwtc" &&
                   "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "Financial-Statement-Audit" &&
                   "max-sm:!min-w-[120px]",
                 variant === "regulatory" && "max-sm:!min-w-[118px]",
-                variant === "CorporateServicesUae" && "!min-w-[118px] xl:!min-w-[233.6px] h-[30px] sm:h-[48.2px]",
+                variant === "CorporateServicesUae" &&
+                  "!min-w-[118px] xl:!min-w-[233.6px] h-[30px] sm:h-[48.2px]",
                 variant === "difc-regulated" &&
                   "!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&

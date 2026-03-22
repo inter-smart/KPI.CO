@@ -33,7 +33,7 @@ export type MeydanKeyBenefitsProps = {
   | "default"
   | "Vat-Services"
   | "technology"
-  | "RAK-Offshore" 
+  | "RAK-Offshore"
   | "JAFZA-Freezone";
 };
 
@@ -41,6 +41,7 @@ export default function MeydanKeyBenefits({
   data,
   variant = "default",
 }: MeydanKeyBenefitsProps) {
+  const [mainSwiper, setMainSwiper] = useState<SwiperType | null>(null);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -92,6 +93,7 @@ export default function MeydanKeyBenefits({
               slidesOffsetAfter={20}
               freeMode={true}
               slideToClickedSlide={true}
+              centeredSlides={false}
               modules={[Thumbs]}
               onSwiper={setThumbsSwiper}
               watchSlidesProgress={true}
@@ -115,7 +117,14 @@ export default function MeydanKeyBenefits({
               className="ThumbSlider !overflow-visible"
             >
               {data?.slides?.map((item, index) => (
-                <SwiperSlide key={item?.id} className="!w-auto !h-auto">
+                <SwiperSlide
+                  key={item?.id}
+                  className="!w-auto !h-auto"
+                  onClick={() => {
+                    mainSwiper?.slideTo(index);
+                    thumbsSwiper?.slideTo(index);
+                  }}
+                >
                   <div
                     className={cn(
                       "text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-[1] before:inset-[auto_0_0_0]",
@@ -143,6 +152,7 @@ export default function MeydanKeyBenefits({
               modules={[Thumbs, EffectFade]}
               fadeEffect={{ crossFade: true }}
               thumbs={{ swiper: thumbsSwiper }}
+              onSwiper={setMainSwiper}
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
               className="MainSlider"
             >
