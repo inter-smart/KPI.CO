@@ -348,12 +348,6 @@ export default function DocumentRequired({
                   </Heading>
                 )}
               </div>
-<<<<<<< HEAD
-              <div className={cn("w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden max-sm:max-w-[329px]",
-                 variant === "AuditServicesUaes" && "!h-[314px]",
-                 variant === "VatServicesUae" && "xl:!h-[424px]"
-                 )}>
-=======
               <div
                 className={cn(
                   "w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden",
@@ -361,7 +355,6 @@ export default function DocumentRequired({
                   variant === "VatServicesUae" && "xl:!h-[424px]",
                 )}
               >
->>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
                 <Image
                   src={data.media.path}
                   alt={data.media.alt || data?.title || "Document required"}

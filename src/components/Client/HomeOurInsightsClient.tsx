@@ -100,15 +100,10 @@ export default function HomeOurInsightsClient({
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
-<<<<<<< HEAD
-            variant === "home" &&
-              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
-=======
             variant === "Our-Insights" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] max-sm:!mb-[9px] xl:!mb-[9px]",
             variant === "Our-Related" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[40px] max-sm:!mb-[2px] xl:!mb-[5px]",
->>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
           )}
         >
           {variant === "default" ? data.titles : data.title}
@@ -136,11 +131,8 @@ export default function HomeOurInsightsClient({
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                   variant === "Our-Insights" &&
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
-<<<<<<< HEAD
-=======
                   variant === "Our-Related" &&
                     "flex-[0_0_91.05%] sm:flex-[0_0_40%] xl:flex-[0_0_33.28%]",
->>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
                 )}
               >
                 <InsightCard data={item} variant={variant} />
