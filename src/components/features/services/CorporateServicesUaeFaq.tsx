@@ -39,6 +39,7 @@ export type CorporateServicesUaeFaqProps = {
     | "rakez"
     | "dwtc"
     | "sop"
+    | "ADGM-SPV-Formation"
     | "CorporateServicesUae"
     | "Formation-JAFZA"
     | "difc-regulated"
@@ -56,7 +57,7 @@ export default function CorporateServicesUaeFaq({
         "w-full h-auto py-[40px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
         variant === "holding" &&
           "py-[40px_20px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
-        variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px]",
+        variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px] xl:py-[30px_46px]",
         variant === "JAFZA-Freezone" && "xl:py-[30px_40px]",
       )}
     >
@@ -68,7 +69,8 @@ export default function CorporateServicesUaeFaq({
             className={cn(
               "text-[28px] lg:text-[32px] xl:text-[48px] 2xl:text-[52px] 3xl:text-[65px] text-center text-[#1C5396] xl:mb-6 2xl:mb-8 3xl:mb-10",
               variant === "Financial-Statement-Audit" && "xl:text-[48px]",
-              variant === "AuditServicesUae" && "xl:text-[48px] max-sm:!mb-[0px]",
+              variant === "AuditServicesUae" &&
+                "xl:text-[48px] max-sm:!mb-[0px]",
               variant === "RAK-Offshore" && "xl:text-[38px] max-sm:!mb-[0px]",
               variant === "JAFZA-Freezone" && "max-sm:mb-0",
             )}
@@ -77,13 +79,13 @@ export default function CorporateServicesUaeFaq({
           </Heading>
         </div>
 
-    <div
-  className={cn(
-    "w-full lg:max-w-178 xl:w-[792px] h-auto mx-auto relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:content-[''] after:bg-gradient-to-b after:from-[rgba(255,255,255,0.3)] after:to-white after:pointer-events-none after:opacity-0",
-    data?.button && "after:opacity-100"
-  )}
->
-   <Accordion type="single" collapsible>
+        <div
+          className={cn(
+            "w-full lg:max-w-178 xl:w-[792px] h-auto mx-auto relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:content-[''] after:bg-gradient-to-b after:from-[rgba(255,255,255,0.3)] after:to-white after:pointer-events-none after:opacity-0",
+            data?.button && "after:opacity-100",
+          )}
+        >
+          <Accordion type="single" collapsible>
             {data?.faq_list?.map((item) => (
               <AccordionItem
                 value={`item-${item.id}`}
@@ -102,6 +104,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "sop" && "last:border-b-1",
                   variant === "RAK-Offshore" && "last:border-b-1",
                   variant === "dwtc" && "last:border-b-1",
+                  variant === "ADGM-SPV-Formation" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -137,8 +140,7 @@ export default function CorporateServicesUaeFaq({
                       "typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
                       variant === "JAFZA-Freezone" && "[&_p]:leading-[1.5]",
                       variant === "company-freezone" && "[&_p]:leading-[1.5]",
-                         variant === "AuditServicesUae" &&
-                      "max-w-full",
+                      variant === "AuditServicesUae" && "max-w-full",
                     )}
                   >
                     {parse(item?.description || "")}
@@ -147,24 +149,23 @@ export default function CorporateServicesUaeFaq({
               </AccordionItem>
             ))}
           </Accordion>
-       
 
-        {data?.button && (
-          <Button
-            variant="yellow"
-            size="lg"
-            className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[138px] 2xl:min-w-[160px] 3xl:min-w-[200px]  h-[45px]  mt-[15px] mx-auto flex relative z-2"
-            asChild
-          >
-            <Link
-              href={data?.button?.link}
-              target={data?.button?.target ? "_blank" : "_self"}
+          {data?.button && (
+            <Button
+              variant="yellow"
+              size="lg"
+              className="text-[16px] xl:text-[14px] 2xl:text-[17px] w-fit min-w-[138px] 2xl:min-w-[160px] 3xl:min-w-[200px]  h-[45px]  mt-[15px] mx-auto flex relative z-2"
+              asChild
             >
-              {data?.button?.label || "Get in Touch"}
-            </Link>
-          </Button>
-        )}
-         </div>
+              <Link
+                href={data?.button?.link}
+                target={data?.button?.target ? "_blank" : "_self"}
+              >
+                {data?.button?.label || "Get in Touch"}
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );

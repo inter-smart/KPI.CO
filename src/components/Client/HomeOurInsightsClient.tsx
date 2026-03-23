@@ -16,12 +16,26 @@ type HomeOurInsightsProps = {
     titles: string;
     items: InsightItem[];
   };
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home" | "erm";
+  variant?:
+    | "default"
+    | "saifz"
+    | "ADGM-Foundations"
+    | "holding"
+    | "ADGM-SPV-Formation"
+    | "home"
+    | "erm";
 };
 
 type InsightCardProps = {
   data: InsightItem;
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home"| "erm";
+  variant?:
+    | "default"
+    | "saifz"
+    | "ADGM-Foundations"
+    | "ADGM-SPV-Formation"
+    | "holding"
+    | "home"
+    | "erm";
 };
 
 export default function HomeOurInsightsClient({
@@ -67,6 +81,7 @@ export default function HomeOurInsightsClient({
       className={cn(
         "w-full py-[45px] xl:py-[70px_100px] 2xl:py-[80px_110px] overflow-hidden",
         variant === "default" && "bg-[#F9F9F9]",
+        variant === "ADGM-SPV-Formation" && "bg-white",
       )}
     >
       <div className="container overflow-hidden">
@@ -79,17 +94,15 @@ export default function HomeOurInsightsClient({
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
-           
           )}
         >
-            {variant === "default" ? data.titles : data.title}
-          
+          {variant === "default" ? data.titles : data.title}
         </Heading>
 
         <div ref={emblaRef} className="w-full max-w-full">
           <div
             className={cn(
-              "flex touch-pan-y touch-pinch-zoom -mx-2 lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-2 lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",
+              "flex touch-pan-y touch-pinch-zoom -mx-[12.805px] lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-[12.805px] lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",
               variant === "ADGM-Foundations" &&
                 "xl:-mx-[20px] xl:[&>*]:p-[20px]",
               variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
@@ -99,11 +112,11 @@ export default function HomeOurInsightsClient({
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_75%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
+                  "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
                   variant === "saifz" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                   variant === "default" &&
-                    "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
+                    "flex-[0_0_66.58%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -140,7 +153,7 @@ export default function HomeOurInsightsClient({
 function InsightCard({ data, variant }: InsightCardProps) {
   return (
     <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
-      <div className="relative aspect-[375/202] overflow-hidden">
+      <div className="relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}

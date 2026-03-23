@@ -6,7 +6,14 @@ import { transformWpPostToBlogItem } from "@/lib/utils";
 export default async function HomeOurInsights({
   variant = "default",
 }: {
-  variant?: "default" | "saifz" | "ADGM-Foundations" | "holding" | "home" | "erm";
+  variant?:
+    | "default"
+    | "saifz"
+    | "ADGM-Foundations"
+    | "ADGM-SPV-Formation"
+    | "holding"
+    | "home"
+    | "erm";
 }) {
   const posts = await getPosts({ perPage: 4, _embed: true });
 

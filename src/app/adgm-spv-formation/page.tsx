@@ -149,7 +149,7 @@ const localData = {
   riskAdvisory: {
     title: "What an ADGM SPVs Offer",
     description:
-      "<p>ADGM SPVs combine flexibility with regulatory credibility. Key features include </p> ",
+      "<p>ADGM SPVs combine flexibility with regulatory credibility. Key features <br> include </p> ",
     highlightsText:
       "This makes ADGM SPVs a preferred choice for investors and groups seeking clean ownership structures that stand up to scrutiny.",
     advisoryItems: [
@@ -273,7 +273,7 @@ const localData = {
   document_required_data: {
     title: "Scope of Our ADGM SPV Services",
     description:
-      "<p>We provide end-to-end SPV support, from structuring to post- <br/>incorporation readiness. Our work is purpose driven. The SPV must remain <br/> effective as ownership, assets, or strategies evolve </p>",
+      "<p>We provide end-to-end SPV support, from structuring to post-incorporation readiness. Our work is purpose driven. The SPV must remain effective as ownership, assets, or strategies evolve </p>",
     items: [
       {
         id: 1,
@@ -325,37 +325,37 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title: "What is an ADGM SPV?",
-        description: `
-          <p>A mainland company is a business licensed by the Department of Economic Development (DED), allowing you to operate anywhere in the UAE.</p>
-                        `,
-      },
-      {
-        id: 2,
         title: "Who should consider setting up an ADGM SPV?",
         description: `
           <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
                         `,
       },
       {
-        id: 3,
+        id: 2,
         title: "Is an ADGM SPV subject to UAE Corporate Tax?",
         description: `
           <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
                         `,
       },
       {
-        id: 4,
+        id: 3,
         title: "Can an ADGM SPV open a UAE bank account?",
         description: `
           <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
                         `,
       },
       {
-        id: 5,
+        id: 4,
         title: "What documents are required to set up an ADGM SPV?",
         description: `
           <p>Typical requirements include shareholder and beneficial owner information, constitutional documents, and supporting KYC materials. The exact documentation depends on ownership complexity, jurisdictional exposure, and intended use of the SPV.</p>
+                        `,
+      },
+      {
+        id: 5,
+        title: "How much does it cost to set up an ADGM SPV?",
+        description: `
+          <p>Costs depend on the nature of the structure, number of shareholders, documentation requirements, and ongoing compliance needs. ADGM SPVs are designed to be cost-efficient, but pricing should always be assessed relative to the intended use and longevity of the structure.</p>
                         `,
       },
     ] satisfies FaqItem[],
@@ -408,21 +408,30 @@ export default function DwtcFreezone() {
         variant="ADGM-SPV-Formation"
         data={localData.mainlandBusiness}
       />
-      <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
-      <RiskAssuranceServices data={localData.riskAssurance} />
+      <RiskAdvisory
+        variant="ADGM-SPV-Formation"
+        data={localData.riskAdvisory}
+      />
+      <RiskAssuranceServices
+        variant="ADGM-SPV-Formation"
+        data={localData.riskAssurance}
+      />
       <CorporateServicesUaeWhyChoose variant="spv" data={localData.whyChoose} />
       {/* <DocumentRequired variant="spv" data={localData.document_required_data} /> */}
-      <RiskOrganisation data={localData.document_required_data} />
+      <RiskOrganisation
+        data={localData.document_required_data}
+        variant="ADGM-SPV-Formation"
+      />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta
         data={localData.contactUs}
         variant="ADGM-SPV-Formation"
       />
       <CorporateServicesUaeFaq
-        variant="side-arrow"
+        variant="ADGM-SPV-Formation"
         data={localData.difc_faq_data}
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="ADGM-SPV-Formation" />
     </>
   );
 }
