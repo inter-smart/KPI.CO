@@ -124,7 +124,7 @@ export default function HomeOurInsightsClient({
               <div
                 key={`insight-${item.id}`}
                 className={cn(
-                  "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
+                  "flex-[0_0_248.6px] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
                   variant === "saifz" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                   variant === "default" &&

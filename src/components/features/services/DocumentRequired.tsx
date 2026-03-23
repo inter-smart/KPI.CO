@@ -351,7 +351,7 @@ export default function DocumentRequired({
               <div
                 className={cn(
                   "w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden",
-                  variant === "AuditServicesUaes" && "!h-[314px]",
+                  variant === "AuditServicesUaes" && "h-[378px] xl:h-[314px]",
                   variant === "VatServicesUae" && "xl:!h-[424px]",
                 )}
               >

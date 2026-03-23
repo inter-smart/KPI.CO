@@ -118,13 +118,13 @@ export default function RiskAssuranceServices({
                   variant === "erm" && "max-sm:min-h-[164px]",
                 )}
               >
-                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[11.5px] lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
+                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[11.5px] lg:p-2 xl:p-[9px] 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
                   <Image
                     src={item?.media?.path}
                     alt={item?.media?.alt}
                     width={32}
                     height={32}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain max-w-[22px] max-h-[22px]"
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-3.75 lg:pl-3 xl:pl-[20px] 2xl:pl-3.75 3xl:pl-5">

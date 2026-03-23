@@ -41,12 +41,14 @@ export default function CorporateServicesUaeBanking({
 }: CorporateServicesUaeBankingProps) {
   const [emblaRef] = useEmblaCarousel(
     {
-      loop: false,
+      loop: data?.partners?.length > 4,
       align: "center",
       slidesToScroll: 1,
       containScroll: "trimSnaps",
     },
-    // [Autoplay({ delay: 2500, stopOnInteraction: true })],
+    data?.partners?.length > 4
+      ? [Autoplay({ delay: 2500, stopOnInteraction: true })]
+      : [],
   );
   return (
     <section
@@ -152,7 +154,7 @@ export default function CorporateServicesUaeBanking({
               <div
                 key={`affiliation-${item?.id}`}
                 className={cn(
-                  "flex-[0_0_133px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] min-w-0 select-none",
+                  "flex-[0_0_133.25px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] xl:flex-[0_0_324px] min-w-0 select-none",
                 )}
               >
                 <div
@@ -168,7 +170,7 @@ export default function CorporateServicesUaeBanking({
                 >
                   <div
                     className={cn(
-                      "w-[71px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px] ",
+                      "w-[71.92px] sm:w-[120px] xl:w-[174px]",
                       // variant === "ifza" &&
                       //   "w-[70px] sm:w-[120px] xl:w-[150px] 2xl:w-[180px]",
                       variant === "JAFZA-Freezone" &&

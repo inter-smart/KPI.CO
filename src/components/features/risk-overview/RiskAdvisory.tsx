@@ -72,12 +72,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             hasVariant(variant, "center") && "items-center",
             hasVariant(variant, "difc-regulated") && "items-center",
             hasVariant(variant, "ADGM-SPV-Formation") && "max-sm:gap-0",
+            variant === "AuditServicesUae" && "xl:gap-0",
           )}
         >
           <div
             className={cn(
               "w-full lg:w-[49%] xl:w-[calc(100%-590px)] xl:pr-[50px]",
               variant === "regulatory" && "xl:pr-0",
+              variant === "AuditServicesUae" &&
+                "xl:w-[calc(100%-592px)] xl:pr-[90px]",
             )}
           >
             <Heading
@@ -124,7 +127,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             >
               <div
                 className={cn(
-                  "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-[20px]",
+                  "text-[16px] lg:text-[14px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] font-normal text-[#4E4E4E] mb-1 sm:mb-5",
                   variant === "difc-regulated" &&
                     "max-sm:hidden md:max-w-[90%]",
                   variant === "adgm-regulated" && "max-sm:hidden",
@@ -139,13 +142,16 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             className={cn(
               "w-full lg:w-[51%] xl:w-[615px]",
               variant === "ADGM-SPV-Formation" && "max-sm:mb-[28px]",
+              variant === "AuditServicesUae" && "xl:w-[592px]",
             )}
           >
             <div className="w-full">
               <div
                 className={cn(
-                  "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_15px] md:p-[30px_20px] xl:p-[37px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
+                  "h-full flex items-center justify-center bg-[rgb(143,216,254,.1)] rounded-[15px] 2xl:rounded-[20px] p-[30px_16px] md:p-[30px_20px] xl:p-[37px_20px] 2xl:p-[40px_20px] 3xl:p-[60px_30px]",
                   // variant === "regulatory" && "bg-[rgba(143,216,254,10%)]"
+                  variant === "AuditServicesUae" &&
+                    "xl:p-[23.5px_30px] xl:min-h-[327px]",
                 )}
               >
                 <div className="overflow-hidden">
@@ -179,7 +185,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                       >
                         <div
                           className={cn(
-                            "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-[10px]",
+                            "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-1 sm:mb-[10px]",
                             hasVariant(variant, "difc")
                               ? "text-[#5280CA]"
                               : "text-[#5280CA]",
@@ -264,10 +270,10 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
           <div className="w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]">
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
-                <div className="w-full h-full p-[20px_8px_22px_24px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
+                <div className="w-full h-full p-[20px_8px_22px_24px] sm:p-[25px] xl:p-[28.5px_30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
                   <div
                     className={cn(
-                      "leading-normal font-medium text-[#003268] mb-[10px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
+                      "leading-normal font-medium text-[#003268] mb-0.5 sm:mb-[10px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",
                       variant === "AuditServicesUae" && " text-[#1C5396]",
                     )}
                   >

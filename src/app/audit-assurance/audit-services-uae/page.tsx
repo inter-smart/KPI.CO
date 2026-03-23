@@ -493,9 +493,8 @@ const localData = {
   },
 };
 
- 
 export const metadata = {
- title: "Audit Services in the UAE | Statutory & Regulated Audits | KPI",
+  title: "Audit Services in the UAE | Statutory & Regulated Audits | KPI",
   description:
     "Independent audit and assurance services for UAE businesses operating in regulated, growth-oriented environments,  delivered in line with ISA and IFRS ",
 
@@ -516,8 +515,6 @@ export const metadata = {
     ],
   },
 };
-
-
 
 export default function AuditOverviewUaePage() {
   return (
@@ -548,7 +545,7 @@ export default function AuditOverviewUaePage() {
         data={localData?.whyChoose}
         variant="AuditServicesUae"
       />
-      <HomeCounter data={localData.counterList} />
+      <HomeCounter data={localData.counterList} variant="AuditServicesUae" />
       <VatRelatedTax data={localData.vatRelatedTax} variant="sop" />
       <CorporateServicesUaeCta
         data={localData.cta}

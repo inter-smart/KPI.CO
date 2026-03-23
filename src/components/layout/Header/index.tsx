@@ -183,7 +183,7 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="text-[14px] xl:text-[16px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4 xl:py-[20px]"
+                      className="text-[14px] xl:text-[16px] font-medium flex items-center gap-1.5 text-[#1C5396] py-4 xl:py-[20px] 2xl:py-[29px]"
                     >
                       {item.label}
                       {item.isMega && (

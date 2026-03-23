@@ -90,13 +90,13 @@ export default function VatGuidance({
             </div>
           </div>
           <div className="w-[var(--image-size)] max-md:hidden">
-            <div className={cn("w-full h-full sm:rounded-[10px] 2xl:rounded-[15px] overflow-hidden block",variant === "Financial-Statement-Audit" && "xl:h-[608px]")}>
+            <div className={cn("w-full h-full sm:rounded-[10px] xl:rounded-[12px] xl:h-[675px] overflow-hidden block",variant === "Financial-Statement-Audit" && "xl:h-[608px]")}>
               <Image
                 src={data?.media?.path || "images/placeholder.png"}
                 alt={data?.media?.alt || "Vat Guidance"}
                 width={680}
                 height={1070}
-                className={cn("w-full h-full object-cover xl:h-[803px]",variant === "Financial-Statement-Audit" && "xl:h-full") }
+                className={cn("w-full h-full object-cover ",variant === "Financial-Statement-Audit" && "xl:h-full") }
               />
             </div>
           </div>

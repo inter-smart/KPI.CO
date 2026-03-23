@@ -98,7 +98,7 @@ function WhyBuildCard({
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
         variant === "company-freezone" && "rounded-[10px] xl:!pr-[10px]",
-        variant === "Vat-Services" && "xl:!pr-[40px]",
+        variant === "Vat-Services" && "xl:!pr-[40px] xl:min-h-[225px]",
         variant === "dafz" && "xl:min-h-[220px]",
         variant === "difc-formation" && "xl:min-h-[220px]",
         variant === "Formation-JAFZA" &&
@@ -142,7 +142,9 @@ function WhyBuildCard({
             "max-sm:!text-[16px] xl:text-[18px]",
           hasVariant(variant, "dwtc") && "max-sm:text-[16px] xl:text-[18px]",
           hasVariant(variant, "erm") && "max-sm:!text-[16px]",
-          hasVariant(variant, "company-freezone") && "max-sm:text-[16px] xl:text-[18px]",
+          hasVariant(variant, "company-freezone") &&
+            "max-sm:text-[16px] xl:text-[18px]",
+          variant === "AuditServicesUae" && "max-xl:text-[16px]",
         )}
       >
         {item.title}
@@ -230,8 +232,7 @@ export default function CorporateServicesUaeWhyBuild({
           "bg-linear-to-t from-[#f1fafe] via-white to-white !xl:py-[70px_70px]",
         hasVariant(variant, "offshore") &&
           "max-sm:bg-linear-to-t from-[rgba(62,176,234,0.06)] via-white to-white ",
-        hasVariant(variant, "Vat-Services") &&
-          "xl:py-[80px_63px]",
+        hasVariant(variant, "Vat-Services") && "xl:py-[80px_63px]",
       )}
     >
       <div className="container">
@@ -353,7 +354,12 @@ export default function CorporateServicesUaeWhyBuild({
           </div>
         </div>
         {data?.structure_list && (
-          <div className={cn("w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]" , variant==="AuditServicesUae" && "min-h-[133px]")}>
+          <div
+            className={cn(
+              "w-full h-auto xl:space-y-[15px] 2xl:space-y-[25px] mt-[30px]",
+              variant === "AuditServicesUae" && "min-h-[133px]",
+            )}
+          >
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
                 <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">

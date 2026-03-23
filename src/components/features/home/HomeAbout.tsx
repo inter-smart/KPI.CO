@@ -13,7 +13,7 @@ type HomeAboutProps = {
 
 export default function HomeAbout({ data, className }: HomeAboutProps) {
   return (
-    <section id="about" className={cn("w-full py-[42px] xl:py-[102px_104px] 2xl:py-[100px] sm:bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0", className)}>
+    <section id="about" className={cn("w-full py-[42.6px_41.4px] xl:py-[102px_104px] 2xl:py-[100px] sm:bg-linear-to-b from-[#053269] to-[#6A9FE0] overflow-hidden relative z-0", className)}>
       <Image
         src="/images/aboutLine.png"
         alt="about-delemt"
@@ -33,14 +33,14 @@ export default function HomeAbout({ data, className }: HomeAboutProps) {
         <Heading
           as="h2"
           size="h2"
-          className="text-white mb-4 xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000"
+          className="text-white mb-[28px] xl:mb-6 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:leading-[150%]"
         >
           {data.title}
         </Heading>
 
         <div
           className={cn(
-            "typography [--text-color:#d2dbe7]! mb-6 [&_p]:leading-[150%] [&_p]:text-[16px] xl:[&_p]:text-[18px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal xl:mb-8 2xl:mb-10",
+            "typography [--text-color:#d2dbe7]! mb-6 [&_p]:leading-[150%] [&_p]:text-[16px] xl:[&_p]:text-[18px] 3xl:[&_p]:text-[24px] [&_p]:leading-[150%] [&_p]:font-normal xl:mb-8 2xl:mb-10",
           )}
         >
           {parse(data.description ?? "<p>no content</p>")}
