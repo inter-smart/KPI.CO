@@ -38,7 +38,7 @@ export default function HomeCounter({
         variant === "Financial-Statement-Audit" &&
           "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
         variant === "Agreed-Procedure" &&
-          "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
+          "sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
         variant === "e-invoice" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "regulatory" && "max-sm:shadow-none",

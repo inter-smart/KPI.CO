@@ -124,7 +124,7 @@ export default function MeydanFreeZone({
                   variant === "DMCC-Freezone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_34px_34px]",
                   variant === "ifza" &&
-                    "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                    "to-[#EFF6FF] border-[#1C5396] border-[1px] sm:border-1 lg:border-2",
                   variant === "JAFZA-Freezone" &&
                     "max-sm:p-[48px_34px_20px] to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
 
@@ -231,12 +231,13 @@ export default function MeydanFreeZone({
               <div key={item.id} className="w-full h-auto">
                 <div
                   className={cn(
-                    "w-full h-full rounded-[15px]   overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[15px] sm:after:rounded-[12px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]",
+                    "w-full h-full rounded-[15px]   overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[15px] after:absolute after:-z-1 after:inset-0 after:translate-x-[2px]",
                     variant === "ifza" && "after:xl:translate-x-[3px]",
                     variant === "JAFZA-Freezone" &&
                       "after:xl:translate-x-[3px]",
                     variant === "MeydanFreeZone" && "max-sm:min-h-[212px]",
-                    variant === "DMCC-Freezone" && "max-sm:min-h-[212px] xl:min-h-[160px] after:xl:translate-x-[3px]",
+                    variant === "DMCC-Freezone" &&
+                      "max-sm:min-h-[212px] xl:min-h-[160px] after:xl:translate-x-[3px]",
                   )}
                 >
                   <div
@@ -244,7 +245,8 @@ export default function MeydanFreeZone({
                       "relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[32px_36px_28px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0",
                       variant === "difc" && " xl:p-[37px_36px_32px]",
                       variant === "ifza" && " xl:p-[32px_36px_33px]",
-                      variant === "DMCC-Freezone" && " xl:p-[32px_49px_30px_36px] xl:after:hidden",
+                      variant === "DMCC-Freezone" &&
+                        " xl:p-[32px_49px_30px_36px] xl:after:hidden",
                     )}
                   >
                     <div
@@ -263,8 +265,7 @@ export default function MeydanFreeZone({
                         variant === "ifza" && " text-[#1C5396] xl:mb-[8px]",
                         variant === "MeydanFreeZone" &&
                           "max-sm:mb-[5px] xl:mb-[8px]",
-                        variant === "DMCC-Freezone" &&
-                          "max-sm:mb-[2px]",
+                        variant === "DMCC-Freezone" && "max-sm:mb-[2px]",
                         variant === "difc-regulated" &&
                           "max-sm:text-[#003268] sm:!text-[#1C5396]",
                       )}

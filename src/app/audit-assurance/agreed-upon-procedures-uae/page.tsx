@@ -147,7 +147,7 @@ const localData = {
   whyRisk: {
     title: "<p>What Are <span>Agreed-Upon Procedures (AUP)?</span></p>",
     highlightsTitle:
-      "<p>Agreed-Upon Procedures are targeted reviews performed on specific financial or non-financial information, based on procedures agreed in advance with management and stakeholders. These <br> engagements are conducted in accordance with <span>ISRS 4400 (IAASB)</span></p>",
+      "<p>Agreed-Upon Procedures are targeted reviews performed on specific financial or non-financial information, based on procedures agreed in advance with management and stakeholders. These engagements are conducted in accordance with <span>ISRS 4400 (IAASB)</span></p>",
     highlights: [
       "No audit or review opinion is expressed",
       "No assurance is provided",
