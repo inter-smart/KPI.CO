@@ -163,10 +163,9 @@ function InsightCard({ data, variant }: InsightCardProps) {
           className="w-full h-full object-cover transition scale-110 transition-all duration-200 group-hover:translate-y-2"
         />
       </div>
-
       <div
         className={cn(
-          "w-full h-full p-[22px_18px] md:p-[18px] xl:p-[26px_25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col",
+          "w-full h-full p-[19.54px_16.13_19.33_18.87px] md:p-[18px] xl:p-[26px_25px] 2xl:p-[27px] 3xl:p-[35px] flex-1 flex flex-col",
           variant === "home" && "xl:p-[26px_25px]",
         )}
       >
