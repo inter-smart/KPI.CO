@@ -345,7 +345,7 @@ export default function DocumentRequired({
                   </Heading>
                 )}
               </div>
-              <div className={cn("w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden",
+              <div className={cn("w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden max-sm:max-w-[329px]",
                  variant === "AuditServicesUaes" && "!h-[314px]",
                  variant === "VatServicesUae" && "xl:!h-[424px]"
                  )}>
@@ -354,7 +354,7 @@ export default function DocumentRequired({
                   alt={data.media.alt || data?.title || "Document required"}
                   width={615}
                   height={636}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                 />
               </div>
             </div>

@@ -44,6 +44,7 @@ export type CorporateServicesUaeFaqProps = {
     | "Formation-JAFZA"
     | "difc-regulated"
     | "AuditServicesUae"
+    | "internal-audit"
     | "ADGM-Spv-Formation";
 };
 
@@ -105,6 +106,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "RAK-Offshore" && "last:border-b-1",
                   variant === "dwtc" && "last:border-b-1",
                   variant === "ADGM-SPV-Formation" && "last:border-b-1",
+                  variant === "internal-audit" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger

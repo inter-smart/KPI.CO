@@ -267,7 +267,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
   return (
     <div
       className={cn(
-        "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
+        "w-full h-full rounded-[10px] bg-[#f9fafb] overflow-hidden block relative z-0 min-h-[120px] xl:min-h-[120px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[10px] before:h-full before:bg-gradient-to-b before:from-[#1C5396] before:to-[#389FDB] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#f3f7fd] after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]",
         variant === "mainland" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "CorporateTaxUae" &&
           "before:bg-[#FFC916] after:bg-[#f9fafb] xl:min-h-[160px]",
@@ -309,15 +309,17 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "erm" && "after:bg-[#f3f7fd] max-sm:min-h-[150px]",
         variant === "AuditServicesUae" &&
           "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
+        variant === "risk" && "xl:!h-[120px]",
       )}
     >
       <div
         className={cn(
-          "relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[22px_24px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",
+          "relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[15px_24px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",
           variant === "CorporateServicesUae" &&
             "after:bg-[rgba(106,159,224,0.08)]",
           variant === "AuditServicesUae" && "h-full xl:pr-[42px]",
           variant === "erm" && "after:bg-[#f3f7fd]",
+          variant=== "risk" && "xl:!py-[10px]"
         )}
       >
         <div

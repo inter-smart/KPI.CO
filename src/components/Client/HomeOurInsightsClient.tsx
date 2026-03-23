@@ -94,6 +94,8 @@ export default function HomeOurInsightsClient({
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+            variant === "home" &&
+              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
           )}
         >
           {variant === "default" ? data.titles : data.title}
