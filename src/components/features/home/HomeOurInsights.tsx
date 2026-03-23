@@ -10,6 +10,7 @@ export default async function HomeOurInsights({
     | "default"
     | "saifz"
     | "ADGM-Foundations"
+    | "Our-Related"
     | "Our-Insights"
     | "ADGM-SPV-Formation"
     | "holding"

@@ -21,6 +21,7 @@ type HomeOurInsightsProps = {
     | "saifz"
     | "ADGM-Foundations"
     | "Our-Insights"
+    | "Our-Related"
     | "holding"
     | "ADGM-SPV-Formation"
     | "home"
@@ -34,6 +35,7 @@ type InsightCardProps = {
     | "saifz"
     | "ADGM-Foundations"
     | "Our-Insights"
+    | "Our-Related"
     | "ADGM-SPV-Formation"
     | "holding"
     | "home"
@@ -81,9 +83,11 @@ export default function HomeOurInsightsClient({
   return (
     <section
       className={cn(
-        "w-full py-[45px] xl:py-[70px_100px] 2xl:py-[80px_110px] overflow-hidden",
+        "w-full py-[46px_45px] xl:py-[74px_102px] overflow-hidden",
         variant === "default" && "bg-[#F9F9F9]",
         variant === "ADGM-SPV-Formation" && "bg-white",
+        variant === "Our-Related" &&
+          "bg-[#F9F9F9] max-sm:py-[24px_46px] xl:py-[73px_94px]",
       )}
     >
       <div className="container overflow-hidden">
@@ -91,11 +95,15 @@ export default function HomeOurInsightsClient({
           as="h2"
           size="h2"
           className={cn(
-            "text-[#1c5396] mb-4 xl:!mb-0 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
+            "text-[#1c5396] mb-4 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
             variant === "holding" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+            variant === "Our-Insights" &&
+              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] max-sm:!mb-[9px] xl:!mb-[9px]",
+            variant === "Our-Related" &&
+              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[40px] max-sm:!mb-[2px] xl:!mb-[5px]",
           )}
         >
           {variant === "default" ? data.titles : data.title}
@@ -104,11 +112,12 @@ export default function HomeOurInsightsClient({
         <div ref={emblaRef} className="w-full max-w-full">
           <div
             className={cn(
-              "flex touch-pan-y touch-pinch-zoom -mx-[12.805px] lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-[12.805px] lg:[&>*]:p-[15px] xl:[&>*]:p-[20px] 3xl:[&>*]:p-[25px]",
+              "flex touch-pan-y touch-pinch-zoom -mx-[12.805px] lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-[12.805px] lg:[&>*]:p-[15px] xl:[&>*]:p-[20px]",
               variant === "ADGM-Foundations" &&
                 "xl:-mx-[20px] xl:[&>*]:p-[20px]",
               variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
               variant === "Our-Insights" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
+              variant === "Our-Related" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
             )}
           >
             {data.items.map((item) => (
@@ -122,6 +131,8 @@ export default function HomeOurInsightsClient({
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                   variant === "Our-Insights" &&
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
+                  variant === "Our-Related" &&
+                    "flex-[0_0_91.05%] sm:flex-[0_0_40%] xl:flex-[0_0_33.28%]",
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -157,7 +168,7 @@ export default function HomeOurInsightsClient({
 
 function InsightCard({ data, variant }: InsightCardProps) {
   return (
-    <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 border  border-gray-50">
+    <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
       <div className="relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
