@@ -275,8 +275,7 @@ const localData = {
 
   whyChoose: {
     title: "Why Organisations Choose KPI ",
-    description:
-      "",
+    description: "",
     sub_title: "",
     items: [
       {
@@ -382,8 +381,7 @@ export const metadata: Metadata = {
     "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus.",
 
   openGraph: {
-    title:
-      "UAE Advisory Services for Business Structuring & Tax | KPI Group ",
+    title: "UAE Advisory Services for Business Structuring & Tax | KPI Group ",
     description:
       "KPI offers integrated advisory services across corporate structuring, tax advisory, PRO services, and relocation support in the UAE. Delivered with regulatory clarity and long-term focus. ",
     url: "https://kpi.co/advisory-services-uae",
@@ -418,7 +416,7 @@ export default function page() {
       />
       <CorporateServicesUaeCta data={localData.cta} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

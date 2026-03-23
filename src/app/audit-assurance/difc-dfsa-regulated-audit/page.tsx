@@ -480,7 +480,7 @@ export default function DwtcFreezone() {
         variant="side-arrow"
         data={localData.difc_faq_data}
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

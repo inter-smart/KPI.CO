@@ -449,7 +449,7 @@ export default function DwtcFreezone() {
       <CorporateServicesUaeBanking variant="ifza" data={localData.banking} />
       <CorporateServicesUaeCta variant="ifza" data={localData.contactUs} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
       {/* <BlogRelated data={localData.related_blog} /> */}
     </>
   );

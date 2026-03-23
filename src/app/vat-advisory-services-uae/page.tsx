@@ -10,7 +10,7 @@ import CorporateServicesUaeWhyBuild from "@/components/features/services/Corpora
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import CorporateServicesUaeFormationProcess from "@/components/features/services/CorporateServicesUaeFormationProcess";
 import VatGuidance, {
-  VatGuidanceData, 
+  VatGuidanceData,
 } from "@/components/features/vat-services/VatGuidance";
 import VatAdvisory, {
   VatAdvisoryData,
@@ -604,8 +604,11 @@ export default function VatServicesUaePage() {
       <InnerHero data={localData.hero} variant="VatServicesUae" />
       <VatGuidance data={localData.vatGuidance} variant="VatServicesUae" />
       <MeydanKeyBenefits data={localData.keyBenefits} variant="Vat-Services" />
-      <VatAdvisory data={localData.vatAdvisory} variant="VatServicesUae"/>
-      <CorporateServicesUaeWhyBuild data={localData.whyBuild} variant="Vat-Services" />
+      <VatAdvisory data={localData.vatAdvisory} variant="VatServicesUae" />
+      <CorporateServicesUaeWhyBuild
+        data={localData.whyBuild}
+        variant="Vat-Services"
+      />
       <CorporateServicesUaeFormationProcess
         variant="Vat-Services"
         data={localData.formationProcess}
@@ -625,7 +628,7 @@ export default function VatServicesUaePage() {
         data={localData.corporate_faq_data}
         // variant="side-arrow"
       />
-       <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

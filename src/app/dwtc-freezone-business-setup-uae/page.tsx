@@ -11,6 +11,7 @@ import CorporateServicesUaeFaq from "@/components/features/services/CorporateSer
 import CorporateServicesUaeWhyBuild from "@/components/features/services/CorporateServicesUaeWhyBuild";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeBanking from "@/components/features/services/CorporateServicesUaeBanking";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -431,7 +432,7 @@ export default function DwtcFreezone() {
         data={localData.corporate_faq_data}
         variant="dwtc"
       />
-      <BlogRelated data={localData.related_blog} />
+      <HomeOurInsights variant="Our-Related" />
     </>
   );
 }

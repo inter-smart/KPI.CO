@@ -560,7 +560,7 @@ export default function RiskOverviewPage() {
       />
       <DiscussYourRisk data={localData.discussYourRisk} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights variant="home"/>
+      <HomeOurInsights variant="Our-Insights"/>
     </>
   );
 }

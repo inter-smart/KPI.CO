@@ -319,7 +319,8 @@ const localData = {
         title: "FZE",
         type: "image",
         image: "/images/saifz-business-1.jpg",
-        description: "Single shareholder structure, suitable for founders or holding companies seeking full operational control. ",
+        description:
+          "Single shareholder structure, suitable for founders or holding companies seeking full operational control. ",
         link: "#",
       },
       {
@@ -327,7 +328,8 @@ const localData = {
         title: "FZC",
         type: "image",
         image: "/images/saifz-business-2.jpg",
-        description: "Multi-shareholder structure (2–5 shareholders), commonly used for joint ventures and partner-led businesses. ",
+        description:
+          "Multi-shareholder structure (2–5 shareholders), commonly used for joint ventures and partner-led businesses. ",
         link: "#",
       },
       {
@@ -414,7 +416,6 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-   
     ] satisfies BankingPartner[],
   },
   cta: {
@@ -511,10 +512,10 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
-      slug: `/blog/${blog.slug}`, 
+      slug: `/blog/${blog.slug}`,
     })),
   },
 };
@@ -567,7 +568,7 @@ export default function HamriyaUaePage() {
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-          <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
     </>
   );
 }

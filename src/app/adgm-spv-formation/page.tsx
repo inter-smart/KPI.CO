@@ -431,7 +431,7 @@ export default function DwtcFreezone() {
         variant="ADGM-SPV-Formation"
         data={localData.difc_faq_data}
       />
-      <HomeOurInsights variant="ADGM-SPV-Formation" />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

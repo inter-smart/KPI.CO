@@ -479,7 +479,7 @@ export default function page() {
       <CorporateServicesUaeBanking data={localData.banking} variant="dmcc" />
       <CorporateServicesUaeCta data={localData.cta} variant="DMCC-Freezone" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
     </>
   );
 }

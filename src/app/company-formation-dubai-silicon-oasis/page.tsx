@@ -112,8 +112,6 @@ export type InsightItem = {
 };
 
 const localData = {
-
-
   hero: {
     id: 1,
     media: {
@@ -126,13 +124,11 @@ const localData = {
       "<p>Set up your business in Dubai Silicon Oasis Authority - a tech-focused free zone designed for innovation and growth. Benefit from fast registration, flexible licenses, and access to cutting-edge infrastructure in Dubai’s integrated technology park.</p>",
   } satisfies HeroData,
 
-
   mainlandBusiness: {
     title: "Start a Business in Dubai Silicon Oasis",
     description:
       "<p>Dubai Silicon Oasis Authority (DSOA) is a vibrant, tech-focused free zone in Dubai that supports businesses of all sizes. With state-of-the-art infrastructure, flexible office options, and a supportive regulatory environment, it provides a strong foundation for startups, IT companies, and service providers to establish themselves in the UAE. DSOA fosters a thriving business ecosystem where companies can grow, explore regional and international opportunities, and turn innovative ideas into long-term success in one of the world’s most dynamic commercial hubs.</p>",
-    highlightsTitle:
-      "DSO Free Zone is well suited for:",
+    highlightsTitle: "DSO Free Zone is well suited for:",
     highlights: [
       "Technology startups and IT companies",
       "International firms expanding into Dubai",
@@ -234,7 +230,8 @@ const localData = {
   },
   services: {
     title: "Types of Licenses in DSOA",
-    description: "Dubai Silicon Oasis supports multiple company structures to suit different business needs. We help you choose the right structure to match your growth plans.",
+    description:
+      "Dubai Silicon Oasis supports multiple company structures to suit different business needs. We help you choose the right structure to match your growth plans.",
     items: [
       {
         id: 1,
@@ -243,7 +240,8 @@ const localData = {
           alt: "Company Formation",
         },
         title: "Service License",
-        description: "For professional services, IT solutions, and consultancy businesses operating in DSOA.",
+        description:
+          "For professional services, IT solutions, and consultancy businesses operating in DSOA.",
       },
       {
         id: 2,
@@ -318,10 +316,8 @@ const localData = {
           "Companies holding a Dubai Economy license can operate in DSOA’s administrative zone after obtaining a business operation permit.",
         link: "#",
       },
-
     ],
   } satisfies BusinessLocationData,
-
 
   document_required_data: {
     title: "Why Work with KPI",
@@ -332,14 +328,12 @@ const localData = {
       { id: 2, text: "Regulatory and compliance guidance " },
       { id: 3, text: "Corporate governance and business structuring support" },
       { id: 4, text: "Ongoing advisory as your UAE operations grow " },
-
     ],
 
     media: {
       path: "/images/dsoa-image.jpg",
       alt: "Required documents",
     },
-
   } satisfies DocumentRequiredData,
 
   banking: {
@@ -375,7 +369,6 @@ const localData = {
           alt: "Emirates NBD",
         },
       },
-     
     ] satisfies BankingPartner[],
   },
   cta: {
@@ -430,7 +423,6 @@ const localData = {
                       <p>Yes, depending on your licence and office package, your company can sponsor visas for owners, employees, and family members. </p>
                       `,
       },
-
     ] satisfies FaqItem[],
   },
 
@@ -441,15 +433,13 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
   },
 };
-
-
 
 export const metadata: Metadata = {
   title: "Dubai Silicon Oasis Business Setup | Company Formation in UAE ",
@@ -474,26 +464,22 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function page() {
   return (
     <>
-      <InnerHero data={localData.hero} variant="dsoa"/>
-      <MainlandBusiness data={localData.mainlandBusiness} variant="dsoa"/>
-      <CorporateServicesUaeWhyBuild
-        variant="dsoa"
-        data={localData.whyBuild}
-      />
+      <InnerHero data={localData.hero} variant="dsoa" />
+      <MainlandBusiness data={localData.mainlandBusiness} variant="dsoa" />
+      <CorporateServicesUaeWhyBuild variant="dsoa" data={localData.whyBuild} />
       <CorporateServicesUaeServices data={localData.services} variant="dsoa" />
       <BusinessLocation data={localData.businessLocation} variant="dsoa" />
-      <DocumentRequired data={localData.document_required_data} variant="dsoa"  />
-      <CorporateServicesUaeBanking
-        data={localData.banking}
+      <DocumentRequired
+        data={localData.document_required_data}
         variant="dsoa"
       />
+      <CorporateServicesUaeBanking data={localData.banking} variant="dsoa" />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-         <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
     </>
-  )
+  );
 }

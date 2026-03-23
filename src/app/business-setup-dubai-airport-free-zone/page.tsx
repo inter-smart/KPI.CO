@@ -478,7 +478,7 @@ const localData = {
     })),
   },
 };
- 
+
 export const metadata: Metadata = {
   title: "Start Your Business in Dubai Airport Free Zone | DAFZA UAE ",
   description:
@@ -520,7 +520,7 @@ export default function DafzaUaePage() {
       />
       <CorporateServicesUaeCta data={localData.cta} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-        <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
     </>
   );
 }

@@ -422,7 +422,7 @@ export default function DwtcFreezone() {
         data={localData.contactUs}
       />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }
