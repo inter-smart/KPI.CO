@@ -107,6 +107,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "Formation-DIFC" && "xl:py-[50px_70px]",
         variant === "erm" && "xl:py-[50px_80px]",
         variant === "regulatory" && "max-sm:py-[20px_40px]",
+        variant === "spv" && "xl:py-[47.5px_69.5px]",
       )}
     >
       <div className="container">
@@ -306,7 +307,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "offshore" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:pr-[40px]",
         variant === "erm" && "after:bg-[#f3f7fd] max-sm:min-h-[150px]",
-        variant === "AuditServicesUae" && "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
+        variant === "AuditServicesUae" &&
+          "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
       )}
     >
       <div

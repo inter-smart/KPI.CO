@@ -15,7 +15,12 @@ type RiskAssuranceProps = {
     description: string;
     items: RiskAssuranceData[];
   };
-  variant?: "internal-audit" | "Formation-ADGM" | "company-freezone" | "erm";
+  variant?:
+    | "internal-audit"
+    | "Formation-ADGM"
+    | "company-freezone"
+    | "erm"
+    | "ADGM-SPV-Formation";
 };
 
 export default function RiskAssuranceServices({
@@ -56,7 +61,12 @@ export default function RiskAssuranceServices({
     [emblaApi],
   );
   return (
-    <section className="w-full py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]">
+    <section
+      className={cn(
+        "w-full py-[40px_60px] xl:py-[50px_70px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB]",
+        variant === "ADGM-SPV-Formation" && "max-sm:py-[46px_43px]",
+      )}
+    >
       <div className="container">
         <div
           className={cn(
@@ -73,6 +83,7 @@ export default function RiskAssuranceServices({
                 "leading-[125%] mb-[30px] xl:mb-[38px]",
               variant === "Formation-ADGM" && "xl:mb-[30px]",
               variant === "erm" && "max-sm:mb-[20px]",
+              variant === "ADGM-SPV-Formation" && "max-sm:mb-[24px]",
             )}
           >
             {data?.title}
@@ -81,6 +92,7 @@ export default function RiskAssuranceServices({
             className={cn(
               "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-normal mb-[40px] text-[#4E4E4E]",
               variant === "internal-audit" && "sm:hidden",
+              variant === "ADGM-SPV-Formation" && "max-sm:mb-0",
             )}
           >
             {parse(data?.description)}
@@ -93,6 +105,7 @@ export default function RiskAssuranceServices({
               "max-sm:!grid xl:gap-y-[36px] max-sm:!gap-[15px]",
             variant === "erm" && "max-sm:grid max-sm:gap-[14px]",
             variant === "company-freezone" && "max-sm:grid max-sm:gap-[14px]",
+            variant === "ADGM-SPV-Formation" && "max-sm:grid max-sm:gap-[22px]",
           )}
         >
           {data.items.map((item) => (
@@ -105,7 +118,7 @@ export default function RiskAssuranceServices({
                   variant === "erm" && "max-sm:min-h-[164px]",
                 )}
               >
-                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-2.25 lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
+                <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[11.5px] lg:p-2 xl:p-2.25 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center transition-transform  ">
                   <Image
                     src={item?.media?.path}
                     alt={item?.media?.alt}
@@ -137,7 +150,14 @@ export default function RiskAssuranceServices({
             </div>
           ))}
         </div>
-        <div className={cn("w-full block sm:hidden",variant === "company-freezone" && "max-sm:hidden", variant === "erm" && "max-sm:hidden",)}>
+        <div
+          className={cn(
+            "w-full block sm:hidden",
+            variant === "company-freezone" && "max-sm:hidden",
+            variant === "erm" && "max-sm:hidden",
+            variant === "ADGM-SPV-Formation" && "max-sm:hidden",
+          )}
+        >
           <div
             ref={emblaRef}
             className="w-full max-w-full overflow-hidden px-[10px]"
