@@ -116,7 +116,7 @@ export default function InnerHero({
               "md:max-w-[600px] xl:max-w-[770px] 2xl:max-w-[950px] 3xl:max-w-[1115px]",
             variant === "technology" && "!max-w-full",
             variant === "internal-audit" &&
-              "xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
+              "max-sm:max-w-[330px] xl:max-w-[790px] ",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
             variant === "CorporateTaxUae" && "xl:max-w-[770px]",
             variant === "regulatory" && "!max-w-full",
@@ -144,6 +144,7 @@ export default function InnerHero({
               "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
 
               variant === "technology" && "max-w-[850px] xl:mb-[30px]",
+              variant === "internal-audit" && "max-w-[850px]",
               variant === "regulatory" && "max-w-[850px]",
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
@@ -206,6 +207,8 @@ export default function InnerHero({
                   "xl:mb-[40.5px] xl:leading-[150%]",
                 variant === "difc-regulated" &&
                   "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
+                variant === "internal-audit" &&
+                  "xl:max-w-[772px] xl:leading-[150%] xl:text-[20px] xl:mb-[40.5px]",
               )}
             >
               {parse(data?.description)}
@@ -240,7 +243,7 @@ export default function InnerHero({
             variant="yellow"
             size="lg"
             className={cn(
-              "text-[12.58px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[118px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]! 2xl:h-12! 3xl:h-15! !scale-100 hover:bg-base2 max-sm:mt-1",
+              "text-[12.58px] sm:text-[16px] xl:text-[16px] 2xl:text-[17px] text-[#212121] min-w-[118px] xl:min-w-[150px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[30px]! xl:h-[45px]!  max-sm:rounded-[6.29px] !scale-100 hover:bg-base2 max-sm:mt-1",
               variant === "difc-regulated" &&
                 "min-w-[125px] xl:min-w-[150px] max-sm:!h-[35px]",
               variant === "erm" && "max-sm:min-w-[118px] max-sm:h-[30px]",

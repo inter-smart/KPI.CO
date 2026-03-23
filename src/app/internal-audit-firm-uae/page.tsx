@@ -454,7 +454,7 @@ export default function InternalAudit() {
         variant="internal-audit"
       />
       <HomeCounter variant="internal-audit" data={localData.counterList} />
-      <RiskExploreService data={localData.explore_service} variant="internal-audit" />
+      <RiskExploreService data={localData.explore_service} variant="erm" />
       <CorporateServicesUaeCta data={localData.contactUs} variant="internal-audit"/>
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
       <HomeOurInsights variant="home" />
