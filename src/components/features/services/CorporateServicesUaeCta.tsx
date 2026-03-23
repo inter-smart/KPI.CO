@@ -176,10 +176,6 @@ export default function CorporateServicesUaeCta({
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "rakez" && "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
                 variant === "sop" && "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
-
-                variant === "ADGM-Foundations" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] xl:h-[50px]",
-
                 variant === "holding" &&
                   "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
                 variant === "Formation-JAFZA" && "xl:h-[48.02px]",

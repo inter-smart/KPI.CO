@@ -368,7 +368,8 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group ",
+  title:
+    "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group ",
   description:
     "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.",
 
@@ -419,7 +420,7 @@ export default function DwtcFreezone() {
         variant="ADGM-Foundations"
       />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
-          <HomeOurInsights />
+      <HomeOurInsights />
     </>
   );
 }
