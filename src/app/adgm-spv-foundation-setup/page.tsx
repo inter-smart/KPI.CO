@@ -420,7 +420,7 @@ export default function DwtcFreezone() {
         variant="ADGM-Foundations"
       />
       <CorporateServicesUaeFaq data={localData.difc_faq_data} />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }
