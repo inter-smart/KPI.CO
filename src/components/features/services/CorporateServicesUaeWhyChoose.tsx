@@ -110,7 +110,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "spv" && "xl:py-[47.5px_69.5px]",
       )}
     >
-      <div className="container">
+      <div className="container max-sm:px-[16.1px]">
         <div
           className={cn(
             "w-full h-auto mb-[25px]",
@@ -236,7 +236,7 @@ export default function CorporateServicesUaeWhyChoose({
               "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_40px]",
             variant === "holding" &&
               "max-sm:!gap-[18px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
-            variant === "SOP" && "max-sm:gap-[18px_1px] xl:!gap-[25px_30px]",
+            variant === "SOP" && "max-sm:gap-[18px] xl:!gap-[25px_30px]",
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
             variant === "regulatory" && "xl:!gap-[25px_30px]",
@@ -310,7 +310,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "AuditServicesUae" &&
           "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
         variant === "risk" && "xl:!h-[120px]",
-        variant === "SOP" && "max-sm:min-h-[150px]"
+        variant === "SOP" && "max-sm:min-h-[150px] max-sm:mr-[0.2px]"
       )}
     >
       <div

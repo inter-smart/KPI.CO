@@ -107,7 +107,7 @@ const localData = {
   document_required_data: {
     title: "what are standard operating procedures?",
     description:
-      "<p>A Standard Operating Procedure (SOP) is a set of detailed, written instructions that outline how to complete specific tasks or processes within an organization. SOPs help businesses simplify and standardize routine and critical operations, minimizing errors and driving efficiency.</p><div>Why Are Standard Operating Procedures Important?</div>",
+      "<p>A Standard Operating Procedure (SOP) is a set of detailed, written instructions that outline how to complete specific tasks or processes within an organization. SOPs help businesses simplify and standardize routine and critical operations, minimizing errors and driving efficiency.</p><div>Why are standard operating procedures important?</div>",
     items: [
       { id: 1, text: "Ensures consistent processes across the organization" },
       {
@@ -242,6 +242,7 @@ const localData = {
     steps: [
       {
         id: 1,
+        step: "Step one",
         title: " Define Scope & Objectives ",
         inner_title: "Define Scope & Objectives ",
         description:
@@ -249,6 +250,7 @@ const localData = {
       },
       {
         id: 2,
+        step: "Step Two",
         title: "Analyze Existing Processes",
         inner_title: "Analyze Existing Processes",
         description:
@@ -256,6 +258,7 @@ const localData = {
       },
       {
         id: 3,
+        step: "Step Three",
         title: "Develop Standard Operating Procedures",
         inner_title: "Develop Standard Operating Procedures",
         description:
@@ -263,6 +266,7 @@ const localData = {
       },
       {
         id: 4,
+        step: "Step Four",
         title: "Review SOPs and Align",
         inner_title: "Review SOPs and Align",
         description:
@@ -270,6 +274,7 @@ const localData = {
       },
       {
         id: 5,
+        step: "Step Five",
         title: "Implement and Train",
         inner_title: "Implement and Train",
         description:
@@ -277,6 +282,7 @@ const localData = {
       },
       {
         id: 6,
+        step: "Step Six",
         title: "Monitor and Update",
         inner_title: "Monitor and Update",
         description:
@@ -285,7 +291,7 @@ const localData = {
     ] satisfies ProcessStep[],
   },
   vatRelatedTax: {
-    title: "Related Tax & Advisory Services",
+    title: "Related Services",
     tax_list: [
       {
         id: 1,

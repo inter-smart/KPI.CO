@@ -44,7 +44,7 @@ export type CorporateServicesUaeFormationProcessProps = {
     | "Financial-Statement-Audit"
     | "tax-advisory"
     | "erm"
-    | "risk"
+    | "risk" 
     | "internal-audit"
     | "difc-regulated"
     | "adgm-regulated"
@@ -229,6 +229,7 @@ export default function CorporateServicesUaeFormationProcess({
                         className={cn(
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" && "sm:hidden",
+                          variant === "sop" && "sm:hidden",
                           variant === "difc-regulated" &&
                             "max-sm:!block sm:!hidden",
                           variant === "adgm-regulated" &&
@@ -237,7 +238,7 @@ export default function CorporateServicesUaeFormationProcess({
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0",
-                          variant === "mainland" && "hidden",
+                          variant === "mainland" && "hidden", 
                         )}
                       >
                         {step.step}
@@ -304,6 +305,7 @@ export default function CorporateServicesUaeFormationProcess({
                           className={cn(
                             "font-normal text-[#3eb0ea] capitalize mb-1 xl:text-[24px]",
                             variant === "risk" && "sm:hidden",
+                            variant === "sop" && "sm:hidden",
                             variant === "erm" && "max-sm:text-[14px]",
                             variant === "difc-regulated" &&
                               "max-sm:!block sm:!hidden",
@@ -330,6 +332,7 @@ export default function CorporateServicesUaeFormationProcess({
                           className={cn(
                             "text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
                             variant === "erm" && "max-sm:text-[16px]",
+                            variant === "sop" && "max-sm:text-[16px]",
                           )}
                         >
                           {parse(data.steps[activeStep].inner_title)}
