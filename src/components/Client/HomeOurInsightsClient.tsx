@@ -20,6 +20,7 @@ type HomeOurInsightsProps = {
     | "default"
     | "saifz"
     | "ADGM-Foundations"
+    | "Our-Insights"
     | "holding"
     | "ADGM-SPV-Formation"
     | "home"
@@ -32,6 +33,7 @@ type InsightCardProps = {
     | "default"
     | "saifz"
     | "ADGM-Foundations"
+    | "Our-Insights"
     | "ADGM-SPV-Formation"
     | "holding"
     | "home"
@@ -108,6 +110,7 @@ export default function HomeOurInsightsClient({
               variant === "ADGM-Foundations" &&
                 "xl:-mx-[20px] xl:[&>*]:p-[20px]",
               variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
+              variant === "Our-Insights" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
             )}
           >
             {data.items.map((item) => (
@@ -118,7 +121,13 @@ export default function HomeOurInsightsClient({
                   variant === "saifz" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                   variant === "default" &&
+<<<<<<< HEAD
                     "flex-[0_0_248px] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
+=======
+                    "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
+                  variant === "Our-Insights" &&
+                    "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
+>>>>>>> 5faf32669ab4059c5bd09d023c2002a42d6a8dcc
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -185,7 +194,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
         <Text
           as="div"
           size="p1"
-          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-[150%]   text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
+          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-[150%] line-clamp-5 text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>
