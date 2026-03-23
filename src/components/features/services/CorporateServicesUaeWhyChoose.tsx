@@ -176,7 +176,7 @@ export default function CorporateServicesUaeWhyChoose({
               className={cn(
                 "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] max-sm:[&_br]:hidden [&_b]:font-semibold [&_b]:text-black [&_b]:block [&_b]:mt-[20px] sm:[&_b]:mt-[30px]",
                 variant === "SOP" &&
-                  "[&_b]:text-[18px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
+                  "[&_b]:text-[20px] lg:[&_b]:text-[20px] xl:[&_b]:text-[24px]",
                 variant === "internal-audit" &&
                   "xl:leading-relaxed xl:max-w-[90%] xl:mb-[28px] ",
                 variant === "regulatory" && "xl:leading-relaxed xl:mb-[28px] ",
@@ -236,7 +236,7 @@ export default function CorporateServicesUaeWhyChoose({
               "max-sm:!gap-[15px] sm:!gap-[20px_25px] xl:!gap-[25px_40px]",
             variant === "holding" &&
               "max-sm:!gap-[18px] sm:!gap-[20px_25px] xl:!gap-[25px_30px]",
-            variant === "SOP" && "xl:!gap-[25px_30px]",
+            variant === "SOP" && "max-sm:gap-[18px_1px] xl:!gap-[25px_30px]",
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
             variant === "regulatory" && "xl:!gap-[25px_30px]",
@@ -310,6 +310,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "AuditServicesUae" &&
           "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
         variant === "risk" && "xl:!h-[120px]",
+        variant === "SOP" && "max-sm:min-h-[150px]"
       )}
     >
       <div

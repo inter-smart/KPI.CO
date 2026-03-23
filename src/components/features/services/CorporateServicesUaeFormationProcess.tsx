@@ -292,7 +292,7 @@ export default function CorporateServicesUaeFormationProcess({
                   alt="background decoration"
                   width={400}
                   height={740}
-                  className={cn("absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none" , variant==="erm" && "xl:w-[355px]")} 
+                  className={cn("absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none" , variant==="erm" && "md:w-[210px] xl:w-[395px]")} 
                 />
                 <AnimatePresence mode="wait">
                   <div key={activeStep} className="relative z-10 w-full">

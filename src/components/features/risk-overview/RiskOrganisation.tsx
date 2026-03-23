@@ -247,6 +247,7 @@ export default function RiskOrganisation({
                 variant === "dwtc" && "max-sm:min-h-[378px]",
                 variant === "difc-regulated" && "xl:!max-h-[357px]",
                 variant === "ADGM-SPV-Formation" && "xl:!max-h-[390px]",
+                variant === "SOP" && "max-sm:max-w-[329px]",
               )}
             >
               {data?.media?.path && (
