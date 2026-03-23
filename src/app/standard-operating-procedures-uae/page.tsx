@@ -105,7 +105,7 @@ const localData = {
       "<p>Streamline your business operations with KPI’s SOP development services. Simplify workflows, drive efficiency and maintain consistent quality across your business.</p>",
   } satisfies HeroData,
   document_required_data: {
-    title: "What are Standard Operating Procedures?",
+    title: "what are standard operating procedures?",
     description:
       "<p>A Standard Operating Procedure (SOP) is a set of detailed, written instructions that outline how to complete specific tasks or processes within an organization. SOPs help businesses simplify and standardize routine and critical operations, minimizing errors and driving efficiency.</p><div>Why Are Standard Operating Procedures Important?</div>",
     items: [
@@ -129,20 +129,20 @@ const localData = {
   whyChoose: {
     title: "SOPs Made Simple With KPI",
     description:
-      "<p>At KPI, our team of business consultants in the UAE have decades of experience in developing comprehensive policies and <br/>procedures for various industries. Using a structured approach, we thoroughly analyze your existing business processes,<br/> identify gaps, and provide actionable steps for improvements. Our well-defined SOPs empower businesses to streamline<br/> operations and achieve sustainable growth with confidence.</p><p><b>Why Businesses Choose KPI:</b></p>",
+      "<p>At KPI, our team of business consultants in the UAE have decades of experience in developing comprehensive policies and procedures for various industries. Using a structured approach, we thoroughly analyze your existing business processes, identify gaps, and provide actionable steps for improvements. Our well-defined SOPs empower businesses to streamline operations and achieve sustainable growth with confidence.</p><p><b>Why Businesses Choose KPI:</b></p>",
     sub_title: "",
     items: [
       {
         id: 1,
         title: "Skilled Experts",
         description:
-          "<p>Deep experience operating within UAE regulatory environment, <br/> including federal authorities and free zone frameworks.</p>",
+          "<p>Deep experience operating within UAE regulatory environment,  including federal authorities and free zone frameworks.</p>",
       },
       {
         id: 2,
         title: "Tailored Solution",
         description:
-          "<p>Our SOP services are designed keeping your business needs in<br/> mind to govern processes and deliver consistent results</p>",
+          "<p>Our SOP services are designed keeping your business needs in mind to govern processes and deliver consistent results</p>",
       },
       {
         id: 3,
@@ -180,7 +180,7 @@ const localData = {
         },
         title: "Task Efficiency",
         description:
-          "With clear documentation in place, employees <br/> spend less time figuring out how to complete <br/>tasks, speeding up overall productivity and <br/>performance.",
+          "With clear documentation in place, employees spend less time figuring out how to complete tasks, speeding up overall productivity and performance.",
       },
       {
         id: 3,
@@ -200,7 +200,7 @@ const localData = {
         },
         title: "Risk Management",
         description:
-          "By conducting a thorough analysis of risk <br/>identification, assessment and mitigation,<br/> businesses can reduce the risk of non-<br/>compliance and penalties.",
+          "By conducting a thorough analysis of risk identification, assessment and mitigation, businesses can reduce the risk of non-compliance and penalties.",
       },
       {
         id: 5,
@@ -300,7 +300,7 @@ const localData = {
       },
       {
         id: 2,
-        title: "Internal Audit",
+        title: "Internal <br/> Audit",
         link: {
           url: "/corporate-tax-services-uae",
         },
@@ -311,7 +311,7 @@ const localData = {
       },
       {
         id: 3,
-        title: "Enterprise Risk",
+        title: "Enterprise <br/> Risk",
         link: {
           url: "/einvoicing-solutions-uae",
         },
@@ -322,7 +322,7 @@ const localData = {
       },
       {
         id: 4,
-        title: "Business Continuity Planning",
+        title: "Business <br/> Continuity <br/> Planning",
         link: {
           url: "/corporate-tax-services-uae",
         },

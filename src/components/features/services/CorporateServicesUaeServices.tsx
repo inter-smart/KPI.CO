@@ -143,6 +143,7 @@ export default function CorporateServicesUaeServices({
                           "leading-relaxed xl:max-w-[92%]",
                         variant === "saifz" && "xl:max-w-full",
                         variant === "rakez" && "xl:max-w-full",
+                        variant === "SOP" && "xl:max-w-full",
                         variant === "AuditServicesUae" && "xl:max-w-full",
                       )}
                     >

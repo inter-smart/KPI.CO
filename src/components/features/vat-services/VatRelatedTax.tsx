@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Heading } from "@/components/utils/typography";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import parse from "html-react-parser";
 
 export type VatRelatedTaxData = {
   title: string;
@@ -55,7 +56,9 @@ export default function VatRelatedTax({
                 key={`tax-${item?.id}`}
                 className={cn(
                   "mr-[30px] mr-[25px] sm:mr-[15px] xl:mr-[20px] 2xl:mr-[25px] 3xl:mr-[30px] flex-[0_0_80%] sm:flex-[0_0_40%] xl:flex-[0_0_32.1%] 2xl:flex-[0_0_32%] min-w-0 select-none",
-                  variant === "sop" && "lg:!flex-[0_0_23.5%]",
+                  // variant === "sop" && "lg:!flex-[0_0_23.5%]",
+                   variant === "sop" &&
+                      "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                 )}
               >
                 <Link
@@ -70,8 +73,8 @@ export default function VatRelatedTax({
                     height={630}
                     className="w-full h-full object-cover absolute -z-1 inset-0"
                   />
-                  <div className={cn("text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end", variant==="regulatory" && "max-sm:text-[26px]" )}>
-                    {item?.title}
+                  <div className={cn("text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end [&>br]:!block", variant==="regulatory" && "max-sm:text-[26px]" )}>
+                     {parse(data?.title ?? "title")}
                   </div>
                 </Link>
               </div>
