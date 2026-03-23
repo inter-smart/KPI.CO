@@ -121,13 +121,9 @@ export default function HomeOurInsightsClient({
                   variant === "saifz" &&
                     "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                   variant === "default" &&
-<<<<<<< HEAD
-                    "flex-[0_0_248px] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
-=======
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                   variant === "Our-Insights" &&
                     "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
->>>>>>> 5faf32669ab4059c5bd09d023c2002a42d6a8dcc
                 )}
               >
                 <InsightCard data={item} variant={variant} />
