@@ -315,7 +315,11 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
     >
       <div
         className={cn(
+<<<<<<< HEAD
           "relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[15px_24px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",
+=======
+          "relative rounded-[10px] overflow-hidden p-[20px_24px] lg:p-5 xl:p-[23px_24px] 2xl:p-6.25 3xl:p-7.5  after:absolute after:top-0 after:right-[0px] after:rounded-[10px] after:w-[calc(100%-3px)] after:h-full after:bg-[#f9fafb] after:content-[''] ",
+>>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
           variant === "CorporateServicesUae" &&
             "after:bg-[rgba(106,159,224,0.08)]",
           variant === "AuditServicesUae" && "h-full xl:pr-[42px]",

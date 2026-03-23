@@ -411,10 +411,8 @@ const localData = {
   },
 };
 
- 
-
 export const metadata = {
- title: "Financial Statement Audit Services in the UAE | KPI Group",
+  title: "Financial Statement Audit Services in the UAE | KPI Group",
   description:
     "Independent financial statement audits for UAE businesses. Accurate, compliant, and defensible reporting trusted by boards, regulators, and stakeholders. ",
 
@@ -444,7 +442,10 @@ export default function VatServicesUaePage() {
         data={localData.vatGuidance}
         variant="Financial-Statement-Audit"
       />
-      <RiskAdvisory data={localData.riskAdvisory} variant="Financial-Statement-Audit"/>
+      <RiskAdvisory
+        data={localData.riskAdvisory}
+        variant="Financial-Statement-Audit"
+      />
       <CorporateServicesUaeFormationProcess
         variant="Financial-Statement-Audit"
         data={localData.formationProcess}
@@ -470,7 +471,7 @@ export default function VatServicesUaePage() {
         data={localData.corporate_faq_data}
         variant="Financial-Statement-Audit"
       />
-       <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

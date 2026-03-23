@@ -471,8 +471,11 @@ export default function page() {
       <HomeCounter data={localData.counterList} variant="Agreed-Procedure" />
       <RiskExploreService variant="difc" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="side-arrow" />
-      <HomeOurInsights />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="side-arrow"
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

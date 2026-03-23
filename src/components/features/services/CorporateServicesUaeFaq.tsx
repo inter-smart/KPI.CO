@@ -58,7 +58,8 @@ export default function CorporateServicesUaeFaq({
         "w-full h-auto py-[40px] xl:py-[20px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px] block",
         variant === "holding" &&
           "py-[40px_20px] xl:py-[50px_60px] 2xl:py-[30px_70px] 3xl:py-[40px_85px]",
-        variant === "ADGM-Spv-Formation" && "max-sm:py-[40px_50px] xl:py-[30px_46px]",
+        variant === "ADGM-Spv-Formation" &&
+          "max-sm:py-[40px_50px] xl:py-[30px_46px]",
         variant === "JAFZA-Freezone" && "xl:py-[30px_40px]",
       )}
     >
@@ -111,7 +112,7 @@ export default function CorporateServicesUaeFaq({
               >
                 <AccordionTrigger
                   className={cn(
-                    "py-[35px_10px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-[24px] xl:[&>svg]:w-[25px] [&>svg]:h-[24px] xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
+                    "py-[29px_8px] sm:py-5 lg:py-7 xl:py-7 2xl:py-8.75 3xl:py-10 [&>svg]:text-[#1C5396] [&>svg]:w-[24px] xl:[&>svg]:w-[25px] [&>svg]:h-[24px] xl:[&>svg]:h-[25px] sm:[&>svg]:rotate-[360deg] [&[data-state=open]>svg]:rotate-[540deg] [&>svg]:transform",
                     variant === "side-arrow" &&
                       "sm:[&>svg]:!rotate-[269deg] max-sm:[&[data-state=open]>svg]:!rotate-[180deg] [&[data-state=open]>svg]:!rotate-[360deg]",
                     variant === "difc-regulated" &&
@@ -139,7 +140,7 @@ export default function CorporateServicesUaeFaq({
                 <AccordionContent className="pb-3.75 sm:pb-6.25">
                   <div
                     className={cn(
-                      "typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] [&_p]:leading-[1.8] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
+                      "typography [&_p]:text-[14px] xl:[&_p]:text-[16px] 2xl:[&_p]:text-[18px] 3xl:[&_p]:text-[21px] sm:[&_p]:leading-[1.6] [&_p]:font-normal [&_p]:text-black [&_li]:text-black [&_p]:my-1 mb-0 max-w-[90%]",
                       variant === "JAFZA-Freezone" && "[&_p]:leading-[1.5]",
                       variant === "company-freezone" && "[&_p]:leading-[1.5]",
                       variant === "AuditServicesUae" && "max-w-full",

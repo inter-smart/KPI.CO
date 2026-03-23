@@ -525,7 +525,10 @@ export default function CorporateServicesUaePage() {
         data={localData.cta}
         variant="CorporateServicesUae"
       />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="CorporateServicesUae"/>
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="CorporateServicesUae"
+      />
     </>
   );
 }

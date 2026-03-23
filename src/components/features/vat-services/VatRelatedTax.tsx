@@ -42,10 +42,17 @@ export default function VatRelatedTax({
     // [Autoplay({ delay: 2500, stopOnInteraction: true })],
   );
   return (
-    <section className="w-full h-auto py-[45px] sm:py-[30px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
+    <section className="w-full h-auto py-[45px_30px] sm:py-[30px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_100px] bg-[#F9FAFB] block">
       <div className="container">
         <div className="w-full h-auto mb-[25px] sm:mb-[30px] xl:mb-[35px] 2xl:mb-[40px] 3xl:mb-[50px]">
-          <Heading as="h2" size="h2" className={cn("text-[#1C5396]" , variant==="sop" && "max-sm:text-[26px]" , )}>
+          <Heading
+            as="h2"
+            size="h2"
+            className={cn(
+              "text-[#1C5396]",
+              variant === "sop" && "max-sm:text-[26px]",
+            )}
+          >
             {data?.title}
           </Heading>
         </div>
@@ -55,10 +62,15 @@ export default function VatRelatedTax({
               <div
                 key={`tax-${item?.id}`}
                 className={cn(
+<<<<<<< HEAD
                   "mr-[30px] mr-[25px] sm:mr-[15px] xl:mr-[20px] 2xl:mr-[25px] 3xl:mr-[30px] flex-[0_0_80%] sm:flex-[0_0_40%] xl:flex-[0_0_32.1%] 2xl:flex-[0_0_32%] min-w-0 select-none",
                   // variant === "sop" && "lg:!flex-[0_0_23.5%]",
                    variant === "sop" &&
                       "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+=======
+                  "mr-[30px] mr-[25px] sm:mr-[15px] xl:mr-[20px] 2xl:mr-[25px] 3xl:mr-[30px] flex-[0_0_282px] sm:flex-[0_0_40%] xl:flex-[0_0_32.1%] 2xl:flex-[0_0_32%] min-w-0 select-none",
+                  variant === "sop" && "lg:!flex-[0_0_23.5%]",
+>>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
                 )}
               >
                 <Link
@@ -73,8 +85,18 @@ export default function VatRelatedTax({
                     height={630}
                     className="w-full h-full object-cover absolute -z-1 inset-0"
                   />
+<<<<<<< HEAD
                   <div className={cn("text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end [&>br]:!block", variant==="regulatory" && "max-sm:text-[26px]" )}>
                      {parse(data?.title ?? "title")}
+=======
+                  <div
+                    className={cn(
+                      "text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end",
+                      variant === "regulatory" && "max-sm:text-[26px]",
+                    )}
+                  >
+                    {item?.title}
+>>>>>>> 196f947dbe53af02099e62379fe97f473b394a28
                   </div>
                 </Link>
               </div>

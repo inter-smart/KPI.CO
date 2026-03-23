@@ -502,7 +502,7 @@ export default function MainlandCompanyFormationUaePage() {
         data={localData.corporate_faq_data}
         variant="side-arrow"
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Related" />
     </>
   );
 }

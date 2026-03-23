@@ -97,7 +97,7 @@ export default function MainlandBusiness({
                 "xl:w-[calc(100%-517px)] xl:pr-[40px]",
               hasVariant(variant, "ifza") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[40px]",
-              
+
               hasVariant(variant, "Mainland") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "dsoa") &&
@@ -122,7 +122,7 @@ export default function MainlandBusiness({
               hasVariant(variant, "dwtc") && "xl:pr-[40px]",
               "xl:w-[calc(100%-517px)] xl:pr-[41px]",
               hasVariant(variant, "RAK-Offshore") &&
-              "xl:w-[calc(100%-517px)] xl:pr-[50px]",
+                "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "meydan") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[45px]",
             )}
@@ -216,7 +216,7 @@ export default function MainlandBusiness({
                           <div
                             className={cn(
                               "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
-                          
+
                               hasVariant(variant, "ADGM-Foundations") &&
                                 "xl:w-[16px]",
                               hasVariant(variant, "Mainland") && "xl:w-[16px]",
@@ -233,7 +233,13 @@ export default function MainlandBusiness({
                               alt="tickMark"
                             />
                           </div>
-                          <span className={cn ("text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]" , variant==="AuditServicesUae" && "max-sm:text-[16px]")}>
+                          <span
+                            className={cn(
+                              "text-[14px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[20px] leading-normal font-normal text-[#1C5396] w-[calc(100%-16px)] 3xl:w-[calc(100%-22px)]",
+                              variant === "AuditServicesUae" &&
+                                "max-sm:text-[16px]",
+                            )}
+                          >
                             {item}
                           </span>
                         </div>
@@ -276,7 +282,13 @@ export default function MainlandBusiness({
               variant === "meydan" && "xl:w-[517px]",
             )}
           >
-            <div className={cn("relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden" , variant==="AuditServicesUae" && "max-sm:h-[437px]")}>
+            <div
+              className={cn(
+                "relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden",
+                variant === "AuditServicesUae" &&
+                  "max-sm:h-[437px] lg:h-auto lg:aspect-517/437",
+              )}
+            >
               <Image
                 src={data.image.path}
                 alt={data.image.alt}
