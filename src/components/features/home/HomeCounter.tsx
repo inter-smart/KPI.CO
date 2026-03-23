@@ -43,7 +43,8 @@ export default function HomeCounter({
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "regulatory" && "max-sm:shadow-none",
         variant === "internal-audit" && "max-sm:shadow-none",
-        variant === "AuditServicesUae" && "max-sm:shadow-none",
+        variant === "AuditServicesUae" &&
+          "bg-white sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
       )}
     >
       <div className="container mx-auto">
