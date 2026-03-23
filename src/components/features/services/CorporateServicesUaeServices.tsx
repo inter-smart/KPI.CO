@@ -120,7 +120,7 @@ export default function CorporateServicesUaeServices({
                     alt={item?.media?.alt}
                     width={32}
                     height={32}
-                    className="w-full h-full object-contain max-w-[20px] xl:max-w-[26px]"
+                    className="w-full h-full object-contain max-w-[20px] xl:max-w-[20px] xl:max-h-[20px]"
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">

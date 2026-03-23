@@ -128,7 +128,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                   variant === "difc-regulated" &&
                     "max-sm:hidden md:max-w-[90%]",
                   variant === "adgm-regulated" && "max-sm:hidden",
-                  variant === "regulatory" && "md:max-w-[82%]",
+                  variant === "regulatory" && "md:max-w-[512px]",
                 )}
               >
                 {parse(data.highlightsText)}
@@ -199,7 +199,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         >
                           {`${formatNo(item.slNo ?? index + 1)}.`}
                         </div>
-                        <div className="text-[14px] lg:text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[21px] font-normal leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden">
+                        <div className="text-[14px] lg:text-[14px] xl:text-[15px] 2xl:text-[18px] 3xl:text-[21px] font-normal leading-relaxed text-[#4E4E4E] max-md:[&_br]:hidden " >
                           {parse(item.description)}
                         </div>
                       </div>
@@ -213,15 +213,15 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 className={cn(
                   "hidden",
                   variant === "difc-regulated" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:!hidden",
                   variant === "adgm-regulated" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:!hidden",
                   variant === "CorporateTaxUae" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:!hidden",
                   variant === "regulatory" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:!hidden ",
                   variant === "Financial-Statement-Audit" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:!hidden ",
                 )}
               >
                 {parse(data.highlightsText)}

@@ -135,7 +135,7 @@ const localData = {
     title: "Why Regulatory & Compliance Advisory Matters",
     description:
       " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations </p>",
-    highlightsText: "<div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
+    highlightsText: "<div>At this stage, compliance gaps are rarely intentional - They are structural.</div>",
     advisoryItems: [
       {
         id: 1,
@@ -167,7 +167,7 @@ const localData = {
   document_required_data: {
     title: "What Regulatory & Compliance Advisory Means At KPI ",
     description:
-      "<p>Practical Compliance Support. Aligned with Regulatory Expectations.</p><p>KPI Regulatory & Compliance Advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
+      "<p>Practical compliance support. Aligned with regulatory expectations.</p><p>KPI regulatory & compliance advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
     items: [
       {
         id: 1,

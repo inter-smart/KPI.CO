@@ -145,7 +145,7 @@ export default function CorporateServicesUaeCta({
                 variant === "blogdetail" && "font-medium [&_p]:font-medium",
                 variant === "AuditServicesUae" && "xl:max-w-[75%]",
                 variant === "DMCC-Freezone" && "xl:max-w-[92%]",
-                variant === "regulatory" && "xl:max-w-[92%]",
+                variant === "regulatory" && "xl:max-w-[92%] leading-[150%]",
                 variant === "ifza" && "xl:max-w-[583px]",
                 variant === "erm" && "xl:max-w-[573px]",
               )}

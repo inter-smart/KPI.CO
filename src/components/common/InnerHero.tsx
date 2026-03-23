@@ -119,7 +119,7 @@ export default function InnerHero({
               "max-sm:max-w-[330px] xl:max-w-[790px] ",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
             variant === "CorporateTaxUae" && "xl:max-w-[770px]",
-            variant === "regulatory" && "!max-w-full",
+            variant === "regulatory" && "xl:max-w-[845px]",
             variant === "Financial-Statement-Audit" && "xl:max-w-[770px]",
             variant === "VatServicesUae" && "xl:max-w-[790px]",
             variant === "Offshore" && "xl:max-w-[780px]",
@@ -145,7 +145,7 @@ export default function InnerHero({
 
               variant === "technology" && "max-w-[850px] xl:mb-[30px]",
               variant === "internal-audit" && "max-w-[850px]",
-              variant === "regulatory" && "max-w-[850px]",
+              variant === "regulatory" && "xl:mb-[28.5px]",
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
               variant === "Formation-JAFZA" && "normal-case",
@@ -183,7 +183,7 @@ export default function InnerHero({
                 variant === "Offshore" && "xl:text-[20px]",
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "regulatory" &&
-                  "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
+                  "lg:max-w-[772px] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-[150%] xl:mb-[32.5px]",
                 variant === "Financial-Statement-Audit" &&
                   "xl:text-[20px] mb-[21px] xl:mb-[41px]",
                 variant === "VatServicesUae" &&
