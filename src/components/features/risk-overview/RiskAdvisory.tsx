@@ -234,11 +234,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               variant === "ADGM-SPV-Formation" && "max-sm:block sm:hidden",
             )}
           >
-            <div
-              className={cn(
-                "text-[16px] font-normal text-[#4E4E4E]",
-              )}
-            >
+            <div className={cn("text-[16px] font-normal text-[#4E4E4E]")}>
               {parse(data.highlightsText)}
             </div>
           </div>
@@ -253,8 +249,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
               variant === "AuditServicesUae" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
-              variant === "ADGM-SPV-Formation" &&
-                "max-sm:mb-0",
+              variant === "ADGM-SPV-Formation" && "max-sm:mb-0",
             )}
           >
             {parse(
