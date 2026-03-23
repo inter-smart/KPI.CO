@@ -98,7 +98,7 @@ function WhyBuildCard({
         variant === "offshore" &&
           "border-0 shadow-[0px_1px_3px_0px_rgba(0,0,0,0.10)]",
         variant === "company-freezone" && "rounded-[10px] xl:!pr-[10px]",
-        variant === "Vat-Services" && "xl:!pr-[40px]",
+        variant === "Vat-Services" && "xl:!pr-[40px] xl:min-h-[225px]",
         variant === "dafz" && "xl:min-h-[220px]",
         variant === "difc-formation" && "xl:min-h-[220px]",
         variant === "Formation-JAFZA" &&

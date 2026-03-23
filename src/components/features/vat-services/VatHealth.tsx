@@ -15,6 +15,10 @@ export type VatHealthData = {
     path: string;
     alt: string;
   };
+  mobmedia: {
+    path: string;
+    alt: string;
+  };
 };
 
 interface VatHealthProps {
@@ -61,7 +65,7 @@ export default function VatHealth({ data }: VatHealthProps) {
             <Button
               variant="yellow"
               size="lg"
-              className="text-[16px] xl:text-[16px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-11! xl:h-[40px]! 2xl:h-12! 3xl:h-15! px-[30px] sm:px-[20px] xl:px-[30px] 2xl:px-[35px] 3xl:px-[40px] lg:mb-[15px] 2xl:mb-[25px] max-sm:mt-3"
+              className="text-[16px] xl:text-[16px] 2xl:text-[17px] min-w-[150px] xl:min-w-[132px] 2xl:min-w-[160px] 3xl:min-w-[200px] h-[40px] xl:h-[40px]! 2xl:h-12! 3xl:h-15! px-[30px] sm:px-[20px] xl:px-[30px] 2xl:px-[35px] 3xl:px-[40px] lg:mb-[15px] 2xl:mb-[25px] max-sm:mt-3"
               asChild
             >
               <Link
@@ -79,7 +83,14 @@ export default function VatHealth({ data }: VatHealthProps) {
                 alt={data?.media?.alt || "VAT Health Image"}
                 width={680}
                 height={560}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover max-sm:hidden"
+              />
+              <Image
+                src={data?.mobmedia?.path}
+                alt={data?.mobmedia?.alt || "VAT Health Image"}
+                width={680}
+                height={560}
+                className="w-full h-full object-cover sm:hidden"
               />
             </div>
           </div>

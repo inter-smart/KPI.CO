@@ -137,8 +137,8 @@ const localData = {
   vatGuidance: {
     title: "When Businesses Need VAT Guidance & Support",
     description:
-      "VAT influences how you price, contract, and manage cash flow. When handled well, it becomes routine. When handled poorly, it leads to penalties, cash flow issues, and FTA scrutiny. Addressing VAT correctly from the start prevents disruption and keeps it predictable.",
-    highlighted_text: "VAT typically becomes a focus when organisations:",
+      "VAT influences how you price, contract, and manage cash flow. When handled well, it becomes routine. When handled poorly, it leads to penalties, cash flow issues, and FTA scrutiny. Addressing VAT correctly from the start prevents disruption and keeps it predictable.VAT typically becomes a focus when organisations:",
+    highlighted_text: "",
     service_list: [
       "Start taxable operations or reach registration thresholds ",
       "Expand into new activities, markets, or group structures",
@@ -425,6 +425,10 @@ const localData = {
     },
     media: {
       path: "/images/vat-benefit-1.jpg",
+      alt: "VAT Health Check",
+    },
+    mobmedia: {
+      path: "/images/vatcheckmob.jpg",
       alt: "VAT Health Check",
     },
   } satisfies VatHealthData,
