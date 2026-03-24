@@ -311,7 +311,7 @@ const localData = {
       "<p>Whether you’re planning a NetSuite implementation, preparing for UAE e-Invoicing, or reassessing your HR or finance systems, KPI and Vantheon help you get it right the first time.</p>",
     button: {
       label: "Get in Touch",
-      link: "/#contact",
+      link: "/contact",
     },
     images: {
       overlay: "/images/technology-overlay.svg",
