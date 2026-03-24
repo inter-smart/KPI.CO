@@ -84,7 +84,7 @@ export default function VatRelatedTax({
                     className="w-full h-full object-cover absolute -z-1 inset-0"
                   />
                   <div className={cn("text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-white w-full h-full relative z-2 flex items-end [&>br]:!block", variant==="regulatory" && "max-sm:text-[26px]" )}>
-                     {parse(data?.title ?? "title")}
+                     {parse(item?.title ?? "title")}
                   </div>
                 </Link>
               </div>
