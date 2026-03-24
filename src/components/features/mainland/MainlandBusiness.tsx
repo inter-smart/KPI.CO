@@ -3,7 +3,6 @@
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
-import { Check } from "lucide-react";
 import type { MainlandBusinessData } from "@/app/mainland-company-formation-uae/page";
 import { cn } from "@/lib/utils";
 
@@ -94,7 +93,7 @@ export default function MainlandBusiness({
                 ? "xl:w-[calc(100%-517px)] "
                 : "xl:w-[calc(100%-500px)]",
               hasVariant(variant, "ADGM-Foundations") &&
-                "xl:w-[calc(100%-517px)] xl:pr-[40px]",
+                "xl:w-[calc(100%-517px)] xl:!pr-[42px]",
               hasVariant(variant, "ifza") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[40px]",
 
@@ -216,7 +215,6 @@ export default function MainlandBusiness({
                           <div
                             className={cn(
                               "w-[16px] xl:w-[16px] 3xl:w-[22px] h-[20px] xl:h-[16px] 3xl:h-[22px] rounded-full max-sm:mt-[2px]  flex items-center",
-
                               hasVariant(variant, "ADGM-Foundations") &&
                                 "xl:w-[16px]",
                               hasVariant(variant, "Mainland") && "xl:w-[16px]",

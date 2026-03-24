@@ -78,6 +78,7 @@ export default function InnerHero({
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
+        variant === "ADGM-Foundations" && "max-sm:min-h-[610px] max-sm:pt-[120px] xl:pt-[120px] xl:min-h-[657px]",
         variant === "dwtc" || variant === "e-invoicing"
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
@@ -86,7 +87,8 @@ export default function InnerHero({
         variant === "technology" &&
           "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
-        variant === "ADGM-SPV-Formation" && "max-sm:!min-h-[619px] xl:!min-h-[651px] max-sm:pt-[119.55px] xl:!pt-[120px]",
+        variant === "ADGM-SPV-Formation" &&
+          "max-sm:!min-h-[619px] xl:!min-h-[651px] max-sm:pt-[119.55px] xl:!pt-[120px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -106,7 +108,7 @@ export default function InnerHero({
           className={cn(
             "w-full max-w-[850px]",
             variant === "ADGM-Foundations" &&
-              "md:max-w-[500px] xl:max-w-[750px]",
+              "md:max-w-[500px] xl:max-w-[760px]",
             variant === "saifz" &&
               "md:max-w-[500px] xl:max-w-[760px] 2xl:max-w-[900px] 3xl:max-w-[1085px]",
             variant === "dwtc" &&

@@ -157,7 +157,12 @@ export default function RiskOrganisation({
                       variant === "ADGM-SPV-Formation" && "xl:pl-[27px]",
                     )}
                   >
-                    <span className={cn("absolute left-0 top-[4px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",variant === "ADGM-SPV-Formation" && "xl:top-[3.5]")}>
+                    <span
+                      className={cn(
+                        "absolute left-0 top-[4px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
+                        variant === "ADGM-SPV-Formation" && "xl:top-[3.5]",
+                      )}
+                    >
                       {["dwtc", "difc-regulated"].includes(variant) ? (
                         <svg
                           width="100%"
@@ -233,6 +238,7 @@ export default function RiskOrganisation({
                       (variant === "holding" && "max-sm:text-[26px]"),
                     variant === "regulatory" && "max-sm:text-[26px]",
                     variant === "SOP" && "max-sm:text-[26px]",
+                    variant === "ADGM-Foundation" && "max-sm:text-[26px]",
                   )}
                 >
                   {parse(data.title)}
