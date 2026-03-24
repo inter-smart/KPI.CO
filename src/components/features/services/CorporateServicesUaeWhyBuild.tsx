@@ -109,7 +109,8 @@ function WhyBuildCard({
           "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
         variant === "difc-formation" &&
           "!p-[20px_15px_36.4px] xl:min-h-[226px] xl:!p-[24px_18px] max-sm:min-h-[205px]",
-        variant === "company-freezone" && "!p-[20px_15px_36.4px] max-sm:h-[240px] xl:max-h-[249.2px]",
+        variant === "company-freezone" &&
+          "!p-[20px_15px_36.4px] max-sm:h-[240px] xl:max-h-[249.2px]",
       )}
     >
       <div
@@ -117,7 +118,8 @@ function WhyBuildCard({
           "w-[46px] xl:w-[52px] aspect-square mb-[12px] xl:mb-[15px] transition-transform",
           variant === "Formation-JAFZA" && "max-sm:w-[52.49px]",
           variant === "formation" && "max-sm:w-[52.48px] max-sm:mb-[13.99px]",
-          variant === "company-freezone" && "max-sm:w-[52.48px] max-sm:mb-[13.99px]",
+          variant === "company-freezone" &&
+            "max-sm:w-[52.49px] max-sm:mb-[13.99px]",
         )}
       >
         <Image
@@ -341,8 +343,10 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
             hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
             hasVariant(variant, "Vat-Services") && "xl:!gap-[25px_40px]",
-            hasVariant(variant, "difc-formation") && "xl:!gap-[25px] xl:mr-[5px]",
-            hasVariant(variant, "company-freezone") && "xl:!gap-[25px] xl:mr-[5px]",
+            hasVariant(variant, "difc-formation") &&
+              "xl:!gap-[25px] xl:mr-[5px]",
+            hasVariant(variant, "company-freezone") &&
+              "xl:!gap-[25px] xl:mr-[5px]",
           )}
         >
           {data.items.map((item) => (

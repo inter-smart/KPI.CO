@@ -337,7 +337,7 @@ export default function Footer() {
             {/* Advisory Services */}
             <div className="w-4/12 p-[10px] lg:p-[20px] lg:pl-[55px] 3xl:pl-[75px] ">
               <div className={FOOTER_MAINLINKS}>Advisory Services</div>
-              <ul >
+              <ul>
                 <li>
                   <Link
                     href="/corporate-services-uae"
@@ -378,22 +378,34 @@ export default function Footer() {
               <div className={FOOTER_MAINLINKS}>Risk & Compliance</div>
               <ul>
                 <li>
-                  <Link href="/risk-assurance/enterprise-risk-management-services-uae" className={FOOTER_LINK_STYLES}>
+                  <Link
+                    href="/risk-assurance/enterprise-risk-management-services-uae"
+                    className={FOOTER_LINK_STYLES}
+                  >
                     Enterprise Risk Management
                   </Link>
                 </li>
                 <li>
-                  <Link href="/internal-audit-firm-uae" className={FOOTER_LINK_STYLES}>
+                  <Link
+                    href="/internal-audit-firm-uae"
+                    className={FOOTER_LINK_STYLES}
+                  >
                     Internal Audit Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/standard-operating-procedures-uae" className={FOOTER_LINK_STYLES}>
+                  <Link
+                    href="/standard-operating-procedures-uae"
+                    className={FOOTER_LINK_STYLES}
+                  >
                     Standard Operating Procedures
                   </Link>
                 </li>
                 <li>
-                  <Link href="/regulatory-compliance-advisory-uae" className={FOOTER_LINK_STYLES}>
+                  <Link
+                    href="/regulatory-compliance-advisory-uae"
+                    className={FOOTER_LINK_STYLES}
+                  >
                     Regulatory & Compliance Advisory
                   </Link>
                 </li>
@@ -456,7 +468,10 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="tel:+97144551010" className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                  <a
+                    href="tel:+97144551010"
+                    className={`${FOOTER_LINK_STYLES} !mb-0`}
+                  >
                     +971 4 455 10 10
                   </a>
                 </li>
@@ -469,7 +484,10 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="tel:+97144551010" className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                  <a
+                    href="tel:+97144551010"
+                    className={`${FOOTER_LINK_STYLES} !mb-0`}
+                  >
                     hello@kpi.co
                   </a>
                 </li>
@@ -482,7 +500,9 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <span className={`${FOOTER_LINK_STYLES} !mb-0`}>UAE, KSA, India</span>
+                  <span className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                    UAE, KSA, India
+                  </span>
                 </li>
               </ul>
             </div>
@@ -508,7 +528,7 @@ export default function Footer() {
                   Audit & Assurance
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul >
+                  <ul>
                     <li>
                       <Link
                         href="/audit-assurance/financial-statement-audit-uae"
@@ -552,7 +572,7 @@ export default function Footer() {
                   Advisory Services
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul >
+                  <ul>
                     <li>
                       <Link
                         href="/corporate-services-uae"
@@ -561,7 +581,6 @@ export default function Footer() {
                         Corporate Services
                       </Link>
                     </li>
-
 
                     <li>
                       <Link
@@ -580,14 +599,10 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="#"
-                        className={FOOTER_LINK_STYLES}
-                      >
+                      <Link href="#" className={FOOTER_LINK_STYLES}>
                         Digital Transformation
                       </Link>
                     </li>
-
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -599,7 +614,7 @@ export default function Footer() {
                   Risk & Compliance
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul  >
+                  <ul>
                     <li>
                       <Link
                         href="/risk-assurance/enterprise-risk-management-services-uae"
@@ -643,7 +658,7 @@ export default function Footer() {
                   Resources
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul >
+                  <ul>
                     <li>
                       <Link href="/blog" className={FOOTER_LINK_STYLES}>
                         Blogs
@@ -670,7 +685,7 @@ export default function Footer() {
                   Company
                 </AccordionTrigger>
                 <AccordionContent className="p-[15px_0]">
-                  <ul  >
+                  <ul>
                     <li>
                       <Link href="/#about" className={FOOTER_LINK_STYLES}>
                         About Us
@@ -697,7 +712,7 @@ export default function Footer() {
               >
                 Contact Us
               </div>
-              <ul >
+              <ul>
                 <li className="flex items-center gap-x-3 mb-[19px]">
                   <div className="w-[22px] h-[22px] rounded-[3.67px] bg-white/10 flex items-center justify-center p-[5.5px] ">
                     <svg viewBox="0 0 13 13" fill="none">
@@ -707,7 +722,10 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="tel:+97144551010" className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                  <a
+                    href="tel:+97144551010"
+                    className={`${FOOTER_LINK_STYLES} !mb-0`}
+                  >
                     +971 4 455 10 10
                   </a>
                 </li>
@@ -720,7 +738,10 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <a href="mailto:hello@kpi.co" className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                  <a
+                    href="mailto:hello@kpi.co"
+                    className={`${FOOTER_LINK_STYLES} !mb-0`}
+                  >
                     hello@kpi.co
                   </a>
                 </li>
@@ -733,7 +754,9 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <span className={`${FOOTER_LINK_STYLES} !mb-0`}>UAE, KSA, India</span>
+                  <span className={`${FOOTER_LINK_STYLES} !mb-0`}>
+                    UAE, KSA, India
+                  </span>
                 </li>
               </ul>
             </div>

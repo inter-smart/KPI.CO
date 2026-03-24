@@ -127,10 +127,11 @@ export default function MeydanFreeZone({
                   variant === "rakez" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[65.76px_35px]",
-                  variant === "Tax-Advisory" && "max-sm:p-[31px_12px_51px_12px]",
+                  variant === "Tax-Advisory" &&
+                    "max-sm:p-[31px_12px_51px_12px]",
                   variant === "MeydanFreeZone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_45px_34px]",
-                 
+
                   variant === "DMCC-Freezone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_34px_34px]",
                   variant === "ifza" &&
@@ -207,9 +208,9 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-                        "w-full h-auto pl-[25px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[9px] xl:mb-[13px] last-of-type:!mb-0 relative z-0 tracking-[-0.5px] before:content-[''] before:w-[16.67px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[6px] xl:before:top-[3px]",
+                        "w-full h-auto pl-[25px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[9px] xl:mb-[13px] last-of-type:!mb-0 relative z-0 tracking-[-0.5px] before:content-[''] before:w-[16.67px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[3px]",
                         variant === "JAFZA-Freezone" &&
-                          "max-sm:before:top-[2px]",
+                          "max-sm:before:top-[4px]",
                         variant === "MeydanFreeZone" &&
                           "xl:mb-[16px] xl:pl-[30px]",
                         variant === "DMCC-Freezone" &&
@@ -238,7 +239,7 @@ export default function MeydanFreeZone({
                   <div
                     className={cn(
                       "mt-[20px] sm:mt-[10px] xl:mt-[25px] 2xl:mt-[20px] text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
-                        variant === "difc" && "text-[14px] xl:text-[16px] ",
+                      variant === "difc" && "text-[14px] xl:text-[16px] ",
                       variant === "Tax-Advisory" && "max-sm:text-[14px]",
                     )}
                   >
