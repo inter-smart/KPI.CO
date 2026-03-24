@@ -380,12 +380,12 @@ export default function CorporateServicesUaeFormationProcess({
                   key={item?.id}
                   className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px] max-sm:hidden"
                 >
-                  <div className="w-full h-full p-6 lg:p-5 xl:p-[32px_36px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
-                    <div className="text-[18px] lg:text-[20px] xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium text-[#1C5396] mb-2 lg:mb-1.25 2xl:mb-2.5">
+                  <div className="w-full h-full p-6 lg:p-5 xl:p-[30px_36px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[133px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
+                    <div className="text-[18px] lg:text-[20px] xl:text-[24px] 3xl:text-[30px] leading-[150%] capitalize font-medium text-[#1C5396] mb-[12px]">
                       {item?.title}
                     </div>
                     {item?.description && (
-                      <div className="text-[14px] lg:text-[16px] xl:text-[16px]  2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[16px] xl:text-[16px]  2xl:text-[18px] 3xl:text-[21px] leading-[150%] font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item?.description)}
                       </div>
                     )}
