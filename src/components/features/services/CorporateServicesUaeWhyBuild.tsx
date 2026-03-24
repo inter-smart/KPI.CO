@@ -105,12 +105,15 @@ function WhyBuildCard({
           "max-sm:min-h-[210px] xl:min-h-[230px] xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
+        variant === "formation" && "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
+        variant === "difc-formation" && "!p-[20px_15px_36.4px] xl:min-h-[226px]",
       )}
     >
       <div
         className={cn(
-          "w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform",
+          "w-[46px] xl:w-[52px] aspect-square mb-[12px] xl:mb-[15px] transition-transform",
           variant === "Formation-JAFZA" && "max-sm:w-[52.49px]",
+          variant === "formation" && "max-sm:w-[52.48px] max-sm:mb-[13.99px]",
         )}
       >
         <Image
@@ -145,6 +148,9 @@ function WhyBuildCard({
           hasVariant(variant, "company-freezone") &&
             "max-sm:text-[16px] xl:text-[18px]",
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
+          variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
+           variant === "difc-formation" && "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
+           variant === "rakez" && "max-sm:text-[16px] xl:text-[18px] leading-[100%] max-sm:mb-[11px]",
         )}
       >
         {item.title}
@@ -164,13 +170,14 @@ function WhyBuildCard({
             ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "difc-formation")
-            ? "text-[16px] xl:text-[14px] 3xl:text-[18px]"
+            ? "text-[14px] xl:text-[14px] 3xl:text-[18px]"
             : "",
           hasVariant(variant, "CorporateServicesUae") && "xl:text-[16px]",
           hasVariant(variant, "offshore") && "xl:text-[14px]",
           hasVariant(variant, "Formation-JAFZA") && "xl:text-[14px]",
           hasVariant(variant, "dwtc") && "xl:text-[14px]",
           hasVariant(variant, "company-freezone") && "max-sm:text-[14px]",
+          hasVariant(variant, "rakez") && "max-sm:text-[14px]",
         )}
       >
         {parse(item?.description)}
@@ -328,6 +335,7 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
             hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
             hasVariant(variant, "Vat-Services") && "xl:!gap-[25px_40px]",
+            hasVariant(variant, "difc-formation") && "xl:!gap-[25px] xl:mr-[5px]",
           )}
         >
           {data.items.map((item) => (

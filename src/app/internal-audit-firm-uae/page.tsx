@@ -460,8 +460,9 @@ export default function InternalAudit() {
         data={localData.contactUs}
         variant="internal-audit"
       />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data}  variant="internal-audit"/>
       <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }
+ 

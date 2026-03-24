@@ -461,8 +461,8 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/cta-invoing.svg",
-      overlayMobile: "/images/spv-banner-mobile.jpg",
+      overlay: "/images/rakez.png",
+      overlayMobile: "/images/racctaMob.png",
     },
   } satisfies CtaData,
 
@@ -556,7 +556,7 @@ export default function page() {
         variant="rakez"
       />
       <BusinessLocation data={localData.businessLocation} />
-      <MeydanFreeZone data={localData.meydanFreeZone} variant="ifza" />
+      <MeydanFreeZone data={localData.meydanFreeZone} variant="rakez" />
       <DocumentRequired
         data={localData.document_required_data}
         variant="rakez"

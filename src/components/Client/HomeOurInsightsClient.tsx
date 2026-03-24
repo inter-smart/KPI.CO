@@ -95,7 +95,7 @@ export default function HomeOurInsightsClient({
           as="h2"
           size="h2"
           className={cn(
-            "text-[#1c5396] mb-4 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000",
+            "text-[#1c5396] mb-4 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:!text-[24px]",
             variant === "holding" &&
               "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&

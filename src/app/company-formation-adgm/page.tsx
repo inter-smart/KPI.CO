@@ -14,7 +14,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import BusinessLocation, {
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights"; 
 
 export type HeroData = {
   id: number;
@@ -112,7 +112,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/formation-adgm-bg.svg",
-      mobilePath: "/images/formation-adgm-mobile-bg.png",
+      mobilePath: "/images/formation-adgm-mob.svg",
       alt: "ADGM Company Formation, Done with Regulatory Clarity",
     },
     title: "ADGM Company Formation, Done with Regulatory Clarity ",
@@ -530,15 +530,15 @@ export default function InternalAudit() {
         variant="Formation-ADGM"
       />
       <CorporateServicesUaeFormationProcess
-        variant="mainland"
+        variant="Formation-ADGM"
         data={localData.formationProcess}
       />
-      <CorporateServicesUaeBanking variant="company" data={localData.banking} />
-      <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq
-        variant="side-arrow"
-        data={localData.corporate_faq_data}
+      <CorporateServicesUaeBanking
+        variant="company"
+        data={localData.banking}
       />
+      <CorporateServicesUaeCta data={localData.contactUs}  variant="Formation-ADGM"/>
+      <CorporateServicesUaeFaq variant="side-arrow" data={localData.corporate_faq_data} />
       <HomeOurInsights variant="Our-Insights" />
     </>
   );

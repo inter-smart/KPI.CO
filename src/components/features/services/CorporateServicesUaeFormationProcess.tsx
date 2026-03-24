@@ -36,20 +36,21 @@ export type ProcessListItem = {
 
 export type CorporateServicesUaeFormationProcessProps = {
   variant?:
-    | "Vat-Services"
-    | "mainland"
-    | "aup"
-    | "sop"
-    | "default"
-    | "Financial-Statement-Audit"
-    | "tax-advisory"
-    | "erm"
-    | "risk"
-    | "internal-audit"
-    | "difc-regulated"
-    | "adgm-regulated"
-    | "company-freezone"
-    | "CorporateServicesUae";
+  | "Vat-Services"
+  | "mainland"
+  | "Formation-ADGM"
+  | "aup"
+  | "sop"
+  | "default"
+  | "Financial-Statement-Audit"
+  | "tax-advisory"
+  | "erm"
+  | "risk"
+  | "internal-audit"
+  | "difc-regulated"
+  | "adgm-regulated"
+  | "company-freezone"
+  | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -109,9 +110,10 @@ export default function CorporateServicesUaeFormationProcess({
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
           (variant === "mainland" && "max-sm:pb-3") ||
-            (variant === "sop" && "max-sm:pb-3") ||
-            (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
-            (variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]"),
+          (variant === "Formation-ADGM" && "max-sm:pb-[45px]") ||
+          (variant === "sop" && "max-sm:pb-3") ||
+          (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
+          (variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]"),
         )}
       >
         <div className="container">
@@ -119,6 +121,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
+                variant === "Formation-ADGM" ||
                 variant === "sop" ||
                 variant === "company-freezone" ||
                 variant === "aup" ||
@@ -132,7 +135,7 @@ export default function CorporateServicesUaeFormationProcess({
               variant === "aup" && "xl:mb-[32px]",
               variant === "Financial-Statement-Audit" && "xl:mb-[32px]",
               variant === "CorporateServicesUae" &&
-                "sm:text-center xl:mb-[30px]",
+              "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
@@ -207,7 +210,7 @@ export default function CorporateServicesUaeFormationProcess({
                         data.steps.length === index + 1 && "hidden",
                         variant === "aup" && "xl:bottom-[-60px]",
                         variant === "Financial-Statement-Audit" &&
-                          "xl:bottom-[-60px]",
+                        "xl:bottom-[-60px]",
                       )}
                     />
 
@@ -229,15 +232,17 @@ export default function CorporateServicesUaeFormationProcess({
                         className={cn(
                           "text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-normal transition-colors duration-300 !mt-0 my-[8px]",
                           variant === "risk" && "sm:hidden",
+                          variant === "sop" && "sm:hidden",
                           variant === "difc-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                          "max-sm:!block sm:!hidden",
                           variant === "adgm-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                          "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0",
                           variant === "mainland" && "hidden",
+                          variant === "Formation-ADGM" && "hidden",
                         )}
                       >
                         {step.step}
@@ -253,10 +258,12 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "adgm-regulated" && "max-w-full",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
+                        variant == "Formation-ADGM" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",
                         variant == "sop" && "max-w-[90%]",
                         variant == "Financial-Statement-Audit" && "max-w-full",
                         variant === "mainland" && "xl:max-w-[430px]",
+                        variant === "Formation-ADGM" && "xl:max-w-[430px]",
                         variant == "CorporateServicesUae" && "max-w-full",
                         variant === "Vat-Services" && "xl:max-w-full",
                         variant === "erm" && "xl:max-w-full",
@@ -279,8 +286,9 @@ export default function CorporateServicesUaeFormationProcess({
                   "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
                   variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
                   variant === "mainland" && "xl:!min-h-[555px]",
+                  variant === "Formation-ADGM" && "xl:!min-h-[555px]",
                   variant === "Financial-Statement-Audit" &&
-                    "xl:!min-h-[415px]",
+                  "xl:!min-h-[415px]",
                   variant === "Vat-Services" && "xl:!min-h-[455px]",
                   variant === "erm" && "xl:!min-h-[690px]",
                   variant === "aup" && "xl:!min-h-[555px]",
@@ -292,7 +300,7 @@ export default function CorporateServicesUaeFormationProcess({
                   alt="background decoration"
                   width={400}
                   height={740}
-                  className="absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none"
+                  className={cn("absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none", variant === "erm" && "md:w-[210px] xl:w-[395px]")}
                 />
                 <AnimatePresence mode="wait">
                   <div key={activeStep} className="relative z-10 w-full">
@@ -304,11 +312,14 @@ export default function CorporateServicesUaeFormationProcess({
                           className={cn(
                             "font-normal text-[#3eb0ea] capitalize mb-1 xl:text-[24px]",
                             variant === "risk" && "sm:hidden",
+                            variant === "sop" && "sm:hidden",
                             variant === "erm" && "max-sm:text-[14px]",
                             variant === "difc-regulated" &&
-                              "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                             variant === "adgm-regulated" &&
-                              "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
+                            variant === "Formation-ADGM" &&
+                            "sm:!block max-sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -328,8 +339,10 @@ export default function CorporateServicesUaeFormationProcess({
                           as="h4"
                           size="h6"
                           className={cn(
-                            "text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
+                            "text-[16px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
                             variant === "erm" && "max-sm:text-[16px]",
+                            variant === "sop" && "max-sm:text-[16px]",
+                            variant === "mainland" && "max-sm:text-[16px]",
                             variant === "tax-advisory" && "max-sm:text-[16px]",
                           )}
                         >
@@ -350,6 +363,7 @@ export default function CorporateServicesUaeFormationProcess({
                           "text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
                           variant === "internal-audit" && "leading-relaxed",
                           variant === "mainland" && "xl:text-[20px]",
+                          variant === "Formation-ADGM" && "xl:text-[20px]",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}
@@ -367,12 +381,12 @@ export default function CorporateServicesUaeFormationProcess({
                   key={item?.id}
                   className="w-full h-auto mt-[20px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[40px] max-sm:hidden"
                 >
-                  <div className="w-full h-full p-6 lg:p-5 xl:p-[32px_36px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[135px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
-                    <div className="text-[18px] lg:text-[20px] xl:text-[24px] 3xl:text-[30px] leading-normal capitalize font-medium text-[#1C5396] mb-2 lg:mb-1.25 2xl:mb-2.5">
+                  <div className="w-full h-full p-6 lg:p-5 xl:p-[30px_36px] 2xl:p-6.25 3xl:p-7.5 rounded-[10px] 3xl:rounded-[14px] overflow-hidden block relative z-0 min-h-[95px] xl:min-h-[133px] 2xl:min-h-[145px] 3xl:min-h-[180px] before:content-[''] before:w-[15px] before:h-full before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f8f8f8] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px] after:3xl:translate-x-[5px]">
+                    <div className="text-[18px] lg:text-[20px] xl:text-[24px] 3xl:text-[30px] leading-[150%] capitalize font-medium text-[#1C5396] mb-[12px]">
                       {item?.title}
                     </div>
                     {item?.description && (
-                      <div className="text-[14px] lg:text-[16px] xl:text-[16px]  2xl:text-[18px] 3xl:text-[21px] leading-normal font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
+                      <div className="text-[14px] lg:text-[16px] xl:text-[16px]  2xl:text-[18px] 3xl:text-[21px] leading-[150%] font-normal text-[#4E4E4E] max-md:[&_br]:hidden">
                         {parse(item?.description)}
                       </div>
                     )}

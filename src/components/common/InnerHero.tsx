@@ -84,11 +84,13 @@ export default function InnerHero({
         variant === "dwtc" || variant === "e-invoicing"
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
-        variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
+        variant === "e-invoicing" ? "min-h-[715px] xl:min-h-[722px]" : "",
         variant === "company-freezone" && "max-sm:min-h-[630px]",
         variant === "technology" &&
           "max-sm:!min-h-[728px] xl:!min-h-[600px] max-sm:pt-[119.55px] xl:!py-[120px_63px]",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
+        variant === "CorporateTaxUae" && "max-sm:!min-h-[650px] xl:!min-h-[630px]",
+        variant === "difc" && "max-sm:!min-h-[553px] xl:!min-h-[600px]",
         variant === "ADGM-SPV-Formation" &&
           "max-sm:!min-h-[619px] xl:!min-h-[651px] max-sm:pt-[119.55px] xl:!pt-[120px]",
         variant === "Holding-Companies" &&
@@ -129,7 +131,7 @@ export default function InnerHero({
               "max-sm:max-w-[330px] xl:max-w-[790px] ",
             variant === "Formation-ADGM" && "xl:max-w-[790px]",
             variant === "CorporateTaxUae" && "xl:max-w-[770px]",
-            variant === "regulatory" && "!max-w-full",
+            variant === "regulatory" && "xl:max-w-[845px]",
             variant === "Financial-Statement-Audit" && "xl:max-w-[770px]",
             variant === "VatServicesUae" && "xl:max-w-[790px]",
             variant === "Offshore" && "xl:max-w-[780px]",
@@ -151,11 +153,11 @@ export default function InnerHero({
             as="h1"
             size="h1"
             className={cn(
-              "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+              "font-bold text-white mb-[15px] xl:mb-[22px] capitalize max-md:[&_br]:hidden",
 
               variant === "technology" && "max-w-[850px] xl:mb-[22px]",
               variant === "internal-audit" && "max-w-[850px]",
-              variant === "regulatory" && "max-w-[850px]",
+              variant === "regulatory" && "xl:mb-[28.5px]",
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
               variant === "Offshore" && "normal-case",
               variant === "Formation-JAFZA" && "normal-case",
@@ -182,6 +184,8 @@ export default function InnerHero({
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
                   "xl:text-[16px] lg:max-w-[83%]",
+                variant === "CorporateTaxUae" &&
+                  "xl:text-[20px] xl:mb-[41px] leading-[150%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" &&
                   "lg:max-w-[770px] xl:text-[20px] xl:leading-[150%] xl:mb-[37.5px]",
@@ -193,7 +197,7 @@ export default function InnerHero({
                 variant === "Offshore" && "xl:text-[20px]",
                 variant === "CorporateTaxUae" && "xl:text-[20px]",
                 variant === "regulatory" &&
-                  "lg:max-w-[70%] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-relaxed",
+                  "lg:max-w-[772px] text-[16px] xl:!text-[20px] [&_p]:text-[16px] xl:[&_p]:!text-[20px] leading-[150%] xl:mb-[32.5px]",
                 variant === "Financial-Statement-Audit" &&
                   "xl:text-[20px] mb-[21px] xl:mb-[41px]",
                 variant === "VatServicesUae" &&
@@ -205,7 +209,7 @@ export default function InnerHero({
                   "xl:text-[20px] xl:mb-[33px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
-                variant === "e-invoicing" && "xl:text-[20px]",
+                variant === "e-invoicing" && "xl:text-[20px] xl:mb-[32px]",
                 variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
                 variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",
@@ -219,6 +223,8 @@ export default function InnerHero({
                   "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
                 variant === "internal-audit" &&
                   "xl:max-w-[772px] xl:leading-[150%] xl:text-[20px] xl:mb-[40.5px]",
+                variant === "Formation-ADGM" &&
+                  "xl:max-w-[772px] xl:leading-[150%] xl:text-[20px] xl:mb-[34px]",
               )}
             >
               {parse(data?.description)}

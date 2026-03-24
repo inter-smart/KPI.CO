@@ -361,7 +361,7 @@ export default function DocumentRequired({
                   alt={data.media.alt || data?.title || "Document required"}
                   width={615}
                   height={636}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                 />
               </div>
             </div>

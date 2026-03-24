@@ -39,11 +39,14 @@ export type CorporateServicesUaeFaqProps = {
     | "rakez"
     | "dwtc"
     | "sop"
+    | "difc-formation"
     | "ADGM-SPV-Formation"
     | "CorporateServicesUae"
     | "Formation-JAFZA"
     | "difc-regulated"
     | "AuditServicesUae"
+    | "internal-audit"
+    | "regulatory"
     | "ADGM-Foundations"
     | "ADGM-Spv-Formation";
 };
@@ -107,6 +110,9 @@ export default function CorporateServicesUaeFaq({
                   variant === "RAK-Offshore" && "last:border-b-1",
                   variant === "dwtc" && "last:border-b-1",
                   variant === "ADGM-SPV-Formation" && "last:border-b-1",
+                  variant === "internal-audit" && "last:border-b-1",
+                  variant === "side-arrow" && "last:border-b-1",
+                  variant === "difc-formation" && "last:border-b-1",
                   variant === "ADGM-Foundations" && "last:border-b-1",
                 )}
               >
@@ -144,6 +150,7 @@ export default function CorporateServicesUaeFaq({
                       variant === "JAFZA-Freezone" && "[&_p]:leading-[1.5]",
                       variant === "company-freezone" && "[&_p]:leading-[1.5]",
                       variant === "AuditServicesUae" && "max-w-full",
+                      variant === "regulatory" && "max-w-full",
                     )}
                   >
                     {parse(item?.description || "")}

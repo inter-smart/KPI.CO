@@ -301,7 +301,7 @@ export default function Footer() {
               <ul>
                 <li>
                   <Link
-                    href="/financial-statement-audit-uae"
+                    href="/audit-assurance/financial-statement-audit-uae"
                     className={FOOTER_LINK_STYLES}
                   >
                     Financial Statement Audit
@@ -309,7 +309,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/agreed-upon-procedures-uae"
+                    href="/audit-assurance/agreed-upon-procedures-uae"
                     className={FOOTER_LINK_STYLES}
                   >
                     Agreed Upon Procedures
@@ -317,7 +317,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/adgm-regulated-audit"
+                    href="/audit-assurance/adgm-regulated-audit"
                     className={FOOTER_LINK_STYLES}
                   >
                     ADGM Regulated Audit
@@ -325,7 +325,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/difc-dfsa-regulated-audit"
+                    href="/audit-assurance/difc-dfsa-regulated-audit"
                     className={FOOTER_LINK_STYLES}
                   >
                     DIFC & DFSA Regulated Audit
@@ -348,7 +348,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/corporate-services-uae"
+                    href="/tax-advisory-services-uae"
                     className={FOOTER_LINK_STYLES}
                   >
                     Tax Advisory
@@ -356,7 +356,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/corporate-services-uae"
+                    href="/advisory/tax-advisory/e-Invoicing"
                     className={FOOTER_LINK_STYLES}
                   >
                     e-Invoicing
@@ -378,22 +378,22 @@ export default function Footer() {
               <div className={FOOTER_MAINLINKS}>Risk & Compliance</div>
               <ul>
                 <li>
-                  <Link href="/risk-overview" className={FOOTER_LINK_STYLES}>
+                  <Link href="/risk-assurance/enterprise-risk-management-services-uae" className={FOOTER_LINK_STYLES}>
                     Enterprise Risk Management
                   </Link>
                 </li>
                 <li>
-                  <Link href="/risk-overview" className={FOOTER_LINK_STYLES}>
+                  <Link href="/internal-audit-firm-uae" className={FOOTER_LINK_STYLES}>
                     Internal Audit Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/risk-overview" className={FOOTER_LINK_STYLES}>
+                  <Link href="/standard-operating-procedures-uae" className={FOOTER_LINK_STYLES}>
                     Standard Operating Procedures
                   </Link>
                 </li>
                 <li>
-                  <Link href="/risk-overview" className={FOOTER_LINK_STYLES}>
+                  <Link href="/regulatory-compliance-advisory-uae" className={FOOTER_LINK_STYLES}>
                     Regulatory & Compliance Advisory
                   </Link>
                 </li>
@@ -437,7 +437,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact" className={FOOTER_LINK_STYLES}>
+                  <Link href="/contact" className={FOOTER_LINK_STYLES}>
                     Contact Us
                   </Link>
                 </li>
@@ -511,7 +511,7 @@ export default function Footer() {
                   <ul >
                     <li>
                       <Link
-                        href="/financial-statement-audit-uae"
+                        href="/audit-assurance/financial-statement-audit-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Financial Statement Audit
@@ -519,7 +519,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/agreed-upon-procedures-uae"
+                        href="/audit-assurance/agreed-upon-procedures-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Agreed Upon Procedures
@@ -527,7 +527,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/adgm-regulated-audit"
+                        href="/audit-assurance/adgm-regulated-audit"
                         className={FOOTER_LINK_STYLES}
                       >
                         ADGM Regulated Audit
@@ -535,7 +535,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/difc-dfsa-regulated-audit"
+                        href="/audit-assurance/difc-dfsa-regulated-audit"
                         className={FOOTER_LINK_STYLES}
                       >
                         DIFC & DFSA Regulated Audit
@@ -573,7 +573,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/e-Invoicing"
+                        href="/advisory/tax-advisory/e-Invoicing"
                         className={FOOTER_LINK_STYLES}
                       >
                         e-invoicing Services
@@ -602,7 +602,7 @@ export default function Footer() {
                   <ul  >
                     <li>
                       <Link
-                        href="/risk-overview"
+                        href="/risk-assurance/enterprise-risk-management-services-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Enterprise Risk Management
@@ -610,7 +610,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/risk-overview"
+                        href="/internal-audit-firm-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Internal Audit Services
@@ -618,7 +618,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/risk-overview"
+                        href="/standard-operating-procedures-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Standard Operating Procedures
@@ -626,7 +626,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/risk-overview"
+                        href="/regulatory-compliance-advisory-uae"
                         className={FOOTER_LINK_STYLES}
                       >
                         Regulatory & Compliance Advisory
@@ -682,7 +682,7 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#contact" className={FOOTER_LINK_STYLES}>
+                      <Link href="/contact" className={FOOTER_LINK_STYLES}>
                         Contact Us
                       </Link>
                     </li>

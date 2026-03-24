@@ -451,7 +451,7 @@ export default function CorporateTaxUaePage() {
         data={localData.whyChoose}
         variant="CorporateTaxUae"
       />
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeCta data={localData.cta} variant="CorporateTaxUae" />
       <HomeOurInsights variant="Our-Insights" />
     </>
   );

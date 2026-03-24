@@ -21,7 +21,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
               >
                 {data.title}
               </Heading>
-              <div className="lg:[&_p]:text-[16px] xl:text-[18px] xl:[&_p]:text-[18px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal !text-[#4E4E4E] 3xl:max-w-[85%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
+              <div className="text-[16px] [&_p]:text-[16px] xl:text-[18px] xl:[&_p]:text-[18px] 3xl:[&_p]:text-[24px] [&_p]:leading-[1.7] [&_p]:font-normal !text-[#4E4E4E] 3xl:max-w-[85%] lg:[&_p]:mb-6.25 2xl:[&_p]:mb-7.5">
                 {parse(data.description || '')}
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function HomeSecurityInfo({ data }: HomeSecurityInfoProps) {
                 Certified
               </div>
               <div className="text-[11.91px] lg:text-[12px] xl:text-[13.51px]  leading-[20.27px] font-medium text-[#4E4E4E] max-sm:max-w-[256.57px] max-sm:m-auto p-[16.04px_24.58px_13.02px_24.09px] lg:p-[15px_25px] xl:p-[16.63px_24.95px]   bg-[#F8F9FB] rounded-[8.32px] overflow-hidden">
-                 {parse(data.isoInfo.description)}
+                {parse(data.isoInfo.description)}
               </div>
             </div>
           </div>

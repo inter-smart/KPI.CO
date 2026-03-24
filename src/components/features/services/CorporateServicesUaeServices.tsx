@@ -74,7 +74,7 @@ export default function CorporateServicesUaeServices({
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className="text-[16px] xl:text-[18px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] xl:mb-[25px] leading-normal font-normal text-[#4E4E4E]">
+            <div className="text-[18px] xl:text-[18px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] xl:mb-[25px] leading-normal font-normal text-[#4E4E4E]">
               {parse(data?.description)}
             </div>
           )}
@@ -127,7 +127,7 @@ export default function CorporateServicesUaeServices({
                     alt={item?.media?.alt}
                     width={32}
                     height={32}
-                    className="w-full h-full object-contain max-w-[20px] xl:max-w-[26px]"
+                    className="w-full h-full object-contain max-w-[20px] xl:max-w-[20px] xl:max-h-[20px]"
                   />
                 </div>
                 <div className="w-[calc(100%-var(--icon-size))] pl-[15px] lg:pl-3 xl:pl-[15px] 3xl:pl-5">
@@ -150,6 +150,7 @@ export default function CorporateServicesUaeServices({
                           "leading-relaxed xl:max-w-[92%]",
                         variant === "saifz" && "xl:max-w-full",
                         variant === "rakez" && "xl:max-w-full",
+                        variant === "SOP" && "xl:max-w-full",
                         variant === "AuditServicesUae" && "xl:max-w-full",
                       )}
                     >

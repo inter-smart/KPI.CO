@@ -336,7 +336,7 @@ const localData = {
       "<p>If risk is becoming harder to track, explain, or defend, our team can help you bring structure and clarity before issues escalate. Whether you are strengthening governance, preparing for regulatory review, or addressing control gaps, KPI can support you with clarity and confidence. </p>",
     button: {
       label: "Get in Touch",
-      link: "/#contact",
+      link: "/contact",
     },
     images: {
       overlay: "/images/riskcta.svg",
@@ -544,7 +544,7 @@ export default function RiskOverviewPage() {
   return (
     <>
       <InnerHero data={localData.hero} />
-      <WhyRiskManagement data={localData.whyRisk} variant="risk"/>
+      <WhyRiskManagement data={localData.whyRisk} variant="risk" />
       <RiskAdvisory data={localData.riskAdvisory} />
       <RiskAssuranceServices data={localData.riskAssurance} />
       <RiskOrganisation data={localData.riskOrganisation} />
@@ -560,7 +560,7 @@ export default function RiskOverviewPage() {
       />
       <DiscussYourRisk data={localData.discussYourRisk} />
       <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
-      <HomeOurInsights variant="Our-Insights"/>
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

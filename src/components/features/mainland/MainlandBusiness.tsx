@@ -123,6 +123,8 @@ export default function MainlandBusiness({
                 "xl:w-[calc(100%-517px)] xl:pr-[50px]",
               hasVariant(variant, "meydan") &&
                 "xl:w-[calc(100%-517px)] xl:pr-[45px]",
+              hasVariant(variant, "CorporateTaxUae") &&
+                "xl:w-[calc(100%-517px)] xl:pr-[48px]",
             )}
           >
             <div
@@ -143,6 +145,7 @@ export default function MainlandBusiness({
                 hasVariant(variant, "SAIFZ") && "!max-w-full",
                 hasVariant(variant, "dwtc") && "!max-w-full",
                 hasVariant(variant, "AuditServicesUae") && "!max-w-full",
+                hasVariant(variant, "CorporateTaxUae") && "xl:!max-w-[625px]",
               )}
             >
               <Heading
@@ -163,7 +166,7 @@ export default function MainlandBusiness({
               </Heading>
               <div
                 className={cn(
-                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
+                  "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] [&_p]:leading-[150%] [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
                   hasVariant(variant, "hamriya") && "mb-0",
                   hasVariant(variant, "CorporateTaxUae") && "max-sm:hidden",
                   hasVariant(variant, "AuditServicesUae") &&
@@ -184,7 +187,7 @@ export default function MainlandBusiness({
                     <Text
                       size="p2"
                       className={cn(
-                        "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[15px]",
+                        "max-xl:[&_p]:!text-[16px] text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[150%] text-[#4E4E4E] mb-[15px]",
                         variant === "ADGM-Foundations" &&
                           "mb-[20px] sm:mb-[25px]",
                       )}
@@ -245,7 +248,7 @@ export default function MainlandBusiness({
                   </div>
                 </div>
               )}
-              <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-relaxed">
+              <div className="text-[16px] lg:text-[12px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] leading-[150%]">
                 {data.footerDescription && parse(data.footerDescription)}
               </div>
             </div>
@@ -275,15 +278,22 @@ export default function MainlandBusiness({
               variant === "company-freezone" && "xl:w-[517px]",
               variant === "JAFZA-Freezone" && "xl:w-[517px]",
               variant === "rakez" && "xl:w-[517px]",
+              variant === "CorporateTaxUae" && "xl:w-[517px]",
               variant === "RAK-Offshore" && "xl:w-[517px]",
               variant === "meydan" && "xl:w-[517px]",
             )}
           >
             <div
               className={cn(
-                "relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px] rounded-[12px] overflow-hidden",
+                "relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px]  rounded-[12px] overflow-hidden",
                 variant === "AuditServicesUae" &&
-                  "max-sm:h-[437px] lg:h-auto lg:aspect-517/437",
+                  "max-sm:h-[437px] lg:h-auto lg:aspect-517/549",
+                variant === "CorporateTaxUae" &&
+                  "max-sm:h-[437px] lg:h-auto lg:aspect-517/549 xl:min-h-[549px] max-sm:max-w-[330px]",
+                variant === "e-invoicing" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[329px]",
+                variant === "JAFZA-Freezone" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[333px]",
               )}
             >
               <Image

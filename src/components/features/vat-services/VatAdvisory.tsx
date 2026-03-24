@@ -60,9 +60,12 @@ export default function VatAdvisory({ data, variant="default" }: VatAdvisoryProp
                 key={`advisory-${item?.id}`}
                 className="mr-[30px] sm:mr-[20px] xl:mr-[25px] 2xl:mr-[30px] 3xl:mr-[40px] flex-[0_0_303px] sm:flex-[0_0_35%] xl:flex-[0_0_338px] min-w-0 select-none"
               >
-                <div className={cn("w-full h-[300px] sm:h-full xl:h-full  p-[30px_20px] sm:p-[25px_20px] xl:p-[30px_20px] 2xl:p-[35px_25px] 3xl:p-[40px_30px] bg-white rounded-[14px] xl:rounded-[12px] 2xl:rounded-[20px] border-1 border-black/10 overflow-hidden flex flex-col", variant === "VatServicesUae" && "xl:p-[31px_22px_30px]")}>
+                <div className={cn("w-full sm:h-full xl:h-full  p-[30px_20px] sm:p-[25px_20px] xl:p-[30px_20px] 2xl:p-[35px_25px] 3xl:p-[40px_30px] bg-white rounded-[14px] xl:rounded-[12px] 2xl:rounded-[20px] border-1 border-black/10 overflow-hidden flex flex-col",
+                   variant === "VatServicesUae" && "xl:p-[31px_22px_30px]",
+                   variant === "difc-formation" && "min-h-[220px] xl:min-h-[250px] ",
+                   )}>
                   <div className={cn("text-[16px] sm:text-[18px] xl:text-[21px] 2xl:text-[25px] 3xl:text-[32px] leading-normal font-medium text-[#1C5396]",
-                    variant === "difc-formation" && "xl:text-[24px]",
+                    variant === "difc-formation" && "xl:text-[24px] mb-[24px] xl:mb-[32px] ",
                     variant === "VatServicesUae" && "xl:text-[24px] xl:leading-[32px] mb-[24px] xl:mb-[40px]"
                   )}>
                     {parse(item?.title)}

@@ -13,6 +13,7 @@ import HomeCounter from "@/components/features/home/HomeCounter";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import MeydanFreeZone from "@/components/features/meydan/MeydanFreeZone";
 import RiskOrganisation from "@/components/features/risk-overview/RiskOrganisation";
+import CorporateServicesUaeFaq from "@/components/features/services/CorporateServicesUaeFaq";
 
 export type HeroData = {
   id: number;
@@ -108,6 +109,11 @@ export type CtaData = {
     overlayMobile: string;
   };
 };
+export type FaqItem = {
+  id: number;
+  title: string;
+  description: string;
+};
 
 export type InsightItem = {
   id: number;
@@ -136,7 +142,7 @@ const localData = {
     description:
       " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations </p>",
     highlightsText:
-      "<div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
+      "<div>At this stage, compliance gaps are rarely intentional - They are structural.</div>",
     advisoryItems: [
       {
         id: 1,
@@ -169,7 +175,7 @@ const localData = {
   document_required_data: {
     title: "What Regulatory & Compliance Advisory Means At KPI ",
     description:
-      "<p>Practical Compliance Support. Aligned with Regulatory Expectations.</p><p>KPI Regulatory & Compliance Advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
+      "<p>Practical compliance support. Aligned with regulatory expectations.</p><p>KPI regulatory & compliance advisory services focus on helping organisations understand, implement, and evidence compliance requirements relevant to their operations.</p><p>We support management with:</p>",
     items: [
       {
         id: 1,
@@ -333,7 +339,7 @@ const localData = {
     },
   ] satisfies CounterItem[],
   vatRelatedTax: {
-    title: "Related Risk Services",
+    title: "Related Services",
     tax_list: [
       {
         id: 1,
@@ -394,6 +400,80 @@ const localData = {
       overlayMobile: "/images/regulatory-cta-overlay-mobile.svg",
     },
   } satisfies CtaData,
+
+   corporate_faq_data: {
+      title: "FAQs",
+      faq_list: [
+        {
+          id: 1,
+          title: "What are regulatory advisory services in the UAE? ",
+          description: `
+                      <p>Regulatory & compliance advisory services in the UAE help organisations interpret, implement, and evidence compliance with applicable federal authorities, free zone regulators, and licensing bodies. These services focus on strengthening governance, compliance frameworks, internal controls, and regulatory documentation.</p>
+                      <p>A regulatory compliance consultant in the UAE supports businesses in meeting authority requirements, preparing for inspections, and reducing regulatory exposure across mainland and free zone jurisdictions.</p>
+                      `,
+        },
+        {
+          id: 2,
+          title: "When should a company engage a regulatory compliance consultant in the UAE?",
+          description: `
+                      <p>Companies should engage regulatory & compliance advisory services in the UAE when they: </p>
+                      <ul>
+                          <li>Operate under multiple regulatory authorities or free zones </li>
+                          <li>Prepare for regulatory inspection, audit, or authority review  </li>
+                          <li>Apply for new licenses or regulatory classifications  </li>
+                          <li>Face recurring compliance queries or audit findings </li>
+                          <li>Expand into regulated sectors or semi-regulated environments  </li>
+
+                      </ul>
+                      <p>Early engagement with a UAE compliance advisory firm helps prevent regulatory breaches and reputational risk.</p>
+                      `,
+        },
+        {
+          id: 3,
+          title: "Are compliance frameworks mandatory for UAE businesses? ",
+          description: `
+                      <p>While not all UAE businesses are subject to identical regulatory requirements, many regulated sectors and free zone jurisdictions require documented compliance frameworks, policies, and internal controls. Authorities increasingly expect organisations to demonstrate: </p>
+                        <ul>
+                          <li>Clear governance structures  </li>
+                          <li>Defined compliance responsibilities   </li>
+                          <li>Documented policies and procedures  </li>
+                          <li>Evidence of monitoring and oversight </li> 
+                      </ul>
+                      <p>Regulatory & compliance advisory services help businesses meet these evolving expectations. </p>
+                      `,
+        },
+        {
+          id: 4,
+          title: "What is the difference between regulatory advisory and internal audit in the UAE? ",
+          description: `
+                      <p>Regulatory advisory services in the UAE focus on helping organisations design and implement compliance frameworks aligned with authority expectations.  </p>
+                      <p>Internal audit services provide independent assurance that existing compliance controls are operating effectively. In practice: </p>
+                      <ul>
+                        <li>Regulatory advisory builds and strengthens compliance systems. </li>
+                        <li>Internal audit evaluates and tests those systems.</li>
+
+                      </ul>
+                      <p>Both are critical components of effective corporate governance in the UAE</p>
+                      `,
+        },
+        {
+          id: 5,
+          title: "Do free zone companies in the UAE require compliance advisory services? ",
+          description: `
+                      <p>Yes. Free zone companies in the UAE are subject to specific regulatory and licensing requirements depending on their jurisdiction and activity. Free zone compliance advisory services help businesses:  </p>
+                      <ul>
+                        <li>Understand authority-specific obligations</li>
+                        <li>Align internal controls with free zone regulations </li>
+                        <li>Prepare for inspections or license renewals </li>
+                        <li>Address compliance findings proactively </li>
+
+                      </ul>
+                      <p>Compliance expectations in free zones are increasingly structured and evidence-driven. </p>
+                      `,
+        },
+      ] satisfies FaqItem[],
+    },
+
   insights: {
     title: "Our Insights",
     items: blogData.slice(0, 4).map((blog) => ({
@@ -454,9 +534,10 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
         data={localData?.whyChoose}
         variant="regulatory"
       />
-      <HomeCounter data={localData.counterList} variant="regulatory" />
+      <HomeCounter data={localData.counterList} variant="regulatory"  />
       <VatRelatedTax data={localData.vatRelatedTax} variant="regulatory" />
       <CorporateServicesUaeCta data={localData.cta} variant="regulatory" />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="regulatory"/>
       <HomeOurInsights variant="Our-Insights" />
     </>
   );

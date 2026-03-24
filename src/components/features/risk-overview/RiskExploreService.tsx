@@ -178,7 +178,7 @@ function Service({ data, variant }: ServiceProps) {
 
       <div
         className={cn(
-          "w-full p-[20px_30px_20px] lg:p-[30px_25px_20px] xl:p-[30px_35px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
+          "w-full p-[20px_32px_20px] lg:p-[30px_25px_20px] xl:p-[30px_35px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
 
           (variant === "ADGM-Foundations" ||
             variant === "difc-regulated" ||
@@ -200,7 +200,7 @@ function Service({ data, variant }: ServiceProps) {
 
         <div
           className={cn(
-            "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] leading-normal font-medium  text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px]",
+            "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] max-w-[218px] leading-normal font-medium  text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px] [&>br]:!block",
             variant === "risk" && "min-h-fit",
           )}
         >
