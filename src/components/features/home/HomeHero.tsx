@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heading } from "@/components/utils/typography";
 import { Button } from "@/components/ui/button";
+import { preload } from "react-dom";
 import type { SlideItem } from "@/app/page";
 
 import "swiper/css";
@@ -20,6 +21,12 @@ type HomeHeroProps = {
 };
 
 export default function HomeHero({ data }: HomeHeroProps) {
+  // Preload first slide video if it's a video to reduce initial delay
+  const firstSlide = data.slides[0];
+  if (firstSlide && firstSlide.type === "video") {
+    preload(firstSlide.mediaUrl, { as: "video", type: "video/mp4" } as any);
+  }
+
   return (
     <section className="relative w-full h-[600px] xl:h-[600px] 3xl:h-[800px] overflow-hidden">
       <Swiper
@@ -45,7 +52,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
             key={slide.id}
             className="relative w-full h-full overflow-hidden"
           >
-
+           
             <div className="absolute inset-0 w-full h-full">
               {slide.type === "video" ? (
                 <video
@@ -53,6 +60,8 @@ export default function HomeHero({ data }: HomeHeroProps) {
                   muted
                   loop
                   playsInline
+                  preload="auto"
+                  src={slide.mediaUrl}
                   poster={slide.posterUrl}
                   className="w-full h-full object-cover"
                 >

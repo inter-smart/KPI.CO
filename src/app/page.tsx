@@ -127,7 +127,7 @@ const localData = {
         buttonLink: "/contact",
         type: "video" as const,
         mediaUrl: "/videos/banner.mp4",
-        posterUrl: "/images/hero-bg-2.jpg",
+        posterUrl: "/images/poster.png",
       },
     ] satisfies SlideItem[],
   },
