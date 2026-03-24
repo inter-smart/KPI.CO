@@ -73,7 +73,7 @@ export default function CorporateServicesUaeCta({
           className={cn(
             "w-full md:max-w-[1069px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
             variant === "mainland"
-              ? " p-[50px_30px]  sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
+              ? " p-[50px_30px]  sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]"
               : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "e-invoicing"
               ? "max-sm:!p-[40px_21px_37px_31px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
@@ -167,6 +167,7 @@ export default function CorporateServicesUaeCta({
                 variant === "regulatory" && "xl:max-w-[92%] leading-[150%]",
                 variant === "ifza" && "xl:max-w-[583px]",
                 variant === "erm" && "xl:max-w-[573px]",
+                variant === "mainland" && "xl:max-w-[583px]",
               )}
             >
               {parse(data?.description)}
