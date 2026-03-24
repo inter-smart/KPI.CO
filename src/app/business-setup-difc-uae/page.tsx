@@ -426,7 +426,7 @@ const localData = {
     },
     images: {
       overlay: "/images/mainland-cta-overlay-mainland.svg",
-      overlayMobile: "/images/mainland-cta-overlay-mobile.svg",
+      overlayMobile: "/images/difc-mob.svg",
     },
   } satisfies CtaData,
   corporate_faq_data: {
@@ -518,7 +518,7 @@ export default function CompanyFormationDIFC() {
         variant="Formation-DIFC"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="difc-formation" />
     </>
   );
 }

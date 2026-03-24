@@ -106,7 +106,7 @@ function WhyBuildCard({
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
         variant === "formation" && "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
-        variant === "difc-formation" && "!p-[20px_15px_37px] xl:min-h-[226px]",
+        variant === "difc-formation" && "!p-[20px_15px_36.4px] xl:min-h-[226px]",
       )}
     >
       <div
@@ -149,7 +149,7 @@ function WhyBuildCard({
             "max-sm:text-[16px] xl:text-[18px]",
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
           variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
-           variant === "difc-formation" && "text-[16px] xl:text-[18px] leading-[100%]",
+           variant === "difc-formation" && "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
         )}
       >
         {item.title}
@@ -368,7 +368,7 @@ export default function CorporateServicesUaeWhyBuild({
           >
             {data.structure_list.map((item) => (
               <div key={item.id} className="w-full h-auto">
-                <div className="w-full h-full p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
+                <div className="w-full h-full xl:min-h-[133px] p-[20px_35px] sm:p-[25px] xl:p-[30px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] rounded-[15px] sm:rounded-[10px] overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[13px] sm:after:rounded-[10px] after:absolute after:-z-1 after:inset-0 after:translate-x-[3px]">
                   <div
                     className={cn(
                       "leading-normal font-medium text-[#003268] mb-[20px] text-[24px] sm:text-[18px] xl:text-[24px] 2xl:text-[25px] 3xl:text-[32px]",

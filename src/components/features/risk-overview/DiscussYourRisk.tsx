@@ -35,7 +35,7 @@ export default function DiscussYourRisk({
     <section
       className={cn(
         "relative w-full max-sm:px-[40px] py-[60px] xl:py-[70px] overflow-hidden",
-        variant === "technology" && "max-sm:px-[30px] py-[80px] xl:py-[105px] ",
+        variant === "technology" && "max-sm:min-h-[361px] max-sm:py-[58px] max-sm:px-[30px] py-[80px] xl:py-[105px] ",
       )}
     >
       <div className="absolute inset-0 -z-10">
@@ -80,8 +80,8 @@ export default function DiscussYourRisk({
             <Button
               asChild
               className={cn(
-                "bg-[#FFC916] text-black !font-medium leading-none text-[13px] sm:text-[14px] lg:text-[17px] 2xl:text-[20px] 3xl:text-[26px] min-w-[160px] xl:min-w-[178px] 2xl:min-w-[190px] h-[40px] sm:h-[45px] xl:h-[50px] 3xl:h-[60px]",
-                variant === "technology" && "max-sm:min-w-[]",
+                "bg-[#FFC916] text-black !font-medium leading-none text-[13px] sm:text-[14px] lg:text-[17px] 2xl:text-[20px] 3xl:text-[26px] min-w-[118px] xl:min-w-[178.07px] h-[30px] sm:h-[45px] xl:h-[50px]",
+                variant === "technology" && "max-sm:min-w-[118px] xl:h-[48.02px] xl:text-[19.02px] !px-0",
               )}
             >
               <Link href={data?.button?.link || "#"}>

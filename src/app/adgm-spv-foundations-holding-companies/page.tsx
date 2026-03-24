@@ -103,7 +103,7 @@ export type InsightItem = {
   slug: string;
 };
 
-const localData = { 
+const localData = {
   hero: {
     id: 1,
     media: {
@@ -164,7 +164,7 @@ const localData = {
         id: 1,
         text: "100% foreign ownership - no local partner or sponsor required ",
       },
-      
+
       {
         id: 2,
         text: "0% corporate tax for Qualifying Free Zone Persons (QFZP) on eligible income",
@@ -346,8 +346,7 @@ const localData = {
     faq_list: [
       {
         id: 1,
-        title:
-          "Do I need a physical office in ADGM for a holding company? ",
+        title: "Do I need a physical office in ADGM for a holding company? ",
         description: `
           <p>Yes, holding companies must maintain a physical office presence in ADGM. You can choose between a business center/flexi-desk or a fitted office. This is mandatory for holding companies, unlike SPVs which can use a Company Service Provider without physical office.</p>
                         `,
@@ -375,7 +374,8 @@ const localData = {
       },
       {
         id: 5,
-        title: "Can I use my ADGM holding company for family wealth succession planning? ",
+        title:
+          "Can I use my ADGM holding company for family wealth succession planning? ",
         description: `
           <p>Yes, ADGM holding companies are widely used for family wealth management and succession planning. Benefits include: centralized ownership of family assets across jurisdictions, tax-efficient intergenerational wealth transfer (0% capital gains, no inheritance tax in UAE), clear governance framework for family decision-making, asset protection through legal separation, professional management structure, and access to ADGM's family office ecosystem. Many families combine holding companies with ADGM Foundations for comprehensive succession planning..</p>
                         `,
@@ -389,7 +389,7 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
@@ -398,7 +398,8 @@ const localData = {
 };
 
 export const metadata: Metadata = {
-  title: "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group ",
+  title:
+    "SPV Foundations in ADGM | Structuring & Governance Support | KPI Group ",
   description:
     "KPI provides independent advisory and setup support for ADGM SPV Foundations. Asset protection, succession planning, and ownership structuring delivered with regulatory clarity.",
 
@@ -423,8 +424,8 @@ export const metadata: Metadata = {
 export default function DwtcFreezone() {
   return (
     <>
-      <InnerHero data={localData.hero} />
-      <RiskAdvisory variant="difc" data={localData.riskAdvisory} />
+      <InnerHero data={localData.hero} variant="Holding-Companies" />
+      <RiskAdvisory variant="holding" data={localData.riskAdvisory} />
       {/* <DocumentRequired variant="spv" data={localData.holding_company_data} /> */}
       <RiskOrganisation variant="holding" data={localData.riskOrganisation} />
       <MeydanFreeZone variant="holding" data={localData.meydanFreeZone} />
@@ -436,8 +437,11 @@ export default function DwtcFreezone() {
       />
       <RiskExploreService variant="holding" data={localData.explore_service} />
       <CorporateServicesUaeCta variant="holding" data={localData.contactUs} />
-      <CorporateServicesUaeFaq variant="holding" data={localData.difc_faq_data} />
-       <HomeOurInsights />
+      <CorporateServicesUaeFaq
+        variant="holding"
+        data={localData.difc_faq_data}
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

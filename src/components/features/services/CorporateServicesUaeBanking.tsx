@@ -20,6 +20,7 @@ type CorporateServicesUaeBankingProps = {
     | "mainland"
     | "offshore"
     | "RAK-Offshore"
+    | "RAK-Offshore-Two"
     | "dwtc"
     | "dsoa"
     | "saifz"

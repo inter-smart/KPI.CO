@@ -35,6 +35,7 @@ export type CorporateServicesUaeCtaProps = {
   | "DMCC-Freezone"
   | "rakez"
   | "ADGM-Foundations"
+    | "RAK-Offshore"
   | "holding"
   | "ADGM-SPV-Formation"
   | "ifza"
@@ -71,9 +72,9 @@ export default function CorporateServicesUaeCta({
       <div className="container max-sm:px-[16.1px]">
         <div
           className={cn(
-            "w-full md:max-w-[1069px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
+            "w-full md:max-w-[1069px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center max-sm:flex-col max-sm:justify-center",
             variant === "mainland"
-              ? " p-[50px_30px]  sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]"
+              ? " p-[50px_30px]  sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] min-h-[354px] xl:min-h-[289px]"
               : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "e-invoicing"
               ? "max-sm:!p-[40px_21px_37px_31px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
@@ -96,6 +97,7 @@ export default function CorporateServicesUaeCta({
             variant === "company-freezone" && "xl:p-[55px_50px]",
             variant === "internal-audit" && "xl:min-h-[289px]",
             variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
+            variant === "RAK-Offshore" && "xl:min-h-[289px] xl:rounded-[20px]",
             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
 
             variant === "erm" &&
@@ -204,9 +206,10 @@ export default function CorporateServicesUaeCta({
                 variant === "rakez" && "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
                 variant === "sop" && "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
                 variant === "holding" &&
-                "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
-                variant === "Formation-JAFZA" && "xl:h-[48.02px]",
-                variant === "ADGM-Foundations" && "xl:min-w-[178.07px] xl:h-[48.02px]",
+                "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48.02px] xl:min-w-[178.07px] xl:px-[28px] 2xl:px-10",
+                variant === "Formation-JAFZA" && "xl:min-w-[178.07px] xl:h-[48.02px]",
+                variant === "ADGM-Foundations" &&
+                  "xl:min-w-[178.07px] xl:h-[48.02px]",
 
                 variant === "ifza" &&
                 "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",

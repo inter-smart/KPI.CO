@@ -107,6 +107,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "Formation-DIFC" && "xl:py-[50px_70px]",
         variant === "erm" && "xl:py-[50px_80px]",
         variant === "regulatory" && "max-sm:py-[20px_40px]",
+        variant === "holding" && "max-sm:py-[20px_11px]",
         variant === "spv" && "xl:py-[47.5px_69.5px]",
         variant === "e-invoicing" && "max-sm:py-[10px_69.5px]",
       )}

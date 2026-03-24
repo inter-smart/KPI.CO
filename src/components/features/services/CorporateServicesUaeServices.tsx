@@ -118,7 +118,7 @@ export default function CorporateServicesUaeServices({
                     "max-sm:min-h-[140px] border-[#E2E2E2]",
                   variant === "SOP" && "min-h-[180px]",
                   variant === "dwtc" && "max-sm:min-h-[162px]",
-                  variant === "technology" && "xl:min-h-[150px]",
+                  variant === "technology" && "max-sm:min-h-[129px] xl:min-h-[150px]",
                 )}
               >
                 <div className="w-[var(--icon-size)] h-[var(--icon-size)] aspect-square p-[12px] lg:p-2 xl:p-[10px] 3xl:p-3 bg-gradient-to-b from-[#003268] to-[#5280CA] rounded-full overflow-hidden flex items-center justify-center">

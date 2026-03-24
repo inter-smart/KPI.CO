@@ -30,11 +30,11 @@ export type MeydanKeyBenefitsData = {
 export type MeydanKeyBenefitsProps = {
   data: MeydanKeyBenefitsData;
   variant?:
-  | "default"
-  | "Vat-Services"
-  | "technology"
-  | "RAK-Offshore"
-  | "JAFZA-Freezone";
+    | "default"
+    | "Vat-Services"
+    | "technology"
+    | "RAK-Offshore"
+    | "JAFZA-Freezone";
 };
 
 export default function MeydanKeyBenefits({
@@ -51,7 +51,7 @@ export default function MeydanKeyBenefits({
         "w-full h-auto py-[45px_60px] sm:py-[35px_50px] xl:py-[40px_60px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "technology" && "max-sm:py-[46px_5px]",
         variant === "JAFZA-Freezone" && "max-sm:pb-0",
-        variant === "Vat-Services" && "py-[45px] xl:py-[94px_56px]"
+        variant === "Vat-Services" && "py-[45px] xl:py-[94px_56px]",
       )}
     >
       <div className="container">
@@ -78,7 +78,8 @@ export default function MeydanKeyBenefits({
         <div
           className={cn(
             "w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
-            variant === "RAK-Offshore" && "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[65px]",
+            variant === "RAK-Offshore" &&
+              "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[65px]",
           )}
         >
           <div
@@ -130,7 +131,7 @@ export default function MeydanKeyBenefits({
                       "text-[16px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[30px] leading-normal font-normal text-[#4E4E4E] pb-[5px] whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-[#1C5396]/80 relative z-0 before:content-[''] before:w-full before:h-[2px] 2xl:before:h-[3px] before:bg-[#FFC916] before:opacity-0 before:absolute before:z-[1] before:inset-[auto_0_0_0]",
                       variant === "technology" && "font-medium",
                       activeIndex === index &&
-                      "font-semibold !text-[#1C5396] before:opacity-100",
+                        "font-semibold !text-[#1C5396] before:opacity-100",
                     )}
                   >
                     {item?.title}
@@ -168,7 +169,7 @@ export default function MeydanKeyBenefits({
                     className={cn(
                       "md:gap-[15px] xl:gap-[20px] 2xl:gap-[30px] 3xl:gap-[35px] flex flex-col-reverse md:flex-row ",
                       variant === "Vat-Services" &&
-                      "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
+                        "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
                       variant === "RAK-Offshore" && "xl:gap-[0px]",
                     )}
                   >
@@ -176,6 +177,7 @@ export default function MeydanKeyBenefits({
                       className={cn(
                         "w-full lg:w-1/2 xl:pt-[16px]",
                         variant === "technology" && "lg:pr-[40px]",
+                        variant === "RAK-Offshore" && "xl:w-[40%]",
                       )}
                     >
                       {variant === "technology" && (
@@ -195,7 +197,7 @@ export default function MeydanKeyBenefits({
                             className={cn(
                               "w-full h-auto pl-[30px] sm:pl-[25px] xl:pl-[33px] 2xl:pl-[35px] 3xl:pl-[40px] relative z-0 before:content-[''] before:w-[20px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:h-auto before:aspect-square before:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2227%22%20height%3D%2227%22%20viewBox%3D%220%200%2027%2027%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M13.3328%2024.4444C19.4693%2024.4444%2024.4439%2019.4698%2024.4439%2013.3333C24.4439%207.19678%2019.4693%202.22217%2013.3328%202.22217C7.19629%202.22217%202.22168%207.19678%202.22168%2013.3333C2.22168%2019.4698%207.19629%2024.4444%2013.3328%2024.4444Z%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M10%2013.3333L12.2222%2015.5555L16.6667%2011.1111%22%20stroke%3D%22%235280CA%22%20stroke-width%3D%222.22222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] before:bg-no-repeat before:bg-contain before:absolute before:inset-[0_auto_0_0] before:translate-y-[2px] sm:before:translate-y-[4px]",
                               variant === "Vat-Services" &&
-                              "pb-[10px] sm:pb-[15px] 2xl:pb-[20px] 3xl:pb-[25px] my-[10px] sm:my-[15px] 2xl:my-[20px] 3xl:my-[25px] border-b-1 border-[#DEDEDE] last:pb-0 last:mb-0 last:border-0",
+                                "pb-[10px] sm:pb-[15px] 2xl:pb-[20px] 3xl:pb-[25px] my-[10px] sm:my-[15px] 2xl:my-[20px] 3xl:my-[25px] border-b-1 border-[#DEDEDE] last:pb-0 last:mb-0 last:border-0",
                             )}
                           >
                             {typeof item === "string" ? (
@@ -203,7 +205,7 @@ export default function MeydanKeyBenefits({
                                 className={cn(
                                   "text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] leading-normal font-medium text-black max-md:[&_br]:hidden",
                                   variant === "technology" &&
-                                  "max-sm:text-[14px] text-[#4E4E4E] font-normal",
+                                    "max-sm:text-[14px] text-[#4E4E4E] font-normal",
                                 )}
                               >
                                 {parse(item)}
@@ -213,7 +215,7 @@ export default function MeydanKeyBenefits({
                                 className={cn(
                                   "[&_span]:text-[16px] xl:[&_span]:text-[18px] 2xl:[&_span]:text-[20px] 3xl:[&_span]:text-[24px] [&_span]:leading-normal [&_span]:font-medium [&_span]:text-black w-full h-auto gap-[5px] flex flex-col",
                                   variant === "technology" &&
-                                  "[&_span]:!text-[#4E4E4E] [&_span]:!font-normal",
+                                    "[&_span]:!text-[#4E4E4E] [&_span]:!font-normal",
                                 )}
                               >
                                 {item?.title && <span>{item?.title}</span>}
@@ -228,12 +230,13 @@ export default function MeydanKeyBenefits({
                         ))}
                       </ul>
                     </div>
-                    <div className="w-full lg:w-1/2">
+                    <div className={cn("w-full lg:w-1/2",variant === "RAK-Offshore" && "xl:w-[60%]")}>
                       <div
                         className={cn(
                           "w-full max-sm:h-[216px] sm:h-full max-sm:aspect-[340/316] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
                           variant === "technology" && "xl:aspect-[550/335]",
-                          variant === "RAK-Offshore" && "max-sm:h-[316px] xl:h-[286px]",
+                          variant === "RAK-Offshore" &&
+                            "max-sm:h-[316px] xl:h-[286px] xl:max-w-[579px] xl:ml-auto",
                         )}
                       >
                         <Image
