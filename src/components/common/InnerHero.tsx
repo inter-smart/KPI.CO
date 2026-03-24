@@ -86,6 +86,7 @@ export default function InnerHero({
         variant === "technology" &&
           "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
+        variant === "CorporateTaxUae" && "max-sm:!min-h-[650px] xl:!min-h-[630px]",
         variant === "ADGM-SPV-Formation" && "max-sm:!min-h-[619px] xl:!min-h-[651px] max-sm:pt-[119.55px] xl:!pt-[120px]",
       )}
     >
@@ -172,6 +173,8 @@ export default function InnerHero({
                   "leading-[1.6] lg:max-w-full xl:mb-[40px] 2xl:mb-[50px]",
                 variant === "CorporateServicesUae" &&
                   "xl:text-[16px] lg:max-w-[83%]",
+                variant === "CorporateTaxUae" &&
+                  "xl:text-[20px] xl:mb-[41px] leading-[150%]",
                 variant === "saifz" && "!max-w-full",
                 variant === "Mainland" &&
                   "lg:max-w-[770px] xl:text-[20px] xl:leading-[150%] xl:mb-[37.5px]",
