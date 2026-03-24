@@ -7,18 +7,18 @@ import type { CounterItem } from "@/app/page";
 type HomeCounterProps = {
   data: CounterItem[];
   variant?:
-    | "default"
-    | "risk"
-    | "tax-advisory"
-    | "technology"
-    | "internal-audit"
-    | "Financial-Statement-Audit"
-    | "aup"
-    | "Agreed-Procedure"
-    | "AuditServicesUae"
-    | "e-invoice"
-    | "regulatory"
-    | "erm";
+  | "default"
+  | "risk"
+  | "tax-advisory"
+  | "technology"
+  | "internal-audit"
+  | "Financial-Statement-Audit"
+  | "aup"
+  | "Agreed-Procedure"
+  | "AuditServicesUae"
+  | "e-invoice"
+  | "regulatory"
+  | "erm";
 };
 
 export default function HomeCounter({
@@ -33,18 +33,18 @@ export default function HomeCounter({
         variant === "risk" && "bg-[rgba(143,216,254,0.1)]",
         variant === "tax-advisory" && "shadow-[0_-26px_50px_#00000008]",
         variant === "technology" &&
-          "max-sm:shadow-none shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)] xl:pt-[35px]",
+        "max-sm:shadow-none shadow-[0_12px_15px_-8px_rgba(0,0,0,0.05)] xl:pt-[35px]",
         variant === "aup" && "shadow-none",
         variant === "Financial-Statement-Audit" &&
-          "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
+        "sm:shadow-[0_2px_21px_rgba(0,0,0,0.1)]",
         variant === "Agreed-Procedure" &&
-          "sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
+        "sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
         variant === "e-invoice" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "erm" && "sm:shadow-[0_-15px_25px_rgba(0,0,0,0.05)]",
         variant === "regulatory" && "max-sm:shadow-none",
         variant === "internal-audit" && "max-sm:shadow-none",
         variant === "AuditServicesUae" &&
-          "bg-white sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
+        "bg-white sm:shadow-[0_2px_16px_rgba(0,0,0,0.1)]",
       )}
     >
       <div className="container mx-auto">
@@ -56,9 +56,9 @@ export default function HomeCounter({
             >
               <div
                 className={cn(
-                  "text-[32px] md:text-[40px] lg:text-[45px] xl:text-[61.04px] 2xl:text-[65px] 3xl:text-[80px] font-medium sm:font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none",
+                  "text-[32px] md:text-[40px] lg:text-[45px] xl:text-[61.04px] 2xl:text-[65px] 3xl:text-[80px] font-semibold leading-none mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#1C5396] to-[#3EB0EA] transition-transform duration-500   select-none",
                   variant === "internal-audit" &&
-                    "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
+                  "xl:text-[61px] 2xl:text-[65px] 3xl:text-[80px]",
                   variant === "e-invoice" && "font-semibold",
                   variant === "regulatory" && "font-semibold",
                   variant === "internal-audit" && "font-semibold",
