@@ -390,7 +390,7 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="Tax-Advisory" />
-      <WhyRiskManagement data={localData.whyRisk} />
+      <WhyRiskManagement data={localData.whyRisk} variant="Tax-Advisory" />
       <MeydanFreeZone variant="Tax-Advisory" data={localData.meydanFreeZone} />
       <CorporateServicesUaeFormationProcess
         variant="tax-advisory"

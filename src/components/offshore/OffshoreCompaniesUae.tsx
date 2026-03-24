@@ -106,7 +106,7 @@ export default function OffshoreCompaniesUae({
                   <Button
                     size="lg"
                     className={cn(
-                      "text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal xl:!font-medium w-fit max-sm:min-w-[225px] sm:w-full h-[45px] sm:!h-[40px] xl:!h-[50px] 3xl:!h-[65px] sm:rounded-[10px] !scale-100",
+                      "text-[16px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal xl:!font-medium w-fit max-sm:min-w-[225px] sm:w-full h-[48px] sm:!h-[40px] xl:!h-[50px] 3xl:!h-[65px] sm:rounded-[10px] !scale-100",
                       index % 2 !== 0
                         ? "text-black bg-[#FFC916]"
                         : "text-white bg-[#1C5396] sm:bg-[#053269]",

@@ -57,6 +57,7 @@ export default function MeydanFreeZone({
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
         variant === "MeydanFreeZone" && "xl:py-[48px_70px]",
+        variant === "Tax-Advisory" && "xl:py-[48px_70px]",
       )}
     >
       <div className="container">
@@ -120,6 +121,7 @@ export default function MeydanFreeZone({
                   variant === "ifza" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[65.76px_35px]",
+                  variant === "Tax-Advisory" && "max-sm:p-[31px_12px_51px_12px]",
                   variant === "MeydanFreeZone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_45px_34px]",
                   variant === "DMCC-Freezone" &&
@@ -210,7 +212,8 @@ export default function MeydanFreeZone({
                           variant === "ADGM-Foundation" &&
                             "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
                           variant === "difc" && "text-[14px] xl:text-[16px] ",
-                          variant === "RAK-Offshore" && "text-[14px] xl:text-[16px] ",
+                          variant === "RAK-Offshore" &&
+                            "text-[14px] xl:text-[16px] ",
                         )}
                       >
                         {parse(zone)}
