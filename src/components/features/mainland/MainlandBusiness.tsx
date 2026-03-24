@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
