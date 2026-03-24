@@ -452,5 +452,5 @@ export default function DwtcFreezone() {
       <HomeOurInsights variant="Our-Related" />
       {/* <BlogRelated data={localData.related_blog} /> */}
     </>
-  );
+  ); 
 }

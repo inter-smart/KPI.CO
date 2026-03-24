@@ -22,7 +22,8 @@ type RiskExploreServiceProps = {
     | "risk"
     | "holding"
     | "difc-regulated"
-    | "adgm-regulated" | "internal-audit"
+    | "adgm-regulated"
+    | "internal-audit"
     | "erm";
 };
 
@@ -35,7 +36,8 @@ type ServiceProps = {
     | "risk"
     | "holding"
     | "difc-regulated"
-    | "adgm-regulated" | "internal-audit"
+    | "adgm-regulated"
+    | "internal-audit"
     | "erm";
 };
 
@@ -86,9 +88,10 @@ export default function RiskExploreService({
           className={cn(
             "text-[#1c5396] mb-[15px] xl:!mb-[25px] 2xl:!mb-[30px] animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:[&>span]:hidden",
             variant === "holding" && "max-sm:text-[26px]",
-                 
-              variant === "internal-audit" &&  "max-sm:text-[26px]",
+
+            variant === "internal-audit" && "max-sm:text-[26px]",
             variant === "erm" && "max-sm:text-[26px]",
+            variant === "ADGM-Foundations" && "max-sm:text-[26px]",
           )}
         >
           {parse(data.title)}
@@ -102,7 +105,7 @@ export default function RiskExploreService({
               className={cn(
                 "flex touch-pan-y touch-pinch-zoom -mx-[12px] lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-[12px] lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
                 variant === "ADGM-Foundations" &&
-                  "max-sm:!-mx-[13px] max-sm:[&>*]:!p-[13px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
+                  "max-sm:!-mx-[12px] max-sm:[&>*]:!p-[12px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
               )}
             >
               {data.items.map((item) => (
@@ -117,7 +120,7 @@ export default function RiskExploreService({
                     variant === "holding" &&
                       "flex-[0_0_82%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "ADGM-Foundations" &&
-                      "flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                      "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "difc-regulated" &&
                       "flex-[0_0_296px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                     variant === "adgm-regulated" &&
@@ -179,7 +182,8 @@ function Service({ data, variant }: ServiceProps) {
 
           (variant === "ADGM-Foundations" ||
             variant === "difc-regulated" ||
-            variant === "difc" || variant === "internal-audit" ||
+            variant === "difc" ||
+            variant === "internal-audit" ||
             variant === "erm") &&
             "xl:p-[50px_30px_85px]",
         )}

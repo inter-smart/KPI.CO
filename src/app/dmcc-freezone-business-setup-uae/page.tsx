@@ -142,7 +142,7 @@ const localData = {
     title: "Start a Business in DMCC, UAE",
     description:
       "<p>The Dubai Multi Commodities Centre (DMCC) is a government-backed free zone and one of Dubai’s most respected business hubs. It offers a transparent regulatory framework, flexible licenses, and dedicated support, making it easy for you to start and scale your business. Whether you’re launching a startup, providing professional services, trading, or managing a regional office, DMCC gives you the freedom and tools to grow successfully in Dubai.</p>",
-    highlightsTitle: "Key Features include:",
+    highlightsTitle: "Key features include:",
     highlights: [
       "Fast, digital company registration",
       "Flexible license covering multiple business activities",

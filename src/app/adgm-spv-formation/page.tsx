@@ -327,35 +327,41 @@ const localData = {
         id: 1,
         title: "Who should consider setting up an ADGM SPV?",
         description: `
-          <p>Yes. Our audit procedures are designed to address DFSA-focused risks including governance, capital adequacy, valuation, and regulatory reporting.</p>
+          <p>ADGM SPVs are commonly used by investment groups, family offices, holding structures, joint ventures, and corporates seeking clean ownership separation, liability containment, or 
+structured asset holding without operational activity.
+</p>
                         `,
       },
       {
         id: 2,
         title: "Is an ADGM SPV subject to UAE Corporate Tax?",
         description: `
-          <p>Yes, most mainland business activities allow full foreign ownership, subject to regulatory approval. </p>
+          <p>Corporate tax treatment depends on the SPV’s activities, income sources, and eligibility under UAE Corporate Tax regulations. While many SPVs may qualify for exemptions or fall outside the taxable scope, this must be assessed on a case-by-case basis. Proper structuring and advisory at formation stage is critical.
+</p>
                         `,
       },
       {
         id: 3,
         title: "Can an ADGM SPV open a UAE bank account?",
         description: `
-          <p>Costs vary depending on the jurisdiction, type of license, number of visas, and office requirements. Use our business setup cost calculator for an instant estimate tailored to your business.</p>
+          <p>Yes. ADGM SPVs are eligible to open UAE corporate bank accounts. Banking approval depends on factors such as ownership structure, asset profile, jurisdiction of shareholders, and the underlying purpose of the SPV. Proper documentation and regulatory alignment significantly improve approval outcomes.
+</p>
                         `,
       },
       {
         id: 4,
         title: "What documents are required to set up an ADGM SPV?",
         description: `
-          <p>Typical requirements include shareholder and beneficial owner information, constitutional documents, and supporting KYC materials. The exact documentation depends on ownership complexity, jurisdictional exposure, and intended use of the SPV.</p>
+          <p>Typical requirements include shareholder and beneficial owner information, constitutional documents, and supporting KYC materials. The exact documentation depends on ownership complexity, jurisdictional exposure, and intended use of the SPV.
+</p>
                         `,
       },
       {
         id: 5,
         title: "How much does it cost to set up an ADGM SPV?",
         description: `
-          <p>Costs depend on the nature of the structure, number of shareholders, documentation requirements, and ongoing compliance needs. ADGM SPVs are designed to be cost-efficient, but pricing should always be assessed relative to the intended use and longevity of the structure.</p>
+          <p>Costs depend on the nature of the structure, number of shareholders, documentation requirements, and ongoing compliance needs. ADGM SPVs are designed to be cost-efficient, but pricing should always be assessed relative to the intended use and longevity of the structure.
+</p>
                         `,
       },
     ] satisfies FaqItem[],

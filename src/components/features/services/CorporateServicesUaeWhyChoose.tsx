@@ -101,7 +101,7 @@ export default function CorporateServicesUaeWhyChoose({
       className={cn(
         "w-full h-auto py-[40px_50px] sm:py-[40px_60px] lg:py-[40px_70px] xl:py-[50px_80px] 2xl:py-[50px_100px] 3xl:py-[65px_125px] block",
         variant === "ADGM-Foundation" &&
-          "max-sm:py-[45px_15px] xl:py-[55px_75px]",
+          "max-sm:py-[46px_42px] xl:py-[55px_75px]",
         variant === "CorporateServicesUae" && "xl:py-[50px_90px]",
         variant === "Formation-ADGM" && "xl:py-[60px_80px]",
         variant === "Formation-DIFC" && "xl:py-[50px_70px]",
@@ -291,7 +291,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           variant === "tax-advisory" ||
           variant === "internal-audit" ||
           variant === "ADGM-Foundation") &&
-          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:min-h-[156px]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] xl:min-h-[156px] max-sm:min-h-[135px]",
         variant === "spv" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
         variant === "holding" &&
