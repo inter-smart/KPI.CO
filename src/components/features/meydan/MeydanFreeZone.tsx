@@ -59,6 +59,7 @@ export default function MeydanFreeZone({
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
         variant === "MeydanFreeZone" && "xl:py-[48px_70px]",
         variant === "Tax-Advisory" && "xl:py-[48px_70px]",
+        variant === "JAFZA-Freezone" && "max-sm:!py-[10px]",
       )}
     >
       <div className="container max-sm:px-[16.1px]">

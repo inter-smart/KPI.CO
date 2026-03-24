@@ -1,5 +1,6 @@
 "use client";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
@@ -41,18 +42,26 @@ export default function CorporateServicesUaeBanking({
   data,
   variant = "default",
 }: CorporateServicesUaeBankingProps) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isMobile = useMediaQuery({ maxWidth: 639 });
+  const threshold = mounted && isMobile ? 3 : 4;
+
   const options = useMemo(
     () => ({
-      loop: data?.partners?.length > 4,
+      loop: data?.partners?.length > threshold,
       align: "center" as const,
       slidesToScroll: 1,
       containScroll: "trimSnaps" as const,
     }),
-    [data?.partners?.length],
+    [data?.partners?.length, threshold],
   );
 
   const plugins = useMemo(() => {
-    return data?.partners?.length > 4
+    return data?.partners?.length > threshold
       ? [
           Autoplay({
             delay: 2000,
@@ -61,7 +70,7 @@ export default function CorporateServicesUaeBanking({
           }),
         ]
       : [];
-  }, [data?.partners?.length]);
+  }, [data?.partners?.length, threshold]);
 
   const [emblaRef] = useEmblaCarousel(options, plugins);
   return (
