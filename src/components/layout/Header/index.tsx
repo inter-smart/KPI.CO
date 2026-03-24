@@ -40,8 +40,10 @@ const navItems = [
             name: "Agreed Upon Procedures",
             href: "/audit-assurance/agreed-upon-procedures-uae",
           },
-          { name: "ADGM Regulated Audit", 
-            href: "/audit-assurance/adgm-regulated-audit" },
+          {
+            name: "ADGM Regulated Audit",
+            href: "/audit-assurance/adgm-regulated-audit"
+          },
           {
             name: "DIFC & DFSA Regulated Audit",
             href: "/audit-assurance/difc-dfsa-regulated-audit",
@@ -125,7 +127,7 @@ const navItems = [
       {
         id: "contact",
         label: "Contact Us",
-        href: "#",
+        href: "/contact",
         subItems: [],
       },
     ] as MegaCategory[],
@@ -310,16 +312,16 @@ export default function Header() {
                                               {mega.icon && (
                                                 <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
                                                   {typeof mega.icon ===
-                                                  "string" ? (
+                                                    "string" ? (
                                                     <div className="relative w-[14px] h-[14px]">
                                                       <Image
                                                         src={
                                                           mega.icon.endsWith(
                                                             ".svg",
                                                           ) ||
-                                                          mega.icon.includes(
-                                                            ".",
-                                                          )
+                                                            mega.icon.includes(
+                                                              ".",
+                                                            )
                                                             ? mega.icon
                                                             : `${mega.icon}.svg`
                                                         }
@@ -349,16 +351,16 @@ export default function Header() {
                                                 {mega.icon && (
                                                   <div className="w-[28px] h-[28px] rounded-[7px] flex items-center justify-center bg-gradient-to-b from-[#053269] to-[#6A9FE0]">
                                                     {typeof mega.icon ===
-                                                    "string" ? (
+                                                      "string" ? (
                                                       <div className="relative w-[14px] h-[14px]">
                                                         <Image
                                                           src={
                                                             mega.icon.endsWith(
                                                               ".svg",
-                                                          ) ||
-                                                            mega.icon.includes(
-                                                              ".",
-                                                            )
+                                                            ) ||
+                                                              mega.icon.includes(
+                                                                ".",
+                                                              )
                                                               ? mega.icon
                                                               : `${mega.icon}.svg`
                                                           }

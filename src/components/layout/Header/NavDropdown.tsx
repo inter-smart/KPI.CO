@@ -174,8 +174,9 @@ export default function NavDropdown({ categories, isVisible }: NavDropdownProps)
                                                 isResource ? 'Practical Insights for Your Business Success' :
                                                     '30+ Years of Expertise That Drives Real Results'}
                                         </h4>
-                                        <Link href={activeCategory?.href || '/'} className="flex items-center text-[12px] xl:text-[14px] font-semibold" aria-label="learn_more">
-                                            Learn more <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                        <Link href={activeCategory?.href || '/'} className="flex items-center text-[12px] xl:text-[16px] font-bold" aria-label="learn_more">
+                                            Learn more <span style={{ marginLeft: '0.35em' }}>→</span>
+                                            {/* <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" /> */}
                                         </Link>
                                     </div>
                                 </div>
