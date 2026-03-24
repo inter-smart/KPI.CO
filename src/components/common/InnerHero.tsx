@@ -82,7 +82,7 @@ export default function InnerHero({
         variant === "dwtc" || variant === "e-invoicing"
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
-        variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
+        variant === "e-invoicing" ? "min-h-[715px] xl:min-h-[722px]" : "",
         variant === "company-freezone" && "max-sm:min-h-[630px]",
         variant === "technology" &&
           "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
@@ -200,7 +200,7 @@ export default function InnerHero({
                   "xl:text-[20px] xl:mb-[33px]",
                 variant === "ADGM-SPV-Formation" && "xl:text-[20px]",
                 variant === "Tax-Advisory" && "xl:text-[20px]",
-                variant === "e-invoicing" && "xl:text-[20px]",
+                variant === "e-invoicing" && "xl:text-[20px] xl:mb-[32px]",
                 variant === "erm" && "xl:max-w-[90%] max-sm:mb-[25px]",
                 variant === "meydan" && "mb-[20px] sm:!mb-[40px]",
                 variant === "difc" && "xl:text-[20px] xl:max-w-[750px]",

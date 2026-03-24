@@ -108,6 +108,7 @@ export default function CorporateServicesUaeWhyChoose({
         variant === "erm" && "xl:py-[50px_80px]",
         variant === "regulatory" && "max-sm:py-[20px_40px]",
         variant === "spv" && "xl:py-[47.5px_69.5px]",
+        variant === "e-invoicing" && "max-sm:py-[10px_69.5px]",
       )}
     >
       <div className="container max-sm:px-[16.1px]">
