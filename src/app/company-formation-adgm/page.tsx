@@ -14,6 +14,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import BusinessLocation, {
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -157,8 +158,7 @@ const localData = {
           alt: "100% Foreign Ownership",
         },
         title: "100% Foreign Ownership",
-        description:
-          "<p>No local sponsor or partner required.</p>",
+        description: "<p>No local sponsor or partner required.</p>",
       },
       {
         id: 3,
@@ -271,8 +271,7 @@ const localData = {
 
   businessLocation: {
     title: "Types of ADGM Company Structures",
-    description:
-      "",
+    description: "",
     items: [
       {
         id: 1,
@@ -510,7 +509,10 @@ export default function InternalAudit() {
   return (
     <>
       <InnerHero data={localData.hero} variant="Formation-ADGM" />
-      <MainlandBusiness data={localData.mainlandBusiness} variant="Formation-ADGM" />
+      <MainlandBusiness
+        data={localData.mainlandBusiness}
+        variant="Formation-ADGM"
+      />
       <CorporateServicesUaeWhyBuild
         variant="formation"
         data={localData.whyBuild}
@@ -519,19 +521,25 @@ export default function InternalAudit() {
         data={localData.whyChoose}
         variant="Formation-ADGM"
       />
-      <RiskAssuranceServices data={localData.riskAssurance} variant="Formation-ADGM" />
-      <BusinessLocation data={localData.businessLocation} variant="Formation-ADGM"/>
+      <RiskAssuranceServices
+        data={localData.riskAssurance}
+        variant="Formation-ADGM"
+      />
+      <BusinessLocation
+        data={localData.businessLocation}
+        variant="Formation-ADGM"
+      />
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
       />
-      <CorporateServicesUaeBanking
-        variant="company"
-        data={localData.banking}
-      />
+      <CorporateServicesUaeBanking variant="company" data={localData.banking} />
       <CorporateServicesUaeCta data={localData.contactUs} />
-      <CorporateServicesUaeFaq variant="side-arrow" data={localData.corporate_faq_data} />
-      <BlogRelated data={localData.related_blog} />
+      <CorporateServicesUaeFaq
+        variant="side-arrow"
+        data={localData.corporate_faq_data}
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

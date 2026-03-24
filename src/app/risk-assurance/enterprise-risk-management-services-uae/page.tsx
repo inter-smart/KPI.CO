@@ -84,7 +84,6 @@ export type CtaData = {
   };
 };
 
-
 export type FaqItem = {
   id: number;
   title: string;
@@ -409,21 +408,22 @@ const localData = {
     },
   } satisfies CtaData,
 
-    corporate_faq_data: {
-      title: "FAQs",
-      faq_list: [
-        {
-          id: 1,
-          title: "What is Enterprise Risk Management (ERM)? ",
-          description: `
+  corporate_faq_data: {
+    title: "FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: "What is Enterprise Risk Management (ERM)? ",
+        description: `
                       <p>Enterprise Risk Management (ERM) is a structured framework that helps organisations identify, assess, prioritise, and manage risks that could affect strategic objectives, financial performance, operations, or regulatory compliance. </p>
                       <p>An ERM framework provides leadership with a consolidated view of enterprise risks across the organisation and establishes clear governance structures for risk monitoring, reporting, and mitigation. Properly implemented ERM enables management and boards to make informed decisions based on structured risk insights rather than isolated risk assessments. </p>
                       `,
-        },
-        {
-          id: 2,
-          title: " Why is Enterprise Risk Management important for organisations? ",
-          description: `
+      },
+      {
+        id: 2,
+        title:
+          " Why is Enterprise Risk Management important for organisations? ",
+        description: `
                       <p>Enterprise Risk Management is important because it provides organisations with a structured and proactive approach to managing uncertainty and protecting business objectives.  </p>
                       <p>A well-designed ERM framework helps organisations: </p>
                       <ul>
@@ -435,11 +435,12 @@ const localData = {
                       </ul>
                       <p>For organisations operating in regulated environments or experiencing rapid growth, Enterprise Risk Management also strengthens regulatory readiness and organisational resilience. </p>
                       `,
-        },
-        {
-          id: 3,
-          title: "What are the key steps to implementing an Enterprise Risk Management (ERM) framework? ",
-          description: `
+      },
+      {
+        id: 3,
+        title:
+          "What are the key steps to implementing an Enterprise Risk Management (ERM) framework? ",
+        description: `
                       <p>Implementing an Enterprise Risk Management (ERM) framework typically involves a structured process designed to identify and manage risks across the organisation. </p>
                       <p>The key steps usually include: </p>
                       <ul>
@@ -452,11 +453,12 @@ const localData = {
                       </ul>
                       <p>A well-implemented ERM framework integrates risk awareness into everyday decision-making rather than treating risk as a separate compliance activity. </p>
                       `,
-        },
-        {
-          id: 4,
-          title: "Which organisations should implement Enterprise Risk Management? ",
-          description: `
+      },
+      {
+        id: 4,
+        title:
+          "Which organisations should implement Enterprise Risk Management? ",
+        description: `
                       <p>Enterprise Risk Management is beneficial for organisations that require structured oversight of risks across multiple functions, business units, or jurisdictions. </p>
                       <p>Organisations typically implement ERM frameworks when they: </p>
                       <ul>
@@ -468,11 +470,12 @@ const localData = {
                       </ul>
                       <p>ERM is particularly valuable for mid-sized and large organisations seeking stronger governance, improved decision-making, and greater resilience against operational or regulatory risks. </p>
                       `,
-        },
-        {
-          id: 5,
-          title: "What does an Enterprise Risk Management consultant or advisor do? ",
-          description: `
+      },
+      {
+        id: 5,
+        title:
+          "What does an Enterprise Risk Management consultant or advisor do? ",
+        description: `
                       <p>An Enterprise Risk Management consultant helps organisations design, implement, and strengthen ERM frameworks that support governance, decision-making, and regulatory alignment.  </p>
                       <p>ERM advisors typically support organisations by: </p>
                       <ul>
@@ -484,11 +487,12 @@ const localData = {
                       </ul>
                       <p>A risk advisory firm like KPI also helps organisations document risk frameworks, prepare for regulatory review, and ensure that risk management practices are practical, proportionate, and aligned with organisational objectives. </p>
                       `,
-        },
-        {
-          id: 6,
-          title: "How does Enterprise Risk Management improve business decision-making? ",
-          description: `
+      },
+      {
+        id: 6,
+        title:
+          "How does Enterprise Risk Management improve business decision-making? ",
+        description: `
                       <p>Enterprise Risk Management improves business decision-making by providing leadership with structured visibility into the risks that could affect strategy, operations, and financial performance.  </p>
                       <p>Through an effective ERM framework, management and boards gain: </p>
                       <ul>
@@ -500,9 +504,9 @@ const localData = {
                       </ul>
                       <p>By integrating risk analysis into planning and governance processes, Enterprise Risk Management allows organisations to make decisions with greater confidence, discipline, and resilience.  </p>
                       `,
-        },
-      ] satisfies FaqItem[],
-    },
+      },
+    ] satisfies FaqItem[],
+  },
 
   insights: {
     title: "Our Insights",
@@ -556,11 +560,11 @@ export default function page() {
       <HomeCounter data={localData.counterList} variant="erm" />
       <RiskExploreService variant="erm" data={localData.explore_service} />
       <CorporateServicesUaeCta data={localData.cta} variant="erm" />
-       <CorporateServicesUaeFaq
-              data={localData.corporate_faq_data}
-              // variant="side-arrow"
-            />
-      <HomeOurInsights variant="erm" />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        // variant="side-arrow"
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

@@ -6,10 +6,14 @@ import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
 import MainlandBusiness from "@/components/features/mainland/MainlandBusiness";
 import DocumentRequired from "@/components/features/services/DocumentRequired";
 import CorporateServicesUaeCta from "@/components/features/services/CorporateServicesUaeCta";
-import VatGuidance, { VatGuidanceData } from "@/components/features/vat-services/VatGuidance";
+import VatGuidance, {
+  VatGuidanceData,
+} from "@/components/features/vat-services/VatGuidance";
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
-import CorporateTaxUae, { CorporateTaxUaeData } from "@/components/features/corporate-tax-services/CorporateTaxUae";
+import CorporateTaxUae, {
+  CorporateTaxUaeData,
+} from "@/components/features/corporate-tax-services/CorporateTaxUae";
 
 export type HeroData = {
   id: number;
@@ -425,7 +429,10 @@ export default function CorporateTaxUaePage() {
         variant="Financial-Statement-Audit"
       />
       <CorporateTaxUae data={localData.tax_uae} variant="blue" />
-      <DocumentRequired data={localData.document_required_data} variant="CorporateTaxUae" />
+      <DocumentRequired
+        data={localData.document_required_data}
+        variant="CorporateTaxUae"
+      />
       <RiskAdvisory data={localData.riskAdvisory} variant="CorporateTaxUae" />
       <CorporateTaxUae data={localData.tax_uae_2} variant="yellow" />
       <DocumentRequired
@@ -436,13 +443,16 @@ export default function CorporateTaxUaePage() {
         data={localData?.services}
         variant="CorporateTaxUae"
       />
-      <MainlandBusiness data={localData.mainlandBusiness} variant="CorporateTaxUae" />
+      <MainlandBusiness
+        data={localData.mainlandBusiness}
+        variant="CorporateTaxUae"
+      />
       <CorporateServicesUaeWhyChoose
         data={localData.whyChoose}
         variant="CorporateTaxUae"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
-        <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

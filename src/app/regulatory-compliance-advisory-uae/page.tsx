@@ -7,7 +7,7 @@ import CorporateServicesUaeCta from "@/components/features/services/CorporateSer
 import CorporateServicesUaeServices from "@/components/features/services/CorporateServicesUaeServices";
 import CorporateServicesUaeWhyChoose from "@/components/features/services/CorporateServicesUaeWhyChoose";
 import VatRelatedTax, {
-  VatRelatedTaxData, 
+  VatRelatedTaxData,
 } from "@/components/features/vat-services/VatRelatedTax";
 import HomeCounter from "@/components/features/home/HomeCounter";
 import RiskAdvisory from "@/components/features/risk-overview/RiskAdvisory";
@@ -135,7 +135,8 @@ const localData = {
     title: "Why Regulatory & Compliance Advisory Matters",
     description:
       " <p>As organisations operate in regulated or semi-regulated environments, compliance expectations increase, often faster than internal processes evolve.</p> <p>Regulatory and compliance risks commonly arise when organisations </p>",
-    highlightsText: "<div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
+    highlightsText:
+      "<div>At this stage, compliance gaps are rarely intentional - they are structural.</div>",
     advisoryItems: [
       {
         id: 1,
@@ -155,7 +156,8 @@ const localData = {
       {
         id: 4,
         slNo: 4,
-        description: "Experience repeated regulatory queries or audit  findings",
+        description:
+          "Experience repeated regulatory queries or audit  findings",
       },
       {
         id: 5,
@@ -399,13 +401,13 @@ const localData = {
       media: blog.media,
       title: blog.title,
       description: blog.description,
-      date: blog.date, 
+      date: blog.date,
       date_full: blog.date_full,
       readTime: blog.readTime,
       slug: `/blog/${blog.slug}`,
     })),
   },
-}; 
+};
 
 export const metadata: Metadata = {
   title: "Regulatory & Compliance Advisory Services in the UAE | KPI Group ",
@@ -439,7 +441,10 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
         data={localData?.document_required_data}
         variant="regulatory"
       /> */}
-      <RiskOrganisation variant="regulatory" data={localData?.document_required_data} />
+      <RiskOrganisation
+        variant="regulatory"
+        data={localData?.document_required_data}
+      />
       <CorporateServicesUaeServices
         data={localData?.services}
         variant="regulatory"
@@ -449,10 +454,10 @@ export default function RegulatoryComplianceAdvisoryUaePage() {
         data={localData?.whyChoose}
         variant="regulatory"
       />
-      <HomeCounter data={localData.counterList} variant="regulatory"/>
+      <HomeCounter data={localData.counterList} variant="regulatory" />
       <VatRelatedTax data={localData.vatRelatedTax} variant="regulatory" />
-      <CorporateServicesUaeCta data={localData.cta}  variant="regulatory"/>
-         <HomeOurInsights />
+      <CorporateServicesUaeCta data={localData.cta} variant="regulatory" />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

@@ -626,7 +626,7 @@ export default function page() {
         data={localData.corporate_faq_data}
         variant="company-freezone"
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }
