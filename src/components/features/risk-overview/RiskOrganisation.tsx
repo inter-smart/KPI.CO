@@ -76,12 +76,11 @@ export default function RiskOrganisation({
               variant === "dwtc-doc" && "xl:pb-[45px]",
               variant === "ifza" && "xl:w-[calc(100%-475px)] xl:pr-[115px]",
               variant === "SOP" && "xl:w-[calc(100%-473px)] xl:pr-[45px]",
-              variant === "holding" && "xl:w-[calc(100%-475px)] xl:pr-[50px]",
+              variant === "holding" && "xl:w-[calc(100%-473px)] xl:pr-[28px]",
               variant === "RAK-Offshore" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[100px]",
               variant === "dwtc" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[145px] xl:pb-[40px]",
-              variant === "holding" && "xl:w-[calc(100%-460px)] xl:pr-[60px]",
               variant === "JAFZA-Freezone" &&
                 "xl:w-[calc(100%-460px)] xl:pr-[60px]",
               variant === "dwtc-bg" && "xl:w-[calc(100%-480px)] xl:pr-[100px]",
@@ -101,6 +100,7 @@ export default function RiskOrganisation({
                   "max-sm:mb-[30px] xl:mb-[30px]",
                   variant === "ifza" && "max-sm:mb-[30px] xl:mb-[30px]",
                   variant === "dwtc-bg" && "xl:mb-[25px]",
+                  variant === "holding" && "xl:mb-[30px]",
                 )}
               >
                 {data?.title && (
@@ -116,6 +116,7 @@ export default function RiskOrganisation({
                       variant === "dwtc-bg" && "leading-[1.3]",
                       variant === "regulatory" && "max-sm:!text-[26px]",
                       variant === "difc-regulated" && "xl:mb-[28px]",
+                      variant === "holding" && "xl:mb-[30px]",
                     )}
                   >
                     {parse(data.title)}
@@ -159,7 +160,7 @@ export default function RiskOrganisation({
                   >
                     <span
                       className={cn(
-                        "absolute left-0 top-[4px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
+                        "absolute left-0 top-[2px] xl:top-[3px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
                         variant === "ADGM-SPV-Formation" && "xl:top-[3.5]",
                       )}
                     >
@@ -218,7 +219,7 @@ export default function RiskOrganisation({
               variant === "ADGM-Foundation" && "xl:w-[475px]",
               variant === "SOP" && "xl:w-[473px]",
               variant === "ifza" && "xl:w-[475px]",
-              variant === "holding" && "xl:w-[475px]",
+              variant === "holding" && "xl:w-[473px]",
               variant === "RAK-Offshore" && "xl:w-[475px]",
               variant === "dwtc" && "xl:w-[475px]",
               variant === "difc-regulated" && "xl:w-[473px]",

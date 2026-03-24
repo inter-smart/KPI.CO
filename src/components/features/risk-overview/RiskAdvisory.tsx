@@ -8,6 +8,7 @@ type Variant =
   | "default"
   | "difc"
   | "center"
+  | "holding"
   | "AuditServicesUae"
   | "CorporateTaxUae"
   | "CorporateTaxUae"
@@ -63,6 +64,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
         "w-full bg-white py-[40px_30px] md:py-[40px_60px] xl:py-[70px] 2xl:py-[80px_100px] 3xl:py-[100px_150px]",
         variant === "regulatory" && "xl:!py-[95px_60px]",
         variant === "ADGM-SPV-Formation" && "max-sm:!py-[46px_40px]",
+        variant === "holding" && "max-sm:!py-[46px_51px]",
       )}
     >
       <div className="container">
@@ -72,6 +74,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             hasVariant(variant, "center") && "items-center",
             hasVariant(variant, "difc-regulated") && "items-center",
             hasVariant(variant, "ADGM-SPV-Formation") && "max-sm:gap-0",
+            hasVariant(variant, "holding") && "max-sm:gap-0",
             variant === "AuditServicesUae" && "xl:gap-0",
           )}
         >
@@ -91,6 +94,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                 variant === "regulatory" && "max-w-[98%]",
                 variant === "ADGM-SPV-Formation" &&
                   "max-sm:text-[26px] max-sm:!mb-[28px]",
+                variant === "holding" && "max-sm:text-[26px] max-sm:!mb-[28px]",
               )}
             >
               {parse(data.title)}
@@ -110,6 +114,8 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                   "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] max-sm:[&_p]:last-of-type:!block",
                 variant === "ADGM-SPV-Formation" &&
                   "max-sm:[&_p]:last-of-type:!block max-sm:[&_br]:!block sm:[&_br]:hidden max-sm:mb-[9.9px] max-sm:[&_p]:!mb-0 max-sm:[&_span]:!text-[12px] max-sm:[&_span]:!text-[#4E4E4E] max-sm:[&_span]:!top-[-2px]",
+                variant === "holding" &&
+                  "max-sm:[&_p]:last-of-type:!block max-sm:[&_p]:first:!mb-[28px] max-sm:[&_br]:!block max-sm:[&_br]:!hidden sm:[&_br]:hidden max-sm:mb-[10px] max-sm:[&_p]:!mb-0 max-sm:[&_span]:!text-[12px] max-sm:[&_span]:!text-[#5280CA] max-sm:[&_span]:!top-[-2px]",
               )}
             >
               {parse(
@@ -162,6 +168,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                         className={cn(
                           "p-[10px_10px_10px_20px] md:p-[10px_10px_15px_30px] xl:p-[20px_25px_25px_40px] 3xl:p-[10px_20px_30px_40px]",
                           hasVariant(variant, "difc") ||
+                            hasVariant(variant, "holding") ||
                             hasVariant(variant, "ADGM-SPV-Formation") ||
                             hasVariant(variant, "regulatory") ||
                             hasVariant(variant, "adgm-regulated")
@@ -187,6 +194,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                           className={cn(
                             "w-full text-[16px] md:text-[18px] xl:text-[26px] 2xl:text-[28px] 3xl:text-[34px] font-bold mb-1 sm:mb-[10px]",
                             hasVariant(variant, "difc")
+                              ? "text-[#5280CA]"
+                              : "text-[#5280CA]",
+                            hasVariant(variant, "holding")
                               ? "text-[#5280CA]"
                               : "text-[#5280CA]",
                             hasVariant(variant, "ADGM-SPV-Formation")
@@ -225,9 +235,9 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
                   variant === "CorporateTaxUae" &&
                     "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
                   variant === "regulatory" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
                   variant === "Financial-Statement-Audit" &&
-                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden ",
+                    "text-[16px] font-normal text-[#4E4E4E] mt-[20px] max-sm:!block sm:hidden",
                 )}
               >
                 {parse(data.highlightsText)}
@@ -238,6 +248,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
             className={cn(
               "w-full h-auto hidden",
               variant === "ADGM-SPV-Formation" && "max-sm:block sm:hidden",
+              variant === "holding" && "max-sm:block sm:hidden max-sm:mt-[28px]",
             )}
           >
             <div className={cn("text-[16px] font-normal text-[#4E4E4E]")}>
@@ -256,6 +267,7 @@ export default function RiskAdvisory({ data, variant }: RiskAdvisoryProps) {
               variant === "AuditServicesUae" &&
                 "xl:pr-[70px] [&_p]:mb-3 xl:[&_p]:mb-[30px] hidden",
               variant === "ADGM-SPV-Formation" && "max-sm:mb-0",
+              variant === "holding" && "max-sm:hidden",
             )}
           >
             {parse(

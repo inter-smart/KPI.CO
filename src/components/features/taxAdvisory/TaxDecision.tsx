@@ -1,10 +1,9 @@
-
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
 import { Heading } from "@/components/utils/typography";
-import { Button } from "@/components/ui/button"; 
+import { Button } from "@/components/ui/button";
 
 export type CtaData = {
   title: string;
@@ -21,15 +20,20 @@ export type CtaData = {
 
 type TaxDecisionProps = {
   data: CtaData;
+  variant?: "default" | "tax-advisory";
 };
 
-export default function TaxDecision({ data }: TaxDecisionProps) {
+export default function TaxDecision({
+  data,
+  variant = "default",
+}: TaxDecisionProps) {
   return (
     <section className="relative max-sm:px-[30px] py-[85px] lg:py-[55px] xl:py-[70px] 2xl:py-[85px] 3xl:py-[110px]  ">
       <div
         className={cn(
           "w-full h-full aspect-square pointer-events-none absolute -z-1 inset-0",
-        )} >
+        )}
+      >
         <Image
           src={data?.images?.overlay || ""}
           alt="overlay"
@@ -52,8 +56,8 @@ export default function TaxDecision({ data }: TaxDecisionProps) {
               as="h2"
               size="h2"
               className="max-sm:text-[20px] lg:text-[25px] xl:text-[36px] 2xl:text-[38px] 3xl:text-[48px] text-white font-bold mb-3.75 lg:mb-2.5"
-            >             
-                 {parse(data?.title ?? "")}
+            >
+              {parse(data?.title ?? "")}
             </Heading>
             <div className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] [&_p]:leading-[1.6] max-sm:font-normal [&_p]:font-normal text-white max-md:[&_br]:hidden">
               {parse(data?.description ?? "")}
@@ -61,10 +65,12 @@ export default function TaxDecision({ data }: TaxDecisionProps) {
           </div>
           <div className="w-full lg:w-[35%] flex lg:justify-end">
             <Button
-              className="text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] max-sm:rounded-[6px] leading-none !font-medium text-black min-w-[118px] sm:min-w-[150px] xl:min-w-[180px] 2xl:min-w-[190px] h-[30px] sm:h-[45px] xl:h-[48px] 2xl:h-[50px] 3xl:h-[60px] bg-[#FFC916]"
+              className="text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[19px] 2xl:text-[20px] 3xl:text-[26px] max-sm:rounded-[6px] leading-none !font-medium text-black min-w-[118px] sm:min-w-[150px] xl:min-w-[178.07px] h-[30px] sm:h-[45px] !px-0 xl:h-[48.02px] bg-[#FFC916]"
               asChild
             >
-              <Link href={data?.button?.link ?? "/"}>{data?.button?.label}</Link>
+              <Link href={data?.button?.link ?? "/"}>
+                {data?.button?.label}
+              </Link>
             </Button>
           </div>
         </div>

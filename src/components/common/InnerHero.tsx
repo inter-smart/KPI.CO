@@ -42,6 +42,7 @@ export type InnerHeroProps = {
     | "ifza"
     | "e-invoicing"
     | "ADGM-Foundations"
+    | "Holding-Companies"
     | "Formation-JAFZA"
     | "technology"
     | "internal-audit"
@@ -78,17 +79,24 @@ export default function InnerHero({
           ? "bg-linear-to-b from-[#1C5396] from-[0%] via-[#2D81C0] via-[50%] to-[#3EB0EA] to-[61%]"
           : "",
         variant === "advisory" ? "max-sm:h-[715px]" : "",
-        variant === "ADGM-Foundations" && "max-sm:min-h-[610px] max-sm:pt-[120px] xl:pt-[120px] xl:min-h-[657px]",
+        variant === "ADGM-Foundations" &&
+          "max-sm:min-h-[610px] max-sm:pt-[120px] xl:pt-[120px] xl:min-h-[657px]",
         variant === "dwtc" || variant === "e-invoicing"
           ? "min-h-[546px] sm:min-h-[650px] xl:min-h-[600px] "
           : "!min-h-[600px] sm:min-h-[500px] xl:min-h-[640px] ",
         variant === "e-invoicing" ? "min-h-[640px] xl:min-h-[720px]" : "",
         variant === "company-freezone" && "max-sm:min-h-[630px]",
         variant === "technology" &&
-          "!min-h-[728px] sm:!min-h-[640px] xl:!min-h-[800px] 2xl:!min-h-[800px] 3xl:!min-h-[800px] ",
+          "max-sm:!min-h-[728px] xl:!min-h-[600px] max-sm:pt-[119.55px] xl:!py-[120px_63px]",
         variant === "erm" && "max-sm:!min-h-[715px] lg:!min-h-[630px]",
         variant === "ADGM-SPV-Formation" &&
           "max-sm:!min-h-[619px] xl:!min-h-[651px] max-sm:pt-[119.55px] xl:!pt-[120px]",
+        variant === "Holding-Companies" &&
+          "max-sm:!min-h-[626px] xl:!min-h-[600px] max-sm:pt-[119.55px] xl:!pt-[120px]",
+        variant === "Tax-Advisory" &&
+          "max-sm:!min-h-[609px] xl:!min-h-[600px] max-sm:py-[119.55px_44px] xl:!pt-[120px]",
+        variant === "Formation-JAFZA" &&
+          "max-sm:!min-h-[600px] xl:!min-h-[600px] max-sm:items-start max-sm:pt-[119.55px]",
       )}
     >
       {data?.media?.desktopPath && data?.media?.mobilePath && (
@@ -145,7 +153,7 @@ export default function InnerHero({
             className={cn(
               "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
 
-              variant === "technology" && "max-w-[850px] xl:mb-[30px]",
+              variant === "technology" && "max-w-[850px] xl:mb-[22px]",
               variant === "internal-audit" && "max-w-[850px]",
               variant === "regulatory" && "max-w-[850px]",
               variant === "JAFZA-Freezone" && "max-sm:mb-[22px]",
