@@ -293,6 +293,7 @@ export default function CorporateServicesUaeFormationProcess({
                   variant === "erm" && "xl:!min-h-[690px]",
                   variant === "aup" && "xl:!min-h-[555px]",
                   variant === "adgm-regulated" && " max-sm:!min-h-[316.08px]",
+                  variant === "company-freezone" && " max-sm:!max-w-[340px]",
                 )}
               >
                 <Image
@@ -364,6 +365,7 @@ export default function CorporateServicesUaeFormationProcess({
                           variant === "internal-audit" && "leading-relaxed",
                           variant === "mainland" && "xl:text-[20px]",
                           variant === "Formation-ADGM" && "xl:text-[20px]",
+                          variant === "company-freezone" && "xl:text-[20px]",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}

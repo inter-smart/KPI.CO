@@ -242,6 +242,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
             variant === "regulatory" && "xl:!gap-[24px_30px] xl:mr-[10px]",
+            variant === "freezone-business" && "xl:!gap-[24px_30px] xl:mr-[10px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
             variant === "VatServicesUae" && "xl:!gap-[25px_40px]",
             variant === "offshore" && "xl:gap-[25px_30px]",
@@ -312,7 +313,8 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
         variant === "AuditServicesUae" &&
           "after:bg-[#f3f7fd] max-sm:min-h-[153px]",
         variant === "risk" && "xl:!h-[120px]",
-        variant === "SOP" && "max-sm:min-h-[150px] max-sm:mr-[0.2px]"
+        variant === "SOP" && "max-sm:min-h-[150px] max-sm:mr-[0.2px]" ,
+        variant === "freezone-business" && "xl:h-[156px]"
       )}
     >
       <div

@@ -295,6 +295,8 @@ export default function MainlandBusiness({
                   "max-sm:h-[378px]   max-sm:max-w-[329px]",
                 variant === "JAFZA-Freezone" &&
                   "max-sm:h-[378px]   max-sm:max-w-[333px]",
+                variant === "company-freezone" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[330px]",
               )}
             >
               <Image

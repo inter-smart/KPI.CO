@@ -102,6 +102,7 @@ export default function CorporateServicesUaeCta({
             variant === "RAK-Offshore" &&
               "max-sm:min-h-[301px] xl:min-h-[289px] xl:rounded-[20px]",
             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
+            variant === "company-freezone" && "max-sm:h-[289px] max-sm:p-[47px_21px_27px_31px]",
 
             variant === "erm" &&
             "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[80px_52px]   bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
@@ -202,6 +203,8 @@ export default function CorporateServicesUaeCta({
                 "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px]  !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                 "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                variant === "company-freezone" &&
+                "xl:min-w-[164.6px] xl:h-[48.2px]",
                 variant === "e-invoicing" &&
                 "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "CorporateTaxUae" &&
