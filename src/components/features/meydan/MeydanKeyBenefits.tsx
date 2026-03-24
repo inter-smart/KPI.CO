@@ -242,7 +242,7 @@ export default function MeydanKeyBenefits({
                           variant === "RAK-Offshore" &&
                             "max-sm:h-[316px] xl:h-[286px] xl:max-w-[579px] xl:ml-auto",
                           variant === "JAFZA-Freezone" &&
-                            "max-w-full xl:min-h-[315px]",
+                            "max-w-full xl:min-h-[315px] max-sm:max-w-[340px] max-sm:h-[253px]",
                         )}
                       >
                         <Image
