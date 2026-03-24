@@ -45,7 +45,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
             key={slide.id}
             className="relative w-full h-full overflow-hidden"
           >
-           
+
             <div className="absolute inset-0 w-full h-full">
               {slide.type === "video" ? (
                 <video
@@ -67,10 +67,10 @@ export default function HomeHero({ data }: HomeHeroProps) {
                   className="object-cover"
                 />
               )}
-              
+
               <div className="absolute inset-0 bg-gradient-to-b from-[#053269]/80  to-[#3869A4]/70 to-[#6A9FE0]/30" />
             </div>
- 
+
             <div className="container relative z-10 h-full flex flex-col justify-center">
               <div className="max-w-full">
                 <Heading
@@ -96,7 +96,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
         ))}
       </Swiper>
 
- 
+
       <style jsx global>{`
         .swiper-pagination {
           bottom: 40px !important;

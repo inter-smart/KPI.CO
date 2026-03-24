@@ -20,33 +20,33 @@ export type CtaData = {
 export type CorporateServicesUaeCtaProps = {
   data: CtaData;
   variant?:
-    | "default"
-    | "CorporateServicesUae"
-    | "Financial-Statement-Audit"
-    | "AuditServicesUae"
-    | "VatServicesUae"
-    | "Formation-JAFZA"
-    | "mainland"
-    | "saifz"
-    | "sop"
-    | "Offshore"
-    | "blogdetail"
-    | "company-freezone"
-    | "DMCC-Freezone"
-    | "rakez"
-    | "ADGM-Foundations"
-    | "holding"
-    | "ADGM-SPV-Formation"
-    | "ifza"
-    | "dwtc"
-    | "regulatory"
-    | "e-invoicing"
-    | "adgm-regulated"
-    | "CorporateTaxUae"
-    | "difc-regulated"
-    | "Formation-ADGM"
-    | "erm"
-    | "internal-audit";
+  | "default"
+  | "CorporateServicesUae"
+  | "Financial-Statement-Audit"
+  | "AuditServicesUae"
+  | "VatServicesUae"
+  | "Formation-JAFZA"
+  | "mainland"
+  | "saifz"
+  | "sop"
+  | "Offshore"
+  | "blogdetail"
+  | "company-freezone"
+  | "DMCC-Freezone"
+  | "rakez"
+  | "ADGM-Foundations"
+  | "holding"
+  | "ADGM-SPV-Formation"
+  | "ifza"
+  | "dwtc"
+  | "regulatory"
+  | "e-invoicing"
+  | "adgm-regulated"
+  | "CorporateTaxUae"
+  | "difc-regulated"
+  | "Formation-ADGM"
+  | "erm"
+  | "internal-audit";
 };
 
 export default function CorporateServicesUaeCta({
@@ -82,24 +82,24 @@ export default function CorporateServicesUaeCta({
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] max-sm:min-h-[354px]"
               : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "saifz" &&
-              "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
+            "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
             variant === "ADGM-Foundations" &&
-              "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
+            "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px] xl:max-w-267.5 2xl:max-w-285 3xl:max-w-356.25 h-auto mx-auto rounded-[20px]",
             variant === "Financial-Statement-Audit" &&
-              "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
+            "max-sm:p-[35px_30px] sm:p-[40px] xl:p-[50px]",
             variant === "Formation-JAFZA" &&
-              "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
+            "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
             variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
             variant === "Formation-ADGM" && "px-[31px_21px] xl:p-[45px_52px] min-h-[265px] xl:min-h-[289px] max-sm:max-w-[343px]",
             variant === "dwtc" &&
-              "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
+            "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
             variant === "internal-audit" && "xl:min-h-[289px]",
             variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
-           
+
             variant === "erm" &&
-              "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[80px_52px]   bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
+            "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[80px_52px]   bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
         >
           <div
@@ -196,32 +196,32 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
-                  "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "e-invoicing" &&
-                  "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "CorporateTaxUae" &&
-                  "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "rakez" && "xl:min-w-[178px] xl:h-[48px] !px-[2px]",
                 variant === "sop" && "xl:min-w-[178px] xl:h-[48px] !px-[4px]",
                 variant === "holding" &&
-                  "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:h-[30px] xl:h-[48px] xl:min-w-[170px] xl:px-[28px] 2xl:px-10",
                 variant === "Formation-JAFZA" && "xl:h-[48.02px]",
                 variant === "ADGM-Foundations" && "xl:min-w-[178.07px] xl:h-[48.02px]",
 
                 variant === "ifza" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
 
                 variant === "dwtc" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48px] xl:min-w-[165px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "Financial-Statement-Audit" &&
-                  "max-sm:!min-w-[120px]",
+                "max-sm:!min-w-[120px]",
                 variant === "regulatory" && "max-sm:!min-w-[118px]",
                 variant === "CorporateServicesUae" &&
-                  "!min-w-[118px] xl:!min-w-[233.6px] h-[30px] sm:h-[48.2px]",
+                "!min-w-[118px] xl:!min-w-[233.6px] h-[30px] sm:h-[48.2px]",
                 variant === "difc-regulated" &&
-                  "!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "!font-medium max-sm:!min-w-[120px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
                 variant === "adgm-regulated" &&
-                  "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
+                "max-3xl:!font-medium max-sm:!min-w-[118px] max-sm:h-[30px] md:h-[40px] xl:h-[48.2px] xl:min-w-[178.6px] rounded-[7px] xl:rounded-[10px] xl:px-[28px] 2xl:px-10",
               )}
               asChild
             >
