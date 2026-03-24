@@ -74,7 +74,7 @@ export default function CorporateServicesUaeServices({
             {data?.title}
           </Heading>
           {data?.description && (
-            <div className="text-[16px] xl:text-[18px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] xl:mb-[25px] leading-normal font-normal text-[#4E4E4E]">
+            <div className="text-[18px] xl:text-[18px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[24px] xl:mb-[25px] leading-normal font-normal text-[#4E4E4E]">
               {parse(data?.description)}
             </div>
           )}
