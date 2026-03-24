@@ -124,7 +124,7 @@ const localData = {
         description:
           "For over 30 years, KPI has supported businesses across the UAE with audit, risk, tax, corporate, and technology advisory services. We work with organisations at every stage, from establishment to expansion, helping strengthen governance, manage risk, and support long-term, sustainable growth.",
         buttonText: "Get in Touch",
-        buttonLink: "/#contact",
+        buttonLink: "/contact",
         type: "video" as const,
         mediaUrl: "/videos/banner.mp4",
         posterUrl: "/images/hero-bg-2.jpg",
@@ -241,17 +241,17 @@ const localData = {
       },
       {
         id: 4,
-        media: { path: "/images/home-apart-item-4.svg", alt: "home-apart" },
-        title: "Long-term Focus",
-        description:
-          "<p>We prioritise sustainable relationships over short-term growth. Accuracy, transparency, and sound judgement are our priorities - not volume or size.</p>",
-      },
-      {
-        id: 5,
         media: { path: "/images/home-apart-item-5.svg", alt: "home-apart" },
         title: "Strong Regulatory Alignment ",
         description:
           "<p>We are registered and active across UAE mainland, DIFC, and ADGM, supporting regulated entities with clarity and discipline.</p>",
+      },
+      {
+        id: 5,
+        media: { path: "/images/home-apart-item-4.svg", alt: "home-apart" },
+        title: "Long-term Focus",
+        description:
+          "<p>We prioritise sustainable relationships over short-term growth. Accuracy, transparency, and sound judgement are our priorities - not volume or size.</p>",
       },
     ] satisfies ApartItem[],
   },
@@ -306,7 +306,7 @@ const localData = {
       "<p>KPI was established in Dubai in the early 1990s, shaped by hands-on experience working with businesses under real commercial and regulatory pressure. From the outset, our focus has been on delivering reliable audit, accounting, and advisory services grounded in discipline, accountability, and professional judgement.</p><p>Over time, our work expanded beyond traditional audit into risk, regulatory advisory, corporate services, and enterprise technology - reflecting how modern businesses actually operate. Today, KPI is a multi-disciplinary advisory firm serving clients across the UAE and the wider region, guided by independence, integrity, and long-term trust.</p><p>Whether you are establishing a presence, strengthening governance, or scaling operations, KPI provides the expertise, structure, and insight to drive measurable results.</p>",
     button: {
       label: "Get in Touch",
-      link: "/#contact",
+      link: "/contact",
     },
   } satisfies AboutData,
 
