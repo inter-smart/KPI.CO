@@ -150,6 +150,7 @@ function WhyBuildCard({
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
           variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
            variant === "difc-formation" && "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
+           variant === "rakez" && "max-sm:text-[16px] xl:text-[18px] leading-[100%] max-sm:mb-[11px]",
         )}
       >
         {item.title}
@@ -176,6 +177,7 @@ function WhyBuildCard({
           hasVariant(variant, "Formation-JAFZA") && "xl:text-[14px]",
           hasVariant(variant, "dwtc") && "xl:text-[14px]",
           hasVariant(variant, "company-freezone") && "max-sm:text-[14px]",
+          hasVariant(variant, "rakez") && "max-sm:text-[14px]",
         )}
       >
         {parse(item?.description)}

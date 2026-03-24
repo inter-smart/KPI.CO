@@ -293,6 +293,8 @@ export default function MainlandBusiness({
                   "max-sm:h-[437px] lg:h-auto lg:aspect-517/549 xl:min-h-[549px] max-sm:max-w-[330px]",
                 variant === "e-invoicing" &&
                   "max-sm:h-[378px]   max-sm:max-w-[329px]",
+                variant === "JAFZA-Freezone" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[333px]",
               )}
             >
               <Image

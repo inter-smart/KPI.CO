@@ -133,6 +133,8 @@ export default function RiskOrganisation({
                         "[&_p]:mb-[20px] xl:[&_p]:mb-[30px] leading-relaxed",
                       variant === "regulatory" &&
                         "[&_p]:!mb-[20px] xl:[&_p]:!mb-[30px] leading-relaxed",
+                      variant === "JAFZA-Freezone" &&
+                        "[&_p]:!mb-[20px] xl:[&_p]:!mb-[26px] leading-[130%]",
                     )}
                   >
                     {parse(data.description)}
@@ -160,7 +162,7 @@ export default function RiskOrganisation({
                   >
                     <span
                       className={cn(
-                        "absolute left-0 top-[2px] xl:top-[3px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
+                        "absolute left-0 top-[2px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
                         variant === "ADGM-SPV-Formation" && "xl:top-[3.5]",
                       )}
                     >
@@ -255,6 +257,7 @@ export default function RiskOrganisation({
                 variant === "difc-regulated" && "xl:!max-h-[357px]",
                 variant === "ADGM-SPV-Formation" && "xl:!max-h-[390px]",
                 variant === "SOP" && "max-sm:max-w-[329px]",
+                variant === "JAFZA-Freezone" && "xl:max-w-[459px] xl:max-h-[329px]",
               )}
             >
               {data?.media?.path && (

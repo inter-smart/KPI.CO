@@ -47,6 +47,7 @@ export type CorporateServicesUaeCtaProps = {
   | "difc-regulated"
   | "Formation-ADGM"
   | "erm"
+  | "JAFZA-Freezone" 
   | "internal-audit";
 };
 
@@ -91,6 +92,7 @@ export default function CorporateServicesUaeCta({
             variant === "Formation-JAFZA" &&
             "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
             variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
+            variant === "rakez" && "xl:p-[45px_50px] xl:min-h-[289px]",
             variant === "Formation-ADGM" && "px-[31px_21px] xl:p-[45px_52px] min-h-[265px] xl:min-h-[289px] max-sm:max-w-[343px]",
             variant === "dwtc" &&
             "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
@@ -196,7 +198,7 @@ export default function CorporateServicesUaeCta({
           >
             <Button
               className={cn(
-                "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
+                "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px]  !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
                 "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "e-invoicing" &&

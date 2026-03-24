@@ -80,6 +80,8 @@ export default function MeydanKeyBenefits({
             "w-full h-auto py-[20px_50px] sm:py-[40px] xl:py-[55px] 2xl:py-[70px] 3xl:py-[85px] sm:bg-[#f5fbfe] sm:rounded-[10px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
             variant === "RAK-Offshore" &&
               "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[65px]",
+            variant === "JAFZA-Freezone" &&
+              "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[38.5px] xl:min-h-[477px]",
           )}
         >
           <div
@@ -171,6 +173,7 @@ export default function MeydanKeyBenefits({
                       variant === "Vat-Services" &&
                         "md:gap-[20px] xl:gap-[50px] 2xl:gap-[60px] 3xl:gap-[75px]",
                       variant === "RAK-Offshore" && "xl:gap-[0px]",
+                      variant === "JAFZA-Freezone" && "xl:gap-[0px]",
                     )}
                   >
                     <div
@@ -178,6 +181,7 @@ export default function MeydanKeyBenefits({
                         "w-full lg:w-1/2 xl:pt-[16px]",
                         variant === "technology" && "lg:pr-[40px]",
                         variant === "RAK-Offshore" && "xl:w-[40%]",
+                        variant === "JAFZA-Freezone" && "xl:w-[calc(100%-579px)]",
                       )}
                     >
                       {variant === "technology" && (
@@ -230,13 +234,15 @@ export default function MeydanKeyBenefits({
                         ))}
                       </ul>
                     </div>
-                    <div className={cn("w-full lg:w-1/2",variant === "RAK-Offshore" && "xl:w-[60%]")}>
+                    <div className={cn("w-full lg:w-1/2",variant === "RAK-Offshore" && "xl:w-[60%]", variant === "JAFZA-Freezone" && "xl:w-[579px]" )}>
                       <div
                         className={cn(
                           "w-full max-sm:h-[216px] sm:h-full max-sm:aspect-[340/316] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
                           variant === "technology" && "xl:aspect-[550/335]",
                           variant === "RAK-Offshore" &&
                             "max-sm:h-[316px] xl:h-[286px] xl:max-w-[579px] xl:ml-auto",
+                          variant === "JAFZA-Freezone" &&
+                            "max-w-full xl:min-h-[315px]",
                         )}
                       >
                         <Image
