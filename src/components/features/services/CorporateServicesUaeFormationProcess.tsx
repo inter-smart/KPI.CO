@@ -38,6 +38,7 @@ export type CorporateServicesUaeFormationProcessProps = {
   variant?:
     | "Vat-Services"
     | "mainland"
+    | "Formation-ADGM"
     | "aup"
     | "sop"
     | "default"
@@ -109,6 +110,7 @@ export default function CorporateServicesUaeFormationProcess({
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
           (variant === "mainland" && "max-sm:pb-3") ||
+          (variant === "Formation-ADGM" && "max-sm:pb-[45px]") ||
             (variant === "sop" && "max-sm:pb-3") ||
             (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
             (variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]"),
@@ -119,6 +121,7 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "w-full mb-6 xl:mb-10 2xl:mb-12",
               variant === "mainland" ||
+              variant === "Formation-ADGM" ||
                 variant === "sop" ||
                 variant === "company-freezone" ||
                 variant === "aup" ||
@@ -239,6 +242,7 @@ export default function CorporateServicesUaeFormationProcess({
                             : "text-[#a7a7a7]",
                           variant === "CorporateServicesUae" && "mt-0",
                           variant === "mainland" && "hidden", 
+                          variant === "Formation-ADGM" && "hidden", 
                         )}
                       >
                         {step.step}
@@ -254,10 +258,12 @@ export default function CorporateServicesUaeFormationProcess({
                         variant == "adgm-regulated" && "max-w-full",
                         variant == "internal-audit" && "max-w-full",
                         variant == "mainland" && "max-w-full",
+                        variant == "Formation-ADGM" && "max-w-full",
                         variant == "company-freezone" && "max-w-[90%]",
                         variant == "sop" && "max-w-[90%]",
                         variant == "Financial-Statement-Audit" && "max-w-full",
                         variant === "mainland" && "xl:max-w-[430px]",
+                        variant === "Formation-ADGM" && "xl:max-w-[430px]",
                         variant == "CorporateServicesUae" && "max-w-full",
                         variant === "Vat-Services" && "xl:max-w-full",
                         variant === "erm" && "xl:max-w-full",
@@ -280,6 +286,7 @@ export default function CorporateServicesUaeFormationProcess({
                   "w-full min-h-[316px] lg:min-h-[380px] xl:min-h-[480px] bg-white rounded-[12px] xl:rounded-[14px] border border-[#E2E2E2] p-6 xl:p-14 2xl:p-12 shadow-[0_2px_4px_rgba(0,0,0,0.15)] relative z-0 overflow-hidden flex items-center",
                   variant === "CorporateServicesUae" && "xl:!min-h-[555px]",
                   variant === "mainland" && "xl:!min-h-[555px]",
+                  variant === "Formation-ADGM" && "xl:!min-h-[555px]",
                   variant === "Financial-Statement-Audit" &&
                     "xl:!min-h-[415px]",
                   variant === "Vat-Services" && "xl:!min-h-[455px]",
@@ -311,6 +318,8 @@ export default function CorporateServicesUaeFormationProcess({
                               "max-sm:!block sm:!hidden",
                             variant === "adgm-regulated" &&
                               "max-sm:!block sm:!hidden",
+                            variant === "Formation-ADGM" &&
+                              "sm:!block max-sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -352,6 +361,7 @@ export default function CorporateServicesUaeFormationProcess({
                           "text-black max-md:[&_br]:hidden text-[14px] xl:text-[18px] capitalize",
                           variant === "internal-audit" && "leading-relaxed",
                           variant === "mainland" && "xl:text-[20px]",
+                          variant === "Formation-ADGM" && "xl:text-[20px]",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}

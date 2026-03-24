@@ -51,6 +51,7 @@ export default function VatRelatedTax({
             className={cn(
               "text-[#1C5396]",
               variant === "sop" && "max-sm:text-[26px]",
+              variant === "regulatory" && "max-sm:text-[26px]",
             )}
           >
             {data?.title}
@@ -66,6 +67,8 @@ export default function VatRelatedTax({
                   // variant === "sop" && "lg:!flex-[0_0_23.5%]",
                    variant === "sop" &&
                       "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
+                   variant === "regulatory" &&
+                      "flex-[0_0_282px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                 )}
               >
                 <Link

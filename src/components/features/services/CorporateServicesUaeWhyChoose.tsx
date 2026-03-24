@@ -239,7 +239,7 @@ export default function CorporateServicesUaeWhyChoose({
             variant === "SOP" && "max-sm:gap-[18px] xl:!gap-[25px_30px]",
             variant === "Formation-DIFC" && "xl:!gap-[25px_30px]",
             variant === "Formation-ADGM" && "xl:gap-[25px_40px]",
-            variant === "regulatory" && "xl:!gap-[25px_30px]",
+            variant === "regulatory" && "xl:!gap-[24px_30px] xl:mr-[10px]",
             variant === "Financial-Statement-Audit" && "xl:gap-[25px_30px]",
             variant === "VatServicesUae" && "xl:!gap-[25px_40px]",
             variant === "offshore" && "xl:gap-[25px_30px]",
@@ -284,7 +284,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "aup" && "before:bg-[#FFC916] after:bg-[#f9fafb]",
         variant === "regulatory" &&
-          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb]",
+          "before:bg-gradient-to-t before:from-[#1C5396] before:to-[#389FDB] after:bg-[#f9fafb] max-sm:bg-[#6A9FE014]",
         (variant === "default" || variant === "advisory") &&
           "before:bg-gradient-to-t before:to-[#3EB0EA] before:from-[#053269] after:bg-[#f3f7fd]",
         (variant === "risk" ||
@@ -320,7 +320,9 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             "after:bg-[rgba(106,159,224,0.08)]",
           variant === "AuditServicesUae" && "h-full xl:pr-[42px]",
           variant === "erm" && "after:bg-[#f3f7fd]",
-          variant=== "risk" && "xl:!py-[10px]"
+          variant=== "risk" && "xl:!py-[10px]" ,
+          variant=== "regulatory" && "p-[19px_24px] xl:p-[24px]" ,
+          variant=== "Formation-ADGM" && "p-[19px_24px] xl:p-[25px]"
         )}
       >
         <div
@@ -340,7 +342,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
             variant === "spv" && "text-[#1C5396]",
             variant === "AuditServicesUae" && "text-[#1C5396]",
             variant === "tax-advisory" && "text-[#1C5396] capitalize",
-            variant === "regulatory" && "text-[#1C5396]",
+            variant === "regulatory" && "text-[#1C5396] leading-[150%] xl:mb-[7px]",
             variant === "default" && "text-black",
             variant === "SOP" && "text-[#1C5396]",
             variant === "Formation-DIFC" && "text-[#1C5396] !font-medium",
@@ -366,8 +368,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
                 variant === "erm" && "lg:text-[14px] xl:text-[14px]",
                 variant === "internal-audit" &&
                   "leading-relaxed xl:max-w-[92%]",
-                variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",
-                variant === "regulatory" && "leading-relaxed xl:max-w-[92%]",
+                variant === "regulatory" && "leading-[150%] xl:max-w-[92%]", 
               )}
             >
               {parse(item?.description)}

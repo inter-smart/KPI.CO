@@ -105,12 +105,14 @@ function WhyBuildCard({
           "max-sm:min-h-[210px] xl:min-h-[230px] xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
+        variant === "formation" && "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
       )}
     >
       <div
         className={cn(
           "w-[46px] xl:w-[52px] aspect-square mb-[15px] transition-transform",
           variant === "Formation-JAFZA" && "max-sm:w-[52.49px]",
+          variant === "formation" && "max-sm:w-[52.48px] max-sm:mb-[13.99px]",
         )}
       >
         <Image
@@ -145,6 +147,7 @@ function WhyBuildCard({
           hasVariant(variant, "company-freezone") &&
             "max-sm:text-[16px] xl:text-[18px]",
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
+          variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
         )}
       >
         {item.title}

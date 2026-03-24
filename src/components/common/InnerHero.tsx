@@ -141,7 +141,7 @@ export default function InnerHero({
             as="h1"
             size="h1"
             className={cn(
-              "font-bold text-white mb-[15px] xl:mb-[22px] 2xl:mb-[25px] capitalize max-md:[&_br]:hidden",
+              "font-bold text-white mb-[15px] xl:mb-[22px] capitalize max-md:[&_br]:hidden",
 
               variant === "technology" && "max-w-[850px] xl:mb-[30px]",
               variant === "internal-audit" && "max-w-[850px]",
@@ -209,6 +209,8 @@ export default function InnerHero({
                   "xl:max-w-[775px] xl:leading-[150%] xl:text-[20px] xl:mb-[41px]",
                 variant === "internal-audit" &&
                   "xl:max-w-[772px] xl:leading-[150%] xl:text-[20px] xl:mb-[40.5px]",
+                variant === "Formation-ADGM" &&
+                  "xl:max-w-[772px] xl:leading-[150%] xl:text-[20px] xl:mb-[34px]",
               )}
             >
               {parse(data?.description)}

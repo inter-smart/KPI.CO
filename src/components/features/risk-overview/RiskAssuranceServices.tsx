@@ -106,6 +106,7 @@ export default function RiskAssuranceServices({
             variant === "erm" && "max-sm:grid max-sm:gap-[14px]",
             variant === "company-freezone" && "max-sm:grid max-sm:gap-[14px]",
             variant === "ADGM-SPV-Formation" && "max-sm:grid max-sm:gap-[22px]",
+            variant === "Formation-ADGM" && "max-sm:grid max-sm:gap-[22px]",
           )}
         >
           {data.items.map((item) => (
@@ -156,6 +157,7 @@ export default function RiskAssuranceServices({
             variant === "company-freezone" && "max-sm:hidden",
             variant === "erm" && "max-sm:hidden",
             variant === "ADGM-SPV-Formation" && "max-sm:hidden",
+            variant === "Formation-ADGM" && "max-sm:hidden",
           )}
         >
           <div

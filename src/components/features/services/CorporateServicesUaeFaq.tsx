@@ -45,6 +45,7 @@ export type CorporateServicesUaeFaqProps = {
     | "difc-regulated"
     | "AuditServicesUae"
     | "internal-audit"
+    | "regulatory"
     | "ADGM-Spv-Formation";
 };
 
@@ -108,6 +109,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "dwtc" && "last:border-b-1",
                   variant === "ADGM-SPV-Formation" && "last:border-b-1",
                   variant === "internal-audit" && "last:border-b-1",
+                  variant === "side-arrow" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger
@@ -144,6 +146,7 @@ export default function CorporateServicesUaeFaq({
                       variant === "JAFZA-Freezone" && "[&_p]:leading-[1.5]",
                       variant === "company-freezone" && "[&_p]:leading-[1.5]",
                       variant === "AuditServicesUae" && "max-w-full",
+                      variant === "regulatory" && "max-w-full",
                     )}
                   >
                     {parse(item?.description || "")}

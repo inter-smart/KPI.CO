@@ -42,6 +42,7 @@ export type CorporateServicesUaeCtaProps = {
     | "regulatory"
     | "adgm-regulated"
     | "difc-regulated"
+    | "Formation-ADGM"
     | "erm"
     | "internal-audit";
 };
@@ -75,6 +76,7 @@ export default function CorporateServicesUaeCta({
             variant === "Formation-JAFZA" &&
               "max-sm:p-[45.96px_21px_27.05px_28px] xl:p-[42.92px_50px]",
             variant === "Offshore" && "xl:p-[45px_50px] xl:min-h-[289px]",
+            variant === "Formation-ADGM" && "px-[31px_21px] xl:p-[45px_52px] min-h-[265px] xl:min-h-[289px] max-sm:max-w-[343px]",
             variant === "dwtc" &&
               "max-sm:p-[28px_20px_22px_31px] xl:min-h-[289px]",
             variant === "company-freezone" && "xl:p-[55px_50px]",
