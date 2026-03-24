@@ -168,7 +168,7 @@ export default function HomeOurInsightsClient({
 
 function InsightCard({ data, variant }: InsightCardProps) {
   return (
-    <div className="group flex flex-col  w-full h-full bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
+    <div className="group flex flex-col  w-full h-full xl:min-h-[527px] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
       <div className="relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden">
         <Image
           src={data.media.path || "/images/placeholder-image.png"}

@@ -105,8 +105,10 @@ function WhyBuildCard({
           "max-sm:min-h-[210px] xl:min-h-[230px] xl:!px-[15px]",
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
-        variant === "formation" && "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
-        variant === "difc-formation" && "!p-[20px_15px_36.4px] xl:min-h-[226px]",
+        variant === "formation" &&
+          "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
+        variant === "difc-formation" &&
+          "!p-[20px_15px_36.4px] xl:min-h-[226px] xl:!p-[24px_18px] max-sm:min-h-[205px]",
       )}
     >
       <div
@@ -149,8 +151,10 @@ function WhyBuildCard({
             "max-sm:text-[16px] xl:text-[18px]",
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
           variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
-           variant === "difc-formation" && "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
-           variant === "rakez" && "max-sm:text-[16px] xl:text-[18px] leading-[100%] max-sm:mb-[11px]",
+          variant === "difc-formation" &&
+            "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
+          variant === "rakez" &&
+            "max-sm:text-[16px] xl:text-[18px] leading-[100%] max-sm:mb-[11px]",
         )}
       >
         {item.title}
@@ -335,7 +339,8 @@ export default function CorporateServicesUaeWhyBuild({
             hasVariant(variant, "Formation-JAFZA") && "xl:!gap-[26.67px]",
             hasVariant(variant, "AuditServicesUae") && "xl:gap-[25px_39px]",
             hasVariant(variant, "Vat-Services") && "xl:!gap-[25px_40px]",
-            hasVariant(variant, "difc-formation") && "xl:!gap-[25px] xl:mr-[5px]",
+            hasVariant(variant, "difc-formation") &&
+              "xl:!gap-[25px] xl:mr-[5px]",
           )}
         >
           {data.items.map((item) => (

@@ -324,7 +324,7 @@ export default function page() {
         variant="e-invoicing"
       />
       <HomeCounter data={localData.counterList} variant="e-invoice" />
-      <CorporateServicesUaeCta data={localData.cta} variant="e-invoicing"/>
+      <CorporateServicesUaeCta data={localData.cta} variant="e-invoicing" />
 
       <HomeOurInsights variant="Our-Insights" />
     </>

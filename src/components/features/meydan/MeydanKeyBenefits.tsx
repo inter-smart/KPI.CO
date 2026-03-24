@@ -181,7 +181,8 @@ export default function MeydanKeyBenefits({
                         "w-full lg:w-1/2 xl:pt-[16px]",
                         variant === "technology" && "lg:pr-[40px]",
                         variant === "RAK-Offshore" && "xl:w-[40%]",
-                        variant === "JAFZA-Freezone" && "xl:w-[calc(100%-579px)]",
+                        variant === "JAFZA-Freezone" &&
+                          "xl:w-[calc(100%-579px)]",
                       )}
                     >
                       {variant === "technology" && (
@@ -234,7 +235,13 @@ export default function MeydanKeyBenefits({
                         ))}
                       </ul>
                     </div>
-                    <div className={cn("w-full lg:w-1/2",variant === "RAK-Offshore" && "xl:w-[60%]", variant === "JAFZA-Freezone" && "xl:w-[579px]" )}>
+                    <div
+                      className={cn(
+                        "w-full lg:w-1/2",
+                        variant === "RAK-Offshore" && "xl:w-[60%]",
+                        variant === "JAFZA-Freezone" && "xl:w-[579px]",
+                      )}
+                    >
                       <div
                         className={cn(
                           "w-full max-sm:h-[216px] sm:h-full max-sm:aspect-[340/316] aspect-[580/315] max-md:mb-[35px] rounded-[12px] xl:rounded-[12px] 2xl:rounded-[15px] overflow-hidden block",
@@ -242,7 +249,7 @@ export default function MeydanKeyBenefits({
                           variant === "RAK-Offshore" &&
                             "max-sm:h-[316px] xl:h-[286px] xl:max-w-[579px] xl:ml-auto",
                           variant === "JAFZA-Freezone" &&
-                            "max-w-full xl:min-h-[315px]",
+                            "max-w-full xl:min-h-[315px] max-sm:min-h-[253px]",
                         )}
                       >
                         <Image

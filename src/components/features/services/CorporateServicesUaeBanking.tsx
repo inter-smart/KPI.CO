@@ -41,16 +41,25 @@ export default function CorporateServicesUaeBanking({
   data,
   variant = "default",
 }: CorporateServicesUaeBankingProps) {
-  const options = useMemo(() => ({
-    loop: data?.partners?.length > 4,
-    align: "center" as const,
-    slidesToScroll: 1,
-    containScroll: "trimSnaps" as const,
-  }), [data?.partners?.length]);
+  const options = useMemo(
+    () => ({
+      loop: data?.partners?.length > 4,
+      align: "center" as const,
+      slidesToScroll: 1,
+      containScroll: "trimSnaps" as const,
+    }),
+    [data?.partners?.length],
+  );
 
   const plugins = useMemo(() => {
     return data?.partners?.length > 4
-      ? [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })]
+      ? [
+          Autoplay({
+            delay: 2000,
+            stopOnInteraction: false,
+            stopOnMouseEnter: true,
+          }),
+        ]
       : [];
   }, [data?.partners?.length]);
 
@@ -135,7 +144,8 @@ export default function CorporateServicesUaeBanking({
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "company-freezone" && "text-left capitalize ",
               variant === "saifz" && "text-left !max-w-full",
-              variant === "company" && "text-left !max-w-full max-sm:text-[18px] max-sm:pr-[10px]",
+              variant === "company" &&
+                "text-left !max-w-full max-sm:text-[18px] max-sm:pr-[10px]",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
               variant === "JAFZA-Freezone" && "text-left !max-w-full ",
@@ -162,7 +172,7 @@ export default function CorporateServicesUaeBanking({
                 key={`affiliation-${item?.id}`}
                 className={cn(
                   "flex-[0_0_133.25px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] xl:flex-[0_0_324px] min-w-0 select-none",
-                  variant === "JAFZA-Freezone" && "xl:flex-[0_0_324px] "
+                  variant === "JAFZA-Freezone" && "xl:flex-[0_0_324px] ",
                 )}
               >
                 <div

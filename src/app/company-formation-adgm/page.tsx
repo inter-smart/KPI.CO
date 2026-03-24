@@ -14,7 +14,7 @@ import CorporateServicesUaeFormationProcess from "@/components/features/services
 import BusinessLocation, {
   type BusinessLocationData,
 } from "@/components/features/mainland/BusinessLocation";
-import HomeOurInsights from "@/components/features/home/HomeOurInsights"; 
+import HomeOurInsights from "@/components/features/home/HomeOurInsights";
 
 export type HeroData = {
   id: number;
@@ -533,12 +533,15 @@ export default function InternalAudit() {
         variant="Formation-ADGM"
         data={localData.formationProcess}
       />
-      <CorporateServicesUaeBanking
-        variant="company"
-        data={localData.banking}
+      <CorporateServicesUaeBanking variant="company" data={localData.banking} />
+      <CorporateServicesUaeCta
+        data={localData.contactUs}
+        variant="Formation-ADGM"
       />
-      <CorporateServicesUaeCta data={localData.contactUs}  variant="Formation-ADGM"/>
-      <CorporateServicesUaeFaq variant="side-arrow" data={localData.corporate_faq_data} />
+      <CorporateServicesUaeFaq
+        variant="side-arrow"
+        data={localData.corporate_faq_data}
+      />
       <HomeOurInsights variant="Our-Insights" />
     </>
   );
