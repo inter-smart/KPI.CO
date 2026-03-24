@@ -52,7 +52,7 @@ export default function HomeApart({ data }: HomeApartProps) {
                 )}
               >
                 <div className="w-full h-auto block max-lg:py-[20px] ">
-                  <div className="text-[20px] md:text-[15px] xl:text-[20px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
+                  <div className="text-[18px] md:text-[15px] xl:text-[20px] 2xl:text-[21px] leading-normal font-semibold text-white  mb-2.5 xl:mb-2.5 2xl:mb-3.5 flex gap-2">
                     <Image
                       src={item.media.path || "/images/placeholder-image.png"}
                       alt={item.media.alt || "Home Apart"}
