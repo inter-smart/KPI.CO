@@ -53,7 +53,7 @@ export default function MeydanFreeZone({
   return (
     <section
       className={cn(
-        "w-full h-auto py-[10px_25px] sm:py-[35px_50px] xl:py-[48px_30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
+        "w-full h-auto py-[10px_15px] sm:py-[35px_50px] xl:py-[48px_30px] 2xl:py-[50px_75px] 3xl:py-[65px_90px] block",
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
         variant === "MeydanFreeZone" && "xl:py-[48px_70px]",
@@ -137,7 +137,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px] !leading-tight text-[28px] sm:text-[20px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[40px]  font-medium text-[#1C5396] sm:text-[#053269] xl:max-w-[480px] mb-[20px] sm:mb-[10px] xl:mb-[15px] 2xl:mb-[20px]",
                     variant === "difc" &&
-                      "text-[26px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold !max-w-full",
+                      "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold !max-w-full",
                     variant === "difc-regulated" &&
                       "text-[28px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] !text-[#1C5396] font-semibold !max-w-full",
                     variant === "holding" &&
@@ -174,6 +174,7 @@ export default function MeydanFreeZone({
                       variant === "ADGM-Foundation" && "xl:mb-[20px]",
                       variant === "RAK-Offshore" && "xl:mb-[15px]",
                       variant === "regulatory" && "max-sm:text-[14px]",
+                      variant === "difc" && "max-sm:text-[14px]",
                     )}
                   >
                     {item?.highlightsText}
@@ -217,7 +218,7 @@ export default function MeydanFreeZone({
                   ))}
                 </ul>
                 {item?.footer_description && (
-                  <div className="mt-[20px] sm:mt-[10px] xl:mt-[25px] 2xl:mt-[20px] text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]">
+                  <div className={cn("mt-[20px] sm:mt-[10px] xl:mt-[25px] 2xl:mt-[20px] text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",  variant === "difc" && "text-[14px] xl:text-[16px] ",)}>
                     {parse(item?.footer_description)}
                   </div>
                 )}

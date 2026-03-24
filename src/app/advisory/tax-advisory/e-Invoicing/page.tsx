@@ -108,7 +108,7 @@ const localData = {
     id: 1,
     media: {
       desktopPath: "/images/e-invoicing-banner.svg",
-      mobilePath: "/images/e-invoicing-banner-mob.svg",
+      mobilePath: "/images/envoicing-mob.svg",
       alt: "E-Invoicing That Strengthens Compliance and Commercial Performance",
     },
     title: "E-Invoicing That Strengthens Compliance and Commercial Performance",
@@ -264,7 +264,7 @@ const localData = {
     },
     images: {
       overlay: "/images/cta-invoing.svg",
-      overlayMobile: "/images/spv-banner-mobile.jpg",
+      overlayMobile: "/images/ctaEnvoice-mob.png",
     },
   } satisfies CtaData,
 
@@ -321,7 +321,7 @@ export default function page() {
         variant="e-invoicing"
       />
       <HomeCounter data={localData.counterList} variant="e-invoice"/>
-      <CorporateServicesUaeCta data={localData.cta} variant="mainland" />
+      <CorporateServicesUaeCta data={localData.cta} variant="e-invoicing"/>
 
          <HomeOurInsights />
     </>

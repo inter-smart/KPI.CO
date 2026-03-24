@@ -342,6 +342,7 @@ export default function CorporateServicesUaeFormationProcess({
                             "text-[14px] xl:text-[24px]  font-semibold text-[#212121] mb-3 lg:mb-4 xl:mb-[20px] 2xl:mb-7 capitalize max-md:[&_br]:hidden",
                             variant === "erm" && "max-sm:text-[16px]",
                             variant === "sop" && "max-sm:text-[16px]",
+                            variant === "mainland" && "max-sm:text-[16px]",
                           )}
                         >
                           {parse(data.steps[activeStep].inner_title)}

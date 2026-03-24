@@ -40,6 +40,7 @@ export type CorporateServicesUaeCtaProps = {
     | "ifza"
     | "dwtc"
     | "regulatory"
+    | "e-invoicing"
     | "adgm-regulated"
     | "CorporateTaxUae"
     | "difc-regulated"
@@ -59,6 +60,9 @@ export default function CorporateServicesUaeCta({
         variant === "mainland"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[65px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
           : "py-[40px] lg:py-13 xl:py-[50px] 2xl:py-17 3xl:py-22",
+        variant === "e-invoicing"
+          ? "py-[45px] lg:py-[65px_45px] xl:py-[65px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
+          : "py-[40px] lg:py-13 xl:py-[50px] 2xl:py-17 3xl:py-22",
         variant === "CorporateTaxUae"
           ? "py-[45px] lg:py-[65px_45px] xl:py-[65px] 2xl:py-[100px_70px] 3xl:py-[125px_85px]"
           : "py-[40px] lg:py-13 xl:py-[50px] 2xl:py-17 3xl:py-22",
@@ -69,11 +73,14 @@ export default function CorporateServicesUaeCta({
           className={cn(
             "w-full md:max-w-[1069px] h-auto mx-auto rounded-[20px] 2xl:rounded-[25px] overflow-hidden relative z-0 flex flex-wrap items-center",
             variant === "mainland"
-              ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
-              : "p-[50px_30px] lg:p-[60px_45px] xl:p-[55px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
+              ? " p-[50px_30px]  sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
+              : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
+            variant === "e-invoicing"
+              ? "max-sm:!p-[40px_21px_37px_31px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA]"
+              : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "CorporateTaxUae"
               ? "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] max-sm:min-h-[354px]"
-              : "p-[50px_30px] lg:p-[60px_45px] xl:p-[55px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
+              : "p-[50px_30px] lg:p-[60px_45px] xl:p-[54.9px_52px] 2xl:p-[70px_50px] 3xl:p-[90px_70px] bg-linear-to-t from-[#6A9FE0] to-[#053269]",
             variant === "saifz" &&
               "p-[50px_30px] sm:p-[35px] xl:p-[45px] 2xl:p-[55px] 3xl:p-[70px] bg-gradient-to-b from-[#053269] via-[#5596CA]/50% to-[#3EB0EA]",
             variant === "ADGM-Foundations" &&
@@ -90,6 +97,7 @@ export default function CorporateServicesUaeCta({
             variant === "internal-audit" && "xl:min-h-[289px]",
             variant === "ifza" && "xl:min-h-[289px] xl:p-[67px_52px_67px]",
             variant === "AuditServicesUae" && "max-sm:py-[38px_40px]",
+           
             variant === "erm" &&
               "p-[30px_15px_35px_30px] sm:p-[35px] xl:p-[80px_52px]   bg-gradient-to-t from-[#053269] via-[#5596CA] to-[#3EB0EA] xl:min-h-[289px]",
           )}
@@ -120,6 +128,7 @@ export default function CorporateServicesUaeCta({
             className={cn(
               "w-full max-lg:mb-3.75",
               variant === "mainland" ? "lg:w-[65%]" : "lg:w-[70%]",
+              variant === "e-invoicing" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "CorporateTaxUae" ? "lg:w-[65%]" : "lg:w-[70%]",
               variant === "rakez" ? "lg:w-[70%]" : "",
               variant === "dwtc" ? "lg:w-[64%]" : "",
@@ -167,6 +176,7 @@ export default function CorporateServicesUaeCta({
             className={cn(
               "w-full lg:w-[33%] flex lg:justify-end",
               variant === "mainland" ? "lg:w-[35%]" : "lg:w-[30%]",
+              variant === "e-invoicing" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "CorporateTaxUae" ? "lg:w-[35%]" : "lg:w-[30%]",
               variant === "rakez" ? "lg:w-[30%]" : "",
               variant === "dwtc" ? "lg:w-[36%]" : "",
@@ -185,6 +195,8 @@ export default function CorporateServicesUaeCta({
               className={cn(
                 "text-[12.58px] sm:text-[14px] lg:text-[16px] xl:text-[19.2px] 2xl:text-[20px] 3xl:text-[26px] leading-none max-sm:rounded-[6px] !font-medium text-black !px-[5px] min-w-[118px] xl:min-w-[178.6px] 2xl:min-w-[190px] !px-[5px] h-[30px] sm:h-[45px] xl:h-[48.2px] 3xl:h-[60px] max-sm:rounded-[6px] bg-[#FFC916]",
                 variant === "mainland" &&
+                  "px-[20px] xl:px-[30px] 3xl:px-[35px]",
+                variant === "e-invoicing" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
                 variant === "CorporateTaxUae" &&
                   "px-[20px] xl:px-[30px] 3xl:px-[35px]",
