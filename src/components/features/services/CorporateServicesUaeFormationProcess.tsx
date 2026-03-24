@@ -343,6 +343,7 @@ export default function CorporateServicesUaeFormationProcess({
                             variant === "erm" && "max-sm:text-[16px]",
                             variant === "sop" && "max-sm:text-[16px]",
                             variant === "mainland" && "max-sm:text-[16px]",
+                            variant === "tax-advisory" && "max-sm:text-[16px]",
                           )}
                         >
                           {parse(data.steps[activeStep].inner_title)}

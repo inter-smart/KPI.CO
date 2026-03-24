@@ -47,6 +47,7 @@ export type CorporateServicesUaeFaqProps = {
     | "AuditServicesUae"
     | "internal-audit"
     | "regulatory"
+    | "ADGM-Foundations"
     | "ADGM-Spv-Formation";
 };
 
@@ -112,6 +113,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "internal-audit" && "last:border-b-1",
                   variant === "side-arrow" && "last:border-b-1",
                   variant === "difc-formation" && "last:border-b-1",
+                  variant === "ADGM-Foundations" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger

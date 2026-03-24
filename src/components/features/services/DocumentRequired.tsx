@@ -130,7 +130,7 @@ export default function DocumentRequired({
               variant === "VatServicesUae" &&
                 "xl:w-[calc(100%-475px)] xl:pr-[50px]",
               variant === "Formation-JAFZA" &&
-                "xl:w-[calc(100%-475px)] xl:pr-[150px]",
+                "xl:w-[calc(100%-473px)] xl:pr-[150px]",
               variant === "CorporateTaxUae" &&
                 "xl:w-[calc(100%-520px)] xl:pr-[50px]",
             )}
@@ -307,9 +307,10 @@ export default function DocumentRequired({
             {data?.ftr_description && (
               <div
                 className={cn(
-                  "mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[22px] font-normal text-[#4E4E4E] max-md:[&_br]:hidden",
+                  "mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[22px] font-normal leading-normal text-[#4E4E4E] max-md:[&_br]:hidden",
                   ["AuditServicesUae", "AuditServicesUaes"].includes(variant) &&
                     "[&_p]:mb-[15px] lg:[&_p]:mb-[25px] [&>p:last-of-type]:mb-0",
+                    variant === "Formation-JAFZA" && "xl:mt-[30.82px]"
                 )}
               >
                 {parse(data.ftr_description)}
@@ -328,7 +329,7 @@ export default function DocumentRequired({
                 variant === "AuditServicesUae" && "xl:w-[473px]",
                 variant === "internal-audit" && "xl:w-[473px]",
                 variant === "AuditServicesUaes" && "xl:w-[517px]",
-                variant === "Formation-JAFZA" && "xl:w-[475px]",
+                variant === "Formation-JAFZA" && "xl:w-[473px]",
                 variant === "Financial-Statement-Audit" && "xl:w-[475px]",
                 variant === "VatServicesUae" && "xl:w-[473px]",
                 variant === "CorporateTaxUae" && "xl:w-[520px]",

@@ -39,7 +39,7 @@ function SetupOptionCard({
   return (
     <div
       className={cn(
-        "flex-[0_0_75%] sm:flex-[0_0_45%] lg:flex-[0_0_33.333%] min-w-0 select-none",
+        "flex-[0_0_75%] sm:flex-[0_0_45%] lg:flex-[0_0_33.334%] min-w-0 select-none",
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -47,6 +47,7 @@ function SetupOptionCard({
       <motion.div
         className={cn(
           "group w-full aspect-square sm:aspect-53/56 relative z-0 overflow-hidden relative",
+          variant === "technology" && "xl:min-h-[423px]",
         )}
         initial={false}
       >
