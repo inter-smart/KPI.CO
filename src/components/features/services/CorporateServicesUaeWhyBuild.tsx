@@ -276,6 +276,7 @@ export default function CorporateServicesUaeWhyBuild({
             className={cn(
               "text-[#1C5396] mb-3 sm:mb-5 xl:mb-[30px] capitalize",
               variant === "technology" && "xl:mb-[28px]",
+              variant === "offshore" && "normal-case",
             )}
           >
             {data.title}

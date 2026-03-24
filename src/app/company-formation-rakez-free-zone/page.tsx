@@ -562,8 +562,11 @@ export default function page() {
         variant="rakez"
       />
       <CorporateServicesUaeCta data={localData.cta} variant="rakez" />
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="rakez" />
-        <HomeOurInsights />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="rakez"
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

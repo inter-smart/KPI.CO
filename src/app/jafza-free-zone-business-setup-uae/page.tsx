@@ -458,7 +458,7 @@ export default function DwtcFreezone() {
         variant="JAFZA-Freezone"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

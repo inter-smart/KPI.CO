@@ -441,18 +441,18 @@ export default function StandardOperatingProceduresUaePage() {
         data={localData?.whyChoose}
         variant="SOP"
       />
-      <CorporateServicesUaeServices
-        data={localData?.services}
-        variant="SOP"
-      />
+      <CorporateServicesUaeServices data={localData?.services} variant="SOP" />
       <CorporateServicesUaeFormationProcess
         variant="sop"
         data={localData?.formationProcess}
       />
       <VatRelatedTax data={localData.vatRelatedTax} variant="sop" />
-      <CorporateServicesUaeCta data={localData.cta} variant="sop"/>
-      <CorporateServicesUaeFaq data={localData.corporate_faq_data} variant="sop"/>
-       <HomeOurInsights  variant="home"/>
+      <CorporateServicesUaeCta data={localData.cta} variant="sop" />
+      <CorporateServicesUaeFaq
+        data={localData.corporate_faq_data}
+        variant="sop"
+      />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

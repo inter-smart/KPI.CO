@@ -73,6 +73,7 @@ export default function CorporateServicesUaeBanking({
         variant === "company" && " shadow-none",
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
+        variant === "RAK-Offshore-Two" && "!shadow-none",
         variant === "JAFZA-Freezone" && "!pt-5 max-sm:shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
         variant === "dmcc" &&
@@ -103,6 +104,7 @@ export default function CorporateServicesUaeBanking({
               : "sm:text-center",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
             variant === "RAK-Offshore" && "xl:mb-[40px]",
+            variant === "RAK-Offshore-Two" && "hidden",
           )}
         >
           <Heading
