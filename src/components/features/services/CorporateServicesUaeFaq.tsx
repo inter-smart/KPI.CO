@@ -39,6 +39,7 @@ export type CorporateServicesUaeFaqProps = {
     | "rakez"
     | "dwtc"
     | "sop"
+    | "difc-formation"
     | "ADGM-SPV-Formation"
     | "CorporateServicesUae"
     | "Formation-JAFZA"
@@ -110,6 +111,7 @@ export default function CorporateServicesUaeFaq({
                   variant === "ADGM-SPV-Formation" && "last:border-b-1",
                   variant === "internal-audit" && "last:border-b-1",
                   variant === "side-arrow" && "last:border-b-1",
+                  variant === "difc-formation" && "last:border-b-1",
                 )}
               >
                 <AccordionTrigger

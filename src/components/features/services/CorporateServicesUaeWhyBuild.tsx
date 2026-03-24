@@ -106,7 +106,7 @@ function WhyBuildCard({
         variant === "dwtc" && "xl:!p-[20px_15px_15px_15px] xl:min-h-[225px]",
         variant === "erm" && "max-sm:p-[20px_15px]",
         variant === "formation" && "max-sm:p-[20.12px_15.74px] max-sm:min-h-[225.2px]",
-        variant === "difc-formation" && "!p-[20px_15px_37px] xl:min-h-[226px]",
+        variant === "difc-formation" && "!p-[20px_15px_36.4px] xl:min-h-[226px]",
       )}
     >
       <div
@@ -149,7 +149,7 @@ function WhyBuildCard({
             "max-sm:text-[16px] xl:text-[18px]",
           variant === "AuditServicesUae" && "max-xl:text-[16px]",
           variant === "formation" && "max-xl:text-[16px] tracking-[-0.1px]",
-           variant === "difc-formation" && "text-[16px] xl:text-[18px] leading-[100%]",
+           variant === "difc-formation" && "max-sm:text-[16px] xl:text-[18px] leading-[100%]",
         )}
       >
         {item.title}
