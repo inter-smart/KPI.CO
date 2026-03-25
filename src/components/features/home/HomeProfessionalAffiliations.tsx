@@ -66,10 +66,10 @@ export default function HomeProfessionalAffiliations({ data }: HomeProfessionalA
               <div
                 key={`affiliation-${item.id}`}
                 className={cn(
-                  'flex-[0_0_113px] sm:flex-[0_0_200px] lg:flex-[0_0_240px] 2xl:flex-[0_0_300px] 3xl:flex-[0_0_360px] min-w-0 select-none',
+                  'flex-[0_0_113px] sm:flex-[0_0_200px] lg:flex-[0_0_240px] xl:flex-[0_0_300px] 3xl:flex-[0_0_360px] min-w-0 select-none',
                 )}
               >
-                <div className="w-[113.25px] h-[62px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[4.13px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_5.37px_7.85px_0_rgba(0,0,0,0.07)] md:shadow-[0_12px_25px_0_rgba(0,0,0,0.1)] hover:shadow-xl transition">
+                <div className="w-full h-[62px] md:h-[100px] xl:h-[150px] 2xl:h-[160px] rounded-[4.13px] xl:rounded-[10px] flex items-center justify-center bg-white shadow-[0_5.37px_7.85px_0_rgba(0,0,0,0.07)] md:shadow-[0_12px_25px_0_rgba(0,0,0,0.1)] hover:shadow-xl transition">
                   <div className="w-[71.92px] md:w-[120px] xl:w-[150px] 2xl:w-[180px] ">
                     <Image
                       src={item.media.path || '/images/placeholder-image.png'}
