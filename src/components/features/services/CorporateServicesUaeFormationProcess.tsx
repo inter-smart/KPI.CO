@@ -61,30 +61,32 @@ export default function CorporateServicesUaeFormationProcess({
   const [activeStep, setActiveStep] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Detect desktop (lg breakpoint = 1024px)
+  // GSAP ScrollTrigger for pinning + step progression
   useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-    checkDesktop();
-    window.addEventListener("resize", checkDesktop);
-    return () => window.removeEventListener("resize", checkDesktop);
-  }, []);
+    if (!triggerRef.current || !sectionRef.current) return;
 
-  // GSAP ScrollTrigger for desktop pinning + step progression
-  useEffect(() => {
-    if (!isDesktop || !triggerRef.current || !sectionRef.current) return;
+    // Fix for mobile address bar jitter
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     const totalSteps = data.steps.length;
-    const scrollPerStep = 300; // pixels of scroll per step
-    const totalScrollDistance = scrollPerStep * (totalSteps - 1);
+    let mm = gsap.matchMedia();
 
-    const ctx = gsap.context(() => {
+    mm.add({
+      // Desktop setup
+      isDesktop: "(min-width: 1024px)",
+      // Mobile setup
+      isMobile: "(max-width: 1023px)",
+    }, (context) => {
+      let { isDesktop, isMobile } = context.conditions as { isDesktop: boolean; isMobile: boolean };
+
+      const scrollPerStep = isDesktop ? 300 : 200; // pixels of scroll per step
+      const totalScrollDistance = scrollPerStep * (totalSteps - 1);
+
       ScrollTrigger.create({
         trigger: triggerRef.current,
-        start: "top 50px",
+        start: isDesktop ? "top 50px" : "top 80px",
         end: `+=${totalScrollDistance}`,
         pin: sectionRef.current,
         pinSpacing: true,
@@ -96,12 +98,27 @@ export default function CorporateServicesUaeFormationProcess({
             totalSteps - 1,
           );
           setActiveStep(stepIndex);
+
+          // Horizontal scroll sync for mobile steps container
+          if (isMobile && scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const targetStep = container.children[stepIndex] as HTMLElement;
+            if (targetStep) {
+              container.scrollTo({
+                left: targetStep.offsetLeft - (container.offsetWidth / 2) + (targetStep.offsetWidth / 2),
+                behavior: "smooth"
+              });
+            }
+          }
         },
       });
-    }, triggerRef);
+      return () => {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+      };
+    });
 
-    return () => ctx.revert();
-  }, [isDesktop, data.steps.length]);
+    return () => mm.revert();
+  }, [data.steps.length]);
 
   return (
     <div ref={triggerRef}>
@@ -180,6 +197,7 @@ export default function CorporateServicesUaeFormationProcess({
           >
             <div className="flex items-center">
               <div
+                ref={scrollContainerRef}
                 className={cn(
                   "flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ",
                   variant === "aup" && "xl:space-y-[54px]",
