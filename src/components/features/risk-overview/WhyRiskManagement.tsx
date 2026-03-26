@@ -15,9 +15,19 @@ export default function WhyRiskManagement({
   variant = "default",
 }: WhyRiskProps) {
   return (
-    <section className={cn("w-full py-[45px_0] md:py-[45px_55px] xl:py-[100px_85px] 3xl:py-[125px_50px] bg-white overflow-hidden",variant === "Tax-Advisory" && "xl:py-[94px_70px]")}>
+    <section
+      className={cn(
+        "w-full py-[45px_0] md:py-[45px_55px] xl:py-[100px_85px] 3xl:py-[125px_50px] bg-white overflow-hidden",
+        variant === "Tax-Advisory" && "xl:py-[94px_72px]",
+      )}
+    >
       <div className="container">
-        <div className={cn("flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[20px] 3xl:mb-[35px]",variant === "Tax-Advisory" && "xl:mb-0")}>
+        <div
+          className={cn(
+            "flex flex-col lg:flex-row max-sm:flex-col-reverse gap-[25px] 2xl:gap-[30px] mb-[20px] xl:mb-[20px] 3xl:mb-[35px]",
+            variant === "Tax-Advisory" && "xl:mb-0",
+          )}
+        >
           {/* Left Content */}
           <div className="w-full lg:w-[calc(100%-395px)] xl:w-[calc(100%-514px)] 2xl:w-[calc(100%-510px)] 3xl:w-[calc(100%-680px)] lg:pr-[30px]">
             <div className="w-full">
@@ -67,7 +77,6 @@ export default function WhyRiskManagement({
               </div>
             </div>
           </div>
-
           {/* Right Image */}
           <div className="w-full lg:w-[395px] xl:w-[514px] 2xl:w-[510px] 3xl:w-[680px]">
             <Heading

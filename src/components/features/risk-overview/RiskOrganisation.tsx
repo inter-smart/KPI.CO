@@ -162,11 +162,11 @@ export default function RiskOrganisation({
                   >
                     <span
                       className={cn(
-                        "absolute left-0 top-[2px] xl:top-[4.5px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
+                        "absolute left-0 top-[2px] xl:top-[3px] w-[16px] 2xl:w-[18px] h-[16px] 2xl:h-[18px]",
                         variant === "ADGM-SPV-Formation" && "xl:top-[3.5]",
                       )}
                     >
-                      {["dwtc", "difc-regulated"].includes(variant) ? (
+                      {["dwtc", "difc-regulated", "dwtc-bg"].includes(variant) ? (
                         <svg
                           width="100%"
                           height="100%"
@@ -257,7 +257,8 @@ export default function RiskOrganisation({
                 variant === "difc-regulated" && "xl:!max-h-[357px]",
                 variant === "ADGM-SPV-Formation" && "xl:!max-h-[390px]",
                 variant === "SOP" && "max-sm:max-w-[329px]",
-                variant === "JAFZA-Freezone" && "xl:max-w-[459px] xl:max-h-[329px]",
+                variant === "JAFZA-Freezone" &&
+                  "xl:max-w-[459px] xl:max-h-[329px]",
               )}
             >
               {data?.media?.path && (

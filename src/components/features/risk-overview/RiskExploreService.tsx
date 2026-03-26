@@ -80,7 +80,12 @@ export default function RiskExploreService({
   );
 
   return (
-    <section className="w-full py-8 xl:py-[50px_90px] 2xl:py-[80px_110px] bg-[#F9F9F9] overflow-hidden">
+    <section
+      className={cn(
+        "w-full py-8 xl:py-[50px_90px] 2xl:py-[80px_110px] bg-[#F9F9F9] overflow-hidden",
+        variant === "holding" && "max-sm:py-[46px_49px]",
+      )}
+    >
       <div className="container max-sm:pr-0">
         <Heading
           as="h2"
@@ -106,8 +111,7 @@ export default function RiskExploreService({
                 "flex touch-pan-y touch-pinch-zoom -mx-[12px] lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-[12px] lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
                 variant === "ADGM-Foundations" &&
                   "max-sm:!-mx-[12px] max-sm:[&>*]:!p-[12px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
-                variant === "erm" &&
-                  "xl:-mx-[12px] xl:[&>*]:p-[12px]",
+                variant === "erm" && "xl:-mx-[12px] xl:[&>*]:p-[12px]",
               )}
             >
               {data.items.map((item) => (

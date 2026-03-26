@@ -63,7 +63,9 @@ export default function MeydanFreeZone({
       )}
     >
       <div className="container max-sm:px-[16.1px]">
-        <div className="typography">
+        <div
+          className={cn("typography", variant === "Tax-Advisory" && "hidden")}
+        >
           <Heading
             as="div"
             size="h2"

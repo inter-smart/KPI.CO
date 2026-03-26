@@ -419,7 +419,10 @@ export default function DwtcFreezone() {
         data={localData.contactUs}
         variant="ADGM-Foundations"
       />
-      <CorporateServicesUaeFaq data={localData.difc_faq_data} variant="ADGM-Foundations" />
+      <CorporateServicesUaeFaq
+        data={localData.difc_faq_data}
+        variant="ADGM-Foundations"
+      />
       <HomeOurInsights variant="Our-Insights" />
     </>
   );
