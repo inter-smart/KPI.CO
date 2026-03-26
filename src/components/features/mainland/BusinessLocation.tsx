@@ -31,6 +31,7 @@ type BusinessLocationProps = {
     | "Mainland"
     | "Formation-ADGM"
     | "difc-formation"
+    | "JAFZA-Freezone"
     | "RAK-Offshore";
 };
 
@@ -64,7 +65,10 @@ export default function BusinessLocation({
             {data.description}
           </div>
         </div>
-        <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-[28px] 2xl:gap-8" , variant === "Formation-ADGM" && "xl:gap-[28px_24px] xl:mr-[12px]")}>
+        <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-[28px] 2xl:gap-8" ,
+           variant === "Formation-ADGM" && "xl:gap-[28px_24px] xl:mr-[12px]",
+           variant === "JAFZA-Freezone" && " xl:mr-[4px]",
+           )}>
           {data.items.map((item) => (
             <div
               key={item.id}

@@ -490,12 +490,15 @@ export default function DwtcFreezone() {
         variant="RAK-Offshore-Two"
       />
       <RiskOrganisation data={localData.whyWorkWith} variant="RAK-Offshore" />
-      <CorporateServicesUaeCta data={localData.contactUs} variant="RAK-Offshore" />
+      <CorporateServicesUaeCta
+        data={localData.contactUs}
+        variant="RAK-Offshore"
+      />
       <CorporateServicesUaeFaq
         variant="RAK-Offshore"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

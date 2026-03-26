@@ -447,18 +447,18 @@ export default function DwtcFreezone() {
         data={localData.banking}
         variant="JAFZA-Freezone"
       />
-      <BusinessLocation data={localData.businessLocation} />
+      <BusinessLocation data={localData.businessLocation} variant="JAFZA-Freezone" />
       <CorporateServicesUaeBanking
         data={localData.logoimage}
         variant="JAFZA-Freezone"
       />
       <RiskOrganisation data={localData.whyWorkWith} variant="JAFZA-Freezone" />
-      <CorporateServicesUaeCta data={localData.contactUs} />
+      <CorporateServicesUaeCta data={localData.contactUs} variant="JAFZA-Freezone"  />
       <CorporateServicesUaeFaq
         variant="JAFZA-Freezone"
         data={localData.corporate_faq_data}
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

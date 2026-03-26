@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { MediaItem } from "../page"; 
+import { MediaItem } from "../page";
 import { blogData } from "@/data/blogData";
 import InnerHero from "@/components/common/InnerHero";
 import HomeOurInsights from "@/components/features/home/HomeOurInsights";
@@ -469,7 +469,7 @@ export default function CompanyFormationOffshoreUaePage() {
         data={localData.corporate_faq_data}
         variant="RAK-Offshore"
       />
-      <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import parse from "html-react-parser";
 import { Heading, Text } from "@/components/utils/typography";
@@ -293,6 +292,10 @@ export default function MainlandBusiness({
                   "max-sm:h-[437px] lg:h-auto lg:aspect-517/549 xl:min-h-[549px] max-sm:max-w-[330px]",
                 variant === "e-invoicing" &&
                   "max-sm:h-[378px]   max-sm:max-w-[329px]",
+                variant === "JAFZA-Freezone" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[333px]",
+                variant === "company-freezone" &&
+                  "max-sm:h-[378px]   max-sm:max-w-[330px]",
               )}
             >
               <Image

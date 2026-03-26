@@ -1,4 +1,6 @@
 "use client";
+import { useMemo, useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
@@ -40,17 +42,37 @@ export default function CorporateServicesUaeBanking({
   data,
   variant = "default",
 }: CorporateServicesUaeBankingProps) {
-  const [emblaRef] = useEmblaCarousel(
-    {
-      loop: data?.partners?.length > 4,
-      align: "center",
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isMobile = useMediaQuery({ maxWidth: 639 });
+  const threshold = mounted && isMobile ? 3 : 4;
+
+  const options = useMemo(
+    () => ({
+      loop: data?.partners?.length > threshold,
+      align: "center" as const,
       slidesToScroll: 1,
-      containScroll: "trimSnaps",
-    },
-    data?.partners?.length > 4
-      ? [Autoplay({ delay: 2500, stopOnInteraction: true })]
-      : [],
+      containScroll: "trimSnaps" as const,
+    }),
+    [data?.partners?.length, threshold],
   );
+
+  const plugins = useMemo(() => {
+    return data?.partners?.length > threshold
+      ? [
+          Autoplay({
+            delay: 2000,
+            stopOnInteraction: false,
+            stopOnMouseEnter: true,
+          }),
+        ]
+      : [];
+  }, [data?.partners?.length, threshold]);
+
+  const [emblaRef] = useEmblaCarousel(options, plugins);
   return (
     <section
       className={cn(
@@ -69,6 +91,7 @@ export default function CorporateServicesUaeBanking({
         variant === "company" && " shadow-none",
         variant === "ifza" && " shadow-none",
         variant === "downshadow" && "!pt-5 shadow-none",
+        variant === "RAK-Offshore-Two" && "!shadow-none",
         variant === "JAFZA-Freezone" && "!pt-5 max-sm:shadow-none",
         variant === "dwtc" && "!pt-[48px] !shadow-none",
         variant === "dmcc" &&
@@ -99,6 +122,7 @@ export default function CorporateServicesUaeBanking({
               : "sm:text-center",
             variant === "CorporateServicesUae" && "xl:mb-[40px]",
             variant === "RAK-Offshore" && "xl:mb-[40px]",
+            variant === "RAK-Offshore-Two" && "hidden",
           )}
         >
           <Heading
@@ -129,7 +153,8 @@ export default function CorporateServicesUaeBanking({
                   : "lg:max-w-195 2xl:max-w-295 mx-auto",
               variant === "company-freezone" && "text-left capitalize ",
               variant === "saifz" && "text-left !max-w-full",
-              variant === "company" && "text-left !max-w-full max-sm:text-[18px] max-sm:pr-[10px]",
+              variant === "company" &&
+                "text-left !max-w-full max-sm:text-[18px] max-sm:pr-[10px]",
               variant === "ifza" && "text-left !max-w-full ",
               variant === "downshadow" && "text-left !max-w-full ",
               variant === "JAFZA-Freezone" && "text-left !max-w-full ",
@@ -148,7 +173,7 @@ export default function CorporateServicesUaeBanking({
               variant === "downshadow" &&
                 "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
               variant === "JAFZA-Freezone" &&
-                "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 2xl:[&>*]:px-5.5 3xl:[&>*]:px-8.75 [&>*]:py-0",
+                "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 xl:px-[25px] [&>*]:py-0",
             )}
           >
             {data?.partners?.map((item) => (
@@ -156,6 +181,7 @@ export default function CorporateServicesUaeBanking({
                 key={`affiliation-${item?.id}`}
                 className={cn(
                   "flex-[0_0_133.25px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] xl:flex-[0_0_324px] min-w-0 select-none",
+                  variant === "JAFZA-Freezone" && "xl:flex-[0_0_324px] ",
                 )}
               >
                 <div

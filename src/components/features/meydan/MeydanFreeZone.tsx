@@ -37,6 +37,7 @@ interface MeydanFreeZoneProps {
     | "Tax-Advisory"
     | "default"
     | "ifza"
+    | "rakez"
     | "JAFZA-Freezone"
     | "e-invoice"
     | "regulatory"
@@ -57,9 +58,11 @@ export default function MeydanFreeZone({
         variant === "audit" && "!pt-0 !pb-4",
         variant === "ADGM-Foundation" && "max-sm:!pt-0 max-sm:!pb-4",
         variant === "MeydanFreeZone" && "xl:py-[48px_70px]",
+        variant === "Tax-Advisory" && "xl:py-[48px_70px]",
+        variant === "JAFZA-Freezone" && "max-sm:!py-[10px]",
       )}
     >
-      <div className="container">
+      <div className="container max-sm:px-[16.1px]">
         <div className="typography">
           <Heading
             as="div"
@@ -95,6 +98,8 @@ export default function MeydanFreeZone({
 
             variant === "ifza" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
+            variant === "rakez" &&
+              "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
             variant === "JAFZA-Freezone" &&
               "sm:gap-[15px] lg:gap-[20px] xl:gap-[32px] 2xl:gap-[35px] 3xl:gap-[40px]",
 
@@ -119,18 +124,25 @@ export default function MeydanFreeZone({
                   // variant === "difc-regulated" && "xl:pr-[15px]",
                   variant === "ifza" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                  variant === "rakez" &&
+                    "to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   variant === "RAK-Offshore" && "xl:p-[65.76px_35px]",
+                  variant === "Tax-Advisory" &&
+                    "max-sm:p-[31px_12px_51px_12px]",
                   variant === "MeydanFreeZone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_45px_34px]",
+
                   variant === "DMCC-Freezone" &&
                     "max-sm:min-h-[355px] max-sm:p-[31px_12px_30px_12px] xl:p-[48px_44px_34px_34px]",
                   variant === "ifza" &&
                     "to-[#EFF6FF] border-[#1C5396] border-[1px] sm:border-1 lg:border-2",
+                  variant === "rakez" &&
+                    "to-[#EFF6FF] border-[#1C5396] border-[1px] sm:border-1 lg:border-2 max-sm:p-[31px_12px_17px]",
                   variant === "JAFZA-Freezone" &&
-                    "max-sm:p-[48px_34px_20px] to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
+                    "max-sm:p-[31px_12px_20px] to-[#EFF6FF] border-[#1C5396] border-[1.5px] sm:border-1 lg:border-2",
                   index % 2 !== 0
-                    ? "to-[#FEFCE8] border-[#FFCB18]"
-                    : "to-[#EFF6FF] border-[#5280CA]",
+                    ? "to-[#FEFCE8] border-[#FFCB18] max-sm:min-h-[355px]"
+                    : "to-[#EFF6FF] border-[#5280CA] max-sm:min-h-[395px]",
                 )}
               >
                 <div
@@ -152,6 +164,7 @@ export default function MeydanFreeZone({
                     variant === "difc-regulated" && "sm:!text-[#1C5396]",
                     variant === "MeydanFreeZone" && "xl:mb-[19px]",
                     variant === "Tax-Advisory" && "font-semibold",
+                    variant === "rakez" && "max-sm:text-[24px]",
                   )}
                 >
                   {parse(item?.title)}
@@ -162,6 +175,7 @@ export default function MeydanFreeZone({
                       "text-[14px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-[1.6] font-normal text-[#4E4E4E] mb-[16px] max-sm:!mb-[20px]",
                       variant === "ADGM-Foundation" && "xl:mb-[25px]",
                       variant === "ifza" && "hidden",
+                      variant === "rakez" && "hidden",
                       variant === "JAFZA-Freezone" && "hidden",
                     )}
                   >
@@ -185,6 +199,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "sm:mb-[20px]",
                     variant === "ifza" && "mb-0",
+                    variant === "rakez" && "mb-0",
                     variant === "JAFZA-Freezone" && "mb-0",
                     variant === "DMCC-Freezone" && "xl:mb-0",
                   )}
@@ -193,9 +208,9 @@ export default function MeydanFreeZone({
                     <li
                       key={i}
                       className={cn(
-                        "w-full h-auto pl-[25px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[10px] xl:mb-[13px] last-of-type:!mb-0 relative z-0 tracking-[-0.5px] before:content-[''] before:w-[16.67px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[3px] xl:before:top-[3px]",
+                        "w-full h-auto pl-[25px] sm:pl-[25px] xl:pl-[32px] 2xl:pl-[35px] 3xl:pl-[40px] mb-[9px] xl:mb-[13px] last-of-type:!mb-0 relative z-0 tracking-[-0.5px] before:content-[''] before:w-[16.67px] sm:before:w-[18px] xl:before:w-[20px] 3xl:before:w-[25px] before:aspect-square before:bg-no-repeat before:bg-contain before:absolute before:left-0 before:top-[4px] xl:before:top-[3px]",
                         variant === "JAFZA-Freezone" &&
-                          "max-sm:before:top-[2px]",
+                          "max-sm:before:top-[4px]",
                         variant === "MeydanFreeZone" &&
                           "xl:mb-[16px] xl:pl-[30px]",
                         variant === "DMCC-Freezone" &&
@@ -211,7 +226,8 @@ export default function MeydanFreeZone({
                           variant === "ADGM-Foundation" &&
                             "text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-[1.6]",
                           variant === "difc" && "text-[14px] xl:text-[16px] ",
-                          variant === "RAK-Offshore" && "text-[14px] xl:text-[16px] ",
+                          variant === "RAK-Offshore" &&
+                            "text-[14px] xl:text-[16px] ",
                         )}
                       >
                         {parse(zone)}
@@ -223,7 +239,7 @@ export default function MeydanFreeZone({
                   <div
                     className={cn(
                       "mt-[20px] sm:mt-[10px] xl:mt-[25px] 2xl:mt-[20px] text-[16px] sm:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[24px] leading-normal font-normal text-[#4E4E4E]",
-                        variant === "difc" && "text-[14px] xl:text-[16px] ",
+                      variant === "difc" && "text-[14px] xl:text-[16px] ",
                       variant === "Tax-Advisory" && "max-sm:text-[14px]",
                     )}
                   >
@@ -242,6 +258,7 @@ export default function MeydanFreeZone({
                   className={cn(
                     "w-full h-full rounded-[15px]   overflow-hidden block relative z-0 before:content-[''] before:w-[15px] before:h-full before:bg-linear-to-t before:from-[#6A9FE0] before:to-[#053269] before:absolute before:-z-2 before:inset-0 after:content-[''] after:w-full after:h-full after:bg-[#F8F8F8] after:rounded-[15px] after:absolute after:-z-1 after:inset-0 after:translate-x-[2px]",
                     variant === "ifza" && "after:xl:translate-x-[3px]",
+                    variant === "rakez" && "after:xl:translate-x-[3px]",
                     variant === "JAFZA-Freezone" &&
                       "after:xl:translate-x-[3px]",
                     variant === "MeydanFreeZone" && "max-sm:min-h-[212px]",
@@ -254,6 +271,7 @@ export default function MeydanFreeZone({
                       "relative w-full h-full p-[23px_35px] sm:p-[25px] xl:p-[32px_36px_28px] 2xl:p-[35px_40px] 3xl:p-[40px_50px] overflow-hidden rounded-[15px] after:absolute after:content-[''] after:rounded-[15px] after:top-0 after:right-0 after:w-[calc(100%-3px)] after:h-full after:bg-[#F8F8F8] after:-z-1 z-0",
                       variant === "difc" && " xl:p-[37px_36px_32px]",
                       variant === "ifza" && " xl:p-[32px_36px_33px]",
+                      variant === "rakez" && " xl:p-[32px_36px_33px]",
                       variant === "DMCC-Freezone" &&
                         " xl:p-[32px_49px_30px_36px] xl:after:hidden",
                     )}
@@ -272,6 +290,7 @@ export default function MeydanFreeZone({
                         variant === "RAK-Offshore" &&
                           " text-[#1C5396] mb-[10px]",
                         variant === "ifza" && " text-[#1C5396] xl:mb-[8px]",
+                        variant === "rakez" && " text-[#1C5396] xl:mb-[8px]",
                         variant === "MeydanFreeZone" &&
                           "max-sm:mb-[5px] xl:mb-[8px]",
                         variant === "DMCC-Freezone" && "max-sm:mb-[2px]",
@@ -291,6 +310,7 @@ export default function MeydanFreeZone({
                         variant === "difc" &&
                           "!leading-[150%] sm:max-w-full [&_p]:last-of-type:mb-0",
                         variant === "ifza" && "xl:leading-[150%]",
+                        variant === "rakez" && "xl:leading-[150%]",
                       )}
                     >
                       {/* {item.description} */}

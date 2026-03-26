@@ -310,7 +310,10 @@ export default function page() {
   return (
     <>
       <InnerHero data={localData.hero} variant="e-invoicing" />
-      <MainlandBusiness data={localData.mainlandBusiness} variant="e-invoicing" />
+      <MainlandBusiness
+        data={localData.mainlandBusiness}
+        variant="e-invoicing"
+      />
       <CorporateServicesUaeFormationProcess
         variant="mainland"
         data={localData.formationProcess}
@@ -320,10 +323,10 @@ export default function page() {
         data={localData.whyChoose}
         variant="e-invoicing"
       />
-      <HomeCounter data={localData.counterList} variant="e-invoice"/>
-      <CorporateServicesUaeCta data={localData.cta} variant="e-invoicing"/>
+      <HomeCounter data={localData.counterList} variant="e-invoice" />
+      <CorporateServicesUaeCta data={localData.cta} variant="e-invoicing" />
 
-         <HomeOurInsights />
+      <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }

@@ -36,21 +36,21 @@ export type ProcessListItem = {
 
 export type CorporateServicesUaeFormationProcessProps = {
   variant?:
-  | "Vat-Services"
-  | "mainland"
-  | "Formation-ADGM"
-  | "aup"
-  | "sop"
-  | "default"
-  | "Financial-Statement-Audit"
-  | "tax-advisory"
-  | "erm"
-  | "risk"
-  | "internal-audit"
-  | "difc-regulated"
-  | "adgm-regulated"
-  | "company-freezone"
-  | "CorporateServicesUae";
+    | "Vat-Services"
+    | "mainland"
+    | "Formation-ADGM"
+    | "aup"
+    | "sop"
+    | "default"
+    | "Financial-Statement-Audit"
+    | "tax-advisory"
+    | "erm"
+    | "risk"
+    | "internal-audit"
+    | "difc-regulated"
+    | "adgm-regulated"
+    | "company-freezone"
+    | "CorporateServicesUae";
   data: CorporateServicesUaeFormationProcessData;
 };
 
@@ -61,30 +61,32 @@ export default function CorporateServicesUaeFormationProcess({
   const [activeStep, setActiveStep] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Detect desktop (lg breakpoint = 1024px)
+  // GSAP ScrollTrigger for pinning + step progression
   useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-    checkDesktop();
-    window.addEventListener("resize", checkDesktop);
-    return () => window.removeEventListener("resize", checkDesktop);
-  }, []);
+    if (!triggerRef.current || !sectionRef.current) return;
 
-  // GSAP ScrollTrigger for desktop pinning + step progression
-  useEffect(() => {
-    if (!isDesktop || !triggerRef.current || !sectionRef.current) return;
+    // Fix for mobile address bar jitter
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     const totalSteps = data.steps.length;
-    const scrollPerStep = 300; // pixels of scroll per step
-    const totalScrollDistance = scrollPerStep * (totalSteps - 1);
+    let mm = gsap.matchMedia();
 
-    const ctx = gsap.context(() => {
+    mm.add({
+      // Desktop setup
+      isDesktop: "(min-width: 1024px)",
+      // Mobile setup
+      isMobile: "(max-width: 1023px)",
+    }, (context) => {
+      let { isDesktop, isMobile } = context.conditions as { isDesktop: boolean; isMobile: boolean };
+
+      const scrollPerStep = isDesktop ? 300 : 200; // pixels of scroll per step
+      const totalScrollDistance = scrollPerStep * (totalSteps - 1);
+
       ScrollTrigger.create({
         trigger: triggerRef.current,
-        start: "top 50px",
+        start: isDesktop ? "top 50px" : "top 80px",
         end: `+=${totalScrollDistance}`,
         pin: sectionRef.current,
         pinSpacing: true,
@@ -96,12 +98,27 @@ export default function CorporateServicesUaeFormationProcess({
             totalSteps - 1,
           );
           setActiveStep(stepIndex);
+
+          // Horizontal scroll sync for mobile steps container
+          if (isMobile && scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const targetStep = container.children[stepIndex] as HTMLElement;
+            if (targetStep) {
+              container.scrollTo({
+                left: targetStep.offsetLeft - (container.offsetWidth / 2) + (targetStep.offsetWidth / 2),
+                behavior: "smooth"
+              });
+            }
+          }
         },
       });
-    }, triggerRef);
+      return () => {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+      };
+    });
 
-    return () => ctx.revert();
-  }, [isDesktop, data.steps.length]);
+    return () => mm.revert();
+  }, [data.steps.length]);
 
   return (
     <div ref={triggerRef}>
@@ -110,10 +127,10 @@ export default function CorporateServicesUaeFormationProcess({
         className={cn(
           "w-full block py-8 sm:py-10 xl:py-[50px_70px] 2xl:py-[60px_80px] bg-white ",
           (variant === "mainland" && "max-sm:pb-3") ||
-          (variant === "Formation-ADGM" && "max-sm:pb-[45px]") ||
-          (variant === "sop" && "max-sm:pb-3") ||
-          (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
-          (variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]"),
+            (variant === "Formation-ADGM" && "max-sm:pb-[45px]") ||
+            (variant === "sop" && "max-sm:pb-3") ||
+            (variant === "Vat-Services" && "py-[45px] xl:py-[48px_70px]"),
+          variant === "Financial-Statement-Audit" && "xl:py-[48px_70px]",
         )}
       >
         <div className="container">
@@ -135,7 +152,7 @@ export default function CorporateServicesUaeFormationProcess({
               variant === "aup" && "xl:mb-[32px]",
               variant === "Financial-Statement-Audit" && "xl:mb-[32px]",
               variant === "CorporateServicesUae" &&
-              "sm:text-center xl:mb-[30px]",
+                "sm:text-center xl:mb-[30px]",
             )}
           >
             <Heading
@@ -175,15 +192,17 @@ export default function CorporateServicesUaeFormationProcess({
             className={cn(
               "grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 xl:gap-3 2xl:gap-14",
               variant === "Vat-Services" && "items-center",
-              variant === "company-freezone" && "items-center",
+              variant === "company-freezone" && "items-center xl:gap-[6px]",
             )}
           >
             <div className="flex items-center">
               <div
+                ref={scrollContainerRef}
                 className={cn(
                   "flex flex-row lg:flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:space-y-7 xl:space-y-11 2xl:space-y-13 3xl:space-y-16 max-sm:-mr-4 ",
                   variant === "aup" && "xl:space-y-[54px]",
-                  variant === "Financial-Statement-Audit" && "xl:space-y-[54px]",
+                  variant === "Financial-Statement-Audit" &&
+                    "xl:space-y-[54px]",
                 )}
               >
                 {data.steps.map((step, index) => (
@@ -210,7 +229,7 @@ export default function CorporateServicesUaeFormationProcess({
                         data.steps.length === index + 1 && "hidden",
                         variant === "aup" && "xl:bottom-[-60px]",
                         variant === "Financial-Statement-Audit" &&
-                        "xl:bottom-[-60px]",
+                          "xl:bottom-[-60px]",
                       )}
                     />
 
@@ -234,9 +253,9 @@ export default function CorporateServicesUaeFormationProcess({
                           variant === "risk" && "sm:hidden",
                           variant === "sop" && "sm:hidden",
                           variant === "difc-regulated" &&
-                          "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           variant === "adgm-regulated" &&
-                          "max-sm:!block sm:!hidden",
+                            "max-sm:!block sm:!hidden",
                           index <= activeStep
                             ? "text-[#3eb0ea]"
                             : "text-[#a7a7a7]",
@@ -288,11 +307,13 @@ export default function CorporateServicesUaeFormationProcess({
                   variant === "mainland" && "xl:!min-h-[555px]",
                   variant === "Formation-ADGM" && "xl:!min-h-[555px]",
                   variant === "Financial-Statement-Audit" &&
-                  "xl:!min-h-[415px]",
+                    "xl:!min-h-[415px]",
                   variant === "Vat-Services" && "xl:!min-h-[455px]",
                   variant === "erm" && "xl:!min-h-[690px]",
                   variant === "aup" && "xl:!min-h-[555px]",
                   variant === "adgm-regulated" && " max-sm:!min-h-[316.08px]",
+                  variant === "company-freezone" &&
+                    " max-sm:!max-w-[340px] xl:min-h-[555px]",
                 )}
               >
                 <Image
@@ -300,7 +321,10 @@ export default function CorporateServicesUaeFormationProcess({
                   alt="background decoration"
                   width={400}
                   height={740}
-                  className={cn("absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none", variant === "erm" && "md:w-[210px] xl:w-[395px]")}
+                  className={cn(
+                    "absolute -z-1 top-0 right-0 bottom-0 w-[180px] xl:w-[270px] 2xl:w-[320px] 3xl:w-[380px] object-contain pointer-events-none",
+                    variant === "erm" && "md:w-[210px] xl:w-[395px]",
+                  )}
                 />
                 <AnimatePresence mode="wait">
                   <div key={activeStep} className="relative z-10 w-full">
@@ -315,11 +339,11 @@ export default function CorporateServicesUaeFormationProcess({
                             variant === "sop" && "sm:hidden",
                             variant === "erm" && "max-sm:text-[14px]",
                             variant === "difc-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                              "max-sm:!block sm:!hidden",
                             variant === "adgm-regulated" &&
-                            "max-sm:!block sm:!hidden",
+                              "max-sm:!block sm:!hidden",
                             variant === "Formation-ADGM" &&
-                            "sm:!block max-sm:!hidden",
+                              "sm:!block max-sm:!hidden",
                           )}
                         >
                           {data.steps[activeStep].step}
@@ -364,6 +388,7 @@ export default function CorporateServicesUaeFormationProcess({
                           variant === "internal-audit" && "leading-relaxed",
                           variant === "mainland" && "xl:text-[20px]",
                           variant === "Formation-ADGM" && "xl:text-[20px]",
+                          variant === "company-freezone" && "xl:text-[20px]",
                         )}
                       >
                         {parse(data.steps[activeStep].description)}
