@@ -190,7 +190,7 @@ function Service({ data, variant }: ServiceProps) {
             variant === "internal-audit" ||
             variant === "erm") &&
             "xl:p-[50px_30px_85px]",
-          variant === "erm" && "xl:!p-[77.17px_34.67px_54px_32px]",
+          variant === "erm" && "xl:!p-[74px_32px_50px_32px]",
         )}
       >
         <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">

@@ -15,6 +15,7 @@ import BusinessLocation, {
 
 export type MainlandBusinessData = {
   title: string;
+  saifz_mobile_title?: string;
   description: string;
   highlightsTitle: string;
   highlights: string[];

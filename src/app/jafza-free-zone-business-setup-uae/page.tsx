@@ -428,7 +428,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-};
+}; 
 
 export default function DwtcFreezone() {
   return (

@@ -13,6 +13,7 @@ import CorporateServicesUaeServices from "@/components/features/services/Corpora
 
 export type MainlandBusinessData = {
   title: string;
+  saifz_mobile_title?: string;
   description: string;
   highlightsTitle: string;
   highlights: string[];
@@ -161,6 +162,7 @@ const localData = {
   } satisfies HeroData,
   mainlandBusiness: {
     title: "Start a Business in Sharjah Airport International Free Zone",
+    saifz_mobile_title: "Start a Business in SAIF Free Zone",
     description:
       "<p>Sharjah Airport International Free Zone (SAIF Zone) is a dynamic and well-connected business hub located next to Sharjah International Airport. Known for its modern infrastructure, strategic location near Dubai, and founder-friendly regulations, SAIF Zone is ideal for entrepreneurs and international companies seeking a UAE base.</p>",
     highlightsTitle: "Why founders start a SAIF Free Zone Company:",

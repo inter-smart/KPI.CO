@@ -68,10 +68,22 @@ export default function MainlandBusiness({
         <Heading
           as="h2"
           size="h2"
-          className="text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden"
+          className={cn(
+            "text-[28px] lg:text-[27px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px] text-[#1C5396] capitalize !mb-[20px] xl:!mb-[25px] 2xl:!mb-[30px] 3xl:!mb-[35px] max-w-[340px] lg:hidden",
+            variant === "SAIFZ" && "max-sm:hidden",
+          )}
         >
           {parse(data.title)}
         </Heading>
+        {variant === "SAIFZ" && data?.saifz_mobile_title && (
+          <Heading
+            as="h2"
+            size="h2"
+            className="text-[28px] text-[#1C5396] capitalize !mb-[20px] max-w-[340px] sm:hidden"
+          >
+            {parse(data?.saifz_mobile_title)}
+          </Heading>
+        )}
         <div
           className={cn(
             "text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] text-[#4E4E4E] mb-[20px] hidden [&_p]:leading-relaxed [&_p]:mb-[20px] xl:[&_p]:mb-[30px] 2xl:[&_p]:mb-[45px] [&_p:last-child]:mb-0 [&_br]:hidden",
