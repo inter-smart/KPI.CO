@@ -412,7 +412,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "KPI Logo",
-      }, 
+      },
     ],
   },
 };
