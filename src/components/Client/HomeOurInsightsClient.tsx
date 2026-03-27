@@ -168,8 +168,8 @@ export default function HomeOurInsightsClient({
 
 function InsightCard({ data, variant }: InsightCardProps) {
   return (
-    <div className="group flex flex-col  w-full h-full xl:min-h-[527px] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
-      <div className="relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden">
+    <div className="group flex flex-col  w-full h-full max-sm:min-h-[477px] xl:min-h-[527px] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
+      <div className={cn("relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden",variant === "Our-Related" && "max-sm:min-h-[189.18px]")}>
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}
@@ -199,7 +199,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
         <Text
           as="div"
           size="p1"
-          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-[150%] line-clamp-5 text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
+          className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-[150%] line-clamp-7 text-[#4e4e4e] mb-[15px] xl:mb-[20px] 3xl:mb-[30px]"
         >
           {parse(data.description ?? "<p>no content</p>")}
         </Text>

@@ -287,7 +287,7 @@ export default function MainlandBusiness({
               className={cn(
                 "relative w-full aspect-[4/3] lg:aspect-auto lg:h-full min-h-[378px] xs:min-h-[420px] lg:min-h-[300px]  rounded-[12px] overflow-hidden",
                 variant === "AuditServicesUae" &&
-                  "max-sm:h-[437px] lg:h-auto lg:aspect-517/549",
+                  "max-sm:max-w-[330px] max-sm:h-[437px] lg:min-h-[380px] xl:min-h-[437px]",
                 variant === "CorporateTaxUae" &&
                   "max-sm:h-[437px] lg:h-auto lg:aspect-517/549 xl:min-h-[549px] max-sm:max-w-[330px]",
                 variant === "e-invoicing" &&

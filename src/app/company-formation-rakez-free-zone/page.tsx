@@ -461,7 +461,7 @@ const localData = {
       link: "/contact",
     },
     images: {
-      overlay: "/images/rakez.png",
+      overlay: "/images/rakez.svg",
       overlayMobile: "/images/racctaMob.png",
     },
   } satisfies CtaData,

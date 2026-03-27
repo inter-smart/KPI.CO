@@ -154,6 +154,7 @@ export default function RiskAssuranceServices({
         <div
           className={cn(
             "w-full block sm:hidden",
+            variant === "internal-audit" && "max-sm:hidden",
             variant === "company-freezone" && "max-sm:hidden",
             variant === "erm" && "max-sm:hidden",
             variant === "ADGM-SPV-Formation" && "max-sm:hidden",

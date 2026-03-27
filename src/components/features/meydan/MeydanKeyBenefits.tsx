@@ -81,7 +81,7 @@ export default function MeydanKeyBenefits({
             variant === "RAK-Offshore" &&
               "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[65px]",
             variant === "JAFZA-Freezone" &&
-              "max-sm:bg-linear-to-t from-[#f5fbfe] via-white to-white  xl:!py-[38.5px] xl:min-h-[477px]",
+              "xl:!py-[38.5px] xl:min-h-[477px]",
           )}
         >
           <div

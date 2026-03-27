@@ -324,7 +324,7 @@ export default function MainlandCompanyFormationUaePage() {
         variant="Formation-JAFZA"
       />
       <CorporateServicesUaeWhyBuild
-        variant="Formation-JAFZA"
+        variant="Formation-JAFZA" 
         data={localData.whyBuild}
       />
       <DocumentRequired

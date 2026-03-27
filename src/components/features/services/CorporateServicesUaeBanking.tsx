@@ -64,7 +64,7 @@ export default function CorporateServicesUaeBanking({
     return data?.partners?.length > threshold
       ? [
           Autoplay({
-            delay: 2000,
+            delay: 1200,
             stopOnInteraction: false,
             stopOnMouseEnter: true,
           }),

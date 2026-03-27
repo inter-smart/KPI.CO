@@ -546,7 +546,7 @@ export default function AuditOverviewUaePage() {
         variant="AuditServicesUae"
       />
       <HomeCounter data={localData.counterList} variant="AuditServicesUae" />
-      <VatRelatedTax data={localData.vatRelatedTax} variant="sop" />
+      <VatRelatedTax data={localData.vatRelatedTax} variant="AuditServicesUae" />
       <CorporateServicesUaeCta
         data={localData.cta}
         variant="AuditServicesUae"

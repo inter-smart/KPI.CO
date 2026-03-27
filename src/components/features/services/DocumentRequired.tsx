@@ -310,7 +310,7 @@ export default function DocumentRequired({
                   "mt-5.5 lg:mt-6.25 2xl:mt-7 3xl:mt-8 text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[19px] 3xl:text-[24px] leading-[22px] font-normal leading-normal text-[#4E4E4E] max-md:[&_br]:hidden",
                   ["AuditServicesUae", "AuditServicesUaes"].includes(variant) &&
                     "[&_p]:mb-[15px] lg:[&_p]:mb-[25px] [&>p:last-of-type]:mb-0",
-                    variant === "Formation-JAFZA" && "xl:mt-[30.82px]"
+                  variant === "Formation-JAFZA" && "xl:mt-[30.82px]",
                 )}
               >
                 {parse(data.ftr_description)}
@@ -352,9 +352,13 @@ export default function DocumentRequired({
               <div
                 className={cn(
                   "w-full h-[378px] sm:h-full rounded-[12px] overflow-hidden",
-                  variant === "AuditServicesUaes" && "h-[378px] xl:h-[314px]",
+                  variant === "AuditServicesUaes" &&
+                    "max-sm:max-w-[330px] h-[378px] xl:h-[314px]",
+                  variant === "AuditServicesUae" &&
+                    "max-sm:max-w-[329px]",
                   variant === "VatServicesUae" && "xl:!h-[424px]",
-                  variant === "company-freezone" && "xl:!h-[702px] xl:max-w-[473px]",
+                  variant === "company-freezone" &&
+                    "xl:!h-[702px] xl:max-w-[473px]",
                 )}
               >
                 <Image

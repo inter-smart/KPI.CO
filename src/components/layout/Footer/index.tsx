@@ -362,14 +362,14 @@ export default function Footer() {
                     e-Invoicing
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/corporate-services-uae"
                     className={FOOTER_LINK_STYLES}
                   >
                     Digital Transformation
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -598,11 +598,11 @@ export default function Footer() {
                         e-invoicing Services
                       </Link>
                     </li>
-                    <li>
-                      <Link href="#" className={FOOTER_LINK_STYLES}>
+                    {/* <li>
+                      <Link href="#" className={FOOTER_LINK_STYLES}>  
                         Digital Transformation
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </AccordionContent>
               </AccordionItem>

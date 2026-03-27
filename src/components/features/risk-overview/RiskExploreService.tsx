@@ -80,7 +80,12 @@ export default function RiskExploreService({
   );
 
   return (
-    <section className="w-full py-8 xl:py-[50px_90px] 2xl:py-[80px_110px] bg-[#F9F9F9] overflow-hidden">
+    <section
+      className={cn(
+        "w-full py-8 xl:py-[50px_90px] 2xl:py-[80px_110px] bg-[#F9F9F9] overflow-hidden",
+        variant === "holding" && "max-sm:py-[46px_49px]",
+      )}
+    >
       <div className="container max-sm:pr-0">
         <Heading
           as="h2"
@@ -106,6 +111,7 @@ export default function RiskExploreService({
                 "flex touch-pan-y touch-pinch-zoom -mx-[12px] lg:-mx-[10px] 2xl:-mx-[15px] [&>*]:p-[12px] lg:[&>*]:p-[10px] 2xl:[&>*]:p-[15px]",
                 variant === "ADGM-Foundations" &&
                   "max-sm:!-mx-[12px] max-sm:[&>*]:!p-[12px] xl:-mx-[10px] xl:[&>*]:p-[10px]",
+                variant === "erm" && "xl:-mx-[12px] xl:[&>*]:p-[12px]",
               )}
             >
               {data.items.map((item) => (
@@ -131,7 +137,7 @@ export default function RiskExploreService({
                       "flex-[0_0_306px] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]",
                   )}
                 >
-                  <Service data={item} variant="risk" />
+                  <Service data={item} variant={variant} />
                 </div>
               ))}
             </div>
@@ -175,17 +181,16 @@ function Service({ data, variant }: ServiceProps) {
           className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-120"
         />
       </div>
-
       <div
         className={cn(
           "w-full p-[20px_32px_20px] lg:p-[30px_25px_20px] xl:p-[30px_35px_25px] 3xl:p-[50px_40px_25px] bg-gradient-to-b from-[rgba(28,83,150,0)] from-[-21.74%] via-[#1C5396] via-[112.61%] to-[#000000] to-[112.61%] absolute inset-0 flex flex-col justify-between",
-
           (variant === "ADGM-Foundations" ||
             variant === "difc-regulated" ||
             variant === "difc" ||
             variant === "internal-audit" ||
             variant === "erm") &&
             "xl:p-[50px_30px_85px]",
+          variant === "erm" && "xl:!p-[77.17px_34.67px_54px_32px]",
         )}
       >
         <div className="w-[28px] xl:w-[32px] h-[28px] xl:h-[32px] ml-auto">
@@ -202,6 +207,7 @@ function Service({ data, variant }: ServiceProps) {
           className={cn(
             "text-[24px] sm:text-[17px] lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px] max-w-[218px] leading-normal font-medium  text-white min-h-[52px] sm:min-h-[78px] xl:min-h-[100px] 2xl:min-h-[126px] 3xl:min-h-[144px] [&>br]:!block",
             variant === "risk" && "min-h-fit",
+            variant === "erm" && "xl:max-w-[100%] xl:flex xl:items-end",
           )}
         >
           {parse(data?.title ?? "title")}
