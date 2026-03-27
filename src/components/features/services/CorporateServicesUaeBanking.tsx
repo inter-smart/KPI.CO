@@ -1,6 +1,5 @@
 "use client";
 import { useMemo, useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import parse from "html-react-parser";
@@ -47,21 +46,18 @@ export default function CorporateServicesUaeBanking({
     setMounted(true);
   }, []);
 
-  const isMobile = useMediaQuery({ maxWidth: 639 });
-  const threshold = mounted && isMobile ? 3 : 4;
-
   const options = useMemo(
     () => ({
-      loop: data?.partners?.length > threshold,
+      loop: (data?.partners?.length ?? 0) > 1,
       align: "center" as const,
       slidesToScroll: 1,
       containScroll: "trimSnaps" as const,
     }),
-    [data?.partners?.length, threshold],
+    [data?.partners?.length],
   );
 
   const plugins = useMemo(() => {
-    return data?.partners?.length > threshold
+    return (data?.partners?.length ?? 0) > 1
       ? [
           Autoplay({
             delay: 1200,
@@ -70,7 +66,15 @@ export default function CorporateServicesUaeBanking({
           }),
         ]
       : [];
-  }, [data?.partners?.length, threshold]);
+  }, [data?.partners?.length]);
+
+  const partners = useMemo(() => {
+    const list = data?.partners || [];
+    if (list.length > 0 && list.length < 10) {
+      return [...list, ...list, ...list];
+    }
+    return list;
+  }, [data?.partners]);
 
   const [emblaRef] = useEmblaCarousel(options, plugins);
   return (
@@ -176,9 +180,9 @@ export default function CorporateServicesUaeBanking({
                 "-mx-2.5 lg:-mx-6.25 2xl:-mx-5.5 3xl:-mx-8.75 [&>*]:p-2.5 lg:[&>*]:px-6.25 xl:px-[25px] [&>*]:py-0",
             )}
           >
-            {data?.partners?.map((item) => (
+            {partners.map((item, index) => (
               <div
-                key={`affiliation-${item?.id}`}
+                key={`affiliation-${item?.id}-${index}`}
                 className={cn(
                   "flex-[0_0_133.25px] sm:flex-[0_0_30%] lg:flex-[0_0_27%] xl:flex-[0_0_324px] min-w-0 select-none",
                   variant === "JAFZA-Freezone" && "xl:flex-[0_0_324px] ",
