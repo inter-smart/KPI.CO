@@ -630,9 +630,10 @@ export default function VatServicesUaePage() {
       <CorporateServicesUaeCta data={localData.cta} variant="VatServicesUae" />
       <CorporateServicesUaeFaq
         data={localData.corporate_faq_data}
-        // variant="side-arrow"
+      // variant="side-arrow"
       />
       <HomeOurInsights variant="Our-Insights" />
     </>
   );
 }
+
