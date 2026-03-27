@@ -295,7 +295,7 @@ function ServiceCard({ item, variant = "default" }: ServiceCardProps) {
           variant === "tax-advisory" ||
           variant === "internal-audit" ||
           variant === "ADGM-Foundation") &&
-          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] max-sm:min-w-[343px] xl:min-h-[156px] max-sm:min-h-[135px]",
+          "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#f3f7fd] xl:rounded-[10px] after:bg-[#f9fafb] before:to-[110%] max-sm:min-w-[343px] xl:min-h-[156px] max-sm:min-h-[135px] max-sm:max-h-[135px]",
         variant === "spv" &&
           "before:bg-gradient-to-b before:from-[#3EB0EA] before:to-[#1756a3] after:bg-[#F9FAFB]",
         variant === "holding" &&

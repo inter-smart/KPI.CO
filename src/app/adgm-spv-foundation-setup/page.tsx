@@ -408,7 +408,7 @@ export default function DwtcFreezone() {
         data={localData.document_required_data}
       />
       <CorporateServicesUaeWhyChoose
-        variant="ADGM-Foundation"
+        variant="ADGM-Foundation" 
         data={localData.whyChoose}
       />
       <RiskExploreService

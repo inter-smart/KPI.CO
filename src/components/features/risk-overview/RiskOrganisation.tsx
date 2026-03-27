@@ -49,7 +49,7 @@ export default function RiskOrganisation({
         variant === "difc-regulated" && "xl:pt-[50px]",
         variant === "ADGM-SPV-Formation" && "xl:!py-[94px_74px]",
         variant === "JAFZA-Freezone" &&
-          "xl:!py-[70px] bg-gradient-to-b from-[#FFFFFF] via-[#edf5f8] to-[rgba(62,176,234,0.1)]",
+          "xl:!py-[70px] bg-gradient-to-b from-[#FFFFFF] from-75% via-[#edf5f8]/[0.7] via-100% to-[rgba(62,176,234,0.1)]",
       )}
     >
       <div className="container">
