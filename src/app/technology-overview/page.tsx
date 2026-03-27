@@ -99,8 +99,8 @@ const localData = {
   hero: {
     id: 1,
     media: {
-      desktopPath: "/images/technology-banner.svg",
-      mobilePath: "/images/technology-banner-mobile-bg.svg",
+      desktopPath: "/images/technology-banner.jpg",
+      mobilePath: "/images/technology-banner-mobile-bg.jpg",
       alt: "ADGM Audits Built To Withstand Regulatory Scrutiny",
     },
     title: "Where Advisory Meets Enterprise Technology ",
