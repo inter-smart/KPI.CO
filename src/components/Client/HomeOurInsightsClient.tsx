@@ -17,29 +17,29 @@ type HomeOurInsightsProps = {
     items: InsightItem[];
   };
   variant?:
-    | "default"
-    | "saifz"
-    | "ADGM-Foundations"
-    | "Our-Insights"
-    | "Our-Related"
-    | "holding"
-    | "ADGM-SPV-Formation"
-    | "home"
-    | "erm";
+  | "default"
+  | "saifz"
+  | "ADGM-Foundations"
+  | "Our-Insights"
+  | "Our-Related"
+  | "holding"
+  | "ADGM-SPV-Formation"
+  | "home"
+  | "erm";
 };
 
 type InsightCardProps = {
   data: InsightItem;
   variant?:
-    | "default"
-    | "saifz"
-    | "ADGM-Foundations"
-    | "Our-Insights"
-    | "Our-Related"
-    | "ADGM-SPV-Formation"
-    | "holding"
-    | "home"
-    | "erm";
+  | "default"
+  | "saifz"
+  | "ADGM-Foundations"
+  | "Our-Insights"
+  | "Our-Related"
+  | "ADGM-SPV-Formation"
+  | "holding"
+  | "home"
+  | "erm";
 };
 
 export default function HomeOurInsightsClient({
@@ -87,7 +87,7 @@ export default function HomeOurInsightsClient({
         variant === "default" && "bg-[#F9F9F9]",
         variant === "ADGM-SPV-Formation" && "bg-white",
         variant === "Our-Related" &&
-          "bg-[#F9F9F9] max-sm:py-[24px_46px] xl:py-[73px_94px]",
+        "bg-[#F9F9F9] max-sm:py-[24px_46px] xl:py-[73px_94px]",
       )}
     >
       <div className="container overflow-hidden">
@@ -97,13 +97,13 @@ export default function HomeOurInsightsClient({
           className={cn(
             "text-[#1c5396] mb-4 2xl:mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 max-sm:!text-[24px]",
             variant === "holding" &&
-              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+            "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "erm" &&
-              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
+            "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] 2xl:text-[40px] 3xl:text-[50px]",
             variant === "Our-Insights" &&
-              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] max-sm:!mb-[9px] xl:!mb-[9px]",
+            "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[38px] max-sm:!mb-[9px] xl:!mb-[9px]",
             variant === "Our-Related" &&
-              "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[40px] max-sm:!mb-[2px] xl:!mb-[5px]",
+            "text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[40px] max-sm:!mb-[2px] xl:!mb-[5px]",
           )}
         >
           {variant === "default" ? data.titles : data.title}
@@ -114,7 +114,7 @@ export default function HomeOurInsightsClient({
             className={cn(
               "flex touch-pan-y touch-pinch-zoom -mx-[12.805px] lg:-mx-[15px] xl:-mx-[20px] 3xl:-mx-[25px] [&>*]:p-[12.805px] lg:[&>*]:p-[15px] xl:[&>*]:p-[20px]",
               variant === "ADGM-Foundations" &&
-                "xl:-mx-[20px] xl:[&>*]:p-[20px]",
+              "xl:-mx-[20px] xl:[&>*]:p-[20px]",
               variant === "home" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
               variant === "Our-Insights" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
               variant === "Our-Related" && "xl:-mx-[19px] xl:[&>*]:p-[19px]",
@@ -126,13 +126,13 @@ export default function HomeOurInsightsClient({
                 className={cn(
                   "flex-[0_0_248.6px] sm:flex-[0_0_40%] xl:flex-[0_0_30%] min-w-0 select-none",
                   variant === "saifz" &&
-                    "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
+                  "flex-[0_0_90%] sm:flex-[0_0_40%] xl:flex-[0_0_33.5%]",
                   variant === "default" &&
-                    "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
+                  "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_33%]",
                   variant === "Our-Insights" &&
-                    "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
+                  "flex-[0_0_67.445%] sm:flex-[0_0_40%] xl:flex-[0_0_29.807%]",
                   variant === "Our-Related" &&
-                    "flex-[0_0_91.05%] sm:flex-[0_0_40%] xl:flex-[0_0_33.28%]",
+                  "flex-[0_0_91.05%] sm:flex-[0_0_40%] xl:flex-[0_0_33.28%]",
                 )}
               >
                 <InsightCard data={item} variant={variant} />
@@ -169,7 +169,7 @@ export default function HomeOurInsightsClient({
 function InsightCard({ data, variant }: InsightCardProps) {
   return (
     <div className="group flex flex-col  w-full h-full max-sm:min-h-[477px] xl:min-h-[527px] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300">
-      <div className={cn("relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden",variant === "Our-Related" && "max-sm:min-h-[189.18px]")}>
+      <div className={cn("relative aspect-[375/202] max-sm:h-[136.13px] overflow-hidden", variant === "Our-Related" && "max-sm:min-h-[189.18px]")}>
         <Image
           src={data.media.path || "/images/placeholder-image.png"}
           alt={data.media.alt || "Insight Image"}
@@ -187,7 +187,7 @@ function InsightCard({ data, variant }: InsightCardProps) {
       >
         <Text
           size="p1"
-          className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"
+          className="text-[14px] lg:text-[11px] xl:text-[16px] 2xl:text-[17px] 3xl:text-[21px] leading-none font-medium uppercase text-[#5280CA] mb-[14px] xl:mb-[12px] 3xl:mb-[15px]"
         >
           {data.date} • {data.readTime}
         </Text>

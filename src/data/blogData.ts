@@ -28,7 +28,7 @@ export const blogData: BlogItem[] = [
         category: "Audit",
         date: "14 NOV 2024",
         date_full: "14 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: `
             <h2>Introduction</h2>
             <p>
@@ -89,7 +89,7 @@ export const blogData: BlogItem[] = [
         category: "Advisory",
         date: "13 NOV 2024",
         date_full: "13 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for Top 10 Audit firms in UAE...</p>"
     },
     {
@@ -101,7 +101,7 @@ export const blogData: BlogItem[] = [
         category: "Audit",
         date: "12 NOV 2024",
         date_full: "12 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for duplicate guide...</p>"
     },
     {
@@ -113,7 +113,7 @@ export const blogData: BlogItem[] = [
         category: "Corporate Services",
         date: "14 NOV 2024",
         date_full: "14 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for Choosing the Right Business License...</p>"
     },
     {
@@ -125,7 +125,7 @@ export const blogData: BlogItem[] = [
         category: "Risk",
         date: "13 NOV 2024",
         date_full: "13 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for AI in Auditing...</p>"
     },
     {
@@ -137,7 +137,7 @@ export const blogData: BlogItem[] = [
         category: "Corporate Services",
         date: "14 NOV 2024",
         date_full: "14 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for FAQs about Company Formation...</p>"
     },
     {
@@ -149,7 +149,7 @@ export const blogData: BlogItem[] = [
         category: "Advisory",
         date: "13 NOV 2024",
         date_full: "13 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for Bookkeeping Guide...</p>"
     },
     {
@@ -161,7 +161,7 @@ export const blogData: BlogItem[] = [
         category: "Tax",
         date: "12 NOV 2024",
         date_full: "12 NOVEMBER 2024",
-        readTime: "2 MIN READ",
+        readTime: "2 Min read",
         content: "<p>Content for VAT Registration...</p>"
     }
 ];

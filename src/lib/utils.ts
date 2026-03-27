@@ -82,7 +82,16 @@ if (post.categories?.length) {
     })
     .toUpperCase();
 
-  const readTime = post?.yoast_head_json?.twitter_misc?.["Est. reading time"]?.toUpperCase() || "";
+  const rawReadTime = post?.yoast_head_json?.twitter_misc?.["Est. reading time"] || "";
+  let readTime = "";
+  if (rawReadTime) {
+    const match = String(rawReadTime).match(/\d+/);
+    if (match) {
+      readTime = `${match[0]} Min read`;
+    } else {
+      readTime = String(rawReadTime);
+    }
+  }
 
   const description = post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]*>?/gm, "").trim() : "";
 
