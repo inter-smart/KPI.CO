@@ -49,7 +49,7 @@ export default function CorporateServicesUaeBanking({
   const options = useMemo(
     () => ({
       loop: (data?.partners?.length ?? 0) > 1,
-      align: "start" as const,
+      align: "center" as const,
       slidesToScroll: 1,
       containScroll: "trimSnaps" as const,
     }),
