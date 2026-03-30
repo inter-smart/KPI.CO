@@ -388,7 +388,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/KPI-logo-og.png",
+        url: "https://kpi.co/images/KPI-logo-og.png",
         width: 1200,
         height: 630,
         alt: "KPI Logo",
